@@ -1,0 +1,26 @@
+{
+    "name": "@onu-ui/preset",
+    "version": "0.0.0",
+    "description": "Onu preset about unocss are settled here",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "build": "unbuild",
+        "stub": "unbuild --stub"
+    },
+    "devDependencies": {
+        "unocss": "^0.41.0"
+    }
+}

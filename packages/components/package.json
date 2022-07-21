@@ -1,0 +1,31 @@
+{
+  "name": "@onu-ui/components",
+  "version": "0.0.0",
+  "description": "all components are settled here",
+  "main": "./dist/components.umd.js",
+  "module": "./dist/components.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/components.es.js",
+      "require": "./dist/components.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "stub": "unbuild --stub"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@onu-ui/preset": "workspace:*",
+    "unocss": "^0.41.0",
+    "vite": "^2.9.12",
+    "vue": "^3.2.37"
+  }
+}

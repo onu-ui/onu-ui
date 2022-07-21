@@ -1,0 +1,30 @@
+{
+    "name": "@onu-ui/monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "packageManager": "pnpm@7.1.9",
+    "license": "MIT",
+    "scripts": {
+        "dev": "pnpm run stub",
+        "stub": "pnpm -r --parallel run stub",
+        "build": "rimraf packages/*/dist && pnpm -r -F !playground run build",
+        "play": "pnpm -C playground run dev",
+        "lint": "eslint ."
+    },
+    "devDependencies": {
+        "@chris-zhu/eslint-config": "^1.0.5",
+        "@iconify-json/carbon": "^1.1.5",
+        "@onu-ui/components": "workspace:*",
+        "@onu-ui/preset": "workspace:*",
+        "@onu-ui/utils": "workspace:*",
+        "@types/node": "^18.0.0",
+        "@vitejs/plugin-vue": "^2.3.3",
+        "@vueuse/core": "^8.7.5",
+        "eslint": "^8.18.0",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.7.4",
+        "unbuild": "^0.7.4",
+        "unocss": "^0.41.0",
+        "vue": "^3.2.37"
+    }
+}

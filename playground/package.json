@@ -1,0 +1,20 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port=9898 --open --host",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "3.2.33"
+  },
+  "devDependencies": {
+    "@onu-ui/preset": "workspace:*",
+    "onu-ui": "workspace:*",
+    "unplugin-auto-import": "0.7.1",
+    "unplugin-vue-components": "0.19.5",
+    "vite": "^2.9.12"
+  }
+}

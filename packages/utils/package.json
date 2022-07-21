@@ -1,0 +1,26 @@
+{
+    "name": "@onu-ui/utils",
+    "version": "0.0.0",
+    "description": "all utils are settled here",
+    "main": "dist/index.cjs",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "build": "unbuild",
+        "stub": "unbuild --stub"
+    },
+    "peerDependencies": {
+        "vue": "^3.2.0"
+    }
+}

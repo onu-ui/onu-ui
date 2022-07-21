@@ -1,0 +1,47 @@
+{
+  "name": "onu-ui",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "ONU-UI for web components with unocss & vueuse",
+  "keywords": [
+    "onu-ui",
+    "unocss",
+    "vueuse"
+  ],
+  "license": "MIT",
+  "author": "chris-zhu <https://github.com/chris-zhu>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onu-ui/onu-ui.git"
+  },
+  "main": "./dist/onu-ui.umd.js",
+  "module": "./dist/onu-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/onu-ui.es.js",
+      "require": "./dist/onu-ui.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "stub": "unbuild --stub"
+  },
+  "bugs": {
+    "url": "https://github.com/onu-ui/onu-ui/issues"
+  },
+  "homepage": "https://github.com/onu-ui/onu-ui#readme",
+  "dependencies": {
+    "@onu-ui/components": "workspace:*"
+  },
+  "devDependencies": {
+    "@onu-ui/preset": "workspace:*",
+    "@onu-ui/utils": "workspace:*",
+    "vite": "^2.9.12",
+    "vue": "3.2.37"
+  }
+}

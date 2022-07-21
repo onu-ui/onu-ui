@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "useDefineForClassFields": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "sourceMap": false,
+        "allowJs": false,
+        "noUnusedLocals": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "removeComments": false,
+        "baseUrl": ".",
+        "rootDir": ".",
+        "outDir": "dist",
+        "types": [],
+        "paths": {
+            "onu-ui": [ "./packages/onu-ui/src/index.ts" ],
+            "@onu-ui/components": [ "./packages/components/index.ts" ],
+            "@onu-ui/utils": [ "./packages/utils/index.ts" ],
+            "@onu-ui/preset": [ "./packages/@onu-ui/preset/index.ts" ],
+        }
+    }
+}
