@@ -8,6 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@unocss/reset": "^0.44.5",
     "vue": "3.2.33"
   },
   "devDependencies": {
