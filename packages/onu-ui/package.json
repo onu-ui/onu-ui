@@ -2,7 +2,7 @@
   "name": "onu-ui",
   "type": "module",
   "version": "1.0.1",
-  "description": "ONU-UI for web components with unocss & vueuse",
+  "description": "Onu-UI for web components with unocss & vueuse",
   "keywords": [
     "onu-ui",
     "unocss",
@@ -14,12 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/onu-ui/onu-ui.git"
   },
-  "main": "./dist/onu-ui.umd.js",
-  "module": "./dist/onu-ui.es.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/onu-ui.es.js",
-      "require": "./dist/onu-ui.umd.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -28,8 +28,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vite build",
-    "stub": "vite build --watch"
+    "build": "tsup",
+    "stub": "tsup --watch"
   },
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"
@@ -40,8 +40,6 @@
   },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
-    "@onu-ui/utils": "workspace:*",
-    "vite": "^2.9.12",
-    "vue": "3.2.37"
+    "@onu-ui/utils": "workspace:*"
   }
 }

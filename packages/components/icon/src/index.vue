@@ -1,4 +1,4 @@
-<script lang='ts' setup name="O-Avatar">
+<script lang='ts' setup name="O-Icon">
 interface IIconProps {
   icon: string
   depth?: 1 | 2 | 3 | 4 | 5 | 'none'

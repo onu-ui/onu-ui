@@ -12,7 +12,7 @@ defineProps<IButtonProps>()
     :is="to ? 'a' : 'button'"
     :href="to"
     :class="to && 'o-button-link'"
-    class="text-md o-button o-transition o-button-base hover:o-button-hover active:o-button-active focus-visible:o-focus-base o-disabled:o-disabled"
+    class="o-button o-transition o-button-base hover:o-button-hover active:o-button-active focus-visible:o-focus-base o-disabled:o-disabled"
   >
     <slot name="icon">
       <!-- <NIcon v-if="icon" :icon="icon" class="c-buttoc-icon" /> -->
