@@ -17,7 +17,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "vite build",
-    "stub": "unbuild --stub"
+    "stub": "vite build --watch"
   },
   "peerDependencies": {
     "vue": "^3.2.0"

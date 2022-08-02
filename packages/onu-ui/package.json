@@ -29,7 +29,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "vite build",
-    "stub": "unbuild --stub"
+    "stub": "vite build --watch"
   },
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"

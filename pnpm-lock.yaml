@@ -72,6 +72,7 @@ importers:
 
   playground:
     specifiers:
+      '@onu-ui/components': workspace:*
       '@onu-ui/preset': workspace:*
       '@unocss/reset': ^0.44.5
       onu-ui: workspace:*
@@ -80,6 +81,7 @@ importers:
       vite: ^2.9.12
       vue: 3.2.33
     dependencies:
+      '@onu-ui/components': link:../packages/components
       '@unocss/reset': 0.44.5
       vue: 3.2.33
     devDependencies:
@@ -923,7 +925,6 @@ packages:
 
   /@unocss/reset/0.44.5:
     resolution: {integrity: sha512-ZNe86u7BpzCT/5P3S49sFxLucBlfW0ir6oRqmOZe4uhN02puqFUK1L7c0dkoXTVhETxESmWaxBM5GTmbifGeZg==}
-    dev: false
 
   /@unocss/scope/0.41.2:
     resolution: {integrity: sha512-LM6pFGdUxBks6exWu0dVFyMKQFrN6A+aFxFD/PwhQm+00sPvRNIbpf1e5fe5hcVa5eEvRfEAzUTjcm1uL2Mk0g==}

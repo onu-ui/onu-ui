@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { OButton } from 'onu-ui'
+import { OButton } from '@onu-ui/components'
 const githubUrl = 'https://github.com/chris-zhu'
 </script>
 

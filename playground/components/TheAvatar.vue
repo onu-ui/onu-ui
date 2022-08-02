@@ -1,5 +1,5 @@
 <script lang='ts' setup>
-import { OAvatar } from 'onu-ui'
+import { OAvatar } from '@onu-ui/components'
 const src = 'https://images.unsplash.com/photo-1652368760346-a4e16ca581bf'
 </script>
 

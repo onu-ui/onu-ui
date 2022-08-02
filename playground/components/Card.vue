@@ -1,10 +1,10 @@
 <script lang='ts' setup>
-import { OCard } from 'onu-ui'
-defineProps<{name: string}>()
+import { OCard } from '@onu-ui/components'
+defineProps<{ name: string }>()
 </script>
 
 <template>
-  <o-card b="~ gray4" rounded p="x-4 b-4">
+  <o-card>
     <h4>{{ name }}</h4>
     <div flex="~ gap-4">
       <slot />
