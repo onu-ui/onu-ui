@@ -27,6 +27,8 @@
         "unbuild": "^0.7.4",
         "unocss": "^0.33.4",
         "vite": "^3.0.4",
+        "vite-plugin-inspect": "^0.6.0",
+        "vite-plugin-vue-setup-extend": "^0.4.0",
         "vue": "^3.2.37"
     }
 }
