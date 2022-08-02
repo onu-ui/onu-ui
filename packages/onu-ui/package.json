@@ -2,7 +2,7 @@
   "name": "onu-ui",
   "type": "module",
   "version": "1.0.1",
-  "description": "ONU-UI for web components with unocss & vueuse",
+  "description": "Onu-UI for web components with unocss & vueuse",
   "keywords": [
     "onu-ui",
     "unocss",
@@ -40,8 +40,6 @@
   },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
-    "@onu-ui/utils": "workspace:*",
-    "vite": "^2.9.12",
-    "vue": "3.2.37"
+    "@onu-ui/utils": "workspace:*"
   }
 }

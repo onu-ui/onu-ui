@@ -16,7 +16,6 @@
     "@onu-ui/preset": "workspace:*",
     "onu-ui": "workspace:*",
     "unplugin-auto-import": "0.7.1",
-    "unplugin-vue-components": "0.19.5",
-    "vite": "^2.9.12"
+    "unplugin-vue-components": "0.19.5"
   }
 }
