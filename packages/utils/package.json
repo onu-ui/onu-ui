@@ -2,12 +2,12 @@
     "name": "@onu-ui/utils",
     "version": "0.0.0",
     "description": "all utils are settled here",
-    "main": "dist/index.cjs",
+    "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "exports": {
         ".": {
-            "require": "./dist/index.cjs",
+            "require": "./dist/index.js",
             "import": "./dist/index.mjs",
             "types": "./dist/index.d.ts"
         }
@@ -17,8 +17,8 @@
     ],
     "sideEffects": false,
     "scripts": {
-        "build": "unbuild",
-        "stub": "unbuild --stub"
+        "build": "tsup",
+        "stub": "tsup --watch"
     },
     "peerDependencies": {
         "vue": "^3.2.0"
