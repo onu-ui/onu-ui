@@ -1,4 +1,6 @@
-import type { Preset } from 'unocss'
+import { parseColor } from '@unocss/preset-mini/utils'
+import type { Preset, RuleContext } from 'unocss'
+import type { Theme } from '@unocss/preset-uno'
 
 export function presetOnu(): Preset {
   return {
@@ -7,8 +9,20 @@ export function presetOnu(): Preset {
       colors: {
         context: 'rgba(var(--onu-c-context),%alpha)',
       },
+      fontFamily: {
+        sans: 'Avenir, Helvetica, Arial, sans-serif',
+      },
     },
-    rules: [],
+    rules: [
+      [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
+        const color = parseColor(body, theme)
+        if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
+          return {
+            '--onu-c-context': `${color.cssColor.components.join(',')}`,
+          }
+        }
+      }],
+    ],
     variants: [
       (input: string) => {
         const prefix = 'o-disabled:'
