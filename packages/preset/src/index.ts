@@ -50,6 +50,9 @@ export function presetOnu(): Preset {
       // avatar
       'o-avatar-base': 'border-circle rounded-full shadow-sm',
       'o-avatar-icon': 'text-2em',
+
+      // card
+      'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
     },
   }
 }
