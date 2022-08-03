@@ -11,6 +11,8 @@ importers:
       '@onu-ui/preset': workspace:*
       '@onu-ui/utils': workspace:*
       '@types/node': ^18.0.0
+      '@unocss/preset-mini': ^0.45.1
+      '@unocss/preset-uno': ^0.45.1
       '@vitejs/plugin-vue': ^3.0.1
       '@vueuse/core': ^8.7.5
       eslint: ^8.18.0
@@ -33,6 +35,8 @@ importers:
       '@onu-ui/preset': link:packages/preset
       '@onu-ui/utils': link:packages/utils
       '@types/node': 18.0.6
+      '@unocss/preset-mini': 0.45.1
+      '@unocss/preset-uno': 0.45.1
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
       '@vueuse/core': 8.9.4_vue@3.2.37
       eslint: 8.20.0
@@ -57,29 +61,16 @@ importers:
       consola: 2.15.3
 
   packages/components:
-    specifiers:
-      '@onu-ui/preset': workspace:*
-    devDependencies:
-      '@onu-ui/preset': link:../preset
+    specifiers: {}
 
   packages/onu-ui:
     specifiers:
       '@onu-ui/components': workspace:*
-      '@onu-ui/preset': workspace:*
-      '@onu-ui/utils': workspace:*
     dependencies:
       '@onu-ui/components': link:../components
-    devDependencies:
-      '@onu-ui/preset': link:../preset
-      '@onu-ui/utils': link:../utils
 
   packages/preset:
-    specifiers:
-      '@unocss/preset-mini': ^0.45.1
-      '@unocss/preset-uno': ^0.45.1
-    devDependencies:
-      '@unocss/preset-mini': 0.45.1
-      '@unocss/preset-uno': 0.45.1
+    specifiers: {}
 
   packages/utils:
     specifiers: {}

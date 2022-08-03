@@ -19,6 +19,8 @@
         "@onu-ui/preset": "workspace:*",
         "@onu-ui/utils": "workspace:*",
         "@types/node": "^18.0.0",
+        "@unocss/preset-mini": "^0.45.1",
+        "@unocss/preset-uno": "^0.45.1",
         "@vitejs/plugin-vue": "^3.0.1",
         "@vueuse/core": "^8.7.5",
         "eslint": "^8.18.0",

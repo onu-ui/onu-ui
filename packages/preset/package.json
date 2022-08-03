@@ -19,9 +19,5 @@
     "scripts": {
         "build": "tsup",
         "stub": "tsup --watch"
-    },
-    "devDependencies": {
-        "@unocss/preset-mini": "^0.45.1",
-        "@unocss/preset-uno": "^0.45.1"
     }
 }
