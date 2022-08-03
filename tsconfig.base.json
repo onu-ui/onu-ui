@@ -19,7 +19,8 @@
             "onu-ui": [ "./packages/onu-ui/src/index.ts" ],
             "@onu-ui/components": [ "./packages/components/index.ts" ],
             "@onu-ui/utils": [ "./packages/utils/index.ts" ],
-            "@onu-ui/preset": [ "./packages/@onu-ui/preset/index.ts" ],
+            "@onu-ui/preset": [ "./packages/preset/src/index.ts" ],
+            "@onu-ui/cli": [ "./packages/cli/src/index.ts" ],
         }
     },
     "exclude": [

@@ -14,6 +14,7 @@
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
         "@iconify-json/carbon": "^1.1.5",
+        "@onu-ui/cli": "workspace:*",
         "@onu-ui/components": "workspace:*",
         "@onu-ui/preset": "workspace:*",
         "@onu-ui/utils": "workspace:*",
@@ -22,6 +23,7 @@
         "@vueuse/core": "^8.7.5",
         "eslint": "^8.18.0",
         "esno": "^0.16.3",
+        "onu-ui": "workspace:*",
         "rimraf": "^3.0.2",
         "tsup": "^6.2.1",
         "typescript": "^4.7.4",

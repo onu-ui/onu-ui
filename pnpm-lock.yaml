@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@chris-zhu/eslint-config': ^1.0.5
       '@iconify-json/carbon': ^1.1.5
+      '@onu-ui/cli': workspace:*
       '@onu-ui/components': workspace:*
       '@onu-ui/preset': workspace:*
       '@onu-ui/utils': workspace:*
@@ -14,6 +15,7 @@ importers:
       '@vueuse/core': ^8.7.5
       eslint: ^8.18.0
       esno: ^0.16.3
+      onu-ui: workspace:*
       rimraf: ^3.0.2
       tsup: ^6.2.1
       typescript: ^4.7.4
@@ -26,6 +28,7 @@ importers:
     devDependencies:
       '@chris-zhu/eslint-config': 1.0.5_he2ccbldppg44uulnyq4rwocfa
       '@iconify-json/carbon': 1.1.6
+      '@onu-ui/cli': link:packages/cli
       '@onu-ui/components': link:packages/components
       '@onu-ui/preset': link:packages/preset
       '@onu-ui/utils': link:packages/utils
@@ -34,6 +37,7 @@ importers:
       '@vueuse/core': 8.9.4_vue@3.2.37
       eslint: 8.20.0
       esno: 0.16.3
+      onu-ui: link:packages/onu-ui
       rimraf: 3.0.2
       tsup: 6.2.1_typescript@4.7.4
       typescript: 4.7.4

@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "@onu-ui/cli",
   "version": "1.0.0",
   "description": "Onu-UI Cli",
   "keywords": [
