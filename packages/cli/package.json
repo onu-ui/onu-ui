@@ -1,8 +1,10 @@
 {
   "name": "cli",
   "version": "1.0.0",
-  "description": "",
-  "keywords": ["cli"],
+  "description": "Onu-UI Cli",
+  "keywords": [
+    "cli"
+  ],
   "license": "MIT",
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "main": "./dist/index.mjs",
@@ -23,6 +25,11 @@
   },
   "scripts": {
     "build": "unbuild",
-    "stub": "unbuild --stub"
+    "stub": "unbuild --stub",
+    "start": "esno src/index.ts"
+  },
+  "devDependencies": {
+    "cac": "^6.7.12",
+    "consola": "^2.15.3"
   }
 }
