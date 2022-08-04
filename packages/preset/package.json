@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/preset",
-    "version": "0.0.0",
+    "version": "1.0.1",
     "description": "Onu preset about unocss are settled here",
     "main": "./dist/index.cs",
     "module": "./dist/index.mjs",
