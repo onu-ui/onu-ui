@@ -24,6 +24,7 @@
         "@unocss/preset-uno": "^0.45.1",
         "@vitejs/plugin-vue": "^3.0.1",
         "@vueuse/core": "^8.7.5",
+        "bumpp": "^8.2.1",
         "eslint": "^8.18.0",
         "esno": "^0.16.3",
         "onu-ui": "workspace:*",
