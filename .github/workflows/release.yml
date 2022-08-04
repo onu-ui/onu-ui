@@ -1,7 +1,7 @@
 name: CI
 
 on:
- push:
+  push:
     tags:
       - 'v*'
 
@@ -18,6 +18,11 @@ jobs:
           node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 7.4.0
+
       - run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
@@ -25,10 +30,10 @@ jobs:
       - name: Install
         run: pnpm i
 
-       name: Build
+      - name: Build
         run: pnpm run build
 
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}  
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -22,6 +22,11 @@ jobs:
           node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 7.4.0
+
       - name: Install
         run: pnpm install
 
