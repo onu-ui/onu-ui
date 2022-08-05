@@ -43,4 +43,4 @@ export default defineConfig({
 [@nuxt/ui](https://github.com/nuxt/ui)
 # License
 
-[MIT](./LICENSE)
+[MIT](./LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
