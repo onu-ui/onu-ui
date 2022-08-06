@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { OIcon } from '@onu-ui/components'
 </script>
 
 <template>

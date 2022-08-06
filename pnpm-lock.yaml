@@ -24,6 +24,7 @@ importers:
       typescript: ^4.7.4
       unbuild: ^0.7.4
       unocss: ^0.33.4
+      unplugin-vue-components: 0.19.5
       vite: ^3.0.4
       vite-plugin-inspect: ^0.6.0
       vite-plugin-vue-setup-extend: ^0.4.0
@@ -49,6 +50,7 @@ importers:
       typescript: 4.7.4
       unbuild: 0.7.6
       unocss: 0.33.5_vite@3.0.4
+      unplugin-vue-components: 0.19.5_s3pd4sixltth25eoei6v3pypt4
       vite: 3.0.4
       vite-plugin-inspect: 0.6.0_vite@3.0.4
       vite-plugin-vue-setup-extend: 0.4.0_vite@3.0.4
@@ -4136,6 +4138,38 @@ packages:
       - webpack
     dev: true
 
+  /unplugin-vue-components/0.19.5_s3pd4sixltth25eoei6v3pypt4:
+    resolution: {integrity: sha512-cIC+PdQEXmG+B1gmZGk4hws2xP+00C6pg3FD6ixEgRyW+WF+QXQW/60pc+hUhtDYs1PFE+23K3NY7yvYTnDDTA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/parser': ^7.15.8
+      '@babel/traverse': ^7.15.4
+      vue: 2 || 3
+    peerDependenciesMeta:
+      '@babel/parser':
+        optional: true
+      '@babel/traverse':
+        optional: true
+    dependencies:
+      '@antfu/utils': 0.5.2
+      '@rollup/pluginutils': 4.2.1
+      chokidar: 3.5.3
+      debug: 4.3.4
+      fast-glob: 3.2.11
+      local-pkg: 0.4.2
+      magic-string: 0.26.2
+      minimatch: 5.1.0
+      resolve: 1.22.1
+      unplugin: 0.6.3_mpkht2c6cvo3vm2r5tebr455au
+      vue: 3.2.37
+    transitivePeerDependencies:
+      - esbuild
+      - rollup
+      - supports-color
+      - vite
+      - webpack
+    dev: true
+
   /unplugin-vue-components/0.19.5_vue@3.2.33:
     resolution: {integrity: sha512-cIC+PdQEXmG+B1gmZGk4hws2xP+00C6pg3FD6ixEgRyW+WF+QXQW/60pc+hUhtDYs1PFE+23K3NY7yvYTnDDTA==}
     engines: {node: '>=14'}
@@ -4186,6 +4220,31 @@ packages:
         optional: true
     dependencies:
       chokidar: 3.5.3
+      webpack-sources: 3.2.3
+      webpack-virtual-modules: 0.4.4
+    dev: true
+
+  /unplugin/0.6.3_mpkht2c6cvo3vm2r5tebr455au:
+    resolution: {integrity: sha512-CoW88FQfCW/yabVc4bLrjikN9HC8dEvMU4O7B6K2jsYMPK0l6iAnd9dpJwqGcmXJKRCU9vwSsy653qg+RK0G6A==}
+    peerDependencies:
+      esbuild: '>=0.13'
+      rollup: ^2.50.0
+      vite: ^2.3.0
+      webpack: 4 || 5
+    peerDependenciesMeta:
+      esbuild:
+        optional: true
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      chokidar: 3.5.3
+      esbuild: 0.14.49
+      rollup: 2.77.0
+      vite: 3.0.4
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.4
     dev: true
