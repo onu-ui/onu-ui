@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/utils",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "all utils are settled here",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
