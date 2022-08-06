@@ -10,7 +10,8 @@
         "build": "rimraf packages/*/dist && pnpm -r -F !playground run build",
         "play": "pnpm -C playground run dev",
         "lint": "eslint .",
-        "release": "bumpp package.json packages/**/package.json"
+        "release": "bumpp package.json packages/**/package.json",
+        "deploy": "pnpm -C playground run build"
     },
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
