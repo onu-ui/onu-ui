@@ -36,11 +36,32 @@ export default defineConfig({
 })
 ```
 
+## Preveiew
+You can see the preview of the following commands:
+
+```bash
+npm run build
+```
+
+Then you can run playground to see the result.
+
+```bash
+npm run play
+```
+
+If you want start the dev server, you can run:
+
+```bash
+npm run dev
+```
+
+
 ## Refer
 
 [UnoCSS](https://github.com/unocss/unocss)
 
 [@nuxt/ui](https://github.com/nuxt/ui)
-# License
+
+## License
 
 [MIT](./LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
