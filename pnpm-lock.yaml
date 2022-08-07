@@ -65,7 +65,12 @@ importers:
       consola: 2.15.3
 
   packages/components:
-    specifiers: {}
+    specifiers:
+      '@onu-ui/preset': workspace:*
+      '@onu-ui/utils': workspace:*
+    dependencies:
+      '@onu-ui/preset': link:../preset
+      '@onu-ui/utils': link:../utils
 
   packages/onu-ui:
     specifiers:
@@ -94,7 +99,7 @@ importers:
       '@onu-ui/preset': link:../packages/preset
       onu-ui: link:../packages/onu-ui
       unplugin-auto-import: 0.7.1
-      unplugin-vue-components: 0.19.5
+      unplugin-vue-components: 0.19.5_vue@3.2.37
 
 packages:
 
@@ -4076,37 +4081,6 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-vue-components/0.19.5:
-    resolution: {integrity: sha512-cIC+PdQEXmG+B1gmZGk4hws2xP+00C6pg3FD6ixEgRyW+WF+QXQW/60pc+hUhtDYs1PFE+23K3NY7yvYTnDDTA==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@babel/parser': ^7.15.8
-      '@babel/traverse': ^7.15.4
-      vue: 2 || 3
-    peerDependenciesMeta:
-      '@babel/parser':
-        optional: true
-      '@babel/traverse':
-        optional: true
-    dependencies:
-      '@antfu/utils': 0.5.2
-      '@rollup/pluginutils': 4.2.1
-      chokidar: 3.5.3
-      debug: 4.3.4
-      fast-glob: 3.2.11
-      local-pkg: 0.4.2
-      magic-string: 0.26.2
-      minimatch: 5.1.0
-      resolve: 1.22.1
-      unplugin: 0.6.3
-    transitivePeerDependencies:
-      - esbuild
-      - rollup
-      - supports-color
-      - vite
-      - webpack
-    dev: true
-
   /unplugin-vue-components/0.19.5_s3pd4sixltth25eoei6v3pypt4:
     resolution: {integrity: sha512-cIC+PdQEXmG+B1gmZGk4hws2xP+00C6pg3FD6ixEgRyW+WF+QXQW/60pc+hUhtDYs1PFE+23K3NY7yvYTnDDTA==}
     engines: {node: '>=14'}
@@ -4130,6 +4104,38 @@ packages:
       minimatch: 5.1.0
       resolve: 1.22.1
       unplugin: 0.6.3_mpkht2c6cvo3vm2r5tebr455au
+      vue: 3.2.37
+    transitivePeerDependencies:
+      - esbuild
+      - rollup
+      - supports-color
+      - vite
+      - webpack
+    dev: true
+
+  /unplugin-vue-components/0.19.5_vue@3.2.37:
+    resolution: {integrity: sha512-cIC+PdQEXmG+B1gmZGk4hws2xP+00C6pg3FD6ixEgRyW+WF+QXQW/60pc+hUhtDYs1PFE+23K3NY7yvYTnDDTA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/parser': ^7.15.8
+      '@babel/traverse': ^7.15.4
+      vue: 2 || 3
+    peerDependenciesMeta:
+      '@babel/parser':
+        optional: true
+      '@babel/traverse':
+        optional: true
+    dependencies:
+      '@antfu/utils': 0.5.2
+      '@rollup/pluginutils': 4.2.1
+      chokidar: 3.5.3
+      debug: 4.3.4
+      fast-glob: 3.2.11
+      local-pkg: 0.4.2
+      magic-string: 0.26.2
+      minimatch: 5.1.0
+      resolve: 1.22.1
+      unplugin: 0.6.3
       vue: 3.2.37
     transitivePeerDependencies:
       - esbuild
