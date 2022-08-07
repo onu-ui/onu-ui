@@ -4,7 +4,7 @@
 
 [build]
   publish = "playground dist"
-  command = "npm run deploy"
+  command = "npm i && npm run deploy"
   ignore = "git diff --quiet HEAD^ HEAD . ../packages"
 
 [functions]
