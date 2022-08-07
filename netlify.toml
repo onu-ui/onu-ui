@@ -3,5 +3,9 @@
   NODE_VERSION = "16"
 
 [build]
-  publish = "playground/dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store --no-frozen-lockfile && npm run deploy"
+  publish = "dist"
+  command = "cd .. && npx pnpm@7.5.0 i --store=./node_modules/.pnpm-store && pnpm run deploy && cd playground"
+  ignore = "git diff --quiet HEAD^ HEAD . ../packages"
+
+[functions]
+  node_bundler = "esbuild"
