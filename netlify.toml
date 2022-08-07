@@ -3,8 +3,8 @@
   NODE_VERSION = "16"
 
 [build]
-  publish = "dist"
-  command = "npx pnpm@7.5.0 i --store=./node_modules/.pnpm-store --no-frozen-lockfile && pnpm run deploy && cd playground"
+  publish = "playground/dist"
+  command = "npx pnpm@7.5.0 i && npx pnpm@7.5.0 build && npx pnpm@7.5.0 run deploy"
   ignore = "git diff --quiet HEAD^ HEAD . ../packages"
 
 [functions]
