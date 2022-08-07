@@ -4,4 +4,4 @@
 
 [build]
   publish = "playground/dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run deploy"
+  command = "npx pnpm i --store=node_modules/.pnpm-store --no-frozen-lockfile && npm run deploy"
