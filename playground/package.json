@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "@onu-ui/components": "workspace:*",
-    "@unocss/reset": "^0.44.5",
-    "vue": "3.2.33"
+    "@unocss/reset": "^0.44.5"
   },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
