@@ -4,7 +4,7 @@
 
 [build]
   publish = "playground dist"
-  command = "npx pnpm@7.5.0 i && npx pnpm@7.5.0 run deploy"
+  command = "npx pnpm@7.5.0 i && npx pnpm@7.5.0 build && npx pnpm@7.5.0 run deploy"
   ignore = "git diff --quiet HEAD^ HEAD . ../packages"
 
 [functions]
