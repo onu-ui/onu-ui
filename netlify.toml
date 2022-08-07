@@ -4,7 +4,7 @@
 
 [build]
   publish = "playground dist"
-  command = "npx pnpm@7.5.0 i --store=./node_modules/.pnpm-store && pnpm run deploy"
+  command = "npm run deploy"
   ignore = "git diff --quiet HEAD^ HEAD . ../packages"
 
 [functions]
