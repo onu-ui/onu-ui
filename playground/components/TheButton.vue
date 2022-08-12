@@ -5,10 +5,22 @@ const githubUrl = 'https://github.com/chris-zhu'
 <template>
   <Card name="Button">
     <OButton>
-      button
+      Default
     </OButton>
-    <OButton>
-      button
+    <OButton type="primary">
+      Primary
+    </OButton>
+    <OButton type="success">
+      Success
+    </OButton>
+    <OButton type="warning">
+      Warning
+    </OButton>
+    <OButton type="danger">
+      Danger
+    </OButton>
+    <OButton type="info">
+      Info
     </OButton>
     <o-button :to="githubUrl">
       <template #icon>
