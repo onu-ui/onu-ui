@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     Layout: typeof import('./components/Layout.vue')['default']
     OAvatar: typeof import('onu-ui')['OAvatar']
     OButton: typeof import('onu-ui')['OButton']
+    OCard: typeof import('onu-ui')['OCard']
     OIcon: typeof import('onu-ui')['OIcon']
     TheAvatar: typeof import('./components/TheAvatar.vue')['default']
     TheButton: typeof import('./components/TheButton.vue')['default']

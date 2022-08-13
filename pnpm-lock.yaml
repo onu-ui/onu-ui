@@ -90,6 +90,7 @@ importers:
       '@onu-ui/preset': workspace:*
       '@unocss/reset': ^0.44.5
       onu-ui: workspace:*
+      sass: ^1.54.3
       unplugin-auto-import: 0.7.1
       unplugin-vue-components: 0.19.5
     dependencies:
@@ -98,6 +99,7 @@ importers:
     devDependencies:
       '@onu-ui/preset': link:../packages/preset
       onu-ui: link:../packages/onu-ui
+      sass: 1.54.3
       unplugin-auto-import: 0.7.1
       unplugin-vue-components: 0.19.5_vue@3.2.37
 
@@ -2583,6 +2585,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable/4.1.0:
+    resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -3601,6 +3607,16 @@ packages:
     resolution: {integrity: sha512-rx+x8AMzKb5Q5lQ95Zoi6ZbJqwCLkqi3XuJXp5P3rT8OEc6sZCJG5AE5dU3lsgRr/F4Bs31jSlVN+j5KrsGu9A==}
     dependencies:
       regexp-tree: 0.1.24
+    dev: true
+
+  /sass/1.54.3:
+    resolution: {integrity: sha512-fLodey5Qd41Pxp/Tk7Al97sViYwF/TazRc5t6E65O7JOk4XF8pzwIW7CvCxYVOfJFFI/1x5+elDyBIixrp+zrw==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.1.0
+      source-map-js: 1.0.2
     dev: true
 
   /scule/0.2.1:

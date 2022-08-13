@@ -55,7 +55,7 @@ export function presetOnu(): Preset {
       'o-borderless': '!border-none !shadow-none',
 
       // button
-      'o-button-base': 'border cursor-pointer o-border-base rounded shadow-sm px-1em py-0.25em inline-flex items-center gap-1 op80 !outline-none',
+      'o-button-base': 'border !border-white text-white cursor-pointer o-border-base rounded shadow-sm px-1em py-0.25em inline-flex items-center gap-1 op80 !outline-none',
       'o-button-link': 'decoration-none',
       'o-button-hover': 'op100 !border-context text-context',
       'o-button-active': 'o-active-base bg-context/5',
