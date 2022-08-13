@@ -4,7 +4,9 @@ defineProps<{ name: string }>()
 
 <template>
   <o-card space-y-2>
-    <h4 text="white op-60">{{ name }}</h4>
+    <h4 text="white op-60">
+      {{ name }}
+    </h4>
     <div flex="~ gap-4">
       <slot />
     </div>

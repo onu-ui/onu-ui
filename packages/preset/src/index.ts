@@ -32,7 +32,7 @@ export function presetOnu(): Preset {
       ['o-solid', {
         'background-color': 'rgba(var(--onu-c-context), 1) !important',
         'border-color': 'rgba(var(--onu-c-context), 1)',
-        'color': 'white !important'
+        'color': 'white !important',
       }],
     ],
     variants: [
