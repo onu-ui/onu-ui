@@ -26,7 +26,6 @@
     "exclude": [
         "**/dist/**",
         "**/node_modules/**",
-        "**/playground/**",
         "**/test/dts/**"
     ]
 }
