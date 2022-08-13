@@ -1,7 +1,7 @@
 import { parseColor } from '@unocss/preset-mini/utils'
+import { commonShortcuts } from './shortcuts'
 import type { Preset, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
-import { commonShortcuts } from './shortcuts'
 
 export function presetOnu(): Preset {
   return {
