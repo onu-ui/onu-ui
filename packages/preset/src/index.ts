@@ -55,34 +55,51 @@ export function presetOnu(): Preset {
         }
       },
     ],
-    shortcuts: {
-      ...commonShortcuts,
-      // general
-      // 'o-bg-base': 'bg-white dark:bg-[#222]',
-      'o-border-base': 'border-gray-400/50',
-      'o-border-300': 'border-gray-400/40',
-      'o-border-200': 'border-gray-400/25',
-      'o-transition': 'transition-all duration-200',
-      'o-focus-base': 'ring-2 ring-context/50',
-      'o-active-base': 'ring-3 ring-context/10',
-      'o-borderless': '!border-none !shadow-none',
-      'o-solid': '!bg-context !border-context !c-white',
-      'o-light': '!bg-transparent !border-context !c-context',
+    shortcuts: [
+      {
+        ...commonShortcuts,
+        // general
+        // 'o-bg-base': 'bg-white dark:bg-[#222]',
+        'o-border-base': 'border-gray-400/50',
+        'o-border-300': 'border-gray-400/40',
+        'o-border-200': 'border-gray-400/25',
+        'o-transition': 'transition-all duration-200',
+        'o-focus-base': 'ring-2 ring-context/50',
+        'o-active-base': 'ring-3 ring-context/10',
+        'o-borderless': '!border-none !shadow-none',
+        'o-solid': 'bg-context border-context c-white',
+        'o-light': `bg-context:12 hover-bg-context active-bg-context:64
+                   !border-context !hover-border-context !active-border-context:64
+                   !c-context !hover-c-white !active-c-white`,
+        'o-text': `!bg-transparent !hover-bg-context:32 !active-bg-context:12
+                   !border-transparent
+                   !c-context`,
 
+        // button
+        'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded !outline-none c-context o-solid border',
+        'o-button-hover': 'hover-border-context:64 hover-text-white hover-bg-context:64',
+        'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
+        'o-button-light': 'o-light',
+        'o-button-text': 'o-text',
+        'o-button-md': 'px-1em py-0.25em',
+        'o-button-lg': 'px-1.15em py-0.4em',
+
+        'o-button-link': 'decoration-none',
+        'o-button-icon': '-ml-0.2em mr-0.2em text-1.1em',
+
+        // avatar
+        'o-avatar-base': 'border-circle rounded-full shadow-sm',
+        'o-avatar-icon': 'text-2em',
+
+        // card
+        'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
+      },
       // button
-      'o-button-base': 'fcc gap-1 inline-flex px-1em py-0.25em cursor-pointer rounded text-sm !outline-none c-context o-solid border',
-      'o-button-light': 'o-light',
-      'o-button-link': 'decoration-none',
-      'o-button-hover': 'op100 !border-context text-context',
-      'o-button-active': 'o-active-base bg-context/5',
-      'o-button-icon': '-ml-0.2em mr-0.2em text-1.1em',
-
-      // avatar
-      'o-avatar-base': 'border-circle rounded-full shadow-sm',
-      'o-avatar-icon': 'text-2em',
-
-      // card
-      'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
-    },
+      [/^o-button-(.*)$/, ([, s]) => {
+        if (['xs', 'sm', 'md', 'lg', 'xl'].includes(s)) {
+          return `o-button-${s} text-size-${s}`
+        }
+      }],
+    ]
   }
 }

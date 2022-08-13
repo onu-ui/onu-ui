@@ -4,8 +4,8 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
 
 <template>
   <Card name="Button">
-    <div f-c-c gap-2>
-      <div fcc gap-2>
+    <div space-y-2>
+      <div fsc gap-2>
         <OButton o="primary">
           Primary
         </OButton>
@@ -25,14 +25,14 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
           Info
         </OButton>
       </div>
-      <div fcc gap-2>
-        <OButton o="primary light">
+      <div fsc gap-2>
+        <OButton light o="primary">
           Primary
         </OButton>
         <OButton light o="secondary">
           Secondary
         </OButton>
-        <OButton light o="success">
+        <OButton  o="success light">
           Success
         </OButton>
         <OButton light o="warning">
@@ -43,6 +43,43 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
         </OButton>
         <OButton light o="info">
           Info
+        </OButton>
+      </div>
+      <div fsc gap-2>
+        <OButton text o="primary">
+          Primary
+        </OButton>
+        <OButton text o="secondary">
+          Secondary
+        </OButton>
+        <OButton o="success text">
+          Success
+        </OButton>
+        <OButton text o="warning">
+          Warning
+        </OButton>
+        <OButton text o="error">
+          Danger
+        </OButton>
+        <OButton text o="info">
+          Info
+        </OButton>
+      </div>
+      <div fsc gap-2>
+        <OButton size="xs" o="primary">
+          Primary
+        </OButton>
+        <OButton size="sm" o="secondary">
+          Secondary
+        </OButton>
+        <OButton size="md" o="success">
+          Success
+        </OButton>
+        <OButton size="lg" o="warning">
+          Warning
+        </OButton>
+        <OButton size="xl" o="error">
+          Danger
         </OButton>
       </div>
       <div fcc gap-2>
