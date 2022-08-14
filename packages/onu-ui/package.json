@@ -1,7 +1,7 @@
 {
   "name": "onu-ui",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Onu-UI for web components with unocss & vueuse",
   "keywords": [
     "onu-ui",
