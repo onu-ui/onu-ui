@@ -81,14 +81,17 @@ export function presetOnu(): Preset {
         'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
         'o-button-light': 'o-light',
         'o-button-text': 'o-text',
-        'o-button-md': 'px-1em py-0.25em',
-        'o-button-lg': 'px-1.15em py-0.4em',
+        'o-button-size-xs': 'px-0.6em py-0.18em',
+        'o-button-size-sm': 'px-0.8em py-0.22em',
+        'o-button-size-md': 'px-1em py-0.25em',
+        'o-button-size-lg': 'px-1.1em py-0.3em',
+        'o-button-size-xl': 'px-1.2em py-0.4em',
 
         'o-button-link': 'decoration-none',
         'o-button-icon': '-ml-0.2em mr-0.2em text-1.1em',
 
         // avatar
-        'o-avatar-base': 'border-circle rounded-full shadow-sm',
+        'o-avatar-base': 'border-circle rounded shadow-sm',
         'o-avatar-icon': 'text-2em',
 
         // card
@@ -97,7 +100,7 @@ export function presetOnu(): Preset {
       // button
       [/^o-button-(.*)$/, ([, s]) => {
         if (['xs', 'sm', 'md', 'lg', 'xl'].includes(s)) {
-          return `o-button-${s} text-size-${s}`
+          return `o-button-size-${s} text-${s}`
         }
       }],
     ]

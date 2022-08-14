@@ -15,13 +15,13 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
         <OButton o="success">
           Success
         </OButton>
-        <OButton o="warning">
+        <OButton o="warning" rounded="full">
           Warning
         </OButton>
-        <OButton o="error">
+        <OButton o="error" rounded="full">
           Danger
         </OButton>
-        <OButton o="info">
+        <OButton o="info" rounded="full">
           Info
         </OButton>
       </div>
@@ -32,16 +32,16 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
         <OButton light o="secondary">
           Secondary
         </OButton>
-        <OButton  o="success light">
+        <OButton o="success light">
           Success
         </OButton>
-        <OButton light o="warning">
+        <OButton light o="warning" rounded="full" b="dashed">
           Warning
         </OButton>
-        <OButton light o="error">
+        <OButton light o="error" rounded="full" b="dashed">
           Danger
         </OButton>
-        <OButton light o="info">
+        <OButton light o="info" rounded="full" b="dashed">
           Info
         </OButton>
       </div>
@@ -55,16 +55,17 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
         <OButton o="success text">
           Success
         </OButton>
-        <OButton text o="warning">
+        <OButton text o="warning" rounded="full">
           Warning
         </OButton>
-        <OButton text o="error">
+        <OButton text o="error" rounded="full">
           Danger
         </OButton>
-        <OButton text o="info">
+        <OButton text o="info" rounded="full">
           Info
         </OButton>
       </div>
+
       <div fsc gap-2>
         <OButton size="xs" o="primary">
           Primary
@@ -82,12 +83,36 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
           Danger
         </OButton>
       </div>
-      <div fcc gap-2>
-        <o-button :to="githubUrl">
+      <div fsc gap-2>
+        <o-button :to="githubUrl" o="primary">
           <template #icon>
             <div i-carbon-logo-github />
           </template>
-          github
+          Github
+        </o-button>
+        <o-button o="secondary">
+          <template #icon>
+            <div i-carbon-share />
+          </template>
+          Share
+        </o-button>
+        <o-button o="success">
+          <template #icon>
+            <div i-carbon-logo-wechat />
+          </template>
+          WeChat
+        </o-button>
+        <o-button o="error">
+          <template #icon>
+            <div i-carbon-music />
+          </template>
+          Music
+        </o-button>
+        <o-button o="info">
+          <template #icon>
+            <div i-carbon-circle-dash animate-spin/>
+          </template>
+          Loading
         </o-button>
       </div>
     </div>
