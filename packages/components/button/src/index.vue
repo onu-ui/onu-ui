@@ -5,6 +5,7 @@ interface IButtonProps {
   light?: boolean
   text?: boolean
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  disabled?: boolean
 }
 
 withDefaults(defineProps<IButtonProps>(), {
@@ -24,11 +25,13 @@ const sizeMap = {
   <component
     :is="to ? 'a' : 'button'"
     v-bind="to ? { href: to } : {}"
+    :disabled="disabled"
     class="o-transition o-button-base o-button-hover o-button-active"
     :class="[
       light? 'o-button-light': '',
       text? 'o-button-text': '',
       sizeMap[size], 
+      disabled? 'o-disabled': '',
     ]"
   >
     <slot name="icon">

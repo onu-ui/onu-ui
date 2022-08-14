@@ -29,11 +29,17 @@ export function presetOnu(): Preset {
           }
         }
       }],
+      ['o-dashed', { 'border-style': 'dashed' }],
       ['o-solid', {
         'background-color': 'rgba(var(--onu-c-context), 1) !important',
         'border-color': 'rgba(var(--onu-c-context), 1)',
         'color': 'white !important',
       }],
+      ['o-disabled', {
+        opacity: 0.4,
+        'pointer-events': 'none',
+        'cursor': 'not-allowed',
+      }]
     ],
     variants: [
       (input: string) => {
@@ -86,9 +92,6 @@ export function presetOnu(): Preset {
         'o-button-size-md': 'px-1em py-0.25em',
         'o-button-size-lg': 'px-1.1em py-0.3em',
         'o-button-size-xl': 'px-1.2em py-0.4em',
-
-        'o-button-link': 'decoration-none',
-        'o-button-icon': '-ml-0.2em mr-0.2em text-1.1em',
 
         // avatar
         'o-avatar-base': 'border-circle rounded shadow-sm',

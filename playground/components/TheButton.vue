@@ -35,13 +35,13 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
         <OButton o="success light">
           Success
         </OButton>
-        <OButton light o="warning" rounded="full" b="dashed">
+        <OButton light o="warning dashed" rounded="full">
           Warning
         </OButton>
-        <OButton light o="error" rounded="full" b="dashed">
+        <OButton light o="error dashed" rounded="full">
           Danger
         </OButton>
-        <OButton light o="info" rounded="full" b="dashed">
+        <OButton light o="info dashed" rounded="full">
           Info
         </OButton>
       </div>
@@ -110,10 +110,27 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
         </o-button>
         <o-button o="info">
           <template #icon>
-            <div i-carbon-circle-dash animate-spin/>
+            <div i-carbon-circle-dash animate-spin />
           </template>
           Loading
         </o-button>
+      </div>
+      <div fsc gap-2>
+        <OButton disabled o="primary">
+          Primary
+        </OButton>
+        <OButton disabled o="secondary">
+          Secondary
+        </OButton>
+        <OButton disabled o="success">
+          Success
+        </OButton>
+        <OButton disabled o="warning">
+          Warning
+        </OButton>
+        <OButton disabled o="error">
+          Danger
+        </OButton>
       </div>
     </div>
   </Card>
