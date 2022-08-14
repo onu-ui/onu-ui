@@ -28,10 +28,10 @@ const sizeMap = {
     :disabled="disabled"
     class="o-transition o-button-base o-button-hover o-button-active"
     :class="[
-      light? 'o-button-light': '',
-      text? 'o-button-text': '',
-      sizeMap[size], 
-      disabled? 'o-disabled': '',
+      light ? 'o-button-light' : '',
+      text ? 'o-button-text' : '',
+      sizeMap[size],
+      disabled ? 'o-disabled' : '',
     ]"
   >
     <slot name="icon">

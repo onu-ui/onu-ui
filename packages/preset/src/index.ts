@@ -36,10 +36,10 @@ export function presetOnu(): Preset {
         'color': 'white !important',
       }],
       ['o-disabled', {
-        opacity: 0.4,
+        'opacity': 0.4,
         'pointer-events': 'none',
         'cursor': 'not-allowed',
-      }]
+      }],
     ],
     variants: [
       (input: string) => {
@@ -102,10 +102,9 @@ export function presetOnu(): Preset {
       },
       // button
       [/^o-button-(.*)$/, ([, s]) => {
-        if (['xs', 'sm', 'md', 'lg', 'xl'].includes(s)) {
+        if (['xs', 'sm', 'md', 'lg', 'xl'].includes(s))
           return `o-button-size-${s} text-${s}`
-        }
       }],
-    ]
+    ],
   }
 }
