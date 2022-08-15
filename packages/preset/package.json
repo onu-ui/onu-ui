@@ -18,6 +18,6 @@
     "sideEffects": false,
     "scripts": {
         "build": "tsup",
-        "stub": "tsup --watch"
+        "stub": "tsup --watch --onSuccess 'pnpm run --filter=components stub'"
     }
 }
