@@ -1,11 +1,11 @@
 <script setup lang="ts" name="O-Button">
-import { computed } from 'vue'
+import { computed, useSlots } from 'vue'
 interface IButtonProps {
   to?: string
   // icon?: string
   light?: boolean
   text?: boolean
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   disabled?: boolean
   loading?: boolean
 }
@@ -15,6 +15,8 @@ const props = withDefaults(defineProps<IButtonProps>(), {
 })
 
 const isDisabled = computed(() => props.loading || props.disabled)
+const slots = useSlots()
+const onlyIcon = computed(() => slots.icon && !slots.default)
 </script>
 
 <template>
@@ -29,6 +31,7 @@ const isDisabled = computed(() => props.loading || props.disabled)
       text ? 'o-button-text' : '',
       `o-button-${size}`,
       isDisabled ? 'o-disabled' : 'o-transition o-button-hover o-button-active',
+      onlyIcon && 'aspect-square px-0',
     ]"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />

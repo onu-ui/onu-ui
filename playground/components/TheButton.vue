@@ -1,5 +1,13 @@
 <script lang="ts" setup>
 const githubUrl = 'https://github.com/onu-ui/onu-ui'
+
+const loading = ref(false)
+const startLoading = () => {
+  loading.value = true
+  setTimeout(() => {
+    loading.value = false
+  }, 2000)
+}
 </script>
 
 <template>
@@ -68,20 +76,40 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
 
       <div fsc gap-2>
         <OButton size="xs" o="primary">
-          Primary
+          Mini
         </OButton>
         <OButton size="sm" o="secondary">
-          Secondary
+          Small
         </OButton>
         <OButton size="md" o="success">
-          Success
+          Medium
         </OButton>
         <OButton size="lg" o="warning">
-          Warning
+          Large
         </OButton>
-        <OButton size="xl" o="error">
-          Danger
-        </OButton>
+        <o-button :to="githubUrl" o="primary">
+          <template #icon>
+            <div i-carbon-logo-github />
+          </template>
+        </o-button>
+        <o-button o="secondary">
+          <template #icon>
+            <div i-carbon-share />
+          </template>
+        </o-button>
+        <o-button o="success" rounded-full>
+          <template #icon>
+            <div i-carbon-logo-wechat />
+          </template>
+        </o-button>
+        <o-button o="error" rounded-full>
+          <template #icon>
+            <div i-carbon-music />
+          </template>
+        </o-button>
+        <o-button o="info" :loading="loading" @click="startLoading">
+          {{ loading ? 'Loading~~' : 'Start Load' }}
+        </o-button>
       </div>
       <div fsc gap-2>
         <o-button :to="githubUrl" o="primary">
@@ -108,25 +136,22 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
           </template>
           Music
         </o-button>
-        <o-button o="info" loading>
-          Loading
-        </o-button>
       </div>
       <div fsc gap-2>
         <OButton disabled o="primary">
-          Primary
+          Disabled
         </OButton>
         <OButton disabled o="secondary">
-          Secondary
+          Disabled
         </OButton>
         <OButton disabled o="success">
-          Success
+          Disabled
         </OButton>
         <OButton disabled o="warning">
-          Warning
+          Disabled
         </OButton>
         <OButton disabled o="error">
-          Danger
+          Disabled
         </OButton>
       </div>
     </div>
