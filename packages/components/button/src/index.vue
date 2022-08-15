@@ -29,13 +29,13 @@ const isDisabled = computed(() => props.loading || props.disabled)
   <component
     :is="to ? 'a' : 'button'"
     v-bind="to ? { href: to } : {}"
-    :disabled="isDisabled"
+    :disabled="disabled"
     class="o-transition o-button-base o-button-hover o-button-active"
     :class="[
       light ? 'o-button-light' : '',
       text ? 'o-button-text' : '',
       sizeMap[size],
-      isDisabled ? 'o-disabled' : '',
+      disabled ? 'o-disabled' : '',
     ]"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />

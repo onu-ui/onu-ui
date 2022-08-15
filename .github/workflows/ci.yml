@@ -28,7 +28,7 @@ jobs:
           version: 7.4.0
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Lint
         run: pnpm lint
