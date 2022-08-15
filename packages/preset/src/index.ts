@@ -19,6 +19,9 @@ export function presetOnu(): Preset {
       fontFamily: {
         sans: 'Avenir, Helvetica, Arial, sans-serif',
       },
+      boxShadow: {
+        xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
+      },
     },
     rules: [
       [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
@@ -81,16 +84,15 @@ export function presetOnu(): Preset {
                    !c-context`,
 
         // button
-        'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded shadow-md shadow-context:50 !outline-none c-context o-solid border',
+        'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded shadow-context:50 !outline-none c-context o-solid border',
         'o-button-hover': 'hover-border-context:64 hover-text-white hover-bg-context:64',
         'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
         'o-button-light': 'o-light',
         'o-button-text': 'o-text',
-        'o-button-size-xs': 'px-0.6em py-0.18em',
-        'o-button-size-sm': 'px-0.8em py-0.22em',
-        'o-button-size-md': 'px-1em py-0.25em',
-        'o-button-size-lg': 'px-1.1em py-0.3em',
-        'o-button-size-xl': 'px-1.2em py-0.4em',
+        'o-button-xs': 'px-2.5 h-6 text-xs shadow-xs',
+        'o-button-sm': 'px-3 h-7 text-sm shadow-sm',
+        'o-button-md': 'px-4 h-8 text-sm shadow-md',
+        'o-button-lg': 'px-4 h-9 text-md shadow-lg',
 
         // avatar
         'o-avatar-base': 'border-circle rounded shadow-sm',
@@ -99,11 +101,6 @@ export function presetOnu(): Preset {
         // card
         'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
       },
-      // button
-      [/^o-button-(.*)$/, ([, s]) => {
-        if (['xs', 'sm', 'md', 'lg', 'xl'].includes(s))
-          return `o-button-size-${s} text-${s}`
-      }],
     ],
   }
 }
