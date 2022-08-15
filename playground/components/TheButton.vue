@@ -108,7 +108,7 @@ const githubUrl = 'https://github.com/onu-ui/onu-ui'
           </template>
           Music
         </o-button>
-        <o-button o="info" :loading="true">
+        <o-button o="info" loading>
           Loading
         </o-button>
       </div>
