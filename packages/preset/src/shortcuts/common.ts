@@ -1,4 +1,4 @@
-export const commonShortcuts: Record<string, string> = {
+export const shortcutCommon: Record<string, string> = {
   'pr': 'relative',
   'pa': 'absolute',
   'pf': 'fixed',
