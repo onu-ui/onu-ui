@@ -26,12 +26,13 @@ const sizeMap = {
     :is="to ? 'a' : 'button'"
     v-bind="to ? { href: to } : {}"
     :disabled="disabled"
-    class="o-transition o-button-base o-button-hover o-button-active"
+    :aria-disabled="disabled"
+    class="o-button-base"
     :class="[
       light ? 'o-button-light' : '',
       text ? 'o-button-text' : '',
       sizeMap[size],
-      disabled ? 'o-disabled' : '',
+      disabled ? 'o-disabled' : 'o-transition o-button-hover o-button-active',
     ]"
   >
     <slot name="icon">
