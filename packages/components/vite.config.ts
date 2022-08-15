@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
-import { presetAttributify, presetUno } from 'unocss'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 
@@ -30,9 +30,11 @@ export default defineConfig({
     UnoCSS({
       presets: [
         presetAttributify(),
+        presetIcons(),
         presetUno(),
         presetOnu(),
       ],
+      safelist: [...['xs', 'sm', 'md', 'lg', 'xl'].map(s => `o-button-${s}`)],
     }),
   ],
 })
