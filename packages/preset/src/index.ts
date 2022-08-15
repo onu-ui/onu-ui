@@ -73,15 +73,15 @@ export function presetOnu(): Preset {
         'o-active-base': 'ring-3 ring-context/10',
         'o-borderless': '!border-none !shadow-none',
         'o-solid': 'bg-context border-context c-white',
-        'o-light': `bg-context:12 hover-bg-context active-bg-context:64
+        'o-light': `!shadow-transparent bg-context:12 hover-bg-context active-bg-context:64
                    !border-context !hover-border-context !active-border-context:64
                    !c-context !hover-c-white !active-c-white`,
-        'o-text': `!bg-transparent !hover-bg-context:32 !active-bg-context:12
+        'o-text': `!shadow-transparent !bg-transparent !hover-bg-context:32 !active-bg-context:12
                    !border-transparent
                    !c-context`,
 
         // button
-        'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded !outline-none c-context o-solid border',
+        'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded shadow-md shadow-context:50 !outline-none c-context o-solid border',
         'o-button-hover': 'hover-border-context:64 hover-text-white hover-bg-context:64',
         'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
         'o-button-light': 'o-light',
