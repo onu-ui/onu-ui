@@ -19,5 +19,8 @@
     "scripts": {
         "build": "tsup",
         "stub": "tsup --watch"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
