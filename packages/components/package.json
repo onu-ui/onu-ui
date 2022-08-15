@@ -25,5 +25,8 @@
   "dependencies": {
     "@onu-ui/preset": "workspace:*",
     "@onu-ui/utils": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

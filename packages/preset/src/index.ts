@@ -36,9 +36,8 @@ export function presetOnu(): Preset {
         'color': 'white !important',
       }],
       ['o-disabled', {
-        'opacity': 0.4,
-        'pointer-events': 'none',
-        'cursor': 'not-allowed',
+        opacity: 0.4,
+        cursor: 'not-allowed',
       }],
     ],
     variants: [
