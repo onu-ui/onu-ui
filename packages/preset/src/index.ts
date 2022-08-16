@@ -95,8 +95,17 @@ export function presetOnu(): Preset {
         'o-button-lg': 'px-4 h-9 text-md shadow-lg',
 
         // avatar
-        'o-avatar-base': 'border-circle rounded shadow-sm',
+        'o-avatar-base': 'fcc overflow-hidden border-box shadow-sm bg-[#c0c4cc] text-white',
         'o-avatar-icon': 'text-2em',
+        'o-avatar-txt': 'text-2em',
+        'o-avatar-size-small': 'w-3em h-3em',
+        'o-avatar-size-default': 'w-4em h-4em',
+        'o-avatar-size-large': 'w-5em h-5em',
+        'o-avatar-fit-fill': 'object-fill',
+        'o-avatar-fit-contain': 'object-contain',
+        'o-avatar-fit-cover': 'object-cover',
+        'o-avatar-fit-none': 'object-none',
+        'o-avatar-fit-scale-down': 'object-scale-down',
 
         // card
         'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
