@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
     Card: typeof import('./components/Card.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']
     OAvatar: typeof import('onu-ui')['OAvatar']
+    OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
     OButton: typeof import('onu-ui')['OButton']
     OCard: typeof import('onu-ui')['OCard']
     OIcon: typeof import('onu-ui')['OIcon']

@@ -34,7 +34,7 @@ export default defineConfig({
         presetUno(),
         presetOnu(),
       ],
-      safelist: [['xs', 'sm', 'md', 'lg'].map(s => [`o-button-${s}`, `o-avatar-${s}`])].flat(2) as string[],
+      safelist: [['xs', 'sm', 'md', 'lg'].map(s => [`o-button-${s}`, `o-avatar-${s}`, `o-avatar-group-${s}`])].flat(2) as string[],
     }),
   ],
 })

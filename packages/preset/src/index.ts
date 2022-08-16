@@ -102,6 +102,7 @@ export function presetOnu(): Preset {
         'o-avatar-sm': 'h-8 text-sm shadow-sm',
         'o-avatar-md': 'h-10 text-sm shadow-md',
         'o-avatar-lg': 'h-15 text-md shadow-md',
+        'o-avatar-group-base': 'flex space-x--4 children-relative',
 
         // card
         'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
@@ -109,6 +110,24 @@ export function presetOnu(): Preset {
         // icon
         'o-icon-base': 'c-context text-md',
       },
+      [/^o-avatar-group-(.*)$/, ([,s]) => {
+        if (['xs', 'sm', 'md', 'lg'].includes(s)) {
+          const size = s as 'xs' | 'sm' | 'md' | 'lg'
+          const avatarSizeMap = {
+            xs: 'h-6 text-xs shadow-xs',
+            sm: 'h-8 text-sm shadow-sm',
+            md: 'h-10 text-sm shadow-md',
+            lg: 'h-15 text-md shadow-md',
+          }
+          const avatarGroupSpaceMap = {
+            xs: 'space-x--2',
+            sm: 'space-x--3',
+            md: 'space-x--4',
+            lg: 'space-x--6',
+          }
+          return `important-${avatarGroupSpaceMap[size]} ${avatarSizeMap[size].split(' ').map(selector => `important-children-${selector}`).join(' ')}`
+        }
+      }],
     ],
   }
 }

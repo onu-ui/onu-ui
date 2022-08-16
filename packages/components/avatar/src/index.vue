@@ -24,6 +24,3 @@ const IsBgMode = computed(() => props.mode === 'bg')
     <slot v-if="IsBgMode" />
   </component>
 </template>
-
-<style lang='scss' scoped>
-</style>

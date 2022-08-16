@@ -28,18 +28,37 @@ const getRandomSrc = () => avatarSrcs[Math.floor(Math.random() * (avatarSrcs.len
         <O-Avatar mode="img" :src="getRandomSrc()" />
         <O-Avatar mode="img" :src="getRandomSrc()" />
       </div>
+      <div fsc gap-4>
+        <O-Avatar-Group>
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar o-info>
+            +99
+          </O-Avatar>
+        </O-Avatar-Group>
+        <O-Avatar-Group size="lg">
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar :src="getRandomSrc()" />
+          <O-Avatar o-info>
+            +99
+          </O-Avatar>
+        </O-Avatar-Group>
+      </div>
       <div fsc gap-2>
         <O-Avatar size="xs" :src="getRandomSrc()" />
-        <O-Avatar size="sm" :src="getRandomSrc()" />
-        <O-Avatar size="md" :src="getRandomSrc()" />
-        <O-Avatar size="lg" :src="getRandomSrc()" />
-      </div>
-      <div fsc gap-2>
         <O-Avatar size="xs" rounded :src="getRandomSrc()" />
+        <O-Avatar size="sm" :src="getRandomSrc()" />
         <O-Avatar size="sm" rounded :src="getRandomSrc()" />
+        <O-Avatar size="md" :src="getRandomSrc()" />
         <O-Avatar size="md" rounded :src="getRandomSrc()" />
+        <O-Avatar size="lg" :src="getRandomSrc()" />
         <O-Avatar size="lg" rounded="md" :src="getRandomSrc()" />
       </div>
+      <div fsc gap-2 />
       <div fsc gap-2>
         <O-Avatar>
           <div text-lg class="i-carbon-user-certification" />
