@@ -2,7 +2,6 @@
 import { computed, useSlots } from 'vue'
 interface IButtonProps {
   to?: string
-  // icon?: string
   light?: boolean
   text?: boolean
   size?: 'xs' | 'sm' | 'md' | 'lg'
@@ -13,9 +12,8 @@ interface IButtonProps {
 const props = withDefaults(defineProps<IButtonProps>(), {
   size: 'md',
 })
-
-const isDisabled = computed(() => props.loading || props.disabled)
 const slots = useSlots()
+const isDisabled = computed(() => props.loading || props.disabled)
 const onlyIcon = computed(() => slots.icon && !slots.default)
 </script>
 
@@ -35,9 +33,7 @@ const onlyIcon = computed(() => slots.icon && !slots.default)
     ]"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />
-    <slot v-else name="icon">
-      <!-- <NIcon v-if="icon" :icon="icon" class="c-buttoc-icon" /> -->
-    </slot>
+    <slot v-else name="icon" />
     <slot />
   </component>
 </template>
