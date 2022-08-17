@@ -70,9 +70,12 @@ importers:
     specifiers:
       '@onu-ui/preset': workspace:*
       '@onu-ui/utils': workspace:*
+      vue: ^3.2.0
     dependencies:
       '@onu-ui/preset': link:../preset
       '@onu-ui/utils': link:../utils
+    devDependencies:
+      vue: 3.2.37
 
   packages/onu-ui:
     specifiers:
@@ -84,7 +87,10 @@ importers:
     specifiers: {}
 
   packages/utils:
-    specifiers: {}
+    specifiers:
+      vue: ^3.2.0
+    devDependencies:
+      vue: 3.2.37
 
   playground:
     specifiers:
