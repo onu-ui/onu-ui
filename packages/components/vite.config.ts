@@ -23,6 +23,7 @@ export default defineConfig({
         },
       },
     },
+    cssCodeSplit: true,
   },
   plugins: [
     Vue(),

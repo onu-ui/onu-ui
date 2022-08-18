@@ -1,41 +1,6 @@
-<template>
-  <div
-    :o="innerState ? 'secondary' : 'placeholder'"
-    :class="`
-      o-switch
-      ${sizeMap[size]}
-      ${disabled || isLoading ? 'o-disabled' : ''}
-      ${switching}`"
-    tabindex="0"
-    @click="handleClick"
-  >
-    <div v-if="!innerState" :class="`${sizeSlotUncheckMap[size]}`">
-      <slot
-        name="unchecked"
-        :state="innerState"
-      />
-    </div>
-
-    <div :class="`o-switch-circle ${sizeCircleMap[size]} ${setCheckClass}`">
-      <div v-if="isLoading" i-carbon-circle-dash animate-spin />
-      <!--      <BeIcon
-        v-if="isLoading"
-        spin
-        icon="loading"
-        custom-class="be-switch&#45;&#45;circle&#45;&#45;icon"
-      /> -->
-    </div>
-    <div v-if="innerState" :class="`${sizeSlotCheckMap[size]}`">
-      <slot
-        name="checked"
-        :state="innerState"
-      />
-    </div>
-  </div>
-</template>
 
 <script lang="ts" setup name="O-Switch">
-import { isBool, isNumber, isString } from '@onu-ui/utils'
+import { isBoolean, isNumber, isString } from '@onu-ui/utils'
 import { computed, ref, watch } from 'vue'
 interface ISwitchProps {
   modelValue?: string | boolean |number,
@@ -127,7 +92,7 @@ const init = (): void => {
   if (
     props.unCheckedValue !== undefined
       && props.unCheckedValue !== ''
-      && (isBool(props.unCheckedValue)
+      && (isBoolean(props.unCheckedValue)
           || isString(props.unCheckedValue)
           || isNumber(props.unCheckedValue))
       && props.modelValue === props.unCheckedValue
@@ -140,7 +105,7 @@ const init = (): void => {
   if (
     props.checkedValue !== undefined
       && props.checkedValue !== ''
-      && (isBool(props.checkedValue)
+      && (isBoolean(props.checkedValue)
           || isString(props.checkedValue)
           || isNumber(props.checkedValue))
       && props.modelValue === props.checkedValue
@@ -178,6 +143,38 @@ const setCheckClass = computed(() => {
 })
 </script>
 
-<style scoped>
+<template>
+  <div
+    :o="innerState ? 'secondary' : 'placeholder'"
+    :class="`
+      o-switch
+      ${sizeMap[size]}
+      ${disabled || isLoading ? 'o-disabled' : ''}
+      ${switching}`"
+    tabindex="0"
+    @click="handleClick"
+  >
+    <div v-if="!innerState" :class="`${sizeSlotUncheckMap[size]}`">
+      <slot
+        name="unchecked"
+        :state="innerState"
+      />
+    </div>
 
-</style>
+    <div :class="`o-switch-circle ${sizeCircleMap[size]} ${setCheckClass}`">
+      <div v-if="isLoading" i-carbon-circle-dash animate-spin />
+      <!--      <BeIcon
+        v-if="isLoading"
+        spin
+        icon="loading"
+        custom-class="be-switch&#45;&#45;circle&#45;&#45;icon"
+      /> -->
+    </div>
+    <div v-if="innerState" :class="`${sizeSlotCheckMap[size]}`">
+      <slot
+        name="checked"
+        :state="innerState"
+      />
+    </div>
+  </div>
+</template>

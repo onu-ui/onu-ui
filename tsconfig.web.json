@@ -1,9 +1,0 @@
-{
-    "extends": "./tsconfig.base.json",
-    "compilerOptions": {
-        "composite": true,
-        "lib": ["esnext", "dom"],
-        "jsx": "preserve"
-    },
-    "include": [ "packages.global.d.ts", "packages/components/src", "playground/src" ]
-}
