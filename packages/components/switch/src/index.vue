@@ -17,7 +17,7 @@
     </div>
 
     <div :class="`o-switch-circle ${sizeCircleMap[size]} ${setCheckClass}`">
-      <div i-carbon-circle-dash animate-spin v-if="isLoading"/>
+      <div v-if="isLoading" i-carbon-circle-dash animate-spin />
       <!--      <BeIcon
         v-if="isLoading"
         spin

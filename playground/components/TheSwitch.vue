@@ -9,35 +9,31 @@ const customModel = ref('checked')
   <Card name="Swicth">
     <div space-y-2>
       <div fsc gap-2>
-        {{switchVal}}
-        <OSwitch v-model="switchVal" size="small">
-        </OSwitch>
-        <OSwitch v-model="switchVal" size="medium">
-        </OSwitch>
-        <OSwitch v-model="switchVal" size="large">
-        </OSwitch>
+        {{ switchVal }}
+        <OSwitch v-model="switchVal" size="small" />
+        <OSwitch v-model="switchVal" size="medium" />
+        <OSwitch v-model="switchVal" size="large" />
       </div>
       <div fsc gap-2>
         Loading:
-        <OSwitch v-model="switchLoading" is-loading>
-        </OSwitch>
+        <OSwitch v-model="switchLoading" is-loading />
         Disabled:
-        <OSwitch v-model="switchDisabled" disabled>
-        </OSwitch>
+        <OSwitch v-model="switchDisabled" disabled />
       </div>
       <div fsc gap-2>
-        <OSwitch v-model="customModel"
-                 checked-value="checked"
-                 un-checked-value="unchecked">
-        </OSwitch>
-        modelVal:{{customModel}}
+        <OSwitch
+          v-model="customModel"
+          checked-value="checked"
+          un-checked-value="unchecked"
+        />
+        modelVal:{{ customModel }}
       </div>
       <div fsc gap-2>
         <OSwitch v-model="switchVal">
-          <template v-slot:unchecked="_slotProps">
+          <template #unchecked="_slotProps">
             <span>unchecked</span>
           </template>
-          <template v-slot:checked="_slotProps">
+          <template #checked="_slotProps">
             <span>checked</span>
           </template>
         </OSwitch>
