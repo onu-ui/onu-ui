@@ -13,9 +13,11 @@ declare module '@vue/runtime-core' {
     OButton: typeof import('onu-ui')['OButton']
     OCard: typeof import('onu-ui')['OCard']
     OIcon: typeof import('onu-ui')['OIcon']
+    OSwitch: typeof import('onu-ui')['OSwitch']
     TheAvatar: typeof import('./components/TheAvatar.vue')['default']
     TheButton: typeof import('./components/TheButton.vue')['default']
     TheIcon: typeof import('./components/TheIcon.vue')['default']
+    TheSwitch: typeof import('./components/TheSwitch.vue')['default']
   }
 }
 

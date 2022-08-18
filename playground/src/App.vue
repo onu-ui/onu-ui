@@ -4,5 +4,6 @@
     <TheAvatar />
     <TheIcon />
     <TheButton />
+    <TheSwitch />
   </Layout>
 </template>

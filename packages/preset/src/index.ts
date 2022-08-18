@@ -15,12 +15,26 @@ export function presetOnu(): Preset {
         warning: '#FF9F43',
         error: '#FF5C5C',
         info: '#373e47',
+        placeholder: '#dcdcdc',
       },
       fontFamily: {
         sans: 'Avenir, Helvetica, Arial, sans-serif',
       },
       boxShadow: {
         xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
+      },
+      animation: {
+        keyframes: {
+          switching:
+              `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
+            60%{ box-shadow: 0 0 0 4px #1890ff33; }
+            80%{ box-shadow: 0 0 0 6px #1890ff1a; }
+            100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
+
+        },
+        durations: {
+          switching: '0.3s',
+        },
       },
     },
     rules: [
@@ -109,6 +123,24 @@ export function presetOnu(): Preset {
 
         // icon
         'o-icon-base': 'c-context text-md',
+
+        // switch
+        'o-switch': '!animate-count-1 relative flex rounded-999px cursor-pointer items-center bg-context',
+        'o-switch-size-small': 'w-min h-1em leading-1em min-w-1.6em',
+        'o-switch-size-medium': 'w-min h-1.4em leading-1.4em min-w-2.2em',
+        'o-switch-size-large': 'w-min h-1.8em leading-1.8em min-w-3em',
+        'o-switch-circle': 'fcc rounded-999px bg-white',
+        'o-switch-size-small-circle': 'h-0.75em w-0.75em',
+        'o-switch-size-medium-circle': 'h-1em w-1em',
+        'o-switch-size-large-circle': 'h-1.45em w-1.45em',
+        'o-switch-uncheck-circle': 'absolute mr-0.1em left-0.1em',
+        'o-switch-check-circle': 'absolute ml-0.1em right-0.1em',
+        'o-switch-small-slot-check': 'ml-0.25em mr-1em',
+        'o-switch-medium-slot-check': 'ml-0.25em mr-1.25em',
+        'o-switch-large-slot-check': 'ml-0.25em mr-1.5em',
+        'o-switch-small-slot-uncheck': 'mr-0.25em ml-1em',
+        'o-switch-medium-slot-uncheck': 'mr-0.25em ml-1.25em',
+        'o-switch-large-slot-uncheck': 'mr-0.25em ml-1.5em',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
