@@ -5,7 +5,7 @@ import { computed, ref, watch } from 'vue'
 interface ISwitchProps {
   modelValue?: string | boolean |number,
   disabled?:boolean,
-  size: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large'
   isLoading?:boolean,
   checkedValue?: string | boolean |number,
   unCheckedValue?: string | boolean |number
