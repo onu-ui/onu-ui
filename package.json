@@ -2,7 +2,7 @@
     "name": "@onu-ui/monorepo",
     "version": "1.0.7",
     "private": true,
-    "packageManager": "pnpm@7.1.9",
+    "packageManager": "pnpm@7.5.0",
     "license": "MIT",
     "scripts": {
         "dev": "pnpm run stub",
@@ -10,6 +10,7 @@
         "build": "rimraf packages/*/dist && pnpm -r -F !playground run build",
         "play": "pnpm -C playground run dev",
         "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
         "release": "bumpp package.json packages/**/package.json",
         "deploy": "pnpm -C playground run build"
     },
