@@ -6,7 +6,7 @@ const customModel = ref('checked')
 </script>
 
 <template>
-  <Card name="Swicth">
+  <Card name="Switch">
     <div space-y-2>
       <div fsc gap-2>
         {{ switchVal }}

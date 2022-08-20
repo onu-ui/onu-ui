@@ -12,7 +12,8 @@
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "release": "bumpp package.json packages/**/package.json",
-        "deploy": "pnpm -C playground run build"
+        "deploy": "pnpm -C playground run build",
+        "test": "vitest"
     },
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
@@ -26,11 +27,14 @@
         "@unocss/preset-mini": "^0.45.1",
         "@unocss/preset-uno": "^0.45.1",
         "@vitejs/plugin-vue": "^3.0.1",
+        "@vitest/ui": "0.16.0",
+        "@vue/test-utils": "^2.0.0",
         "@vueuse/core": "^9.1.0",
         "bumpp": "^8.2.1",
         "eslint": "8.14.0",
         "eslint-plugin-import": "^2.26.0",
         "esno": "^0.16.3",
+        "jsdom": "^20.0.0",
         "onu-ui": "workspace:*",
         "rimraf": "^3.0.2",
         "tsup": "^6.2.1",
@@ -42,6 +46,7 @@
         "vite-plugin-dts": "^1.4.1",
         "vite-plugin-inspect": "^0.6.0",
         "vite-plugin-vue-setup-extend": "^0.4.0",
+        "vitest": "0.22.1",
         "vue": "^3.2.37"
     }
 }

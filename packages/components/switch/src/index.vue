@@ -162,13 +162,7 @@ const setCheckClass = computed(() => {
     </div>
 
     <div :class="`o-switch-circle ${sizeCircleMap[size]} ${setCheckClass}`">
-      <div v-if="isLoading" i-carbon-circle-dash animate-spin />
-      <!--      <BeIcon
-        v-if="isLoading"
-        spin
-        icon="loading"
-        custom-class="be-switch&#45;&#45;circle&#45;&#45;icon"
-      /> -->
+      <div v-if="isLoading" id="o_switch" i-carbon-circle-dash animate-spin />
     </div>
     <div v-if="innerState" :class="`${sizeSlotCheckMap[size]}`">
       <slot
