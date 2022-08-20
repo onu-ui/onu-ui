@@ -1,6 +1,30 @@
 {
-  "references": [
-    { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.web.json" }
-  ]
-}
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "lib": ["esnext"],
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "jsx": "preserve",
+        "types": [ "node", "vite/client" ],
+        "paths": {
+          "onu-ui": [ "./packages/onu-ui/src/index.ts" ],
+          "@onu-ui/components": [ "./packages/components/index.ts" ],
+          "@onu-ui/utils": [ "./packages/utils/index.ts" ],
+          "@onu-ui/preset": [ "./packages/preset/src/index.ts" ],
+          "@onu-ui/cli": [ "./packages/cli/src/index.ts" ],
+      }
+    },
+    "exclude": [
+        "**/dist/**",
+        "**/node_modules/**",
+        "**/test/dts/**",
+        "**/playground/**",
+        "**/packages/components/**",
+    ],
+  }

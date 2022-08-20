@@ -2,9 +2,8 @@ import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
-import { presetAttributify, presetIcons, presetUno } from 'unocss'
-import { presetOnu } from '@onu-ui/preset'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,9 +13,7 @@ export default defineConfig({
       name: '@onu-ui/components',
     },
     rollupOptions: {
-      external: [
-        'vue',
-      ],
+      external: ['vue'],
       output: {
         globals: {
           vue: 'Vue',
@@ -27,14 +24,7 @@ export default defineConfig({
   plugins: [
     Vue(),
     VueSetupExtend(),
-    UnoCSS({
-      presets: [
-        presetAttributify(),
-        presetIcons(),
-        presetUno(),
-        presetOnu(),
-      ],
-      safelist: [['xs', 'sm', 'md', 'lg'].map(s => [`o-button-${s}`, `o-avatar-${s}`, `o-avatar-group-${s}`])].flat(2) as string[],
-    }),
+    UnoCSS(),
+    dts(),
   ],
 })
