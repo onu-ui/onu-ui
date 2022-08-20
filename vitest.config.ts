@@ -1,5 +1,8 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vitest/config'
 import Vue from '@vitejs/plugin-vue'
+
+const r = (p: string) => resolve(__dirname, p)
 export default defineConfig({
   plugins: [Vue()],
   optimizeDeps: {
@@ -10,6 +13,15 @@ export default defineConfig({
     environment: 'jsdom',
     transformMode: {
       web: [/\.[jt]sx$/],
+    },
+  },
+  resolve: {
+    alias: {
+      '@onu-ui/cli': r('./packages/cli'),
+      '@onu-ui/components': r('./packages/components'),
+      '@onu-ui/preset': r('./packages/preset'),
+      '@onu-ui/utils': r('./packages/utils'),
+      'onu-ui': r('./packages/onu-ui'),
     },
   },
 })

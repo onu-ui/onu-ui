@@ -1,8 +1,5 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "lib": ["esnext", "dom"],
-  },
   "exclude": [ "**/dist/**" ],
   "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"]
 }
