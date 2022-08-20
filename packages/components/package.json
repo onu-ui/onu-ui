@@ -1,13 +1,14 @@
 {
   "name": "@onu-ui/components",
+  "type": "module",
   "version": "1.0.5",
   "description": "all components are settled here",
-  "main": "./dist/components.umd.js",
-  "module": "./dist/components.mjs",
+  "main": "./dist/components.umd.cjs",
+  "module": "./dist/components.js",
   "exports": {
     ".": {
-      "import": "./dist/components.mjs",
-      "require": "./dist/components.umd.js"
+      "import": "./dist/components.js",
+      "require": "./dist/components.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
