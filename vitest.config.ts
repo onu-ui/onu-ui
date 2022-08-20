@@ -21,7 +21,7 @@ export default defineConfig({
       '@onu-ui/components': r('./packages/components'),
       '@onu-ui/preset': r('./packages/preset'),
       '@onu-ui/utils': r('./packages/utils'),
-      'onu-ui': r('./packages/components'),
+      'onu-ui': r('./packages/onu-ui'),
     },
   },
 })
