@@ -1,7 +1,7 @@
 {
   "name": "@onu-ui/components",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "all components are settled here",
   "main": "./dist/components.umd.cjs",
   "module": "./dist/components.js",
