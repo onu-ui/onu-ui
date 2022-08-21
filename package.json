@@ -14,7 +14,7 @@
         "release": "bumpp package.json packages/**/package.json",
         "deploy": "pnpm -C playground run build",
         "test": "vitest",
-        "test:update":"vitest -u"
+        "test:update": "vitest -u"
     },
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
@@ -47,6 +47,7 @@
         "vite-plugin-dts": "^1.4.1",
         "vite-plugin-inspect": "^0.6.0",
         "vite-plugin-vue-setup-extend": "^0.4.0",
+        "vitepress": "1.0.0-alpha.9",
         "vitest": "0.22.1",
         "vue": "^3.2.37"
     }
