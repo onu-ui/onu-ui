@@ -25,7 +25,9 @@
   },
   "dependencies": {
     "@onu-ui/preset": "workspace:*",
-    "@onu-ui/utils": "workspace:*"
+    "@onu-ui/utils": "workspace:*",
+    "@vueuse/core": "^9.1.0",
+    "vue": "^3.2.0"
   },
   "publishConfig": {
     "access": "public"
