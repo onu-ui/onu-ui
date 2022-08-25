@@ -1,5 +1,4 @@
 <script lang='ts' setup name="O-Avatar">
-import { computed } from 'vue'
 interface IAvatarProps {
   src?: string
   size?: 'xs' | 'sm' | 'md' | 'lg'

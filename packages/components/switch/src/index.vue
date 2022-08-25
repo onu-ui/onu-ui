@@ -1,7 +1,6 @@
 
 <script lang="ts" setup name="O-Switch">
 import { isBoolean, isNumber, isString } from '@onu-ui/utils'
-import { computed, ref, watch } from 'vue'
 interface ISwitchProps {
   modelValue?: string | boolean |number,
   disabled?:boolean,

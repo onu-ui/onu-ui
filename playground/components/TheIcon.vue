@@ -4,34 +4,34 @@
 <template>
   <Card name="Icon">
     <div grid="~ cols-7 gap-4" un-children="text-6">
-      <o-icon o-primary name="i-fluent-emoji-beaming-face-with-smiling-eyes" />
-      <o-icon o-secondary name="i-fluent-emoji-face-with-tears-of-joy" />
-      <o-icon o-success name="i-fluent-emoji-confounded-face" />
-      <o-icon o-warning name="i-fluent-emoji-confused-face" />
-      <o-icon o-error name="i-fluent-emoji-crying-face" />
-      <o-icon o-info name="i-fluent-emoji-dotted-line-face" />
-      <o-icon o-white name="i-fluent-emoji-downcast-face-with-sweat" />
-      <o-icon o-primary name="i-fluent-emoji-drooling-face" />
-      <o-icon o-secondary name="i-fluent-emoji-face-blowing-a-kiss" />
-      <o-icon o-success name="i-fluent-emoji-face-exhaling" />
-      <o-icon o-warning name="i-fluent-emoji-face-holding-back-tears" />
-      <o-icon o-error name="i-fluent-emoji-face-savoring-food" />
-      <o-icon o-info name="i-fluent-emoji-face-screaming-in-fear" />
-      <o-icon o-white name="i-fluent-emoji-face-vomiting" />
-      <o-icon o-primary name="i-fluent-emoji-face-with-diagonal-mouth" />
-      <o-icon o-secondary name="i-fluent-emoji-face-with-hand-over-mouth" />
-      <o-icon o-success name="i-fluent-emoji-face-with-open-mouth" />
-      <o-icon o-success name="i-fluent-emoji-face-with-spiral-eyes" />
-      <o-icon o-success name="i-fluent-emoji-face-with-steam-from-nose" />
-      <o-icon o-error name="i-fluent-emoji-squinting-face-with-tongue" />
-      <o-icon o-info name="i-fluent-emoji-smiling-face-with-heart-eyes" />
-      <o-icon o-white name="i-fluent-emoji-smiling-face" />
-      <o-icon o-primary name="i-fluent-emoji-sleeping-face" />
-      <o-icon o-secondary name="i-fluent-emoji-smiling-face-with-tear" />
-      <o-icon o-success name="i-fluent-emoji-loudly-crying-face" />
-      <o-icon o-error name="i-fluent-emoji-tired-face" />
-      <o-icon o-info name="i-fluent-emoji-weary-face" />
-      <o-icon o-white name="i-fluent-emoji-winking-face" />
+      <o-icon o-primary name="i-carbon-letter-aa" />
+      <o-icon o-secondary name="i-carbon-letter-bb" />
+      <o-icon o-success name="i-carbon-letter-cc" />
+      <o-icon o-warning name="i-carbon-letter-dd" />
+      <o-icon o-error name="i-carbon-letter-ee" />
+      <o-icon o-info name="i-carbon-letter-ff" />
+      <o-icon o-white name="i-carbon-letter-gg" />
+      <o-icon o-primary name="i-carbon-letter-hh" />
+      <o-icon o-secondary name="i-carbon-letter-ii" />
+      <o-icon o-success name="i-carbon-letter-jj" />
+      <o-icon o-warning name="i-carbon-letter-kk" />
+      <o-icon o-error name="i-carbon-letter-ll" />
+      <o-icon o-info name="i-carbon-letter-mm" />
+      <o-icon o-white name="i-carbon-letter-nn" />
+      <o-icon o-primary name="i-carbon-letter-oo" />
+      <o-icon o-secondary name="i-carbon-letter-pp" />
+      <o-icon o-success name="i-carbon-letter-qq" />
+      <div />
+      <o-icon o-error name="i-carbon-letter-rr" />
+      <o-icon o-info name="i-carbon-letter-ss" />
+      <o-icon o-white name="i-carbon-letter-tt" />
+      <o-icon o-primary name="i-carbon-letter-uu" />
+      <o-icon o-secondary name="i-carbon-letter-vv" />
+      <o-icon o-success name="i-carbon-letter-ww" />
+      <div />
+      <o-icon o-error name="i-carbon-letter-xx" />
+      <o-icon o-info name="i-carbon-letter-yy" />
+      <o-icon o-white name="i-carbon-letter-zz" />
     </div>
     <o-button to="https://icones.js.org/" target="_blank" o-info>
       <template #icon>

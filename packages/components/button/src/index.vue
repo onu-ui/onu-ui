@@ -1,5 +1,4 @@
 <script setup lang="ts" name="O-Button">
-import { computed, useSlots } from 'vue'
 interface IButtonProps {
   to?: string
   light?: boolean
