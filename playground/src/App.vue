@@ -1,9 +1,3 @@
 <template>
-  <Bg />
-  <Layout>
-    <TheAvatar />
-    <TheIcon />
-    <TheButton />
-    <TheSwitch />
-  </Layout>
+  <router-view />
 </template>

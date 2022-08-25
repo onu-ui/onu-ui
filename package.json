@@ -38,6 +38,7 @@
         "jsdom": "^20.0.0",
         "onu-ui": "workspace:*",
         "rimraf": "^3.0.2",
+        "sass": "^1.54.3",
         "tsup": "^6.2.1",
         "typescript": "^4.7.4",
         "unbuild": "^0.8.9",
