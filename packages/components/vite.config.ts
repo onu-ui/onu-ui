@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import dts from 'vite-plugin-dts'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,5 +27,12 @@ export default defineConfig({
     VueSetupExtend(),
     UnoCSS(),
     dts(),
+    AutoImport({
+      imports: [
+        'vue',
+        '@vueuse/core',
+      ],
+      dts: 'auto-imports.d.ts',
+    }),
   ],
 })

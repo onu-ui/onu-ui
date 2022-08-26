@@ -2,12 +2,6 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const OAvatar: typeof import('onu-ui')['OAvatar']
-  const OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
-  const OButton: typeof import('onu-ui')['OButton']
-  const OCard: typeof import('onu-ui')['OCard']
-  const OIcon: typeof import('onu-ui')['OIcon']
-  const OSwitch: typeof import('onu-ui')['OSwitch']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -193,6 +187,7 @@ declare global {
   const usePointer: typeof import('@vueuse/core')['usePointer']
   const usePointerSwipe: typeof import('@vueuse/core')['usePointerSwipe']
   const usePreferredColorScheme: typeof import('@vueuse/core')['usePreferredColorScheme']
+  const usePreferredContrast: typeof import('@vueuse/core')['usePreferredContrast']
   const usePreferredDark: typeof import('@vueuse/core')['usePreferredDark']
   const usePreferredLanguages: typeof import('@vueuse/core')['usePreferredLanguages']
   const usePreferredReducedMotion: typeof import('@vueuse/core')['usePreferredReducedMotion']
