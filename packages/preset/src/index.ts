@@ -130,21 +130,25 @@ export function presetOnu(): Preset {
         'o-avatar-group-base': 'flex space-x--4 children-relative',
 
         // card
-        'o-card':
-          'ma-0 pa-0 list-none relative !text-sm b-rd-1 bg-white shadow-md transition-shadow',
         'o-card-base':
           'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
-        'o-card-header': '',
-        'o-card-footer': '',
-        'o-card-header__wrapper': '',
+        'o-card':
+          'ma-0 pa-0 list-none relative  b-rd-1 bg-white transition-shadow box-border text-sm',
+        'o-card-header': 'fb px6 py',
+        'o-card-body': 'px-6 py lh-normal',
+        'o-card-footer': 'px-6 py',
+        'o-card-header-wrapper': 'flex flex-1 items-center',
         'o-card-footer-wrapper': '',
-        'o-card-header-title': '',
-        'o-card-actions': '',
-        'o-card-md': '',
-        'o-card-sm': '',
-        'o-card-bordered': 'border border-gray-400/50',
-        'o-card-header-bordered': '',
-        'o-card-shadow-hover': '',
+        'o-card-header-title': 'text-4',
+        'o-card-actions': 'float-right text-blue flex',
+        'o-card-md': 'w-md',
+        'o-card-sm': 'w-sm',
+        'o-card-bordered': 'border o-border-base',
+        'o-card-header-bordered': 'border-b o-border-base',
+        'o-card-shadow-hover': 'hover--shadow-lg',
+        'o-card-shadow': 'shadow-md',
+        'o-card-header-subtitle': 'text-2 text-gray pl-2 break-all',
+        'o-card-header-description': 'text-2 text-gray mt-2 break-all',
 
         // icon
         'o-icon-base': 'c-context text-md',
