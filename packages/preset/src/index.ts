@@ -3,6 +3,8 @@ import { commonShortcuts } from './shortcuts'
 import type { Preset, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
 
+type SizeType = 'xs' | 'sm' | 'md' | 'lg'
+
 export function presetOnu(): Preset {
   return {
     name: '@onu-ui/preset',
@@ -144,14 +146,14 @@ export function presetOnu(): Preset {
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
-          const size = s as 'xs' | 'sm' | 'md' | 'lg'
-          const avatarSizeMap = {
+          const size = s as SizeType
+          const avatarSizeMap: Record<SizeType, string> = {
             xs: 'h-6 text-xs shadow-xs',
             sm: 'h-8 text-sm shadow-sm',
             md: 'h-10 text-sm shadow-md',
             lg: 'h-15 text-md shadow-md',
           }
-          const avatarGroupSpaceMap = {
+          const avatarGroupSpaceMap: Record<SizeType, string> = {
             xs: 'space-x--2',
             sm: 'space-x--3',
             md: 'space-x--4',
