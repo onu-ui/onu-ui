@@ -3,11 +3,11 @@ title: o-switch
 lang: en-US
 ---
 
-# o-switch 开关
+# Switch
 
 ## 介绍
 
-Open the door ！
+Mutually exclusive operation controls, users can turn on or turn off a certain function.
 
 
 ## 演示
