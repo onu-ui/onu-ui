@@ -4,5 +4,6 @@
     <TheIcon />
     <TheButton />
     <TheSwitch />
+    <TheCard />
   </div>
 </template>

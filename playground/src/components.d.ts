@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BaseCard: typeof import('./components/base-card.vue')['default']
     Bg: typeof import('./components/Bg.vue')['default']
     Card: typeof import('./components/Card.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']
@@ -20,6 +21,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     TheAvatar: typeof import('./components/TheAvatar.vue')['default']
     TheButton: typeof import('./components/TheButton.vue')['default']
+    TheCard: typeof import('./components/TheCard.vue')['default']
     TheHeader: typeof import('./components/layout/TheHeader.vue')['default']
     TheIcon: typeof import('./components/TheIcon.vue')['default']
     TheSwitch: typeof import('./components/TheSwitch.vue')['default']
