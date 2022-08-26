@@ -142,12 +142,12 @@ export function presetOnu(): Preset {
         'o-card-actions': '',
         'o-card-md': '',
         'o-card-sm': '',
-        'o-card-bordered': 'border border-red',
+        'o-card-bordered': 'border border-gray-400/50',
         'o-card-header-bordered': '',
         'o-card-shadow-hover': '',
 
         // icon
-        'o-icon-base': 'c-context text-md border-box ',
+        'o-icon-base': 'c-context text-md',
 
         // switch
         'o-switch':
