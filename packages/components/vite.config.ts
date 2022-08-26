@@ -5,7 +5,6 @@ import UnoCSS from 'unocss/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import dts from 'vite-plugin-dts'
 import AutoImport from 'unplugin-auto-import/vite'
-import VueJSX from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
@@ -24,7 +23,6 @@ export default defineConfig({
   },
   plugins: [
     Vue(),
-    VueJSX(),
     VueSetupExtend(),
     UnoCSS(),
     dts(),
