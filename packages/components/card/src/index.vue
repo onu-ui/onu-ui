@@ -1,9 +1,8 @@
 <script setup lang="ts" name="O-Card">
 interface ICardProps {
-  to?: string
-  icon?: string
+  /** 标题 */
+  title?: string,
 }
-
 defineProps<ICardProps>()
 </script>
 
