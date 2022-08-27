@@ -1,7 +1,9 @@
 <script lang='ts' setup name="O-Avatar">
+import type { SizeType } from '../../types'
+
 interface IAvatarProps {
   src?: string
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  size?: SizeType
   mode?: 'bg' | 'img'
 }
 
