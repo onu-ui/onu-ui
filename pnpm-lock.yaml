@@ -11,7 +11,6 @@ importers:
       '@onu-ui/components': workspace:*
       '@onu-ui/preset': workspace:*
       '@onu-ui/utils': workspace:*
-      '@types/lodash': ^4.14.184
       '@types/node': ^18.7.13
       '@unocss/preset-mini': ^0.45.12
       '@unocss/preset-uno': ^0.45.12
@@ -24,7 +23,6 @@ importers:
       eslint-plugin-import: ^2.26.0
       esno: ^0.16.3
       jsdom: ^20.0.0
-      lodash: ^4.17.21
       onu-ui: workspace:*
       rimraf: ^3.0.2
       sass: ^1.54.3
@@ -48,7 +46,6 @@ importers:
       '@onu-ui/components': link:packages/components
       '@onu-ui/preset': link:packages/preset
       '@onu-ui/utils': link:packages/utils
-      '@types/lodash': 4.14.184
       '@types/node': 18.7.13
       '@unocss/preset-mini': 0.45.12
       '@unocss/preset-uno': 0.45.12
@@ -61,7 +58,6 @@ importers:
       eslint-plugin-import: 2.26.0_lewfh47l4outvz5ytnjtm3tbm4
       esno: 0.16.3
       jsdom: 20.0.0
-      lodash: 4.17.21
       onu-ui: link:packages/onu-ui
       rimraf: 3.0.2
       sass: 1.54.4
@@ -783,10 +779,6 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
-    dev: true
-
-  /@types/lodash/4.14.184:
-    resolution: {integrity: sha512-RoZphVtHbxPZizt4IcILciSWiC6dcn+eZ8oX9IWEYfDMcocdd42f7NPI6fQj+6zI8y4E0L7gu2pcZKLGTRaV9Q==}
     dev: true
 
   /@types/mdast/3.0.10:
