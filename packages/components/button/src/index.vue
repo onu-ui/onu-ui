@@ -1,5 +1,5 @@
 <script setup lang="ts" name="O-Button">
-import type { SizeType } from '../../type'
+import type { SizeType } from '../../types'
 interface IButtonProps {
   to?: string
   light?: boolean

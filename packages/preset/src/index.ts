@@ -27,12 +27,10 @@ export function presetOnu(): Preset {
       },
       animation: {
         keyframes: {
-          switching:
-              `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
+          switching: `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
             60%{ box-shadow: 0 0 0 4px #1890ff33; }
             80%{ box-shadow: 0 0 0 6px #1890ff1a; }
             100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
-
         },
         durations: {
           switching: '0.3s',
@@ -40,24 +38,33 @@ export function presetOnu(): Preset {
       },
     },
     rules: [
-      [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
-        const color = parseColor(body, theme)
-        if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
-          return {
-            '--onu-c-context': `${color.cssColor.components.join(',')}`,
+      [
+        /^o-(.*)$/,
+        ([, body]: string[], { theme }: RuleContext<Theme>) => {
+          const color = parseColor(body, theme)
+          if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
+            return {
+              '--onu-c-context': `${color.cssColor.components.join(',')}`,
+            }
           }
-        }
-      }],
+        },
+      ],
       ['o-dashed', { 'border-style': 'dashed' }],
-      ['o-solid', {
-        'background-color': 'rgba(var(--onu-c-context), 1) !important',
-        'border-color': 'rgba(var(--onu-c-context), 1)',
-        'color': 'white !important',
-      }],
-      ['o-disabled', {
-        opacity: 0.4,
-        cursor: 'not-allowed',
-      }],
+      [
+        'o-solid',
+        {
+          'background-color': 'rgba(var(--onu-c-context), 1) !important',
+          'border-color': 'rgba(var(--onu-c-context), 1)',
+          'color': 'white !important',
+        },
+      ],
+      [
+        'o-disabled',
+        {
+          opacity: 0.4,
+          cursor: 'not-allowed',
+        },
+      ],
     ],
     variants: [
       (input: string) => {
@@ -100,9 +107,12 @@ export function presetOnu(): Preset {
                    !c-context`,
 
         // button
-        'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded shadow-context:50 !outline-none c-context o-solid border',
-        'o-button-hover': 'hover-border-context:64 hover-text-white hover-bg-context:64',
-        'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
+        'o-button-base':
+          'fcc gap-1 inline-flex cursor-pointer rounded shadow-context:50 !outline-none c-context o-solid border',
+        'o-button-hover':
+          'hover-border-context:64 hover-text-white hover-bg-context:64',
+        'o-button-active':
+          'active-border-context:32 active-text-white active-bg-context:32',
         'o-button-light': 'o-light',
         'o-button-text': 'o-text',
         'o-button-xs': 'px-2.5 h-6 text-xs shadow-xs',
@@ -111,7 +121,7 @@ export function presetOnu(): Preset {
         'o-button-lg': 'px-4 h-9 text-md shadow-lg',
 
         // avatar
-        'o-avatar-base': 'fcc overflow-hidden shadow-sm aspect-square rounded-full bg-context text-white',
+        'o-avatar-base': 'fcc of-hidden shadow-sm aspect-square rounded-full bg-context text-white',
         'o-avatar-mode-bg': 'bg-cover',
         'o-avatar-mode-img': 'object-cover select-none',
         'o-avatar-xs': 'h-6 text-xs shadow-xs',
@@ -121,7 +131,26 @@ export function presetOnu(): Preset {
         'o-avatar-group-base': 'flex space-x--4 children-relative',
 
         // card
-        'o-card-base': 'rounded-lg shadow-lg p-8 bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg overflow-hidden',
+        'o-card-bg': 'bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg',
+        'o-card-base': 'o-transition list-none relative rounded-md c-context w-full of-hidden',
+        'o-card': 'o-card-base h-fit',
+        'o-card-md': 'rounded-md shadow-md text-sm',
+        'o-card-sm': 'rounded-sm shadow-sm text-xs',
+
+        'o-card-cover': 'children-w-full children-aspect-video',
+
+        'o-card-header': 'fb px-4 py-2.5',
+        'o-card-header-wrapper': 'flex flex-col flex-1 gap-1.5',
+        'o-card-header-title': 'text-md',
+        'o-card-header-description': 'text-xs c-context:60 break-all',
+        'o-card-header-extra': '',
+
+        'o-card-body': 'p-4 pt-1.5 leading-normal text-sm',
+
+        'o-card-actions': 'p-4 pt-2',
+
+        'o-card-bordered': 'border b-context:50 important-shadow-none hover-important-shadow-md',
+        'o-card-hoverable': 'hover-translate-y--1',
 
         // icon
         'o-icon-base': 'c-context text-md',
