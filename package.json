@@ -6,6 +6,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "pnpm run stub",
+        "docs": "pnpm -C docs run dev",
         "stub": "pnpm -r --parallel -F !onu-ui run stub",
         "build": "rimraf packages/*/dist && pnpm -r -F !playground run build",
         "play": "pnpm -C playground run dev",
@@ -49,6 +50,7 @@
         "vite-plugin-dts": "^1.4.1",
         "vite-plugin-inspect": "^0.6.0",
         "vite-plugin-vue-setup-extend": "^0.4.0",
+        "vitepress": "1.0.0-alpha.9",
         "vitest": "0.22.1",
         "vue": "^3.2.37"
     }
