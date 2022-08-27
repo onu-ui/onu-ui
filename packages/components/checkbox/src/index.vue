@@ -42,6 +42,11 @@ const handleChange = () => {
   emit('update:modelValue', innerState.value)
   emitChangeEvt(innerState.value)
 }
+const handleClick = () => {
+  if(props.disabled) return
+  innerState.value = !innerState.value
+  handleChange()
+}
 
 const init = () => {
   if (isBoolean(props.modelValue)) {
@@ -73,17 +78,18 @@ watch(() => props.modelValue, () => {
         v-model="innerState"
         :class="`o-checkbox-original ${disabled ? 'o-disabled' : 'cursor-pointer'}`"
         :name="name"
-        :value="label"
+        :value="innerState"
         type="checkbox"
         :disabled="disabled"
-        @change="handleChange"
+        @click="handleClick"
       >
-      <span :class="`
+      <span
+        :class="`
               o-checkbox-inner
               ${indeterminate ? 'o-checkbox-indeterminate' : 'o-checkbox-after'}
               ${innerState ? 'o-checkbox-inner-check' : ''}`"
-            :o="innerState ? 'secondary' : 'white'">
-      </span>
+        :o="innerState ? 'secondary' : 'white'"
+      />
     </span>
     <span class="o-checkbox-label">
       {{ label }}
