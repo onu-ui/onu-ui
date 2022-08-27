@@ -4,5 +4,6 @@
     <TheIcon />
     <TheButton />
     <TheSwitch />
+    <TheCheckbox />
   </div>
 </template>
