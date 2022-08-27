@@ -6,8 +6,8 @@ interface ISwitchProps {
   disabled?:boolean,
   size?: 'small' | 'medium' | 'large'
   isLoading?:boolean,
-  checkedValue?: string | boolean |number,
-  unCheckedValue?: string | boolean |number
+  checkedValue?: string | boolean | number,
+  unCheckedValue?: string | boolean | number
 }
 
 const props = withDefaults(defineProps<ISwitchProps>(), {

@@ -6,7 +6,7 @@ const customModel = ref('checked')
 </script>
 
 <template>
-  <Card name="Switch">
+  <OCard o-white title="Switch">
     <div space-y-2>
       <div fsc gap-2>
         {{ switchVal }}
@@ -39,5 +39,5 @@ const customModel = ref('checked')
         </OSwitch>
       </div>
     </div>
-  </Card>
+  </OCard>
 </template>

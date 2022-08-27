@@ -1,9 +1,10 @@
 <script setup lang="ts" name="O-Button">
+import type { SizeType } from '../../types'
 interface IButtonProps {
   to?: string
   light?: boolean
   text?: boolean
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  size?: SizeType
   disabled?: boolean
   loading?: boolean
 }

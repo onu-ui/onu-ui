@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <Card name="Icon">
+  <OCard o-white title="Icon">
     <div grid="~ cols-7 gap-4" un-children="text-6">
       <o-icon o-primary name="i-carbon-letter-aa" />
       <o-icon o-secondary name="i-carbon-letter-bb" />
@@ -33,11 +33,11 @@
       <o-icon o-info name="i-carbon-letter-yy" />
       <o-icon o-white name="i-carbon-letter-zz" />
     </div>
-    <o-button to="https://icones.js.org/" target="_blank" o-info>
+    <o-button mt-4 to="https://icones.js.org/" target="_blank" o-info>
       <template #icon>
         <o-icon o-white text-md name="i-carbon-favorite-filled" />
       </template>
       Find More
     </o-button>
-  </Card>
+  </OCard>
 </template>
