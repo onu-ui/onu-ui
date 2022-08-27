@@ -7,7 +7,7 @@ const Components = [
 
 const nav = [
   { text: 'Guide', link: '/guide/' },
-  { text: 'Components', link: '/components/' },
+  { text: 'Components', link: '/components/installation' },
   {
     text: `v${version}`,
     items: [

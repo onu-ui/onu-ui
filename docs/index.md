@@ -15,7 +15,7 @@ hero:
   actions:
     - theme: brand
       text: Get Start
-      link: /components/
+      link: /guide/
 
     - theme: alt
       text: Playground
