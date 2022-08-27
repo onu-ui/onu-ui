@@ -1,5 +1,5 @@
 <script lang='ts' setup name="O-Avatar-Group">
-import type { SizeType } from '../../type'
+import type { SizeType } from '../../types'
 
 interface IAvatarGroupProps {
     size: SizeType

@@ -1,100 +1,106 @@
 <script lang="ts" setup>
-const message = '仅有内容区域的卡片形式。卡片内容区域可以是文字、图片、表单、表格等形式信息内容。可使用大中小不同的卡片尺寸，按业务需求进行呈现。'
-const description = '这是一段描述信息：卡片内容，以描述性为主，可以是文字、图片或图文组合的形式。按业务需求进行自定义组合'
-// eslint-disable-next-line no-console
-const handleClick = () => { console.log('点击操作按钮') }
+const cover = 'https://images.unsplash.com/photo-1660554042520-db71c7fea8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt iusto, veritatis modi perferendis similique maiores cumque ipsam doloremque natus assumenda, obcaecati id voluptatibus, eum et rerum aut vero suscipit.'
+const description = 'This a description'
 </script>
 
 <template>
-  <Card name="Card">
-    <div class="flex flex-col items-start" bg-transparent px>
-      <o-card title="单标题" my />
-      <o-card :content="message" />
-      <o-card title="标题加内容" :content="message" shadow my />
-      <o-card title="sm Card" bordered size="sm" my>
-        {{ message }}
-      </o-card>
-      <o-card title="无边框" :bordered="false" shadow my>
-        {{ message }}
-        <template #actions>
-          <a href="javascript:void(0)" @click="handleClick">操作</a>
+  <OCard title="Card" o="white">
+    <div grid="~ gap-4 cols-1 md:cols-2 xl:cols-3">
+      <o-card title="Base Title" extra="More" />
+      <o-card title="Has Description" :description="description" />
+      <o-card>
+        <template #header>
+          <div fsc gap-2>
+            Custom Header
+            <o-icon name="i-fluent-emoji-astonished-face" />
+          </div>
+          <o-icon cursor-pointer name="i-carbon-close" />
         </template>
       </o-card>
-      <o-card title="有分隔线" hover-shadow header-bordered my>
-        {{ message }}
-        <template #actions>
-          <a href="javascript:void(0)" @click="handleClick">操作</a>
-        </template>
+      <o-card :content="content" />
+      <o-card title="Bordered" bordered hoverable>
+        {{ content }}
       </o-card>
 
-      <o-card title="底部自定义" my>
+      <o-card title="Custom Actions" :content="content">
         <template #actions>
-          <a href="javascript:void(0)" @click="handleClick">操作</a>
-        </template>
-        <template #footer>
-          <div fbc>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
+          <div fbc un-children="flex items-center gap-2">
+            <div>
+              <O-Avatar size="xs" :src="cover" />
+              <span>User</span>
+            </div>
+            <div gap-4>
+              <div o-primary>
+                <o-icon cursor-pointer name="i-carbon-star" />
+              </div>
+              <div o-info>
+                <o-icon cursor-pointer name="i-carbon-share" />
+              </div>
+              <div o-warning>
+                <o-icon cursor-pointer name="i-carbon-face-wink-filled" />
+              </div>
+            </div>
           </div>
         </template>
       </o-card>
-      <o-card title="副标题底部自定义" subtitle="副标题" my>
-        <template #actions>
-          <a href="javascript:void(0)" @click="handleClick">操作</a>
+      <o-card :cover="cover" extra="More" :description="description" title="Title & Content" :content="content">
+        <template #extra>
+          <o-button size="xs" text o-white>
+            <template #icon>
+              <o-icon name="i-carbon-share" />
+            </template>
+          </o-button>
         </template>
-        <template #footer>
-          <div fbc>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
+        <template #actions>
+          <div fbc un-children="flex items-center gap-2">
+            <div>
+              <O-Avatar size="xs" :src="cover" />
+              <span>User</span>
+            </div>
+            <div gap-4>
+              <div o-primary>
+                <o-icon cursor-pointer name="i-carbon-star" />
+              </div>
+              <div o-info>
+                <o-icon cursor-pointer name="i-carbon-share" />
+              </div>
+              <div o-warning>
+                <o-icon cursor-pointer name="i-carbon-face-wink-filled" />
+              </div>
+            </div>
           </div>
-        </template>
-      </o-card>
-      <o-card title="描述信息" :description="description" my>
-        <template #actions>
-          <a href="javascript:void(0)" @click="handleClick">操作</a>
         </template>
       </o-card>
       <o-card
-        title="综合"
-        header-bordered
-        actions="操作"
+        bordered
+        hoverable
+        :cover="cover"
+        extra="More"
         :description="description"
-        my
-        hover-shadow
-        @action="handleClick"
+        title="Title & Content"
+        :content="content"
       >
-        {{ message }}
         <template #actions>
-          <a href="javascript:void(0)" @click="handleClick">操作</a>
-        </template>
-        <template #footer>
-          <div fbc>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
-            <OButton o="secondary" size="sm">
-              Primary
-            </OButton>
+          <div fbc un-children="flex items-center gap-2">
+            <div>
+              <O-Avatar size="xs" :src="cover" />
+              <span>User</span>
+            </div>
+            <div gap-4>
+              <div o-primary>
+                <o-icon cursor-pointer name="i-carbon-star" />
+              </div>
+              <div o-info>
+                <o-icon cursor-pointer name="i-carbon-share" />
+              </div>
+              <div o-warning>
+                <o-icon cursor-pointer name="i-carbon-face-wink-filled" />
+              </div>
+            </div>
           </div>
         </template>
       </o-card>
     </div>
-  </Card>
+  </OCard>
 </template>

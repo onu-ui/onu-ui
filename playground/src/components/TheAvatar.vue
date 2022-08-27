@@ -18,7 +18,7 @@ const getRandomSrc = () => avatarSrcs[Math.floor(Math.random() * (avatarSrcs.len
 </script>
 
 <template>
-  <Card name="Avatar">
+  <OCard o="white" title="Avatar">
     <div space-y-2>
       <div fsc gap-2>
         <O-Avatar :src="getRandomSrc()" />
@@ -61,7 +61,7 @@ const getRandomSrc = () => avatarSrcs[Math.floor(Math.random() * (avatarSrcs.len
       <div fsc gap-2 />
       <div fsc gap-2>
         <O-Avatar>
-          <div text-lg class="i-carbon-user-certification" />
+          <div text-primary class="i-carbon-user-certification" />
         </O-Avatar>
         <O-Avatar o-gray>
           <span text-xs>Avatar</span>
@@ -77,7 +77,7 @@ const getRandomSrc = () => avatarSrcs[Math.floor(Math.random() * (avatarSrcs.len
         </O-Avatar>
       </div>
     </div>
-  </Card>
+  </OCard>
 </template>
 
 <style lang='scss' scoped>

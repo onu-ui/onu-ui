@@ -1,127 +1,93 @@
 <script lang="ts" setup name="O-Card">
-import type { INode, ISize } from '../../common'
+import OButton from '../../button/src/index.vue'
+import type { INode, SizeType } from '../../types'
 
 interface ICardProps {
-  /** 卡片操作区 */
-  actions?: string | INode;
   /** 卡片标题 */
   title?: string
-  /** 卡片大小，支持 md，sm */
-  size?: Exclude<ISize, 'xs' | 'lg'>;
-  /** 副标题 */
-  subtitle?: string
-  /** 悬浮阴影 */
-  hoverShadow?: boolean;
-  /** 阴影 */
-  shadow?: boolean;
-  /** 边框 */
-  bordered?: boolean;
-  /** 内容 */
-  content?: string | INode;
   /** 描述 */
   description?: string
+  /** 内容 */
+  content?: string | INode;
+  /** 封面 */
+  cover?: string;
+  /** 卡片大小，支持 md，sm */
+  size?: Exclude<SizeType, 'xs' | 'lg'>;
+  /** 悬浮阴影 */
+  hoverable?: boolean;
+  /** 边框 */
+  bordered?: boolean;
   /** 头部内容区 */
   header?: string | INode;
-  /** 底部内容区 */
-  footer?: string | INode;
-  /** 头部和内容区是否展示分割线 */
-  headerBordered?: boolean;
+   /** 卡片右上角操作区 */
+  extra?: string | INode;
+  /** 底部操作区 */
+  actions?: string | INode;
 }
 
 const props = withDefaults(defineProps<ICardProps>(), {
   // eslint-disable-next-line vue/require-valid-default-prop
   size: 'md',
-  bordered: true,
 })
 
 const slots = useSlots()
-const defaultCardPrefix = 'o-card'
-enum CardPrefixMap {
-  defaultHeaderClassPrefix = 'o-card-header',
-  headerBorderedCls = 'o-card-header-bordered',
-  headerTitleCls = 'o-card-header-title',
-  headerSubTitleCls = 'o-card-header-subtitle',
-  headerDescriptionCls = 'o-card-header-description',
-  headerWrapperCls = 'o-card-header-wrapper',
-  actionCls = 'o-card-actions',
-  bodyCls = 'o-card-body',
-  footerCls = 'o-card-footer',
-  footerWrapperCls = 'o-card-footer-wrapper',
-  borderCls = 'o-card-bordered',
-  shadowCls = 'o-card-shadow',
-  shadowHoverCls = 'o-card-shadow-hover'
-}
-
-const baseCardCls = computed(() => {
-  const defaultClass = [defaultCardPrefix]
-  if (props.size) defaultClass.push(`${defaultCardPrefix}-${props.size}`)
-  if (props.bordered) defaultClass.push(`${CardPrefixMap.borderCls}`)
-  if (props.shadow) defaultClass.push(`${CardPrefixMap.shadowCls}`)
-  if (props.hoverShadow)
-    defaultClass.push(`${CardPrefixMap.shadowHoverCls}`)
-
-  return defaultClass
-})
-
-const headerCls = computed(() => {
-  const defaultClass = [CardPrefixMap.defaultHeaderClassPrefix as string]
-  return props.headerBordered
-    ? defaultClass.concat(`${CardPrefixMap.headerBorderedCls}`)
-    : defaultClass
-})
-
-const showTitle = computed(() => props.title)
-const showHeader = computed(() => slots.header)
-const showSubtitle = computed(() => props.subtitle)
-const showDescription = computed(
-  () => props.description,
-)
-const showActions = computed(() => props.actions || slots.actions)
-const showFooter = computed(() => slots.footer)
-const showContent = computed(() => props.content || slots.default)
 
 // 是否展示头部区域
-const needRenderHeader = computed(
-  () =>
-    !showHeader || (showTitle.value
-      || showSubtitle.value
-      || showDescription.value
-      || showActions.value),
+const needRenderHeader = computed(() => !slots.header && (props.title || props.description || props.extra || slots.extra))
+const needRenderBody = computed(() => props.content || slots.default)
+const needRenderActions = computed(() => slots.actions)
 
-)
+const bodyCls = computed(() => {
+  const cls = ['o-card-body']
+  if (props.bordered) {
+    cls.push('pt-4')
+    if (needRenderHeader.value)
+      cls.push('b-t b-context:50')
+  }
+  return cls
+})
 </script>
 
 <template>
-  <div :class="baseCardCls">
-    <div v-if="showHeader" :class="headerCls">
-      <slot name="header" />
+  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable']">
+    <!-- cover -->
+    <div v-if="cover" class="o-card-cover">
+      <img :src="cover">
     </div>
-    <div v-if="needRenderHeader" :class="headerCls">
-      <div :class="CardPrefixMap.headerWrapperCls">
-        <div>
-          <span v-if="showTitle" :class="CardPrefixMap.headerTitleCls">{{ title }}</span>
-          <span v-if="showSubtitle" :class="CardPrefixMap.headerSubTitleCls">{{ subtitle
-          }}</span>
-          <p v-if="showDescription" :class="CardPrefixMap.headerDescriptionCls">
-            {{ description }}
-          </p>
+    <!-- header -->
+    <div :class="[slots.header && 'o-card-header']">
+      <slot name="header">
+        <div v-if="needRenderHeader" class="o-card-header">
+          <div class="o-card-header-wrapper">
+            <h4 v-if="title" class="o-card-header-title">
+              {{ title }}
+            </h4>
+            <p v-if="description" class="o-card-header-description">
+              {{ description }}
+            </p>
+          </div>
+          <div class="o-card-header-extra">
+            <slot name="extra">
+              <o-button v-if="extra" o="primary" text size="xs">
+                {{ extra }}
+              </o-button>
+            </slot>
+          </div>
         </div>
-      </div>
-      <div v-if="showActions" :class="CardPrefixMap.actionCls">
-        <slot name="actions" />
-      </div>
+      </slot>
     </div>
+    <!-- body -->
     <div
-      v-if="showContent"
-      :class="[CardPrefixMap.bodyCls, showHeader || needRenderHeader ? 'pt0' : '', headerBordered ? '!pt' : '']"
+      v-if="needRenderBody"
+      :class="bodyCls"
     >
-      <slot v-if="!content" name="default" />
-      {{ content }}
+      <slot name="default">
+        {{ content }}
+      </slot>
     </div>
-    <div v-if="showFooter" :class="[CardPrefixMap.footerCls]">
-      <div :class="CardPrefixMap.footerWrapperCls">
-        <slot name="footer" />
-      </div>
+    <!-- actions -->
+    <div v-if="needRenderActions" class="o-card-actions">
+      <slot name="actions" />
     </div>
   </div>
 </template>

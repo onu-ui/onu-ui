@@ -1,4 +1,4 @@
-import type { INode, ISize } from '../../common'
+import type { INode, SizeType } from '../../types'
 
 export interface ICardProps {
   /** 卡片操作区 */
@@ -6,7 +6,7 @@ export interface ICardProps {
   /** 卡片标题 */
   title?: string | INode
   /** 卡片大小，支持 md，sm */
-  size?: Exclude<ISize, 'xs' | 'lg'>
+  size?: Exclude<SizeType, 'xs' | 'lg'>
   /** 副标题 */
   subtitle?: string | INode
   /** 悬浮阴影 */

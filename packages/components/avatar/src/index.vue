@@ -1,5 +1,5 @@
 <script lang='ts' setup name="O-Avatar">
-import type { SizeType } from '../../type'
+import type { SizeType } from '../../types'
 
 interface IAvatarProps {
   src?: string

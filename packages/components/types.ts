@@ -5,4 +5,5 @@ export type SlotReturnArray = Array<SlotReturnValue>
 export type INodeReturnType = SlotReturnValue
 
 export type INode<T = undefined> = T extends undefined ? (h: typeof import('vue').h) => INodeReturnType : (h: typeof import('vue').h, props: T) => INodeReturnType
-export type ISize = 'xs' | 'sm' | 'md' | 'lg'
+
+export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
