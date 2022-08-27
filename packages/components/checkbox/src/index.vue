@@ -43,7 +43,7 @@ const handleChange = () => {
   emitChangeEvt(innerState.value)
 }
 const handleClick = () => {
-  if(props.disabled) return
+  if (props.disabled) return
   innerState.value = !innerState.value
   handleChange()
 }
