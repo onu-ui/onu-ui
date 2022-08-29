@@ -1,4 +1,3 @@
-import type OCard from './index.vue'
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { INode, SizeType } from '../../types'
 
@@ -47,4 +46,3 @@ export const cardProps = {
 }
 
 export type OCardProps = ExtractPropTypes<typeof cardProps>
-export type OCardInstance = InstanceType<typeof OCard>
