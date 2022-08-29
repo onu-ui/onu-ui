@@ -1,28 +1,29 @@
-import type { PropType } from 'vue'
-import type { ICardProps } from './type'
+import type OCard from './index.vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+import type { INode, SizeType } from '../../types'
 
-export default {
+export const cardProps = {
   /** 卡片标题 */
   title: {
-    type: [String, Function] as PropType<ICardProps['title']>,
+    type: String,
   },
   /** 描述 */
   description: {
-    type: [String] as PropType<ICardProps['description']>,
+    type: String,
   },
   /** 内容 */
   content: {
-    type: [String, Function] as PropType<ICardProps['content']>,
+    type: [String, Function] as PropType<string | INode>,
   },
   /** 封面 */
   cover: {
-    type: [String] as PropType<ICardProps['content']>,
+    type: String,
   },
   /** 卡片大小，支持 md，sm */
   size: {
-    type: String as PropType<ICardProps['size']>,
+    type: [String] as PropType<Exclude<SizeType, 'xs' | 'lg'>>,
     default: 'md',
-    validator(val: ICardProps['size']): boolean {
+    validator(val: string): boolean {
       if (!val) return true
       return ['md', 'sm'].includes(val)
     },
@@ -33,14 +34,17 @@ export default {
   bordered: Boolean,
   /** 头部内容区 */
   header: {
-    type: [Function] as PropType<ICardProps['header']>,
+    type: [Function] as PropType<INode>,
   },
   /** 卡片右上角操作区 */
   extra: {
-    type: [String, Function] as PropType<ICardProps['header']>,
+    type: [String, Function] as PropType<string | INode>,
   },
   /** 卡片操作区 */
   actions: {
-    type: [Function] as PropType<ICardProps['actions']>,
+    type: [Function] as PropType<INode>,
   },
 }
+
+export type OCardProps = ExtractPropTypes<typeof cardProps>
+export type OCardInstance = InstanceType<typeof OCard>

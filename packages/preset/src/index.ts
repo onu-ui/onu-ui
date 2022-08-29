@@ -136,19 +136,14 @@ export function presetOnu(): Preset {
         'o-card': 'o-card-base h-fit',
         'o-card-md': 'rounded-md shadow-md text-sm',
         'o-card-sm': 'rounded-sm shadow-sm text-xs',
-
         'o-card-cover': 'children-w-full children-aspect-video',
-
         'o-card-header': 'fb px-4 py-2.5',
         'o-card-header-wrapper': 'flex flex-col flex-1 gap-1.5',
         'o-card-header-title': 'text-md',
         'o-card-header-description': 'text-xs c-context:60 break-all',
         'o-card-header-extra': '',
-
         'o-card-body': 'p-4 pt-1.5 leading-normal text-sm',
-
         'o-card-actions': 'p-4 pt-2',
-
         'o-card-bordered': 'border b-context:50 important-shadow-none hover-important-shadow-md',
         'o-card-hoverable': 'hover-translate-y--1',
 
