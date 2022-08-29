@@ -7,25 +7,19 @@ const customLabelNumber = ref(0)
 </script>
 
 <template>
-  <Card name="Checkbox">
+  <OCard title="Checkbox" o-white>
     <div space-y-2>
       <div fsc gap-2>
         <o-checkbox
-          v-model="checkVal"
           label="basic use"
         />
         <o-checkbox
-          v-model="checkValDisable"
-          disabled
-          label="disabled"
-        />
-        <o-checkbox
-          v-model="checkValIndeterminate"
-          indeterminate
-          label="indeterminate"
-        />
+          v-model="checkVal"
+        >
+          test
+        </o-checkbox>
       </div>
-      <div fsc gap-2>
+      <!-- <div fsc gap-2>
         <p>custom-label-string</p>
       </div>
       <div fsc gap-2>
@@ -48,7 +42,7 @@ const customLabelNumber = ref(0)
           :false-label="0"
           :true-label="1"
         />
-      </div>
+      </div> -->
     </div>
-  </Card>
+  </OCard>
 </template>

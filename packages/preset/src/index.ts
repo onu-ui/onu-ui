@@ -18,7 +18,6 @@ export function presetOnu(): Preset {
         error: '#FF5C5C',
         info: '#373e47',
         placeholder: '#dcdcdc',
-        white: '#FFFFFF',
       },
       fontFamily: {
         sans: 'Avenir, Helvetica, Arial, sans-serif',
@@ -170,22 +169,11 @@ export function presetOnu(): Preset {
         'o-switch-large-slot-uncheck': 'mr-0.25em ml-1.5em',
 
         // checkbox
-        'o-checkbox': 'h-6 f-c',
-        'o-checkbox-input': 'h-3.5 w-3.5 leading-3.5 relative o-border-base border hover-border-secondary rounded-2px',
-        'o-checkbox-input-check': 'border-secondary',
-        'o-checkbox-original': 'h-full w-full absolute z-1 opacity-0',
-        'o-checkbox-inner': 'rounded-1px h-full w-full absolute inline-block top-0 right-0 bg-context',
-        'o-checkbox-after': 'after-content-empty '
-            + 'after-h-7px after-w-3px after-absolute '
-            + 'after-left-4px after-top-1px after-border '
-            + 'after-border-l-0 after-border-t-0 '
-            + 'after-border-white after-box-content '
-            + 'after-transform-rotate-45 after-transform-scaleY-0 '
-            + 'after-transform-origin-center',
-        'o-checkbox-inner-check': 'rounded-0',
-        'o-checkbox-indeterminate': 'before-content-empty before-absolute before-block '
-            + 'before-left-0 before-right-0 before-top-5px before-transform-scale-50 before-h-2px before-bg-white',
-        'o-checkbox-label': 'pl-2 h-6 leading-6 m-0',
+        'o-checkbox-base': 'fsc gap-1 inline-flex cursor-pointer',
+        'o-checkbox': 'o-transition fcc peer-checked-(bg-primary b-primary scale-full children-scale-full)',
+        'o-checkbox-icon': 'o-transition scale-0 text-white',
+        'o-checkbox-md': 'w-4 h-4 text-md rounded border',
+        'o-checkbox-lg': 'w-5 h-5 text-md rounded border',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
