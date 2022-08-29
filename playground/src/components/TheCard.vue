@@ -44,7 +44,7 @@ const description = 'This a description'
           </div>
         </template>
       </o-card>
-      <o-card :cover="cover" extra="More" :description="description" title="Title & Content" :content="content">
+      <o-card :cover="cover" :description="description" title="Title & Content" :content="content">
         <template #extra>
           <o-button size="xs" text o-white>
             <template #icon>
