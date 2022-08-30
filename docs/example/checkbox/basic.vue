@@ -5,7 +5,7 @@ const checkVal = ref(true)
 
 <template>
   <o-checkbox
-      v-model="checkVal"
-      label="basic use"
+    v-model="checkVal"
+    label="basic use"
   />
 </template>

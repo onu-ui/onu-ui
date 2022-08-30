@@ -5,8 +5,8 @@ const checkVal = ref(true)
 
 <template>
   <o-checkbox
-      indeterminate
-      v-model="checkVal"
-      label="indeterminate"
+    v-model="checkVal"
+    indeterminate
+    label="indeterminate"
   />
 </template>
