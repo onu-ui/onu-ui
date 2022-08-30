@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/utils",
-    "version": "1.0.7",
+    "version": "1.0.8-beta.0",
     "description": "Onu-UI utils library",
     "main": "dist/index.js",
     "module": "dist/index.mjs",

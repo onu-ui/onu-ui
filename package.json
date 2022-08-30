@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/monorepo",
-    "version": "1.0.7",
+    "version": "1.0.8-beta.0",
     "private": true,
     "packageManager": "pnpm@7.5.0",
     "license": "MIT",
