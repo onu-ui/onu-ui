@@ -2,6 +2,22 @@
     "name": "@onu-ui/utils",
     "version": "1.0.8-beta.0",
     "description": "Onu-UI utils library",
+    "keywords": [
+        "onu-ui",
+        "utils",
+        "@onu-ui/utils"
+    ],
+    "license": "MIT",
+    "author": "chris-zhu <https://github.com/chris-zhu>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/onu-ui/onu-ui.git",
+        "directory": "packages/utils"
+    },
+    "bugs": {
+        "url": "https://github.com/onu-ui/onu-ui/issues"
+    },
+    "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/utils/README.md",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",

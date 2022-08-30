@@ -12,7 +12,8 @@
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onu-ui/onu-ui.git"
+    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "directory": "packages/onu-ui"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
