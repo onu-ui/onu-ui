@@ -6,6 +6,7 @@
 
 <style scoped>
   .bg{
+    /* background-color: #1c1f24; */
     background: conic-gradient(from 192deg at 46.5% 42.58%, #FA8792 -54.94deg, #561BBE 28.29deg,
             #70E6FB 157.82deg, #FBF8B3 220.83deg, #FA8792 305.06deg, #561BBE 388.29deg);
   }

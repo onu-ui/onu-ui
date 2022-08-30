@@ -7,6 +7,7 @@ importers:
       '@chris-zhu/eslint-config': ^1.0.5
       '@iconify-json/carbon': ^1.1.5
       '@iconify-json/fluent-emoji': ^1.1.0
+      '@iconify-json/logos': ^1.1.14
       '@onu-ui/cli': workspace:*
       '@onu-ui/components': workspace:*
       '@onu-ui/preset': workspace:*
@@ -44,6 +45,7 @@ importers:
       '@chris-zhu/eslint-config': 1.0.5_4rv7y5c6xz3vfxwhbrcxxi73bq
       '@iconify-json/carbon': 1.1.7
       '@iconify-json/fluent-emoji': 1.1.0
+      '@iconify-json/logos': 1.1.14
       '@onu-ui/cli': link:packages/cli
       '@onu-ui/components': link:packages/components
       '@onu-ui/preset': link:packages/preset
@@ -639,6 +641,12 @@ packages:
 
   /@iconify-json/fluent-emoji/1.1.0:
     resolution: {integrity: sha512-vXEdbcpSYpDLrNK1BHFeEy5YN097RnxJN8xRi4SQ/F6kRIx6khbapOf1i1wibxFUGh1FGZxA7ATvI7TTxXKeLQ==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
+  /@iconify-json/logos/1.1.14:
+    resolution: {integrity: sha512-SvSxKubQbP/7Wdb3loShUeRGv82ejkNo5gjzvJzQeauntuU4aZjDrx0mnkhFZgNYd3li/mxvzPn79Xc5SGVliw==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
