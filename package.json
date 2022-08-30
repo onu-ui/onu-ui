@@ -22,6 +22,7 @@
         "@chris-zhu/eslint-config": "^1.0.5",
         "@iconify-json/carbon": "^1.1.5",
         "@iconify-json/fluent-emoji": "^1.1.0",
+        "@iconify-json/logos": "^1.1.14",
         "@onu-ui/cli": "workspace:*",
         "@onu-ui/components": "workspace:*",
         "@onu-ui/preset": "workspace:*",

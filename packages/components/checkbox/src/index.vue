@@ -21,17 +21,24 @@ const hashId = hash(Math.random().toString())
 </script>
 
 <template>
-  <label class="o-checkbox-base" :for="hashId">
-    <input :id="hashId" v-model="mv" class="peer" type="checkbox" hidden>
+  <label class="o-checkbox-base" :class="[disabled && `o-checkbox-disabled`, size === 'lg' ? 'gap-2' : 'gap-1']" :for="hashId">
+    <input
+      :id="hashId"
+      v-model="mv"
+      :disabled="disabled"
+      class="peer"
+      type="checkbox"
+      hidden
+    >
     <div
       class="o-checkbox"
-      :class="[`o-checkbox-${size}`]"
+      :class="`o-checkbox-${size}`"
     >
       <i
         class="o-checkbox-icon"
         :class="icon"
       />
     </div>
-    <slot><span v-if="label" text="md info">{{ label }}</span></slot>
+    <slot><span v-if="label" whitespace-nowrap>{{ label }}</span></slot>
   </label>
 </template>

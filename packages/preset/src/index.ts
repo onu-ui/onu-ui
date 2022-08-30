@@ -170,10 +170,11 @@ export function presetOnu(): Preset {
 
         // checkbox
         'o-checkbox-base': 'fsc gap-1 inline-flex cursor-pointer',
-        'o-checkbox': 'o-transition fcc peer-checked-(bg-primary b-primary scale-full children-scale-full)',
-        'o-checkbox-icon': 'o-transition scale-0 text-white',
-        'o-checkbox-md': 'w-4 h-4 text-md rounded border',
-        'o-checkbox-lg': 'w-5 h-5 text-md rounded border',
+        'o-checkbox': 'o-transition text-md rounded border fcc peer-checked-(bg-context b-context scale-full children-scale-full)',
+        'o-checkbox-icon': 'o-transition scale-0 text-(white md)',
+        'o-checkbox-md': 'w-4 h-4',
+        'o-checkbox-lg': 'w-5 h-5',
+        'o-checkbox-disabled': 'o-disabled',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
