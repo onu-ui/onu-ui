@@ -1,10 +1,10 @@
 <template>
   <div py-4 space-y-5>
-    <!-- <TheAvatar />
+    <TheAvatar />
     <TheIcon />
     <TheButton />
     <TheSwitch />
-    <TheCard /> -->
+    <TheCard />
     <TheCheckbox />
   </div>
 </template>
