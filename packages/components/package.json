@@ -1,8 +1,23 @@
 {
   "name": "@onu-ui/components",
   "type": "module",
-  "version": "1.0.7",
+  "version": "1.0.8-beta.1",
   "description": "Onu-UI components for use on demand",
+  "keywords": [
+    "onu-ui",
+    "@onu-ui/components"
+  ],
+  "license": "MIT",
+  "author": "chris-zhu <https://github.com/chris-zhu>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "directory": "packages/components"
+  },
+  "bugs": {
+    "url": "https://github.com/onu-ui/onu-ui/issues"
+  },
+  "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/components/README.md",
   "main": "./dist/components.umd.cjs",
   "module": "./dist/components.js",
   "exports": {

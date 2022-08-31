@@ -7,6 +7,7 @@ declare global {
   const OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
   const OButton: typeof import('onu-ui')['OButton']
   const OCard: typeof import('onu-ui')['OCard']
+  const OCheckbox: typeof import('onu-ui')['OCheckbox']
   const OIcon: typeof import('onu-ui')['OIcon']
   const OSwitch: typeof import('onu-ui')['OSwitch']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
@@ -275,6 +276,7 @@ declare module '@vue/runtime-core' {
     readonly OAvatarGroup: UnwrapRef<typeof import('onu-ui')['OAvatarGroup']>
     readonly OButton: UnwrapRef<typeof import('onu-ui')['OButton']>
     readonly OCard: UnwrapRef<typeof import('onu-ui')['OCard']>
+    readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
     readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>

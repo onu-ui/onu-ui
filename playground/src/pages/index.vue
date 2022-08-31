@@ -5,6 +5,5 @@
     <TheButton />
     <TheSwitch />
     <TheCard />
-    <TheAlert />
   </div>
 </template>

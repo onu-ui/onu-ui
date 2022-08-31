@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/monorepo",
-    "version": "1.0.7",
+    "version": "1.0.8-beta.1",
     "private": true,
     "packageManager": "pnpm@7.5.0",
     "license": "MIT",
@@ -22,6 +22,7 @@
         "@chris-zhu/eslint-config": "^1.0.5",
         "@iconify-json/carbon": "^1.1.5",
         "@iconify-json/fluent-emoji": "^1.1.0",
+        "@iconify-json/logos": "^1.1.14",
         "@onu-ui/cli": "workspace:*",
         "@onu-ui/components": "workspace:*",
         "@onu-ui/preset": "workspace:*",

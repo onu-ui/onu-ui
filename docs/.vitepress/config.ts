@@ -3,6 +3,7 @@ import { version } from '../../package.json'
 
 const Components = [
   { text: 'Switch', link: '/components/switch' },
+  { text: 'Checkbox', link: '/components/checkbox' },
 ]
 
 const nav = [
