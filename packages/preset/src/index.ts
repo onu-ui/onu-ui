@@ -175,6 +175,15 @@ export function presetOnu(): Preset {
         'o-checkbox-md': 'w-4 h-4',
         'o-checkbox-lg': 'w-5 h-5',
         'o-checkbox-disabled': 'o-disabled',
+
+        // alert
+        'o-alert-base': 'pr p-3  fi rounded o-transition w-full of-hidden c-context shadow-context:50 o-solid border fi',
+        'o-alert-light': 'o-light',
+        'o-alert-content': 'flex-col justify-center w-full',
+        'o-alert-header': 'fb items-center',
+        'o-alert-title': 'flex-1 text-md font-600',
+        'o-alert-close': 'text-md cursor-pointer p-1 fcc',
+        'o-alert-icon': 'fi pr-5',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
