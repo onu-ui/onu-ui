@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt iusto, veritatis modi perferendis similique maiores cumque ipsam doloremque natus assumenda.'
+const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 const title = 'With Title'
 </script>
 
 <template>
   <OCard title="Alert" o="white">
-    <div grid="~ gap-4 cols-1 ">
+    <div grid="~ gap-4 cols-1 md:cols-2 xl:cols-2">
       <o-alert o="primary">
         {{ content }}
       </o-alert>
