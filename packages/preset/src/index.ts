@@ -179,10 +179,10 @@ export function presetOnu(): Preset {
         // alert
         'o-alert-base': 'pr p-3  fi rounded o-transition w-full of-hidden c-context shadow-context:50 o-solid border fi',
         'o-alert-light': 'o-light',
-        'o-alert-content': 'flex-col justify-center w-full',
+        'o-alert-content': 'flex flex-col justify-center w-full',
         'o-alert-header': 'fb items-center',
         'o-alert-title': 'flex-1 text-md font-600',
-        'o-alert-close': 'text-md cursor-pointer p-1 fcc',
+        'o-alert-close': 'text-md cursor-pointer pa top-3 right-3',
         'o-alert-icon': 'fi pr-5',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {

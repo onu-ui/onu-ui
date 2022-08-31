@@ -26,7 +26,7 @@ const showTitle = computed(() => props.title || slots.title)
       </slot>
     </div>
     <!-- content -->
-    <div class="o-alert-content">
+    <div class="o-alert-content" :class="center && 'items-center'">
       <div class="o-alert-header">
         <div v-if="showTitle" class="o-alert-title">
           <slot name="title">

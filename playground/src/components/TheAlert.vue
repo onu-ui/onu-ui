@@ -39,6 +39,7 @@ const title = 'With Title'
       </o-alert>
       <o-alert o="info" :description="content" light />
       <o-alert o="primary" :description="content" :title="title" />
+      <o-alert o="primary" :description="content" title="Center title and description" center />
       <o-alert o="primary" :description="content" :title="title" closeable />
       <o-alert o="primary" :description="content" :title="title + ' and Close Text'" closeable close-text="close" />
       <o-alert o="primary" :description="content" :title="title + ' and Icon'" closeable icon="i-carbon-logo-github" />
