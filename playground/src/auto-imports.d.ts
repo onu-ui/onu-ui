@@ -4,6 +4,7 @@ import type { UnwrapRef } from 'vue'
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const OAlert: typeof import('onu-ui')['OAlert']
   const OAvatar: typeof import('onu-ui')['OAvatar']
   const OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
   const OButton: typeof import('onu-ui')['OButton']
@@ -270,6 +271,7 @@ declare global {
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly OAlert: UnwrapRef<typeof import('onu-ui')['OAlert']>
     readonly OAvatar: UnwrapRef<typeof import('onu-ui')['OAvatar']>
     readonly OAvatarGroup: UnwrapRef<typeof import('onu-ui')['OAvatarGroup']>
     readonly OButton: UnwrapRef<typeof import('onu-ui')['OButton']>
