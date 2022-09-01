@@ -18,6 +18,7 @@ export function presetOnu(): Preset {
         error: '#FF5C5C',
         info: '#373e47',
         placeholder: '#dcdcdc',
+        awdwa: '#00ffff',
       },
       fontFamily: {
         sans: 'Avenir, Helvetica, Arial, sans-serif',
@@ -184,6 +185,12 @@ export function presetOnu(): Preset {
         'o-alert-title': 'flex-1 text-md font-600',
         'o-alert-close': 'text-md cursor-pointer pa top-3 right-3',
         'o-alert-icon': 'fi pr-5',
+
+        // Badge
+        'o-badge': 'relative inline-block align-middle',
+        'o-badge-sup': 'h-4 leading-4 whitespace-nowrap inline-flex items-center justify-center bg-context rounded-4 px-1 z-1',
+        'o-badge-sup-fixed': 'absolute top-0 right-4 transform -translate-y-1/2 translate-full',
+        'o-badge-sup-dot': '!h-2 w-2 right-1 rounded-999px',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {

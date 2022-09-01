@@ -7,5 +7,6 @@
     <TheCard />
     <TheCheckbox />
     <TheAlert />
+    <TheBadge/>
   </div>
 </template>
