@@ -1,5 +1,5 @@
 <script lang="ts" setup name="O-Badge">
-import {isNumber} from '@onu-ui/utils'
+import { isNumber } from '@onu-ui/utils'
 
 interface IBadgeProps {
   max: number
@@ -34,13 +34,13 @@ watch(() => props.content, (nVal) => {
 
 <template>
   <div
-      class="o-badge"
+    class="o-badge"
   >
-    <slot/>
+    <slot />
     <sup
-        v-if="!disabled"
-        :o="o"
-        :class="`o-badge-sup o-badge-sup-fixed ${dot ? 'o-badge-sup-dot' : ''}`"
+      v-if="!disabled"
+      :o="o"
+      :class="`o-badge-sup o-badge-sup-fixed ${dot ? 'o-badge-sup-dot' : ''}`"
     >{{ contentInner }}</sup>
   </div>
 </template>
