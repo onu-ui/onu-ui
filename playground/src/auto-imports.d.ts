@@ -4,10 +4,12 @@ import type { UnwrapRef } from 'vue'
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const OAlert: typeof import('onu-ui')['OAlert']
   const OAvatar: typeof import('onu-ui')['OAvatar']
   const OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
   const OButton: typeof import('onu-ui')['OButton']
   const OCard: typeof import('onu-ui')['OCard']
+  const OCheckbox: typeof import('onu-ui')['OCheckbox']
   const OIcon: typeof import('onu-ui')['OIcon']
   const OSwitch: typeof import('onu-ui')['OSwitch']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
@@ -195,6 +197,7 @@ declare global {
   const usePointer: typeof import('@vueuse/core')['usePointer']
   const usePointerSwipe: typeof import('@vueuse/core')['usePointerSwipe']
   const usePreferredColorScheme: typeof import('@vueuse/core')['usePreferredColorScheme']
+  const usePreferredContrast: typeof import('@vueuse/core')['usePreferredContrast']
   const usePreferredDark: typeof import('@vueuse/core')['usePreferredDark']
   const usePreferredLanguages: typeof import('@vueuse/core')['usePreferredLanguages']
   const usePreferredReducedMotion: typeof import('@vueuse/core')['usePreferredReducedMotion']
@@ -268,10 +271,12 @@ declare global {
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly OAlert: UnwrapRef<typeof import('onu-ui')['OAlert']>
     readonly OAvatar: UnwrapRef<typeof import('onu-ui')['OAvatar']>
     readonly OAvatarGroup: UnwrapRef<typeof import('onu-ui')['OAvatarGroup']>
     readonly OButton: UnwrapRef<typeof import('onu-ui')['OButton']>
     readonly OCard: UnwrapRef<typeof import('onu-ui')['OCard']>
+    readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
     readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
@@ -459,6 +464,7 @@ declare module '@vue/runtime-core' {
     readonly usePointer: UnwrapRef<typeof import('@vueuse/core')['usePointer']>
     readonly usePointerSwipe: UnwrapRef<typeof import('@vueuse/core')['usePointerSwipe']>
     readonly usePreferredColorScheme: UnwrapRef<typeof import('@vueuse/core')['usePreferredColorScheme']>
+    readonly usePreferredContrast: UnwrapRef<typeof import('@vueuse/core')['usePreferredContrast']>
     readonly usePreferredDark: UnwrapRef<typeof import('@vueuse/core')['usePreferredDark']>
     readonly usePreferredLanguages: UnwrapRef<typeof import('@vueuse/core')['usePreferredLanguages']>
     readonly usePreferredReducedMotion: UnwrapRef<typeof import('@vueuse/core')['usePreferredReducedMotion']>

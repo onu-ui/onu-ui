@@ -167,6 +167,23 @@ export function presetOnu(): Preset {
         'o-switch-small-slot-uncheck': 'mr-0.25em ml-1em',
         'o-switch-medium-slot-uncheck': 'mr-0.25em ml-1.25em',
         'o-switch-large-slot-uncheck': 'mr-0.25em ml-1.5em',
+
+        // checkbox
+        'o-checkbox-base': 'fsc gap-1 inline-flex cursor-pointer',
+        'o-checkbox': 'o-transition text-md rounded border fcc peer-checked-(bg-context b-context scale-full children-scale-full)',
+        'o-checkbox-icon': 'o-transition scale-0 text-(white md)',
+        'o-checkbox-md': 'w-4 h-4',
+        'o-checkbox-lg': 'w-5 h-5',
+        'o-checkbox-disabled': 'o-disabled',
+
+        // alert
+        'o-alert-base': 'pr p-3  fi rounded o-transition w-full of-hidden c-context shadow-context:50 o-solid border fi',
+        'o-alert-light': 'o-light',
+        'o-alert-content': 'flex flex-col justify-center w-full',
+        'o-alert-header': 'fb items-center',
+        'o-alert-title': 'flex-1 text-md font-600',
+        'o-alert-close': 'text-md cursor-pointer pa top-3 right-3',
+        'o-alert-icon': 'fi pr-5',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {

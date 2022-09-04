@@ -7,6 +7,7 @@ export const commonShortcuts: Record<string, string> = {
   'f-c-c': 'f-c flex-col',
 
   'fc': 'flex justify-center',
+  'fi': 'flex items-center',
   'fcc': 'flex justify-center items-center',
   'fs': 'flex justify-start',
   'fsc': 'flex justify-start items-center',

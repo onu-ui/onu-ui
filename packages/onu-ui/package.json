@@ -1,7 +1,7 @@
 {
   "name": "onu-ui",
   "type": "module",
-  "version": "1.0.7",
+  "version": "1.0.8-beta.1",
   "description": "Onu-UI for web glassmorphism components generate by UnoCSS.",
   "keywords": [
     "onu-ui",
@@ -12,7 +12,8 @@
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onu-ui/onu-ui.git"
+    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "directory": "packages/onu-ui"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

@@ -1,6 +1,5 @@
-import type OCard from './index.vue'
-import type { ExtractPropTypes, PropType } from 'vue'
-import type { INode, SizeType } from '../../types'
+import type { PropType } from 'vue'
+import type { ICardProps } from './type'
 
 export const cardProps = {
   /** 卡片标题 */
@@ -45,6 +44,3 @@ export const cardProps = {
     type: [Function] as PropType<INode>,
   },
 }
-
-export type OCardProps = ExtractPropTypes<typeof cardProps>
-export type OCardInstance = InstanceType<typeof OCard>

@@ -1,7 +1,23 @@
 {
     "name": "@onu-ui/preset",
-    "version": "1.0.7",
+    "version": "1.0.8-beta.1",
     "description": "Onu-UI css rules for unocss preset",
+    "keywords": [
+        "onu-ui",
+        "@onu-ui/preset",
+        "unocss preset"
+    ],
+    "license": "MIT",
+    "author": "chris-zhu <https://github.com/chris-zhu>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/onu-ui/onu-ui.git",
+        "directory": "packages/preset"
+    },
+    "bugs": {
+        "url": "https://github.com/onu-ui/onu-ui/issues"
+    },
+    "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/preset/README.md",
     "main": "./dist/index.cs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
