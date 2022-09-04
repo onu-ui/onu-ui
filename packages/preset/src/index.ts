@@ -184,6 +184,7 @@ export function presetOnu(): Preset {
         'o-alert-title': 'flex-1 text-md font-600',
         'o-alert-close': 'text-md cursor-pointer pa top-3 right-3',
         'o-alert-icon': 'fi pr-5',
+        'o-alert-description': 'flex break-all items-center',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
