@@ -16,7 +16,8 @@
         "deploy": "pnpm -C playground run build",
         "test": "vitest",
         "test:update": "vitest -u",
-        "test:coverage": "vitest --coverage"
+        "test:coverage": "vitest --coverage",
+        "volar:helper": "esno scripts/volar-helper" 
     },
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
@@ -55,6 +56,7 @@
         "vite-plugin-vue-setup-extend": "^0.4.0",
         "vitepress": "1.0.0-alpha.9",
         "vitest": "0.22.1",
-        "vue": "^3.2.37"
+        "vue": "^3.2.37",
+        "fs-extra": "^9.1.0"
     }
 }
