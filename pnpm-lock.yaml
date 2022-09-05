@@ -24,6 +24,7 @@ importers:
       eslint: 8.22.0
       eslint-plugin-import: ^2.26.0
       esno: ^0.16.3
+      fs-extra: ^10.1.0
       jsdom: ^20.0.0
       onu-ui: workspace:*
       rimraf: ^3.0.2
@@ -62,6 +63,7 @@ importers:
       eslint: 8.22.0
       eslint-plugin-import: 2.26.0_lewfh47l4outvz5ytnjtm3tbm4
       esno: 0.16.3
+      fs-extra: 10.1.0
       jsdom: 20.0.0
       onu-ui: link:packages/onu-ui
       rimraf: 3.0.2

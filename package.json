@@ -5,10 +5,10 @@
     "packageManager": "pnpm@7.5.0",
     "license": "MIT",
     "scripts": {
-        "dev": "pnpm run stub",
+        "dev": "pnpm run volar:helper && pnpm run stub",
         "docs": "pnpm -C docs run dev",
         "stub": "pnpm -r --parallel -F !onu-ui run stub",
-        "build": "rimraf packages/*/dist && pnpm -r -F !playground run build",
+        "build": "rimraf packages/*/dist && pnpm -r -F !playground run build && pnpm run volar:helper",
         "play": "pnpm -C playground run dev",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
@@ -16,7 +16,8 @@
         "deploy": "pnpm -C playground run build",
         "test": "vitest",
         "test:update": "vitest -u",
-        "test:coverage": "vitest --coverage"
+        "test:coverage": "vitest --coverage",
+        "volar:helper": "esno scripts/volar-helper"
     },
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
@@ -39,6 +40,7 @@
         "eslint": "8.22.0",
         "eslint-plugin-import": "^2.26.0",
         "esno": "^0.16.3",
+        "fs-extra": "^10.1.0",
         "jsdom": "^20.0.0",
         "onu-ui": "workspace:*",
         "rimraf": "^3.0.2",
