@@ -33,7 +33,7 @@ const showTitle = computed(() => props.title || slots.title)
             {{ title }}
           </slot>
         </div>
-        <div v-if="closeable" class="o-alert-close" @click="handleColose">
+        <div v-if="closable" class="o-alert-close" @click="handleColose">
           <slot name="close">
             <o-icon v-if="!closeText" name="i-carbon-close" class="!c-white text-4" />
             <span class="text-xs">{{ closeText }}</span>

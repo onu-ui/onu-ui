@@ -194,7 +194,7 @@ export function presetOnu(): Preset {
         'o-tag-md': 'px-3 h-7 text-sm ',
         'o-tag-lg': 'px-4 h-8 text-md',
         'o-tag-plain': 'bg-context:20',
-        'o-tag-light': 'o-light',
+        'o-tag-light': 'c-context  !border-context:60 bg-context:12',
         'o-tag-disabled': 'o-disabled',
         'o-tag-rounded': 'rounded-full',
         'o-tag-close': 'ml-1.5 cursor-pointer c-context',

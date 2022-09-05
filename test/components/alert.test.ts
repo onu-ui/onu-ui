@@ -47,7 +47,7 @@ describe('o-alert', () => {
       props: {
         title: ALERT_TITLE,
         description: ALERT_DESCRIPTION,
-        closeable: true,
+        closable: true,
       },
     })
     const closeWrapper = wrapper.find('.o-alert-close')
@@ -66,7 +66,7 @@ describe('o-alert', () => {
       props: {
         title: ALERT_TITLE,
         description: ALERT_DESCRIPTION,
-        closeable: true,
+        closable: true,
         closeText: 'close',
       },
     })
@@ -86,7 +86,7 @@ describe('o-alert', () => {
         close: 'close',
       },
       props: {
-        closeable: true,
+        closable: true,
       },
     })
 

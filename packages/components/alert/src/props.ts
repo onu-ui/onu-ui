@@ -28,7 +28,7 @@ export const alertProps = {
     default: '',
   },
   /** 是否可关闭 */
-  closeable: {
+  closable: {
     type: Boolean,
     default: false,
   },
