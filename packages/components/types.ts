@@ -8,3 +8,4 @@ export type INode<T = undefined> = T extends undefined ? (h: typeof import('vue'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 export type PositionType = 'top' | 'right' | 'bottom' | 'left'
+export type ThemeType = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'

@@ -9,5 +9,5 @@ export default defineConfig({
     presetOnu(),
   ],
   transformers: [transformerVariantGroup()],
-  safelist: [['xs', 'sm', 'md', 'lg'].map(s => [`o-button-${s}`, `o-avatar-${s}`, `o-avatar-group-${s}`, `o-card-${s}`, `o-checkbox-${s}`])].flat(2) as string[],
+  safelist: [['xs', 'sm', 'md', 'lg'].map(s => [`o-button-${s}`, `o-avatar-${s}`, `o-avatar-group-${s}`, `o-card-${s}`, `o-checkbox-${s}`, `o-tag-${s}`])].flat(2) as string[],
 })
