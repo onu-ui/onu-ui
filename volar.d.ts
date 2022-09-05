@@ -9,6 +9,7 @@ declare module 'vue' {
     OCheckbox: typeof import('@onu-ui/components')['OCheckbox']
     OIcon: typeof import('@onu-ui/components')['OIcon']
     OSwitch: typeof import('@onu-ui/components')['OSwitch']
+    OTag: typeof import('@onu-ui/components')['OTag']
   }
 }
 export {}
