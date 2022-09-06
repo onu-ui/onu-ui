@@ -4,6 +4,7 @@ import { version } from '../../package.json'
 const Components = [
   { text: 'Switch', link: '/components/switch' },
   { text: 'Checkbox', link: '/components/checkbox' },
+  { text: 'Alert', link: '/components/alert' },
 ]
 
 const nav = [
