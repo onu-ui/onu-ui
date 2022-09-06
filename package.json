@@ -5,18 +5,20 @@
     "packageManager": "pnpm@7.5.0",
     "license": "MIT",
     "scripts": {
-        "dev": "pnpm run stub",
+        "dev": "pnpm run volar:helper && pnpm run stub",
         "docs": "pnpm -C docs run dev",
         "stub": "pnpm -r --parallel -F !onu-ui run stub",
-        "build": "rimraf packages/*/dist && pnpm -r -F !playground run build",
+        "build": "rimraf packages/*/dist && pnpm -r -F !playground run build && pnpm run volar:helper",
         "play": "pnpm -C playground run dev",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "release": "bumpp package.json packages/**/package.json",
         "deploy": "pnpm -C playground run build",
         "test": "vitest",
+        "test:ci": "pnpm install && pnpm run lint && pnpm run build && pnpm run test",
         "test:update": "vitest -u",
-        "test:coverage": "vitest --coverage"
+        "test:coverage": "vitest --coverage",
+        "volar:helper": "esno scripts/volar-helper"
     },
     "devDependencies": {
         "@chris-zhu/eslint-config": "^1.0.5",
@@ -39,10 +41,13 @@
         "eslint": "8.22.0",
         "eslint-plugin-import": "^2.26.0",
         "esno": "^0.16.3",
+        "fs-extra": "^10.1.0",
         "jsdom": "^20.0.0",
+        "lint-staged": "^13.0.3",
         "onu-ui": "workspace:*",
         "rimraf": "^3.0.2",
         "sass": "^1.54.3",
+        "simple-git-hooks": "^2.8.0",
         "tsup": "^6.2.1",
         "typescript": "^4.7.4",
         "unbuild": "^0.8.9",
@@ -56,5 +61,13 @@
         "vitepress": "1.0.0-alpha.9",
         "vitest": "0.22.1",
         "vue": "^3.2.37"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "npx lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx,vue,md}": [
+            "eslint --fix"
+        ]
     }
 }

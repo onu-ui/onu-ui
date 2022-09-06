@@ -43,6 +43,6 @@ export const cardProps = {
   actions: {
     type: [Function] as PropType<INode>,
   },
-}
+} as const
 
 export type OCardProps = ExtractPropTypes<typeof cardProps>
