@@ -7,5 +7,8 @@
     "dev": "vitepress dev --port 9999 --open",
     "build": "vitepress build",
     "serve": "vitepress serve"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.1.1"
   }
 }
