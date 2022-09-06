@@ -1,3 +1,5 @@
 # Alert
 
-<demo src="../example/checkbox/basic.vue" title="Test" desc="Test" />
+<demo title="Test" desc="Test" code="test code" >
+<test></test>
+</demo>
