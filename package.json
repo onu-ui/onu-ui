@@ -58,7 +58,7 @@
         "vite-plugin-dts": "^1.4.1",
         "vite-plugin-inspect": "^0.6.0",
         "vite-plugin-vue-setup-extend": "^0.4.0",
-        "vitepress": "1.0.0-alpha.9",
+        "vitepress": "1.0.0-alpha.13",
         "vitest": "0.22.1",
         "vue": "^3.2.37"
     },

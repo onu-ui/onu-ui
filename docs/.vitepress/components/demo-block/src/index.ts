@@ -1,6 +1,18 @@
 import type { ExtractPropTypes } from 'vue'
 
 export const demoProps = {
+  github: {
+    type: String,
+    default: 'https://github.com/onu-ui/onu-ui',
+  },
+  codeSandBox: {
+    type: String,
+    default: 'https://github.com/onu-ui/onu-ui',
+  },
+  highlightedCode: {
+    type: String,
+    default: '',
+  },
   code: {
     type: String,
     default: '',
