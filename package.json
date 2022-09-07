@@ -7,6 +7,7 @@
     "scripts": {
         "dev": "pnpm run volar:helper && pnpm run stub",
         "docs": "pnpm -C docs run dev",
+        "docs:build":"pnpm -C docs run build",
         "stub": "pnpm -r --parallel -F !onu-ui -F !@onu-ui/docs run stub",
         "build": "rimraf packages/*/dist && pnpm -r -F !playground -F !@onu-ui/docs run build && pnpm run volar:helper",
         "play": "pnpm -C playground run dev",

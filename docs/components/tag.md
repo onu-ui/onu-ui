@@ -53,7 +53,7 @@ tag/theme
 
 :::
 
-## Rounded <el-tag>> 2.1.7</el-tag>
+## Rounded
 
 Tag can also be rounded like button.
 
