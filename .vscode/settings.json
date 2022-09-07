@@ -3,4 +3,5 @@
         "source.fixAll.eslint": true
     },
     "editor.formatOnSave": false,
+    "unocss.root": "./docs"
 }
