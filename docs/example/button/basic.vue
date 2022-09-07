@@ -1,6 +1,6 @@
 <template>
   <div space-y-2>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <OButton o="primary">
         Primary
       </OButton>
@@ -20,7 +20,7 @@
         Info
       </OButton>
     </div>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <OButton light o="primary">
         Primary
       </OButton>

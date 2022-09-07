@@ -25,8 +25,9 @@ export default defineConfig({
 
   shortcuts: [
     {
+      'fscw': 'flex justify-start items-center flex-wrap',
       'o-demo_wrapper':
-        'p-8 c-#282f38  border border-light-700 rounded-sm dark:bg-dark-700 dark:border-#4C4D4F',
+        'p-8 c-#282f38  border border-light-700 rounded-sm dark:bg-dark-700 dark:border-#4C4D4F flex',
       'o-demo_actions': 'flex justify-end pt-3 gap-2',
       'o-demo_action_item':
         'relative outline-none flex justify-center items-center w-7 h-7 p-0 rounded-full border border-light-900 dark:border-dark-900 bg-white dark:bg-#38383A cursor-pointer hover:bg-#E5E6EB dark:hover:bg-dark:300',

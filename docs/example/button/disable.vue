@@ -1,5 +1,5 @@
 <template>
-  <div fsc gap-2>
+  <div fscw gap-2>
     <OButton disabled o="primary">
       Disabled
     </OButton>

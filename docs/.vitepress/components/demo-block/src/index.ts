@@ -7,7 +7,7 @@ export const demoProps = {
   },
   codeSandBox: {
     type: String,
-    default: 'https://github.com/onu-ui/onu-ui',
+    default: 'https://codesandbox.io/',
   },
   highlightedCode: {
     type: String,

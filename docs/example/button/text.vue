@@ -1,5 +1,5 @@
 <template>
-  <div fsc gap-2>
+  <div fscw gap-2>
     <OButton text o="primary">
       Primary
     </OButton>

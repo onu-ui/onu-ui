@@ -1,5 +1,5 @@
 <template>
-  <div fsc gap-2>
+  <div fscw gap-2>
     <o-button :to="githubUrl" o="primary">
       <template #icon>
         <div i-carbon-logo-github />

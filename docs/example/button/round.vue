@@ -1,6 +1,6 @@
 <template>
   <div space-y-3>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <OButton o="warning" rounded="!full">
         Warning
       </OButton>
@@ -11,7 +11,7 @@
         Info
       </OButton>
     </div>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <OButton light o="warning dashed" rounded="!full">
         Warning
       </OButton>
@@ -22,7 +22,7 @@
         Info
       </OButton>
     </div>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <OButton text o="warning" rounded="!full">
         Warning
       </OButton>

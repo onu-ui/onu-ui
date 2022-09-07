@@ -1,6 +1,6 @@
 <template>
   <div space-y-2>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <o-button o="secondary">
         <template #icon>
           <div i-carbon-share />
@@ -17,7 +17,7 @@
         </template>
       </o-button>
     </div>
-    <div fsc gap-2>
+    <div fscw gap-2>
       <o-button o="secondary">
         <template #icon>
           <div i-carbon-share />
