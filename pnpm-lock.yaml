@@ -88,6 +88,7 @@ importers:
 
   docs:
     specifiers:
+      '@onu-ui/cli': workspace:*
       '@types/markdown-it': ^12.2.3
       '@vueuse/core': ^9.1.1
       markdown-it: ^13.0.1
@@ -95,6 +96,7 @@ importers:
       '@vueuse/core': 9.1.1_vue@3.2.37
       markdown-it: 13.0.1
     devDependencies:
+      '@onu-ui/cli': link:../packages/cli
       '@types/markdown-it': 12.2.3
 
   packages/cli:

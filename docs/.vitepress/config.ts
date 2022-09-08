@@ -81,6 +81,10 @@ const sidebar = {
           text: 'Alert',
           link: '/components/alert',
         },
+        {
+          text: 'Message',
+          link: '/components/message',
+        },
       ],
     },
   ],
