@@ -1,4 +1,8 @@
 <script setup lang="ts">
+// TODO to test
+import { onMounted, ref } from 'vue'
+import { useTimeoutFn } from '@vueuse/core'
+
 import OIcon from '../../icon/src/index.vue'
 import { messageEmits, messageProps } from './type'
 
@@ -53,7 +57,7 @@ function handleToClosable() {
         <p>{{ props.content }}</p>
       </div>
 
-      <div o-message-closable @click="handleToClosable">
+      <div class="o-message-closable" @click="handleToClosable">
         <div
           v-if="props.closable"
         >
