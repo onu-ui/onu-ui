@@ -1,22 +1,22 @@
 <template>
   <div fscw gap-2>
-    <OButton text o="primary">
+    <o-button text o="primary">
       Primary
-    </OButton>
-    <OButton text o="secondary">
+    </o-button>
+    <o-button text o="secondary">
       Secondary
-    </OButton>
-    <OButton o="success text">
+    </o-button>
+    <o-button o="success text">
       Success
-    </OButton>
-    <OButton text o="warning" rounded="full">
+    </o-button>
+    <o-button text o="warning" rounded="full">
       Warning
-    </OButton>
-    <OButton text o="error" rounded="full">
+    </o-button>
+    <o-button text o="error" rounded="full">
       Danger
-    </OButton>
-    <OButton text o="info" rounded="full">
+    </o-button>
+    <o-button text o="info" rounded="full">
       Info
-    </OButton>
+    </o-button>
   </div>
 </template>

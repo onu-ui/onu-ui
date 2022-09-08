@@ -11,53 +11,76 @@ Integrate information in a card container.
 
 Card includes title, content and operations.
 
-:::demo Card is made up of `header` and `body`. `header` is optional, and its content distribution depends on a named slot.
+Card is made up of `header` and `content`. `header` is optional, and its content distribution depends on a named slot.
 
-card/basic
-
-:::
+<demo src="../example/card/basic.vue"></demo>
 
 ## Simple card
 
-The header part can be omitted.
+The Card only contains content.
 
-:::demo
+<demo src="../example/card/simple.vue"></demo>
 
-card/simple
+## Only title
 
-:::
+The Card only contains title.
 
-## With images
+<demo src="../example/card/only-title.vue"></demo>
 
-Display richer content by adding some configs.
+## Bordered
 
-:::demo The `body-style` attribute defines CSS style of custom `body`. This example also uses `el-col` for layout.
+The Card can set `bordered` attribute style.
 
-card/with-images
-
-:::
+<demo src="../example/card/bordered.vue"></demo>
 
 ## Shadow
 
-You can define when to show the card shadows
+You can define `hoverable` whether hover to show the card shadows
 
-:::demo The `shadow` attribute determines when the card shadows are displayed. It can be `always`, `hover` or `never`.
+<demo src="../example/card/hoverable.vue"></demo>
 
-card/shadow
+## Descriptions
 
-:::
+You can set `description` attribute to define Card's description.
 
-## Attributes
+<demo src="../example/card/description.vue"></demo>
 
-| Attribute  | Description                                                   | Type   | Accepted Values        | Default               |
-| ---------- | ------------------------------------------------------------- | ------ | ---------------------- | --------------------- |
-| header     | title of the card. Also accepts a DOM passed by `slot#header` | string | —                      | —                     |
-| body-style | CSS style of body                                             | object | —                      | `{ padding: '20px' }` |
-| shadow     | when to show card shadows                                     | string | always / hover / never | always                |
+## Cover and Actions
 
-## Slots
+You can set `actions` Slot to define Card Action Bar , also you can set `cover` prop to show Card's cover.
+
+<demo src="../example/card/cover-action.vue"></demo>
+
+## Custome Actions
+
+<demo src="../example/card/custom-actions.vue"></demo>
+
+## comprehensive
+
+Here is the fully defined form of the card exaples.
+
+<demo src="../example/card/comprehensive.vue"></demo>
+
+## Card Attributes
+
+| Attribute   | Description                      | Type           | Accepted Values | Default |
+| ----------- | -------------------------------- | -------------- | --------------- | ------- |
+| title       | Card title                       | String         | —               |         |
+| description | Card description                 | String         | —               |         |
+| content     | Card content                     | String         | —               |         |
+| cover       | Card header's cover              | String         | —               |         |
+| size        | size of the card                 | String         | sm/md           | md      |
+| hoverable   | Whether hover show card's shadow | Boolean        | true/false      | false   |
+| bordered    | Whether show border              | Boolean        | true/false      | false   |
+| header      | customer card's header           | string / VNode | —               | —       |
+| extra       | customer card's header extra     | string / VNode | —               | —       |
+| actions     | customer card's actions bar      | string / VNode | —               | —       |
+
+## Card Slots
 
 | Name   | Description                |
 | ------ | -------------------------- |
 | —      | customize default content  |
 | header | content of the Card header |
+| extra | content of the Card extra |
+| actions | content of the Card actions |

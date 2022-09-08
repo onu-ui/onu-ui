@@ -1,16 +1,16 @@
 <template>
   <div fscw gap-2>
-    <OButton size="xs" o="primary">
+    <o-button size="xs" o="primary">
       Mini
-    </OButton>
-    <OButton size="sm" o="secondary">
+    </o-button>
+    <o-button size="sm" o="secondary">
       Small
-    </OButton>
-    <OButton size="md" o="success">
+    </o-button>
+    <o-button size="md" o="success">
       Medium
-    </OButton>
-    <OButton size="lg" o="warning">
+    </o-button>
+    <o-button size="lg" o="warning">
       Large
-    </OButton>
+    </o-button>
   </div>
 </template>

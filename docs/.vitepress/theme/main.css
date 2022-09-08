@@ -17,6 +17,7 @@
   --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1);
   /* fix contrast on gray cards: used by --vp-c-text-2 */
   /* --vp-c-text-light-2: rgba(56 56 56 / 70%); */
+  --vp-custom-title-text: #606266;
 }
 
 .dark {
@@ -28,6 +29,7 @@
   --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1);
   /* fix contrast on gray cards: check the same above (this is the default) */
   --vp-c-text-dark-2: rgba(235, 235, 235, 0.60);
+   --vp-custom-title-text: #CFD3DC;
 }
 
 .dark [img-light] {
@@ -46,7 +48,7 @@ html:not(.dark) [img-dark] {
 
 .vp-doc h1,h2,h3,h4,h5, strong,b {
   font-weight: 600;
-  color:#606266 ;
+  color: var(--vp-custom-title-text) ;
 }
 
 .VPSocialLink {
@@ -61,4 +63,8 @@ html:not(.dark) [img-dark] {
 .vp-doc th, .vp-doc td {
   padding: 6px 10px;
   border: 1px solid #8882;
+}
+
+.o-button-base{
+  color: white!important;
 }

@@ -1,9 +1,9 @@
 import * as components from '@onu-ui/components'
 import theme from 'vitepress/theme'
 import DemoBlock from '../components/demo-block'
-import 'uno.css'
-import 'onu-ui/dist/style.css'
 import './main.css'
+import 'onu-ui/dist/style.css'
+import 'uno.css'
 
 export default {
   ...theme,

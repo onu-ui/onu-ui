@@ -2,15 +2,19 @@ import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
 import { applyPlugins } from './plugins/code'
 
-const Components = [
-  { text: 'Switch', link: '/components/switch' },
-  { text: 'Checkbox', link: '/components/checkbox' },
-  { text: 'Alert', link: '/components/alert' },
+const guides = [
+  { text: 'Quick Start', link: '/guide/index' },
+  { text: 'Installation', link: '/guide/install' },
+  { text: 'Overview', link: '/guide/overview' },
+  { text: 'i18n', link: '/guide/i18n' },
+  { text: 'Theming', link: '/guide/theme' },
+  { text: 'Dark Mode', link: '/guide/dark' },
+  { text: 'Changelog', link: '/guide/changelog' },
 ]
 
 const nav = [
-  { text: 'Guide', link: '/guide/' },
-  { text: 'Components', link: '/components/installation' },
+  { text: 'Guide', link: '/guide/index' },
+  { text: 'Components', link: '/components/button' },
   {
     text: `v${version}`,
     items: [
@@ -25,8 +29,8 @@ const nav = [
 const sidebar = {
   '/guide': [
     {
-      text: 'Components',
-      items: Components,
+      text: 'Development Guide',
+      items: guides,
     },
   ],
   '/components': [
@@ -67,12 +71,15 @@ const sidebar = {
           text: 'Card',
           link: '/components/card',
         },
+        {
+          text: 'Tag',
+          link: '/components/tag',
+        },
       ],
     },
     {
       text: 'Navigation',
-      items: [
-      ],
+      items: [],
     },
     {
       text: 'Feedback',
