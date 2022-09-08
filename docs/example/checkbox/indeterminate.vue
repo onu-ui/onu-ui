@@ -8,5 +8,6 @@ const checkVal = ref(true)
     v-model="checkVal"
     indeterminate
     label="indeterminate"
+    o-primary
   />
 </template>
