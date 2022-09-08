@@ -1,12 +1,12 @@
 <template>
   <div py-4 space-y-5>
-    <TheAvatar />
+    <!-- <TheAvatar />
     <TheIcon />
-    <TheButton />
+    <TheButton /> -->
     <TheSwitch />
-    <TheCard />
+    <!-- <TheCard />
     <TheCheckbox />
     <TheAlert />
-    <TheTag />
+    <TheTag /> -->
   </div>
 </template>

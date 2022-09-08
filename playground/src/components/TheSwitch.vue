@@ -1,43 +1,37 @@
 <script lang="ts" setup>
-const switchVal = ref(false)
-const switchLoading = ref(true)
-const switchDisabled = ref(false)
-const customModel = ref('checked')
+const switchToggle = ref(true)
+const switchDisabled = ref(true)
 </script>
 
 <template>
   <OCard o-white title="Switch">
     <div space-y-2>
-      <div fsc gap-2>
-        {{ switchVal }}
-        <OSwitch v-model="switchVal" size="small" />
-        <OSwitch v-model="switchVal" size="medium" />
-        <OSwitch v-model="switchVal" size="large" />
-      </div>
-      <div fsc gap-2>
-        Loading:
-        <OSwitch v-model="switchLoading" is-loading />
-        Disabled:
-        <OSwitch v-model="switchDisabled" disabled />
-      </div>
-      <div fsc gap-2>
-        <OSwitch
-          v-model="customModel"
-          checked-value="checked"
-          un-checked-value="unchecked"
-        />
-        modelVal:{{ customModel }}
-      </div>
-      <div fsc gap-2>
-        <OSwitch v-model="switchVal">
-          <template #unchecked="_slotProps">
-            <span>unchecked</span>
-          </template>
-          <template #checked="_slotProps">
-            <span>checked</span>
-          </template>
-        </OSwitch>
-      </div>
+      <OCard title="Basic">
+        <div fsc gap-2>
+          <OSwitch background-color="#fff" :model-value="true" o="primary" />
+          <OSwitch light :model-value="true" o="success" />
+          <OSwitch :model-value="true" o="warning" />
+        </div>
+
+
+
+        b
+      </OCard>
+      <OCard title="Size">
+        <div fsc gap-2>
+          <OSwitch :model-value="true" o="primary" size="sm" />
+          <OSwitch :model-value="true" o="success" size="md" />
+          <OSwitch :model-value="true" o="warning" size="lg" />
+        </div>
+      </OCard>
+      <OCard title="Disabled">
+        <div fsc gap-2>
+          Toggle Disabled:
+          <OSwitch v-model="switchToggle" o="red" />
+          Disabled:
+          <OSwitch v-model="switchDisabled" o-primary :disabled="switchToggle" />
+        </div>
+      </OCard>
     </div>
   </OCard>
 </template>
