@@ -8,6 +8,7 @@ declare module 'vue' {
     OCard: typeof import('@onu-ui/components')['OCard']
     OCheckbox: typeof import('@onu-ui/components')['OCheckbox']
     OIcon: typeof import('@onu-ui/components')['OIcon']
+    OMessage: typeof import('@onu-ui/components')['OMessage']
     OSwitch: typeof import('@onu-ui/components')['OSwitch']
     OTag: typeof import('@onu-ui/components')['OTag']
   }

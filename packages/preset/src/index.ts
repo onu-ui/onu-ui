@@ -198,6 +198,13 @@ export function presetOnu(): Preset {
         'o-tag-disabled': 'o-disabled',
         'o-tag-rounded': 'rounded-full',
         'o-tag-close': 'ml-1.5 cursor-pointer c-context',
+
+        // message
+        'o-message-base':
+          `fixed top-5 o-solid left-1/2 translate-x--1/2 z-1000 o-transition
+           shadow-md p-3 fi rounded of-hidden `,
+        'o-message-closable': 'pa right-2 top-2 cursor-pointer',
+        'o-message-content': 'fi gap-2',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {

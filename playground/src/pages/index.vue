@@ -8,5 +8,6 @@
     <TheCheckbox />
     <TheAlert />
     <TheTag />
+    <TheMessage />
   </div>
 </template>

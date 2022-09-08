@@ -7,10 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    BaseCard: typeof import('./components/base-card.vue')['default']
     Bg: typeof import('./components/Bg.vue')['default']
-    Card: typeof import('./components/Card.vue')['default']
-    Layout: typeof import('./components/Layout.vue')['default']
     OAlert: typeof import('onu-ui')['OAlert']
     OAvatar: typeof import('onu-ui')['OAvatar']
     OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
@@ -29,6 +26,7 @@ declare module '@vue/runtime-core' {
     TheCheckbox: typeof import('./components/TheCheckbox.vue')['default']
     TheHeader: typeof import('./components/layout/TheHeader.vue')['default']
     TheIcon: typeof import('./components/TheIcon.vue')['default']
+    TheMessage: typeof import('./components/TheMessage.vue')['default']
     TheSwitch: typeof import('./components/TheSwitch.vue')['default']
     TheTag: typeof import('./components/TheTag.vue')['default']
   }

@@ -9,6 +9,7 @@ declare global {
   const OCard: typeof import('onu-ui')['OCard']
   const OCheckbox: typeof import('onu-ui')['OCheckbox']
   const OIcon: typeof import('onu-ui')['OIcon']
+  const OMessage: typeof import('onu-ui')['OMessage']
   const OSwitch: typeof import('onu-ui')['OSwitch']
   const OTag: typeof import('onu-ui')['OTag']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
@@ -278,6 +279,7 @@ declare module '@vue/runtime-core' {
     readonly OCard: UnwrapRef<typeof import('onu-ui')['OCard']>
     readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
+    readonly OMessage: UnwrapRef<typeof import('onu-ui')['OMessage']>
     readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
     readonly OTag: UnwrapRef<typeof import('onu-ui')['OTag']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
