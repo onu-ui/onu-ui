@@ -1,37 +1,37 @@
 <template>
   <div space-y-3>
     <div fscw gap-2>
-      <OButton o="warning" rounded="!full">
+      <o-button o="warning" rounded="full">
         Warning
-      </OButton>
-      <OButton o="error" rounded="!full">
+      </o-button>
+      <o-button o="error" rounded="full">
         Danger
-      </OButton>
-      <OButton o="info" rounded="!full">
+      </o-button>
+      <o-button o="info" rounded="full">
         Info
-      </OButton>
+      </o-button>
     </div>
     <div fscw gap-2>
-      <OButton light o="warning dashed" rounded="!full">
+      <o-button light o="warning dashed" rounded="full">
         Warning
-      </OButton>
-      <OButton light o="error dashed" rounded="!full">
+      </o-button>
+      <o-button light o="error dashed" rounded="full">
         Danger
-      </OButton>
-      <OButton light o="info dashed" rounded="!full">
+      </o-button>
+      <o-button light o="info dashed" rounded="full">
         Info
-      </OButton>
+      </o-button>
     </div>
     <div fscw gap-2>
-      <OButton text o="warning" rounded="!full">
+      <o-button text o="warning" rounded="full">
         Warning
-      </OButton>
-      <OButton text o="error" rounded="!full">
+      </o-button>
+      <o-button text o="error" rounded="full">
         Danger
-      </OButton>
-      <OButton text o="info" rounded="!full">
+      </o-button>
+      <o-button text o="info" rounded="full">
         Info
-      </OButton>
+      </o-button>
     </div>
   </div>
 </template>

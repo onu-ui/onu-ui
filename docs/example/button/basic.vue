@@ -1,44 +1,44 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <OButton o="primary">
+      <o-button o="primary">
         Primary
-      </OButton>
-      <OButton o="secondary">
+      </o-button>
+      <o-button o="secondary">
         Secondary
-      </OButton>
-      <OButton o="success">
+      </o-button>
+      <o-button o="success">
         Success
-      </OButton>
-      <OButton o="warning" rounded="full">
+      </o-button>
+      <o-button o="warning" rounded="full">
         Warning
-      </OButton>
-      <OButton o="error" rounded="full">
+      </o-button>
+      <o-button o="error" rounded="full">
         Danger
-      </OButton>
-      <OButton o="info" rounded="full">
+      </o-button>
+      <o-button o="info" rounded="full">
         Info
-      </OButton>
+      </o-button>
     </div>
     <div fscw gap-2>
-      <OButton light o="primary">
+      <o-button light o="primary">
         Primary
-      </OButton>
-      <OButton light o="secondary">
+      </o-button>
+      <o-button light o="secondary">
         Secondary
-      </OButton>
-      <OButton light o="success">
+      </o-button>
+      <o-button light o="success">
         Success
-      </OButton>
-      <OButton light o="warning dashed" rounded="full">
+      </o-button>
+      <o-button light o="warning dashed" rounded="full">
         Warning
-      </OButton>
-      <OButton light o="error dashed" rounded="full">
+      </o-button>
+      <o-button light o="error dashed" rounded="full">
         Danger
-      </OButton>
-      <OButton light o="info dashed" rounded="full">
+      </o-button>
+      <o-button light o="info dashed" rounded="full">
         Info
-      </OButton>
+      </o-button>
     </div>
   </div>
 </template>

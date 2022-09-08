@@ -9,66 +9,53 @@ Avatars can be used to represent people or objects. It supports images, Icons, o
 
 ## Basic Usage
 
-Use `shape` and `size` prop to set avatar's shape and size.
+Use `src` prop to set avatar's image source.
 
-:::demo
+Use `rounded` and `size` prop to set avatar's shape and size.
 
-avatar/basic
-
-:::
+<demo src="../example/avatar/basic.vue"></demo>
 
 ## Types
 
 It supports images, Icons, or characters.
 
-:::demo
+The avatar default mode is `bg` ,but if set `src` ,it will automatically change mode to `img`.
 
-avatar/types
+<demo src="../example/avatar/type.vue"></demo>
 
-:::
+## Avatar Group
+
+Use `<o-avatar-group>` to define avatars.
+
+<demo src="../example/avatar/avatar-group.vue"></demo>
 
 ## Fallback
 
-fallback when image load error.
-
-:::demo
-
-avatar/fallback
-
-:::
+TODO
 
 ## Fit Container
 
-Set how the image fit its container for an image avatar, same as [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
+TODO
 
-:::demo
 
-avatar/fit
-
-:::
-
-## Avatar API
-
-### Avatar Attributes
+## Avatar Attributes
 
 | Name      | Description                                               | Type                                                       | Default     | Required |
 | --------- | --------------------------------------------------------- | ---------------------------------------------------------- | ----------- | -------- |
-| `icon`    | representation type to icon, more info on icon component. | `string \| Component`                                      | —           | No       |
-| `size`    | avatar size.                                              | `number \| 'large' \| 'default' \| 'small'`                | `'default'` | No       |
-| `shape`   | avatar shape.                                             | `'circle' \| 'square'`                                     | `'circle'`  | No       |
+| `size`    | avatar size.                                              | `xs` / `sm` / `md` / `lg`       | `md` | No       |
+| `mode`   | avatar mode.                                             |  `bg` / `img` | `bg`       |No
 | `src`     | the source of the image for an image avatar.              | `string`                                                   | —           | No       |
-| `src-set` | native attribute `srcset` of image avatar.                | `string`                                                   | —           | No       |
-| `alt`     | native attribute `alt` of image avatar.                   | `string`                                                   | —           | No       |
-| `fit`     | set how the image fit its container for an image avatar.  | `'fill' \| 'contain' \| 'cover' \| 'none' \| 'scale-down'` | `'cover'`   | No       |
 
-### Avatar Events
 
-| Name    | Description                    | Type                 |
-| ------- | ------------------------------ | -------------------- |
-| `error` | trigger when image load error. | `(e: Event) => void` |
-
-### Avatar Slots
+## Avatar Slots
 
 | Name      | Description               |
 | --------- | ------------------------- |
 | `default` | customize avatar content. |
+
+
+## Avatar Group Attributes
+
+| Name      | Description                                               | Type                                                       | Default     | Required |
+| --------- | --------------------------------------------------------- | ---------------------------------------------------------- | ----------- | -------- |
+| `size`    | avatar size.                                              | `xs` / `sm` / `md` / `lg`       | `md` | No       |
