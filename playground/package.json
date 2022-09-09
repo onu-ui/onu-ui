@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "1.0.7",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite --port=9898 --open --host --force",

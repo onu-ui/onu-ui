@@ -1,7 +1,7 @@
-import { parseColor as _parseColor } from '@unocss/preset-mini/utils'
+import { parseColor } from '@unocss/preset-mini/utils'
 import { commonShortcuts } from './shortcuts'
 import { SwitchSizeMap } from './constants'
-import type { Preset, RuleContext } from 'unocss'
+import type { ParsedColorValue, Preset, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
 
 type SizeType = 'xs' | 'sm' | 'md' | 'lg'
@@ -38,8 +38,8 @@ export const theme: Theme = {
   },
 }
 
-export const parseColor = (body: string, _theme: Theme = theme) => {
-  return _parseColor(body, _theme)
+export function parseColors(body: string, _theme: Theme = theme): ParsedColorValue | undefined {
+  return parseColor(body, _theme)
 }
 
 export function presetOnu(): Preset {
@@ -48,7 +48,7 @@ export function presetOnu(): Preset {
     theme,
     rules: [
       [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
-        const color = _parseColor(body, theme)
+        const color = parseColor(body, theme)
         if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
           return {
             '--onu-c-context': `${color.cssColor.components.join(',')}`,
