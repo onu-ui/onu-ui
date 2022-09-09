@@ -3,6 +3,12 @@
 <h1 align="center">Onu-UI (WIP)</h1>
 <p align="center">Onu-UI for web glassmorphism components generate by UnoCSS.</p>
 </p>
+<p align="center">
+<a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
+<p align="center">
+<a href="https://onu-ui.vercel.app/">🧑‍💻 Interactive Docs <sup>Beta</sup></a> |
+<a href="https://onu.zyob.top/">🤹‍♂️ Playground</a>
+</p>
 
 ## Usage
 

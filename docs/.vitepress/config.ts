@@ -1,14 +1,20 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
+import { applyPlugins } from './plugins/code'
 
-const Components = [
-  { text: 'Switch', link: '/components/switch' },
-  { text: 'Checkbox', link: '/components/checkbox' },
+const guides = [
+  { text: 'Quick Start', link: '/guide/index' },
+  { text: 'Installation', link: '/guide/install' },
+  { text: 'Overview', link: '/guide/overview' },
+  { text: 'i18n', link: '/guide/i18n' },
+  { text: 'Theming', link: '/guide/theme' },
+  { text: 'Dark Mode', link: '/guide/dark' },
+  { text: 'Changelog', link: '/guide/changelog' },
 ]
 
 const nav = [
-  { text: 'Guide', link: '/guide/' },
-  { text: 'Components', link: '/components/installation' },
+  { text: 'Guide', link: '/guide/index' },
+  { text: 'Components', link: '/components/button' },
   {
     text: `v${version}`,
     items: [
@@ -23,14 +29,66 @@ const nav = [
 const sidebar = {
   '/guide': [
     {
-      text: 'Components',
-      items: Components,
+      text: 'Development Guide',
+      items: guides,
     },
   ],
   '/components': [
     {
-      text: 'Components',
-      items: Components,
+      text: 'Basic',
+      items: [
+        {
+          text: 'Button',
+          link: '/components/button',
+        },
+        {
+          text: 'Icon',
+          link: '/components/icon',
+        },
+      ],
+    },
+    {
+      text: 'Form',
+      items: [
+        {
+          text: 'Checkbox',
+          link: '/components/checkbox',
+        },
+        {
+          text: 'Switch',
+          link: '/components/switch',
+        },
+      ],
+    },
+    {
+      text: 'Data',
+      items: [
+        {
+          text: 'Avatar',
+          link: '/components/avatar',
+        },
+        {
+          text: 'Card',
+          link: '/components/card',
+        },
+        {
+          text: 'Tag',
+          link: '/components/tag',
+        },
+      ],
+    },
+    {
+      text: 'Navigation',
+      items: [],
+    },
+    {
+      text: 'Feedback',
+      items: [
+        {
+          text: 'Alert',
+          link: '/components/alert',
+        },
+      ],
     },
   ],
 }
@@ -40,10 +98,25 @@ export default defineConfig({
   description: 'Onu-UI for web glassmorphism components generate by UnoCSS',
   head: [
     ['meta', { property: 'og:title', content: 'Onu-UI' }],
-    ['meta', { property: 'og:description', content: 'Onu-UI for web glassmorphism components generate by UnoCSS' }],
-    ['meta', { property: 'og:url', content: 'https://github.com/onu-ui/onu-ui' }],
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content: 'Onu-UI for web glassmorphism components generate by UnoCSS',
+      },
+    ],
+    [
+      'meta',
+      { property: 'og:url', content: 'https://github.com/onu-ui/onu-ui' },
+    ],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
-    ['link', { href: 'https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap', rel: 'stylesheet' }],
+    [
+      'link',
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
   ],
   themeConfig: {
     logo: '/logo.png',
@@ -52,9 +125,7 @@ export default defineConfig({
       text: 'Suggest changes to this page',
     },
     nav,
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/onu-ui/onu-ui' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/onu-ui/onu-ui' }],
     sidebar,
     algolia: {
       appId: '',
@@ -64,6 +135,15 @@ export default defineConfig({
     footer: {
       message: 'MIT Licensed',
       copyright: 'Copyright © 2022-present Chris & Onu-UI Contributors',
+    },
+  },
+  markdown: {
+    config: (md) => {
+      applyPlugins(md)
+    },
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
     },
   },
 })
