@@ -14,27 +14,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+
       - name: Set node
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          registry-url: 'https://registry.npmjs.org'
+          cache: pnpm
 
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2.2.1
-        with:
-          version: 7.4.0
+      - name: Setup
+        run: npm i -g @antfu/ni
 
       - name: Install
-        run: pnpm install --no-frozen-lockfile
+        run: nci
 
       - name: Lint
-        run: pnpm run lint
+        run: nr lint
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
+
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
 
       - name: Build
-        run: pnpm run build
+        run: nr build
 
       - name: Test
-        run: pnpm run test
+        run: nr test
