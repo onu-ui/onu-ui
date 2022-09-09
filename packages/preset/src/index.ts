@@ -1,70 +1,72 @@
 import { parseColor } from '@unocss/preset-mini/utils'
 import { commonShortcuts } from './shortcuts'
-import type { Preset, RuleContext } from 'unocss'
+import { SwitchSizeMap } from './constants'
+import type { ParsedColorValue, Preset, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
 
 type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 
+export const theme: Theme = {
+  colors: {
+    context: 'rgba(var(--onu-c-context),%alpha)',
+    primary: '#a855f7',
+    secondary: '#1ABCFE',
+    success: '#0ACF83',
+    warning: '#FF9F43',
+    error: '#FF5C5C',
+    info: '#373e47',
+    placeholder: '#dcdcdc',
+  },
+  fontFamily: {
+    sans: 'Avenir, Helvetica, Arial, sans-serif',
+  },
+  boxShadow: {
+    xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
+    switch: 'calc(var(--o-switch-offset) * -1) 0 0 2px var(--o-switch-bc) inset, 0 0 0 2px var(--o-switch-bc) inset;',
+    switchActive: 'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-c) inset, 0 0 0 2px var(--o-switch-c) inset;',
+  },
+  animation: {
+    keyframes: {
+      switching: `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
+        60%{ box-shadow: 0 0 0 4px #1890ff33; }
+        80%{ box-shadow: 0 0 0 6px #1890ff1a; }
+        100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
+    },
+    durations: {
+      switching: '0.3s',
+    },
+  },
+}
+
+export function parseColors(body: string, _theme: Theme = theme): ParsedColorValue | undefined {
+  return parseColor(body, _theme)
+}
+
 export function presetOnu(): Preset {
   return {
     name: '@onu-ui/preset',
-    theme: {
-      colors: {
-        context: 'rgba(var(--onu-c-context),%alpha)',
-        primary: '#a855f7',
-        secondary: '#1ABCFE',
-        success: '#0ACF83',
-        warning: '#FF9F43',
-        error: '#FF5C5C',
-        info: '#373e47',
-        placeholder: '#dcdcdc',
-      },
-      fontFamily: {
-        sans: 'Avenir, Helvetica, Arial, sans-serif',
-      },
-      boxShadow: {
-        xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
-      },
-      animation: {
-        keyframes: {
-          switching: `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
-            60%{ box-shadow: 0 0 0 4px #1890ff33; }
-            80%{ box-shadow: 0 0 0 6px #1890ff1a; }
-            100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
-        },
-        durations: {
-          switching: '0.3s',
-        },
-      },
-    },
+    theme,
     rules: [
-      [
-        /^o-(.*)$/,
-        ([, body]: string[], { theme }: RuleContext<Theme>) => {
-          const color = parseColor(body, theme)
-          if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
-            return {
-              '--onu-c-context': `${color.cssColor.components.join(',')}`,
-            }
+      [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
+        const color = parseColor(body, theme)
+        if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
+          return {
+            '--onu-c-context': `${color.cssColor.components.join(',')}`,
           }
-        },
-      ],
+        }
+      }],
+      [/^o-switch-(.+)$/, ([, s]: string[]) => {
+        if (['sm', 'md', 'lg'].includes(s)) {
+          return {
+            '--o-switch-offset': SwitchSizeMap[s][2],
+            'width': SwitchSizeMap[s][0],
+            'height': SwitchSizeMap[s][1],
+          }
+        }
+      }],
       ['o-dashed', { 'border-style': 'dashed' }],
-      [
-        'o-solid',
-        {
-          'background-color': 'rgba(var(--onu-c-context), 1) !important',
-          'border-color': 'rgba(var(--onu-c-context), 1)',
-          'color': 'white !important',
-        },
-      ],
-      [
-        'o-disabled',
-        {
-          opacity: 0.4,
-          cursor: 'not-allowed',
-        },
-      ],
+      ['o-solid', { 'background-color': 'rgba(var(--onu-c-context), 1) !important', 'border-color': 'rgba(var(--onu-c-context), 1)', 'color': 'white !important' }],
+      ['o-disabled', { opacity: 0.4, cursor: 'not-allowed !important' }],
     ],
     variants: [
       (input: string) => {
@@ -131,8 +133,8 @@ export function presetOnu(): Preset {
         'o-avatar-group-base': 'flex space-x--4 children-relative',
 
         // card
-        'o-card-bg': 'bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg',
-        'o-card-base': 'o-transition list-none relative rounded-md c-context w-full of-hidden',
+        'o-card-bg': 'bg-gradient-linear bg-gradient-from-rgba(255, 255, 255, 0.2) bg-gradient-to-rgba(255, 255, 255, 0.035) backdrop-blur-lg',
+        'o-card-base': 'o-card-bg o-transition list-none relative rounded-md c-context w-full of-hidden',
         'o-card': 'o-card-base h-fit',
         'o-card-md': 'rounded-md shadow-md text-sm',
         'o-card-sm': 'rounded-sm shadow-sm text-xs',
@@ -151,22 +153,12 @@ export function presetOnu(): Preset {
         'o-icon-base': 'c-context text-md',
 
         // switch
-        'o-switch': '!animate-count-1 relative flex rounded-999px cursor-pointer items-center bg-context',
-        'o-switch-size-small': 'w-min h-1em leading-1em min-w-1.6em',
-        'o-switch-size-medium': 'w-min h-1.4em leading-1.4em min-w-2.2em',
-        'o-switch-size-large': 'w-min h-1.8em leading-1.8em min-w-3em',
-        'o-switch-circle': 'fcc rounded-999px bg-white',
-        'o-switch-size-small-circle': 'h-0.75em w-0.75em',
-        'o-switch-size-medium-circle': 'h-1em w-1em',
-        'o-switch-size-large-circle': 'h-1.45em w-1.45em',
-        'o-switch-uncheck-circle': 'absolute mr-0.1em left-0.1em',
-        'o-switch-check-circle': 'absolute ml-0.1em right-0.1em',
-        'o-switch-small-slot-check': 'ml-0.25em mr-1em',
-        'o-switch-medium-slot-check': 'ml-0.25em mr-1.25em',
-        'o-switch-large-slot-check': 'ml-0.25em mr-1.5em',
-        'o-switch-small-slot-uncheck': 'mr-0.25em ml-1em',
-        'o-switch-medium-slot-uncheck': 'mr-0.25em ml-1.25em',
-        'o-switch-large-slot-uncheck': 'mr-0.25em ml-1.5em',
+        // 'o-switch-base': 'b-(~ gray:50) bg-gray:50',
+        'o-switch-base': 'b-(~ $o-switch-bc) bg-$o-switch-dot',
+        'o-switch-base-active': 'checked-(b-context bg-$o-switch-dot-active)',
+        'o-switch-shadow': 'shadow-switch checked-shadow-switchActive',
+        'o-switch': 'o-switch-base o-switch-base-active o-switch-shadow appearance-none cursor-pointer flex-shrink-0 o-transition duration-300 rounded-full',
+        'o-switch-disabled': 'o-disabled',
 
         // checkbox
         'o-checkbox-base': 'fsc gap-1 inline-flex cursor-pointer',

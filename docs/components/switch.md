@@ -1,97 +1,59 @@
 ---
-title: o-switch
+title: Switch
 lang: en-US
 ---
 
 # Switch
 
-## 介绍
+Commonly used toggle switch.
 
-Mutually exclusive operation controls, users can turn on or turn off a certain function.
+## Basic usage
 
+Use o variants to determine component colors.
 
-## 演示
+<demo src="../example/switch/basic.vue"></demo>
 
-### 基本使用
+## Light style
 
-:::demo 内置了三种尺寸，通过 `size` 设置
+If you want to use plain style, just use set `light` attribute to `true`.
 
-switch/basic
+<demo src="../example/switch/light.vue"></demo>
 
-:::
+## Custom dot color
 
-### 禁用
+Don't like the theme color? Provides you with the greatest possible custom color.
 
-:::demo `disabled` 可以直接禁用
+You can set `o` variant to active color. And set `background-color` attribute to unactive color.
 
-switch/disabled
+<demo src="../example/switch/customColor.vue"></demo>
 
-:::
+## Sizes
 
+Besides default size, Switch component provides three additional sizes for you to choose among different scenarios.
 
-### 载入状态的开关
-:::warning
+Use attribute `size` to set additional sizes with `sm`,`md`,`lg`.
 
-注意：传入 `isLoading` 后，该 `Switch` 会变成禁用
+<demo src="../example/switch/size.vue"></demo>
 
-:::
+## Disabled
 
-:::demo 通过 `isLoading` 来把它变成载入
+The `disabled` attribute determines if the switch is disabled.
 
-switch/loading
+Use `disabled` attribute to determine whether a switch is disabled. It accepts a `Boolean` value.
 
-:::
+<demo src="../example/switch/disabled.vue"></demo>
 
-### 自定义开启与关闭状态
+## Icon Slots
 
-:::demo 自定义的开启 `checkedValue` 与关闭 `unCheckedValue`
+TODO
 
-switch/status
+## Switch Attributes
 
-:::
-
-### 自定义开启与关闭状态渲染内容
-
-:::demo 你也可以通过插槽去实现 `checked` 与 `unchecked` 的渲染内容
-
-switch/render
-
-:::
-
-
-
-## Props
-
-### switch-props
-
-| 名称             | 类别                           | 默认值     | 说明                                |
-|----------------|--------------------------------|-----------|-----------------------------------|
-| modelValue     | `Boolean / String / Number`    | `-`       | 绑定值                               |
-| size           | `String`                       | `default` | 尺寸 `'small' / 'default'/ 'large'` |
-| disabled       | `Boolean`                      | `false`   | 禁用                                |
-| isLoading       | `Boolean`                     | `false`   | 载入                                |
-| checkedValue   | `Boolean / String / Number`    | `-`       | 指定开启时的值                           |
-| unCheckedValue | `Boolean / String / Number`    | `-`       | 指定关闭时的值                           |
-
-
-## Emits
-
-### switch-emit
-
-| 名称             | 参数                                                                                                                 | 说明               |
-|----------------|--------------------------------------------------------------------------------------------------------------------|------------------|
-| change         | 参数是变化前后的值 `IChangeData = {newVal:Boolean / String / Number,oldVal:Boolean / String / Number}`参数是变化前后的值  | 绑定值变化时的事件        |
-| click          | 事件对象 `event`                                                                                                       | 点击 `switch` 时的事件 |
-
-
-## Slots
-
-### switch-slot
-
-| 名称        | 说明                    |  
-|-----------|-----------------------|
-| checked   | 指定开启时的渲染内容插槽  |
-| unchecked | 指定关闭时的渲染内容插槽  |
-
-
+| Attribute         | Description                               | Type         | Accepted Values       | Default                  |
+| ----------------- | ----------------------------------------- | ------------ | --------------------- | ------------------------ |
+| size              | switch size                               | string       | `sm` `md` `lg`        | `md`      |
+| o                 | switch type                               | string       | `primary`  `secondary`  `success`  `warning`  `error`  `info`  | —  |
+| light             | determine whether it's a light switch     | boolean      | —                     | `false`                  |
+| background-color  | custom the switch dot or background color | string       | —                     |   —                      |
+| disabled          | disable the switch                        | boolean      | —                     | `false`                  |
 
