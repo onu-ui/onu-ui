@@ -1,6 +1,5 @@
 
 <script lang="ts" setup name="O-Switch">
-import { parseColor } from '@onu-ui/preset'
 import { switchProps } from './props'
 
 const props = defineProps(switchProps)
@@ -10,19 +9,15 @@ const emits = defineEmits(['update:modelValue', 'change'])
 const mv = useVModel(props, 'modelValue', emits)
 
 const style: Record<string, string | undefined> = {
-  '--o-switch-dot': props.light ? 'rgb(var(--onu-c-context))' : '#fff',
-  '--o-switch-c': 'rgb(var(--onu-c-context))',
-  '--o-switch-bc': props.light ? 'rgb(var(--onu-c-context))' : props.backgroundColor,
+  '--o-switch-dot': props.light ? props.backgroundColor : '#fff', // dot
+  '--o-switch-dot-active': props.light ? 'rgb(var(--onu-c-context))' : '#fff', // dot-active
+  '--o-switch-c': props.light ? '#fff' : 'rgb(var(--onu-c-context))', // shadow
+  '--o-switch-bc': props.light ? '#fff' : props.backgroundColor, // bg
 }
-// if (props.light) {
-//   // Invert colors
-//   const color = parseColor(props.backgroundColor, {})
-//   if (color?.cssColor?.type === 'rgb' && color.cssColor.components)
-//     style['--onu-c-context'] = `${color.cssColor.components.join(',')}`
-// }
 </script>
 
 <template>
+  <!-- Maybe this is not a good implementation, try to refactor it -->
   <input
     v-model="mv"
     :style="style"
