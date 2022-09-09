@@ -24,14 +24,11 @@ jobs:
           node-version: 16.x
           cache: pnpm
 
-      - name: Setup
-        run: npm i -g @antfu/ni
-
       - name: Install
-        run: nci --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Lint
-        run: nr lint
+        run: pnpm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -48,14 +45,11 @@ jobs:
           node-version: 16.x
           cache: pnpm
 
-      - name: Setup
-        run: npm i -g @antfu/ni
-
       - name: Install
-        run: nci --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build
-        run: nr build
+        run: pnpm run build
 
       - name: Test
-        run: nr test
+        run: pnpm run test
