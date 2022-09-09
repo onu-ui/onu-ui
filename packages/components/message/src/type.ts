@@ -2,7 +2,7 @@ import type { ComponentInternalInstance, ExtractPropTypes, PropType } from 'vue'
 import type { ThemeType } from '../../types'
 
 export const messageDefaults = {
-  type: '',
+  type: 'primary',
   content: '',
   closable: false,
   duration: 3000,

@@ -70,7 +70,7 @@ const handleClick = () => {
           disabled
         </o-tag>
       </div>
-      <div fsc gap-2>
+      <div fsc gap-2 flex-wrap>
         <o-tag o="secondary" closable @close="handleClose" @click="handleClick">
           closable
         </o-tag>

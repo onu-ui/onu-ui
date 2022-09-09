@@ -36,9 +36,9 @@ function handleDurationClick() {
 </script>
 
 <template>
-  <o-card title="Message">
-    <div space-y-2 gap-2>
-      <div fsc gap-2>
+  <o-card title="Message" o="white">
+    <div space-y-2>
+      <div fsc gap-2 flex-wrap>
         <o-button o="primary" @click="handleToClickTheme('primary')">
           primary message
         </o-button>
@@ -58,7 +58,7 @@ function handleDurationClick() {
           error message
         </o-button>
       </div>
-      <div fsc gap-2>
+      <div fsc gap-2 flex-wrap>
         <o-button o="primary" @click="handleBasicClick('basic message')">
           show basic message
         </o-button>
