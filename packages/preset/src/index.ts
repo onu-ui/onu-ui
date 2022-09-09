@@ -1,4 +1,4 @@
-import { parseColor } from '@unocss/preset-mini/utils'
+import { parseColor as _parseColor } from '@unocss/preset-mini/utils'
 import { commonShortcuts } from './shortcuts'
 import { SwitchSizeMap } from './constants'
 import type { Preset, RuleContext } from 'unocss'
@@ -6,43 +6,49 @@ import type { Theme } from '@unocss/preset-uno'
 
 type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 
+export const theme: Theme = {
+  colors: {
+    context: 'rgba(var(--onu-c-context),%alpha)',
+    primary: '#a855f7',
+    secondary: '#1ABCFE',
+    success: '#0ACF83',
+    warning: '#FF9F43',
+    error: '#FF5C5C',
+    info: '#373e47',
+    placeholder: '#dcdcdc',
+  },
+  fontFamily: {
+    sans: 'Avenir, Helvetica, Arial, sans-serif',
+  },
+  boxShadow: {
+    xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
+    switch: 'calc(var(--o-switch-offset) * -1) 0 0 2px var(--o-switch-bc,#fefefe) inset, 0 0 0 2px var(--o-switch-bc,#fefefe) inset;',
+    switchActive: 'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-bc,#fefefe) inset, 0 0 0 2px var(--o-switch-bc,#fefefe) inset;',
+  },
+  animation: {
+    keyframes: {
+      switching: `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
+        60%{ box-shadow: 0 0 0 4px #1890ff33; }
+        80%{ box-shadow: 0 0 0 6px #1890ff1a; }
+        100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
+    },
+    durations: {
+      switching: '0.3s',
+    },
+  },
+}
+
+export const parseColor = (body: string, _theme: Theme = theme) => {
+  return _parseColor(body, _theme)
+}
+
 export function presetOnu(): Preset {
   return {
     name: '@onu-ui/preset',
-    theme: {
-      colors: {
-        context: 'rgba(var(--onu-c-context),%alpha)',
-        primary: '#a855f7',
-        secondary: '#1ABCFE',
-        success: '#0ACF83',
-        warning: '#FF9F43',
-        error: '#FF5C5C',
-        info: '#373e47',
-        placeholder: '#dcdcdc',
-      },
-      fontFamily: {
-        sans: 'Avenir, Helvetica, Arial, sans-serif',
-      },
-      boxShadow: {
-        xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
-        switch: 'calc(var(--o-switch-offset) * -1) 0 0 2px var(--o-switch-bc,#fefefe) inset, 0 0 0 2px var(--o-switch-bc,#fefefe) inset;',
-        switchActive: 'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-bc,#fefefe) inset, 0 0 0 2px var(--o-switch-bc,#fefefe) inset;',
-      },
-      animation: {
-        keyframes: {
-          switching: `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
-            60%{ box-shadow: 0 0 0 4px #1890ff33; }
-            80%{ box-shadow: 0 0 0 6px #1890ff1a; }
-            100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
-        },
-        durations: {
-          switching: '0.3s',
-        },
-      },
-    },
+    theme,
     rules: [
       [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
-        const color = parseColor(body, theme)
+        const color = _parseColor(body, theme)
         if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
           return {
             '--onu-c-context': `${color.cssColor.components.join(',')}`,
