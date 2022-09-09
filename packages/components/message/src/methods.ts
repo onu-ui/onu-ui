@@ -14,10 +14,11 @@ import type {
 } from './type'
 
 let key = 1
-// cur message instance
-let curInstance: MessageContext | null = null
+// message instances
+let preInstance: MessageContext | null = null
 
 const createMessage = (options: OMessageProps) => {
+  closeMessage(preInstance)
   const id = `message_${key++}`
   const container = document.createElement('div')
   const userOnClose = options.onClose
@@ -26,11 +27,11 @@ const createMessage = (options: OMessageProps) => {
     id,
     onClose: () => {
       userOnClose?.()
-      closeMessage(curInstance as MessageContext)
+      closeMessage(preInstance)
+      preInstance = null
     },
     onDestroy: () => {
       render(null, container)
-      curInstance = null
     },
   }
   const vnode = createVNode(MessageConstructor, props, null)
@@ -40,6 +41,7 @@ const createMessage = (options: OMessageProps) => {
     if (typeof Element === 'undefined' || !(appendTo instanceof Element))
       throw new Error('appendTo must be a valid Element String')
   }
+
   render(vnode, container)
   const vm = vnode.component!
   appendTo.appendChild(container.firstElementChild!)
@@ -51,12 +53,14 @@ const createMessage = (options: OMessageProps) => {
   }
   const instance: MessageContext = {
     handler,
+    props: (vnode.component as any).props,
+    vm,
   }
-  curInstance = instance
+  preInstance = instance
   return instance
 }
 
-function closeMessage(instance: MessageContext) {
+function closeMessage(instance: MessageContext | null) {
   instance && instance.handler.close()
 }
 

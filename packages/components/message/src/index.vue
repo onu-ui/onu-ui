@@ -36,6 +36,15 @@ defineExpose({
 function handleToClosable() {
   close()
 }
+
+const iconTypeMap = {
+  primary: 'o-message-icon-primary',
+  secondary: 'o-message-icon-secondary',
+  success: 'o-message-icon-success',
+  warning: 'o-message-icon-warning',
+  error: 'o-message-icon-error',
+  info: 'o-message-icon-info',
+}
 </script>
 
 <template>
@@ -48,12 +57,14 @@ function handleToClosable() {
     <div
       v-show="visible"
       o-message-base
-      :class="[props.closable ? 'pr-7' : '']"
     >
       <div
         o-message-content
       >
-        <o-icon :name="props.icon" class="!text-white" />
+        <o-icon
+          :name="props.icon ?? iconTypeMap[props.type]"
+          class="!text-white"
+        />
         <p>{{ props.content }}</p>
       </div>
 
@@ -61,7 +72,7 @@ function handleToClosable() {
         <div
           v-if="props.closable"
         >
-          <o-icon name="i-carbon-close" class="!text-white" />
+          <o-icon name="i-carbon-close" class="!text-white text-xl" />
         </div>
       </div>
     </div>

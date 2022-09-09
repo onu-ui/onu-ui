@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { OMessage as message } from 'onu-ui'
-let handlerPre
 function handleToClickBasic(theme:string, icon:string) {
-  handlerPre && handlerPre.close()
-  handlerPre = message[theme]({
+  message[theme]({
     content: 'this is basic content',
     closable: true,
     icon,

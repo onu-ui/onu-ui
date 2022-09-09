@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ComponentInternalInstance, ExtractPropTypes, PropType } from 'vue'
 import type { ThemeType } from '../../types'
 
 export const messageDefaults = {
@@ -8,7 +8,7 @@ export const messageDefaults = {
   duration: 3000,
   appendTo: 'body',
   onClose: undefined,
-  icon: '',
+  icon: null,
 } as const
 
 export const messageProps = {
@@ -73,4 +73,6 @@ export interface Message {
 
 export interface MessageContext {
   handler: MessageHandler
+  props: OMessageProps
+  vm: ComponentInternalInstance
 }
