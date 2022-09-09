@@ -5,6 +5,7 @@ import type { ParsedColorValue, Preset, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
 
 type SizeType = 'xs' | 'sm' | 'md' | 'lg'
+type ThemeType = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'
 
 export const theme: Theme = {
   colors: {
@@ -190,6 +191,13 @@ export function presetOnu(): Preset {
         'o-tag-disabled': 'o-disabled',
         'o-tag-rounded': 'rounded-full',
         'o-tag-close': 'ml-1.5 cursor-pointer c-context',
+
+        // message
+        'o-message-base':
+          `fixed top-5 o-solid left-1/2 translate-x--1/2 z-1000 o-transition
+           shadow-md p3 fi rounded of-hidden gap-3`,
+        'o-message-closable': 'cursor-pointer',
+        'o-message-content': 'fi gap-2',
       },
       [/^o-avatar-group-(.*)$/, ([,s]) => {
         if (['xs', 'sm', 'md', 'lg'].includes(s)) {
@@ -207,6 +215,21 @@ export function presetOnu(): Preset {
             lg: 'space-x--6',
           }
           return `important-${avatarGroupSpaceMap[size]} ${avatarSizeMap[size].split(' ').map(selector => `important-children-${selector}`).join(' ')}`
+        }
+      }],
+      [/^o-message-icon-(.*)$/, ([,s]) => {
+        const iconType = s as ThemeType
+        const themeType = ['primary', 'secondary', 'success', 'warning', 'error', 'info']
+        if (themeType.includes(iconType)) {
+          const iconThemeMap: Record<ThemeType, string> = {
+            primary: 'i-carbon-stop-sign',
+            secondary: 'i-carbon-software-resource',
+            success: 'i-carbon-checkmark-outline',
+            warning: 'i-carbon-warning-alt',
+            error: 'i-carbon-close-outline',
+            info: 'i-carbon-information',
+          }
+          return `${iconThemeMap[iconType]}`
         }
       }],
     ],

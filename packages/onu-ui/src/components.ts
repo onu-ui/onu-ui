@@ -1,4 +1,4 @@
-import { OAlert, OAvatar, OAvatarGroup, OButton, OCard, OIcon, OTag } from '@onu-ui/components'
+import { OAlert, OAvatar, OAvatarGroup, OButton, OCard, OIcon, OMessage, OTag } from '@onu-ui/components'
 
 import type { Plugin } from 'vue'
 
@@ -10,4 +10,5 @@ export default [
   OCard,
   OAlert,
   OTag,
+  OMessage,
 ] as Plugin[]
