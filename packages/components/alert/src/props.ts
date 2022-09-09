@@ -1,6 +1,12 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ThemeType } from './../../types'
+import type { ExtractPropTypes, PropType } from 'vue'
 
 export const alertProps = {
+  /** theme */
+  o: {
+    type: String as PropType<ThemeType>,
+    default: 'primary',
+  },
   /** 标题 */
   title: {
     type: String,
@@ -22,7 +28,7 @@ export const alertProps = {
     default: '',
   },
   /** 是否可关闭 */
-  closeable: {
+  closable: {
     type: Boolean,
     default: false,
   },
@@ -36,7 +42,7 @@ export const alertProps = {
     type: Boolean,
     default: false,
   },
-}
+} as const
 
 export const alertEmits = {
   close: (evt: MouseEvent) => evt instanceof MouseEvent,

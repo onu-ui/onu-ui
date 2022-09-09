@@ -15,7 +15,7 @@ const bodyCls = computed(() => {
   if (props.bordered) {
     cls.push('pt-4')
     if (needRenderHeader.value)
-      cls.push('b-t b-context:50')
+      cls.push('b-t border-light-700 dark:border-#4C4D4F')
   }
   return cls
 })

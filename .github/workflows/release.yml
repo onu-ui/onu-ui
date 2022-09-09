@@ -10,18 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
       - name: Set node
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2.2.1
-        with:
-          version: 7.4.0
+          cache: pnpm
 
       - run: npx changelogithub
         env:
@@ -32,6 +29,9 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Test
+        run: pnpm run test
 
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks

@@ -14,36 +14,25 @@ A group of options for multiple choices.
 
 ### Basic usage
 
-:::demo `v-model` binding value
-
-checkbox/basic
-
-:::
+`v-model` binding value
+<demo src="../example/checkbox/basic.vue"></demo>
 
 ### Disabled
 
-:::demo Disabled state for checkbox.
-
-checkbox/disabled
-
-:::
+Disabled state for checkbox.
+<demo src="../example/checkbox/disabled.vue"></demo>
 
 
 ### Indeterminate
 
-:::demo The indeterminate checked state of checkbox
-
-checkbox/indeterminate
-
-:::
+The indeterminate checked state of checkbox
+<demo src="../example/checkbox/indeterminate.vue"></demo>
 
 ### Custom check value
 
-:::demo `true-label` and `false-label` can set custom check value
+`true-label` and `false-label` can set custom check value
 
-checkbox/custom-label
-
-:::
+<demo src="../example/checkbox/custom-label.vue"></demo>
 
 
 

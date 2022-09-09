@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 const title = 'With Title'
+const handleClose = () => {
+  // eslint-disable-next-line no-console
+  console.log('click the close icon')
+}
 </script>
 
 <template>
@@ -40,10 +44,10 @@ const title = 'With Title'
       <o-alert o="info" :description="content" light />
       <o-alert o="primary" :description="content" :title="title" />
       <o-alert o="primary" :description="content" title="Center title and description" center />
-      <o-alert o="primary" :description="content" :title="title" closeable />
-      <o-alert o="primary" :description="content" :title="title + ' and Close Text'" closeable close-text="close" />
-      <o-alert o="primary" :description="content" :title="title + ' and Icon'" closeable icon="i-carbon-logo-github" />
-      <o-alert o="primary" title="Custom title and close" :description="content" closeable>
+      <o-alert o="primary" :description="content" :title="title" closable />
+      <o-alert o="primary" :description="content" :title="title + ' and Close Text'" closable close-text="close" />
+      <o-alert o="primary" :description="content" :title="title + ' and Icon'" closable icon="i-carbon-logo-github" />
+      <o-alert o="primary" title="Custom title and close" :description="content" closable @close="handleClose">
         <template #icon>
           <o-icon name="i-fluent-emoji-astonished-face" text-6 />
         </template>

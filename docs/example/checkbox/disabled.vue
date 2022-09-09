@@ -8,5 +8,6 @@ const checkVal = ref(true)
     v-model="checkVal"
     disabled
     label="disabled"
+    o-primary
   />
 </template>
