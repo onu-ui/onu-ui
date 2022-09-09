@@ -53,7 +53,7 @@ TODO
 | ----------------- | ----------------------------------------- | ------------ | --------------------- | ------------------------ |
 | size              | switch size                               | string       | `sm` `md` `lg`        | `md`      |
 | o                 | switch type                               | string       | `primary`  `secondary`  `success`  `warning`  `error`  `info`  | —  |
-| light             | determine whether it's a light switch     | boolean      | —                     | `false`                    |
+| light             | determine whether it's a light switch     | boolean      | —                     | `false`                  |
 | background-color  | custom the switch dot or background color | string       | —                     |   —                      |
-| disabled          | disable the switch                        | boolean      | —                     | `false`                    |
+| disabled          | disable the switch                        | boolean      | —                     | `false`                  |
 
