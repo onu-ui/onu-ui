@@ -8,12 +8,12 @@ const switchDisabled = ref(true)
     <div space-y-2>
       <OCard title="Basic">
         <div fsc gap-2>
-          <OSwitch background-color="#fff" :model-value="true" o="primary" />
-          <OSwitch light :model-value="true" o="success" />
+          <OSwitch :model-value="false" o="primary" />
+          <OSwitch :model-value="true" o="primary" />
+          <OSwitch light :model-value="true" o="primary" />
+          <OSwitch background-color="red" :model-value="true" o="success" />
           <OSwitch :model-value="true" o="warning" />
         </div>
-
-
 
         b
       </OCard>

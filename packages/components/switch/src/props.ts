@@ -17,7 +17,7 @@ export const switchProps = {
   },
   backgroundColor: {
     type: String,
-    default: '#fff',
+    default: '#dbdbdb',
   },
   light: {
     type: Boolean,

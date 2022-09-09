@@ -22,8 +22,8 @@ export const theme: Theme = {
   },
   boxShadow: {
     xs: 'var(--un-shadow-inset) 0 1px 1px 0 var(--un-shadow-color, rgba(0,0,0,0.03))',
-    switch: 'calc(var(--o-switch-offset) * -1) 0 0 2px var(--o-switch-bc,#fefefe) inset, 0 0 0 2px var(--o-switch-bc,#fefefe) inset;',
-    switchActive: 'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-bc,#fefefe) inset, 0 0 0 2px var(--o-switch-bc,#fefefe) inset;',
+    switch: 'calc(var(--o-switch-offset) * -1) 0 0 2px var(--o-switch-bc) inset, 0 0 0 2px var(--o-switch-bc) inset;',
+    switchActive: 'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-c) inset, 0 0 0 2px var(--o-switch-c) inset;',
   },
   animation: {
     keyframes: {
@@ -153,8 +153,9 @@ export function presetOnu(): Preset {
         'o-icon-base': 'c-context text-md',
 
         // switch
-        'o-switch-base': 'b-(~ gray-3:50) bg-gray-3:50',
-        'o-switch-base-active': 'checked-(b-context bg-context)',
+        // 'o-switch-base': 'b-(~ gray:50) bg-gray:50',
+        'o-switch-base': 'b-(~ $o-switch-bc) bg-$o-switch-dot',
+        'o-switch-base-active': 'checked-(b-context bg-bg-$o-switch-dot)',
         'o-switch-shadow': 'shadow-switch checked-shadow-switchActive',
         'o-switch': 'o-switch-base o-switch-base-active o-switch-shadow appearance-none cursor-pointer flex-shrink-0 o-transition duration-300 rounded-full',
         'o-switch-disabled': 'o-disabled',
