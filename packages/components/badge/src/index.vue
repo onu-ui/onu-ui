@@ -3,44 +3,28 @@ import { isNumber } from '@onu-ui/utils'
 
 interface IBadgeProps {
   max: number
-  content: string | number
-  disabled?: boolean
+  value: string | number
+  showZero?: boolean
   dot: boolean
-  o: 'success' | 'warning' | 'error' | 'info' | 'primary' | 'secondary',
 }
 
 const props = withDefaults(defineProps<IBadgeProps>(), {
-  content: '',
-  disabled: false,
+  value: '',
+  showZero: false,
   dot: false,
   max: 99,
-  o: 'error',
 })
 
-const contentInner = ref<string | number>('')
-watch(() => props.content, (nVal) => {
-  if (nVal) {
-    if (isNumber(props.content) && props.content > props.max)
-      contentInner.value = `${props.max}+`
-    else if (props.dot)
-      contentInner.value = ''
-    else
-      contentInner.value = props.content
-  }
-}, {
-  immediate: true,
-})
+const resolveValue = computed(() => props.dot ? '' : isNumber(props.value) && props.value > props.max ? `${props.max}+` : props.value)
 </script>
 
 <template>
-  <div
-    class="o-badge"
-  >
+  <span class="o-badge" o-error v-bind="$attrs">
     <slot />
     <sup
-      v-if="!disabled"
-      :o="o"
-      :class="`o-badge-sup o-badge-sup-fixed ${dot ? 'o-badge-sup-dot' : ''}`"
-    >{{ contentInner }}</sup>
-  </div>
+      v-if="resolveValue !== 0 || showZero"
+      class="o-badge-sup o-badge-sup-fixed"
+      :class="dot && 'o-badge-sup-dot'"
+    >{{ resolveValue }}</sup>
+  </span>
 </template>

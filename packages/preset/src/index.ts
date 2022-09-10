@@ -175,13 +175,13 @@ export function presetOnu(): Preset {
         'o-alert-title': 'flex-1 text-sm font-600',
         'o-alert-close': 'text-md cursor-pointer pa top-3 right-3 fcc',
         'o-alert-icon': 'fi pr-5',
+        'o-alert-description': 'flex break-all items-center text-sm',
 
         // Badge
-        'o-badge': 'relative inline-block align-middle',
-        'o-badge-sup': 'h-4 leading-4 whitespace-nowrap inline-flex items-center justify-center bg-context rounded-4 px-1 z-1',
-        'o-badge-sup-fixed': 'absolute top-0 right-4 transform -translate-y-1/2 translate-full',
-        'o-badge-sup-dot': '!h-2 w-2 right-1 rounded-999px',
-        'o-alert-description': 'flex break-all items-center text-sm',
+        'o-badge': 'pr inline-block align-middle',
+        'o-badge-sup': 'bg-context text-xs min-w-4.5 h-4.5 leading-4.5 whitespace-nowrap fcc inline-flex rounded-full px-1 z-1',
+        'o-badge-sup-fixed': 'pa top-0 right-0 translate-x-[calc(50%-1px)] translate-y-[calc(-50%+1px)]',
+        'o-badge-sup-dot': '!min-w-auto !h-2 !w-2 rounded-full',
 
         // tag
         'o-tag-base': 'fcc gap-1 rounded inline-flex box-border !outline-none c-context o-solid  mx-1',

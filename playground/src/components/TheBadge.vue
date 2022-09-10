@@ -5,49 +5,38 @@
 <template>
   <OCard o-white title="Badge">
     <div space-y-2>
-      <div fsc gap-2>
-        <OBadge o="error" :content="100">
-          <OButton o="error" light>
-            Error
-          </OButton>
-        </OBadge>
-        <OBadge o="warning" :content="100">
-          <OButton o="warning" light>
-            Warning
-          </OButton>
-        </OBadge>
-        <OBadge o="success" :content="100">
-          <OButton o="success" light>
-            Success
-          </OButton>
-        </OBadge>
-        <OBadge o="info" :content="100">
-          <OButton o="info" light>
-            Info
-          </OButton>
-        </OBadge>
-        <OBadge o="primary" :content="100">
+      <div fsc gap-4>
+        <OBadge o="primary" :value="100">
           <OButton o="primary" light>
             Primary
           </OButton>
         </OBadge>
-        <OBadge o="secondary" content="secondary">
+        <OBadge :value="9">
+          <o-avatar src="https://images.unsplash.com/photo-1660594714679-19b0173e0558?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60" rounded />
+        </OBadge>
+        <OBadge o="teal" :value="100">
+          <OButton o-error light>
+            Custom Color
+          </OButton>
+        </OBadge>
+        <OBadge o="info" dot :value="100">
+          <OButton o="info" light>
+            Only Dot
+          </OButton>
+        </OBadge>
+        <OBadge o="secondary" value="Lorem Text ···">
           <OButton o="secondary" light>
             Secondary
           </OButton>
         </OBadge>
-      </div>
-      <div fsc gap-2>
-        <OBadge o="error" :content="666666" :max="999999">
-          <OButton o="error" light>
-            Error
+        <OBadge :value="0">
+          <OButton o="primary" light>
+            Zero
           </OButton>
         </OBadge>
-      </div>
-      <div fsc gap-2>
-        <OBadge o="error" :content="666666" :max="999999" dot>
-          <OButton o="error" light>
-            is a dot
+        <OBadge show-zero :value="0">
+          <OButton o="primary" light>
+            Show Zero
           </OButton>
         </OBadge>
       </div>
