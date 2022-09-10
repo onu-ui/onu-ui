@@ -42,6 +42,10 @@ const sidebar = {
           link: '/components/button',
         },
         {
+          text: 'Badge',
+          link: '/components/badge',
+        },
+        {
           text: 'Icon',
           link: '/components/icon',
         },
