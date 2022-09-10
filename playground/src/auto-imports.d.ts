@@ -5,6 +5,7 @@ declare global {
   const OAlert: typeof import('onu-ui')['OAlert']
   const OAvatar: typeof import('onu-ui')['OAvatar']
   const OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
+  const OBadge: typeof import('onu-ui')['OBadge']
   const OButton: typeof import('onu-ui')['OButton']
   const OCard: typeof import('onu-ui')['OCard']
   const OCheckbox: typeof import('onu-ui')['OCheckbox']
@@ -275,6 +276,7 @@ declare module '@vue/runtime-core' {
     readonly OAlert: UnwrapRef<typeof import('onu-ui')['OAlert']>
     readonly OAvatar: UnwrapRef<typeof import('onu-ui')['OAvatar']>
     readonly OAvatarGroup: UnwrapRef<typeof import('onu-ui')['OAvatarGroup']>
+    readonly OBadge: UnwrapRef<typeof import('onu-ui')['OBadge']>
     readonly OButton: UnwrapRef<typeof import('onu-ui')['OButton']>
     readonly OCard: UnwrapRef<typeof import('onu-ui')['OCard']>
     readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>

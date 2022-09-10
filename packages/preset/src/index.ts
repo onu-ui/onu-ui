@@ -154,7 +154,6 @@ export function presetOnu(): Preset {
         'o-icon-base': 'c-context text-md',
 
         // switch
-        // 'o-switch-base': 'b-(~ gray:50) bg-gray:50',
         'o-switch-base': 'b-(~ $o-switch-bc) bg-$o-switch-dot',
         'o-switch-base-active': 'checked-(b-context bg-$o-switch-dot-active)',
         'o-switch-shadow': 'shadow-switch checked-shadow-switchActive',
@@ -178,6 +177,12 @@ export function presetOnu(): Preset {
         'o-alert-close': 'text-md cursor-pointer pa top-3 right-3 fcc',
         'o-alert-icon': 'fi pr-5',
         'o-alert-description': 'flex break-all items-center text-sm',
+
+        // Badge
+        'o-badge': 'pr inline-block align-middle',
+        'o-badge-sup': 'bg-context text-xs min-w-4.5 h-4.5 leading-4.5 whitespace-nowrap fcc inline-flex rounded-full px-1 z-1',
+        'o-badge-sup-fixed': 'pa top-0 right-0 translate-x-[calc(50%-1px)] translate-y-[calc(-50%+1px)]',
+        'o-badge-sup-dot': '!min-w-auto !h-2 !w-2 rounded-full',
 
         // tag
         'o-tag-base': 'fcc gap-1 rounded inline-flex box-border !outline-none c-context o-solid  mx-1',

@@ -7,6 +7,7 @@
     <TheCard />
     <TheCheckbox />
     <TheAlert />
+    <TheBadge />
     <TheTag />
     <TheMessage />
   </div>

@@ -10,6 +10,7 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: [['xs', 'sm', 'md', 'lg'].map(s => [
+    'o-primary', 'o-secondary', 'o-success', 'o-warning', 'o-error', 'o-info',
     `o-button-${s}`,
     `o-avatar-${s}`,
     `o-avatar-group-${s}`,
