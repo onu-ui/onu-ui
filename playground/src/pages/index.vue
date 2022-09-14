@@ -12,5 +12,6 @@
     <TheMessage />
     <ThePopup />
     <TheRate />
+    <TheCollapse />
   </div>
 </template>
