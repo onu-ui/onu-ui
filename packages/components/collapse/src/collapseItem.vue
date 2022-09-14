@@ -70,6 +70,9 @@ const on = {
     el.style.paddingBottom = el.dataset.oldPaddingBottom
   },
 }
+defineExpose({
+  isActive,
+})
 </script>
 
 <template>

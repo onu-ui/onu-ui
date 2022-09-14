@@ -1,5 +1,6 @@
 import { generateId, isArray, isNumber, isString } from '@onu-ui/utils'
 import type { ExtractPropTypes, InjectionKey, PropType, Ref } from 'vue'
+import type OCollapseItem from './collapseItem.vue'
 
 export type CollapseActiveName = (string | number)[]
 export type RendererElement = Record<string, any>
@@ -53,7 +54,7 @@ export const collapseItemProps = {
 
 export type OCollapseProps = ExtractPropTypes<typeof collapseProps>
 export type OCollapseItemProps = ExtractPropTypes<typeof collapseItemProps>
-
+export type OCollapseItemInstance = InstanceType<typeof OCollapseItem>
 // key
 export interface CollapseContext {
   activeNames: Ref<CollapseActiveName>
