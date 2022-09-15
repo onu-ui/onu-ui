@@ -1,4 +1,6 @@
 <script setup lang="ts" name="O-Collapse">
+// TODO test
+import { provide, ref, watch } from 'vue'
 import {
   CollapseActiveName,
   CollapseContext,
@@ -13,6 +15,7 @@ const activeNames = ref(props.expandedNames)
 function setActiveNames(_activeNames: CollapseActiveName) {
   activeNames.value = _activeNames
   const value = props.accordion ? [activeNames.value[0]] : activeNames.value
+
   emit('update:expanded-names', value)
   emit('change', value)
 }

@@ -1,8 +1,12 @@
 <script setup lang="ts" name="O-Collapse-Item">
+// TODO test
+import { computed, inject } from 'vue'
+
 import OIcon from '../../icon/src/index.vue'
 import { RendererElement, collapseContextKey, collapseItemProps } from './props'
 const props = defineProps(collapseItemProps)
 const collapse = inject(collapseContextKey)
+
 const isActive = computed(() =>
   collapse?.activeNames.value.includes(props.name),
 )
@@ -80,7 +84,7 @@ defineExpose({
     o-collapse-item-base
   >
     <div
-      o-collapse-item-title
+      class="o-collapse-item-title"
       :class="[
         isActive && 'o-collapse-item-title-active',
         props.disabled && 'o-disabled',

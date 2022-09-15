@@ -2,12 +2,13 @@
 function handleToClickHeader(activeNames: (string | number)[]) {
   // console.log(activeNames)
 }
+const expandedNames = ref(['1'])
 </script>
 
 <template>
   <o-card title="Collapse" o="white">
     <div space-y-2>
-      <o-collapse :expanded-names="['1']" @change="handleToClickHeader">
+      <o-collapse v-modal:expanded-names="expandedNames" @change="handleToClickHeader">
         <o-collapse-item name="1" title="basic">
           <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
