@@ -11,6 +11,7 @@ declare global {
   const OCheckbox: typeof import('onu-ui')['OCheckbox']
   const OIcon: typeof import('onu-ui')['OIcon']
   const OMessage: typeof import('onu-ui')['OMessage']
+  const OPopup: typeof import('onu-ui')['OPopup']
   const OSwitch: typeof import('onu-ui')['OSwitch']
   const OTag: typeof import('onu-ui')['OTag']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
@@ -198,6 +199,7 @@ declare global {
   const usePointer: typeof import('@vueuse/core')['usePointer']
   const usePointerSwipe: typeof import('@vueuse/core')['usePointerSwipe']
   const usePreferredColorScheme: typeof import('@vueuse/core')['usePreferredColorScheme']
+  const usePreferredContrast: typeof import('@vueuse/core')['usePreferredContrast']
   const usePreferredDark: typeof import('@vueuse/core')['usePreferredDark']
   const usePreferredLanguages: typeof import('@vueuse/core')['usePreferredLanguages']
   const usePreferredReducedMotion: typeof import('@vueuse/core')['usePreferredReducedMotion']
@@ -282,6 +284,7 @@ declare module '@vue/runtime-core' {
     readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
     readonly OMessage: UnwrapRef<typeof import('onu-ui')['OMessage']>
+    readonly OPopup: UnwrapRef<typeof import('onu-ui')['OPopup']>
     readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
     readonly OTag: UnwrapRef<typeof import('onu-ui')['OTag']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
@@ -469,6 +472,7 @@ declare module '@vue/runtime-core' {
     readonly usePointer: UnwrapRef<typeof import('@vueuse/core')['usePointer']>
     readonly usePointerSwipe: UnwrapRef<typeof import('@vueuse/core')['usePointerSwipe']>
     readonly usePreferredColorScheme: UnwrapRef<typeof import('@vueuse/core')['usePreferredColorScheme']>
+    readonly usePreferredContrast: UnwrapRef<typeof import('@vueuse/core')['usePreferredContrast']>
     readonly usePreferredDark: UnwrapRef<typeof import('@vueuse/core')['usePreferredDark']>
     readonly usePreferredLanguages: UnwrapRef<typeof import('@vueuse/core')['usePreferredLanguages']>
     readonly usePreferredReducedMotion: UnwrapRef<typeof import('@vueuse/core')['usePreferredReducedMotion']>

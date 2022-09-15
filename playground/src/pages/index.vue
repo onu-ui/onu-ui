@@ -10,5 +10,6 @@
     <TheBadge />
     <TheTag />
     <TheMessage />
+    <ThePopup />
   </div>
 </template>

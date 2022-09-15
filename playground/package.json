@@ -14,6 +14,7 @@
   "devDependencies": {
     "onu-ui": "workspace:*",
     "vite-plugin-pages": "^0.25.0",
-    "vite-plugin-vue-layouts": "^0.7.0"
+    "vite-plugin-vue-layouts": "^0.7.0",
+    "resize-observer-polyfill":"^1.5.1"
   }
 }
