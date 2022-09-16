@@ -3,5 +3,6 @@
         "source.fixAll.eslint": true
     },
     "editor.formatOnSave": false,
-    "unocss.root": "./docs"
+    "unocss.root": "./docs",
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

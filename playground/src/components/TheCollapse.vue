@@ -8,7 +8,7 @@ const expandedNames = ref(['1'])
 <template>
   <o-card title="Collapse" o="white">
     <div space-y-2>
-      <o-collapse v-modal:expanded-names="expandedNames" @change="handleToClickHeader">
+      <o-collapse v-model:expanded-names="expandedNames" @change="handleToClickHeader">
         <o-collapse-item name="1" title="basic">
           <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

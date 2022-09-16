@@ -53,22 +53,16 @@ describe('o-collapse', () => {
 
   test('o-collapse event:change', async() => {
     const onChange = vi.fn()
-    const expandedNames = ['1']
+    let expandedNames: (string | number)[] = ['1']
+    const onUpdate = (newVal: (string | number)[]) => {
+      expandedNames = newVal
+    }
     const wrapper = mount(OCollapse, {
-
-      data() {
-        return {
-          onChange,
-        }
-      },
       props: {
         expandedNames,
         onChange,
+        'onUpdate:expanded-names': onUpdate,
       },
-      template:
-        `
-          <o-collapse v-modal:expanded-names="expandedNames"  @change=onChange><slot /></o-collapse>
-        `,
       slots: {
         default: `
           <o-collapse-item name="1" title="title1">111</o-collapse-item>
