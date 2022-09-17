@@ -5,7 +5,7 @@ export const rateProps = {
     type: Number,
     default: 0,
   },
-  maxValue: {
+  max: {
     type: Number,
     default: 5,
   },

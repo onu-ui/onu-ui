@@ -49,7 +49,7 @@ const showHalfIcon = computed(() => {
 <template>
   <div class="o-rate">
     <span
-      v-for="(item, key) in maxValue"
+      v-for="(item, key) in max"
       :key="key"
       @mousemove="setCurValue(item, $event)"
       @mouseleave="resetCurValue"

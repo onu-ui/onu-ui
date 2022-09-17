@@ -7,7 +7,7 @@ const rate = ref(2.5)
     <div space-y-2>
       <div fsc gap-4>
         {{ rate }}
-        <o-rate v-model="rate" :max-value="10" text="123123" allow-half />
+        <o-rate v-model="rate" :max="10" text="rate component" allow-half />
       </div>
     </div>
   </OCard>
