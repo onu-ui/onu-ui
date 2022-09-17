@@ -1,6 +1,7 @@
 {
   "name": "@onu-ui/docs",
   "version": "1.0.0",
+  "private": true,
   "description": "Onu-UI docs",
   "keywords": ["onu-ui", "docs"],
   "scripts": {
