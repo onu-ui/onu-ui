@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     OCard: typeof import('onu-ui')['OCard']
     OCheckbox: typeof import('onu-ui')['OCheckbox']
     OIcon: typeof import('onu-ui')['OIcon']
+    ORate: typeof import('onu-ui')['ORate']
     OSwitch: typeof import('onu-ui')['OSwitch']
     OTag: typeof import('onu-ui')['OTag']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -29,6 +30,7 @@ declare module '@vue/runtime-core' {
     TheHeader: typeof import('./components/layout/TheHeader.vue')['default']
     TheIcon: typeof import('./components/TheIcon.vue')['default']
     TheMessage: typeof import('./components/TheMessage.vue')['default']
+    TheRate: typeof import('./components/TheRate.vue')['default']
     TheSwitch: typeof import('./components/TheSwitch.vue')['default']
     TheTag: typeof import('./components/TheTag.vue')['default']
   }

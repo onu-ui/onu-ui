@@ -12,6 +12,7 @@ declare module 'vue' {
     OMessage: typeof import('@onu-ui/components')['OMessage']
     OSwitch: typeof import('@onu-ui/components')['OSwitch']
     OTag: typeof import('@onu-ui/components')['OTag']
+    ORate: typeof import('@onu-ui/components')['ORate']
   }
 }
 export {}
