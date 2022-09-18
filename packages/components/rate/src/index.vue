@@ -5,8 +5,7 @@ import { rateProps } from './props'
 const props = defineProps(rateProps)
 const emits = defineEmits(['update:modelValue', 'change'])
 
-const modelVal = computed(() => props.modelValue)
-const curVal = ref(modelVal.value)
+const curVal = toRef(props, 'modelValue')
 const isAtLeftHalf = ref(false)
 const setCurValue = (item:number, e:MouseEvent) => {
   if (props.readonly) return
@@ -43,6 +42,8 @@ const showHalfIcon = computed(() => {
 defineExpose({
   /** @description set current value */
   setCurValue,
+  /** @description reset current value */
+  resetCurValue,
 })
 </script>
 
