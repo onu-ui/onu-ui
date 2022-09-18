@@ -21,6 +21,7 @@ importers:
       '@vue/test-utils': ^2.0.0
       '@vueuse/core': ^9.1.1
       bumpp: ^8.2.1
+      c8: ^7.12.0
       eslint: 8.22.0
       eslint-plugin-import: ^2.26.0
       esno: ^0.16.3
@@ -62,6 +63,7 @@ importers:
       '@vue/test-utils': 2.0.2_vue@3.2.37
       '@vueuse/core': 9.1.1_vue@3.2.37
       bumpp: 8.2.1
+      c8: 7.12.0
       eslint: 8.22.0
       eslint-plugin-import: 2.26.0_lewfh47l4outvz5ytnjtm3tbm4
       esno: 0.16.3

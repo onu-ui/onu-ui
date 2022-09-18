@@ -1,8 +1,8 @@
 <template>
   <div fsc gap-6>
     <div>
-      <p>Rate: {{val}}</p>
-      <ORate v-model="val" allow-half/>
+      <p>Rate: {{ val }}</p>
+      <ORate v-model="val" allow-half />
     </div>
   </div>
 </template>

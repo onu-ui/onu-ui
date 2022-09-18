@@ -35,7 +35,7 @@ Half-stars can also be achieved by adding an `allow-half` attribute when rating.
 | allow-half | whether picking half start is allowed  | `boolean`  |                 | `false`   |
 | color      | selected icon color                    | `string`   |                 | `warning` |
 | void-color | unselected icon color                  | `string`   |                 | `-`       |
-| show-text  | text displayed at the end of the star  | `string`   |                 | `-`       |
+| text       | text displayed at the end of the star  | `string`   |                 | `-`       |
 
 ## Event
 

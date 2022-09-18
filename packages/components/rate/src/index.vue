@@ -44,6 +44,11 @@ const showHalfIcon = computed(() => {
     return (Math.round(val) === item) && val < item
   }
 })
+
+defineExpose({
+  /** @description set current value */
+  setCurValue,
+})
 </script>
 
 <template>
@@ -51,17 +56,23 @@ const showHalfIcon = computed(() => {
     <span
       v-for="(item, key) in max"
       :key="key"
+      class="o-rate-star"
       @mousemove="setCurValue(item, $event)"
       @mouseleave="resetCurValue"
-      @click="selectVal"
+      @click="selectVal()"
     >
       <o-icon
-        v-show="showFilledIcon(curVal, item)"
-        :class="showHalfIcon(curVal, item) ? 'o-rate-half' : ''"
+        v-if="showFilledIcon(curVal, item)"
+        :class="showHalfIcon(curVal, item) ? 'o-rate-half o-rate-select' : 'o-rate-select'"
         name="o-rate-icon i-carbon-star-filled"
         :o="color"
       />
-      <o-icon v-show="!showFilledIcon(curVal, item)" name="o-rate-icon i-carbon-star" :o="voidColor" />
+      <o-icon
+        v-if="!showFilledIcon(curVal, item)"
+        class="o-rate-unselect"
+        name="o-rate-icon i-carbon-star"
+        :o="voidColor"
+      />
     </span>
     <span class="o-rate-text">{{ text }}</span>
   </div>

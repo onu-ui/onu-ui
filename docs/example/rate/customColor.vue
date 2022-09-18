@@ -1,12 +1,12 @@
 <template>
   <div fsc gap-6>
     <div>
-      <p>Rate: {{val}}</p>
-      <ORate v-model="val" color="teal" void-color="error"/>
+      <p>Rate: {{ val }}</p>
+      <ORate v-model="val" color="teal" void-color="error" />
     </div>
     <div>
-      <p>Rate: {{valPrimary}}</p>
-      <ORate v-model="valPrimary" color="secondary" void-color="primary"/>
+      <p>Rate: {{ valPrimary }}</p>
+      <ORate v-model="valPrimary" color="secondary" void-color="primary" />
     </div>
   </div>
 </template>
