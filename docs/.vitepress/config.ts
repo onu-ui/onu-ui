@@ -100,6 +100,10 @@ const sidebar = {
           text: 'Message',
           link: '/components/message',
         },
+        {
+          text: 'Popup',
+          link: '/components/popup',
+        },
       ],
     },
   ],

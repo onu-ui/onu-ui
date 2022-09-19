@@ -11,9 +11,11 @@ declare global {
   const OCheckbox: typeof import('onu-ui')['OCheckbox']
   const OIcon: typeof import('onu-ui')['OIcon']
   const OMessage: typeof import('onu-ui')['OMessage']
+  const OPopup: typeof import('onu-ui')['OPopup']
   const ORate: typeof import('onu-ui')['ORate']
   const OSwitch: typeof import('onu-ui')['OSwitch']
   const OTag: typeof import('onu-ui')['OTag']
+  const OTrigger: typeof import('onu-ui')['OTrigger']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -283,9 +285,11 @@ declare module '@vue/runtime-core' {
     readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
     readonly OMessage: UnwrapRef<typeof import('onu-ui')['OMessage']>
+    readonly OPopup: UnwrapRef<typeof import('onu-ui')['OPopup']>
     readonly ORate: UnwrapRef<typeof import('onu-ui')['ORate']>
     readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
     readonly OTag: UnwrapRef<typeof import('onu-ui')['OTag']>
+    readonly OTrigger: UnwrapRef<typeof import('onu-ui')['OTrigger']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>

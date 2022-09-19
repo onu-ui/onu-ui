@@ -34,6 +34,7 @@
         "@unocss/preset-mini": "^0.45.12",
         "@unocss/preset-uno": "^0.45.12",
         "@vitejs/plugin-vue": "^3.0.1",
+        "@vitejs/plugin-vue-jsx": "^2.0.1",
         "@vitest/coverage-c8": "^0.22.1",
         "@vitest/ui": "0.22.1",
         "@vue/test-utils": "^2.0.0",

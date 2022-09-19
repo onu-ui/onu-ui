@@ -1,6 +1,7 @@
 <script setup lang="ts" name="O-Button">
 import type { SizeType } from '../../types'
 interface IButtonProps {
+  o?: string
   to?: string
   light?: boolean
   text?: boolean
@@ -11,6 +12,7 @@ interface IButtonProps {
 
 const props = withDefaults(defineProps<IButtonProps>(), {
   size: 'md',
+  o: 'primary',
 })
 const slots = useSlots()
 const isDisabled = computed(() => props.loading || props.disabled)
@@ -31,6 +33,7 @@ const onlyIcon = computed(() => slots.icon && !slots.default)
       isDisabled ? 'o-disabled' : 'o-transition o-button-hover o-button-active',
       onlyIcon && 'aspect-square px-0',
     ]"
+    :o="o"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />
     <slot v-else name="icon" />

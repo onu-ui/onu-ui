@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "onu-ui": "workspace:*",
+    "resize-observer-polyfill":"^1.5.1",
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-vue-layouts": "^0.7.0"
   }

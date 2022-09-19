@@ -5,7 +5,7 @@
 <template>
   <OCard o-white title="Badge">
     <div space-y-2>
-      <div fsc gap-4>
+      <div fsc flex-wrap gap-4>
         <OBadge o="primary" :value="100">
           <OButton o="primary" light>
             Primary

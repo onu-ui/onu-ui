@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
+import VueJSX from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
@@ -23,6 +24,7 @@ export default defineConfig({
   },
   plugins: [
     Vue(),
+    VueJSX(),
     VueSetupExtend(),
     UnoCSS(),
     dts(),
