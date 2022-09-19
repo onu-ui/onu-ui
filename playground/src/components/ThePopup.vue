@@ -155,7 +155,7 @@
               <p>Here is the text content</p>
             </template>
           </o-popup>
-          <o-popup position="right-bottom" trigger="click">
+          <o-popup position="right-bottom">
             <o-button>
               right-bottom
             </o-button>
