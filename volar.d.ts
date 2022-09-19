@@ -13,6 +13,7 @@ declare module 'vue' {
     OTag: typeof import('@onu-ui/components')['OTag']
     OBadge: typeof import('@onu-ui/components')['OBadge']
     OPopup: typeof import('@onu-ui/components')['OPopup']
+    OTrigger: typeof import('@onu-ui/components')['OTrigger']
   }
 }
 export {}

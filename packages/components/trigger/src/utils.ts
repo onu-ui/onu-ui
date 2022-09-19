@@ -399,7 +399,6 @@ export const getPopupStyle = (
     offset,
     translate,
   })
-
   if (autoFitPosition) {
     const result = getFitPosition(position, popupPosition, {
       containerRect,

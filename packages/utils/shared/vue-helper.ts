@@ -17,8 +17,8 @@ export const getChildrenArray = (vn: VNode) => {
  * @param children
  */
 export const getFirstElementFromChildren = (children: Array<VNode> | undefined): HTMLElement | undefined => {
-  if (children || (children!).length > 0) {
-    for (const child of children!) {
+  if (children && children.length > 0) {
+    for (const child of children) {
       // eslint-disable-next-line @typescript-eslint/no-use-before-define
       const element = getFirstElementFromVNode(child)
       if (element) return element

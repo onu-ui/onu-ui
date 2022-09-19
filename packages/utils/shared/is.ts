@@ -22,8 +22,8 @@ export const isSymbol = (val: unknown): val is symbol => typeof val === 'symbol'
 export const isPromise = <T = any>(val: unknown): val is Promise<T> => isObject(val) && isFunction(val.then) && isFunction(val.catch)
 export const isValue = (val: any): val is boolean => val !== undefined && val !== null
 export const isComponentInstance = (val: any): val is ComponentPublicInstance => val?.$ !== undefined
-export const isComponent = (vn: VNode, type?: VNodeTypes): type is Component => Boolean(vn && vn.shapeFlag && ShapeFlags.COMPONENT)
-export const isElement = (vn: VNode) => Boolean(vn && vn.shapeFlag && ShapeFlags.ELEMENT)
-export const isText = (vn: VNode, children: VNode['children']): children is string => Boolean(vn && vn.shapeFlag && ShapeFlags.TEXT_CHILDREN)
+export const isComponent = (vn: VNode, type?: VNodeTypes): type is Component => Boolean(vn && vn.shapeFlag & ShapeFlags.COMPONENT)
+export const isElement = (vn: VNode) => Boolean(vn && vn.shapeFlag & ShapeFlags.ELEMENT)
+export const isText = (vn: VNode, children: VNode['children']): children is string => Boolean(vn && vn.shapeFlag & ShapeFlags.TEXT_CHILDREN)
 export const isSlotsChildren = (vn: VNode, children: VNode['children']): children is Slots => Boolean(vn && vn.shapeFlag & ShapeFlags.SLOTS_CHILDREN)
-export const isArrayChildren = (vn: VNode, children: VNode['children']): children is VNode[] => Boolean(vn && vn.shapeFlag && ShapeFlags.ARRAY_CHILDREN)
+export const isArrayChildren = (vn: VNode, children: VNode['children']): children is VNode[] => Boolean(vn && vn.shapeFlag & ShapeFlags.ARRAY_CHILDREN)

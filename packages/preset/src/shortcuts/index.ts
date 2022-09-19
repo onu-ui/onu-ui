@@ -11,6 +11,8 @@ import { iconShortcuts } from './icon'
 import { messageDynamicShortcuts, messageShortcuts } from './message'
 import { switchShortcuts } from './switch'
 import { tagShortcuts } from './tag'
+import { popupShortcuts } from './popup'
+import { triggerShortcuts } from './trigger'
 
 import type { Theme } from '@unocss/preset-uno'
 import type { UserShortcuts } from 'unocss'
@@ -40,4 +42,8 @@ export default [
   switchShortcuts,
   // tag
   tagShortcuts,
+  // popup
+  popupShortcuts,
+  // trigger
+  triggerShortcuts,
 ] as UserShortcuts<Theme>

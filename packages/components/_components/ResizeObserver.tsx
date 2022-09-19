@@ -4,10 +4,10 @@ import { useFirstElement } from '../_hooks'
 
 export default defineComponent({
   name: 'ResizeObserver',
+  emits: ['resize'],
   props: {
     watchOnUpdated: Boolean,
   },
-  emits: ['resize'],
   setup(_, { emit, slots }) {
     const { children, firstElement } = useFirstElement()
     let resizeObserver: ResizeObserver | null
@@ -30,8 +30,7 @@ export default defineComponent({
 
     watch(firstElement, (element) => {
       if (resizeObserver) destroyResizeObserver()
-      if (element)
-        createResizeObserver(element)
+      if (element) createResizeObserver(element)
     })
 
     onBeforeUnmount(() => {

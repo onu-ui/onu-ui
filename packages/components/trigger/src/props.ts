@@ -55,7 +55,9 @@ export const TriggerProps = {
    * The moving distance of the popup
    */
   popupTranslate: {
-    type: [Array, Object] as PropType<[number, number] | { [key in Placement]?: [number, number] }>,
+    type: [Array, Object] as PropType<
+    [number, number] | { [key in Placement]?: [number, number] }
+    >,
   },
   /**
    * Whether the popup shows an arrow
@@ -78,10 +80,22 @@ export const TriggerProps = {
     type: Object as PropType<CSSProperties>,
   },
   /**
+   * The class name of the popup content
+   */
+  contentClass: {
+    type: [String, Array, Object],
+  },
+  /**
    * The style of the popup arrow
    */
   arrowStyle: {
     type: Object as PropType<CSSProperties>,
+  },
+  /**
+   * The class name of the popup arrow
+   */
+  arrowClass: {
+    type: [String, Array, Object],
   },
   /**
    * The style of the popup

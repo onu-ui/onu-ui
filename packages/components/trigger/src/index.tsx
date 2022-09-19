@@ -1,17 +1,18 @@
 import { Teleport, Transition, defineComponent } from 'vue'
-import { useFirstElement, useResizeObserver, useTeleport } from '@onu-ui/components/_hooks'
 import { isEmptyChildren, mergeFirstChild, off, on } from '@onu-ui/utils'
-import ResizeObserver from '@onu-ui/components/_components/ResizeObserver'
-import ClientOnly from '@onu-ui/components/_components/ClientOnly.vue'
+import { useFirstElement, useResizeObserver, useTeleport } from '../../_hooks'
+import ClientOnly from '../../_components/ClientOnly.vue'
+import ResizeObserver from '../../_components/ResizeObserver'
 import { TriggerProps, triggerEmits } from './props'
 import { triggerInjectionKey } from './context'
 import { getArrowStyle, getElementScrollRect, getPopupStyle, getScrollElements, getTransformOrigin } from './utils'
 import type { CSSProperties, Ref } from 'vue'
 import type { TriggerType } from '../../types'
+import './fade.css'
 
 const TriggerPositionStyls = {
   'top': 'o-trigger-top',
-  'left': 'o-trigger-bottom',
+  'left': 'o-trigger-left',
   'right': 'o-trigger-right',
   'bottom': 'o-trigger-bottom',
   'top-left': 'o-trigger-top-left',
@@ -19,6 +20,7 @@ const TriggerPositionStyls = {
   'bottom-left': 'o-trigger-bottom-left',
   'bottom-right': 'o-trigger-bottom-right',
   'left-top': 'o-trigger-left-top',
+  'left-bottom': 'o-trigger-left-bottom',
   'right-top': 'o-trigger-right-top',
   'right-bottom': 'o-trigger-right-bottom',
 }
@@ -39,22 +41,24 @@ export default defineComponent({
     const triggerChildrenRefs = new Set<Ref<HTMLElement>>()
     const triggerCtx = inject(triggerInjectionKey, undefined)
 
-    const popupVisible = useVModel(props, 'popupVisible', emit, {
-      defaultValue: props.defaultPopupVisible,
-    })
     const popupRef = ref<HTMLElement>()
     const { popupContainer, position: popupPosition } = toRefs(props)
 
     const popupStyle = ref<CSSProperties>({})
     const transformStyle = ref<CSSProperties>({})
     const arrowStyle = ref<CSSProperties>({})
+    const popupVisible = ref(props.defaultPopupVisible)
+
+    const computedPopVisible = computed(
+      () => props.popupVisible ?? popupVisible.value,
+    )
 
     const hidenPopup = computed(() => props.hideEmpty && isEmptyChildren(slots.content?.()))
     let scrollElements: HTMLElement[] | undefined
 
     const { teleportContainer, containerRef } = useTeleport({
       popupContainer,
-      visible: popupVisible as Ref<boolean>,
+      visible: computedPopVisible as Ref<boolean>,
       documentContainer: true,
     })
 
@@ -108,7 +112,7 @@ export default defineComponent({
           offset: props.popupOffset,
           translate: props.popupTranslate,
           customStyle: props.popupStyle,
-          autoFitPosition: true,
+          autoFitPosition: false,
         },
       )
       if (props.autoFitTransformOrigin) {
@@ -145,9 +149,10 @@ export default defineComponent({
     }
 
     const changeVisible = (visible: boolean, delay?: number) => {
-      if (visible === popupVisible.value && delay === 0) return
+      if (visible === computedPopVisible.value && delay === 0) return
       const update = () => {
         popupVisible.value = visible
+        emit('update:popupVisible', visible)
         emit('popupVisibleChange', visible)
         if (visible) {
           nextTick(() => {
@@ -158,7 +163,7 @@ export default defineComponent({
 
       if (delay) {
         cleanDelayTimer()
-        if (visible !== popupVisible.value)
+        if (visible !== computedPopVisible.value)
           delayTimer = window.setTimeout(update, delay)
       } else {
         update()
@@ -172,10 +177,10 @@ export default defineComponent({
 
       if (triggerMethods.value.includes('click')) {
         updateMousePosition(e)
-        changeVisible(!popupVisible.value)
+        changeVisible(!computedPopVisible.value)
       } else if (
         triggerMethods.value.includes('context-menu')
-        && popupVisible.value
+        && computedPopVisible.value
       ) {
         // Make sure right - click to close the float layer
         changeVisible(false)
@@ -221,13 +226,12 @@ export default defineComponent({
         return
 
       updateMousePosition(e)
-      changeVisible(!popupVisible.value)
+      changeVisible(!computedPopVisible.value)
       e.preventDefault()
     }
 
     const handleResize = () => {
-      if (popupVisible.value)
-        updatePopupStyle()
+      if (computedPopVisible.value) updatePopupStyle()
     }
 
     const handleMouseEnterWithContext = (e: MouseEvent) => {
@@ -242,14 +246,12 @@ export default defineComponent({
 
     const handleShow = () => {
       isAnimation.value = false
-      if (popupVisible.value)
-        emit('show')
+      if (computedPopVisible.value) emit('show')
     }
 
     const handleHide = () => {
       isAnimation.value = false
-      if (!popupVisible.value)
-        emit('hide')
+      if (!computedPopVisible.value) emit('hide')
     }
 
     const onAnimationStart = () => {
@@ -287,7 +289,7 @@ export default defineComponent({
     }
 
     const handleScroll = useThrottleFn(() => {
-      if (popupVisible.value) updatePopupStyle()
+      if (computedPopVisible.value) updatePopupStyle()
     })
 
     const { createResizeObserver, destroyResizeObserver } = useResizeObserver(
@@ -300,7 +302,7 @@ export default defineComponent({
     onMounted(() => {
       createResizeObserver()
 
-      if (popupVisible.value) {
+      if (computedPopVisible.value) {
         updatePopupStyle()
         if (!outsideListener) {
           on(document.documentElement, 'mousedown', handleOutsideClick)
@@ -315,8 +317,7 @@ export default defineComponent({
     })
 
     onUpdated(() => {
-      if (popupVisible.value)
-        updatePopupStyle()
+      if (computedPopVisible.value) updatePopupStyle()
     })
 
     onDeactivated(() => {
@@ -347,7 +348,7 @@ export default defineComponent({
       }),
     )
 
-    watch(popupVisible, (value) => {
+    watch(computedPopVisible, (value) => {
       if (!value && outsideListener) {
         removeOutsideListener()
       } else if (value && !outsideListener) {
@@ -372,8 +373,7 @@ export default defineComponent({
     watch(
       () => [props.autoFitPopupWidth],
       () => {
-        if (popupVisible.value)
-          updatePopupStyle()
+        if (computedPopVisible.value) updatePopupStyle()
       },
     )
 
@@ -387,7 +387,6 @@ export default defineComponent({
         onFocusout: handleFocusout,
         onContextmenu: handleContextmenu,
       })
-
       return (
         <>
           <ResizeObserver
@@ -400,14 +399,11 @@ export default defineComponent({
           </ResizeObserver>
           <ClientOnly>
             <Teleport to={teleportContainer.value}>
-              {popupVisible.value && !hidenPopup.value && (
+              {computedPopVisible.value && !hidenPopup.value && (
                 <ResizeObserver onResize={handleResize}>
                   <div
                     ref={popupRef}
-                    class={[
-                      'o-trigger-base',
-                      `${TriggerPositionStyls[popupPosition.value]}`,
-                    ]}
+                    class="absolute"
                     style={{
                       ...popupStyle.value,
                       // TODO: nesting add
@@ -429,10 +425,10 @@ export default defineComponent({
                       <div
                         class="o-trigger-popup-wrapper"
                         style={transformStyle.value}
-                        v-show={popupVisible.value}
+                        v-show={computedPopVisible.value}
                       >
                         <div
-                          class="o-trigger-content"
+                          class={['o-trigger-content', props.contentClass]}
                           style={props.contentStyle}
                         >
                           {slots.content?.()}
@@ -440,7 +436,11 @@ export default defineComponent({
                         {props.showArrow && (
                           <div
                             ref={arrowRef}
-                            class="o-trigger-arrow"
+                            class={[
+                              'o-trigger-arrow',
+                              `${TriggerPositionStyls[popupPosition.value]}`,
+                              props.arrowClass,
+                            ]}
                             style={arrowStyle.value}
                           />
                         )}
