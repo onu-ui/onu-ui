@@ -12,6 +12,7 @@ declare global {
   const OIcon: typeof import('onu-ui')['OIcon']
   const OMessage: typeof import('onu-ui')['OMessage']
   const OPopup: typeof import('onu-ui')['OPopup']
+  const ORate: typeof import('onu-ui')['ORate']
   const OSwitch: typeof import('onu-ui')['OSwitch']
   const OTag: typeof import('onu-ui')['OTag']
   const OTrigger: typeof import('onu-ui')['OTrigger']
@@ -285,6 +286,7 @@ declare module '@vue/runtime-core' {
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
     readonly OMessage: UnwrapRef<typeof import('onu-ui')['OMessage']>
     readonly OPopup: UnwrapRef<typeof import('onu-ui')['OPopup']>
+    readonly ORate: UnwrapRef<typeof import('onu-ui')['ORate']>
     readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
     readonly OTag: UnwrapRef<typeof import('onu-ui')['OTag']>
     readonly OTrigger: UnwrapRef<typeof import('onu-ui')['OTrigger']>

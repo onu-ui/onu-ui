@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     OIcon: typeof import('onu-ui')['OIcon']
     OPopover: typeof import('onu-ui')['OPopover']
     OPopup: typeof import('onu-ui')['OPopup']
+    ORate: typeof import('onu-ui')['ORate']
     OSwitch: typeof import('onu-ui')['OSwitch']
     OTag: typeof import('onu-ui')['OTag']
     OTrigger: typeof import('onu-ui')['OTrigger']
@@ -33,6 +34,7 @@ declare module '@vue/runtime-core' {
     TheIcon: typeof import('./components/TheIcon.vue')['default']
     TheMessage: typeof import('./components/TheMessage.vue')['default']
     ThePopup: typeof import('./components/ThePopup.vue')['default']
+    TheRate: typeof import('./components/TheRate.vue')['default']
     TheSwitch: typeof import('./components/TheSwitch.vue')['default']
     TheTag: typeof import('./components/TheTag.vue')['default']
   }

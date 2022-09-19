@@ -62,6 +62,10 @@ const sidebar = {
           text: 'Switch',
           link: '/components/switch',
         },
+        {
+          text: 'Rate',
+          link: '/components/rate',
+        },
       ],
     },
     {

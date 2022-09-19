@@ -11,5 +11,6 @@
     <TheTag />
     <TheMessage />
     <ThePopup />
+    <TheRate />
   </div>
 </template>
