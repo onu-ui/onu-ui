@@ -10,5 +10,6 @@
     <TheBadge />
     <TheTag />
     <TheMessage />
+    <TheRate />
   </div>
 </template>

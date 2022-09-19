@@ -11,6 +11,7 @@ import { iconShortcuts } from './icon'
 import { messageDynamicShortcuts, messageShortcuts } from './message'
 import { switchShortcuts } from './switch'
 import { tagShortcuts } from './tag'
+import { rateShortcuts } from './rate'
 
 import type { Theme } from '@unocss/preset-uno'
 import type { UserShortcuts } from 'unocss'
@@ -40,4 +41,6 @@ export default [
   switchShortcuts,
   // tag
   tagShortcuts,
+  // rate
+  rateShortcuts,
 ] as UserShortcuts<Theme>
