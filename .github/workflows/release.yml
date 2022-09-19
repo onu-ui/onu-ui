@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -21,6 +23,7 @@ jobs:
           cache: pnpm
 
       - run: npx changelogithub
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
 

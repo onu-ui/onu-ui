@@ -1,6 +1,7 @@
 {
   "name": "@onu-ui/cli",
-  "version": "1.0.8-beta.1",
+  "version": "1.0.8-beta.3",
+  "private": true,
   "description": "Onu-UI Cli",
   "keywords": [
     "cli"
@@ -31,8 +32,5 @@
   "devDependencies": {
     "cac": "^6.7.12",
     "consola": "^2.15.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
