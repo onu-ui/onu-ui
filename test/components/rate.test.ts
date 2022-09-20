@@ -67,7 +67,7 @@ describe('Rate Component', () => {
       target: halfStar.element,
       offsetX: 0,
     }
-    wrapper.vm.setCurValue(3, event)
+    wrapper.vm.setCurValue(3, event as any)
     halfStar.trigger('click')
     await nextTick()
     expect(wrapper.findAll('.o-rate-select').length).toBe(3)
