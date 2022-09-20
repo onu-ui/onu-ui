@@ -1,7 +1,7 @@
-name: "\U0001F680 New feature proposal"
-title: "[Feature Request] - YOUR_FEATURE_TITLE_HERE_REPLACE_ME"
+name: 🚀 New feature proposal
+title: '[Feature Request] - YOUR_FEATURE_TITLE_HERE_REPLACE_ME'
 description: Propose a new feature to be added to OnuUI
-labels: ["feature request"]
+labels: [feature request]
 body:
   - type: markdown
     attributes:
