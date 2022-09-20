@@ -6,7 +6,6 @@ const props = defineProps(demoProps)
 const decodedHighlightedCode = computed(() =>
   decodeURIComponent(props.highlightedCode),
 )
-
 const { copy, copied } = useClipboard({ source: decodeURIComponent(props.code) })
 const [value, toggle] = useToggle()
 </script>

@@ -17,6 +17,7 @@ export function getDemoComponent(
 ) {
   const componentName = `DemoComponent${index++}`
   path = normalizePath(path)
+  const github = `https://github.com/onu-ui/onu-ui/tree/main/${path.split('/').slice(-4).join('/')}`
 
   injectImportStatement(env, componentName, path)
 
@@ -28,6 +29,7 @@ export function getDemoComponent(
       src="${path}"
       title="${title ?? ''}"
       desc="${desc ?? ''}"
+      github="${github}"
     >
         <${componentName}></${componentName}>
     </${DemoTag}>
