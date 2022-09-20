@@ -21,6 +21,8 @@ export default {
     switchActive:
       'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-c) inset, 0 0 0 2px var(--o-switch-c) inset;',
     trigger: '0px 4px 10px #0000001a',
+    cardMD: '0px 0px 12px rgb(0 0 0 / 12%)',
+    cardSM: '0px 0px 6px rgb(0 0 0 / 12%)',
   },
   animation: {
     keyframes: {
