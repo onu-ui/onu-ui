@@ -19,13 +19,13 @@ body:
     attributes:
       label: Suggested solution
       description: A clear and concise description of what you want to happen.
-    placeholder: |
-      As a user, I expected ___ behavior but ___ ...
+      placeholder: |
+        As a user, I expected ___ behavior but ___ ...
 
-      Ideal Steps I would like to see:
-      1. Go to '...'
-      2. Click on '....'
-      3. ....
+        Ideal Steps I would like to see:
+        1. Go to '...'
+        2. Click on '....'
+        3. ....
     validations:
       required: true
   - type: textarea
