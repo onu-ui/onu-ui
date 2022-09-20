@@ -22,7 +22,7 @@ const bodyCls = computed(() => {
 </script>
 
 <template>
-  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable']">
+  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable', alwaysShadow && 'o-card-shadow-always']">
     <!-- cover -->
     <div v-if="cover" class="o-card-cover">
       <img :src="cover">

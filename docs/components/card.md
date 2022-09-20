@@ -35,10 +35,10 @@ The Card can set `bordered` attribute style.
 
 ## Shadow
 
-You can define `hoverable` whether hover to show the card shadows
+You can define `hoverable` whether hover to show the card shadows, define `always-shadow` whether always to show the card shadows.
 
 <demo src="../example/card/hoverable.vue"></demo>
-
+<demo src="../example/card/shadow.vue"></demo>
 ## Descriptions
 
 You can set `description` attribute to define Card's description.
@@ -71,6 +71,7 @@ Here is the fully defined form of the card exaples.
 | cover       | Card header's cover              | String         | —               |         |
 | size        | size of the card                 | String         | sm/md           | md      |
 | hoverable   | Whether hover show card's shadow | Boolean        | true/false      | false   |
+| always-shadow   | Whether always show card's shadow | Boolean        | true/false      | false   |
 | bordered    | Whether show border              | Boolean        | true/false      | false   |
 | header      | customer card's header           | string / VNode | —               | —       |
 | extra       | customer card's header extra     | string / VNode | —               | —       |
