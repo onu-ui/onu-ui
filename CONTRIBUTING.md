@@ -48,7 +48,7 @@ Commit messages are required to follow the [conventional-changelog standard](htt
 
 👉 [Commit example](https://github.com/unocss/unocss/releases/tag/v0.39.0)
 
-### Commit 类型
+### Commit types
 
 The following is a list of commit types:
 
@@ -61,7 +61,7 @@ The following is a list of commit types:
 - test: Add missing or correct existing tests.
 - chore: Other commits that don’t modify src or test files.
 
-## OnuUI 项目结构
+## OnuUI Repository Structure
 
 This repository is managed by `pnpm` and includes the following packages：
 
