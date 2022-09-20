@@ -1,5 +1,5 @@
 
-> [English](./CONTRIBUTING.md) | 简体中文
+> English | [简体中文](./CONTRIBUTING.zh-CN.md)
 
 # Contributing
 
