@@ -10,11 +10,11 @@ export const cardShortcuts: Record<string, string> = {
   'o-card-cover': 'children-w-full children-aspect-video',
   'o-card-header': 'fb px-4 py-2.5',
   'o-card-header-wrapper': 'flex flex-col flex-1 gap-1.5',
-  'o-card-header-title': 'text-md',
+  'o-card-header-title': 'text-md dark:c-#ECECEC!',
   'o-card-header-description':
-    'text-xs c-context:60 dark:c-rgba(255,255,255,.7) break-all !m-0',
+    'text-xs c-context:60 dark:c-rgba(255,255,255,.7) break-all !m-0 dark:c-white!',
   'o-card-header-extra': '',
-  'o-card-body': 'p-4 pt-1.5 leading-normal text-sm',
+  'o-card-body': 'p-4 pt-1.5 leading-normal text-sm dark:c-#7C7C7D!',
   'o-card-actions': 'p-4 pt-2',
   'o-card-bordered':
     'border border-light-700 dark:border-#4C4D4F important-shadow-none',

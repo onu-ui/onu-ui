@@ -9,20 +9,23 @@ const slots = useSlots()
 const needRenderHeader = computed(() => !slots.header && (props.title || props.description || props.extra || slots.extra))
 const needRenderBody = computed(() => props.content || slots.default)
 const needRenderActions = computed(() => slots.actions)
+const isDark = computed(() => useDark())
+
+const showBorderd = computed(() => isDark.value || props.bordered)
 
 const bodyCls = computed(() => {
   const cls = ['o-card-body']
-  if (props.bordered) {
+  if (showBorderd.value) {
     cls.push('pt-4')
     if (needRenderHeader.value)
-      cls.push('b-t border-light-700 dark:border-#4C4D4F')
+      cls.push('b-t border-light-700 dark:border-#4C4D4F dark:c-#7C7C7D!')
   }
   return cls
 })
 </script>
 
 <template>
-  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable', alwaysShadow && 'o-card-shadow-always']">
+  <div class="o-card" :class="[`o-card-${size}`, showBorderd && 'o-card-bordered', hoverable && 'o-card-hoverable', alwaysShadow && 'o-card-shadow-always']">
     <!-- cover -->
     <div v-if="cover" class="o-card-cover">
       <img :src="cover">

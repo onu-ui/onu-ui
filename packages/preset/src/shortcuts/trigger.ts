@@ -1,9 +1,9 @@
 export const triggerShortcuts: Record<string, string> = {
   // trigger
   'o-trigger-popup-content':
-    'box-border px-3 py-4 shadow-trigger rounded bg-light-100 c-context dark:bg-dark-700 dark:border-#4C4D4F border-#E5E6EB border',
+    'box-border px-3 py-4 shadow-trigger rounded bg-light-100 dark:bg-#373739  c-context dark:border-#4C4D4F border-#E5E6EB border',
   'o-trigger-popup-arrow':
-    'absolute z-2 bg-light-100 border b-light-900 box-border w-2 h-2 ',
+    'absolute z-2 bg-light-100 dark:bg-#373739 border b-light-900 dark:b-#484849 box-border w-2 h-2 ',
   'o-trigger-top': 'b-t-0 b-l-0 rounded-br-sm',
   'o-trigger-left': 'b-b-0 b-l-0 rounded-tr-sm',
   'o-trigger-right': 'b-t-0 b-r-0 rounded-bl-sm',
