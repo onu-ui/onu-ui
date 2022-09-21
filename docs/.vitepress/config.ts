@@ -104,6 +104,10 @@ const sidebar = {
           text: 'Popup',
           link: '/components/popup',
         },
+        {
+          text: 'Collapse',
+          link: '/components/collapse',
+        },
       ],
     },
   ],
