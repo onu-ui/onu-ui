@@ -25,7 +25,7 @@
     "onu": "./bin/index.mjs"
   },
   "scripts": {
-    "build": "",
+    "build": "unbuild",
     "stub": "unbuild --stub",
     "start": "esno src/index.ts"
   },

@@ -16,9 +16,6 @@ declare module 'vue' {
     ORate: typeof import('@onu-ui/components')['ORate']
     OSwitch: typeof import('@onu-ui/components')['OSwitch']
     OTag: typeof import('@onu-ui/components')['OTag']
-    OBadge: typeof import('@onu-ui/components')['OBadge']
-    OPopup: typeof import('@onu-ui/components')['OPopup']
-    ORate: typeof import('@onu-ui/components')['ORate']
     OTrigger: typeof import('@onu-ui/components')['OTrigger']
   }
 }

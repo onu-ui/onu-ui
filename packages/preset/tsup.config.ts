@@ -6,4 +6,5 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   external: ['unocss'],
   dts: true,
+  minify: true,
 })
