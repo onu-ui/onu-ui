@@ -72,7 +72,7 @@ const iconTypeMap = {
         <div
           v-if="props.closable"
         >
-          <o-icon name="i-carbon-close" class="!text-white text-xl" />
+          <o-icon name="i-carbon-close" class="!text-white text-base" />
         </div>
       </div>
     </div>
