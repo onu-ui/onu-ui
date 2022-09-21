@@ -9,6 +9,8 @@ declare global {
   const OButton: typeof import('onu-ui')['OButton']
   const OCard: typeof import('onu-ui')['OCard']
   const OCheckbox: typeof import('onu-ui')['OCheckbox']
+  const OCollapse: typeof import('onu-ui')['OCollapse']
+  const OCollapseItem: typeof import('onu-ui')['OCollapseItem']
   const OIcon: typeof import('onu-ui')['OIcon']
   const OMessage: typeof import('onu-ui')['OMessage']
   const OPopup: typeof import('onu-ui')['OPopup']
@@ -283,6 +285,8 @@ declare module '@vue/runtime-core' {
     readonly OButton: UnwrapRef<typeof import('onu-ui')['OButton']>
     readonly OCard: UnwrapRef<typeof import('onu-ui')['OCard']>
     readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
+    readonly OCollapse: UnwrapRef<typeof import('onu-ui')['OCollapse']>
+    readonly OCollapseItem: UnwrapRef<typeof import('onu-ui')['OCollapseItem']>
     readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
     readonly OMessage: UnwrapRef<typeof import('onu-ui')['OMessage']>
     readonly OPopup: UnwrapRef<typeof import('onu-ui')['OPopup']>

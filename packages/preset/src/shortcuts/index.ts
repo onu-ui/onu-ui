@@ -7,6 +7,7 @@ import { badgeShortcuts } from './badge'
 import { buttonShortcuts } from './button'
 import { cardShortcuts } from './card'
 import { checkboxShortcuts } from './checkbox'
+import { collapseShortcuts } from './collapse'
 import { iconShortcuts } from './icon'
 import { messageDynamicShortcuts, messageShortcuts } from './message'
 import { switchShortcuts } from './switch'
@@ -34,6 +35,8 @@ export default [
   cardShortcuts,
   // checkbox
   checkboxShortcuts,
+  // collapse
+  collapseShortcuts,
   // icon
   iconShortcuts,
   // message
