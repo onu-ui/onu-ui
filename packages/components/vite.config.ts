@@ -6,7 +6,12 @@ import UnoCSS from 'unocss/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import dts from 'vite-plugin-dts'
 import AutoImport from 'unplugin-auto-import/vite'
+import fs from 'fs-extra'
+import type { ResolvedConfig } from 'vite'
 // https://vitejs.dev/config/
+
+let config: ResolvedConfig = undefined!
+
 export default defineConfig({
   build: {
     lib: {
@@ -32,5 +37,19 @@ export default defineConfig({
       imports: ['vue', '@vueuse/core'],
       dts: 'auto-imports.d.ts',
     }),
+    {
+      name: 'vite-plugin-copy-style',
+      apply: 'build',
+      enforce: 'post',
+      configResolved(_config) {
+        config = _config
+      },
+      async closeBundle() {
+        const { root, build } = config
+        const { outDir } = build
+        const styleFile = resolve(root, outDir, 'style.css')
+        await fs.copyFile(styleFile, resolve(__dirname, '../onu-ui/src/style.css'))
+      },
+    },
   ],
 })
