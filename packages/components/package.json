@@ -32,7 +32,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vite build && pnpm run --filter '../onu-ui' build",
+    "build": "vite build && pnpm run --filter \"../onu-ui\" build",
     "stub": "vite build --watch"
   },
   "peerDependencies": {
