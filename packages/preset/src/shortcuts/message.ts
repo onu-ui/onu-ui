@@ -5,7 +5,7 @@ export const messageShortcuts: Record<string, string> = {
   // message
   'o-message-base':
   `fixed top-5 o-solid left-1/2 translate-x--1/2 z-1000 o-transition
-   shadow-md p3 fi rounded of-hidden gap-3`,
+   shadow-md py-2 px-3 fi rounded of-hidden gap-3 text-sm`,
   'o-message-closable': 'cursor-pointer',
   'o-message-content': 'fi gap-2',
 }

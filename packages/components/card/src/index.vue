@@ -15,14 +15,14 @@ const bodyCls = computed(() => {
   if (props.bordered) {
     cls.push('pt-4')
     if (needRenderHeader.value)
-      cls.push('b-t border-light-700 dark:border-#4C4D4F')
+      cls.push('b-t border-light-700 dark:b-darkBd dark:c-darkText')
   }
   return cls
 })
 </script>
 
 <template>
-  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable']">
+  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable', alwaysShadow && 'o-card-shadow-always']">
     <!-- cover -->
     <div v-if="cover" class="o-card-cover">
       <img :src="cover">

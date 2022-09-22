@@ -10,6 +10,14 @@ export default {
     error: '#FF5C5C',
     info: '#373e47',
     placeholder: '#dcdcdc',
+    darkBd: '#4C4D4F',
+    grayBd: '#484849',
+    darkBg: '#373739',
+    darkTitle: '#ECECEC',
+    darkText: '#7C7C7D',
+    darkSubText: 'rgba(255,255,255,.7)',
+    softBd: '#E5E6EB',
+    grayBg: '#373739',
   },
   fontFamily: {
     sans: 'Avenir, Helvetica, Arial, sans-serif',
@@ -21,6 +29,8 @@ export default {
     switchActive:
       'calc(var(--o-switch-offset)) 0 0 2px var(--o-switch-c) inset, 0 0 0 2px var(--o-switch-c) inset;',
     trigger: '0px 4px 10px #0000001a',
+    cardMD: '0px 0px 12px rgb(0 0 0 / 12%)',
+    cardSM: '0px 0px 6px rgb(0 0 0 / 12%)',
   },
   animation: {
     keyframes: {

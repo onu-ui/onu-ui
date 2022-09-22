@@ -29,6 +29,8 @@ export const cardProps = {
   },
   /** 悬浮阴影 */
   hoverable: Boolean,
+  /** 始终展示阴影 */
+  alwaysShadow: Boolean,
   /** 边框 */
   bordered: Boolean,
   /** 头部内容区 */

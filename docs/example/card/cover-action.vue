@@ -11,7 +11,7 @@
       <div fbc un-children="flex items-center gap-2">
         <div>
           <O-Avatar size="xs" :src="cover" />
-          <span>User</span>
+          <span class="dark:c-darkText">User</span>
         </div>
         <div gap-4>
           <div o-primary>
