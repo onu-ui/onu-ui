@@ -31,19 +31,20 @@ If the value is 0, it will not be displayed. You can set `showZero` attribute to
 
 <demo src="../example/badge/showZero.vue"></demo>
 
-## Props
+## Badge Props
 
-| Attribute         | Description                               | Type                 | Accepted Values       | Default                  |
-| ----------------- | ----------------------------------------- | ------------         | --------------------- | ------------------------ |
-| value             | Display badge content                     | `string` \| `number` |                       |                          |
-| max               | Greater than `${max}`, display `${max}+`. | `number`             |                       | `99`                     |
-| dot               | Only a dot style                          | `boolean`            |                       | `false`                  |
-| showZero          | Whether to display the number 0           | `boolean`            |                       | `false`                  |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | `string` \| `number`  | `undefined` | Display badge content. |
+| max | `number` | `99` | Greater than `${max}`, display `${max}+`. |
+| dot | `boolean` | `false` | Only a dot style. |
+| showZero | `boolean` | `false` | Whether to display the number 0. |
 
-## Slots
 
-| Name    | Description                 |
-| ------- | --------------------------- |
-| default | Badge's content.            |
+## Badge Slots
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Badge's content. |
 
 

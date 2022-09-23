@@ -40,32 +40,33 @@ Arrow placement on item.
 
 ## Collapse Props
 
-| Attribute         | Description                               | Type                 | Accepted Values       | Default                  |
-| ----------------- | ----------------------------------------- | ------------         | --------------------- | ------------------------ |
-| arrordion             | accordion mode                     | `Boolean` |    `True`/`False`                   |      `False`                    |
-| expandedNames               | contains the names of the expanded panels. |  Array<`String`/`Number`> |              |        []               | 
-
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| arrordion | `boolean` | `false` | Accordion mode. |
+| expandedNames | `Array<string \| number>` | `[]` | Contains the names of the expanded panels. |
 
 
 ## CollapseItem Props
-| Attribute         | Description                               | Type                 | Accepted Values       | Default                  |
-| ----------------- | ----------------------------------------- | ------------         | --------------------- | ------------------------ |
-| title             | Display collapse item title content                     | `string` |                       |        ''                  |
-| icon               | Display icon before title text. |              |                       | ``                     |
-| disabled               | Disabled this                          | `boolean`            |                       | `false`                  |
-| arrow-placement          | Display arrow placement in collapse item.           | `left`/'right'            |                       | `left`                  |
 
-## Collapse Item Slots
-| Name | Description |
-| ----------------- | ----------------------------------------- | 
-| default | collapse item content. |
-| title   | collapse item title text. |
-| icon    | collapse item icon . |  
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | `string` | `undefined` | Display collapse item title. |
+| icon | `string` | `undefined` | Display icon before title. |
+| disabled | `boolean` | `false`  | Disabled collapseItem. |
+| arrow-placement | `'left' \| 'right'` | `left` | Display arrow placement in collapse item. |
 
 
-## CollapseItem events
+## CollapseItem Slots
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Collapse item content. |
+| title | `()` | Collapse item title text. |
+| icon | `()` | Collapse item icon. |
 
 
-| Event Name       | Parameters                                                                                      | Description                              |
-|------------------|-------------------------------------------------------------------------------------------------|------------------------------------------|
-| change           | `ExpandedNames`  | triggers when click collapse item  |
+## CollapseItem Methods
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| change | `(value: CollapseActiveName) => typeof isNumber(value) \|\| isString(value) \|\| isArray(value)` | Triggers when click collapse item. |

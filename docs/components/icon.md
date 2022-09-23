@@ -26,15 +26,16 @@ Get all icons, try on [icones](https://icones.js.org/)
 ![](https://raw.githubusercontent.com/antfu/icones/main/screenshots/2.png)
 ![](https://raw.githubusercontent.com/antfu/icones/main/screenshots/6.png)
 
-## Icon Attributes
+## Icon Props
 
-| Attribute | Description                | Type                           | Acceptable Value | Default                |
-| --------- | -------------------------- | ------------------------------ | ---------------- | ---------------------- |
-| o     | icon's theme color   | Pick\<CSSProperties, 'color'\> / primary / secondary / success / warning / error / info | -                | inherit from color     |
-| name      | icon's name | String                 | -                | - |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | `string` | `undefined` | Icon's name. |
+| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `undefined` | Inherit from color. |
+
 
 ## Icon Slots
 
-| Name | Description               |
-| ---- | ------------------------- |
-| —    | customize default content |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Customize default content |

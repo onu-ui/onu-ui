@@ -47,13 +47,15 @@ Use `disabled` attribute to determine whether a switch is disabled. It accepts a
 
 TODO
 
-## Switch Attributes
+## Switch Props
 
-| Attribute         | Description                               | Type         | Accepted Values       | Default                  |
-| ----------------- | ----------------------------------------- | ------------ | --------------------- | ------------------------ |
-| size              | switch size                               | string       | `sm` `md` `lg`        | `md`                     |
-| o                 | switch type                               | string       | `primary`  `secondary`  `success`  `warning`  `error`  `info`  | —  |
-| light             | determine whether it's a light switch     | boolean      | —                     | `false`                  |
-| background-color  | custom the switch dot or background color | string       | —                     |   —                      |
-| disabled          | disable the switch                        | boolean      | —                     | `false`                  |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modelValue / v-model | `boolean` | `false` | Binding value. |
+| size | ` 'sm' \| 'md' \| 'lg'` | `'md'` | Switch size. |
+| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Switch type. |
+| light | `boolean` | `false` | Determine whether it's a light switch.     | boolean |
+| disabled | `boolean` | `false` | Disable the switch. |
+| background-color | `string` | `undefined` | Custom the switch dot or background color. |
+
 

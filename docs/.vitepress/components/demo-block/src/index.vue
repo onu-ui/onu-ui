@@ -33,13 +33,13 @@ const [value, toggle] = useToggle()
           <a class="o-demo_action_item" group @click="copy()">
             <div class="o-demo_action_icon i-carbon:copy" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
-              {{ copied ? 'copied' : 'copy' }}
+              {{ copied ? 'Copied' : 'Copy code' }}
             </div>
           </a>
           <a class="o-demo_action_item" group @click="toggle()">
             <div class="o-demo_action_icon i-carbon:fit-to-width" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
-              {{ value ? 'hidden code' : 'show code' }}
+              {{ value ? 'Hidden code' : 'Show code' }}
             </div>
           </a>
         </div>

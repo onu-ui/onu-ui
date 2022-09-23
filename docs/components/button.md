@@ -67,22 +67,23 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 
 <demo src="../example/button/size.vue"></demo>
 
-## Button Attributes
+## Button Props
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Button size.  |
+| light | `boolean` | `false` |  Determine whether it's a light button.  |
+| text | `boolean` | `false` | Determine whether it's a text button. |
+| to | `string` | `undefined` | Determine whether it's a link button. |
+| rounded | `boolean` | `false` | Determine whether it's a round button. |
+| loading | `boolean` | `false` | Determine whether it's loading.  |
+| disabled | `boolean` | `false` | Disable the button. |
+| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Button type. |
 
-| Attribute         | Description                                                     | Type                                   | Accepted Values                                               | Default |
-| ----------------- | --------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------- | ------- |
-| size              | button size                                                     | string                                 | xs / sm / md / lg                                        | md      |
-| o              | button type                                                     | string                                 | primary / secondary / success / warning / error / info  | —       |
-| light             | determine whether it's a light button                           | boolean                                | —                                                             | false   |
-| text              | determine whether it's a text button                            | boolean                                | —                                                             | false   |
-| to              | determine whether it's a link button                            | String                                | —                                                             |   —   |
-| rounded             | determine whether it's a round button                           | String                                | —                                                             | ''   |
-| loading           | determine whether it's loading                                  | boolean                                | —                                                             | false   |
-| disabled          | disable the button                                              | boolean                                | —                                                             | false   |
+
 
 ## Button Slots
 
-| Name    | Description                 |
-| ------- | --------------------------- |
-| —       | customize default content   |
-| icon    | customize icon component    |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Customize default content. |
+| icon | `()` | Customize icon component. |

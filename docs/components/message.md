@@ -33,19 +33,20 @@ Use `duration` to control the `message` components display time. the defaultValu
 
 
 
-## Message Attributes
+## Message Props
 
-| Attribute         | Description   | Type    | Accepted Values         | Default |
-| ----------------- | --------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------- | ------- |
-| type              | theme | String  |  primary / secondary / success / warning / error / info    | primary      |
-| content           | message content| String |  -    | ''      |
-| closable          | show closable | Boolean |  true/false    | false      |
-| icon              | content icon| String |  -    | '' |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'`| Message theme. |
+| content | `string` | `undefined` | Message content. |
+| closable | `boolean` | `false` | Whether the message can be closed. |
+| icon | `string` | `undefined` | Customize message icon. |
 
 
 
 ## Message methods 
 
-| Event Name       | Parameters                                                                                      | Description                              |
-|------------------|-------------------------------------------------------------------------------------------------|------------------------------------------|
-| close           | void  | triggers when the message was closed  |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| close | `() => void` | Triggers when the message was closed. |
+

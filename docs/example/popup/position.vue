@@ -1,7 +1,7 @@
 <template>
-  <div :style="{ position: 'relative', width: '440px', height: '280px' }">
+  <div grid="~ gap-3 cols-1 md:cols-2 xl:cols-3" mx-auto>
     <o-popup position="top-left">
-      <o-button class="button" :style="{ position: 'absolute', top: '0', left: '70px' }">
+      <o-button>
         top-left
       </o-button>
       <template #content>
@@ -10,7 +10,7 @@
       </template>
     </o-popup>
     <o-popup position="top">
-      <o-button class="button" :style="{ position: 'absolute', top: '0', left: '200px' }">
+      <o-button>
         top
       </o-button>
       <template #content>
@@ -19,7 +19,7 @@
       </template>
     </o-popup>
     <o-popup position="top-right">
-      <o-button class="button" :style="{ position: 'absolute', top: '0', left: '330px' }">
+      <o-button>
         top-right
       </o-button>
       <template #content>
@@ -28,7 +28,7 @@
       </template>
     </o-popup>
     <o-popup position="bottom-left">
-      <o-button class="button" :style="{ position: 'absolute', top: '240px', left: '70px' }">
+      <o-button>
         bottom-left
       </o-button>
       <template #content>
@@ -37,7 +37,7 @@
       </template>
     </o-popup>
     <o-popup position="bottom">
-      <o-button class="button" :style="{ position: 'absolute', top: '240px', left: '200px' }">
+      <o-button>
         bottom
       </o-button>
       <template #content>
@@ -46,7 +46,7 @@
       </template>
     </o-popup>
     <o-popup position="bottom-right">
-      <o-button class="button" :style="{ position: 'absolute', top: '240px', left: '330px' }">
+      <o-button>
         bottom-right
       </o-button>
       <template #content>
@@ -55,7 +55,7 @@
       </template>
     </o-popup>
     <o-popup position="left-top">
-      <o-button class="button" :style="{ position: 'absolute', top: '60px', left: '10px' }">
+      <o-button>
         left-top
       </o-button>
       <template #content>
@@ -64,7 +64,7 @@
       </template>
     </o-popup>
     <o-popup position="left">
-      <o-button class="button" :style="{ position: 'absolute', top: '120px', left: '10px' }">
+      <o-button>
         left
       </o-button>
       <template #content>
@@ -73,7 +73,7 @@
       </template>
     </o-popup>
     <o-popup position="left-bottom">
-      <o-button class="button" :style="{ position: 'absolute', top: '180px', left: '10px' }">
+      <o-button>
         left-bottom
       </o-button>
       <template #content>
@@ -82,7 +82,7 @@
       </template>
     </o-popup>
     <o-popup position="right-top">
-      <o-button class="button" :style="{ position: 'absolute', top: '60px', left: '390px' }">
+      <o-button>
         right-top
       </o-button>
       <template #content>
@@ -91,7 +91,7 @@
       </template>
     </o-popup>
     <o-popup position="right">
-      <o-button class="button" :style="{ position: 'absolute', top: '120px', left: '390px' }">
+      <o-button>
         right
       </o-button>
       <template #content>
@@ -100,7 +100,7 @@
       </template>
     </o-popup>
     <o-popup position="right-bottom">
-      <o-button class="button" :style="{ position: 'absolute', top: '180px', left: '390px' }">
+      <o-button>
         right-bottom
       </o-button>
       <template #content>
@@ -110,9 +110,3 @@
     </o-popup>
   </div>
 </template>
-
-<style scoped>
-.button {
-  width: 120px;
-}
-</style>

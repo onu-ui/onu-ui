@@ -25,22 +25,24 @@ Half-stars can also be achieved by adding an `allow-half` attribute when rating.
 <demo src="../example/rate/halfStar.vue"></demo>
 
 
-## Props
+## Rate Props
 
-| Attribute  | Description                            | Type       | Accepted Values | Default   |
-|------------|----------------------------------------|------------|-----------------|-----------|
-| modelValue | binding value                          | `number`   |                 | `0`       |
-| max        | max rating score                       | `number`   |                 | `5`       |
-| readonly   | whether Rate is read-only              | `boolean`  |                 | `false`   |
-| allow-half | whether picking half start is allowed  | `boolean`  |                 | `false`   |
-| color      | selected icon color                    | `string`   |                 | `warning` |
-| void-color | unselected icon color                  | `string`   |                 | `-`       |
-| text       | text displayed at the end of the star  | `string`   |                 | `-`       |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modelValue / v-model | `number` | `0` | Binding value. |
+| max | `number` | `5`  | Max rating score. |
+| readonly | `boolean` | `false` | Whether Rate is read-only. |
+| allow-half | `boolean` | `false` | Whether picking half start is allowed. |
+| color | `string` | `warning` | Selected icon color. |
+| void-color | `string` | `undefined` | Unselected icon color. |
+| text | `string` | `undefined` | Text displayed at the end of the star.  |
 
-## Event
 
-| Name   | Parameters            | Description                          |
-|--------|-----------------------|--------------------------------------|
-| change | value after changing  | Triggers when rate value is changed  |
+## Rate Methods
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| change | `(value: number) => void` | Triggers when rate value is changed. |
+
 
 

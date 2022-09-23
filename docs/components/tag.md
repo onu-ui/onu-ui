@@ -53,26 +53,29 @@ Tag can also be rounded like button.
 
 TODO
 
-## Tag Attributes
+## Tag Props
 
-| Attribute           | Description                          | Type    | Accepted Values             | Default |
-| ------------------- | ------------------------------------ | ------- | --------------------------- | ------- |
-| o                | component type                       | string  | primary / secondary / success / warning / error / info | —       |
-| closable            | whether Tag can be removed           | boolean | —                           | false   |
-| bgColor               | background color of the Tag          | string  | —                           | —       |
-| size                | tag size                             | string  |  xs / sm / md / lg      | md |
-| light              | light theme                      | boolean  | true / false        | light   |
-| rounded               | whether Tag is rounded               | boolean | —                           | false   |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Tag size.  |
+| light | `boolean` | `false` |  Determine whether it's a light tag.  |
+| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Tag type. |
+| closable | `boolean` | `false` | Whether Tag can be removed. |
+| bgColor | `string` | `undefined` | Background color of the tag. |
+| rounded | `boolean` | `false`  | Whether tag is rounded. |
 
-## Tag Events
-
-| Event Name | Description                  | Parameters |
-| ---------- | ---------------------------- | ---------- |
-| click      | triggers when Tag is clicked | —          |
-| close      | triggers when Tag is removed | —          |
 
 ## Tag Slots
 
-| Name | Description               |
-| ---- | ------------------------- |
-| —    | customize default content |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Customize default content. |
+
+## Tag Methods
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| click | `() => void` | Triggers when Tag is clicked. |
+| close | `() => void` | Triggers when Tag is removed. |
+
+
