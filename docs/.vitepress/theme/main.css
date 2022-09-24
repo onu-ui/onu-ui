@@ -211,6 +211,6 @@ b {
   border: 1px solid #8882;
 }
 
-.o-button-base {
-  color: white !important;
+.vp-doc button {
+  outline: none
 }
