@@ -1,6 +1,6 @@
 export const tagShortcuts: Record<string, string> = {
   // tag
-  'o-tag-base': 'fcc gap-1 rounded inline-flex box-border !outline-none c-context o-solid  mx-1',
+  'o-tag-base': 'fcc gap-1 rounded inline-flex box-border !focus:outline-none c-context o-solid  mx-1',
   'o-tag-is-closable': 'pr-7px',
   'o-tag-xs': 'px-1.5 h-5 text-xs',
   'o-tag-sm': 'px-2.5 h-6 text-sm',

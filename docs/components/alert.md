@@ -51,32 +51,33 @@ Use the `center` attribute to center the text.
 
 <demo src="../example/alert/center.vue"></demo>
 
+## Alert Props
 
-
-## Alert Attributes
-
-| Name          | Description                       | Type                                          | Default   | Required |
-| ------------- | --------------------------------- | --------------------------------------------- | --------- | -------- |
-| `title`       | alert title.                      | `string`                                      | —         | No       |
-| `description`       | alert message.                      | `string`                                      | —         | No       |
-| `o`        | alert type.                       | `primary` / `secondary` / `success` / `warning` / `error` / `info` | `primary`                  | `string`                                      | —         | No       |
-| `closable`    | whether closable or not.          | `boolean`                                     | `true`    | No       |
-| `center`      | whether to center the text.       | `boolean`                                     | `false`   | No       |
-| `close-text`  | customized close button text.     | `string`                                      | —         | No       |
-| `icon`   | whether a type icon is displayed. | `boolean`                                     | `false`   | No       |
-| `light`      | theme style.                      | `boolean`                           | `false` | No       |
-
-##  Alert Events
-
-| Name    | Description                   | Type                        |
-| ------- | ----------------------------- | --------------------------- |
-| `close` | trigger when alert is closed. | `(evt: MouseEvent) => void` |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Alert type. |
+| title | `string` | `undefined` | Alert title. |
+| description | `string` | `undefined` | Alert message. |
+| closable | `boolean` | `false` | Whether the alert can be closed. |
+| center | `boolean` | `false` | Whether to center the text. |
+| close-text | `string` | `''` | Customized close button text. |
+| icon | `string` | `undefined` | Customized alert icon. |
+| light | `boolean` | `false` |  Determine whether it's a light alert.  |
 
 ##  Alert Slots
 
-| Name      | Description                       |
-| --------- | --------------------------------- |
-| `default` | content of the alert description. |
-| `title`   | content of the alert title.       |
-| `icon`    | icon of the alert content.        |
-| `close`    | close area of the alert header.        |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Content of the alert description. |
+| title | `()` | Content of the alert title. |
+| icon | `()` | Icon of the alert content. |
+| close | `()` | Close area of the alert header. |
+
+
+##  Alert Methods
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| close | `(evt: MouseEvent) => void` | Trigger when alert is closed. |
+
+

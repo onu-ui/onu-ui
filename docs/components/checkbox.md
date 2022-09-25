@@ -22,41 +22,34 @@ A group of options for multiple choices.
 Disabled state for checkbox.
 <demo src="../example/checkbox/disabled.vue"></demo>
 
+### Size
 
-### Indeterminate
+The Checkbox accepts `md` and `lg` properties to change its size.
 
-The indeterminate checked state of checkbox
-<demo src="../example/checkbox/indeterminate.vue"></demo>
+<demo src="../example/checkbox/size.vue"></demo>
 
-### Custom check value
+### Custom Checkbox
 
-`true-label` and `false-label` can set custom check value
-
-<demo src="../example/checkbox/custom-label.vue"></demo>
+You can define the `icon` property to customize the checkbox's icon.
 
 
-
-## Props
-
-### checkbox-props
-
-| Attribute         | Type                        | Default   | Description             |
-|-------------------|-----------------------------|-----------|----------------|
-| modelValue        | `Boolean / String / Number` | `-`       | binding value            |
-| name              | `String`                    | `-`       | native 'name' attribute  |
-| disabled          | `Boolean`                   | `false`   | whether the Checkbox is disabled             |
-| indeterminate     | `Boolean`                   | `false`   | The indeterminate checked state of checkbox |
-| true-label        | `String / Number`           | `-`       | value of the Checkbox if it's checked        |
-| false-label       | `String / Number`           | `-`       | value of the Checkbox if it's not checked      |
+<demo src="../example/checkbox/custom.vue"></demo>
 
 
-## Emits
 
-### checkbox-emit
 
-| Event Name       | Parameters                                                                                      | Description                              |
-|------------------|-------------------------------------------------------------------------------------------------|------------------------------------------|
-| change           | The changed value, returns the corresponding value when `true-label` and `false-label` are set  | triggers when the binding value changes  |
+## Checkbox Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modelValue / v-model | `boolean` \| `string` \| `number` | `undefined` | Binding value. |
+| name | `string` | `undefined` | Native 'name' attribute. |
+| size | `'md' \| 'lg'` | `md` | Checkbox's size. |
+| icon | `string` | `i-carbon-checkmark` | Customize icon's name. |
+| disabled | `boolean` | `false` | Whether the Checkbox is disabled. |
+|label |	`string`	| `undefined` |	Checkbox label. |
+
+
 
 
 

@@ -61,27 +61,27 @@ Here is the fully defined form of the card exaples.
 
 <demo src="../example/card/comprehensive.vue"></demo>
 
-## Card Attributes
+## Card Props
 
-| Attribute   | Description                      | Type           | Accepted Values | Default |
-| ----------- | -------------------------------- | -------------- | --------------- | ------- |
-| title       | Card title                       | String         | —               |         |
-| description | Card description                 | String         | —               |         |
-| content     | Card content                     | String         | —               |         |
-| cover       | Card header's cover              | String         | —               |         |
-| size        | size of the card                 | String         | sm/md           | md      |
-| hoverable   | Whether hover show card's shadow | Boolean        | true/false      | false   |
-| always-shadow   | Whether always show card's shadow | Boolean        | true/false      | false   |
-| bordered    | Whether show border              | Boolean        | true/false      | false   |
-| header      | customer card's header           | string / VNode | —               | —       |
-| extra       | customer card's header extra     | string / VNode | —               | —       |
-| actions     | customer card's actions bar      | string / VNode | —               | —       |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | `string` | `undefined` | Card title. |
+| description | `string` | `undefined` | Card description. |
+| content | `string` | `undefined` | Card content. |
+| cover | `string` | `undefined` | Card header's cover. |
+| size | `'sm' \| 'md' ` | `'md'` | Size of the card. |
+| hoverable | `boolean` | `false` | Whether hover show card's shadow. |
+| always-shadow | `boolean` | `false` | Whether always show card's shadow |
+| bordered | `boolean` | `false` | Whether show Card border. |
+| header | `string` \| `VNode` | `undefined` | Customer card's header. |
+| extra | `string` \| `VNode` | `undefined` | Customer card's header extra. |
+| actions | `string` \| `VNode` | `undefined` | Customer card's actions bar. |
 
 ## Card Slots
 
-| Name   | Description                |
-| ------ | -------------------------- |
-| —      | customize default content  |
-| header | content of the Card header |
-| extra | content of the Card extra |
-| actions | content of the Card actions |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Customize default content. |
+| header | `()` | Customize content of the Card header. |
+| extra | `()` | Customize content of the Card extra. |
+| actions | `()` | Customize content of the Card actions. |

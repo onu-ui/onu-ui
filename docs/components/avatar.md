@@ -38,24 +38,25 @@ TODO
 TODO
 
 
-## Avatar Attributes
+## Avatar Props
 
-| Name      | Description                                               | Type                                                       | Default     | Required |
-| --------- | --------------------------------------------------------- | ---------------------------------------------------------- | ----------- | -------- |
-| `size`    | avatar size.                                              | `xs` / `sm` / `md` / `lg`       | `md` | No       |
-| `mode`   | avatar mode.                                             |  `bg` / `img` | `bg`       |No
-| `src`     | the source of the image for an image avatar.              | `string`                                                   | —           | No       |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `md` | Avatar size. |
+| mode | `'bg' \| 'img'` | `'bg'` | Avatar mode. |
+| src | `string` | `undefined` | The source of the image for an image avatar. |
+
 
 
 ## Avatar Slots
 
-| Name      | Description               |
-| --------- | ------------------------- |
-| `default` | customize avatar content. |
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `()` | Customize default content |
 
 
-## Avatar Group Attributes
+## Avatar Group Props
 
-| Name      | Description                                               | Type                                                       | Default     | Required |
-| --------- | --------------------------------------------------------- | ---------------------------------------------------------- | ----------- | -------- |
-| `size`    | avatar size.                                              | `xs` / `sm` / `md` / `lg`       | `md` | No       |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `md` | Avatar Group size. |

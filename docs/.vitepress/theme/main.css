@@ -1,7 +1,9 @@
 /* /**
  * Colors
  * -------------------------------------------------------------------------- */
-
+body {
+  font-size: 15px;
+}
 :root {
   /* --vp-c-accent: #dab40b;
   --vp-c-brand: #6da13f;
@@ -10,7 +12,7 @@
   --vp-c-brand-dark: #668d11;
   --vp-c-brand-darker: #52730d; */
   /* --vp-c-text-code: #5d6f5d; */
-  --vp-code-block-bg: rgba(125,125,125,0.04);
+  --vp-code-block-bg: rgba(125, 125, 125, 0.04);
   /* fix TIP on light: the default one is too light (2 in contrast) */
   --vp-custom-block-tip-text: rgb(12, 124, 108);
   --vp-custom-block-tip-border: rgba(12, 124, 108, 0.5);
@@ -18,18 +20,74 @@
   /* fix contrast on gray cards: used by --vp-c-text-2 */
   /* --vp-c-text-light-2: rgba(56 56 56 / 70%); */
   --vp-custom-title-text: #606266;
+  --vp-layout-max-width: 1580px;
+  --vp-sidebar-width: 252px;
+  --n-td-color: #fff;
+  --n-td-color-hover: rgb(247, 247, 250, 1);
+  --n-td-color-modal: #fff;
+  --n-td-color-popover: #fff;
+  --n-td-text-color: rgb(51, 54, 57);
+  --n-border-color: rgba(239, 239, 245, 1);
+  --n-border-color-modal: rgba(239, 239, 245, 1);
+  --n-border-color-popover: rgba(239, 239, 245, 1);
+  --n-border-radius: 3px;
+  --n-font-size: 14px;
+  --n-th-color: rgba(250, 250, 252, 1);
+  --n-th-color-modal: rgba(250, 250, 252, 1);
+  --n-th-color-popover: rgba(250, 250, 252, 1);
+  --n-th-font-weight: 500;
+  --n-th-text-color: rgb(31, 34, 37);
+  --n-line-height: 1.6;
+  --n-td-padding: 12px;
+  --n-th-padding: 12px;
+  --n-td-color-striped: rgba(250, 250, 252, 1);
+  --n-td-color-striped-modal: rgba(250, 250, 252, 1);
+  --n-td-color-striped-popover: rgba(250, 250, 252, 1);
+  --n-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --n-text-color: rgb(51, 54, 57);
+  --n-font-weight-strong: 500;
+  --n-font-famliy-mono: v-mono, SFMono-Regular, Menlo, Consolas, Courier,
+    monospace;
+  --n-code-border-radius: 2px;
+  --n-code-text-color: rgb(51, 54, 57);
+  --n-code-color: rgb(244, 244, 248);
+  --n-code-border: 1px solid #0000;
 }
 
 .dark {
-  --vp-code-block-bg: rgba(0,0,0,0.2);
+  --vp-code-block-bg: rgba(0, 0, 0, 0.2);
   --vp-c-text-code: #c0cec0;
   /* fix TIP: check the same above (these are the defaults) */
   --vp-custom-block-tip-text: rgb(18, 181, 157);
   --vp-custom-block-tip-border: rgba(18, 181, 157, 0.5);
   --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1);
   /* fix contrast on gray cards: check the same above (this is the default) */
-  --vp-c-text-dark-2: rgba(235, 235, 235, 0.60);
-   --vp-custom-title-text: #CFD3DC;
+  --vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
+  --vp-custom-title-text: #cfd3dc;
+
+  --n-td-color: rgb(24, 24, 28);
+  --n-td-color-hover: rgb(38, 38, 42, 1);
+  --n-td-color-modal: rgb(44, 44, 50);
+  --n-td-color-popover: rgb(72, 72, 78);
+  --n-td-text-color: rgba(255, 255, 255, 0.82);
+  --n-border-color: rgba(45, 45, 48, 1);
+  --n-border-color-modal: rgba(63, 63, 68, 1);
+  --n-border-color-popover: rgba(88, 88, 94, 1);
+  --n-th-color: rgba(38, 38, 42, 1);
+  --n-th-color-modal: rgba(57, 57, 62, 1);
+  --n-th-color-popover: rgba(83, 83, 89, 1);
+  --n-th-text-color: rgba(255, 255, 255, 0.9);
+  --n-td-color-striped: rgba(36, 36, 39, 1);
+  --n-td-color-striped-modal: rgba(55, 55, 60, 1);
+  --n-td-color-striped-popover: rgba(81, 81, 87, 1);
+  --n-text-color: rgba(255, 255, 255, 0.82);
+  --n-font-weight-strong: 500;
+  --n-font-famliy-mono: v-mono, SFMono-Regular, Menlo, Consolas, Courier,
+    monospace;
+  --n-code-border-radius: 2px;
+  --n-code-text-color: rgba(255, 255, 255, 0.82);
+  --n-code-color: rgba(255, 255, 255, 0.12);
+  --n-code-border: 1px solid #0000;
 }
 
 .dark [img-light] {
@@ -42,13 +100,100 @@ html:not(.dark) [img-dark] {
 
 .vp-doc table {
   display: table;
+  font-size: var(--n-font-size);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--n-line-height);
   width: 100%;
-  font-size: 14px;
+  border-radius: var(--n-border-radius) var(--n-border-radius) 0 0;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background-color: var(--n-td-color);
+  border: 1px solid var(--n-merged-border-color);
+  transition: background-color 0.3s var(--n-bezier),
+    border-color 0.3s var(--n-bezier), color 0.3s var(--n-bezier);
+  --n-merged-border-color: var(--n-border-color);
 }
 
-.vp-doc h1,h2,h3,h4,h5, strong,b {
+.vp-doc table th {
+  white-space: nowrap;
+  transition: background-color 0.3s var(--n-bezier),
+    border-color 0.3s var(--n-bezier), color 0.3s var(--n-bezier);
+  text-align: inherit;
+  padding: var(--n-th-padding);
+  vertical-align: inherit;
+  text-transform: none;
+  border: 0px solid var(--n-merged-border-color);
+  font-weight: var(--n-th-font-weight);
+  color: var(--n-th-text-color);
+  background-color: var(--n-th-color);
+  border-bottom: 1px solid var(--n-merged-border-color);
+  border-right: 0px solid var(--n-merged-border-color);
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+.vp-doc table td:first-child {
+  width: 15%;
   font-weight: 600;
-  color: var(--vp-custom-title-text) ;
+  font-family: v-mono, monospace;
+  white-space: nowrap;
+}
+
+.vp-doc table tr {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  transition: background-color 0.3s var(--n-bezier);
+}
+
+.vp-doc table tbody tr:hover {
+  background-color: var(--n-td-color-hover);
+}
+.vp-doc table tbody tr:hover td {
+  background: none;
+}
+
+.vp-doc table td {
+  transition: background-color 0.3s var(--n-bezier),
+    border-color 0.3s var(--n-bezier), color 0.3s var(--n-bezier);
+  padding: var(--n-td-padding);
+  color: var(--n-td-text-color);
+  background-color: var(--n-td-color);
+  border: 0px solid var(--n-merged-border-color);
+  min-width: 110px;
+}
+
+.vp-doc table tr:not(:last-child) td {
+  border-bottom: 0px solid var(--n-merged-border-color);
+}
+
+.vp-doc :not(pre) > code {
+  line-height: 1.4;
+  display: inline-block;
+  font-family: var(--n-font-famliy-mono);
+  transition: color 0.3s var(--n-bezier), border-color 0.3s var(--n-bezier),
+    background-color 0.3s var(--n-bezier) !important;
+  box-sizing: border-box;
+  font-size: 0.9em !important;
+  padding: 0.05em 0.35em 0 0.35em !important;
+  border-radius: var(--n-code-border-radius) !important;
+  color: var(--n-code-text-color) !important;
+  background-color: var(--n-code-color) !important;
+  border: var(--n-code-border) !important;
+}
+
+.vp-doc h1,
+h2,
+h3,
+h4,
+h5,
+strong,
+b {
+  font-weight: 600;
+  color: var(--vp-custom-title-text);
 }
 
 .VPSocialLink {
@@ -60,11 +205,12 @@ html:not(.dark) [img-dark] {
   font-weight: bold;
 }
 
-.vp-doc th, .vp-doc td {
+.vp-doc th,
+.vp-doc td {
   padding: 6px 10px;
   border: 1px solid #8882;
 }
 
-.o-button-base{
-  color: white!important;
+.o-button-base {
+  color: white !important;
 }
