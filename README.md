@@ -7,7 +7,7 @@
 <a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 <p align="center">
 <a href="https://onu-ui.vercel.app/">🧑‍💻 Document <sup>Beta</sup></a> |
-<a href="https://onu.zyob.top/">🤹‍♂️ Preveiew</a>
+<a href="https://onu.zyob.top/">🤹‍♂️ Preview</a>
 </p>
 
 ## Features
