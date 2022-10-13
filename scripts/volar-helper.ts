@@ -24,12 +24,12 @@ async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
     // Replace after packaging
-    const entry = `typeof import('@onu-ui/components')['${key}']`
+    const entry = `typeof import('onu-ui')['${key}']`
     if (key.startsWith('O'))
       components[key] = entry
   })
-  const originalContent = exist(path.resolve(TYPE_ROOT, 'volar.d.ts'))
-    ? await fs.readFile(path.resolve(TYPE_ROOT, 'volar.d.ts'), 'utf-8')
+  const originalContent = exist(path.resolve(TYPE_ROOT, 'packages/onu-ui', 'volar.d.ts'))
+    ? await fs.readFile(path.resolve(TYPE_ROOT, 'packages/onu-ui', 'volar.d.ts'), 'utf-8')
     : ''
 
   const originImports = parseComponentsDeclaration(originalContent)
@@ -55,6 +55,6 @@ declare module 'vue' {
 export {}
 `
   if (code !== originalContent)
-    await fs.writeFile(path.resolve(TYPE_ROOT, 'volar.d.ts'), code, 'utf-8')
+    await fs.writeFile(path.resolve(TYPE_ROOT, 'packages/onu-ui', 'volar.d.ts'), code, 'utf-8')
 }
 generateComponentsType()

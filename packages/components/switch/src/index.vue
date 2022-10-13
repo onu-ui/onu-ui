@@ -22,9 +22,9 @@ const style: Record<string, string | undefined> = {
     v-model="mv"
     :style="style"
     type="checkbox"
+    checked
     class="o-switch"
     :class="[`o-switch-${size}`, disabled && 'o-switch-disabled']"
-    checked
     :disabled="disabled"
   >
 </template>

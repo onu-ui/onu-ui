@@ -9,7 +9,8 @@
         "docs": "pnpm -C docs run dev",
         "docs:build": "pnpm -C docs run build",
         "stub": "pnpm -r --parallel -F \"./packages/{components,preset,utils,oun-ui}\" run stub",
-        "build": "rimraf packages/*/dist && pnpm -r -F \"./packages/{preset,utils,components}\" run build && pnpm run volar:helper",
+        "move": "esno scripts/move",
+        "build": "rimraf packages/*/{dist,es,lib} && pnpm -r -F \"./packages/{preset,utils,components}\" run build && pnpm run volar:helper && pnpm run move",
         "play": "pnpm -C playground run dev",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
@@ -44,6 +45,7 @@
         "eslint-plugin-import": "^2.26.0",
         "esno": "^0.16.3",
         "fs-extra": "^10.1.0",
+        "@types/fs-extra":"^9.0.13",
         "jsdom": "^20.0.0",
         "lint-staged": "^13.0.3",
         "onu-ui": "workspace:*",
@@ -62,7 +64,8 @@
         "vite-plugin-vue-setup-extend": "^0.4.0",
         "vitepress": "1.0.0-alpha.15",
         "vitest": "0.23.4",
-        "vue": "^3.2.39"
+        "vue": "^3.2.39",
+        "fast-glob": "^3.2.12"
     },
     "simple-git-hooks": {
         "pre-commit": "npx lint-staged"
