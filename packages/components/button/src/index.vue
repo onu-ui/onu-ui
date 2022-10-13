@@ -1,19 +1,7 @@
 <script setup lang="ts" name="O-Button">
-import type { SizeType } from '../../types'
-interface IButtonProps {
-  o?: string
-  to?: string
-  light?: boolean
-  text?: boolean
-  size?: SizeType
-  disabled?: boolean
-  loading?: boolean
-}
+import { buttonProps } from './button'
 
-const props = withDefaults(defineProps<IButtonProps>(), {
-  size: 'md',
-  o: 'primary',
-})
+const props = defineProps(buttonProps)
 const slots = useSlots()
 const isDisabled = computed(() => props.loading || props.disabled)
 const onlyIcon = computed(() => slots.icon && !slots.default)

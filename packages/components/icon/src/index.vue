@@ -1,9 +1,7 @@
 <script lang='ts' setup name="O-Icon">
-interface IIconProps {
-  name: string
-}
-
-defineProps<IIconProps>()
+defineProps<{
+  name: String
+}>()
 </script>
 
 <template>

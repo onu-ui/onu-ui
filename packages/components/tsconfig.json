@@ -1,5 +1,29 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": [ "**/dist/**" ],
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"]
+  "exclude": [ "**/dist/**"],
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"],
+  "compilerOptions": {
+    "declaration": false,
+    "outDir": "dist",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "skipLibCheck": true,
+  },
+    "references": [
+      {
+        "path": "./tsconfig.node.json"
+      }
+    ]
 }

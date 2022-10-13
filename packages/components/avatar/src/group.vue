@@ -1,13 +1,7 @@
 <script lang='ts' setup name="O-Avatar-Group">
-import type { SizeType } from '../../types'
+import { avatarGroupProps } from './avatar'
 
-interface IAvatarGroupProps {
-    size: SizeType
-}
-
-withDefaults(defineProps<IAvatarGroupProps>(), {
-  size: 'md',
-})
+defineProps(avatarGroupProps)
 </script>
 
 <template>

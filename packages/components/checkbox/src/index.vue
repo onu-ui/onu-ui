@@ -1,18 +1,9 @@
 
 <script lang="ts" setup name="O-Checkbox">
 import { hash } from '@onu-ui/utils'
-interface ICheckboxProps {
-  modelValue?: boolean,
-  disabled?: boolean,
-  label?: string,
-  icon: string,
-  size?: 'md' | 'lg'
-}
+import { checkBoxProps } from './checkbox'
 
-const props = withDefaults(defineProps<ICheckboxProps>(), {
-  size: 'md',
-  icon: 'i-carbon-checkmark',
-})
+const props = defineProps(checkBoxProps)
 
 const emits = defineEmits(['update:modelValue', 'change'])
 
