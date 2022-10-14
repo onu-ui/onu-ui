@@ -5,7 +5,8 @@
     "outDir": "dist",
   },
   "exclude": [
-    "**/dist/**"
+    "**/dist/**",
+    "./unocss.config.ts",
   ],
   "include": [
     "**/*.ts",

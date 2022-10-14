@@ -18,7 +18,7 @@ export const useTeleport = ({
   defaultContainer?: string
   documentContainer?: boolean
 }) => {
-  const teleportContainer = ref(popupContainer.value)
+  const teleportContainer: any = ref(popupContainer.value)
   const containerRef = ref<HTMLElement>()
 
   const getContainer = () => {

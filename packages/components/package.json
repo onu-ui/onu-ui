@@ -32,8 +32,9 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vite build && pnpm run --filter \"../onu-ui\" build",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && pnpm run --filter \"../onu-ui\" build",
     "stub": "vite build --watch"
+
   },
   "peerDependencies": {
     "vue": "^3.2.0"

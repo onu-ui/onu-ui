@@ -65,7 +65,7 @@
         "vitepress": "1.0.0-alpha.15",
         "vitest": "0.23.4",
         "vue": "^3.2.39",
-        "fast-glob": "^3.2.12"
+        "vue-tsc":"^1.0.7"
     },
     "simple-git-hooks": {
         "pre-commit": "npx lint-staged"
