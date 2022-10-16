@@ -40,7 +40,6 @@
     "@onu-ui/preset": "workspace:*",
     "@onu-ui/utils": "workspace:*",
     "@vueuse/core": "^9.1.0",
-    "vue": "^3.2.39"
   },
   "devDependencies": {
     "resize-observer-polyfill": "^1.5.1"
