@@ -24,7 +24,7 @@ async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
     // Replace after packaging
-    const entry = `typeof import('@onu-ui/components')['${key}']`
+    const entry = `typeof import('onu-ui')['${key}']`
     if (key.startsWith('O'))
       components[key] = entry
   })

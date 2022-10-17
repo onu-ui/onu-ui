@@ -1,16 +1,7 @@
 <script lang='ts' setup name="O-Avatar">
-import type { SizeType } from '../../types'
+import { avatarProps } from './avatar'
 
-interface IAvatarProps {
-  src?: string
-  size?: SizeType
-  mode?: 'bg' | 'img'
-}
-
-const props = withDefaults(defineProps<IAvatarProps>(), {
-  size: 'md',
-  mode: 'bg',
-})
+const props = defineProps(avatarProps)
 
 const IsBgMode = computed(() => props.mode === 'bg')
 </script>

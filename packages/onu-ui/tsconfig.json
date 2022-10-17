@@ -1,12 +1,7 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-  },
   "exclude": [
-    "**/dist/**",
-    "./unocss.config.ts",
+    "**/dist/**"
   ],
   "include": [
     "**/*.ts",
@@ -14,4 +9,9 @@
     "**/*.vue",
     "**/*.tsx"
   ],
+  "compilerOptions": {
+    "declaration": false,
+    "composite": false,
+    "outDir": "./dist"
+  }
 }

@@ -24,7 +24,6 @@ const style: Record<string, string | undefined> = {
     type="checkbox"
     class="o-switch"
     :class="[`o-switch-${size}`, disabled && 'o-switch-disabled']"
-    checked
     :disabled="disabled"
   >
 </template>

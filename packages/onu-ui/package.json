@@ -17,6 +17,7 @@
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
+  "types": "./es/onu-ui/src/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -25,11 +26,13 @@
     "./dist/style.css": "./dist/style.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "es",
+    "volar.d.ts"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && vite build",
     "stub": "tsup --watch"
   },
   "bugs": {

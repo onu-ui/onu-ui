@@ -42,7 +42,7 @@ export const alertProps = {
     type: Boolean,
     default: false,
   },
-} as const
+}
 
 export const alertEmits = {
   close: (evt: MouseEvent) => evt instanceof MouseEvent,

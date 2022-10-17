@@ -32,7 +32,11 @@ export default defineConfig({
     VueJSX(),
     VueSetupExtend(),
     UnoCSS(),
-    dts(),
+    dts({
+      // debug mode  https://github.com/qmhc/vite-plugin-dts/blob/main/README.zh-CN.md#%E6%89%93%E5%8C%85%E5%90%8E%E5%87%BA%E7%8E%B0%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6%E7%BC%BA%E5%A4%B1
+      // skipDiagnostics: false,
+      // logDiagnostics: true,
+    }),
     AutoImport({
       imports: ['vue', '@vueuse/core'],
       dts: 'auto-imports.d.ts',
@@ -48,7 +52,10 @@ export default defineConfig({
         const { root, build } = config
         const { outDir } = build
         const styleFile = resolve(root, outDir, 'style.css')
-        await fs.copyFile(styleFile, resolve(__dirname, '../onu-ui/src/style.css'))
+        await fs.copyFile(
+          styleFile,
+          resolve(__dirname, '../onu-ui/src/style.css'),
+        )
       },
     },
   ],
