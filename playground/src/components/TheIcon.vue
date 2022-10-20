@@ -35,7 +35,7 @@
     </div>
     <o-button mt-4 to="https://icones.js.org/" target="_blank" o-info>
       <template #icon>
-        <o-icon o-white text-md name="i-carbon-favorite-filled" />
+        <o-icon o-white text-base name="i-carbon-favorite-filled" />
       </template>
       Find More
     </o-button>
