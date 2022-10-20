@@ -134,10 +134,7 @@ importers:
     specifiers: {}
 
   packages/utils:
-    specifiers:
-      vue: ^3.2.0
-    dependencies:
-      vue: 3.2.40
+    specifiers: {}
 
   playground:
     specifiers:

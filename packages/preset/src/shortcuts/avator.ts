@@ -9,7 +9,7 @@ export const avatorShortcuts: Record<string, string> = {
   'o-avatar-xs': 'h-6 text-xs shadow-xs',
   'o-avatar-sm': 'h-8 text-sm shadow-sm',
   'o-avatar-md': 'h-10 text-sm shadow-md',
-  'o-avatar-lg': 'h-15 text-md shadow-md',
+  'o-avatar-lg': 'h-15 text-base shadow-md',
   'o-avatar-group-base': 'flex space-x--4 children-relative',
 
 }
@@ -22,7 +22,7 @@ export const avatorDynamicShortcuts: DynamicShortcut[] = [
         xs: 'h-6 text-xs shadow-xs',
         sm: 'h-8 text-sm shadow-sm',
         md: 'h-10 text-sm shadow-md',
-        lg: 'h-15 text-md shadow-md',
+        lg: 'h-15 text-base shadow-md',
       }
       const avatarGroupSpaceMap: Record<SizeType, string> = {
         xs: 'space-x--2',
