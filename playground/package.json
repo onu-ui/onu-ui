@@ -3,17 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --port=9898 --open --host --force",
+    "dev": "vite --port=9898 --open",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
-    "@unocss/reset": "^0.44.5",
+    "onu-ui": "workspace:*",
+    "vue": "^3.2.41",
     "vue-router": "^4.1.4"
   },
   "devDependencies": {
-    "onu-ui": "workspace:*",
-    "resize-observer-polyfill":"^1.5.1",
+    "@unocss/reset": "^0.44.5",
+    "resize-observer-polyfill": "^1.5.1",
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-vue-layouts": "^0.7.0"
   }
