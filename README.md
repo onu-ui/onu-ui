@@ -23,21 +23,8 @@
 ### Full Import
 
 ```bash
-# Choose a package manager you like.
-
-# NPM
 npm i onu-ui
 npm i unocss -D
-
-# Yarn
-yarn add onu-ui
-yarn add unocss -D
-
-
-# pnpm
-pnpm add onu-ui
-npm add unocss -D
-
 ```
 Add `onu-ui` in your main entry file.
 
