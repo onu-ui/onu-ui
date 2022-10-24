@@ -21,60 +21,60 @@ const getRandomSrc = () => avatarSrcs[Math.floor(Math.random() * (avatarSrcs.len
   <OCard o="white" title="Avatar">
     <div space-y-2>
       <div fsc gap-2>
-        <O-Avatar :src="getRandomSrc()" />
-        <O-Avatar :src="getRandomSrc()" />
-        <O-Avatar :src="getRandomSrc()" />
-        <O-Avatar mode="img" :src="getRandomSrc()" />
-        <O-Avatar mode="img" :src="getRandomSrc()" />
-        <O-Avatar mode="img" :src="getRandomSrc()" />
+        <OAvatar :src="getRandomSrc()" />
+        <OAvatar :src="getRandomSrc()" />
+        <OAvatar :src="getRandomSrc()" />
+        <OAvatar mode="img" :src="getRandomSrc()" />
+        <OAvatar mode="img" :src="getRandomSrc()" />
+        <OAvatar mode="img" :src="getRandomSrc()" />
       </div>
       <div fsc gap-4>
-        <O-Avatar-Group>
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar o-info>
+        <OAvatar-Group>
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar o-info>
             +99
-          </O-Avatar>
-        </O-Avatar-Group>
-        <O-Avatar-Group size="lg">
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar :src="getRandomSrc()" />
-          <O-Avatar o-info>
+          </OAvatar>
+        </OAvatar-Group>
+        <OAvatar-Group size="lg">
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar :src="getRandomSrc()" />
+          <OAvatar o-info>
             +99
-          </O-Avatar>
-        </O-Avatar-Group>
+          </OAvatar>
+        </OAvatar-Group>
       </div>
       <div fsc gap-2>
-        <O-Avatar size="xs" :src="getRandomSrc()" />
-        <O-Avatar size="xs" rounded :src="getRandomSrc()" />
-        <O-Avatar size="sm" :src="getRandomSrc()" />
-        <O-Avatar size="sm" rounded :src="getRandomSrc()" />
-        <O-Avatar size="md" :src="getRandomSrc()" />
-        <O-Avatar size="md" rounded :src="getRandomSrc()" />
-        <O-Avatar size="lg" :src="getRandomSrc()" />
-        <O-Avatar size="lg" rounded="md" :src="getRandomSrc()" />
+        <OAvatar size="xs" :src="getRandomSrc()" />
+        <OAvatar size="xs" rounded :src="getRandomSrc()" />
+        <OAvatar size="sm" :src="getRandomSrc()" />
+        <OAvatar size="sm" rounded :src="getRandomSrc()" />
+        <OAvatar size="md" :src="getRandomSrc()" />
+        <OAvatar size="md" rounded :src="getRandomSrc()" />
+        <OAvatar size="lg" :src="getRandomSrc()" />
+        <OAvatar size="lg" rounded="md" :src="getRandomSrc()" />
       </div>
       <div fsc gap-2 />
       <div fsc gap-2>
-        <O-Avatar>
+        <OAvatar>
           <div text-primary class="i-carbon-user-certification" />
-        </O-Avatar>
-        <O-Avatar o-gray>
+        </OAvatar>
+        <OAvatar o-gray>
           <span text-xs>Avatar</span>
-        </O-Avatar>
-        <O-Avatar o-primary>
+        </OAvatar>
+        <OAvatar o-primary>
           <div text-lg i-carbon-face-satisfied-filled />
-        </O-Avatar>
-        <O-Avatar o-warning>
+        </OAvatar>
+        <OAvatar o-warning>
           <div text-lg i-carbon-bee />
-        </O-Avatar>
-        <O-Avatar o-error>
+        </OAvatar>
+        <OAvatar o-error>
           123
-        </O-Avatar>
+        </OAvatar>
       </div>
     </div>
   </OCard>
