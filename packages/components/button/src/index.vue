@@ -1,16 +1,17 @@
 <script setup lang="ts" name="O-Button">
-import { buttonProps } from './button'
+import { buttonProps } from './props'
 
 const props = defineProps(buttonProps)
 const slots = useSlots()
 const isDisabled = computed(() => props.loading || props.disabled)
 const onlyIcon = computed(() => slots.icon && !slots.default)
+const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 </script>
 
 <template>
   <component
     :is="to ? 'a' : 'button'"
-    v-bind="to && { href: to }"
+    v-bind="binds"
     :disabled="isDisabled"
     :aria-disabled="isDisabled"
     class="o-button-base"
@@ -21,7 +22,6 @@ const onlyIcon = computed(() => slots.icon && !slots.default)
       isDisabled ? 'o-disabled' : 'o-transition o-button-hover o-button-active',
       onlyIcon && 'aspect-square px-0',
     ]"
-    :o="o"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />
     <slot v-else name="icon" />

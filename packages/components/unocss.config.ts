@@ -4,7 +4,9 @@ import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDir
 export default defineConfig({
   presets: [
     presetAttributify(),
-    presetIcons(),
+    presetIcons({
+      cdn: 'https://esm.sh/'
+    }),
     presetUno(),
     presetOnu(),
   ],

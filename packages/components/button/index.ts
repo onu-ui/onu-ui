@@ -4,4 +4,4 @@ import Button from './src/index.vue'
 export const OButton = withInstall(Button)
 export default OButton
 
-export * from './src/button'
+export * from './src/props'
