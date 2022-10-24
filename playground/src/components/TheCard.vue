@@ -84,7 +84,7 @@ const description = 'This a description'
         <template #actions>
           <div fbc un-children="flex items-center gap-2">
             <div>
-              <O-Avatar size="xs" :src="cover" />
+              <OAvatar size="xs" :src="cover" />
               <span>User</span>
             </div>
             <div gap-4>

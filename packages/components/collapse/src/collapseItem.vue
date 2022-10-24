@@ -1,4 +1,4 @@
-<script setup lang="ts" name="O-Collapse-Item">
+<script setup lang="ts" name="OCollapseItem">
 // TODO test
 import { computed, inject } from 'vue'
 

@@ -1,4 +1,4 @@
-<script lang='ts' setup name="O-Avatar">
+<script lang='ts' setup name="OAvatar">
 import { avatarProps } from './avatar'
 
 const props = defineProps(avatarProps)

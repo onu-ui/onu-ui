@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
+// import Onu from 'onu-ui'
 import App from './App.vue'
+
 import '@unocss/reset/tailwind.css'
 import './style/main.css'
 import 'onu-ui/dist/style.css'

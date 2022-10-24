@@ -1,4 +1,4 @@
-<script lang="ts" setup name="O-Rate">
+<script lang="ts" setup name="ORate">
 import { computed } from 'vue'
 import OIcon from '../../icon/src/index.vue'
 import { rateProps } from './props'
