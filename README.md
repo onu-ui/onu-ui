@@ -20,6 +20,8 @@
 
 ## Usage
 
+### Full Import
+
 ```bash
 npm i onu-ui
 npm i unocss -D
@@ -34,6 +36,9 @@ import 'onu-ui/dist/style.css'
 
 createApp(App).use(OnuUI).mount('#app')
 ```
+
+### Custom UnoCSS config
+
 Custom your UnoCSS config:
 ```ts
 // uno.config.ts
@@ -50,24 +55,45 @@ export default defineConfig({
 })
 ```
 
-## Preveiew
-You can see the preview of the following commands:
+### On-demand Import:
 
-```bash
-npm run build
+You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
+
+```shell
+npm install -D unplugin-vue-components unplugin-auto-import
 ```
 
-Then you can run playground to see the result.
+Then add the code below into your Vite config file.
 
-```bash
-npm run play
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { OnuResolver } from 'onu-ui'
+
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    AutoImport({
+      resolvers: [OnuResolver()],
+
+    }),
+    Components({
+      resolvers: [OnuResolver()],
+    }),
+  ],
+})
 ```
 
-If you want start the dev server, you can run:
+## Contributing
 
-```bash
-npm run dev
-```
+Developers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contributing Guide](./CONTRIBUTING.md).
+
+Thank you to all the people who already contributed to OnuUI!
+
+<a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contrib.rocks/image?repo=onu-ui/onu-ui" /></a>
 
 ## Credits
 

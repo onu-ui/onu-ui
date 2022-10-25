@@ -1,4 +1,4 @@
-import type { SizeType, ThemeType } from '../../types'
+import type { SizeType } from '../../types'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const buttonProps = {

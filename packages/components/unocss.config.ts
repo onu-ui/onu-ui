@@ -5,7 +5,7 @@ export default defineConfig({
   presets: [
     presetAttributify(),
     presetIcons({
-      cdn: 'https://esm.sh/'
+      cdn: 'https://esm.sh/',
     }),
     presetUno(),
     presetOnu(),
