@@ -15,7 +15,7 @@
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "release": "bumpp package.json packages/**/package.json",
-        "deploy": "pnpm run docs:build",
+        "deploy": "pnpm run build && pnpm run docs:build",
         "test": "vitest",
         "test:ci": "pnpm install && pnpm run lint && pnpm run build && pnpm run test",
         "test:update": "vitest -u",
