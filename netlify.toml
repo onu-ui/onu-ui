@@ -1,11 +1,10 @@
 [build.environment]
-  NPM_FLAGS = "--version"
+  NETLIFY_USE_PNPM = "true"
   NODE_VERSION = "16"
 
 [build]
-  publish = "playground/dist"
-  command = "npx pnpm@7.5.0 i --frozen-lockfile false && npx pnpm@7.5.0 build && npx pnpm@7.5.0 run deploy"
-  ignore = "git diff --quiet HEAD^ HEAD . ../packages"
+  publish = "docs/.vitepress/dist"
+  command = "pnpm -w run deploy"
 
 [functions]
   node_bundler = "esbuild"
