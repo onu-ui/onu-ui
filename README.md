@@ -78,7 +78,6 @@ export default defineConfig({
     // ...
     AutoImport({
       resolvers: [OnuResolver()],
-
     }),
     Components({
       resolvers: [OnuResolver()],
