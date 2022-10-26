@@ -4,7 +4,6 @@ import VueJSX from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
-import Dts from 'vite-plugin-dts'
 import AutoImport from 'unplugin-auto-import/vite'
 import fs from 'fs-extra'
 import type { ResolvedConfig } from 'vite'
@@ -32,7 +31,6 @@ export default defineConfig({
     VueJSX(),
     VueSetupExtend(),
     UnoCSS(),
-    Dts(),
     AutoImport({
       imports: ['vue', '@vueuse/core'],
       dts: 'auto-imports.d.ts',

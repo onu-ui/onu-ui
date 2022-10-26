@@ -53,7 +53,7 @@ export default defineComponent({
       () => props.popupVisible ?? popupVisible.value,
     )
 
-    const hidenPopup = computed(() => props.hideEmpty && isEmptyChildren(slots.content?.()))
+    const hidenPopup = computed(() => props.hideEmpty && isEmptyChildren(slots.content?.() as any))
     let scrollElements: HTMLElement[] | undefined
 
     const { teleportContainer, containerRef } = useTeleport({
@@ -379,7 +379,7 @@ export default defineComponent({
 
     return () => {
       children.value = slots.default?.() ?? []
-      mergeFirstChild(children.value, {
+      mergeFirstChild(children.value as any, {
         onClick: handleClick,
         onMouseenter: handleMouseEnter,
         onMouseleave: handleMouseLeave,

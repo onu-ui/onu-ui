@@ -1,11 +1,7 @@
-import type { SizeType, ThemeType } from '../../types'
+import type { SizeType } from '../../types'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const buttonProps = {
-  o: {
-    type: String as PropType<ThemeType>,
-    default: 'primary'
-  },
   to: String,
   light: Boolean,
   text: Boolean,

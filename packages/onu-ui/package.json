@@ -17,23 +17,23 @@
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
-  "types": "./es/onu-ui/src/index.d.ts",
+  "types": "./dist/onu-ui/src/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "types": "./dist/onu-ui/src/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css"
   },
   "files": [
     "dist",
-    "es",
     "volar.d.ts"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup && vite build",
-    "stub": "tsup --watch"
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && tsup",
+    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && tsup --watch"
   },
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"

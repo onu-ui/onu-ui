@@ -5,7 +5,7 @@ export const useFirstElement = () => {
   const firstElement = ref<HTMLElement>()
 
   const getFirstElement = () => {
-    const element = getFirstElementFromChildren(children.value)
+    const element = getFirstElementFromChildren(children.value as any)
 
     if (element !== firstElement.value && (element instanceof HTMLElement))
       firstElement.value = element
