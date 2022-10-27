@@ -10,4 +10,9 @@
     "**/*.vue",
     "**/*.tsx"
   ],
+    "compilerOptions": {
+      "declaration": false,
+      "composite": false,
+      "outDir": "./dist"
+    }
 }

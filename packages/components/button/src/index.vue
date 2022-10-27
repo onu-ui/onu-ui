@@ -11,6 +11,7 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 <template>
   <component
     :is="to ? 'a' : 'button'"
+    o-primary
     v-bind="binds"
     :disabled="isDisabled"
     :aria-disabled="isDisabled"
