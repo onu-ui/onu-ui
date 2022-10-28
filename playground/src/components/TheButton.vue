@@ -17,7 +17,7 @@ const startLoading = () => {
         <OButton o="primary">
           Primary
         </OButton>
-        <OButton o="secondary">
+        <OButton o-secondary>
           Secondary
         </OButton>
         <OButton o="success">
