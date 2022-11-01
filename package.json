@@ -30,6 +30,7 @@
         "@onu-ui/components": "workspace:*",
         "@onu-ui/preset": "workspace:*",
         "@onu-ui/utils": "workspace:*",
+        "@onu-ui/docs":"workspace:*",
         "@types/fs-extra": "^9.0.13",
         "@types/node": "18.8.0",
         "@unocss/preset-mini": "^0.45.30",
