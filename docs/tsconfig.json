@@ -7,7 +7,7 @@
           "./guide/*"
         ]
       },
-    "types": ["../volar","./auto-imports"]
+    "types": ["../volar", "./auto-imports"]
   },
   "exclude": [
     "**/dist/**"
