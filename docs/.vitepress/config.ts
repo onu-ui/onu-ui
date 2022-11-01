@@ -3,7 +3,7 @@ import { version } from '../../package.json'
 import { applyPlugins } from './plugins/code'
 
 const guides = [
-  { text: 'Quick Start', link: '/guide/index' },
+  { text: 'Quick Start', link: '/guide/quick-start' },
   { text: 'Installation', link: '/guide/install' },
   { text: 'Overview', link: '/guide/overview' },
   { text: 'i18n', link: '/guide/i18n' },
@@ -13,7 +13,7 @@ const guides = [
 ]
 
 const nav = [
-  { text: 'Guide', link: '/guide/index' },
+  { text: 'Guide', link: '/guide/quick-start' },
   { text: 'Components', link: '/components/button' },
   {
     text: `v${version}`,
@@ -29,7 +29,7 @@ const nav = [
 const sidebar = {
   '/guide': [
     {
-      text: 'Development Guide',
+      text: 'Developer Guide',
       items: guides,
     },
   ],

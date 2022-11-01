@@ -8,31 +8,37 @@ titleTemplate: Web glassmorphism components generate by UnoCSS
 hero:
   name: Onu-UI
   text: Web glassmorphism components generate by UnoCSS
+  tagline: A Vue.js based UnoCSS UI framework that allows you to build modern SPA applications with UnoCSS.
   image: 
-    src: /logo.svg
+    src: /logo-big.png
     alt: Onu-UI
 
   actions:
     - theme: brand
       text: Get Start
-      link: /guide/
+      link: /guide/quick-start
 
     - theme: alt
-      text: Playground
-      link: https://onu.zyob.top/
+      text: View on GitHub
+      link: https://github.com/onu-ui/onu-ui
 
 features:
-  - title: 🌈 Glass Components
+  - icon: 🌈 
+    title: Glass Components
     details: All components follow the glassmorphism style.
-  - title: 🔥 Introduce on demand 
+  - icon: 🔥 
+    title: Introduce on demand 
     details: Provide resolver to automatically import only used components.
-  - title: 🎉 Ts Supported
+  - icon: 🎉
+    title: TS Supported
     details: Support TypeScript & type checked & type inference.
-  - title: 💡 Cli Build
+  - icon: 💡
+    title: Cli Build
     details: Easy to create repo with Onu Cli.
-  - title: 🍬 CSS Preset
+  - icon: 🍬
+    title: CSS Preset
     details: Has UnoCSS preset package to use, rendered UI easily.
-  - title: ⚙️ Theme Config
+  - icon: ⚙️ 
+    title: Theme Config
     details: Use attribute mode like unocss to desige. Support theme config to customize theme.
-    
 ---
