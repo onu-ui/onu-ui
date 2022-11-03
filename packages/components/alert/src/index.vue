@@ -1,4 +1,4 @@
-<script lang='ts' setup name="O-Alert">
+<script lang='ts' setup name="OAlert">
 import OIcon from '../../icon/src/index.vue'
 import { alertEmits, alertProps } from './props'
 

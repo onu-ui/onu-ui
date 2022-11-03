@@ -1,5 +1,5 @@
 
-<script lang="ts" setup name="O-Checkbox">
+<script lang="ts" setup name="OCheckbox">
 import { hash } from '@onu-ui/utils'
 import { checkBoxProps } from './checkbox'
 

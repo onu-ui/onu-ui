@@ -1,4 +1,4 @@
-<script lang="ts" setup name="O-Card">
+<script lang="ts" setup name="OCard">
 import OButton from '../../button/src/index.vue'
 import { cardProps } from './props'
 

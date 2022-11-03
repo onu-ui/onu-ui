@@ -2,22 +2,22 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const OAlert: typeof import('onu-ui')['OAlert']
-  const OAvatar: typeof import('onu-ui')['OAvatar']
-  const OAvatarGroup: typeof import('onu-ui')['OAvatarGroup']
-  const OBadge: typeof import('onu-ui')['OBadge']
-  const OButton: typeof import('onu-ui')['OButton']
-  const OCard: typeof import('onu-ui')['OCard']
-  const OCheckbox: typeof import('onu-ui')['OCheckbox']
-  const OCollapse: typeof import('onu-ui')['OCollapse']
-  const OCollapseItem: typeof import('onu-ui')['OCollapseItem']
-  const OIcon: typeof import('onu-ui')['OIcon']
-  const OMessage: typeof import('onu-ui')['OMessage']
-  const OPopup: typeof import('onu-ui')['OPopup']
-  const ORate: typeof import('onu-ui')['ORate']
-  const OSwitch: typeof import('onu-ui')['OSwitch']
-  const OTag: typeof import('onu-ui')['OTag']
-  const OTrigger: typeof import('onu-ui')['OTrigger']
+  const OAlert: typeof import('onu-ui/components')['alert']
+  const OAvatar: typeof import('onu-ui/components')['avatar']
+  const OAvatarGroup: typeof import('onu-ui/components')['avatargroup']
+  const OBadge: typeof import('onu-ui/components')['badge']
+  const OButton: typeof import('onu-ui/components')['button']
+  const OCard: typeof import('onu-ui/components')['card']
+  const OCheckbox: typeof import('onu-ui/components')['checkbox']
+  const OCollapse: typeof import('onu-ui/components')['collapse']
+  const OCollapseItem: typeof import('onu-ui/components')['collapseitem']
+  const OIcon: typeof import('onu-ui/components')['icon']
+  const OMessage: typeof import('onu-ui/components')['message']
+  const OPopup: typeof import('onu-ui/components')['popup']
+  const ORate: typeof import('onu-ui/components')['rate']
+  const OSwitch: typeof import('onu-ui/components')['switch']
+  const OTag: typeof import('onu-ui/components')['tag']
+  const OTrigger: typeof import('onu-ui/components')['trigger']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -280,22 +280,22 @@ import { UnwrapRef } from 'vue'
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly OAlert: UnwrapRef<typeof import('onu-ui')['OAlert']>
-    readonly OAvatar: UnwrapRef<typeof import('onu-ui')['OAvatar']>
-    readonly OAvatarGroup: UnwrapRef<typeof import('onu-ui')['OAvatarGroup']>
-    readonly OBadge: UnwrapRef<typeof import('onu-ui')['OBadge']>
-    readonly OButton: UnwrapRef<typeof import('onu-ui')['OButton']>
-    readonly OCard: UnwrapRef<typeof import('onu-ui')['OCard']>
-    readonly OCheckbox: UnwrapRef<typeof import('onu-ui')['OCheckbox']>
-    readonly OCollapse: UnwrapRef<typeof import('onu-ui')['OCollapse']>
-    readonly OCollapseItem: UnwrapRef<typeof import('onu-ui')['OCollapseItem']>
-    readonly OIcon: UnwrapRef<typeof import('onu-ui')['OIcon']>
-    readonly OMessage: UnwrapRef<typeof import('onu-ui')['OMessage']>
-    readonly OPopup: UnwrapRef<typeof import('onu-ui')['OPopup']>
-    readonly ORate: UnwrapRef<typeof import('onu-ui')['ORate']>
-    readonly OSwitch: UnwrapRef<typeof import('onu-ui')['OSwitch']>
-    readonly OTag: UnwrapRef<typeof import('onu-ui')['OTag']>
-    readonly OTrigger: UnwrapRef<typeof import('onu-ui')['OTrigger']>
+    readonly OAlert: UnwrapRef<typeof import('onu-ui/components')['alert']>
+    readonly OAvatar: UnwrapRef<typeof import('onu-ui/components')['avatar']>
+    readonly OAvatarGroup: UnwrapRef<typeof import('onu-ui/components')['avatargroup']>
+    readonly OBadge: UnwrapRef<typeof import('onu-ui/components')['badge']>
+    readonly OButton: UnwrapRef<typeof import('onu-ui/components')['button']>
+    readonly OCard: UnwrapRef<typeof import('onu-ui/components')['card']>
+    readonly OCheckbox: UnwrapRef<typeof import('onu-ui/components')['checkbox']>
+    readonly OCollapse: UnwrapRef<typeof import('onu-ui/components')['collapse']>
+    readonly OCollapseItem: UnwrapRef<typeof import('onu-ui/components')['collapseitem']>
+    readonly OIcon: UnwrapRef<typeof import('onu-ui/components')['icon']>
+    readonly OMessage: UnwrapRef<typeof import('onu-ui/components')['message']>
+    readonly OPopup: UnwrapRef<typeof import('onu-ui/components')['popup']>
+    readonly ORate: UnwrapRef<typeof import('onu-ui/components')['rate']>
+    readonly OSwitch: UnwrapRef<typeof import('onu-ui/components')['switch']>
+    readonly OTag: UnwrapRef<typeof import('onu-ui/components')['tag']>
+    readonly OTrigger: UnwrapRef<typeof import('onu-ui/components')['trigger']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>

@@ -1,4 +1,4 @@
-<script lang='ts' setup name="O-Icon">
+<script lang='ts' setup name="OIcon">
 defineProps<{
   name: String
 }>()

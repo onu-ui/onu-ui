@@ -1,4 +1,4 @@
-<script setup lang="ts" name="O-Collapse-Item">
+<script setup lang="ts" name="OCollapseItem">
 // TODO test
 import { computed, inject } from 'vue'
 
@@ -52,9 +52,7 @@ defineExpose({
 </script>
 
 <template>
-  <div
-    o-collapse-item-base
-  >
+  <div o-collapse-item-base>
     <div
       class="o-collapse-item-title"
       :class="[
