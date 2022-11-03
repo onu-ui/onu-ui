@@ -1,4 +1,4 @@
-<script lang='ts' setup name="O-Avatar-Group">
+<script lang='ts' setup name="OAvatarGroup">
 import { avatarGroupProps } from './avatar'
 
 defineProps(avatarGroupProps)
