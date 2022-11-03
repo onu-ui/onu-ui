@@ -28,6 +28,7 @@
         "@iconify-json/logos": "^1.1.16",
         "@onu-ui/cli": "workspace:*",
         "@onu-ui/components": "workspace:*",
+        "@onu-ui/docs":"workspace:*",
         "@onu-ui/preset": "workspace:*",
         "@onu-ui/utils": "workspace:*",
         "@types/fs-extra": "^9.0.13",
