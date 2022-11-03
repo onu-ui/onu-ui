@@ -15,24 +15,6 @@ import 'onu-ui/dist/style.css'
 createApp(App).use(OnuUI).mount('#app')
 ```
 
-## Custom UnoCSS config
-
-Custom your UnoCSS config:
-```ts
-// uno.config.ts
-import { defineConfig, presetAttributify, presetUno } from 'unocss'
-import { presetOnu } from 'onu-ui'
-
-export default defineConfig({
-  presets: [
-    // ...
-    presetUno(),
-    presetAttributify(),
-    presetOnu(),
-  ],
-})
-```
-
 ## On-demand Import:
 
 You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
@@ -62,4 +44,36 @@ export default defineConfig({
     }),
   ],
 })
+```
+
+## Custom UnoCSS config
+
+Custom your UnoCSS config:
+```ts
+// uno.config.ts
+import { defineConfig, presetAttributify, presetUno } from 'unocss'
+import { presetOnu } from 'onu-ui'
+
+export default defineConfig({
+  presets: [
+    // ...
+    presetUno(),
+    presetAttributify(),
+    presetOnu(),
+  ],
+})
+```
+
+## Get Volar Typescript support
+
+You can add the `OnuUI` global component type definition to `compilerOptions.types` in your project's `tsconfig.json`. Then [volar](https://github.com/johnsoncodehk/volar) will help you have a better experience while developing.
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    // ...
+    "types": ["onu-ui/volar"]
+  }
+}
 ```
