@@ -24,11 +24,6 @@
       "require": "./dist/index.cjs",
       "types": "./dist/onu-ui/src/index.d.ts"
     },
-    "./components": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/components/index.d.ts"
-    },
     "./dist/style.css": "./dist/style.css"
   },
   "files": [

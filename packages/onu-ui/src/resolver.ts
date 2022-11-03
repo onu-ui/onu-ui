@@ -5,7 +5,7 @@ export function OnuResolver(): ComponentResolver {
     type: 'component',
     resolve: (name: string) => {
       if (name.match(/^O[A-Z]/))
-        return { name, from: 'onu-ui/components' }
+        return { name, from: 'onu-ui' }
     },
   }
 }
