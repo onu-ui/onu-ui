@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "../../../volar",
+      "../../auto-imports"
+    ]
+  },
+}

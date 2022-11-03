@@ -22,7 +22,6 @@ export default defineConfig({
     presetOnu(),
   ],
   transformers: [transformerVariantGroup(), transformerDirectives()],
-
   shortcuts: [
     {
       'fscw': 'flex justify-start items-center flex-wrap w-full',
@@ -34,6 +33,10 @@ export default defineConfig({
       'o-demo_action_icon': 'c-#4E5969 dark:c-white',
       'o-demo_tooltip':
         'opacity-0 h-7 bg-black px-2.5 py-1 box-border text-xs c-white inline-flex justify-center items-center  rounded absolute z-1 transition duration-600 whitespace-nowrap -top-8',
+      'o-overview_card_wrapper': 'flex flex-col  items-center space-x-3 p-4 rounded border border-light-500 hover:bg-#F2F2F2 hover:-translate-y-2 !duration-400 dark:border-#4C4D4F dark:hover:bg-dark-300 !transition-all',
+      'o-overview_cover': 'children-w-full children-aspect-video',
+      'o-overview_body': 'flex p-4 !text-base flex-1 flex-col gap-2',
+      'overview_body_title': 'mb-2 flex items-center gap-2 !text-lg font-bold',
     },
   ],
 })

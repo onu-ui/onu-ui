@@ -19,6 +19,7 @@
           "@onu-ui/utils": [ "./packages/utils/index.ts" ],
           "@onu-ui/preset": [ "./packages/preset/src/index.ts" ],
           "@onu-ui/cli": [ "./packages/cli/src/index.ts" ],
+          "@onu-ui/docs": [ "./docs/*" ],
         }
     },
     "exclude": [

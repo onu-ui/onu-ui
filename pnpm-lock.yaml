@@ -10,6 +10,7 @@ importers:
       '@iconify-json/logos': ^1.1.16
       '@onu-ui/cli': workspace:*
       '@onu-ui/components': workspace:*
+      '@onu-ui/docs': workspace:*
       '@onu-ui/preset': workspace:*
       '@onu-ui/utils': workspace:*
       '@types/fs-extra': ^9.0.13
@@ -54,6 +55,7 @@ importers:
       '@iconify-json/logos': 1.1.17
       '@onu-ui/cli': link:packages/cli
       '@onu-ui/components': link:packages/components
+      '@onu-ui/docs': link:docs
       '@onu-ui/preset': link:packages/preset
       '@onu-ui/utils': link:packages/utils
       '@types/fs-extra': 9.0.13

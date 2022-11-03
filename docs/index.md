@@ -10,7 +10,7 @@ hero:
   text: Web glassmorphism components generate by UnoCSS
   tagline: A Vue.js based UnoCSS UI framework that allows you to build modern SPA applications with UnoCSS.
   image: 
-    src: /logo-big.png
+    src: /logo.svg
     alt: Onu-UI
 
   actions:

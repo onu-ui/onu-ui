@@ -2,12 +2,12 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "src/*"
-      ],
-    },
-    "types": ["../volar"]
+      "paths": {
+        "guide": [
+          "./guide/*"
+        ]
+      },
+    "types": ["../volar", "./auto-imports"]
   },
   "exclude": [
     "**/dist/**"
