@@ -43,9 +43,11 @@ export const commonPlacement = [
   'right-bottom',
 ] as const
 export const commonTrigger = ['hover', 'click', 'focus', 'context-menu'] as const
+export const commonShadowTrigger = ['hover', 'always', 'never'] as const
 
 export type SizeType = typeof commonSize[number]
 export type PositionType = typeof commonPosition[number]
 export type ThemeType = typeof commonTheme[number]
 export type Placement = typeof commonPlacement[number]
 export type TriggerType = typeof commonTrigger[number]
+export type ShadowType = typeof commonShadowTrigger[number]

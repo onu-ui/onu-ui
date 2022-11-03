@@ -1,32 +1,62 @@
 <template>
-  <o-card :cover="cover" :description="description" title="Title & Content" :content="content">
-    <template #extra>
-      <o-button size="xs" text o-white>
-        <template #icon>
-          <o-icon name="i-carbon-share" />
-        </template>
-      </o-button>
-    </template>
-    <template #actions>
-      <div fbc un-children="flex items-center gap-2">
-        <div>
-          <O-Avatar size="xs" :src="cover" />
-          <span class="dark:c-darkText">User</span>
+  <div fscw space-x-3>
+    <o-card :cover="cover" :description="description" title="Title & Content" :content="content">
+      <template #extra>
+        <o-button size="xs" text>
+          <template #icon>
+            <o-icon name="i-carbon-share" />
+          </template>
+        </o-button>
+      </template>
+      <template #actions>
+        <div fbc un-children="flex items-center gap-2">
+          <div>
+            <O-Avatar size="xs" :src="cover" />
+            <span class="dark:c-darkText">User</span>
+          </div>
+          <div gap-4>
+            <div o-primary>
+              <o-icon cursor-pointer name="i-carbon-star" />
+            </div>
+            <div o-info>
+              <o-icon cursor-pointer name="i-carbon-share" />
+            </div>
+            <div o-warning>
+              <o-icon cursor-pointer name="i-carbon-face-wink-filled" />
+            </div>
+          </div>
         </div>
-        <div gap-4>
-          <div o-primary>
-            <o-icon cursor-pointer name="i-carbon-star" />
+      </template>
+    </o-card>
+    <o-card :cover="cover" :description="description" title="Title & Content" :content="content">
+      <template #extra>
+        <o-button size="xs" text>
+          <template #icon>
+            <o-icon name="i-carbon-share" />
+          </template>
+        </o-button>
+      </template>
+      <template #actions>
+        <div fbc un-children="flex items-center gap-2">
+          <div>
+            <O-Avatar size="xs" :src="cover" />
+            <span class="dark:c-darkText">User</span>
           </div>
-          <div o-info>
-            <o-icon cursor-pointer name="i-carbon-share" />
-          </div>
-          <div o-warning>
-            <o-icon cursor-pointer name="i-carbon-face-wink-filled" />
+          <div gap-4>
+            <div o-primary>
+              <o-icon cursor-pointer name="i-carbon-star" />
+            </div>
+            <div o-info>
+              <o-icon cursor-pointer name="i-carbon-share" />
+            </div>
+            <div o-warning>
+              <o-icon cursor-pointer name="i-carbon-face-wink-filled" />
+            </div>
           </div>
         </div>
-      </div>
-    </template>
-  </o-card>
+      </template>
+    </o-card>
+  </div>
 </template>
 
 <script setup lang='ts'>

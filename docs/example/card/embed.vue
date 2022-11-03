@@ -1,5 +1,5 @@
 <template>
-  <o-card title="Bordered" bordered hoverable>
+  <o-card title="Embed Style" embed divider shadow="never">
     {{ content }}
   </o-card>
 </template>

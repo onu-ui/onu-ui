@@ -1,6 +1,6 @@
 <template>
   <o-card
-    bordered
+    divider
     hoverable
     :cover="cover"
     extra="More"

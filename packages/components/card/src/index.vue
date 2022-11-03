@@ -1,5 +1,6 @@
 <script lang="ts" setup name="O-Card">
 import OButton from '../../button/src/index.vue'
+import { ShadowType } from '../../types'
 import { cardProps } from './props'
 
 const props = defineProps(cardProps)
@@ -9,20 +10,30 @@ const slots = useSlots()
 const needRenderHeader = computed(() => !slots.header && (props.title || props.description || props.extra || slots.extra))
 const needRenderBody = computed(() => props.content || slots.default)
 const needRenderActions = computed(() => slots.actions)
+const onlyRenderContent = !needRenderHeader.value && !needRenderActions.value && needRenderBody.value
 
 const bodyCls = computed(() => {
   const cls = ['o-card-body']
-  if (props.bordered) {
+  if (onlyRenderContent)
+    cls.push('pt-4')
+
+  if (props.divider) {
     cls.push('pt-4')
     if (needRenderHeader.value)
       cls.push('b-t border-light-700 dark:b-darkBd dark:c-darkText')
   }
   return cls
 })
+
+const shadowCls: Record<ShadowType, string> = {
+  always: 'o-card-shadow-always',
+  hover: 'o-card-hoverable',
+  never: 'o-card-shadow-never',
+}
 </script>
 
 <template>
-  <div class="o-card" :class="[`o-card-${size}`, bordered && 'o-card-bordered', hoverable && 'o-card-hoverable', alwaysShadow && 'o-card-shadow-always']">
+  <div class="o-card" :class="[`o-card-${size}`, shadowCls[`${shadow}`], embed && 'o-card-embed']">
     <!-- cover -->
     <div v-if="cover" class="o-card-cover">
       <img :src="cover">

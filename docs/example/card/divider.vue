@@ -1,7 +1,12 @@
 <template>
-  <o-card title="Bordered" bordered>
-    {{ content }}
-  </o-card>
+  <div f-c-c space-y-5>
+    <o-card title="Divider with shadow" divider>
+      {{ content }}
+    </o-card>
+    <o-card title="Divider without shadow" divider shadow="never">
+      {{ content }}
+    </o-card>
+  </div>
 </template>
 
 <script setup lang='ts'>

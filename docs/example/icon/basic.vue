@@ -1,5 +1,5 @@
 <template>
-  <div grid="~ cols-14 gap-4" un-children="text-6">
+  <div grid="~ cols-8 gap-4 md:cols-12 xl:cols-14" m un-children="text-6">
     <o-icon o-primary name="i-carbon-letter-aa" />
     <o-icon o-secondary name="i-carbon-letter-bb" />
     <o-icon o-success name="i-carbon-letter-cc" />
