@@ -1,4 +1,4 @@
-<script lang='ts' setup name="O-Tag">
+<script lang='ts' setup name="OTag">
 import OIcon from '../../icon/src/index.vue'
 import { tagEmits, tagProps } from './props'
 

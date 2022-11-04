@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/monorepo",
-    "version": "1.0.8-beta.3",
+    "version": "1.0.8",
     "private": true,
     "packageManager": "pnpm@7.13.4",
     "license": "MIT",
@@ -28,7 +28,7 @@
         "@iconify-json/logos": "^1.1.16",
         "@onu-ui/cli": "workspace:*",
         "@onu-ui/components": "workspace:*",
-        "@onu-ui/docs":"workspace:*",
+        "@onu-ui/docs": "workspace:*",
         "@onu-ui/preset": "workspace:*",
         "@onu-ui/utils": "workspace:*",
         "@types/fs-extra": "^9.0.13",

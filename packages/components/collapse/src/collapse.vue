@@ -1,4 +1,4 @@
-<script setup lang="ts" name="O-Collapse">
+<script setup lang="ts" name="OCollapse">
 // TODO test
 import { provide, ref, watch } from 'vue'
 import {

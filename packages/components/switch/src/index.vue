@@ -1,5 +1,5 @@
 
-<script lang="ts" setup name="O-Switch">
+<script lang="ts" setup name="OSwitch">
 import { switchProps } from './props'
 
 const props = defineProps(switchProps)

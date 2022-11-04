@@ -1,4 +1,4 @@
-<script lang="ts" setup name="O-Badge">
+<script lang="ts" setup name="OBadge">
 import { isNumber } from '@onu-ui/utils'
 import { badgeProps } from './badge'
 

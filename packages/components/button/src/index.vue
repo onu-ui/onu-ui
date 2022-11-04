@@ -1,4 +1,4 @@
-<script setup lang="ts" name="O-Button">
+<script setup lang="ts" name="OButton">
 import { buttonProps } from './props'
 
 const props = defineProps(buttonProps)
