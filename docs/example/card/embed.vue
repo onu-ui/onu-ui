@@ -1,5 +1,5 @@
 <template>
-  <o-card title="Embed Style" embed divider shadow="never">
+  <o-card title="Embed Style" embed>
     {{ content }}
   </o-card>
 </template>
