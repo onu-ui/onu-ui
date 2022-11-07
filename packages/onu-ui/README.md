@@ -1,10 +1,26 @@
 <p align="center">
-<img src="./public/logo.svg" style="width:100px;" />
-<h1 align="center">Onu-UI</h1>
+<img src="https://raw.githubusercontent.com/imageList/imglist/master/img/logo.svg" style="width:100px;" />
+<h1 align="center">Onu-UI (WIP)</h1>
 <p align="center">Onu-UI for web glassmorphism components generate by UnoCSS.</p>
 </p>
+<p align="center">
+<a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
+<p align="center">
+<a href="https://onu.zyob.top/">🧑‍💻 Document <sup>Beta</sup></a> |
+<a href="https://onu.zyob.top/">🤹‍♂️ Preview</a>
+</p>
+
+## Features
+- 🌈 Glass Components - All components follow the glassmorphism style.
+- 🔥 Introduce on demand  - Provide resolver to automatically import only used components.
+- 🎉 Ts Supported - Support TypeScript & type checked & type inference.
+- 💡 Cli Build - Easy to create repo with Onu Cli.
+- 🍬 CSS Preset - Has UnoCSS preset package to use, rendered UI easily.
+- ⚙️ Theme Config - Use attribute mode like unocss to desige. Support theme config to customize theme.
 
 ## Usage
+
+### Full Import
 
 ```bash
 npm i onu-ui
@@ -20,6 +36,9 @@ import 'onu-ui/dist/style.css'
 
 createApp(App).use(OnuUI).mount('#app')
 ```
+
+### Custom UnoCSS config
+
 Custom your UnoCSS config:
 ```ts
 // uno.config.ts
@@ -36,11 +55,61 @@ export default defineConfig({
 })
 ```
 
-## Refer
+### On-demand Import:
+
+You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
+
+```shell
+npm install -D unplugin-vue-components unplugin-auto-import
+```
+
+Then add the code below into your Vite config file.
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { OnuResolver } from 'onu-ui'
+
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    AutoImport({
+      resolvers: [OnuResolver()],
+    }),
+    Components({
+      resolvers: [OnuResolver()],
+    }),
+  ],
+})
+```
+
+## Playground
+
+You can try OnuUI out with the components built-in playground.
+### Try it with our built-in playground(WIP)
+
+### Try it with stackblitz
+
+[![Edit Onu UI](https://img.shields.io/badge/Edit%20on%20Stackblitz-1877F2?style=for-the-badge&logo=stackblitz&logoColor=white)](https://stackblitz.com/edit/onu-starter)
+
+
+## Contributing
+
+Developers interested in contributing should read the [Code of Conduct](https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md) and the [Contributing Guide](https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md).
+
+Thank you to all the people who already contributed to OnuUI!
+
+<a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contrib.rocks/image?repo=onu-ui/onu-ui" /></a>
+
+## Credits
 
 [UnoCSS](https://github.com/unocss/unocss)
 
 [@nuxt/ui](https://github.com/nuxt/ui)
-# License
 
-[MIT](../../LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
+## License
+
+[MIT](https://github.com/onu-ui/onu-ui/blob/main/LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
