@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import type { INode, SizeType } from '../../types'
+import type { INode, ShadowType, SizeType } from '../../types'
 
 export const cardProps = {
   /** 卡片标题 */
@@ -27,12 +27,13 @@ export const cardProps = {
       return ['md', 'sm'].includes(val)
     },
   },
-  /** 悬浮阴影 */
-  hoverable: Boolean,
-  /** 始终展示阴影 */
-  alwaysShadow: Boolean,
-  /** 边框 */
-  bordered: Boolean,
+  /** 阴影 */
+  shadow: {
+    type: String as PropType<ShadowType>,
+    default: 'always',
+  },
+  /** 展示分隔线 */
+  divider: Boolean,
   /** 头部内容区 */
   header: {
     type: [Function] as PropType<INode>,
@@ -45,6 +46,8 @@ export const cardProps = {
   actions: {
     type: [Function] as PropType<INode>,
   },
+  /** 嵌入式风格卡片 */
+  embed: Boolean,
 } as const
 
 export type OCardProps = ExtractPropTypes<typeof cardProps>

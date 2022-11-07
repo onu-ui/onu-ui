@@ -1,5 +1,5 @@
 <template>
-  <div fsc gap-6>
+  <div fscw gap-6>
     <OBadge o="primary" :value="100">
       <OButton o="primary" light>
         Primary

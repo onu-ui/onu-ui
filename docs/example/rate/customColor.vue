@@ -1,5 +1,5 @@
 <template>
-  <div fsc gap-6>
+  <div fscw gap-6>
     <div>
       <p>Rate: {{ val }}</p>
       <ORate v-model="val" color="teal" void-color="error" />
