@@ -67,22 +67,11 @@ describe('o-card', () => {
     const wrapper = mount(OCard, {
       props: {
         title: 'Test title',
-        hoverable: true,
+        shadow: 'hover',
       },
     })
 
     expect(wrapper.find('.o-card-hoverable').exists()).toBeTruthy()
-  })
-
-  test('card bordered test', () => {
-    const wrapper = mount(OCard, {
-      props: {
-        title: 'Test title',
-        bordered: true,
-      },
-    })
-
-    expect(wrapper.find('.o-card-bordered').exists()).toBeTruthy()
   })
 
   test('should work with `slots`', () => {
