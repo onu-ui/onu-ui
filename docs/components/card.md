@@ -5,7 +5,7 @@ lang: en-US
 
 # Card
 
-Integrate information in a card container.
+Cards are used to group and display content in a way that is easily readable.
 
 ## Basic usage
 
@@ -27,18 +27,20 @@ The Card only contains title.
 
 <demo src="../example/card/only-title.vue"></demo>
 
-## Bordered
+## Divider
 
-The Card can set `bordered` attribute style.
+The Card can set `divider` attribute style.
 
-<demo src="../example/card/bordered.vue"></demo>
+<demo src="../example/card/divider.vue"></demo>
 
 ## Shadow
 
-You can define `hoverable` whether hover to show the card shadows, define `always-shadow` whether always to show the card shadows.
+You can define when to show the card `shadows`.
 
-<demo src="../example/card/hoverable.vue"></demo>
+The `shadow` attribute determines when the card shadows are displayed. It can be `always`, `hover` or `never`.
+
 <demo src="../example/card/shadow.vue"></demo>
+
 ## Descriptions
 
 You can set `description` attribute to define Card's description.
@@ -50,6 +52,14 @@ You can set `description` attribute to define Card's description.
 You can set `actions` Slot to define Card Action Bar , also you can set `cover` prop to show Card's cover.
 
 <demo src="../example/card/cover-action.vue"></demo>
+
+## Embed style card
+
+You can set `embed` attribute to define Card's embed style.
+
+In light mode, sometimes you may need to make background a bit darker to distinguish card from white background.
+
+<demo src="../example/card/embed.vue" />
 
 ## Custome Actions
 
@@ -70,9 +80,9 @@ Here is the fully defined form of the card exaples.
 | content | `string` | `undefined` | Card content. |
 | cover | `string` | `undefined` | Card header's cover. |
 | size | `'sm' \| 'md' ` | `'md'` | Size of the card. |
-| hoverable | `boolean` | `false` | Whether hover show card's shadow. |
-| always-shadow | `boolean` | `false` | Whether always show card's shadow |
-| bordered | `boolean` | `false` | Whether show Card border. |
+| shadow | `'always' \| 'hover'` | `never` | When to show card's shadow |
+| divider | `boolean` | `false` | Whether show embed style card. |
+| embed | `boolean` | `false` | Whether show Card divider. |
 | header | `string` \| `VNode` | `undefined` | Customer card's header. |
 | extra | `string` \| `VNode` | `undefined` | Customer card's header extra. |
 | actions | `string` \| `VNode` | `undefined` | Customer card's actions bar. |

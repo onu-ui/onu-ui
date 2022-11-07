@@ -1,12 +1,13 @@
 <template>
   <o-card
-    bordered
+    divider
     hoverable
     :cover="cover"
     extra="More"
     :description="description"
     title="Title & Content"
     :content="content"
+    w-100
   >
     <template #actions>
       <div fbc un-children="flex items-center gap-2">

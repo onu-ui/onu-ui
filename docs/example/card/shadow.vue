@@ -1,7 +1,15 @@
 <template>
-  <o-card title="Bordered" bordered always-shadow>
-    {{ content }}
-  </o-card>
+  <div f-c-c space-y-5>
+    <o-card title="Always" divider shadow="always">
+      {{ content }}
+    </o-card>
+    <o-card title="Hover" divider shadow="hover">
+      {{ content }}
+    </o-card>
+    <o-card title="Never" divider shadow="never">
+      {{ content }}
+    </o-card>
+  </div>
 </template>
 
 <script setup lang='ts'>

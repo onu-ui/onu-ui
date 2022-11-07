@@ -18,6 +18,7 @@ export default {
     darkSubText: 'rgba(255,255,255,.7)',
     softBd: '#E5E6EB',
     grayBg: '#373739',
+    embed: '#F1F3F5',
   },
   fontFamily: {
     sans: 'Avenir, Helvetica, Arial, sans-serif',
