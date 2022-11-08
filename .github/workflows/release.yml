@@ -17,35 +17,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set Node
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Set node
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: 'pnpm'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-   
-
-     
-
-      # - run: npx changelogithub
+      #- run: npx changelogithub
       #  continue-on-error: true
       #  env:
       #    GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
@@ -56,12 +39,12 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Test
-        run: pnpm run test
+      #- name: Test
+      #  run: pnpm run test
 
       - name: Publish to NPM
         run: |
-          pnpm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          pnpm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
           pnpm -r publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
