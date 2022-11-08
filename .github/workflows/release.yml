@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
 
       - name: Install
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
       - name: Build
         run: pnpm run build
@@ -38,7 +38,7 @@ jobs:
 
       - name: Publish to NPM
         run: |
-          pnpm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          pnpm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
           pnpm -r publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
