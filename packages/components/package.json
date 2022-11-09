@@ -20,10 +20,12 @@
   "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/components/README.md",
   "main": "./dist/components.umd.cjs",
   "module": "./dist/components.js",
+  "types": "./dist/components/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/components.js",
-      "require": "./dist/components.umd.cjs"
+      "require": "./dist/components.umd.cjs",
+      "types": "./dist/components/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -32,8 +34,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vite build && pnpm run --filter \"../onu-ui\" build",
-    "stub": "vite build --watch"
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../onu-ui\" build",
+    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "dependencies": {
     "@onu-ui/preset": "workspace:*",

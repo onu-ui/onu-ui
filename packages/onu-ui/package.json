@@ -15,14 +15,14 @@
     "url": "git+https://github.com/onu-ui/onu-ui.git",
     "directory": "packages/onu-ui"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/onu-ui/src/index.d.ts",
+  "main": "./dist/onu-ui.umd.cjs",
+  "module": "./dist/onu-ui.js",
+  "types": "./dist/types/onu-ui/src/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/onu-ui/src/index.d.ts"
+      "import": "./dist/onu-ui.js",
+      "require": "./dist/onu-ui.umd.cjs",
+      "types": "./dist/types/onu-ui/src/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -32,8 +32,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && tsup",
-    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && tsup --watch"
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
+    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"
