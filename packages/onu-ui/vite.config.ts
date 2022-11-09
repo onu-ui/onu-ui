@@ -1,9 +1,9 @@
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
 import fs from 'fs-extra'
 import type { ResolvedConfig } from 'vite'
+
 let config: ResolvedConfig = undefined!
 
 export default defineConfig({
@@ -27,7 +27,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    vueJsx(), {
+    {
       name: 'vite-plugin-copy-style',
       apply: 'build',
       enforce: 'post',
