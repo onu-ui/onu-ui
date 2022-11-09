@@ -8,6 +8,7 @@ let config: ResolvedConfig = undefined!
 
 export default defineConfig({
   build: {
+    emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'onu-ui',
