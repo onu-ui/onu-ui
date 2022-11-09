@@ -1,6 +1,6 @@
 {
     "name": "@onu-ui/preset",
-    "version": "1.0.10-beta.5",
+    "version": "1.0.10-beta.7",
     "description": "Onu-UI css rules for unocss preset",
     "keywords": [
         "onu-ui",
@@ -18,7 +18,7 @@
         "url": "https://github.com/onu-ui/onu-ui/issues"
     },
     "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/preset/README.md",
-    "main": "./dist/index.cs",
+    "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "exports": {
