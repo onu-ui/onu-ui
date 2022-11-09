@@ -18,7 +18,7 @@
         "url": "https://github.com/onu-ui/onu-ui/issues"
     },
     "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/preset/README.md",
-    "main": "./dist/index.cs",
+    "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "exports": {
