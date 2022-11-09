@@ -12,6 +12,6 @@
   "compilerOptions": {
     "declaration": false,
     "composite": false,
-    "outDir": "./dist"
+    "outDir": "./dist/types"
   }
 }
