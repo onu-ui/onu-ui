@@ -9,6 +9,7 @@ export const baseShortcuts: Record<string, string> = {
   'o-active-base': 'ring-3 ring-context/10',
   'o-borderless': '!border-none !shadow-none',
   'o-solid': 'bg-context border-context c-white',
+  'o-transparent': 'bg-light-100 dark:bg-darkBg c-darkContext dark:c-lightContext',
   'o-light': `!shadow-transparent bg-context:12 hover-bg-context active-bg-context:64
                    !border-context !hover-border-context !active-border-context:64
                    !c-context !hover-c-white !active-c-white`,

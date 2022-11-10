@@ -3,9 +3,7 @@ import type { DynamicShortcut } from 'unocss'
 
 export const messageShortcuts: Record<string, string> = {
   // message
-  'o-message-base':
-  `fixed top-5 o-solid left-1/2 translate-x--1/2 z-1000 o-transition
-   shadow-md py-2 px-3 fi rounded of-hidden gap-3 text-sm`,
+  'o-message-base': 'fixed o-transparent left-1/2 translate-x--1/2 o-transition shadow-md py-2 px-3 fi rounded of-hidden gap-3 text-sm font-semibold',
   'o-message-closable': 'cursor-pointer',
   'o-message-content': 'fi gap-2',
 }
@@ -16,12 +14,12 @@ export const messageDynamicShortcuts: DynamicShortcut[] = [
     const themeType = ['primary', 'secondary', 'success', 'warning', 'error', 'info']
     if (themeType.includes(iconType)) {
       const iconThemeMap: Record<ThemeType, string> = {
-        primary: 'i-carbon-stop-sign',
-        secondary: 'i-carbon-software-resource',
-        success: 'i-carbon-checkmark-outline',
-        warning: 'i-carbon-warning-alt',
-        error: 'i-carbon-close-outline',
-        info: 'i-carbon-information',
+        primary: 'i-carbon:favorite-filled',
+        secondary: 'i-carbon:asleep-filled',
+        success: 'i-carbon:checkmark-filled',
+        warning: 'i-carbon:warning-alt-filled',
+        error: 'i-carbon-close-filled',
+        info: 'i-carbon-information-filled',
       }
       return `${iconThemeMap[iconType]}`
     }

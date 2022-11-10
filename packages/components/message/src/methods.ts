@@ -1,81 +1,137 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 
-import { createVNode, render } from 'vue'
-import MessageConstructor from './index.vue'
+import { createVNode, isVNode, render } from 'vue'
+import { isElement, isFunction, isString } from '@onu-ui/utils'
+import { isClient } from '@vueuse/core'
+import { commonTheme } from '../../types'
+import { useZindex } from '../../_hooks/useZIndex'
 import {
   messageDefaults,
-  messageTypes,
 } from './type'
+import MessageConstructor from './index.vue'
+import { instances } from './instance'
+import type { AppContext } from 'vue'
 import type {
+  CreateMessageType,
   Message,
   MessageContext,
+  MessageFn,
   MessageHandler,
-  MessageTypedFn,
-  OMessageProps,
+  MessageOptions,
+  MessageParams,
 } from './type'
 
 let key = 1
-// message instances
-let preInstance: MessageContext | null = null
 
-const createMessage = (options: OMessageProps) => {
-  closeMessage(preInstance)
+const normalizeOption = (params?: MessageParams) => {
+  const options: MessageOptions = !params || isString(params) || isVNode(params) || isFunction(params) ? { content: params } : params
+
+  const normalizedOptions = {
+    ...messageDefaults,
+    ...options,
+  }
+
+  if (!normalizedOptions.appendTo) {
+    normalizedOptions.appendTo = document.body
+  } else if (isString(normalizedOptions.appendTo)) {
+    let appendTo = document.querySelector<HTMLElement>(normalizedOptions.appendTo)
+
+    // should fallback to default value with a warning
+    if (!isElement(appendTo as any)) {
+      // eslint-disable-next-line no-console
+      console.warn('appendTo must be a valid Element String')
+      appendTo = document.body
+    }
+
+    normalizedOptions.appendTo = appendTo!
+  }
+
+  return normalizedOptions as CreateMessageType
+}
+
+const createMessage = (
+  { appendTo, ...options }: CreateMessageType,
+  context?: AppContext | null,
+) => {
+  const { nextZIndex } = useZindex()
+
   const id = `message_${key++}`
   const container = document.createElement('div')
   const userOnClose = options.onClose
+
   const props = {
     ...options,
+    zIndex: nextZIndex() + options.zIndex,
     id,
     onClose: () => {
       userOnClose?.()
-      closeMessage(preInstance)
-      preInstance = null
+      closeMessage(instance)
     },
     onDestroy: () => {
       render(null, container)
+      closeMessage(instance)
     },
   }
-  const vnode = createVNode(MessageConstructor, props, null)
 
-  const appendTo = document.querySelector(options.appendTo)!
-  if (process.env.NODE_ENV !== 'production') {
-    if (typeof Element === 'undefined' || !(appendTo instanceof Element))
-      throw new Error('appendTo must be a valid Element String')
-  }
+  // render vnode
+  const vnode = createVNode(
+    MessageConstructor,
+    props,
+    isFunction(props.content) || isVNode(props.content) ? { default: props.content } : null,
+  )
+  vnode.appContext = context || message._context
 
   render(vnode, container)
-  const vm = vnode.component!
+
   appendTo.appendChild(container.firstElementChild!)
+
+  const vm = vnode.component!
 
   const handler: MessageHandler = {
     close: () => {
-      vm.exposeProxy!.visible = false
+      vm.exposed!.visible = false
     },
   }
   const instance: MessageContext = {
+    id,
+    vnode,
     handler,
     props: (vnode.component as any).props,
     vm,
   }
-  preInstance = instance
   return instance
 }
 
-function closeMessage(instance: MessageContext | null) {
-  instance && instance.handler.close()
+function closeMessage(instance: MessageContext) {
+  const idx = instances.indexOf(instance)
+  if (idx === -1) return
+
+  instances.splice(idx, 1)
+  const { handler } = instance
+  handler.close()
 }
 
-const message: MessageTypedFn & Partial<Message> = (options: OMessageProps) => {
-  const instance = createMessage(options)
+const message: MessageFn & Partial<Message> & { _context: AppContext | null } = (options = {}, context) => {
+  if (!isClient) {
+    return {
+      close: () => undefined,
+    }
+  }
+
+  const normalized = normalizeOption(options)
+  const instance = createMessage(normalized, context)
+
+  instances.push(instance)
   return instance.handler
 }
 
-messageTypes.forEach((type) => {
-  message[type] = (options: OMessageProps) => {
-    // TODO string
-    if (typeof options === 'string')
-      throw new Error('options can not be String')
-    return message({ ...messageDefaults, ...options, type })
+commonTheme.forEach((type) => {
+  message[type] = (options = {}, appContext) => {
+    const normalized = normalizeOption(options)
+    return message({ ...normalized, type }, appContext)
   }
 })
+
+message._context = null
 
 export default message as Message
