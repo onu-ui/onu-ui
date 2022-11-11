@@ -1,6 +1,6 @@
 <script setup lang="ts" name="OMessage">
-import { CSSProperties, onMounted, ref } from 'vue'
-import { useTimeoutFn } from '@vueuse/core'
+import { CSSProperties, computed, onMounted, ref } from 'vue'
+import { useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import OIcon from '../../icon/src/index.vue'
 import { messageEmits, messageProps } from './type'
 import { useOffset } from './instance'

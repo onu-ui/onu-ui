@@ -1,3 +1,4 @@
+import { shallowReactive } from 'vue'
 import type { MessageContext } from './type'
 
 export const instances: MessageContext[] = shallowReactive([])
