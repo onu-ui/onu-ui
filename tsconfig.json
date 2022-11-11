@@ -12,7 +12,7 @@
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
         "jsx": "preserve",
-        "types": [ "node", "vite/client" ],
+        "types": [ "node", "vite/client", "jsdom", ],
         "paths": {
           "onu-ui": [ "./packages/onu-ui/src/index.ts" ],
           "@onu-ui/components": [ "./packages/components/index.ts" ],

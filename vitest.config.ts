@@ -1,10 +1,19 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vitest/config'
 import Vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import VueJSX from '@vitejs/plugin-vue-jsx'
 
 const r = (p: string) => resolve(__dirname, p)
 export default defineConfig({
-  plugins: [Vue()],
+  plugins: [
+    Vue(),
+    VueJSX(),
+    AutoImport({
+      imports: ['vue', '@vueuse/core', 'vitest'],
+      dts: 'auto-imports.d.ts',
+    }),
+  ],
   optimizeDeps: {
     disabled: true,
   },

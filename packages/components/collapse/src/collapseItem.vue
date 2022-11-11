@@ -1,7 +1,4 @@
 <script setup lang="ts" name="OCollapseItem">
-// TODO test
-import { computed, inject } from 'vue'
-
 import OIcon from '../../icon/src/index.vue'
 import { RendererElement, collapseContextKey, collapseItemProps } from './props'
 const props = defineProps(collapseItemProps)
@@ -47,6 +44,7 @@ const on = {
   },
 }
 defineExpose({
+  /** @description current collapse-item whether active */
   isActive,
 })
 </script>

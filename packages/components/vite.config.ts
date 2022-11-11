@@ -4,8 +4,8 @@ import VueJSX from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
-import AutoImport from 'unplugin-auto-import/vite'
 import fs from 'fs-extra'
+import AutoImport from 'unplugin-auto-import/vite'
 import type { ResolvedConfig } from 'vite'
 // https://vitejs.dev/config/
 

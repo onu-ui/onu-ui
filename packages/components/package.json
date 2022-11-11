@@ -1,8 +1,8 @@
 {
   "name": "@onu-ui/components",
-  "description": "Onu-UI components for use on demand",
   "type": "module",
   "version": "1.0.10-beta.8",
+  "description": "Onu-UI components for use on demand",
   "keywords": [
     "onu-ui",
     "@onu-ui/components"
@@ -34,8 +34,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../onu-ui\" build",
-    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck&& pnpm run --filter \"../onu-ui\" build",
+    "stub": " vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck --watch"
   },
   "dependencies": {
     "@onu-ui/preset": "workspace:*",

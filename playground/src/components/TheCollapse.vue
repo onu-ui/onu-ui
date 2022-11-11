@@ -2,7 +2,7 @@
 function handleToClickHeader(activeNames: (string | number)[]) {
   // console.log(activeNames)
 }
-const expandedNames = ref(['1'])
+const expandedNames = ref(['1', '2'])
 </script>
 
 <template>

@@ -1,21 +1,21 @@
-import { nextTick } from 'vue'
-import { describe, expect, test, vi } from 'vitest'
-import OCollapse from '@onu-ui/components/collapse/src/collapse.vue'
-import OCollapseItem from '@onu-ui/components/collapse/src/collapseItem.vue'
+import { OCollapse, OCollapseItem } from '@onu-ui/components'
 import { config, mount } from '@vue/test-utils'
-import type { OCollapseItemInstance } from '@onu-ui/components/collapse/src/props'
+import type { CollapseActiveName, OCollapseItemInstance } from '@onu-ui/components'
 import type { VueWrapper } from '@vue/test-utils'
 
 config.global.stubs = {
   OCollapseItem,
 }
 
-// const CONTENT_TEST = 'content test'
 describe('o-collapse', () => {
-  test('o-collapse render test', async() => {
+  test('collapse render', async() => {
+    let expandedNames: CollapseActiveName = ['1']
     const wrapper = mount(OCollapse, {
       props: {
-        expandedNames: ['1'],
+        expandedNames,
+        'onUpdate:expanded-names': (value: CollapseActiveName) => {
+          expandedNames = value
+        },
       },
       slots: {
         default: `

@@ -32,8 +32,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
-    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck",
+    "stub": " vite build && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck --watch"
   },
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"

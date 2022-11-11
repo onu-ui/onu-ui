@@ -1,4 +1,3 @@
-import { describe, expect, test } from 'vitest'
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { OSwitch } from '@onu-ui/components'

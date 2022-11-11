@@ -14,9 +14,10 @@ importers:
       '@onu-ui/preset': workspace:*
       '@onu-ui/utils': workspace:*
       '@types/fs-extra': ^9.0.13
-      '@types/node': 18.11.9
-      '@unocss/preset-mini': ^0.46.4
-      '@unocss/preset-uno': ^0.46.4
+      '@types/jsdom': ^20.0.1
+      '@types/node': 18.8.0
+      '@unocss/preset-mini': ^0.45.30
+      '@unocss/preset-uno': ^0.45.30
       '@vitejs/plugin-vue': ^3.1.0
       '@vitejs/plugin-vue-jsx': ^2.0.1
       '@vitest/coverage-c8': ^0.25.1
@@ -28,7 +29,7 @@ importers:
       eslint-plugin-import: ^2.26.0
       esno: ^0.16.3
       fs-extra: ^10.1.0
-      jsdom: ^20.0.0
+      jsdom: ^20.0.1
       lint-staged: ^13.0.3
       onu-ui: workspace:*
       rimraf: ^3.0.2
@@ -59,15 +60,15 @@ importers:
       '@onu-ui/preset': link:packages/preset
       '@onu-ui/utils': link:packages/utils
       '@types/fs-extra': 9.0.13
-      '@types/node': 18.11.9
-      '@unocss/preset-mini': 0.46.4
-      '@unocss/preset-uno': 0.46.4
-      '@vitejs/plugin-vue': 3.2.0_vite@3.2.3+vue@3.2.44
-      '@vitejs/plugin-vue-jsx': 2.1.1_vite@3.2.3+vue@3.2.44
-      '@vitest/coverage-c8': 0.25.1_qmf3kdmeffdxtvhzholcvxotja
-      '@vitest/ui': 0.25.1
-      '@vue/test-utils': 2.2.1_vue@3.2.44
-      '@vueuse/core': 9.5.0_vue@3.2.44
+      '@types/node': 18.8.0
+      '@unocss/preset-mini': 0.45.30
+      '@unocss/preset-uno': 0.45.30
+      '@vitejs/plugin-vue': 3.1.2_vite@3.1.8+vue@3.2.41
+      '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.8+vue@3.2.41
+      '@vitest/coverage-c8': 0.24.3_77pornmwtppca6gbma7p22376m
+      '@vitest/ui': 0.24.3
+      '@vue/test-utils': 2.1.0_vue@3.2.41
+      '@vueuse/core': 9.3.1_vue@3.2.41
       bumpp: 8.2.1
       eslint: 8.27.0
       eslint-plugin-import: 2.26.0_jnohwm7eexgw7uduhweedcbnpe
@@ -1094,6 +1095,14 @@ packages:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
 
+  /@types/jsdom/20.0.1:
+    resolution: {integrity: sha512-d0r18sZPmMQr1eG35u12FZfhIXNrnsPU/g5wvRKCUf/tOGilKKwYMYGqh33BNR6ba+2gkHw1EUiHoN3mn7E5IQ==}
+    dependencies:
+      '@types/node': 18.11.3
+      '@types/tough-cookie': 4.0.2
+      parse5: 7.1.1
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -1141,10 +1150,6 @@ packages:
 
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
-    dev: true
-
-  /@types/semver/7.3.13:
-    resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
   /@types/unist/2.0.6:
