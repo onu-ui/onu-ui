@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { OMessage } from 'onu-ui'
+import { OButton, OCard, OMessage } from 'onu-ui'
 
 function handleToClickTheme(type:String) {
-  OMessage[type]({
+  OMessage[`${type}`]({
     content: type,
   })
 }
 
-function handleBasicClick(content:string | number) {
+function handleBasicClick(content:string) {
   OMessage.primary({
     content,
   })
 }
-function handleCloseClick(content:string | number) {
+function handleCloseClick(content:string) {
   OMessage.info({
     content,
     closable: true,
@@ -30,7 +30,14 @@ function handleDurationClick() {
   OMessage.error({
     content: 'duration message',
     closable: true,
-    duration: 10000,
+    duration: 30000,
+  })
+}
+
+function handleHTML() {
+  OMessage({
+    parseHtml: true,
+    content: '<strong>This is <i>HTML</i> string</strong>',
   })
 }
 </script>
@@ -70,6 +77,9 @@ function handleDurationClick() {
         </o-button>
         <o-button o="error" @click="handleDurationClick">
           duration
+        </o-button>
+        <o-button o="error" @click="handleHTML">
+          HTML
         </o-button>
       </div>
     </div>

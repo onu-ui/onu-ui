@@ -10,7 +10,7 @@ export const tagProps = {
   /** tag size */
   size: {
     type: [String] as PropType<SizeType>,
-    default: 'md',
+    default: 'xs',
     validator(val: string): boolean {
       if (!val) return true
       return ['xs', 'md', 'sm', 'lg'].includes(val)

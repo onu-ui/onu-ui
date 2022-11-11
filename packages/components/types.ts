@@ -17,6 +17,7 @@ export type AttachNodeReturnValue = HTMLElement | Element | Document
 export type AttachNode =
   | string
   | ((triggerNode?: HTMLElement) => AttachNodeReturnValue)
+export type Mutable<T> = { -readonly [P in keyof T]: T[P] }
 
 export const commonSize = ['xs', 'sm', 'md', 'lg'] as const
 export const commonPosition = ['top', 'right', 'bottom', 'left'] as const

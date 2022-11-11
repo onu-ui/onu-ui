@@ -57,7 +57,7 @@ TODO
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Tag size.  |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'xs'` | Tag size.  |
 | light | `boolean` | `false` |  Determine whether it's a light tag.  |
 | o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Tag type. |
 | closable | `boolean` | `false` | Whether Tag can be removed. |

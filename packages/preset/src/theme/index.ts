@@ -19,6 +19,8 @@ export default {
     softBd: '#E5E6EB',
     grayBg: '#373739',
     embed: '#F1F3F5',
+    darkContext: 'rgba(28,31,35)',
+    lightContext: 'rgba(249,249,249)',
   },
   fontFamily: {
     sans: 'Avenir, Helvetica, Arial, sans-serif',
