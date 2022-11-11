@@ -3,7 +3,7 @@ title: Message
 lang: en-US
 ---
 
-# Message <o-tag o="info">dark mode</o-tag>
+# Message <update-badge/>
 
 `Message` component is used to give timely feedback to user's operations. It could be the result feedback of the operation, such as success, failure, error, warning, etc and more.
 

@@ -3,7 +3,7 @@ title: Card
 lang: en-US
 ---
 
-# Card <o-tag o="info">dark mode</o-tag>
+# Card <update-badge/>
 
 Cards are used to group and display content in a way that is easily readable.
 
