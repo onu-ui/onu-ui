@@ -18,7 +18,7 @@ function handleToClickBasic(theme:string, time:number) {
       <o-button o="secondary" @click="handleToClickBasic('secondary', 4000)">
         show 4.0 s
       </o-button>
-      <o-button o="info" @click="handleToClickBasic('info', 500000)">
+      <o-button o="info" @click="handleToClickBasic('info', 5000)">
         show 5.0 s
       </o-button>
     </div>

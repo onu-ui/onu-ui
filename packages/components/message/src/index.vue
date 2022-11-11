@@ -2,7 +2,7 @@
 import { CSSProperties, onMounted, ref } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
 import OIcon from '../../icon/src/index.vue'
-import { MessageContext, messageEmits, messageProps } from './type'
+import { messageEmits, messageProps } from './type'
 import { useOffset } from './instance'
 
 const props = defineProps(messageProps)
@@ -94,7 +94,8 @@ const iconTypeMap = {
   transform: translate(-50%, -100%);
 }
 
+/* The icon color of the dakr mode info is not very noticeable */
 .o-message-icon-info{
-  @apply dark: text-secondary
+  @apply !text-info !dark:text-secondary
 }
 </style>
