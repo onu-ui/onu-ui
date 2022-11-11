@@ -40,6 +40,7 @@ describe('o-collapse', () => {
     expect(collapseItemWrappers[0].vm.title).toBe('title1')
     expect(collapseItemWrappers[1].vm.disabled).toBe(true)
 
+    // there cant get `isActive`
     expect(collapseItemWrappers[0].vm.isActive).toBe(true)
 
     collapseItemHeaderEls[2].click()
