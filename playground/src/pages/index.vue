@@ -1,6 +1,6 @@
 <template>
   <div py-4 space-y-5>
-    <TheAvatar />
+    <!-- <TheAvatar />
     <TheIcon />
     <TheButton />
     <TheSwitch />
@@ -8,10 +8,10 @@
     <TheCheckbox />
     <TheAlert />
     <TheBadge />
-    <TheTag />
+    <TheTag /> -->
     <TheMessage />
-    <ThePopup />
+    <!-- <ThePopup />
     <TheRate />
-    <TheCollapse />
+    <TheCollapse /> -->
   </div>
 </template>

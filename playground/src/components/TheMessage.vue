@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { OMessage } from 'onu-ui'
+import { OButton, OCard, OMessage } from 'onu-ui'
 
 function handleToClickTheme(type:String) {
   OMessage[`${type}`]({
@@ -30,7 +30,7 @@ function handleDurationClick() {
   OMessage.error({
     content: 'duration message',
     closable: true,
-    duration: 1000000,
+    duration: 30000,
   })
 }
 

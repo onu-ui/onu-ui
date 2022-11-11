@@ -3,7 +3,7 @@ title: Popup
 lang: en-US
 ---
 
-# Popup
+# Popup <o-tag o="info">dark mode</o-tag>
 
 When the mouse hovers, focus, or click on a component, a bubble-like card floating layer will pop up. You can manipulate the elements on the card.
 

@@ -68,7 +68,7 @@ const iconTypeMap = {
   <Transition name="fade" :o="props.type" @after-leave="$emit('destroy')">
     <div v-show="visible" :id="id" ref="messageRef" o-message-base :style="customStyle">
       <div o-message-content>
-        <o-icon text-xl :name="props.icon ?? iconTypeMap[props.type]" />
+        <o-icon text-xl :name="props.icon ?? iconTypeMap[props.type]" :class="type === 'info' && '!text-info !dark:text-secondary'" />
         <slot>
           <p v-if="!parseHtml">
             {{ content }}
@@ -92,10 +92,5 @@ const iconTypeMap = {
 .fade-leave-to {
   opacity: 0;
   transform: translate(-50%, -100%);
-}
-
-/* The icon color of the dakr mode info is not very noticeable */
-.o-message-icon-info{
-  @apply !text-info !dark:text-secondary
 }
 </style>

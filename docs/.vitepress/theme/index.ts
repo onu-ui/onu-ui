@@ -16,5 +16,6 @@ export default {
     }
     app.component('demo', DemoBlock)
     app.component('overview', Overview)
+    app.config.globalProperties.$message = components.OMessage
   },
 }
