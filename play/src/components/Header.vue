@@ -6,6 +6,7 @@ import logo from '../assets/logo.svg'
 import type { ComputedRef } from 'vue'
 import type { ReplStore, VersionKey } from '~/composables/store'
 import type { OMessageProps } from 'onu-ui'
+// eslint-disable-next-line vue/no-setup-props-destructure
 const { store } = defineProps<{
   store: ReplStore
 }>()

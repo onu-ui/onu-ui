@@ -5,7 +5,6 @@ const msg = ref('Hello Onu UI!')
 const checkVal = ref(true)
 const mv = ref(true)
 const avatarSrcs = 'https://images.unsplash.com/photo-1660594714679-19b0173e0558?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-
 </script>
 
 <template>
@@ -22,9 +21,9 @@ const avatarSrcs = 'https://images.unsplash.com/photo-1660594714679-19b0173e0558
     <div fscw gap-2>
       <o-checkbox o="white" label="Vue" size="lg" icon="i-logos-vue" />
       <o-checkbox
-          v-model="checkVal"
-          label="basic use"
-          o-primary
+        v-model="checkVal"
+        label="basic use"
+        o-primary
       />
     </div>
 
@@ -74,5 +73,4 @@ const avatarSrcs = 'https://images.unsplash.com/photo-1660594714679-19b0173e0558
 .container {
   padding: 20px;
 }
-
 </style>

@@ -3,7 +3,8 @@
 import { onMounted } from 'vue'
 import App from './App.vue'
 // @ts-ignore
-import { getUnocssCompileRes, libInstall, sendHtml } from './lib-install.js'
+import { getUnocssCompileRes, init, libInstall, sendHtml } from './lib-install.js'
+await init()
 libInstall()
 onMounted(() => {
   sendHtml()

@@ -1,5 +1,4 @@
 import * as __unocss from 'unocss'
-// @ts-expect-error
 import { $fetch } from 'ohmyfetch'
 import type { UserConfig } from 'unocss'
 const AsyncFunction = Object.getPrototypeOf(async() => {}).constructor

@@ -1,8 +1,6 @@
 import { getCurrentInstance } from 'vue'
 import UnoUI from 'onu-ui'
 let installed = false
-await loadStyle()
-await createInjectUnocss()
 
 export function libInstall() {
   if (installed) return
@@ -10,6 +8,11 @@ export function libInstall() {
   // 安装组件库到vue
   instance.appContext.app.use(UnoUI)
   installed = true
+}
+
+export async function init() {
+  await loadStyle()
+  await createInjectUnocss()
 }
 
 export function loadStyle() {

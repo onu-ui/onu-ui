@@ -2,8 +2,8 @@ import { OMessage as message } from 'onu-ui'
 import type { OMessageProps } from 'onu-ui'
 import type { Fn } from '@vueuse/core'
 import type { BuiltInParserName } from 'prettier'
-// @ts-expect-error
-import type { Store } from '../../vue-repl/vue-repl'
+
+import type { Store } from '@vue/repl'
 
 export const formatCode = async(loadedFormat: boolean, store: Store) => {
   let close: Fn | undefined

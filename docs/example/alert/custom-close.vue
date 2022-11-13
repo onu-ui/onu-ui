@@ -23,7 +23,6 @@
 const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 
 const handleClose = () => {
-  // eslint-disable-next-line no-alert
   alert('click the close icon')
 }
 </script>
