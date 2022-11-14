@@ -2,7 +2,7 @@
   "name": "@onu-ui/components",
   "description": "Onu-UI components for use on demand",
   "type": "module",
-  "version": "1.0.10-beta.7",
+  "version": "1.0.10-beta.8",
   "keywords": [
     "onu-ui",
     "@onu-ui/components"
