@@ -8,7 +8,7 @@ const handleClose = () => {
 </script>
 
 <template>
-  <OCard title="Alert" o="white">
+  <OCard title="Alert">
     <div grid="~ gap-4 cols-1 md:cols-2 xl:cols-2">
       <o-alert o="primary">
         {{ content }}

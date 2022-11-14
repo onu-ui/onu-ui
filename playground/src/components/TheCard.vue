@@ -5,7 +5,7 @@ const description = 'This a description'
 </script>
 
 <template>
-  <OCard title="Card" o="white">
+  <OCard title="Card">
     <div grid="~ gap-4 cols-1 md:cols-2 xl:cols-3">
       <o-card title="Base Title" extra="More" />
       <o-card title="Has Description" :description="description" />

@@ -18,7 +18,7 @@ const getRandomSrc = () => avatarSrcs[Math.floor(Math.random() * (avatarSrcs.len
 </script>
 
 <template>
-  <OCard o="white" title="Avatar">
+  <OCard title="Avatar">
     <div space-y-2>
       <div fsc gap-2>
         <O-Avatar :src="getRandomSrc()" />

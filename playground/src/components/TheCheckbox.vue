@@ -3,7 +3,7 @@ const checkVal = ref(true)
 </script>
 
 <template>
-  <OCard title="Checkbox" o-white>
+  <OCard title="Checkbox">
     <div space-y-2>
       <div fsc gap-2>
         <o-checkbox

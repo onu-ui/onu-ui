@@ -5,7 +5,7 @@ const switchDisabled = ref(true)
 </script>
 
 <template>
-  <OCard o-white title="Switch">
+  <OCard title="Switch">
     <div space-y-2>
       <OCard title="Basic" :description="`Test ModelValue: ${mv}`">
         <div fsc gap-2>
