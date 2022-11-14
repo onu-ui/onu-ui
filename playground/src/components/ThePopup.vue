@@ -1,5 +1,5 @@
 <template>
-  <o-card title="Popup" o="white">
+  <o-card title="Popup">
     <div space-y-2>
       <OCard title="Basic" description="Baisc Usage">
         <div fsc gap-2>

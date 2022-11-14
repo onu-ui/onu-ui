@@ -43,7 +43,7 @@ function handleHTML() {
 </script>
 
 <template>
-  <o-card title="Message" o="white">
+  <o-card title="Message">
     <div space-y-2>
       <div fsc gap-2 flex-wrap>
         <o-button o="primary" @click="handleToClickTheme('primary')">

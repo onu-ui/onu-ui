@@ -3,7 +3,7 @@ const rate = ref(2.5)
 </script>
 
 <template>
-  <OCard o-white title="Rate">
+  <OCard title="Rate">
     <div space-y-2>
       <div fsc gap-4>
         {{ rate }}

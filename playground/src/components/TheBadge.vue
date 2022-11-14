@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <OCard o-white title="Badge">
+  <OCard title="Badge">
     <div space-y-2>
       <div fsc flex-wrap gap-4>
         <OBadge o="primary" :value="100">

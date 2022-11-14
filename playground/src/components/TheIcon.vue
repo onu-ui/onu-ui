@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <OCard o-white title="Icon">
+  <OCard title="Icon">
     <div grid="~ cols-7 gap-4" un-children="text-6">
       <o-icon o-primary name="i-carbon-letter-aa" />
       <o-icon o-secondary name="i-carbon-letter-bb" />

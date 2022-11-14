@@ -11,7 +11,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <OCard o="white" title="Tag">
+  <OCard title="Tag">
     <div space-y-2>
       <div fsc gap-2>
         <o-tag o="primary">

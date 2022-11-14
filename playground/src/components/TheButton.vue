@@ -11,7 +11,7 @@ const startLoading = () => {
 </script>
 
 <template>
-  <OCard o="white" title="Button">
+  <OCard title="Button">
     <div space-y-2>
       <div fsc gap-2>
         <OButton o="primary">
