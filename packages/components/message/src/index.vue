@@ -70,9 +70,8 @@ const iconTypeMap = {
       <div o-message-content>
         <o-icon
           text-xl
-          :o="type"
           :name="props.icon ?? iconTypeMap[props.type]"
-          :class="type === 'info' && '!text-info !dark:text-secondary'"
+          :class="type === 'info' ? '!text-info !dark:text-secondary' : `o-${type}`"
         />
         <slot>
           <p v-if="!parseHtml">
