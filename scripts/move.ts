@@ -13,7 +13,7 @@ const main = async() => {
     fse.copySync(componentsDir, targetDir, { overwrite: true })
     fse.copyFileSync(volarPath, volarTargetPath)
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 

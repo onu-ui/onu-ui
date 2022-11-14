@@ -4,6 +4,9 @@
   ],
   "rules": {
     "react/display-name": "off",
-    "react-hooks/rules-of-hooks": "off"
+    "react-hooks/rules-of-hooks": "off",
+    "no-sequences": "off",
+    "no-alert": "off",
+    "no-console": ["error", { "allow": ["error"] }]
   }
 }

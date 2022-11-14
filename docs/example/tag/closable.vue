@@ -11,11 +11,9 @@
 
 <script lang="ts" setup>
 const handleClose = () => {
-  // eslint-disable-next-line no-alert
   alert('click the close icon')
 }
 const handleClick = () => {
-  // eslint-disable-next-line no-alert
   alert('click the tag')
 }
 </script>
