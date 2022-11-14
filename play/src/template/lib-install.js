@@ -46,6 +46,8 @@ export function sendHtml() {
 // 收父页面传来到 css
 export function getUnocssCompileRes() {
   window.addEventListener('message', (event) => {
-    document.querySelector('#unocss_style').innerHTML = event.data
+    const styleElm = document.querySelector('#unocss_style')
+    if (styleElm)
+      styleElm.innerHTML = event.data
   })
 }

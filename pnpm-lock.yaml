@@ -138,24 +138,26 @@ importers:
   packages/utils:
     specifiers:
       vue: ^3.2.0
-    dependencies:
+    devDependencies:
       vue: 3.2.44
 
   play:
     specifiers:
       '@types/prettier': ^2.6.3
+      '@unocss/reset': ^0.44.5
       '@vue/repl': ^1.3.0
       compare-versions: ^4.1.3
       ohmyfetch: ^0.4.21
       onu-ui: workspace:*
       prettier: ^2.7.1
     dependencies:
-      '@vue/repl': 1.3.2
+      '@vue/repl': 1.3.2_vue@3.2.44
       compare-versions: 4.1.4
       ohmyfetch: 0.4.21
       onu-ui: link:../packages/onu-ui
     devDependencies:
       '@types/prettier': 2.7.1
+      '@unocss/reset': 0.44.7
       prettier: 2.7.1
 
   playground:
@@ -1631,10 +1633,12 @@ packages:
     dependencies:
       '@vue/shared': 3.2.44
 
-  /@vue/repl/1.3.2:
+  /@vue/repl/1.3.2_vue@3.2.44:
     resolution: {integrity: sha512-5joGOuTFmjaugG3E1h/oP1EXSMcVXRUwLIoo8xvYQnqDrCT6g1SfsH1pfei5PpC5DUxMX1584CekZu6REgGYkQ==}
     peerDependencies:
       vue: ^3.2.13
+    dependencies:
+      vue: 3.2.44
     dev: false
 
   /@vue/runtime-core/3.2.44:
