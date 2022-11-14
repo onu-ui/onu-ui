@@ -5,19 +5,19 @@
         Primary
       </o-tag>
       <o-tag o="secondary">
-        secondary
+        Secondary
       </o-tag>
       <o-tag o="success">
-        success
+        Success
       </o-tag>
       <o-tag o="warning">
-        warning
+        Warning
       </o-tag>
       <o-tag o="error">
-        error
+        Error
       </o-tag>
       <o-tag o="info">
-        info
+        Info
       </o-tag>
     </div>
     <div fscw gap-2>
@@ -25,19 +25,19 @@
         Primary
       </o-tag>
       <o-tag o="secondary" light>
-        secondary
+        Secondary
       </o-tag>
       <o-tag o="success" light>
-        success
+        Success
       </o-tag>
       <o-tag o="warning" light>
-        warning
+        Warning
       </o-tag>
       <o-tag o="error" light>
-        error
+        Error
       </o-tag>
       <o-tag o="info" light>
-        info
+        Info
       </o-tag>
     </div>
   </div>

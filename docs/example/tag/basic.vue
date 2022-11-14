@@ -1,25 +1,25 @@
 <template>
   <div fscw gap-2>
     <o-tag o="primary">
-      mary
+      Primary
     </o-tag>
     <o-tag o="secondary">
-      secondary
+      Secondary
     </o-tag>
     <o-tag o="success">
-      success
+      Success
     </o-tag>
     <o-tag o="warning">
-      warning
+      Warning
     </o-tag>
     <o-tag o="error">
-      error
+      Error
     </o-tag>
     <o-tag o="info">
-      info
+      Info
     </o-tag>
     <o-tag o="primary" bg-color="#1abc9c">
-      custom-bg
+      Custombg
     </o-tag>
   </div>
 </template>

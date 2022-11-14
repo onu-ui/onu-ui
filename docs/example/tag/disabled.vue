@@ -2,41 +2,41 @@
   <div space-y-2>
     <div fscw gap-2>
       <o-tag o="primary" disabled>
-        primary
+        Primary
       </o-tag>
       <o-tag o="secondary" disabled>
-        secondary
+        Secondary
       </o-tag>
       <o-tag o="success" disabled>
-        success
+        Success
       </o-tag>
       <o-tag o="warning" disabled>
-        warning
+        Warning
       </o-tag>
       <o-tag o="error" disabled>
-        error
+        Error
       </o-tag>
       <o-tag o="info" disabled>
-        info
+        Info
       </o-tag>
     </div>
     <o-tag o="primary" light disabled>
       Primary
     </o-tag>
     <o-tag o="secondary" light disabled>
-      secondary
+      Secondary
     </o-tag>
     <o-tag o="success" light disabled>
-      success
+      Success
     </o-tag>
     <o-tag o="warning" light disabled>
-      warning
+      Warning
     </o-tag>
     <o-tag o="error" light disabled>
-      error
+      Error
     </o-tag>
     <o-tag o="info" light disabled>
-      info
+      Info
     </o-tag>
   </div>
 </template>

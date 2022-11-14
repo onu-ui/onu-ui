@@ -1,5 +1,5 @@
 <template>
   <o-tag o="primary" rounded>
-    rounded
+    Rounded
   </o-tag>
 </template>
