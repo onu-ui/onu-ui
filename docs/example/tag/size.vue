@@ -1,16 +1,16 @@
 <template>
   <div fsc gap-2>
     <o-tag o="primary" size="xs">
-      Mini
+      xs
     </o-tag>
     <o-tag o="secondary" size="sm">
-      Small
+      sm
     </o-tag>
     <o-tag o="success" size="md">
-      Medium
+      md
     </o-tag>
     <o-tag o="warning" size="lg">
-      Large
+      lg
     </o-tag>
   </div>
 </template>
