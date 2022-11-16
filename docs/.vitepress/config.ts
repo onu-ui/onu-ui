@@ -148,9 +148,9 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/onu-ui/onu-ui' }],
     sidebar,
     algolia: {
-      appId: '',
-      apiKey: '',
-      indexName: '',
+      appId: '8GNC2KD46U',
+      apiKey: '275bb9c86a18563cdd9ede0a8de82b29',
+      indexName: 'zyob',
     },
     footer: {
       message: 'MIT Licensed',
