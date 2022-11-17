@@ -5,7 +5,7 @@
 :::
 ## Introduction
 
-Onu-UI is a UI library generate by [UnoCSS](https://github.com/unocss/unocss). 
+Onu-UI is a Vue.js based [UnoCSS](https://github.com/unocss/unocss) UI library that allows you to make beautiful websites. 
 
 It includes a comprehensive collection of prebuilt components that are ready for use in production right out of the box.
 

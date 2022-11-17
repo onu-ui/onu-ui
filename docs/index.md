@@ -3,20 +3,24 @@ layout: home
 sidebar: false
 
 title: Onu-UI
-titleTemplate: Web glassmorphism components generate by UnoCSS
+titleTemplate: Popular, beautiful and fast UnoCSS component library
 
 hero:
   name: Onu-UI
-  text: Web glassmorphism components generate by UnoCSS
-  tagline: A Vue.js based UnoCSS UI framework that allows you to build modern SPA applications with UnoCSS.
+  text: Popular, beautiful and fast UnoCSS component library
+  tagline: A Vue.js based UnoCSS UI library that allows you to make beautiful websites
   image: 
     src: /logo.svg
     alt: Onu-UI
 
   actions:
     - theme: brand
-      text: Get Start
+      text: Get Started
       link: /guide/quick-start
+
+    - theme: alt
+      text: View Components
+      link: /guide/overview
 
     - theme: alt
       text: View on GitHub

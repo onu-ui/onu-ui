@@ -12,9 +12,88 @@ const guides = [
   { text: 'Changelog', link: '/guide/changelog' },
 ]
 
+const components = [
+  {
+    text: 'Basic',
+    items: [
+      {
+        text: 'Button',
+        link: '/components/button',
+      },
+      {
+        text: 'Badge',
+        link: '/components/badge',
+      },
+      {
+        text: 'Icon',
+        link: '/components/icon',
+      },
+    ],
+  },
+  {
+    text: 'Form',
+    items: [
+      {
+        text: 'Checkbox',
+        link: '/components/checkbox',
+      },
+      {
+        text: 'Switch',
+        link: '/components/switch',
+      },
+      {
+        text: 'Rate',
+        link: '/components/rate',
+      },
+    ],
+  },
+  {
+    text: 'Data',
+    items: [
+      {
+        text: 'Avatar',
+        link: '/components/avatar',
+      },
+      {
+        text: 'Card',
+        link: '/components/card',
+      },
+      {
+        text: 'Tag',
+        link: '/components/tag',
+      },
+    ],
+  },
+  {
+    text: 'Navigation',
+    items: [],
+  },
+  {
+    text: 'Feedback',
+    items: [
+      {
+        text: 'Alert',
+        link: '/components/alert',
+      },
+      {
+        text: 'Message',
+        link: '/components/message',
+      },
+      {
+        text: 'Popup',
+        link: '/components/popup',
+      },
+      {
+        text: 'Collapse',
+        link: '/components/collapse',
+      },
+    ],
+  },
+]
+
 const nav = [
-  { text: 'Guide', link: '/guide/quick-start' },
-  { text: 'Components', link: '/components/button' },
+  { text: 'Guide', items: guides },
+  { text: 'Components', items: components },
   {
     text: `v${version}`,
     items: [
@@ -33,84 +112,7 @@ const sidebar = {
       items: guides,
     },
   ],
-  '/components': [
-    {
-      text: 'Basic',
-      items: [
-        {
-          text: 'Button',
-          link: '/components/button',
-        },
-        {
-          text: 'Badge',
-          link: '/components/badge',
-        },
-        {
-          text: 'Icon',
-          link: '/components/icon',
-        },
-      ],
-    },
-    {
-      text: 'Form',
-      items: [
-        {
-          text: 'Checkbox',
-          link: '/components/checkbox',
-        },
-        {
-          text: 'Switch',
-          link: '/components/switch',
-        },
-        {
-          text: 'Rate',
-          link: '/components/rate',
-        },
-      ],
-    },
-    {
-      text: 'Data',
-      items: [
-        {
-          text: 'Avatar',
-          link: '/components/avatar',
-        },
-        {
-          text: 'Card',
-          link: '/components/card',
-        },
-        {
-          text: 'Tag',
-          link: '/components/tag',
-        },
-      ],
-    },
-    {
-      text: 'Navigation',
-      items: [],
-    },
-    {
-      text: 'Feedback',
-      items: [
-        {
-          text: 'Alert',
-          link: '/components/alert',
-        },
-        {
-          text: 'Message',
-          link: '/components/message',
-        },
-        {
-          text: 'Popup',
-          link: '/components/popup',
-        },
-        {
-          text: 'Collapse',
-          link: '/components/collapse',
-        },
-      ],
-    },
-  ],
+  '/components': components,
 }
 
 export default defineConfig({

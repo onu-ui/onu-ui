@@ -1,4 +1,9 @@
 # Installation
+
+This section explains how to properly install and use an OnuUI.
+
+<div style="width:100%;height:0px;position:relative;padding-bottom:72.000%;"><iframe src="https://streamable.com/e/qdq84p" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+
 ## Full Import
 
 ```bash
@@ -15,7 +20,7 @@ import 'onu-ui/dist/style.css'
 createApp(App).use(OnuUI).mount('#app')
 ```
 
-## On-demand Import:
+## On-demand Import
 
 You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
 
