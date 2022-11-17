@@ -1,12 +1,22 @@
-import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetTypography,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 import { presetOnu } from 'onu-ui'
 
 export default defineConfig({
   presets: [
-    presetUno({ preflight: false }),
+    presetUno({
+      attributifyPseudo: true,
+    }),
     presetAttributify(),
     presetIcons({
-      scale: 1.1,
+      scale: 1.2,
       cdn: 'https://esm.sh/',
     }),
     presetTypography(),
