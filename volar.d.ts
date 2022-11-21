@@ -18,6 +18,7 @@ declare module 'vue' {
     OTag: typeof import('onu-ui')['OTag']
     OTrigger: typeof import('onu-ui')['OTrigger']
     OConfigProvider: typeof import('onu-ui')['OConfigProvider']
+    OEmpty: typeof import('onu-ui')['OEmpty']
   }
 }
 export {}

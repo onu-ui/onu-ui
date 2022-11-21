@@ -9,6 +9,7 @@ import {
   OCollapse,
   OCollapseItem,
   OConfigProvider,
+  OEmpty,
   OIcon,
   OMessage,
   OPopup,
@@ -38,4 +39,5 @@ export default [
   OCheckbox,
   ORate,
   OConfigProvider,
+  OEmpty,
 ] as Plugin[]
