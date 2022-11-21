@@ -7,6 +7,7 @@ export interface InstallOptions {
   namespace?: MaybeRef<string>
   locale?: MaybeRef<language>
   zIndex?: MaybeRef<number>
+  size?: MaybeRef<string>
 }
 
 export const configProviderContextKey: InjectionKey<Ref<InstallOptions>> = Symbol('__onu_config_provider')
