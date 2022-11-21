@@ -3,16 +3,16 @@
     <div class="o-empty-img">
       <img v-if="image" :src="image" :style="imageStyle">
       <slot v-else name="image">
-        <empty-svg />
+        <img src="./empty.svg">
       </slot>
     </div>
-    <div class="o-empty-description">
+    <div mt-6>
       <slot v-if="$slots.description" name="description" />
       <p v-else>
         {{ description || t('locales.empty.emptyText') }}
       </p>
     </div>
-    <div v-if="$slots.default" class="o-empty-footer">
+    <div v-if="$slots.default" class="o-empty-footer" mt-6>
       <slot />
     </div>
   </div>
@@ -30,7 +30,3 @@ const imageStyle = computed<CSSProperties>(() => ({
   width: props.imgSize || '',
 }))
 </script>
-
-<style>
-
-</style>

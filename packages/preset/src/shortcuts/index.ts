@@ -15,6 +15,7 @@ import { tagShortcuts } from './tag'
 import { popupShortcuts } from './popup'
 import { triggerShortcuts } from './trigger'
 import { rateShortcuts } from './rate'
+import { emptyShortcuts } from './empty'
 
 import type { Theme } from '@unocss/preset-uno'
 import type { UserShortcuts } from 'unocss'
@@ -52,4 +53,6 @@ export default [
   triggerShortcuts,
   // rate
   rateShortcuts,
+  // empty
+  emptyShortcuts,
 ] as UserShortcuts<Theme>

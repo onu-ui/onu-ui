@@ -31,6 +31,7 @@ declare module '@vue/runtime-core' {
     TheCard: typeof import('./components/TheCard.vue')['default']
     TheCheckbox: typeof import('./components/TheCheckbox.vue')['default']
     TheCollapse: typeof import('./components/TheCollapse.vue')['default']
+    TheEmpty: typeof import('./components/TheEmpty.vue')['default']
     TheHeader: typeof import('./components/layout/TheHeader.vue')['default']
     TheIcon: typeof import('./components/TheIcon.vue')['default']
     TheMessage: typeof import('./components/TheMessage.vue')['default']
