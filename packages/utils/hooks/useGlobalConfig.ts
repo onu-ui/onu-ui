@@ -1,0 +1,51 @@
+import { configProviderContextKey } from '../tokens'
+import { mergeObjects } from '../shared'
+import type { InstallOptions } from '../tokens'
+import type { App, Ref } from 'vue'
+import type { MaybeRef } from '@vueuse/core'
+
+const globalConfig = ref<InstallOptions>()
+
+/**
+ * 获取全局配置 Hooks
+ * @param key
+ * @param defaultValue
+ */
+export function useGlobalConfig<T extends keyof InstallOptions, U extends InstallOptions[T]>(key: T, defaultValue?: U): Ref<Exclude<InstallOptions[T], undefined | U>>
+export function useGlobalConfig(): Ref<InstallOptions>
+export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undefined) {
+  const config = getCurrentInstance() ? inject(configProviderContextKey, globalConfig) : globalConfig
+
+  if (key)
+    return computed(() => config.value?.[key] ?? defaultValue)
+  else
+    return config
+}
+
+/**
+ * 注入配置
+ * @param config
+ * @param app
+ * @param global
+ */
+export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App, global = false) {
+  const sourceConfig = getCurrentInstance() ? useGlobalConfig() : undefined
+  const provideFn = app?.provide ?? (getCurrentInstance() ? provide : undefined)
+
+  if (!provideFn) return
+
+  const context = computed(() => {
+    const cfg = unref(config)
+    if (!sourceConfig?.value) return cfg
+
+    return mergeObjects(sourceConfig.value, cfg)
+  })
+
+  provideFn(configProviderContextKey, context)
+
+  // 初始化
+  if (global || !globalConfig.value)
+    globalConfig.value = context.value
+
+  return context
+}
