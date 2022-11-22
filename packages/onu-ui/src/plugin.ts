@@ -1,7 +1,7 @@
 import * as plugins from '@onu-ui/components'
-import { provideGlobalConfig } from '@onu-ui/utils'
+import { provideGlobalConfig } from '../../utils'
 import { version } from '../package.json'
-import type { InstallOptions } from '@onu-ui/utils'
+import type { InstallOptions } from '../../utils'
 import type { App, Plugin } from 'vue'
 
 const INSTALLED_KEY = Symbol('OnuUI_Installed')
