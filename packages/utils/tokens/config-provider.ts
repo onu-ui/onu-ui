@@ -1,5 +1,4 @@
 import type { language } from '../locale'
-import type { InjectionKey, Ref } from 'vue'
 import type{ MaybeRef } from '@vueuse/core'
 
 export interface InstallOptions {
@@ -10,4 +9,4 @@ export interface InstallOptions {
   size?: MaybeRef<string>
 }
 
-export const configProviderContextKey: InjectionKey<Ref<InstallOptions>> = Symbol('__onu_config_provider')
+export const configProviderContextKey = '__onu_config_provider'

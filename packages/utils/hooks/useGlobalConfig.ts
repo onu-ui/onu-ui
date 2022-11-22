@@ -15,8 +15,12 @@ const globalConfig = ref<InstallOptions>()
 export function useGlobalConfig<T extends keyof InstallOptions, U extends InstallOptions[T]>(key: T, defaultValue?: U): Ref<Exclude<InstallOptions[T], undefined | U>>
 export function useGlobalConfig(): Ref<InstallOptions>
 export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undefined) {
-  const config = getCurrentInstance() ? inject(configProviderContextKey, globalConfig) : globalConfig
-  // console.log('调用 inject', globalConfig, config, getCurrentInstance())
+  const app = getCurrentInstance()
+  let config = inject(configProviderContextKey, globalConfig)
+  if (!config) {
+    config = app ? app?.appContext.provides[configProviderContextKey] : globalConfig
+    provide(configProviderContextKey, config)
+  }
   if (key)
     return computed(() => config.value?.[key] ?? defaultValue)
   else
