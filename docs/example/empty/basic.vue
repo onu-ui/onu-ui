@@ -1,0 +1,3 @@
+<template>
+  <o-empty />
+</template>

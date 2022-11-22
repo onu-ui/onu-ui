@@ -64,6 +64,12 @@ export const Components: ComponentListItem[] = [
         icon: '/svgs/card.svg',
       },
       {
+        name: 'Empty',
+        description: 'Empty are used to display the status of empty data.',
+        link: '/components/empty.html',
+        icon: '/svgs/empty.svg',
+      },
+      {
         name: 'Tag',
         description: 'Tags are used to inform the user of the status of specific data.',
         link: '/components/tag.html',

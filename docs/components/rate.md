@@ -5,9 +5,7 @@ lang: en-US
 
 # Rate
 
-## Introduce
-
-Rate component is often used for rating in forms.
+Rate is a set of radio buttons that allow the user to rate something.
 
 ## Basic usage
 `Rate` uses a five-point scale by default, you can also set `max` to set the maximum score.

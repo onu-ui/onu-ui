@@ -6,13 +6,13 @@
         <img src="./empty.svg">
       </slot>
     </div>
-    <div mt-6>
+    <div mt-4 o-description>
       <slot v-if="$slots.description" name="description" />
       <p v-else>
         {{ description || t('locales.empty.emptyText') }}
       </p>
     </div>
-    <div v-if="$slots.default" class="o-empty-footer" mt-6>
+    <div v-if="$slots.default" class="o-empty-footer" mt-2>
       <slot />
     </div>
   </div>

@@ -5,9 +5,7 @@ lang: en-US
 
 # Collapse
 
-## Introduce
-
-Use Collapse to store contents.
+Collapse is used for showing and hiding content.
 
 ## Basic usage
 
