@@ -129,8 +129,12 @@ importers:
   packages/onu-ui:
     specifiers:
       '@onu-ui/components': workspace:*
+      '@onu-ui/preset': workspace:*
+      '@onu-ui/utils': workspace:*
     dependencies:
       '@onu-ui/components': link:../components
+      '@onu-ui/preset': link:../preset
+      '@onu-ui/utils': link:../utils
 
   packages/preset:
     specifiers: {}

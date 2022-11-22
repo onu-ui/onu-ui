@@ -40,7 +40,9 @@
   },
   "homepage": "https://github.com/onu-ui/onu-ui#readme",
   "dependencies": {
-    "@onu-ui/components": "workspace:*"
+    "@onu-ui/components": "workspace:*",
+    "@onu-ui/utils": "workspace:*",
+    "@onu-ui/preset": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

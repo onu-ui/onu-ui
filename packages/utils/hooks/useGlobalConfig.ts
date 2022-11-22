@@ -1,4 +1,4 @@
-import { ref, unref } from 'vue'
+import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
 import { configProviderContextKey } from '../tokens'
 import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
@@ -16,7 +16,7 @@ export function useGlobalConfig<T extends keyof InstallOptions, U extends Instal
 export function useGlobalConfig(): Ref<InstallOptions>
 export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undefined) {
   const config = getCurrentInstance() ? inject(configProviderContextKey, globalConfig) : globalConfig
-
+  // console.log('调用 inject', globalConfig, config, getCurrentInstance())
   if (key)
     return computed(() => config.value?.[key] ?? defaultValue)
   else
@@ -30,8 +30,9 @@ export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undef
  * @param global
  */
 export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App, global = false) {
-  const sourceConfig = getCurrentInstance() ? useGlobalConfig() : undefined
-  const provideFn = app?.provide ?? (getCurrentInstance() ? provide : undefined)
+  const inSetup = !!getCurrentInstance()
+  const sourceConfig = inSetup ? useGlobalConfig() : undefined
+  const provideFn = app?.provide ?? (inSetup ? provide : undefined)
 
   if (!provideFn) return
 
@@ -47,6 +48,8 @@ export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App,
   // 初始化
   if (global || !globalConfig.value)
     globalConfig.value = context.value
+
+  // console.log('调用 provide', globalConfig.value)
 
   return context
 }
