@@ -1,9 +1,10 @@
-import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
+import { computed, getCurrentInstance, inject, provide, ref } from 'vue'
+import { resolveUnref } from '@vueuse/core'
 import { configProviderContextKey } from '../tokens'
 import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
 import type { App, Ref } from 'vue'
-import type { MaybeRef } from '@vueuse/core'
+import type { MaybeComputedRef } from '@vueuse/core'
 
 const globalConfig = ref<InstallOptions>()
 
@@ -16,13 +17,15 @@ export function useGlobalConfig<T extends keyof InstallOptions, U extends Instal
 export function useGlobalConfig(): Ref<InstallOptions>
 export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undefined) {
   const app = getCurrentInstance()
-  let config = inject(configProviderContextKey, globalConfig)
-  if (!config) {
-    config = app ? app?.appContext.provides[configProviderContextKey] : globalConfig
+  let config = inject<Ref<InstallOptions>>(configProviderContextKey)
+
+  if (!unref(config)) {
+    config = ref(app ? app.appContext.provides[configProviderContextKey] : globalConfig.value)
     provide(configProviderContextKey, config)
   }
+
   if (key)
-    return computed(() => config.value?.[key] ?? defaultValue)
+    return computed(() => config!.value?.[key] ?? defaultValue)
   else
     return config
 }
@@ -33,27 +36,24 @@ export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undef
  * @param app
  * @param global
  */
-export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App, global = false) {
+export function provideGlobalConfig(config: MaybeComputedRef<InstallOptions>, app?: App, global = false) {
   const inSetup = !!getCurrentInstance()
-  const sourceConfig = inSetup ? useGlobalConfig() : undefined
-  const provideFn = app?.provide ?? (inSetup ? provide : undefined)
+  const sourceConfig = ref(inSetup ? useGlobalConfig() : undefined)
+  const provideFn = inSetup ? provide : app?.provide
 
   if (!provideFn) return
 
   const context = computed(() => {
-    const cfg = unref(config)
-    if (!sourceConfig?.value) return cfg
+    const rawConfig = resolveUnref(config)
+    if (!sourceConfig.value) return rawConfig
 
-    return mergeObjects(sourceConfig.value, cfg)
+    return mergeObjects(sourceConfig.value, rawConfig)
   })
 
   provideFn(configProviderContextKey, context)
 
-  // 初始化
   if (global || !globalConfig.value)
     globalConfig.value = context.value
-
-  // console.log('调用 provide', globalConfig.value)
 
   return context
 }
