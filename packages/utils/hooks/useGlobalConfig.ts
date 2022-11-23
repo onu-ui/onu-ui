@@ -1,10 +1,9 @@
 import { computed, getCurrentInstance, inject, provide, ref } from 'vue'
-import { resolveUnref } from '@vueuse/core'
 import { configProviderContextKey } from '../tokens'
 import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
 import type { App, Ref } from 'vue'
-import type { MaybeComputedRef } from '@vueuse/core'
+import type { MaybeRef } from '@vueuse/core'
 
 const globalConfig = ref<InstallOptions>()
 
@@ -36,18 +35,18 @@ export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undef
  * @param app
  * @param global
  */
-export function provideGlobalConfig(config: MaybeComputedRef<InstallOptions>, app?: App, global = false) {
+export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App, global = false) {
   const inSetup = !!getCurrentInstance()
-  const sourceConfig = ref(inSetup ? useGlobalConfig() : undefined)
-  const provideFn = inSetup ? provide : app?.provide
+  const sourceConfig = inSetup ? useGlobalConfig() : undefined
+  const provideFn = app?.provide ?? (inSetup ? provide : undefined)
 
   if (!provideFn) return
 
   const context = computed(() => {
-    const rawConfig = resolveUnref(config)
-    if (!sourceConfig.value) return rawConfig
+    const cfg = unref(config)
+    if (!sourceConfig?.value) return cfg
 
-    return mergeObjects(sourceConfig.value, rawConfig)
+    return mergeObjects(sourceConfig.value, cfg)
   })
 
   provideFn(configProviderContextKey, context)
