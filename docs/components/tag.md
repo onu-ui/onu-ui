@@ -3,9 +3,9 @@ title: Tag
 lang: en-US
 ---
 
-# Tag
+# Tag <update-badge/>
 
-Used for marking and selection.
+Tags are used to inform the user of the status of specific data.
 
 ## Basic usage
 

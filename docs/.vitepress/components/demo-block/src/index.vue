@@ -21,7 +21,7 @@ const [value, toggle] = useToggle()
           <a class="o-demo_action_item" group :href="codeSandBox" target="_blank">
             <div class="o-demo_action_icon i-carbon:chemistry" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
-              Open on CodeSandBox
+              Open on Playground(WIP)
             </div>
           </a>
           <a class="o-demo_action_item" group :href="github" target="_blank">

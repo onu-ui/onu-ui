@@ -10,6 +10,7 @@
     <TheBadge />
     <TheTag /> -->
     <TheMessage />
+    <TheEmpty />
     <!-- <ThePopup />
     <TheRate />
     <TheCollapse /> -->

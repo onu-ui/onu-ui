@@ -3,9 +3,9 @@ title: Button
 lang: en-US
 ---
 
-# Button
+# Button <commn-badge>Refactor</commn-badge>
 
-Commonly used button.
+Buttons allow the user to take actions or make choices.
 
 ## Basic usage
 

@@ -5,7 +5,7 @@ lang: en-US
 
 # Avatar
 
-Avatars can be used to represent people or objects. It supports images, Icons, or characters.
+Avatars are used to show a thumbnail representation of an individual or business in the interface.
 
 ## Basic Usage
 

@@ -5,30 +5,27 @@ lang: en-US
 
 # Checkbox
 
-## Introduce
 
-A group of options for multiple choices.
+Checkboxes are used to select or deselect a value.
 
 
-## Demo
-
-### Basic usage
+## Basic usage
 
 `v-model` binding value
 <demo src="../example/checkbox/basic.vue"></demo>
 
-### Disabled
+## Disabled
 
 Disabled state for checkbox.
 <demo src="../example/checkbox/disabled.vue"></demo>
 
-### Size
+## Size
 
 The Checkbox accepts `md` and `lg` properties to change its size.
 
 <demo src="../example/checkbox/size.vue"></demo>
 
-### Custom Checkbox
+## Custom Checkbox
 
 You can define the `icon` property to customize the checkbox's icon.
 

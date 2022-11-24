@@ -2,7 +2,7 @@
   "name": "onu-ui",
   "description": "Onu-UI for web glassmorphism components generate by UnoCSS.",
   "type": "module",
-  "version": "1.0.10-beta.10",
+  "version": "1.0.10-beta.14",
   "keywords": [
     "onu-ui",
     "unocss",

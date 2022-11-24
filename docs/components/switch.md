@@ -5,7 +5,7 @@ lang: en-US
 
 # Switch
 
-Commonly used toggle switch.
+Switch is a checkbox that is styled to look like a switch button.
 
 ## Basic usage
 

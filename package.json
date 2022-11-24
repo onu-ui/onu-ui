@@ -1,7 +1,7 @@
 {
     "name": "@onu-ui/monorepo",
     "private": true,
-    "version": "1.0.10-beta.10",
+    "version": "1.0.10-beta.12",
     "packageManager": "pnpm@7.13.4",
     "license": "MIT",
     "scripts": {
@@ -11,7 +11,7 @@
         "stub": "pnpm -r --parallel -F \"./packages/{components,preset,utils,onu-ui}\" run stub",
         "build": "rimraf packages/*/{dist,es,lib} && pnpm -r -F \"./packages/{preset,utils,components}\" run build && pnpm run volar:helper",
         "play": "pnpm -C playground run dev",
-        "play:new":"pnpm -C play run dev",
+        "play:new": "pnpm -C play run dev",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "release": "bumpp package.json packages/**/package.json",

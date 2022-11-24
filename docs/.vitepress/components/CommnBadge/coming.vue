@@ -10,7 +10,7 @@
     rounded-full
     font-extrabold
   >
-    COMMON SOON
     <slot />
+    Comming Soon
   </span>
 </template>

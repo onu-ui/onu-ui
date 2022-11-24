@@ -5,6 +5,8 @@ lang: en-US
 
 # Icon
 
+Icon are used to any icons with Pure CSS for OnuUI.
+
 Use **any** icons with Pure CSS for OnuUI.
 
 For more icon information view [@unocss/preset-icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons)

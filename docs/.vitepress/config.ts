@@ -59,6 +59,10 @@ const components = [
         link: '/components/card',
       },
       {
+        text: 'Empty',
+        link: '/components/empty',
+      },
+      {
         text: 'Tag',
         link: '/components/tag',
       },

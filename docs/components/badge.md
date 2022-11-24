@@ -5,9 +5,7 @@ lang: en-US
 
 # Badge
 
-## Introduce
-
-Badge normally appears in the upper right corner of the icon or text to prompt important information.
+Badges are used to inform the user of the status of specific data.
 
 ## Basic usage
 `Badge` use `error` theme color by default. You only need to set the `value` attribute to display the corresponding badge.

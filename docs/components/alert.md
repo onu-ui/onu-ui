@@ -5,7 +5,7 @@ lang: en-US
 
 # Alert
 
-Displays important alert messages.
+Alert informs users about important events.
 
 ## Basic Usage
 
