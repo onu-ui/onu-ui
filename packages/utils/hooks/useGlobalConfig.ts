@@ -3,8 +3,7 @@ import { configProviderContextKey } from '../tokens'
 import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
 import type { App, Ref } from 'vue'
-import type { MaybeRef } from '@vueuse/core'
-
+import type { MaybeComputedRef } from '@vueuse/core'
 const globalConfig = ref<InstallOptions>()
 
 /**
@@ -35,7 +34,7 @@ export function useGlobalConfig(key?: keyof InstallOptions, defaultValue = undef
  * @param app
  * @param global
  */
-export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App, global = false) {
+export function provideGlobalConfig(config: MaybeComputedRef<InstallOptions>, app?: App, global = false) {
   const inSetup = !!getCurrentInstance()
   const sourceConfig = inSetup ? useGlobalConfig() : undefined
   const provideFn = app?.provide ?? (inSetup ? provide : undefined)
