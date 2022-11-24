@@ -1,5 +1,5 @@
 import type { language } from '../locale'
-import type{ MaybeRef } from '@vueuse/core'
+import type{ MaybeRef } from '../types'
 
 export interface InstallOptions {
   prefix?: string

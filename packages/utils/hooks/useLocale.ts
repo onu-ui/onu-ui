@@ -4,7 +4,7 @@ import { en } from '../locale'
 import { useGlobalConfig } from './useGlobalConfig'
 import type { language } from '../locale'
 import type { Ref } from 'vue'
-import type { MaybeRef } from '@vueuse/core'
+import type { MaybeRef } from '../types'
 
 export type OnuTranslatorOption = Record<string, string | number>
 export type OnuTranslator = (path: string, option?: OnuTranslatorOption) => string
