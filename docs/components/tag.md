@@ -9,7 +9,7 @@ Tags are used to inform the user of the status of specific data.
 
 ## Basic usage
 
-Use the `o` attribute to define Tag's type. In addition, the `bgColor` attribute can be used to set the background color of the Tag.
+Use the `type` attribute to define Tag's type. In addition, the `bgColor` attribute can be used to set the background color of the Tag.
 
 <demo src="../example/tag/basic.vue"></demo>
 
@@ -59,7 +59,7 @@ TODO
 | --- | --- | --- | --- |
 | size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'sm'` | Tag size.  |
 | light | `boolean` | `false` |  Determine whether it's a light tag.  |
-| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Tag type. |
+| type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Tag type. |
 | closable | `boolean` | `false` | Whether Tag can be removed. |
 | bgColor | `string` | `undefined` | Background color of the tag. |
 | rounded | `boolean` | `false`  | Whether tag is rounded. |

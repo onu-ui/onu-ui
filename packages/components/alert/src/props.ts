@@ -3,7 +3,7 @@ import type { ExtractPropTypes, PropType } from 'vue'
 
 export const alertProps = {
   /** theme */
-  o: {
+  type: {
     type: String as PropType<ThemeType>,
     default: 'primary',
   },

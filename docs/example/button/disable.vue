@@ -1,53 +1,53 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <o-button disabled o="primary">
+      <o-button disabled type="primary">
         Disabled
       </o-button>
-      <o-button disabled o="secondary">
+      <o-button disabled type="secondary">
         Disabled
       </o-button>
-      <o-button disabled o="success">
+      <o-button disabled type="success">
         Disabled
       </o-button>
-      <o-button disabled o="warning">
+      <o-button disabled type="warning">
         Disabled
       </o-button>
-      <o-button disabled o="error">
-        Disabled
-      </o-button>
-    </div>
-    <div fscw gap-2>
-      <o-button disabled o="primary" light>
-        Disabled
-      </o-button>
-      <o-button disabled o="secondary" light>
-        Disabled
-      </o-button>
-      <o-button disabled o="success" light>
-        Disabled
-      </o-button>
-      <o-button disabled o="warning" light>
-        Disabled
-      </o-button>
-      <o-button disabled o="error" light>
+      <o-button disabled type="error">
         Disabled
       </o-button>
     </div>
     <div fscw gap-2>
-      <o-button disabled o="primary" text>
+      <o-button disabled type="primary" light>
         Disabled
       </o-button>
-      <o-button disabled o="secondary" text>
+      <o-button disabled type="secondary" light>
         Disabled
       </o-button>
-      <o-button disabled o="success" text>
+      <o-button disabled type="success" light>
         Disabled
       </o-button>
-      <o-button disabled o="warning" text>
+      <o-button disabled type="warning" light>
         Disabled
       </o-button>
-      <o-button disabled o="error" text>
+      <o-button disabled type="error" light>
+        Disabled
+      </o-button>
+    </div>
+    <div fscw gap-2>
+      <o-button disabled type="primary" text>
+        Disabled
+      </o-button>
+      <o-button disabled type="secondary" text>
+        Disabled
+      </o-button>
+      <o-button disabled type="success" text>
+        Disabled
+      </o-button>
+      <o-button disabled type="warning" text>
+        Disabled
+      </o-button>
+      <o-button disabled type="error" text>
         Disabled
       </o-button>
     </div>
