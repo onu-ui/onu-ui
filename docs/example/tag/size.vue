@@ -1,15 +1,15 @@
 <template>
   <div fsc gap-2>
-    <o-tag o="primary" size="xs">
+    <o-tag type="primary" size="xs">
       xs
     </o-tag>
-    <o-tag o="secondary" size="sm">
+    <o-tag type="secondary" size="sm">
       sm
     </o-tag>
-    <o-tag o="success" size="md">
+    <o-tag type="success" size="md">
       md
     </o-tag>
-    <o-tag o="warning" size="lg">
+    <o-tag type="warning" size="lg">
       lg
     </o-tag>
   </div>

@@ -3,7 +3,7 @@ title: Alert
 lang: en-US
 ---
 
-# Alert
+# Alert <update-badge/>
 
 Alert informs users about important events.
 
@@ -55,7 +55,7 @@ Use the `center` attribute to center the text.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Alert type. |
+| type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Alert type. |
 | title | `string` | `undefined` | Alert title. |
 | description | `string` | `undefined` | Alert message. |
 | closable | `boolean` | `false` | Whether the alert can be closed. |

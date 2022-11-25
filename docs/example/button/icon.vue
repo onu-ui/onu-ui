@@ -1,36 +1,36 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <o-button o="secondary">
+      <o-button type="secondary">
         <template #icon>
           <div i-carbon-share />
         </template>
       </o-button>
-      <o-button o="success" rounded-full>
+      <o-button type="success" rounded-full>
         <template #icon>
           <div i-carbon-logo-wechat />
         </template>
       </o-button>
-      <o-button o="error" rounded-full>
+      <o-button type="error" rounded-full>
         <template #icon>
           <div i-carbon-music />
         </template>
       </o-button>
     </div>
     <div fscw gap-2>
-      <o-button o="secondary">
+      <o-button type="secondary">
         <template #icon>
           <div i-carbon-share />
         </template>
         Share
       </o-button>
-      <o-button o="success">
+      <o-button type="success">
         <template #icon>
           <div i-carbon-logo-wechat />
         </template>
         WeChat
       </o-button>
-      <o-button o="error">
+      <o-button type="error">
         <template #icon>
           <div i-carbon-music />
         </template>

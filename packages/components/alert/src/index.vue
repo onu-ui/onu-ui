@@ -18,7 +18,7 @@ const showTitle = computed(() => props.title || slots.title)
 </script>
 
 <template>
-  <div v-show="visible" :o="o" class="o-alert-base" :class="[light && 'o-alert-light']">
+  <div v-show="visible" class="o-alert-base" :class="[light && 'o-alert-light', type && `o-${type}`]">
     <!-- icon -->
     <div v-if="showIcon" class="o-alert-icon">
       <slot name="icon">

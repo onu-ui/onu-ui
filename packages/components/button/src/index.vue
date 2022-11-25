@@ -11,7 +11,6 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 <template>
   <component
     :is="to ? 'a' : 'button'"
-    o="primary"
     v-bind="binds"
     :disabled="isDisabled"
     :aria-disabled="isDisabled"
@@ -22,6 +21,7 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
       `o-button-${size}`,
       isDisabled ? 'o-disabled' : 'o-transition o-button-hover o-button-active',
       onlyIcon && 'aspect-square px-0',
+      type && `o-${type}`,
     ]"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />

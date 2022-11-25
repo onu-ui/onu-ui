@@ -1,7 +1,7 @@
 <template>
   <div fscw space-y-2>
-    <o-alert o="error" :description="content" :title="title + ' and Icon'" closable icon="i-carbon-logo-github" />
-    <o-alert o="secondary" title="Custom title and close" :description="content" closable @close="handleClose">
+    <o-alert type="error" :description="content" :title="title + ' and Icon'" closable icon="i-carbon-logo-github" />
+    <o-alert type="secondary" title="Custom title and close" :description="content" closable @close="handleClose">
       <template #icon>
         <o-icon name="i-fluent-emoji:clown-face" text-6 />
       </template>

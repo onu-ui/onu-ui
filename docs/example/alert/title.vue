@@ -1,6 +1,6 @@
 <template>
   <div fscw space-y-2>
-    <o-alert o="primary" :description="content" :title="title" />
+    <o-alert type="primary" :description="content" :title="title" />
   </div>
 </template>
 

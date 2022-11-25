@@ -17,8 +17,7 @@ const handleClick = (evt: MouseEvent) => {
 <template>
   <span
     class="o-tag-base"
-    :o="o"
-    :class="[`o-tag-${size}`, closable && 'o-tag-is-closable', light && 'o-tag-light', disabled && 'o-tag-disabled', rounded && 'o-tag-rounded']"
+    :class="[`o-tag-${size}`, closable && 'o-tag-is-closable', light && 'o-tag-light', disabled && 'o-tag-disabled', rounded && 'o-tag-rounded', type && `o-${type}`]"
     :style="{ backgroundColor: bgColor }"
     @click="handleClick"
   >
