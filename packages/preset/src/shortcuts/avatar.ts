@@ -1,7 +1,7 @@
 import type { SizeType } from '../type'
 import type { DynamicShortcut } from 'unocss'
 
-export const avatorShortcuts: Record<string, string> = {
+export const avatarShortcuts: Record<string, string> = {
   // avatar
   'o-avatar-base': 'fcc of-hidden shadow-sm aspect-square rounded-full bg-context text-white',
   'o-avatar-mode-bg': 'bg-cover',
@@ -14,7 +14,7 @@ export const avatorShortcuts: Record<string, string> = {
 
 }
 
-export const avatorDynamicShortcuts: DynamicShortcut[] = [
+export const avatarDynamicShortcuts: DynamicShortcut[] = [
   [/^o-avatar-group-(.*)$/, ([,s]) => {
     if (['xs', 'sm', 'md', 'lg'].includes(s)) {
       const size = s as SizeType
