@@ -120,15 +120,15 @@ const sidebar = {
 }
 
 export default defineConfig({
-  title: 'Onu-UI',
-  description: 'Onu-UI for web glassmorphism components generate by UnoCSS',
+  title: 'Onu UI',
+  description: 'Popular, beautiful and fast UnoCSS component library',
   head: [
-    ['meta', { property: 'og:title', content: 'Onu-UI' }],
+    ['meta', { property: 'og:title', content: 'Onu UI' }],
     [
       'meta',
       {
         property: 'og:description',
-        content: 'Onu-UI for web glassmorphism components generate by UnoCSS',
+        content: 'Popular, beautiful and fast UnoCSS component library',
       },
     ],
     [
@@ -160,7 +160,7 @@ export default defineConfig({
     },
     footer: {
       message: 'MIT Licensed',
-      copyright: 'Copyright © 2022-present Chris & Onu-UI Contributors',
+      copyright: 'Copyright © 2022-present Chris & Onu UI Contributors',
     },
   },
   markdown: {
