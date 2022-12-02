@@ -1,4 +1,4 @@
-import { presetOnu } from '@onu-ui/preset'
+import { darkTheme, getCSSPreflights, lightTheme, presetOnu } from '@onu-ui/preset'
 import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
@@ -21,4 +21,15 @@ export default defineConfig({
     `o-tag-${s}`,
     `o-switch-${s}`,
   ])].flat(2) as string[],
+  preflights: [{
+    layer: 'base',
+    getCSS: () => `
+    :root {
+      ${getCSSPreflights(lightTheme)}
+    }
+    :root.dark {
+      ${getCSSPreflights(darkTheme)}
+    }
+    `,
+  }],
 })

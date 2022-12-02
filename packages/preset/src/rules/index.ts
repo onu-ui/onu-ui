@@ -15,6 +15,10 @@ export default [
       return {
         '--onu-c-context': `${color.cssColor.components.join(',')}`,
       }
+    } else {
+      return {
+        '--onu-c-context': color?.color,
+      }
     }
   }],
   [/^o-switch-(.+)$/, ([, s]: string[]) => {

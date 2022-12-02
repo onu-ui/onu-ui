@@ -3,12 +3,12 @@ import type { Theme } from '@unocss/preset-uno'
 export default {
   colors: {
     context: 'rgba(var(--onu-c-context),%alpha)',
-    primary: '#a855f7',
-    secondary: '#1ABCFE',
-    success: '#0ACF83',
-    warning: '#FF9F43',
-    error: '#FF5C5C',
-    info: '#373e47',
+    primary: 'var(--onu-colors-blue600)',
+    secondary: 'var(--onu-colors-purple600)',
+    success: 'var(--onu-colors-green600)',
+    warning: 'var(--onu-colors-yellow600)',
+    error: 'var(--onu-colors-red600)',
+    info: 'var(--onu-colors-gray800)',
     placeholder: '#dcdcdc',
     darkBd: '#4C4D4F',
     grayBd: '#484849',

@@ -1,3 +1,4 @@
+import { hex2rgba } from '@unocss/preset-mini/utils'
 
 export const lightTheme = {
   '--onu-colors-blue50': '#EDF5FF',
@@ -86,6 +87,34 @@ export const lightTheme = {
   '--onu-colors-backgroundAlpha': 'rgba(255, 255, 255, 0.8)',
   '--onu-colors-foreground': 'var(--onu-colors-black)',
   '--onu-colors-backgroundContrast': 'var(--onu-colors-white)',
+  '--onu-colors-text': 'var(--onu-colors-gray900)',
+  '--onu-colors-link': 'var(--onu-colors-blue600)',
+  '--onu-colors-codeLight': 'var(--onu-colors-pink100)',
+  '--onu-colors-code': 'var(--onu-colors-pink600)',
+  '--onu-colors-selection': 'var(--onu-colors-blue200)',
+  '--onu-colors-border': 'rgba(0, 0, 0, 0.15)',
+  '--onu-colors-headerBackground': 'hsla(0,0%,100%,0.8)',
+  '--onu-colors-menuBackground': 'rgba(255, 255, 255, 0.8)',
+  '--onu-colors-headerIconColor': 'var(--onu-colors-accents4)',
+  '--onu-colors-codeBackground': '#363449',
+  '--onu-colors-codeComment': 'var(--onu-colors-accents7)',
+  '--onu-colors-codeCopyIconColor': 'var(--onu-colors-accents2)',
+  '--onu-colors-cardBackground': 'var(--onu-colors-white)',
+  '--onu-colors-codeHighlight': 'hsl(243, 16%, 30%)',
+  '--onu-colors-backgroundBlur': 'rgba(255, 255, 255, 0.3)',
+  '--onu-colors-blockLinkColor': '#FF1CF7',
+  '--onu-colors-blockLinkBackground': 'var(--onu-colors-accents1)',
+  '--onu-colors-blockLinkHoverBackground': '#FFD1ED',
+  '--onu-shadows-xs': '0 2px 8px 1px rgb(104 112 118 / 0.07), 0 1px 1px -1px rgb(104 112 118 / 0.04)',
+  '--onu-shadows-sm': '0 2px 8px 2px rgb(104 112 118 / 0.07), 0 2px 4px -1px rgb(104 112 118 / 0.04)',
+  '--onu-shadows-md': '0 12px 20px 6px rgb(104 112 118 / 0.08)',
+  '--onu-shadows-lg': '0 12px 34px 6px rgb(104 112 118 / 0.18)',
+  '--onu-shadows-xl': '0 25px 65px 0px rgb(104 112 118 / 0.35)',
+  '--onu-dropShadows-xs': 'drop-shadow(0 2px 4px rgb(104 112 118 / 0.07)) drop-shadow(0 1px 1px rgb(104 112 118 / 0.04))',
+  '--onu-dropShadows-sm': 'drop-shadow(0 2px 8px rgb(104 112 118 / 0.07)) drop-shadow(0 2px 4px rgb(104 112 118 / 0.04))',
+  '--onu-dropShadows-md': 'drop-shadow(0 4px 12px rgb(104 112 118 / 0.08)) drop-shadow(0 20px 8px rgb(104 112 118 / 0.04))',
+  '--onu-dropShadows-lg': 'drop-shadow(0 12px 24px rgb(104 112 118 / 0.15)) drop-shadow(0 12px 14px rgb(104 112 118 / 0.1))',
+  '--onu-dropShadows-xl': 'drop-shadow(0 25px 34px rgb(104 112 118 / 0.35))',
 }
 
 export const darkTheme = {
@@ -173,4 +202,8 @@ export const darkTheme = {
   '--onu-colors-backgroundAlpha': 'rgba(0, 0, 0, 0.6)',
   '--onu-colors-foreground': 'var(--onu-colors-white)',
   '--onu-colors-backgroundContrast': 'var(--onu-colors-gray50)',
+}
+
+export const getCSSPreflights = (theme: any) => {
+  return Object.entries(theme).map(([key, value]: [string, any]) => `${key}: ${value.startsWith('#') ? hex2rgba(value) : value}`).join(';')
 }
