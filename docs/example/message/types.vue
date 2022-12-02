@@ -7,7 +7,7 @@
       secondary
     </o-button>
     <o-button o-success @click="open3">
-      primary
+      success
     </o-button>
     <o-button o-warning @click="open4">
       warning
