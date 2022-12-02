@@ -1,5 +1,5 @@
 <template>
-  <o-button o="info" :loading="loading" @click="startLoading">
+  <o-button type="info" :loading="loading" @click="startLoading">
     {{ loading ? 'Loading~~' : 'Start Load' }}
   </o-button>
 </template>

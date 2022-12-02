@@ -1,15 +1,15 @@
-# Onu-UI
+# Onu UI
 
 ::: warning NOTICE !
-[Onu-UI](https://github.com/onu-ui/onu-ui) is currently in WIP. It is not yet ready for production use. We appreciate your support and feedback as we work to make it ready for everyone.
+[Onu UI](https://github.com/onu-ui/onu-ui) is currently in WIP. It is not yet ready for production use. We appreciate your support and feedback as we work to make it ready for everyone.
 :::
 ## Introduction
 
-Onu-UI is a Vue.js based [UnoCSS](https://github.com/unocss/unocss) UI library that allows you to make beautiful websites. 
+Onu UI is a Vue.js based [UnoCSS](https://github.com/unocss/unocss) UI library that allows you to make beautiful websites. 
 
 It includes a comprehensive collection of prebuilt components that are ready for use in production right out of the box.
 
-Onu-UI is beautiful by design and features a suite of customization options that make it easy to implement your own custom design system on top of our components.
+Onu UI is beautiful by design and features a suite of customization options that make it easy to implement your own custom design system on top of our components.
 
 The component library is written with the latest [Vue3 setup script](https://vuejs.org/guide/typescript/composition-api.html), full of [Typescript](https://www.typescriptlang.org/), and uses [Vite](https://vitejs.dev/) and [Tsup](https://github.com/egoist/tsup) to package and build the component library. In addition, we also embrace the latest front-end ecological cutting-edge technology, thanks to [VueUse](https://vueuse.org/), and the huge Vite plugin ecosystem. 
 
@@ -19,12 +19,12 @@ To know how to install it, please see [Installation](./install.md).
 
 ## Features
 
-- 🌈 Glass Components - All components follow the glassmorphism style.
+- 🌈 Components Design - Onu provides neat & beautiful crafted UI components.
 - 🔥 Introduce on demand  - Provide resolver to automatically import only used components.
 - 🎉 TS Supported - Support TypeScript & type checked & type inference.
 - 💡 Cli Build - Easy to create repo with Onu Cli.
 - 🍬 CSS Preset - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ Theme Config - Use attribute mode like unocss to desige. Support theme config to customize theme.
+- ⚙️ Theme Config - Use attribute mode like unocss to design. Support theme config to customize theme.
 
 ## Environment
 
@@ -60,6 +60,6 @@ If you take maybe some bugs, please use the `OnuUI Playground(todo)` to provide 
 
 Developers interested in contributing should read the [Code of Conduct](https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md) and the [Contributing Guide](https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md).
 
-Thank you to all the people who already contributed to OnuUI!
+Thank you to all the people who already contributed to Onu UI!
 
 <a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contrib.rocks/image?repo=onu-ui/onu-ui" /></a>

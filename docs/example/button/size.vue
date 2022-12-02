@@ -1,15 +1,15 @@
 <template>
   <div fscw gap-2>
-    <o-button size="xs" o="primary">
+    <o-button size="xs" type="primary">
       Mini
     </o-button>
-    <o-button size="sm" o="secondary">
+    <o-button size="sm" type="secondary">
       Small
     </o-button>
-    <o-button size="md" o="success">
+    <o-button size="md" type="success">
       Medium
     </o-button>
-    <o-button size="lg" o="warning">
+    <o-button size="lg" type="warning">
       Large
     </o-button>
   </div>

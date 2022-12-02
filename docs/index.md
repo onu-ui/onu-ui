@@ -2,11 +2,11 @@
 layout: home
 sidebar: false
 
-title: Onu-UI
+title: Onu UI
 titleTemplate: Popular, beautiful and fast UnoCSS component library
 
 hero:
-  name: Onu-UI
+  name: Onu UI
   text: Popular, beautiful and fast UnoCSS component library
   tagline: A Vue.js based UnoCSS UI library that allows you to make beautiful websites
   image: 
@@ -28,8 +28,8 @@ hero:
 
 features:
   - icon: 🌈 
-    title: Glass Components
-    details: All components follow the glassmorphism style.
+    title: Components Design
+    details: Onu provides neat & beautiful crafted UI components.
   - icon: 🔥 
     title: Introduce on demand 
     details: Provide resolver to automatically import only used components.
@@ -44,5 +44,5 @@ features:
     details: Has UnoCSS preset package to use, rendered UI easily.
   - icon: ⚙️ 
     title: Theme Config
-    details: Use attribute mode like unocss to desige. Support theme config to customize theme.
+    details: Use attribute mode like unocss to design. Support theme config to customize theme.
 ---

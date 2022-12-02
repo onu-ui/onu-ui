@@ -1,7 +1,7 @@
 <p align="center">
 <img src="./public/logo.svg" style="width:100px;" />
-<h1 align="center">Onu-UI (WIP)</h1>
-<p align="center">Onu-UI for web glassmorphism components generate by UnoCSS.</p>
+<h1 align="center">Onu UI (WIP)</h1>
+<p align="center">Popular, beautiful and fast UnoCSS component library.</p>
 </p>
 <p align="center">
 <a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
@@ -11,12 +11,13 @@
 </p>
 
 ## Features
-- 🌈 Glass Components - All components follow the glassmorphism style.
+
+- 🌈 Components Design - Onu provides neat & beautiful crafted UI components.
 - 🔥 Introduce on demand  - Provide resolver to automatically import only used components.
-- 🎉 Ts Supported - Support TypeScript & type checked & type inference.
+- 🎉 TS Supported - Support TypeScript & type checked & type inference.
 - 💡 Cli Build - Easy to create repo with Onu Cli.
 - 🍬 CSS Preset - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ Theme Config - Use attribute mode like unocss to desige. Support theme config to customize theme.
+- ⚙️ Theme Config - Use attribute mode like unocss to design. Support theme config to customize theme.
 
 ## Usage
 

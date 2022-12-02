@@ -1,21 +1,21 @@
 <template>
   <div fscw gap-2>
-    <o-button text o="primary">
+    <o-button text type="primary">
       Primary
     </o-button>
-    <o-button text o="secondary">
+    <o-button text type="secondary">
       Secondary
     </o-button>
-    <o-button o="success text">
+    <o-button text type="success">
       Success
     </o-button>
-    <o-button text o="warning" rounded="full">
+    <o-button text type="warning" rounded="full">
       Warning
     </o-button>
-    <o-button text o="error" rounded="full">
+    <o-button text type="error" rounded="full">
       Danger
     </o-button>
-    <o-button text o="info" rounded="full">
+    <o-button text type="info" rounded="full">
       Info
     </o-button>
   </div>

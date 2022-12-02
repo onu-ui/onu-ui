@@ -1,11 +1,11 @@
 <template>
   <div fscw gap-2>
-    <o-button :to="githubUrl" o="secondary">
+    <o-button :to="githubUrl" type="secondary">
       <template #icon>
         <div i-carbon-logo-github />
       </template>
     </o-button>
-    <o-button :to="githubUrl" o="secondary">
+    <o-button :to="githubUrl" type="secondary">
       <template #icon>
         <div i-carbon-logo-github />
       </template>

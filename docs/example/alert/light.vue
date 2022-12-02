@@ -1,21 +1,21 @@
 <template>
   <div fscw space-y-2>
-    <o-alert o="primary" light>
+    <o-alert type="primary" light>
       {{ content }}
     </o-alert>
-    <o-alert o="secondary" light>
+    <o-alert type="secondary" light>
       {{ content }}
     </o-alert>
-    <o-alert o="success" light>
+    <o-alert type="success" light>
       {{ content }}
     </o-alert>
-    <o-alert o="warning" light>
+    <o-alert type="warning" light>
       {{ content }}
     </o-alert>
-    <o-alert o="error" light>
+    <o-alert type="error" light>
       {{ content }}
     </o-alert>
-    <o-alert o="info" light>
+    <o-alert type="info" light>
       {{ content }}
     </o-alert>
   </div>
