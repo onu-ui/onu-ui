@@ -1,21 +1,21 @@
 <template>
   <div fscw gap-2>
-    <o-button o-primary @click="open1">
+    <o-button type="primary" @click="open1">
       primary
     </o-button>
-    <o-button o-secondary @click="open2">
+    <o-button type="secondary" @click="open2">
       secondary
     </o-button>
-    <o-button o-success @click="open3">
-      primary
+    <o-button type="success" @click="open3">
+      success
     </o-button>
-    <o-button o-warning @click="open4">
+    <o-button type="warning" @click="open4">
       warning
     </o-button>
-    <o-button o="error" @click="open5">
+    <o-button type="error" @click="open5">
       error
     </o-button>
-    <o-button o="info" @click="open6">
+    <o-button type="info" @click="open6">
       info
     </o-button>
   </div>

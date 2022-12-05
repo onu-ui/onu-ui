@@ -1,9 +1,6 @@
 /* /**
  * Colors
  * -------------------------------------------------------------------------- */
-body {
-  font-size: 15px;
-}
 :root {
   /* --vp-c-accent: #dab40b;
   --vp-c-brand: #6da13f;
@@ -202,7 +199,6 @@ html:not(.dark) [img-dark] {
   transition: color 0.3s var(--n-bezier), border-color 0.3s var(--n-bezier),
     background-color 0.3s var(--n-bezier) !important;
   box-sizing: border-box;
-  font-size: 0.9em !important;
   padding: 0.05em 0.35em 0 0.35em !important;
   border-radius: var(--n-code-border-radius) !important;
   color: var(--n-code-text-color) !important;
