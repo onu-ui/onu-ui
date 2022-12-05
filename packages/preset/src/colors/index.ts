@@ -5,8 +5,8 @@ export const lightTheme = {
   '--onu-colors-blue100': '#E1EFFF',
   '--onu-colors-blue200': '#CEE4FE',
   '--onu-colors-blue300': '#B7D5F8',
-  '--onu-colors-blue400': '#96C1F2',
-  '--onu-colors-blue500': '#5EA2EF',
+  '--onu-colors-blue400': '#79bbff',
+  '--onu-colors-blue500': '#409EFF',
   '--onu-colors-blue600': '#0072F5',
   '--onu-colors-blue700': '#005FCC',
   '--onu-colors-blue800': '#004799',
@@ -26,7 +26,7 @@ export const lightTheme = {
   '--onu-colors-green200': '#DAFBE8',
   '--onu-colors-green300': '#C8F9DD',
   '--onu-colors-green400': '#ADF5CC',
-  '--onu-colors-green500': '#88F1B6',
+  '--onu-colors-green500': '#67eaa0',
   '--onu-colors-green600': '#17C964',
   '--onu-colors-green700': '#13A452',
   '--onu-colors-green800': '#108944',
@@ -95,14 +95,14 @@ export const lightTheme = {
   '--onu-colors-border': 'rgba(0, 0, 0, 0.15)',
   '--onu-colors-headerBackground': 'hsla(0,0%,100%,0.8)',
   '--onu-colors-menuBackground': 'rgba(255, 255, 255, 0.8)',
-  '--onu-colors-headerIconColor': 'var(--onu-colors-accents4)',
+  '--onu-colors-headerIconColor': 'var(--onu-colors-gray400)',
   '--onu-colors-codeBackground': '#363449',
-  '--onu-colors-codeComment': 'var(--onu-colors-accents7)',
-  '--onu-colors-codeCopyIconColor': 'var(--onu-colors-accents2)',
+  '--onu-colors-codeComment': 'var(--onu-colors-gray700)',
+  '--onu-colors-codeCopyIconColor': 'var(--onu-colors-gray200)',
   '--onu-colors-cardBackground': 'var(--onu-colors-white)',
   '--onu-colors-codeHighlight': 'hsl(243, 16%, 30%)',
   '--onu-colors-backgroundBlur': 'rgba(255, 255, 255, 0.3)',
-  '--onu-colors-blockLinkColor': '#FF1CF7',
+  // '--onu-colors-blockLinkColor': '#FF1CF7',
   '--onu-colors-blockLinkBackground': 'var(--onu-colors-accents1)',
   '--onu-colors-blockLinkHoverBackground': '#FFD1ED',
   '--onu-shadows-xs': '0 2px 8px 1px rgb(104 112 118 / 0.07), 0 1px 1px -1px rgb(104 112 118 / 0.04)',
@@ -115,6 +115,61 @@ export const lightTheme = {
   '--onu-dropShadows-md': 'drop-shadow(0 4px 12px rgb(104 112 118 / 0.08)) drop-shadow(0 20px 8px rgb(104 112 118 / 0.04))',
   '--onu-dropShadows-lg': 'drop-shadow(0 12px 24px rgb(104 112 118 / 0.15)) drop-shadow(0 12px 14px rgb(104 112 118 / 0.1))',
   '--onu-dropShadows-xl': 'drop-shadow(0 25px 34px rgb(104 112 118 / 0.35))',
+
+  '--onu-theme-primary': 'var(--onu-colors-blue500)',
+  '--onu-theme-primaryHsl': `${hex2rgba('#409EFF')}`,
+  '--onu-theme-primaryBorder': 'var(--onu-colors-blue500)',
+  '--onu-theme-primaryLightHover': 'var(--onu-colors-blue400)',
+  '--onu-theme-primaryLightActive': 'var(--onu-colors-blue600)',
+  '--onu-theme-primaryBorderHover': 'var(--onu-colors-blue400)',
+  '--onu-theme-primaryBorderActive': 'var(--onu-colors-blue600)',
+  '--onu-theme-primaryShadow': 'var(--onu-colors-blue500)',
+
+  '--onu-theme-secondary': 'var(--onu-colors-purple600)',
+  '--onu-theme-secondaryHsl': `${hex2rgba('#7828C8')}`,
+  '--onu-theme-secondaryBorder': 'var(--onu-colors-purple600)',
+  '--onu-theme-secondaryLightHover': 'var(--onu-colors-purple500)',
+  '--onu-theme-secondaryLightActive': 'var(--onu-colors-purple700)',
+  '--onu-theme-secondaryBorderHover': 'var(--onu-colors-purple500)',
+  '--onu-theme-secondaryBorderActive': 'var(--onu-colors-purple700)',
+  '--onu-theme-secondaryShadow': 'var(--onu-colors-purple500)',
+
+  '--onu-theme-success': 'var(--onu-colors-green600)',
+  '--onu-theme-successHsl': `${hex2rgba('#17C964')}`,
+  '--onu-theme-successBorder': 'var(--onu-colors-green600)',
+  '--onu-theme-successLightHover': 'var(--onu-colors-green500)',
+  '--onu-theme-successLightActive': 'var(--onu-colors-green700)',
+  '--onu-theme-successBorderHover': 'var(--onu-colors-green500)',
+  '--onu-theme-successBorderActive': 'var(--onu-colors-green700)',
+  '--onu-theme-successShadow': 'var(--onu-colors-green500)',
+
+  '--onu-theme-warning': 'var(--onu-colors-yellow600)',
+  '--onu-theme-warningHsl': `${hex2rgba('#F5A524')}`,
+  '--onu-theme-warningBorder': 'var(--onu-colors-yellow500)',
+  '--onu-theme-warningLightHover': 'var(--onu-colors-yellow500)',
+  '--onu-theme-warningLightActive': 'var(--onu-colors-yellow700)',
+  '--onu-theme-warningBorderHover': 'var(--onu-colors-yellow500)',
+  '--onu-theme-warningBorderActive': 'var(--onu-colors-yellow700)',
+  '--onu-theme-warningShadow': 'var(--onu-colors-yellow500)',
+
+  '--onu-theme-error': 'var(--onu-colors-red600)',
+  '--onu-theme-errorHsl': `${hex2rgba('#F31260')}`,
+  '--onu-theme-errorBorder': 'var(--onu-colors-red600)',
+  '--onu-theme-errorLightHover': 'var(--onu-colors-red500)',
+  '--onu-theme-errorLightActive': 'var(--onu-colors-red700)',
+  '--onu-theme-errorBorderHover': 'var(--onu-colors-red500)',
+  '--onu-theme-errorBorderActive': 'var(--onu-colors-red700)',
+  '--onu-theme-errorShadow': 'var(--onu-colors-red500)',
+
+  '--onu-theme-info': 'var(--onu-colors-gray700)',
+  '--onu-theme-infoHsl': `${hex2rgba('#7E868C')}`,
+  '--onu-theme-infoBorder': 'var(--onu-colors-gray700)',
+  '--onu-theme-infoLightHover': 'var(--onu-colors-gray500)',
+  '--onu-theme-infoLightActive': 'var(--onu-colors-gray800)',
+  '--onu-theme-infoBorderHover': 'var(--onu-colors-gray500)',
+  '--onu-theme-infoBorderActive': 'var(--onu-colors-gray800)',
+  '--onu-theme-infoShadow': 'var(--onu-colors-gray400)',
+
 }
 
 export const darkTheme = {
@@ -122,7 +177,7 @@ export const darkTheme = {
   '--onu-colors-blue100': '#102C4C',
   '--onu-colors-blue200': '#0F3158',
   '--onu-colors-blue300': '#0D3868',
-  '--onu-colors-blue400': '#0A4281',
+  '--onu-colors-blue400': '#79bbff',
   '--onu-colors-blue500': '#0952A5',
   '--onu-colors-blue600': '#0072F5',
   '--onu-colors-blue700': '#3694FF',
@@ -202,8 +257,36 @@ export const darkTheme = {
   '--onu-colors-backgroundAlpha': 'rgba(0, 0, 0, 0.6)',
   '--onu-colors-foreground': 'var(--onu-colors-white)',
   '--onu-colors-backgroundContrast': 'var(--onu-colors-gray50)',
+
+  '--onu-theme-primary': 'var(--onu-colors-blue600)',
+  '--onu-theme-primaryHsl': `${hex2rgba('#0072F5')}`,
+  '--onu-theme-primaryLightHover': 'var(--onu-colors-blue500)',
+  '--onu-theme-primaryLightActive': 'var(--onu-colors-blue700)',
+  '--onu-theme-primaryBorderHover': 'var(--onu-colors-blue500)',
+  '--onu-theme-primaryBorderActive': 'var(--onu-colors-blue700)',
+
+  '--onu-theme-secondary': 'var(--onu-colors-purple700)',
+  '--onu-theme-secondaryHsl': `${hex2rgba('#9750DD')}`,
+  '--onu-theme-secondaryLightHover': 'var(--onu-colors-purple600)',
+  '--onu-theme-secondaryLightActive': 'var(--onu-colors-purple800)',
+  '--onu-theme-secondaryBorderHover': 'var(--onu-colors-purple600)',
+  '--onu-theme-secondaryBorderActive': 'var(--onu-colors-purple800)',
+
+  '--onu-theme-success': 'var(--onu-colors-green600)',
+
+  '--onu-theme-warning': 'var(--onu-colors-yellow600)',
+
+  '--onu-theme-error': 'var(--onu-colors-red600)',
+
+  '--onu-theme-info': 'var(--onu-colors-gray700)',
+  '--onu-theme-infoHsl': `${hex2rgba('#787F85')}`,
+  '--onu-theme-infoLightHover': 'var(--onu-colors-gray600)',
+  '--onu-theme-infoLightActive': 'var(--onu-colors-gray800)',
+  '--onu-theme-infoBorderHover': 'var(--onu-colors-gray600)',
+  '--onu-theme-infoBorderActive': 'var(--onu-colors-gray800)',
+
 }
 
 export const getCSSPreflights = (theme: any) => {
-  return Object.entries(theme).map(([key, value]: [string, any]) => `${key}: ${value.startsWith('#') ? hex2rgba(value) : value}`).join(';')
+  return Object.entries(theme).map(([key, value]: [string, any]) => `${key}: ${value}`).join(';')
 }

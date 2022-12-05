@@ -16,10 +16,10 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
     :aria-disabled="isDisabled"
     class="o-button-base"
     :class="[
-      light ? 'o-button-light' : '',
       text ? 'o-button-text' : '',
       `o-button-${size}`,
-      isDisabled ? 'o-disabled' : 'o-transition o-button-hover o-button-active',
+      isDisabled ? 'o-disabled' : `o-transition hover-border-${type}BorderHover hover-text-white hover-bg-${type}LightHover active-border-${type}BorderActive active-text-white active-bg-${type}LightActive`,
+      light ? 'o-button-light' : '',
       onlyIcon && 'aspect-square px-0',
       type && `o-${type}`,
     ]"

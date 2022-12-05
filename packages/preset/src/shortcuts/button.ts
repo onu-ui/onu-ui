@@ -1,6 +1,6 @@
 export const buttonShortcuts: Record<string, string> = {
   // button
-  'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded shadow-context:50 c-context o-solid border !focus:outline-none',
+  'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded font-medium shadow-context:50 c-context o-solid border !focus:outline-none',
   'o-button-hover': 'hover-border-context:64 hover-text-white hover-bg-context:64',
   'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
   'o-button-light': 'o-light',
