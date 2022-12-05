@@ -12,13 +12,13 @@
       </o-button>
     </div>
     <div fscw gap-2>
-      <o-button light type="warning dashed" rounded="full">
+      <o-button light type="warning" dashed rounded="full">
         Warning
       </o-button>
-      <o-button light type="error dashed" rounded="full">
+      <o-button light type="error" dashed rounded="full">
         Danger
       </o-button>
-      <o-button light type="info dashed" rounded="full">
+      <o-button light type="info" dashed rounded="full">
         Info
       </o-button>
     </div>
