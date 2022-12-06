@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build
         run: pnpm run build
