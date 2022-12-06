@@ -5,7 +5,7 @@
         Warning
       </o-button>
       <o-button type="error" rounded="full">
-        Danger
+        Error
       </o-button>
       <o-button type="info" rounded="full">
         Info
@@ -16,7 +16,7 @@
         Warning
       </o-button>
       <o-button light type="error" dashed rounded="full">
-        Danger
+        Error
       </o-button>
       <o-button light type="info" dashed rounded="full">
         Info
@@ -27,7 +27,7 @@
         Warning
       </o-button>
       <o-button text type="error" rounded="full">
-        Danger
+        Error
       </o-button>
       <o-button text type="info" rounded="full">
         Info

@@ -1,7 +1,7 @@
 export const alertShortcuts: Record<string, string> = {
   // alert
   'o-alert-base': 'pr p-3  fi rounded o-transition w-full of-hidden c-context shadow-context:50 o-solid border fi',
-  'o-alert-light': 'o-light',
+  'o-alert-light': 'c-context border !border-context:60 bg-context:12',
   'o-alert-content': 'flex flex-col justify-center w-full',
   'o-alert-header': 'fb items-center',
   'o-alert-title': 'flex-1 text-sm font-600',

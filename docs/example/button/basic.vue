@@ -1,6 +1,9 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
+      <o-button>
+        Default
+      </o-button>
       <o-button type="primary">
         Primary
       </o-button>
@@ -10,17 +13,20 @@
       <o-button type="success">
         Success
       </o-button>
-      <o-button type="warning" rounded="full">
+      <o-button type="warning">
         Warning
       </o-button>
-      <o-button type="error" rounded="full">
-        Danger
+      <o-button type="error">
+        Error
       </o-button>
-      <o-button type="info" rounded="full">
+      <o-button type="info">
         Info
       </o-button>
     </div>
     <div fscw gap-2>
+      <o-button light>
+        Default
+      </o-button>
       <o-button light type="primary">
         Primary
       </o-button>
@@ -30,13 +36,13 @@
       <o-button light type="success">
         Success
       </o-button>
-      <o-button light type="warning" dashed rounded="full">
+      <o-button light type="warning">
         Warning
       </o-button>
-      <o-button light type="error" dashed rounded="full">
+      <o-button light type="error">
         Error
       </o-button>
-      <o-button light type="info" dashed rounded="full">
+      <o-button light type="info">
         Info
       </o-button>
     </div>

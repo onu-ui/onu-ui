@@ -1,10 +1,13 @@
 export const buttonShortcuts: Record<string, string> = {
   // button
-  'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded  shadow-context:50 c-context o-solid border !focus:outline-none',
-  'o-button-hover': 'hover-border-context:64 hover-text-white hover-bg-context:64',
-  'o-button-active': 'active-border-context:32 active-text-white active-bg-context:32',
+  'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded leading-none text-baseText border border-baseBorder  font-medium whitespace-nowrap text-center box-border o-transition select-none  !focus:outline-none',
+  'o-hover-active-base': 'hover-border-[var(--onu-theme-primaryLight)] hover-text-primaryBase hover-bg-[var(--onu-theme-primaryLight)] active-border-primaryBorder active-text-primaryBase',
   'o-button-light': 'o-light',
+  'o-button-light-disable': 'shadow-transparent bg-context:12 border-context c-context',
+  'o-button-defaultLight': 'bg-transparent !border-primaryBorder text-primaryBase hover-bg-transparent',
   'o-button-text': 'o-text',
+  'o-button-defaultText': '!bg-transparent !text-baseText',
+  'o-button-text-disable': '!bg-transparent !border-transparent !c-context',
   'o-button-xs': 'px-2.5 h-6 text-xs shadow-xs',
   'o-button-sm': 'px-3 h-7 text-sm shadow-sm',
   'o-button-md': 'px-4 h-8 text-sm shadow-md',

@@ -3,7 +3,7 @@ title: Button
 lang: en-US
 ---
 
-# Button <commn-badge>Refactor</commn-badge>
+# Button <update-badge/>
 
 Buttons allow the user to take actions or make choices.
 
@@ -27,6 +27,12 @@ Use `rounded-full` or `rounded="full"` attribute to define a rounded Button
 
 <demo src="../example/button/round.vue"></demo>
 
+## Dashed Button
+
+Use `dashed` attribute to define a dashed style Button
+
+<demo src="../example/button/dashed.vue"></demo>
+
 ## Link Button
 
 Use `to` attribute to specify the jump link.
@@ -38,6 +44,13 @@ Use `to` attribute to specify the jump link.
 Use `text` to define Button's text style. Buttons without border and background.
 
 <demo src="../example/button/text.vue"></demo>
+
+
+## Shadow Button
+
+Use `shadow` to show Button's shadow.
+
+<demo src="../example/button/shadow.vue"></demo>
 
 ## Icon Button
 

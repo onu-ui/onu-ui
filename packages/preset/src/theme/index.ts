@@ -5,6 +5,7 @@ const PREFIX_THEME = '--onu-theme'
 const getColorsTheme = (theme: string) => {
   return {
     [`${theme}`]: `var(${PREFIX_THEME}-${theme}Hsl)`,
+    [`${theme}Base`]: `var(${PREFIX_THEME}-${theme})`,
     [`${theme}Light`]: `var(${PREFIX_THEME}-${theme}Light)`,
     [`${theme}LightHover`]: `var(${PREFIX_THEME}-${theme}LightHover)`,
     [`${theme}LightActive`]: `var(${PREFIX_THEME}-${theme}LightActive)`,
@@ -27,6 +28,9 @@ export default {
     ...getColorsTheme('warning'),
     ...getColorsTheme('error'),
     ...getColorsTheme('info'),
+    baseText: 'var(--onu-colors-text)',
+    baseBorder: 'var(--onu-colors-border)',
+    baseBackground: 'var(--onu-colors-background)',
     placeholder: '#dcdcdc',
     darkBd: '#4C4D4F',
     grayBd: '#484849',
