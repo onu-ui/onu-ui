@@ -2,7 +2,7 @@
   "name": "@onu-ui/cli",
   "description": "Onu-UI Cli",
   "private": true,
-  "version": "1.0.12-beta.2",
+  "version": "1.0.12-beta.3",
   "keywords": [
     "cli"
   ],
