@@ -1,7 +1,7 @@
 {
     "name": "@onu-ui/preset",
     "description": "Onu-UI css rules for unocss preset",
-    "version": "1.0.12-beta.1",
+    "version": "1.0.12-beta.2",
     "keywords": [
         "onu-ui",
         "@onu-ui/preset",
