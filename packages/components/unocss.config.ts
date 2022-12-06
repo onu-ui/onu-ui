@@ -48,6 +48,10 @@ export default defineConfig({
     :root.dark {
       ${getCSSPreflights(darkTheme)}
     }
+    button,select,input,option {
+      outline: none;
+      -webkit-appearance: none
+    }
     `,
   }],
 })

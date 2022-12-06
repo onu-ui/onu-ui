@@ -32,7 +32,6 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
       defaultText ? 'o-button-defaultText' : '',
       dashed && 'border-dashed',
     ]"
-    style="outline: none"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />
     <slot v-else name="icon" />
