@@ -23,8 +23,8 @@
         "volar:helper": "esno scripts/volar-helper"
     },
     "devDependencies": {
-        "@chris-zhu/eslint-config": "^1.0.7",
         "@antfu/ni": "^0.18.8",
+        "@chris-zhu/eslint-config": "^1.0.7",
         "@iconify-json/carbon": "^1.1.9",
         "@iconify-json/fluent-emoji": "^1.1.3",
         "@iconify-json/logos": "^1.1.16",
