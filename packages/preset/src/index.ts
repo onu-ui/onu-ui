@@ -13,3 +13,5 @@ export function presetOnu(): Preset {
     shortcuts,
   }
 }
+
+export * from './colors'

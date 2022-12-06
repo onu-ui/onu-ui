@@ -1,5 +1,8 @@
 <template>
   <div fscw gap-2>
+    <o-button text>
+      Default
+    </o-button>
     <o-button text type="primary">
       Primary
     </o-button>
@@ -13,7 +16,7 @@
       Warning
     </o-button>
     <o-button text type="error" rounded="full">
-      Danger
+      Error
     </o-button>
     <o-button text type="info" rounded="full">
       Info

@@ -15,6 +15,10 @@ export default [
       return {
         '--onu-c-context': `${color.cssColor.components.join(',')}`,
       }
+    } else {
+      return {
+        '--onu-c-context': color?.color,
+      }
     }
   }],
   [/^o-switch-(.+)$/, ([, s]: string[]) => {
@@ -28,6 +32,5 @@ export default [
   }],
   ['o-dashed', { 'border-style': 'dashed' }],
   ['o-solid', { 'background-color': 'rgba(var(--onu-c-context), 1) !important', 'border-color': 'rgba(var(--onu-c-context), 1)', 'color': 'white !important' }],
-  ['o-disabled', { opacity: 0.4, cursor: 'not-allowed !important' }],
   ['o-bg-clip-half', { 'clip-path': 'polygon(0% 0%, 50% 0, 50% 50%, 50% 100%, 0% 100%)' }],
 ] as Rule<Theme>[]

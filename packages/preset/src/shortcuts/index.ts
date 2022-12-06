@@ -2,7 +2,7 @@
 import { baseShortcuts } from './base'
 import { commonShortcuts } from './common'
 import { alertShortcuts } from './alert'
-import { avatorDynamicShortcuts, avatorShortcuts } from './avator'
+import { avatarDynamicShortcuts, avatarShortcuts } from './avatar'
 import { badgeShortcuts } from './badge'
 import { buttonShortcuts } from './button'
 import { cardShortcuts } from './card'
@@ -26,8 +26,8 @@ export default [
   // alert
   alertShortcuts,
   // avatar
-  avatorShortcuts,
-  ...avatorDynamicShortcuts,
+  avatarShortcuts,
+  ...avatarDynamicShortcuts,
   // badge
   badgeShortcuts,
   // button

@@ -1,6 +1,9 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
+      <o-button disabled>
+        Disabled
+      </o-button>
       <o-button disabled type="primary">
         Disabled
       </o-button>
@@ -18,6 +21,9 @@
       </o-button>
     </div>
     <div fscw gap-2>
+      <o-button light disabled>
+        Disabled
+      </o-button>
       <o-button disabled type="primary" light>
         Disabled
       </o-button>
@@ -35,6 +41,9 @@
       </o-button>
     </div>
     <div fscw gap-2>
+      <o-button disabled text>
+        Disabled
+      </o-button>
       <o-button disabled type="primary" text>
         Disabled
       </o-button>
