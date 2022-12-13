@@ -2,7 +2,7 @@
     "name": "@onu-ui/monorepo",
     "private": true,
     "version": "1.0.12-beta.2",
-    "packageManager": "pnpm@7.13.4",
+    "packageManager": "pnpm@7.5.2",
     "license": "MIT",
     "scripts": {
         "dev": "nr volar:helper && nr stub",
