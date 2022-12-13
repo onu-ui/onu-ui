@@ -4,7 +4,7 @@ const checkVal = ref(true)
 
 <template>
   <div flex gap-2>
-    <o-checkbox o="white" label="Vue" size="lg" icon="i-logos-vue" />
+    <o-checkbox label="Vue" size="lg" icon="i-logos-vue" />
     <o-checkbox label="UnoCSS" size="lg" icon="i-logos-unocss" />
   </div>
 </template>

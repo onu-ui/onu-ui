@@ -3,7 +3,7 @@ title: Checkbox
 lang: en-US
 ---
 
-# Checkbox
+# Checkbox <update-badge/>
 
 
 Checkboxes are used to select or deselect a value.

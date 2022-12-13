@@ -2,7 +2,7 @@
   <div space-y-2>
     <div fscw gap-2>
       <o-popup title="Title">
-        <o-button o-info>
+        <o-button type="error">
           Hover
         </o-button>
         <template #content>
@@ -11,7 +11,7 @@
         </template>
       </o-popup>
       <o-popup title="Title" trigger="click">
-        <o-button o-secondary>
+        <o-button type="secondary">
           Click
         </o-button>
         <template #content>
@@ -20,8 +20,8 @@
         </template>
       </o-popup>
       <o-popup title="Title" trigger="context-menu">
-        <o-button o-success>
-          context-menu
+        <o-button type="success">
+          Context-menu
         </o-button>
         <template #content>
           <p>Here is the text content</p>
@@ -33,8 +33,8 @@
         trigger="focus"
         @popup-visible-change="handleVisibleChange"
       >
-        <o-button o-warning>
-          focus
+        <o-button type="warning">
+          Focus
         </o-button>
         <template #content>
           <p>Here is the text content</p>

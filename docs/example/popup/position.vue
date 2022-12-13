@@ -1,7 +1,7 @@
 <template>
   <div grid="~ gap-3 cols-1 md:cols-2 xl:cols-3" mx-auto>
     <o-popup position="top-left">
-      <o-button>
+      <o-button type="primary">
         top-left
       </o-button>
       <template #content>
@@ -10,7 +10,7 @@
       </template>
     </o-popup>
     <o-popup position="top">
-      <o-button>
+      <o-button type="primary">
         top
       </o-button>
       <template #content>
@@ -19,7 +19,7 @@
       </template>
     </o-popup>
     <o-popup position="top-right">
-      <o-button>
+      <o-button type="primary">
         top-right
       </o-button>
       <template #content>
@@ -28,7 +28,7 @@
       </template>
     </o-popup>
     <o-popup position="bottom-left">
-      <o-button>
+      <o-button type="primary">
         bottom-left
       </o-button>
       <template #content>
@@ -37,7 +37,7 @@
       </template>
     </o-popup>
     <o-popup position="bottom">
-      <o-button>
+      <o-button type="primary">
         bottom
       </o-button>
       <template #content>
@@ -46,7 +46,7 @@
       </template>
     </o-popup>
     <o-popup position="bottom-right">
-      <o-button>
+      <o-button type="primary">
         bottom-right
       </o-button>
       <template #content>
@@ -55,7 +55,7 @@
       </template>
     </o-popup>
     <o-popup position="left-top">
-      <o-button>
+      <o-button type="primary">
         left-top
       </o-button>
       <template #content>
@@ -64,7 +64,7 @@
       </template>
     </o-popup>
     <o-popup position="left">
-      <o-button>
+      <o-button type="primary">
         left
       </o-button>
       <template #content>
@@ -73,7 +73,7 @@
       </template>
     </o-popup>
     <o-popup position="left-bottom">
-      <o-button>
+      <o-button type="primary">
         left-bottom
       </o-button>
       <template #content>
@@ -82,7 +82,7 @@
       </template>
     </o-popup>
     <o-popup position="right-top">
-      <o-button>
+      <o-button type="primary">
         right-top
       </o-button>
       <template #content>
@@ -91,7 +91,7 @@
       </template>
     </o-popup>
     <o-popup position="right">
-      <o-button>
+      <o-button type="primary">
         right
       </o-button>
       <template #content>
@@ -100,7 +100,7 @@
       </template>
     </o-popup>
     <o-popup position="right-bottom">
-      <o-button>
+      <o-button type="primary">
         right-bottom
       </o-button>
       <template #content>

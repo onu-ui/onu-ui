@@ -20,7 +20,7 @@ const bodyCls = computed(() => {
   if (props.divider) {
     cls.push('pt-4')
     if (needRenderHeader.value)
-      cls.push('b-t border-light-700 dark:b-darkBd dark:c-darkText')
+      cls.push('b-t border-lightBorder text-baseText')
   }
   return cls
 })

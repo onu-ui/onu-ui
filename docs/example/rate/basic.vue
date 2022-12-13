@@ -1,11 +1,15 @@
 <template>
   <div fscw gap-6>
     <div>
-      <p>Rate: {{ val }}</p>
+      <p text-baseText>
+        Rate: {{ val }}
+      </p>
       <ORate v-model="val" />
     </div>
     <div>
-      <p>Rate: {{ valMax }}</p>
+      <p text-baseText>
+        Rate: {{ valMax }}
+      </p>
       <ORate v-model="valMax" :max="10" />
     </div>
   </div>

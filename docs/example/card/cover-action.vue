@@ -2,7 +2,9 @@
   <div fscw space-x-0 md:space-x-4>
     <o-card :cover="cover1" :description="description" title="Title & Content" :content="content" w-96>
       <template #actions>
-        <o-button>TRY NOW!</o-button>
+        <o-button type="primary">
+          TRY NOW!
+        </o-button>
       </template>
     </o-card>
     <o-card :cover="cover2" :description="description" title="Title & Content" :content="content" w-96>
@@ -20,7 +22,7 @@
             <span class="dark:c-darkText">Breaking App</span>
           </div>
           <div>
-            <o-button o="secondary">
+            <o-button type="secondary">
               GET APP
             </o-button>
           </div>
