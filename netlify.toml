@@ -1,8 +1,10 @@
 [build.environment]
-  NPM_FLAGS = "--version"
-  NODE_OPTIONS = "--max_old_space_size=4096"
+  NETLIFY_USE_PNPM = "true"
   NODE_VERSION = "16"
 
 [build]
   publish = "docs/.vitepress/dist"
   command = "pnpm -w run deploy"
+
+[functions]
+  node_bundler = "esbuild"
