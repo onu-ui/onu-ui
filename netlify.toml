@@ -5,7 +5,4 @@
 
 [build]
   publish = "docs/.vitepress/dist"
-  command = "pnpm install --frozen-lockfile && pnpm -w run deploy"
-
-[functions]
-  node_bundler = "esbuild"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && pnpm -w run deploy"
