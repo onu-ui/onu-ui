@@ -1,7 +1,9 @@
 <template>
   <div fscw gap-6>
     <div>
-      <p>Rate: {{ val }}</p>
+      <p text-baseText>
+        Rate: {{ val }}
+      </p>
       <ORate v-model="val" allow-half />
     </div>
   </div>

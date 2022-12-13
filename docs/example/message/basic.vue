@@ -6,7 +6,7 @@ const open = () => {
 </script>
 
 <template>
-  <o-button @click="open">
+  <o-button type="primary" @click="open">
     Show Message
   </o-button>
 </template>

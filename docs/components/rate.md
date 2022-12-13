@@ -3,7 +3,7 @@ title: Rate
 lang: en-US
 ---
 
-# Rate
+# Rate <update-badge/>
 
 Rate is a set of radio buttons that allow the user to rate something.
 

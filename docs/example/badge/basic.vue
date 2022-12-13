@@ -8,7 +8,7 @@
     <OBadge :value="9">
       <o-avatar class="o-gray dark-o-#3a3a3c" rounded />
     </OBadge>
-    <OBadge o="teal" value="happy">
+    <OBadge o="warning" value="happy">
       <OButton type="error" light>
         Custom Color
       </OButton>
