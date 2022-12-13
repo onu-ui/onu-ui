@@ -5,4 +5,4 @@
 
 [build]
   publish = "docs/.vitepress/dist"
-  command = "npx pnpm i --frozen-lockfile && npm run deploy"
+  command = "pnpm install && npm run deploy"
