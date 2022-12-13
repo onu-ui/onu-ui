@@ -4,7 +4,7 @@ export const alertShortcuts: Record<string, string> = {
   'o-alert-light': 'o-light-simple',
   'o-alert-content': 'flex flex-col justify-center w-full',
   'o-alert-header': 'fb items-center',
-  'o-alert-title': 'flex-1 text-title text-sm font-600',
+  'o-alert-title': 'flex-1 text-white text-sm font-600',
   'o-alert-close': 'text-base cursor-pointer pa top-3 right-3 fcc',
   'o-alert-icon': 'fi pr-5',
   'o-alert-description': 'flex break-all items-center text-sm',
