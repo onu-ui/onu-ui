@@ -138,7 +138,10 @@ importers:
     specifiers: {}
 
   packages/utils:
-    specifiers: {}
+    specifiers:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.44
 
   play:
     specifiers:
