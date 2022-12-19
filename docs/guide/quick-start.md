@@ -15,7 +15,7 @@ The component library is written with the latest [Vue3 setup script](https://vue
 
 To know how to install it, please see [Installation](./install.md).
 
-![](https://raw.githubusercontent.com/imageList/imglist/master/img/%E6%88%AA%E5%B1%8F2022-10-28%20%E4%B8%8B%E5%8D%882.42.09.png)
+![img](https://cdn.nlark.com/yuque/0/2022/png/785653/1671440518006-0a400082-c3e7-4cb4-80ef-1499f29bd612.png)
 
 ## Features
 
