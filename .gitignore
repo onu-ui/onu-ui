@@ -108,3 +108,6 @@ dist
 
 es/
 lib/
+
+# style copy with components build
+packages/onu-ui/*.css
