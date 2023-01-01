@@ -1,37 +1,46 @@
-import { resolve } from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Inspect from 'vite-plugin-inspect'
 import Unocss from 'unocss/vite'
-// import { OnuResolver } from 'onu-ui'
-import Layouts from 'vite-plugin-vue-layouts'
-import Pages from 'vite-plugin-pages'
+import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 
-const r = (src: string) => resolve(__dirname, src)
+const pathSrc = path.resolve(__dirname, 'src')
 
-export default defineConfig({
-  plugins: [
-    Vue(),
-    Inspect(),
-    Unocss(),
-    AutoImport({
-      imports: ['vue', 'vue-router', '@vueuse/core'],
-      // resolvers: [OnuResolver()],
-      vueTemplate: true,
-      dts: 'src/auto-imports.d.ts',
-    }),
-    Components({
-      // resolvers: [OnuResolver()],
-      dts: 'src/components.d.ts',
-    }),
-    Layouts(),
-    Pages(),
-  ],
-  resolve: {
-    alias: {
-      '~/': r('src/'),
+export default defineConfig(() => {
+  return {
+    resolve: {
+      alias: {
+        '~': pathSrc,
+      },
     },
-  },
+    server: {
+      https: false,
+      host: true,
+    },
+    plugins: [
+      vue(),
+      AutoImport({
+        imports: ['vue', '@vueuse/core'],
+        dts: path.resolve(pathSrc, 'auto-imports.d.ts'),
+      }),
+      Components({
+        dirs: [path.resolve(pathSrc, 'components')],
+        dts: path.resolve(pathSrc, 'components.d.ts'),
+      }),
+      Unocss(),
+    ],
+    build: {
+      target: 'esnext',
+      emptyOutDir: true,
+      rollupOptions: {
+        external: [
+          '@iconify/utils/lib/loader/fs',
+          '@iconify/utils/lib/loader/install-pkg',
+          '@iconify/utils/lib/loader/node-loader',
+          '@iconify/utils/lib/loader/node-loaders',
+        ],
+      },
+    },
+  }
 })

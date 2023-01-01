@@ -1,12 +1,15 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import '@unocss/reset/tailwind.css'
-import './style/main.css'
-import 'onu-ui/dist/style.css'
+import '@vue/repl/dist/style.css'
 import 'uno.css'
-import type { GlobModule } from './types'
+import 'onu-ui/dist/style.css'
+import '@unocss/reset/tailwind.css'
+import onuUI from 'onu-ui'
+import App from './App.vue'
 
-const app = createApp(App)
-Object.values(import.meta.glob<GlobModule>('./modules/*.ts', { eager: true }))
-  .forEach(i => i.install?.(app))
-app.mount('#app')
+// @ts-expect-error Custom window property
+window.VUE_DEVTOOLS_CONFIG = {
+  defaultSelectedAppId: 'repl',
+}
+
+const app = createApp(App).use(onuUI)
+app.mount('#play_ground')

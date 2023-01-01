@@ -11,7 +11,7 @@
         "stub": "pnpm -r --parallel -F \"./packages/{components,preset,utils,onu-ui}\" run stub",
         "build": "rimraf packages/*/{dist,es,lib} && nr -r -F \"./packages/{preset,utils,components}\" build && nr volar:helper",
         "play": "nr --filter playground dev",
-        "play:new": "nr --filter play dev",
+        "example": "nr --filter example dev",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "release": "bumpp package.json packages/**/package.json",
