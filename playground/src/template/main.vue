@@ -1,8 +1,8 @@
 <script setup lang="ts">
-// @ts-expect-error
 import { onMounted } from 'vue'
-import App from './App.vue'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
+import App from './App.vue'
 import { getUnocssCompileRes, init, libInstall, sendHtml } from './lib-install.js'
 
 libInstall()

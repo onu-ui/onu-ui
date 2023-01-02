@@ -347,14 +347,18 @@ const getFitPosition = (
   }
 
   if (direction === 'top' || direction === 'bottom') {
-    if (viewPortBoundary.left < 0) { popupPosition.left = -containerRect.left }
+    if (viewPortBoundary.left < 0) {
+      popupPosition.left = -containerRect.left
+    }
     else if (viewPortBoundary.right < 0) {
       popupPosition.left
         = -containerRect.left + (viewPortSize.width - popupRect.width)
     }
   }
   if (direction === 'left' || direction === 'right') {
-    if (viewPortBoundary.top < 0) { popupPosition.top = -containerRect.top }
+    if (viewPortBoundary.top < 0) {
+      popupPosition.top = -containerRect.top
+    }
     else if (viewPortBoundary.bottom < 0) {
       popupPosition.top
         = -containerRect.top + (viewPortSize.height - popupRect.height)

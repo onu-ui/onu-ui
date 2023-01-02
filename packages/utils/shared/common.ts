@@ -1,5 +1,6 @@
 export function hash(str: string) {
-  let i; let l
+  let i
+  let l
   let hval = 0x811C9DC5
 
   for (i = 0, l = str.length; i < l; i++) {
