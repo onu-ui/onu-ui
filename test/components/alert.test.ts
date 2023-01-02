@@ -42,7 +42,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-alert-icon div').classes()).include('i-carbon-logo-github')
   })
 
-  test('alert width close icon', async() => {
+  test('alert width close icon', async () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -61,7 +61,7 @@ describe('o-alert', () => {
     expect(wrapper.emitted()).toBeDefined()
   })
 
-  test('alert width close text', async() => {
+  test('alert width close text', async () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -78,7 +78,7 @@ describe('o-alert', () => {
     expect(wrapper.emitted()).toBeDefined()
   })
 
-  test('should work with `slots`', async() => {
+  test('should work with `slots`', async () => {
     const wrapper = mount(OAlert, {
       slots: {
         default: 'content',

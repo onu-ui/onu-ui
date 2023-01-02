@@ -1,3 +1,7 @@
+<script setup lang='ts'>
+const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+</script>
+
 <template>
   <div fscw space-y-2>
     <o-alert type="primary">
@@ -20,7 +24,3 @@
     </o-alert>
   </div>
 </template>
-
-<script setup lang='ts'>
-const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-</script>

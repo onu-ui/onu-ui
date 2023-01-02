@@ -5,7 +5,7 @@ import type { BuiltInParserName } from 'prettier'
 
 import type { Store } from '@vue/repl'
 
-export const formatCode = async(loadedFormat: boolean, store: Store) => {
+export const formatCode = async (loadedFormat: boolean, store: Store) => {
   let close: Fn | undefined
   if (!loadedFormat) {
     message({

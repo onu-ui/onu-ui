@@ -13,7 +13,7 @@ const _mount = (options: any) => {
 }
 
 describe('Badge Component', () => {
-  test('basic', async() => {
+  test('basic', async () => {
     const wrapper = _mount({
       template: '<OBadge :value="99"></OBadge>',
     })
@@ -22,7 +22,7 @@ describe('Badge Component', () => {
     expect(wrapper.find('.o-badge sup').text()).toBe('99')
   })
 
-  test('max value', async() => {
+  test('max value', async () => {
     const wrapper = _mount({
       template: `
         <OBadge id="badgeSimple" :value="100"></OBadge>
@@ -36,7 +36,7 @@ describe('Badge Component', () => {
     expect(wrapper.find('#badgeMax sup').text()).toBe('999+')
   })
 
-  test('dot', async() => {
+  test('dot', async () => {
     const wrapper = _mount({
       template: '<OBadge dot :value="99"></OBadge>',
     })

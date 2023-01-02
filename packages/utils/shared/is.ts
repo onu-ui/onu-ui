@@ -1,5 +1,5 @@
-import { ShapeFlags } from './enums'
 import type { Component, ComponentPublicInstance, Slots, VNode, VNodeTypes } from 'vue'
+import { ShapeFlags } from './enums'
 
 export const toTypeString = (v: any) => Object.prototype.toString.call(v)
 export const isDef = <T = any>(val?: T): val is T => typeof val !== 'undefined'

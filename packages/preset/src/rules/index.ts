@@ -1,8 +1,8 @@
 import { parseColor } from '@unocss/preset-mini/utils'
-import theme from '../theme'
-import { SwitchSizeMap } from '../constants'
 import type { ParsedColorValue, Rule, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
+import theme from '../theme'
+import { SwitchSizeMap } from '../constants'
 
 export function parseColors(body: string, _theme: Theme = theme): ParsedColorValue | undefined {
   return parseColor(body, _theme)
@@ -15,7 +15,8 @@ export default [
       return {
         '--onu-c-context': `${color.cssColor.components.join(',')}`,
       }
-    } else {
+    }
+    else {
       return {
         '--onu-c-context': color?.color,
       }

@@ -1,3 +1,16 @@
+<script setup lang='ts' name="OEmpty">
+import { useLocale } from '@onu-ui/utils'
+import type { CSSProperties } from 'vue'
+import { emptyProps } from './props'
+
+const props = defineProps(emptyProps)
+
+const { t } = useLocale()
+const imageStyle = computed<CSSProperties>(() => ({
+  width: props.imgSize || '',
+}))
+</script>
+
 <template>
   <div class="o-empty-base">
     <div class="o-empty-img">
@@ -17,16 +30,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang='ts' name="OEmpty">
-import { useLocale } from '@onu-ui/utils'
-import { CSSProperties } from 'vue'
-import { emptyProps } from './props'
-
-const props = defineProps(emptyProps)
-
-const { t } = useLocale()
-const imageStyle = computed<CSSProperties>(() => ({
-  width: props.imgSize || '',
-}))
-</script>

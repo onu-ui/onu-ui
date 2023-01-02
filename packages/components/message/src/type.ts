@@ -1,6 +1,6 @@
 import { isClient } from '@vueuse/core'
-import type { Mutable, ThemeType } from './../../types'
 import type { AppContext, ComponentInternalInstance, ExtractPropTypes, PropType, VNode } from 'vue'
+import type { Mutable, ThemeType } from './../../types'
 
 export const messageDefaults = {
   id: '',
@@ -81,7 +81,7 @@ export type CreateMessageType = Omit<OMessageProps, 'id'> & {
 export type MessageParams = MessageOptions | MessageOptions['content']
 export type MessageOptionsWithType = Omit<MessageOptions, 'type'>
 export type MessageParamsWithType = MessageOptionsWithType | MessageOptions['content']
-export interface MessageHandler{
+export interface MessageHandler {
   close: () => void
 }
 

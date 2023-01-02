@@ -22,7 +22,7 @@ const showTitle = computed(() => props.title || slots.title)
     <!-- icon -->
     <div v-if="showIcon" class="o-alert-icon">
       <slot name="icon">
-        <o-icon :name="icon" class="!c-white text-6" />
+        <OIcon :name="icon" class="!c-white text-6" />
       </slot>
     </div>
     <!-- content -->
@@ -35,7 +35,7 @@ const showTitle = computed(() => props.title || slots.title)
         </div>
         <div v-if="closable" class="o-alert-close" @click="handleClose">
           <slot name="close">
-            <o-icon v-if="!closeText" name="i-carbon-close" class="!c-white text-4" />
+            <OIcon v-if="!closeText" name="i-carbon-close" class="!c-white text-4" />
             <span class="text-xs">{{ closeText }}</span>
           </slot>
         </div>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-// @ts-ignore
+// @ts-expect-error
 import { onMounted } from 'vue'
 import App from './App.vue'
-// @ts-ignore
+// @ts-expect-error
 import { getUnocssCompileRes, init, libInstall, sendHtml } from './lib-install.js'
 
 libInstall()
-onMounted(async() => {
+onMounted(async () => {
   await init()
   sendHtml()
   getUnocssCompileRes()

@@ -1,10 +1,10 @@
 import { dirname, resolve } from 'path'
 import fsExtra from 'fs-extra'
 import { baseParse } from '@vue/compiler-core'
-import { DemoTag } from './constants'
-import { getDemoComponent } from './utils'
 import type { AttributeNode, ElementNode } from '@vue/compiler-core'
 import type { MarkdownRenderer } from 'vitepress'
+import { DemoTag } from './constants'
+import { getDemoComponent } from './utils'
 
 function getPropsMap(attrs: AttributeNode[]) {
   const map: Record<string, string | undefined> = {}

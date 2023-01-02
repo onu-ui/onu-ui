@@ -1,3 +1,8 @@
+<script lang="ts" name="ORateCustomColor" setup>
+const val = ref(2)
+const valPrimary = ref(4)
+</script>
+
 <template>
   <div fscw gap-6>
     <div>
@@ -14,8 +19,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" name="ORateCustomColor" setup>
-const val = ref(2)
-const valPrimary = ref(4)
-</script>

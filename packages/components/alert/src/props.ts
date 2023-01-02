@@ -1,5 +1,5 @@
-import type { ThemeType } from './../../types'
 import type { ExtractPropTypes, PropType } from 'vue'
+import type { ThemeType } from './../../types'
 
 export const alertProps = {
   /** theme */

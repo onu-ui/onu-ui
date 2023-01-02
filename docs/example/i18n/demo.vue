@@ -1,3 +1,9 @@
+<script setup lang='ts'>
+import { en, pt, zhCn } from 'onu-ui'
+
+const locale = ref(en)
+</script>
+
 <template>
   <div fscw>
     <div flex space-x-2>
@@ -16,9 +22,3 @@
     </o-config-provider>
   </div>
 </template>
-
-<script setup lang='ts'>
-import { en, pt, zhCn } from 'onu-ui'
-
-const locale = ref(en)
-</script>

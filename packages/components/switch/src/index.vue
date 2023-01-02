@@ -1,4 +1,3 @@
-
 <script lang="ts" setup name="OSwitch">
 import { switchProps } from './props'
 

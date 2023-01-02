@@ -1,3 +1,10 @@
+<script setup lang='ts'>
+const cover1 = 'https://placeimg.com/400/225/arch'
+const cover2 = 'https://raw.githubusercontent.com/imageList/imglist/master/img/20221104095918.png'
+const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt iusto, veritatis modi perferendis similique maiores cumque ipsam doloremque natus assumenda, obcaecati id voluptatibus, eum et rerum aut vero suscipit.'
+const description = 'This a description'
+</script>
+
 <template>
   <div fscw space-x-0 md:space-x-4>
     <o-card :cover="cover1" :description="description" title="Title & Content" :content="content" w-96>
@@ -31,10 +38,3 @@
     </o-card>
   </div>
 </template>
-
-<script setup lang='ts'>
-const cover1 = 'https://placeimg.com/400/225/arch'
-const cover2 = 'https://raw.githubusercontent.com/imageList/imglist/master/img/20221104095918.png'
-const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt iusto, veritatis modi perferendis similique maiores cumque ipsam doloremque natus assumenda, obcaecati id voluptatibus, eum et rerum aut vero suscipit.'
-const description = 'This a description'
-</script>

@@ -1,7 +1,7 @@
 import * as __unocss from 'unocss'
 import { $fetch } from 'ohmyfetch'
 import type { UserConfig } from 'unocss'
-const AsyncFunction = Object.getPrototypeOf(async() => {}).constructor
+const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor
 
 const CDN_BASE = 'https://esm.sh/'
 const modulesCache = new Map<string, Promise<unknown> | unknown>()
@@ -53,5 +53,6 @@ export async function evaluateUserConfig<U = UserConfig>(
   const fn = new AsyncFunction('__import', code)
   const result = await fn(__import)
 
-  if (result) return result
+  if (result)
+    return result
 }

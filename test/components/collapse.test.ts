@@ -12,7 +12,7 @@ config.global.stubs = {
 
 // const CONTENT_TEST = 'content test'
 describe('o-collapse', () => {
-  test('o-collapse render test', async() => {
+  test('o-collapse render test', async () => {
     const wrapper = mount(OCollapse, {
       props: {
         expandedNames: ['1'],
@@ -51,7 +51,7 @@ describe('o-collapse', () => {
     expect(collapseItemWrappers[0].vm.isActive).toBe(false)
   })
 
-  test('o-collapse event:change', async() => {
+  test('o-collapse event:change', async () => {
     const onChange = vi.fn()
     let expandedNames: (string | number)[] = ['1']
     const onUpdate = (newVal: (string | number)[]) => {

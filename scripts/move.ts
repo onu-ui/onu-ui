@@ -6,13 +6,14 @@ const volarPath = resolve(process.cwd(), 'volar.d.ts')
 const targetDir = resolve(__dirname, '../packages/onu-ui', 'es/components')
 const volarTargetPath = resolve(__dirname, '../packages/onu-ui', 'volar.d.ts')
 
-const main = async() => {
+const main = async () => {
   try {
     await fse.ensureDir(componentsDir)
     await fse.ensureFile(volarPath)
     fse.copySync(componentsDir, targetDir, { overwrite: true })
     fse.copyFileSync(volarPath, volarTargetPath)
-  } catch (error) {
+  }
+  catch (error) {
     console.error(error)
   }
 }

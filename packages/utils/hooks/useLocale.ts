@@ -1,10 +1,10 @@
 import { computed, isRef, ref, unref } from 'vue'
+import type { Ref } from 'vue'
 import { deepGet } from '../shared'
 import { en } from '../locale'
-import { useGlobalConfig } from './useGlobalConfig'
 import type { language } from '../locale'
-import type { Ref } from 'vue'
 import type { MaybeRef } from '../types'
+import { useGlobalConfig } from './useGlobalConfig'
 
 export type OnuTranslatorOption = Record<string, string | number>
 export type OnuTranslator = (path: string, option?: OnuTranslatorOption) => string

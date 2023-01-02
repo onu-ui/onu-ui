@@ -1,6 +1,6 @@
 import { cloneVNode } from 'vue'
-import { isArray, isArrayChildren, isComponent, isElement, isFunction } from './is'
 import type { VNode } from 'vue'
+import { isArray, isArrayChildren, isComponent, isElement, isFunction } from './is'
 
 export const getChildrenArray = (vn: VNode) => {
   if (isArrayChildren(vn, vn.children))
@@ -21,7 +21,8 @@ export const getFirstElementFromChildren = (children: VNode[] | undefined): HTML
     for (const child of children) {
       // eslint-disable-next-line @typescript-eslint/no-use-before-define
       const element = getFirstElementFromVNode(child)
-      if (element) return element
+      if (element)
+        return element
     }
   }
   return undefined
@@ -40,9 +41,11 @@ export const getFirstElementFromVNode = (vnode: VNode): HTMLElement | undefined 
       return vnode.el as HTMLElement
     if (vnode.component?.subTree) {
       const ele = getFirstElementFromVNode(vnode.component.subTree)
-      if (ele) return ele
+      if (ele)
+        return ele
     }
-  } else {
+  }
+  else {
     const children = getChildrenArray(vnode)
     return getFirstElementFromChildren(children)
   }
@@ -70,7 +73,8 @@ export const mergeFirstChild = (
       const _children = getChildrenArray(child)
       if (_children && _children.length > 0) {
         const result = mergeFirstChild(_children, extraProps)
-        if (result) return true
+        if (result)
+          return true
       }
     }
   }

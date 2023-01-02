@@ -1,4 +1,3 @@
-
 <script setup lang='ts' name="OPopup">
 import OTrigger from '../../trigger/src/index'
 import { popupEmits, popupProps } from './props'
@@ -19,7 +18,7 @@ const handlePopupVisibleChange = (visible: boolean) => {
 </script>
 
 <template>
-  <o-trigger
+  <OTrigger
     :trigger="trigger"
     :position="position"
     :popup-container="popupContainer"
@@ -47,5 +46,5 @@ const handlePopupVisibleChange = (visible: boolean) => {
         </slot>
       </div>
     </template>
-  </o-trigger>
+  </OTrigger>
 </template>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { OMessage as message } from 'onu-ui'
 import { Repl } from '@vue/repl'
+import type { OMessageProps } from 'onu-ui'
+import playConfig from '../playground.config'
 import Header from '~/components/Header.vue'
 import { type UserOptions, type Versions, useStore } from '~/composables/store'
 import { generate } from '~/utils/uno/uno'
 import { handleKeydown } from '~/utils/format'
-import playConfig from '../playground.config'
-import type { OMessageProps } from 'onu-ui'
 
 const loading = ref(true)
 // sfc 配置，他将在在 vue-repl 中用于 compiler-sfc

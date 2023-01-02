@@ -13,7 +13,7 @@ const _mount = (options: any) => {
 }
 
 describe('Switch Component', () => {
-  test('modelValue', async() => {
+  test('modelValue', async () => {
     const switchVal = ref(true)
     const wrapper = _mount({
       template: `
@@ -34,7 +34,7 @@ describe('Switch Component', () => {
     expect(switchVal.value).toBeFalsy()
   })
 
-  test('size', async() => {
+  test('size', async () => {
     const wrapper = mount(OSwitch, {
       props: {
         size: 'sm',
@@ -44,7 +44,7 @@ describe('Switch Component', () => {
     expect(wrapper.find('.o-switch-sm').exists()).toBeTruthy()
   })
 
-  test('disabled', async() => {
+  test('disabled', async () => {
     const switchDisabled = ref(true)
     const wrapper = _mount({
       template: `

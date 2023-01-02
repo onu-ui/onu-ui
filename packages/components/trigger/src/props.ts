@@ -1,5 +1,5 @@
-import type { Placement, TriggerType } from './../../types'
 import type { CSSProperties, ExtractPropTypes, PropType } from 'vue'
+import type { Placement, TriggerType } from './../../types'
 
 export const TriggerProps = {
   /** Whether the popup is visible */

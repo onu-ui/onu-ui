@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@chris-zhu"
+    "@antfu"
   ],
   "rules": {
     "react/display-name": "off",

@@ -23,7 +23,8 @@ export const cardProps = {
     type: [String] as PropType<Exclude<SizeType, 'xs' | 'lg'>>,
     default: 'md',
     validator(val: string): boolean {
-      if (!val) return true
+      if (!val)
+        return true
       return ['md', 'sm'].includes(val)
     },
   },

@@ -27,7 +27,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-tag-light').exists()).toBeTruthy()
   })
 
-  test('closable', async() => {
+  test('closable', async () => {
     const wrapper = mount(OTag, {
       props: {
         closable: true,

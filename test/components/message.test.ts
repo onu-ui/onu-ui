@@ -16,7 +16,7 @@ describe('message components', () => {
     expect(wrapper.text()).toEqual(MESSAGE_CONTENT)
     expect(vm.visible).toBe(true)
   })
-  it('message closable', async() => {
+  it('message closable', async () => {
     const wrapper = mount(message, {
       props: {
         content: MESSAGE_CONTENT,
@@ -30,7 +30,7 @@ describe('message components', () => {
     await closeBtn.trigger('click')
     expect(vm.visible).toBe(false)
   })
-  it('it should close after duration', async() => {
+  it('it should close after duration', async () => {
     vi.useFakeTimers()
     const wrapper = mount(message, {
       props: {

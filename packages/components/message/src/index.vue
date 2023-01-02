@@ -1,5 +1,6 @@
 <script setup lang="ts" name="OMessage">
-import { CSSProperties, computed, onMounted, ref } from 'vue'
+import type { CSSProperties } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useResizeObserver, useTimeoutFn } from '@vueuse/core'
 import OIcon from '../../icon/src/index.vue'
 import { messageEmits, messageProps } from './type'
@@ -15,7 +16,8 @@ const height = ref(0)
 const messageRef = ref<HTMLDivElement>()
 
 function startTimer() {
-  if (props.duration === 0) return
+  if (props.duration === 0)
+    return
   const { stop } = useTimeoutFn(() => {
     close()
   }, props.duration)
@@ -68,7 +70,7 @@ const iconTypeMap = {
   <Transition name="fade" :o="props.type" @after-leave="$emit('destroy')">
     <div v-show="visible" :id="id" ref="messageRef" o-message-base :style="customStyle">
       <div o-message-content>
-        <o-icon
+        <OIcon
           text-xl
           :name="props.icon ?? iconTypeMap[props.type]"
           :class="type === 'info' ? '!text-info !dark:text-secondary' : `o-${type}`"
@@ -83,7 +85,7 @@ const iconTypeMap = {
 
       <div class="o-message-closable" @click="handleToClosable">
         <div v-if="props.closable">
-          <o-icon name="i-carbon-close" class="text-xl text-darkContext dark:text-lightContext font-semibold" />
+          <OIcon name="i-carbon-close" class="text-xl text-darkContext dark:text-lightContext font-semibold" />
         </div>
       </div>
     </div>

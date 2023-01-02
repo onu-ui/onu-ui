@@ -1,14 +1,11 @@
 {
   "name": "@onu-ui/components",
-  "description": "Onu-UI components for use on demand",
   "type": "module",
   "version": "1.0.13-beta.0",
-  "keywords": [
-    "onu-ui",
-    "@onu-ui/components"
-  ],
-  "license": "MIT",
+  "description": "Onu-UI components for use on demand",
   "author": "chris-zhu <https://github.com/chris-zhu>",
+  "license": "MIT",
+  "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/components/README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onu-ui/onu-ui.git",
@@ -17,22 +14,25 @@
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"
   },
-  "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/components/README.md",
-  "main": "./dist/components.umd.cjs",
-  "module": "./dist/components.js",
-  "types": "./dist/components/index.d.ts",
+  "keywords": [
+    "onu-ui",
+    "@onu-ui/components"
+  ],
+  "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/components.js",
+      "types": "./dist/components/index.d.ts",
       "require": "./dist/components.umd.cjs",
-      "types": "./dist/components/index.d.ts"
+      "import": "./dist/components.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "main": "./dist/components.umd.cjs",
+  "module": "./dist/components.js",
+  "types": "./dist/components/index.d.ts",
   "files": [
     "dist"
   ],
-  "sideEffects": false,
   "scripts": {
     "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../onu-ui\" build",
     "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"

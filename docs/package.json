@@ -1,8 +1,8 @@
 {
   "name": "@onu-ui/docs",
-  "description": "Onu-UI docs",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
+  "description": "Onu-UI docs",
   "keywords": ["onu-ui", "docs"],
   "scripts": {
     "dev": "vitepress dev --port 9999 --open",

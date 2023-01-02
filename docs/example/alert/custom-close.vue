@@ -1,3 +1,11 @@
+<script setup lang='ts'>
+const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+
+const handleClose = () => {
+  alert('click the close icon')
+}
+</script>
+
 <template>
   <div fscw space-y-2>
     <o-alert type="primary" :description="content" closable @close="handleClose" />
@@ -18,11 +26,3 @@
     </o-alert>
   </div>
 </template>
-
-<script setup lang='ts'>
-const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-
-const handleClose = () => {
-  alert('click the close icon')
-}
-</script>

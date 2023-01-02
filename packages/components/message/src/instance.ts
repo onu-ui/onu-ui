@@ -17,6 +17,7 @@ export const getInstance = (id: string) => {
 export const useOffset = (id: string): number => {
   const { prev } = getInstance(id)
 
-  if (!prev) return 0
+  if (!prev)
+    return 0
   return prev.vm.exposed!.bottom.value
 }

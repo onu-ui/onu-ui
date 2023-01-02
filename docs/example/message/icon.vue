@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { OMessage as message } from 'onu-ui'
-function handleToClickBasic(theme:string, icon:string) {
+function handleToClickBasic(theme: string, icon: string) {
   message[theme]({
     content: `This is ${theme} message`,
     closable: true,

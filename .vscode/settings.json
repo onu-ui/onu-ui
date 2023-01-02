@@ -1,16 +1,16 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "editor.formatOnSave": false,
-    "unocss.root": "./docs",
-    "i18n-ally.localesPaths": "packages/utils/locale/lang",
-    "i18n-ally.enabledParsers": [
-      "ts"
-    ],
-    "i18n-ally.enabledFrameworks": [
-      "vue",
-      "vue-sfc"
-    ],
-    "i18n-ally.keystyle": "nested",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,
+  "unocss.root": "./docs",
+  "i18n-ally.localesPaths": "packages/utils/locale/lang",
+  "i18n-ally.enabledParsers": [
+    "ts"
+  ],
+  "i18n-ally.enabledFrameworks": [
+    "vue",
+    "vue-sfc"
+  ],
+  "i18n-ally.keystyle": "nested"
 }

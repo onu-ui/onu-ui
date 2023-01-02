@@ -1,8 +1,8 @@
 import { compare } from 'compare-versions'
-import { genVueLink } from '~/utils/dependency'
-import playConfig from '../../playground.config'
 import type { MaybeRef } from '@vueuse/core'
 import type { Ref, ShallowRef } from 'vue'
+import playConfig from '../../playground.config'
+import { genVueLink } from '~/utils/dependency'
 import type { VersionKey, Versions } from '~/composables/store'
 
 // 发送请求到 npm 查询 vue、组件库版本

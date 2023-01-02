@@ -1,6 +1,6 @@
 <script lang="ts" setup name="OCard">
 import OButton from '../../button/src/index.vue'
-import { ShadowType } from '../../types'
+import type { ShadowType } from '../../types'
 import { cardProps } from './props'
 
 const props = defineProps(cardProps)
@@ -52,9 +52,9 @@ const shadowCls: Record<ShadowType, string> = {
           </div>
           <div class="o-card-header-extra">
             <slot name="extra">
-              <o-button v-if="extra" o="primary" text size="xs">
+              <OButton v-if="extra" o="primary" text size="xs">
                 {{ extra }}
-              </o-button>
+              </OButton>
             </slot>
           </div>
         </div>

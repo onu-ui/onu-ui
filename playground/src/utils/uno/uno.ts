@@ -1,14 +1,15 @@
 import { createGenerator } from 'unocss'
+import type { UserConfig } from 'unocss'
 import defaultConfigRaw from '../../../unocss.config.ts?raw'
 import { evaluateUserConfig } from './evaluate-user-config'
-import type { UserConfig } from 'unocss'
 
 const defaultConfig = ref<UserConfig | undefined>()
 
 async function load() {
   try {
     defaultConfig.value = await evaluateUserConfig(defaultConfigRaw)
-  } catch (e) {
+  }
+  catch (e) {
     console.error(e)
   }
 }

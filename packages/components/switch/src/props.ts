@@ -11,7 +11,8 @@ export const switchProps = {
     type: [String] as PropType<Exclude<SizeType, 'xs'>>,
     default: 'md',
     validator(val: string): boolean {
-      if (!val) return true
+      if (!val)
+        return true
       return ['sm', 'md', 'lg'].includes(val)
     },
   },

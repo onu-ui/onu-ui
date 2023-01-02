@@ -1,26 +1,3 @@
-<template>
-  <div fscw gap-2>
-    <o-button type="primary" @click="open1">
-      primary
-    </o-button>
-    <o-button type="secondary" @click="open2">
-      secondary
-    </o-button>
-    <o-button type="success" @click="open3">
-      success
-    </o-button>
-    <o-button type="warning" @click="open4">
-      warning
-    </o-button>
-    <o-button type="error" @click="open5">
-      error
-    </o-button>
-    <o-button type="info" @click="open6">
-      info
-    </o-button>
-  </div>
-</template>
-
 <script setup lang='ts'>
 import { OMessage } from 'onu-ui'
 const open1 = () => {
@@ -61,6 +38,29 @@ const open6 = () => {
   })
 }
 </script>
+
+<template>
+  <div fscw gap-2>
+    <o-button type="primary" @click="open1">
+      primary
+    </o-button>
+    <o-button type="secondary" @click="open2">
+      secondary
+    </o-button>
+    <o-button type="success" @click="open3">
+      success
+    </o-button>
+    <o-button type="warning" @click="open4">
+      warning
+    </o-button>
+    <o-button type="error" @click="open5">
+      error
+    </o-button>
+    <o-button type="info" @click="open6">
+      info
+    </o-button>
+  </div>
+</template>
 
 <style>
 

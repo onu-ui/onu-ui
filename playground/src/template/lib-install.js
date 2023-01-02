@@ -3,7 +3,8 @@ import UnoUI from 'onu-ui'
 let installed = false
 
 export function libInstall() {
-  if (installed) return
+  if (installed)
+    return
   const instance = getCurrentInstance()
   // 安装组件库到vue
   instance.appContext.app.use(UnoUI)

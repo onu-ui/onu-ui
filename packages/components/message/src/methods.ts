@@ -3,6 +3,7 @@
 import { createVNode, isVNode, render } from 'vue'
 import { isElement, isFunction, isString } from '@onu-ui/utils'
 import { isClient } from '@vueuse/core'
+import type { AppContext } from 'vue'
 import { commonTheme } from '../../types'
 import { useZindex } from '../../_hooks/useZIndex'
 import {
@@ -10,7 +11,6 @@ import {
 } from './type'
 import MessageConstructor from './index.vue'
 import { instances } from './instance'
-import type { AppContext } from 'vue'
 import type {
   CreateMessageType,
   Message,
@@ -33,7 +33,8 @@ const normalizeOption = (params?: MessageParams) => {
 
   if (!normalizedOptions.appendTo) {
     normalizedOptions.appendTo = document.body
-  } else if (isString(normalizedOptions.appendTo)) {
+  }
+  else if (isString(normalizedOptions.appendTo)) {
     let appendTo = document.querySelector<HTMLElement>(normalizedOptions.appendTo)
 
     // should fallback to default value with a warning
@@ -104,7 +105,8 @@ const createMessage = (
 
 function closeMessage(instance: MessageContext) {
   const idx = instances.indexOf(instance)
-  if (idx === -1) return
+  if (idx === -1)
+    return
 
   instances.splice(idx, 1)
   const { handler } = instance

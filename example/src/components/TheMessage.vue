@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { OButton, OCard, OMessage } from 'onu-ui'
 
-function handleToClickTheme(type:String) {
+function handleToClickTheme(type: String) {
   OMessage[`${type}`]({
     content: type,
   })
 }
 
-function handleBasicClick(content:string) {
+function handleBasicClick(content: string) {
   OMessage.primary({
     content,
   })
 }
-function handleCloseClick(content:string) {
+function handleCloseClick(content: string) {
   OMessage.info({
     content,
     closable: true,
@@ -43,45 +43,45 @@ function handleHTML() {
 </script>
 
 <template>
-  <o-card title="Message">
+  <OCard title="Message">
     <div space-y-2>
       <div fsc gap-2 flex-wrap>
-        <o-button o="primary" @click="handleToClickTheme('primary')">
+        <OButton o="primary" @click="handleToClickTheme('primary')">
           primary message
-        </o-button>
-        <o-button o="secondary" @click="handleToClickTheme('secondary')">
+        </OButton>
+        <OButton o="secondary" @click="handleToClickTheme('secondary')">
           secondary message
-        </o-button>
-        <o-button o="info" @click="handleToClickTheme('info')">
+        </OButton>
+        <OButton o="info" @click="handleToClickTheme('info')">
           info message
-        </o-button>
-        <o-button o="success" @click="handleToClickTheme('success')">
+        </OButton>
+        <OButton o="success" @click="handleToClickTheme('success')">
           success message
-        </o-button>
-        <o-button o="warning" @click="handleToClickTheme('warning')">
+        </OButton>
+        <OButton o="warning" @click="handleToClickTheme('warning')">
           warning message
-        </o-button>
-        <o-button o="error" @click="handleToClickTheme('error')">
+        </OButton>
+        <OButton o="error" @click="handleToClickTheme('error')">
           error message
-        </o-button>
+        </OButton>
       </div>
       <div fsc gap-2 flex-wrap>
-        <o-button o="primary" @click="handleBasicClick('basic message')">
+        <OButton o="primary" @click="handleBasicClick('basic message')">
           show basic message
-        </o-button>
-        <o-button o="info" @click="handleCloseClick('closable message')">
+        </OButton>
+        <OButton o="info" @click="handleCloseClick('closable message')">
           show closable message
-        </o-button>
-        <o-button o="secondary" @click="handleIconClick">
+        </OButton>
+        <OButton o="secondary" @click="handleIconClick">
           icon content
-        </o-button>
-        <o-button o="error" @click="handleDurationClick">
+        </OButton>
+        <OButton o="error" @click="handleDurationClick">
           duration
-        </o-button>
-        <o-button o="error" @click="handleHTML">
+        </OButton>
+        <OButton o="error" @click="handleHTML">
           HTML
-        </o-button>
+        </OButton>
       </div>
     </div>
-  </o-card>
+  </OCard>
 </template>

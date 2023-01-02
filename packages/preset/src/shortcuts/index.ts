@@ -1,4 +1,5 @@
-
+import type { Theme } from '@unocss/preset-uno'
+import type { UserShortcuts } from 'unocss'
 import { baseShortcuts } from './base'
 import { commonShortcuts } from './common'
 import { alertShortcuts } from './alert'
@@ -16,9 +17,6 @@ import { popupShortcuts } from './popup'
 import { triggerShortcuts } from './trigger'
 import { rateShortcuts } from './rate'
 import { emptyShortcuts } from './empty'
-
-import type { Theme } from '@unocss/preset-uno'
-import type { UserShortcuts } from 'unocss'
 
 export default [
   baseShortcuts,

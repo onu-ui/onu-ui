@@ -1,4 +1,3 @@
-
 import { provideGlobalConfig } from '@onu-ui/utils'
 import { renderSlot } from 'vue'
 import type { language } from '@onu-ui/utils'

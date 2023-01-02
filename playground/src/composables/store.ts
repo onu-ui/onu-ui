@@ -1,5 +1,9 @@
 import { computed, ref, shallowRef } from 'vue'
 import { File, type Store, type StoreState, compileFile } from '@vue/repl'
+import playConfig from '../../playground.config'
+import mainCode from '../template/main.vue?raw'
+import welcomeCode from '../template/welcome.vue?raw'
+import libInstallCode from '../template/lib-install.js?raw'
 import { atou, utoa } from '~/utils/encode'
 import { genCDNLink, genImportMap } from '~/utils/dependency'
 import { type ImportMap, mergeImportMap } from '~/utils/import-map'
@@ -12,10 +16,6 @@ import {
   USER_IMPORT_MAP,
 } from '~/constants'
 import { setVersion, setVueVersion } from '~/utils/versions'
-import playConfig from '../../playground.config'
-import mainCode from '../template/main.vue?raw'
-import welcomeCode from '../template/welcome.vue?raw'
-import libInstallCode from '../template/lib-install.js?raw'
 
 export interface Initial {
   serializedState?: string
@@ -75,11 +75,13 @@ export const useStore = (initial: Initial) => {
   // 用户写入 import_map.json 的依赖
   const userImportMap = computed<ImportMap>(() => {
     const code = state.files[USER_IMPORT_MAP]?.code.trim()
-    if (!code) return {}
+    if (!code)
+      return {}
     let map: ImportMap = {}
     try {
       map = JSON.parse(code)
-    } catch (err) {
+    }
+    catch (err) {
       console.error(err)
     }
     return map
@@ -158,11 +160,13 @@ export const useStore = (initial: Initial) => {
     if (serializedState) {
       const saved = deserialize(serializedState)
       for (const [filename, file] of Object.entries(saved)) {
-        if (filename === '_o') continue
+        if (filename === '_o')
+          continue
         files[filename] = new File(filename, file as string)
       }
       userOptions.value = saved._o || {}
-    } else {
+    }
+    else {
       files[APP_FILE] = new File(APP_FILE, welcomeCode)
     }
     files[MAIN_FILE] = new File(MAIN_FILE, mainCode, hideFile.value)
@@ -183,7 +187,8 @@ export const useStore = (initial: Initial) => {
         hidden: boolean
         code: string
       }
-      if (fileInfo.hidden) continue
+      if (fileInfo.hidden)
+        continue
       exported[fileInfo.filename] = fileInfo.code
     }
     return exported
@@ -212,7 +217,8 @@ export const useStore = (initial: Initial) => {
 
   function setActive(filename: string) {
     const file = state.files[filename]
-    if (file.hidden) return
+    if (file.hidden)
+      return
     state.activeFile = state.files[filename]
   }
 

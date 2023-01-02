@@ -1,8 +1,8 @@
 import { computed, getCurrentInstance, inject, provide, ref } from 'vue'
+import type { App, Ref } from 'vue'
 import { configProviderContextKey } from '../tokens'
 import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
-import type { App, Ref } from 'vue'
 import type { MaybeRef } from '../types'
 const globalConfig = ref<InstallOptions>()
 
@@ -39,11 +39,13 @@ export function provideGlobalConfig(config: MaybeRef<InstallOptions>, app?: App,
   const sourceConfig = inSetup ? useGlobalConfig() : undefined
   const provideFn = app?.provide ?? (inSetup ? provide : undefined)
 
-  if (!provideFn) return
+  if (!provideFn)
+    return
 
   const context = computed(() => {
     const cfg = unref(config)
-    if (!sourceConfig?.value) return cfg
+    if (!sourceConfig?.value)
+      return cfg
 
     return mergeObjects(sourceConfig.value, cfg)
   })

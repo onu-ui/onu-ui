@@ -1,9 +1,11 @@
 <script setup lang="ts" name="OCollapse">
 // TODO test
 import { provide, ref, watch } from 'vue'
-import {
+import type {
   CollapseActiveName,
   CollapseContext,
+} from './props'
+import {
   collapseContextKey,
   collapseEmits,
   collapseProps,
@@ -19,11 +21,12 @@ function setActiveNames(_activeNames: CollapseActiveName) {
   emit('update:expanded-names', value)
   emit('change', value)
 }
-function toggleItem(value:string | number):void {
+function toggleItem(value: string | number): void {
   const { accordion } = props
   if (accordion) {
     setActiveNames(activeNames.value && activeNames.value[0] === value ? [] : [value])
-  } else {
+  }
+  else {
     const _activeNames = [...activeNames.value]
     const index = _activeNames.indexOf(value)
 

@@ -15,11 +15,11 @@ export default {
   enhanceApp({ app }) {
     for (const name of Object.keys(components)) {
       if (name.startsWith('O'))
-        // eslint-disable-next-line import/namespace
+
         app.component(name, components[name])
     }
-    app.component('demo', DemoBlock)
-    app.component('overview', Overview)
+    app.component('Demo', DemoBlock)
+    app.component('Overview', Overview)
     app.component('WarnBadge', WarnBadge)
     app.component('CommnBadge', CommnBadge)
     app.component('UpdateBadge', UpdateBadge)

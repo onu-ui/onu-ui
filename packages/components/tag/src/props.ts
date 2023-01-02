@@ -1,5 +1,5 @@
-import type { SizeType, ThemeType } from '../../types'
 import type { ExtractPropTypes, PropType } from 'vue'
+import type { SizeType, ThemeType } from '../../types'
 
 export const tagProps = {
   /** theme */
@@ -12,7 +12,8 @@ export const tagProps = {
     type: [String] as PropType<SizeType>,
     default: 'sm',
     validator(val: string): boolean {
-      if (!val) return true
+      if (!val)
+        return true
       return ['xs', 'md', 'sm', 'lg'].includes(val)
     },
   },

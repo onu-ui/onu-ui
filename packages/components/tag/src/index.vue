@@ -25,7 +25,7 @@ const handleClick = (evt: MouseEvent) => {
       <slot />
     </span>
 
-    <o-icon
+    <OIcon
       v-if="closable"
       class="o-tag-close"
       :class="[!light && 'c-white']"

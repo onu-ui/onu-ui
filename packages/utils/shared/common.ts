@@ -32,7 +32,8 @@ export function mergeObjects<T extends Record<string, any>, U extends Record<str
 export function deepGet(target: any, path: string | string[], defaultValue: any) {
   if (!Array.isArray(path) && typeof path !== 'string')
     throw new TypeError('path must be string or array')
-  if (target === null) return defaultValue
+  if (target === null)
+    return defaultValue
 
   let pathArray = path
   if (typeof path === 'string') {

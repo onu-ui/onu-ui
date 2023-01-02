@@ -1,13 +1,13 @@
 import { Teleport, Transition, defineComponent } from 'vue'
 import { isEmptyChildren, mergeFirstChild, off, on } from '@onu-ui/utils'
+import type { CSSProperties, Ref } from 'vue'
 import { useFirstElement, useResizeObserver, useTeleport } from '../../_hooks'
 import ClientOnly from '../../_components/ClientOnly.vue'
 import ResizeObserver from '../../_components/ResizeObserver'
+import type { TriggerType } from '../../types'
 import { TriggerProps, triggerEmits } from './props'
 import { triggerInjectionKey } from './context'
 import { getArrowStyle, getElementScrollRect, getPopupStyle, getScrollElements, getTransformOrigin } from './utils'
-import type { CSSProperties, Ref } from 'vue'
-import type { TriggerType } from '../../types'
 import './fade.css'
 
 const TriggerPositionStyls = {
@@ -27,10 +27,10 @@ const TriggerPositionStyls = {
 
 export default defineComponent({
   name: 'Trigger',
+  components: {},
   inheritAttrs: false,
   props: TriggerProps,
   emits: triggerEmits,
-  components: {},
   setup(props, { slots, emit, attrs }) {
     const { children, firstElement } = useFirstElement()
 
@@ -149,7 +149,8 @@ export default defineComponent({
     }
 
     const changeVisible = (visible: boolean, delay?: number) => {
-      if (visible === computedPopVisible.value && delay === 0) return
+      if (visible === computedPopVisible.value && delay === 0)
+        return
       const update = () => {
         popupVisible.value = visible
         emit('update:popupVisible', visible)
@@ -165,7 +166,8 @@ export default defineComponent({
         cleanDelayTimer()
         if (visible !== computedPopVisible.value)
           delayTimer = window.setTimeout(update, delay)
-      } else {
+      }
+      else {
         update()
       }
     }
@@ -173,12 +175,14 @@ export default defineComponent({
     //  Trigger events
     const handleClick = (e: MouseEvent) => {
       (attrs as any).onClick?.(e)
-      if (props.disabled) return
+      if (props.disabled)
+        return
 
       if (triggerMethods.value.includes('click')) {
         updateMousePosition(e)
         changeVisible(!computedPopVisible.value)
-      } else if (
+      }
+      else if (
         triggerMethods.value.includes('context-menu')
         && computedPopVisible.value
       ) {
@@ -231,7 +235,8 @@ export default defineComponent({
     }
 
     const handleResize = () => {
-      if (computedPopVisible.value) updatePopupStyle()
+      if (computedPopVisible.value)
+        updatePopupStyle()
     }
 
     const handleMouseEnterWithContext = (e: MouseEvent) => {
@@ -246,12 +251,14 @@ export default defineComponent({
 
     const handleShow = () => {
       isAnimation.value = false
-      if (computedPopVisible.value) emit('show')
+      if (computedPopVisible.value)
+        emit('show')
     }
 
     const handleHide = () => {
       isAnimation.value = false
-      if (!computedPopVisible.value) emit('hide')
+      if (!computedPopVisible.value)
+        emit('hide')
     }
 
     const onAnimationStart = () => {
@@ -289,7 +296,8 @@ export default defineComponent({
     }
 
     const handleScroll = useThrottleFn(() => {
-      if (computedPopVisible.value) updatePopupStyle()
+      if (computedPopVisible.value)
+        updatePopupStyle()
     })
 
     const { createResizeObserver, destroyResizeObserver } = useResizeObserver(
@@ -317,7 +325,8 @@ export default defineComponent({
     })
 
     onUpdated(() => {
-      if (computedPopVisible.value) updatePopupStyle()
+      if (computedPopVisible.value)
+        updatePopupStyle()
     })
 
     onDeactivated(() => {
@@ -351,7 +360,8 @@ export default defineComponent({
     watch(computedPopVisible, (value) => {
       if (!value && outsideListener) {
         removeOutsideListener()
-      } else if (value && !outsideListener) {
+      }
+      else if (value && !outsideListener) {
         on(document.documentElement, 'mousedown', handleOutsideClick)
         outsideListener = true
       }
@@ -361,7 +371,8 @@ export default defineComponent({
           scrollElements = getScrollElements(firstElement.value)
           for (const item of scrollElements)
             item.addEventListener('scroll', handleScroll)
-        } else if (scrollElements) {
+        }
+        else if (scrollElements) {
           for (const item of scrollElements)
             item.removeEventListener('scroll', handleScroll)
 
@@ -373,7 +384,8 @@ export default defineComponent({
     watch(
       () => [props.autoFitPopupWidth],
       () => {
-        if (computedPopVisible.value) updatePopupStyle()
+        if (computedPopVisible.value)
+          updatePopupStyle()
       },
     )
 

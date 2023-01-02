@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+</script>
+
 <template>
   <header h-16 fbc px-4 b="b dashed gray3">
     <div fsc gap-4>
@@ -20,8 +25,3 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-</script>

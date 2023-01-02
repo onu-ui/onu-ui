@@ -1,4 +1,3 @@
-
 <template>
   <span
     text-green-500

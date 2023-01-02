@@ -1,3 +1,12 @@
+<script lang="ts" setup>
+const handleClose = () => {
+  alert('click the close icon')
+}
+const handleClick = () => {
+  alert('click the tag')
+}
+</script>
+
 <template>
   <div fscw gap-2>
     <o-tag type="secondary" closable @close="handleClose" @click="handleClick">
@@ -8,12 +17,3 @@
     </o-tag>
   </div>
 </template>
-
-<script lang="ts" setup>
-const handleClose = () => {
-  alert('click the close icon')
-}
-const handleClick = () => {
-  alert('click the tag')
-}
-</script>

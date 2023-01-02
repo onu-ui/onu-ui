@@ -1,9 +1,3 @@
-<template>
-  <o-button type="info" :loading="loading" @click="startLoading">
-    {{ loading ? 'Loading~~' : 'Start Load' }}
-  </o-button>
-</template>
-
 <script setup lang='ts'>
 const loading = ref(false)
 const startLoading = () => {
@@ -13,3 +7,9 @@ const startLoading = () => {
   }, 2000)
 }
 </script>
+
+<template>
+  <o-button type="info" :loading="loading" @click="startLoading">
+    {{ loading ? 'Loading~~' : 'Start Load' }}
+  </o-button>
+</template>

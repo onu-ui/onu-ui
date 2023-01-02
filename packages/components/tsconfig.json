@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "exclude": [
     "**/dist/**",
-    "./unocss.config.ts",
+    "./unocss.config.ts"
   ],
   "include": [
     "**/*.ts",

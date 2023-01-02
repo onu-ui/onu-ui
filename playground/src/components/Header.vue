@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { OMessage as message } from 'onu-ui'
-import { getSupportVersions } from '~/utils/versions'
+import type { ComputedRef } from 'vue'
+import type { OMessageProps } from 'onu-ui'
 import playConfig from '../../playground.config'
 import logo from '../assets/logo.svg'
-import type { ComputedRef } from 'vue'
+import { getSupportVersions } from '~/utils/versions'
 import type { ReplStore, VersionKey } from '~/composables/store'
-import type { OMessageProps } from 'onu-ui'
-// eslint-disable-next-line vue/no-setup-props-destructure
+
 const { store } = defineProps<{
   store: ReplStore
 }>()

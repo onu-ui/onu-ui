@@ -275,7 +275,8 @@ const getFitPosition = (
     if (triggerRect.top > popupRect.height) {
       // Adjust the pop-up box to snap to the top of the window
       popupPosition.top = -containerRect.top
-    } else {
+    }
+    else {
       const fitPosition = getPopupOffset('bottom', triggerRect, popupRect, {
         offset,
         translate,
@@ -295,7 +296,8 @@ const getFitPosition = (
       // Adjust the pop-up box to snap to the bottom of the window
       // prettier-ignore
       popupPosition.top = -containerRect.top + (viewPortSize.height - popupRect.height)
-    } else {
+    }
+    else {
       const fitPosition = getPopupOffset('top', triggerRect, popupRect, {
         offset,
         translate,
@@ -310,7 +312,8 @@ const getFitPosition = (
     if (triggerRect.left > popupRect.width) {
       // Adjust the pop-up box to snap to the left side of the window
       popupPosition.left = -containerRect.left
-    } else {
+    }
+    else {
       const fitPosition = getPopupOffset('right', triggerRect, popupRect, {
         offset,
         translate,
@@ -330,7 +333,8 @@ const getFitPosition = (
       // Adjust the pop-up box to snap to the right side of the window
       popupPosition.left
         = -containerRect.left + (viewPortSize.width - popupRect.width)
-    } else {
+    }
+    else {
       const fitPosition = getPopupOffset('left', triggerRect, popupRect, {
         offset,
         translate,
@@ -343,13 +347,15 @@ const getFitPosition = (
   }
 
   if (direction === 'top' || direction === 'bottom') {
-    if (viewPortBoundary.left < 0) { popupPosition.left = -containerRect.left } else if (viewPortBoundary.right < 0) {
+    if (viewPortBoundary.left < 0) { popupPosition.left = -containerRect.left }
+    else if (viewPortBoundary.right < 0) {
       popupPosition.left
         = -containerRect.left + (viewPortSize.width - popupRect.width)
     }
   }
   if (direction === 'left' || direction === 'right') {
-    if (viewPortBoundary.top < 0) { popupPosition.top = -containerRect.top } else if (viewPortBoundary.bottom < 0) {
+    if (viewPortBoundary.top < 0) { popupPosition.top = -containerRect.top }
+    else if (viewPortBoundary.bottom < 0) {
       popupPosition.top
         = -containerRect.top + (viewPortSize.height - popupRect.height)
     }
@@ -393,7 +399,7 @@ export const getPopupStyle = (
     customStyle?: CSSProperties
     autoFitPosition?: boolean
   } = {},
-): { style: CSSProperties, position: Placement } => {
+): { style: CSSProperties; position: Placement } => {
   let finalPosition = position
   let popupPosition = getPopupOffset(position, triggerRect, popupRect, {
     offset,

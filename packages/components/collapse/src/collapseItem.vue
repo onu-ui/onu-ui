@@ -3,7 +3,8 @@
 import { computed, inject } from 'vue'
 
 import OIcon from '../../icon/src/index.vue'
-import { RendererElement, collapseContextKey, collapseItemProps } from './props'
+import type { RendererElement } from './props'
+import { collapseContextKey, collapseItemProps } from './props'
 const props = defineProps(collapseItemProps)
 const collapse = inject(collapseContextKey)
 
@@ -14,7 +15,8 @@ const leftArrow = computed(() => props.arrowPlacement === 'left')
 const rightArrow = computed(() => props.arrowPlacement === 'right')
 
 function handleHeaderClick() {
-  if (props.disabled) return
+  if (props.disabled)
+    return
   collapse?.toggleItem(props.name)
 }
 const on = {
@@ -74,7 +76,7 @@ defineExpose({
         </div>
         <div v-if="props.icon">
           <slot name="icon">
-            <o-icon :name="props.icon" />
+            <OIcon :name="props.icon" />
           </slot>
         </div>
         <slot name="title">

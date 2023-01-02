@@ -8,8 +8,9 @@ const emits = defineEmits(['update:modelValue', 'change'])
 
 const curVal = ref(props.modelValue)
 const isAtLeftHalf = ref(false)
-const setCurValue = (item:number, e:MouseEvent) => {
-  if (props.readonly) return
+const setCurValue = (item: number, e: MouseEvent) => {
+  if (props.readonly)
+    return
   if (props.allowHalf) {
     const target = e.target as HTMLElement
     isAtLeftHalf.value = e.offsetX * 2 <= target.clientWidth
@@ -18,25 +19,27 @@ const setCurValue = (item:number, e:MouseEvent) => {
 }
 
 const resetCurValue = () => {
-  if (props.readonly) return
+  if (props.readonly)
+    return
   curVal.value = props.modelValue
 }
 watch(() => props.modelValue, () => resetCurValue())
 
 const selectVal = () => {
-  if (props.readonly) return
+  if (props.readonly)
+    return
   emits('update:modelValue', curVal.value)
   emits('change', curVal.value)
 }
 
 const showFilledIcon = computed(() => {
-  return function(val, item) {
+  return function (val, item) {
     return !(Math.round(val) < item)
   }
 })
 
 const showHalfIcon = computed(() => {
-  return function(val, item) {
+  return function (val, item) {
     return (Math.round(val) === item) && val < item
   }
 })
@@ -59,13 +62,13 @@ defineExpose({
       @mouseleave="resetCurValue"
       @click="selectVal()"
     >
-      <o-icon
+      <OIcon
         v-if="showFilledIcon(curVal, item)"
         :class="showHalfIcon(curVal, item) ? 'o-rate-half o-rate-select' : 'o-rate-select'"
         name="o-rate-icon i-carbon-star-filled"
         :o="color"
       />
-      <o-icon
+      <OIcon
         v-if="!showFilledIcon(curVal, item)"
         class="o-rate-unselect"
         name="o-rate-icon i-carbon-star"

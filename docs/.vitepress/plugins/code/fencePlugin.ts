@@ -1,6 +1,6 @@
+import type { MarkdownRenderer } from 'vitepress'
 import { FenceDemoTag } from './constants'
 import { genDemoByCode } from './utils'
-import type { MarkdownRenderer } from 'vitepress'
 
 export function fencePlugin(md: MarkdownRenderer) {
   const defaultRender = md.renderer.rules.fence

@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils'
 import { ORate } from '@onu-ui/components'
 
 describe('Rate Component', () => {
-  test('basic', async() => {
+  test('basic', async () => {
     const val = ref(2)
     const wrapper = mount(ORate, {
       props: {
@@ -26,7 +26,7 @@ describe('Rate Component', () => {
     expect(val.value).toBe(3)
   })
 
-  test('readonly', async() => {
+  test('readonly', async () => {
     const val = ref(2)
     const wrapper = mount(ORate, {
       props: {
@@ -49,7 +49,7 @@ describe('Rate Component', () => {
     expect(val.value).toBe(2)
   })
 
-  test('half-star', async() => {
+  test('half-star', async () => {
     const val = ref(2.5)
     const wrapper = mount(ORate, {
       props: {
@@ -75,7 +75,7 @@ describe('Rate Component', () => {
     expect(val.value).toBe(3)
   })
 
-  test('color', async() => {
+  test('color', async () => {
     const val = ref(2)
     const wrapper = mount(ORate, {
       props: {
@@ -91,7 +91,7 @@ describe('Rate Component', () => {
     expect(wrapper.find('.o-rate-unselect').element.getAttribute('o')).toBe('primary')
   })
 
-  test('show-text', async() => {
+  test('show-text', async () => {
     const val = ref(2)
     const wrapper = mount(ORate, {
       props: {
@@ -104,7 +104,7 @@ describe('Rate Component', () => {
     expect(wrapper.find('.o-rate-text').element.textContent).toBe('showText test')
   })
 
-  test('event:change', async() => {
+  test('event:change', async () => {
     const val = ref(2)
     const fn = vi.fn()
     const wrapper = mount(ORate, {

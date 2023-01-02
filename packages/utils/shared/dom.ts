@@ -3,7 +3,8 @@ import { isString } from './is'
 export const isServerRendering = (() => {
   try {
     return !(typeof window !== 'undefined' && document !== undefined)
-  } catch (e) {
+  }
+  catch (e) {
     return true
   }
 })()

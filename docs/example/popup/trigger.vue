@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+const handleVisibleChange = (visible: boolean) => {
+  // eslint-disable-next-line no-console
+  console.log(visible)
+}
+</script>
+
 <template>
   <div space-y-2>
     <div fscw gap-2>
@@ -44,10 +51,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-const handleVisibleChange = (visible: boolean) => {
-  // eslint-disable-next-line no-console
-  console.log(visible)
-}
-</script>

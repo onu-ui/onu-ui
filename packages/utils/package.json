@@ -1,45 +1,45 @@
 {
-    "name": "@onu-ui/utils",
-    "description": "Onu-UI utils library",
-    "version": "1.0.13-beta.0",
-    "keywords": [
-        "onu-ui",
-        "utils",
-        "@onu-ui/utils"
-    ],
-    "license": "MIT",
-    "author": "chris-zhu <https://github.com/chris-zhu>",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/onu-ui/onu-ui.git",
-        "directory": "packages/utils"
-    },
-    "bugs": {
-        "url": "https://github.com/onu-ui/onu-ui/issues"
-    },
-    "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/utils/README.md",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.mjs",
-            "types": "./dist/index.d.ts"
-        }
-    },
-    "files": [
-        "dist"
-    ],
-    "sideEffects": false,
-    "scripts": {
-        "build": "tsup",
-        "stub": "tsup --watch"
-    },
-    "peerDependencies": {
-        "vue": "^3.2.0"
-    },
-    "publishConfig": {
-        "access": "public"
+  "name": "@onu-ui/utils",
+  "version": "1.0.13-beta.0",
+  "description": "Onu-UI utils library",
+  "author": "chris-zhu <https://github.com/chris-zhu>",
+  "license": "MIT",
+  "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/utils/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "directory": "packages/utils"
+  },
+  "bugs": {
+    "url": "https://github.com/onu-ui/onu-ui/issues"
+  },
+  "keywords": [
+    "onu-ui",
+    "utils",
+    "@onu-ui/utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "stub": "tsup --watch"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

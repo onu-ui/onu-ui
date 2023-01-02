@@ -1,7 +1,7 @@
 import { dirname, join, sep } from 'path'
 import fsExtra from 'fs-extra'
-import { DemoTag } from './constants'
 import type { MarkdownRenderer } from 'vitepress'
+import { DemoTag } from './constants'
 import type { DemoInfos } from './types'
 
 const scriptRE = /<\/script>/
@@ -96,7 +96,8 @@ function injectImportStatement(
 
       </script>`,
     )
-  } else {
+  }
+  else {
     tags.unshift({
       content: `
         <script ${isUsingTS ? 'lang="ts"' : ''} setup >

@@ -2,11 +2,11 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-      "paths": {
-        "guide": [
-          "./guide/*"
-        ]
-      },
+    "paths": {
+      "guide": [
+        "./guide/*"
+      ]
+    },
     "types": ["../volar", "./auto-imports"]
   },
   "exclude": [
