@@ -107,6 +107,25 @@ importers:
     devDependencies:
       '@types/markdown-it': 12.2.3
 
+  example:
+    specifiers:
+      '@unocss/reset': ^0.44.5
+      onu-ui: workspace:*
+      resize-observer-polyfill: ^1.5.1
+      vite-plugin-pages: ^0.25.0
+      vite-plugin-vue-layouts: ^0.7.0
+      vue: ^3.2.41
+      vue-router: ^4.1.4
+    dependencies:
+      onu-ui: link:../packages/onu-ui
+      vue: 3.2.44
+      vue-router: 4.1.6_vue@3.2.44
+    devDependencies:
+      '@unocss/reset': 0.44.7
+      resize-observer-polyfill: 1.5.1
+      vite-plugin-pages: 0.25.0_vite@3.2.3
+      vite-plugin-vue-layouts: 0.7.0_chfhzoxd3od2v2ruuml7pvyjwm
+
   packages/cli:
     specifiers:
       cac: ^6.7.12
@@ -138,12 +157,9 @@ importers:
     specifiers: {}
 
   packages/utils:
-    specifiers:
-      vue: ^3.2.0
-    dependencies:
-      vue: 3.2.44
+    specifiers: {}
 
-  play:
+  playground:
     specifiers:
       '@types/prettier': ^2.6.3
       '@unocss/reset': ^0.44.5
@@ -161,25 +177,6 @@ importers:
       '@types/prettier': 2.7.1
       '@unocss/reset': 0.44.7
       prettier: 2.7.1
-
-  playground:
-    specifiers:
-      '@unocss/reset': ^0.44.5
-      onu-ui: workspace:*
-      resize-observer-polyfill: ^1.5.1
-      vite-plugin-pages: ^0.25.0
-      vite-plugin-vue-layouts: ^0.7.0
-      vue: ^3.2.41
-      vue-router: ^4.1.4
-    dependencies:
-      onu-ui: link:../packages/onu-ui
-      vue: 3.2.44
-      vue-router: 4.1.6_vue@3.2.44
-    devDependencies:
-      '@unocss/reset': 0.44.7
-      resize-observer-polyfill: 1.5.1
-      vite-plugin-pages: 0.25.0_vite@3.2.3
-      vite-plugin-vue-layouts: 0.7.0_chfhzoxd3od2v2ruuml7pvyjwm
 
 packages:
 
