@@ -1,10 +1,13 @@
 <template>
   <div fscw>
     <div flex space-x-2>
-      <o-button o-success @click="() => { locale = en }">
+      <o-button @click="() => { locale = en }">
         en-US
       </o-button>
-      <o-button o-error @click="() => { locale = zhCn }">
+      <o-button @click="() => { locale = pt }">
+        pt-PT
+      </o-button>
+      <o-button @click="() => { locale = zhCn }">
         zh-CN
       </o-button>
     </div>
@@ -15,7 +18,7 @@
 </template>
 
 <script setup lang='ts'>
-import { en, zhCn } from 'onu-ui'
+import { en, pt, zhCn } from 'onu-ui'
 
 const locale = ref(en)
 </script>
