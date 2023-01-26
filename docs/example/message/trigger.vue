@@ -7,7 +7,7 @@ import { OMessage as message } from 'onu-ui'
     <o-button light @click="$message.success('This is a success message')">
       Option API
     </o-button>
-    <o-button light o-secondary @click="message.success('Thiis is a success message')">
+    <o-button light o-secondary @click="message.success('This is a success message')">
       Composition API
     </o-button>
   </div>
