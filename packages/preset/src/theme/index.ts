@@ -35,7 +35,7 @@ export default {
     baseBackground: 'var(--onu-colors-background)',
     lightBackground: 'var(--onu-colors-background-light)',
     placeholder: 'var(--onu-colors-placeholder)',
-    grayBd: '#var(--onu-colors-background-gray)',
+    grayBd: 'var(--onu-colors-background-gray)',
     arrow: 'var(--onu-colors-arrow)',
     title: 'var(--onu-colors-title)',
     darkText: 'var(--onu-colors-text-darker)',
