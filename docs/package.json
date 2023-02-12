@@ -5,7 +5,7 @@
   "description": "Onu-UI docs",
   "keywords": ["onu-ui", "docs"],
   "scripts": {
-    "dev": "vitepress dev --port 9999 --open",
+    "dev": "vitepress dev --port 9999 --open --host",
     "build": "vitepress build",
     "serve": "vitepress serve"
   },

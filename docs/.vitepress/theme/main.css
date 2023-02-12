@@ -1,3 +1,8 @@
+@font-face {
+  font-family:"DM mono";
+  src: url("/dm-mono.woff2") format("truetype");
+}
+
 /* /**
  * Colors
  * -------------------------------------------------------------------------- */
@@ -190,6 +195,11 @@ html:not(.dark) [img-dark] {
 
 .vp-doc table tr:not(:last-child) td {
   border-bottom: 0px solid var(--n-merged-border-color);
+}
+
+.vp-doc pre, code, kbd, samp {
+  font-family: 'DM mono';
+  font-weight: 500;
 }
 
 .vp-doc :not(pre) > code {
