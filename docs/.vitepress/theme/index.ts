@@ -6,9 +6,11 @@ import WarnBadge from '../components/WarnBadge'
 import CommnBadge from '../components/CommnBadge'
 import UpdateBadge from '../components/UpdateBadge'
 import NewBadge from '../components/NewBadge'
+import TeamMember from '../components/TeamMember'
 import './main.css'
 import 'onu-ui/dist/style.css'
 import 'uno.css'
+import { h } from 'vue'
 
 export default {
   ...theme,
@@ -24,7 +26,14 @@ export default {
     app.component('CommnBadge', CommnBadge)
     app.component('UpdateBadge', UpdateBadge)
     app.component('NewBadge', NewBadge)
+    app.component('TeamMember', TeamMember)
+
 
     app.config.globalProperties.$message = components.OMessage
   },
+  Layout() {
+    return h(theme.Layout, null, {
+      'home-features-after': () => h(TeamMember)
+    })
+  }
 }

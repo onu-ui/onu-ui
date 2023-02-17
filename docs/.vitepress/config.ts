@@ -135,12 +135,24 @@ export default defineConfig({
       'meta',
       { property: 'og:url', content: 'https://github.com/onu-ui/onu-ui' },
     ],
+    [
+      'meta',
+      { name: 'referrer', content: 'no-referrer' },
+    ],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
     [
       'link',
       {
         href: 'https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap',
         rel: 'stylesheet',
+      },
+    ],
+    [
+      'link',
+      {
+        href: 'https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css',
+        rel: 'stylesheet',
+        
       },
     ],
   ],
@@ -160,7 +172,7 @@ export default defineConfig({
     },
     footer: {
       message: 'MIT Licensed',
-      copyright: 'Copyright © 2022-present Chris & Onu UI Contributors',
+      copyright: 'Copyright © 2023-present Chris & Onu UI Contributors',
     },
   },
   markdown: {
