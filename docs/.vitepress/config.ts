@@ -152,7 +152,7 @@ export default defineConfig({
       {
         href: 'https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css',
         rel: 'stylesheet',
-        
+
       },
     ],
   ],

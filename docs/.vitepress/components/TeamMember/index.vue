@@ -7,40 +7,40 @@ const teamMembers = [{
   title: 'Author, Core team member of UnoCSS & OnuUI',
   links: [
     { icon: 'github', link: 'https://github.com/zyyv' },
-    { icon: 'twitter', link: 'https://twitter.com/chris_zyyv' }
-  ]
+    { icon: 'twitter', link: 'https://twitter.com/chris_zyyv' },
+  ],
 }, {
   avatar: 'https://www.github.com/yzh990918.png',
   name: 'yzh990918',
   title: 'Author, Core team member of OnuUI',
   links: [
     { icon: 'github', link: 'https://github.com/yzh990918' },
-    { icon: 'twitter', link: 'https://twitter.com/zhihaoy18640576i' }
-  ]
+    { icon: 'twitter', link: 'https://twitter.com/zhihaoy18640576i' },
+  ],
 }, {
   avatar: 'https://www.github.com/baiwusanyu-c.png',
   name: 'baiwusanyu-c',
   title: 'Main contributor of OnuUI',
   links: [
     { icon: 'github', link: 'https://github.com/baiwusanyu-c' },
-    { icon: 'twitter', link: 'https://twitter.com/jcchen740132583' }
-  ]
+    { icon: 'twitter', link: 'https://twitter.com/jcchen740132583' },
+  ],
 }, {
   avatar: 'https://www.github.com/priority3.png',
   name: 'priority3',
   title: 'Main contributor of OnuUI',
   links: [
     { icon: 'github', link: 'https://github.com/priority3' },
-    { icon: 'twitter', link: 'https://twitter.com/prioriycc' }
-  ]
+    { icon: 'twitter', link: 'https://twitter.com/prioriycc' },
+  ],
 }, {
   avatar: 'https://www.github.com/xiaojieajie.png',
   name: 'xiaojieajie',
   title: 'Team member of OnuUI',
   links: [
     { icon: 'github', link: 'https://github.com/xiaojieajie' },
-  ]
-},]
+  ],
+}]
 
 const SpecialMembers = [{
   avatar: 'https://www.github.com/antfu.png',
@@ -55,7 +55,7 @@ const SpecialMembers = [{
     { icon: 'twitter', link: 'https://github.com/antfu7' },
     { icon: 'discord', link: 'https://chat.antfu.me' },
     { icon: 'youtube', link: 'https://www.youtube.com/@antfu' },
-  ]
+  ],
 }]
 </script>
 
@@ -86,5 +86,5 @@ const SpecialMembers = [{
         </div>
       </main>
     </div>
-</div>
+  </div>
 </template>

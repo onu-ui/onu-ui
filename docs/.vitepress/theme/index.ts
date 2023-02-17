@@ -1,5 +1,6 @@
 import * as components from '@onu-ui/components'
 import theme from 'vitepress/theme'
+import { h } from 'vue'
 import DemoBlock from '../components/demo-block'
 import Overview from '../components/overview'
 import WarnBadge from '../components/WarnBadge'
@@ -10,7 +11,6 @@ import TeamMember from '../components/TeamMember'
 import './main.css'
 import 'onu-ui/dist/style.css'
 import 'uno.css'
-import { h } from 'vue'
 
 export default {
   ...theme,
@@ -28,12 +28,11 @@ export default {
     app.component('NewBadge', NewBadge)
     app.component('TeamMember', TeamMember)
 
-
     app.config.globalProperties.$message = components.OMessage
   },
   Layout() {
     return h(theme.Layout, null, {
-      'home-features-after': () => h(TeamMember)
+      'home-features-after': () => h(TeamMember),
     })
-  }
+  },
 }
