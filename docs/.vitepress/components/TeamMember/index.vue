@@ -52,7 +52,7 @@ const SpecialMembers = [{
   orgLink: 'https://nuxtlabs.com/',
   links: [
     { icon: 'github', link: 'https://github.com/antfu' },
-    { icon: 'twitter', link: 'https://github.com/antfu7' },
+    { icon: 'twitter', link: 'https://twitter.com/antfu7' },
     { icon: 'discord', link: 'https://chat.antfu.me' },
     { icon: 'youtube', link: 'https://www.youtube.com/@antfu' },
   ],
