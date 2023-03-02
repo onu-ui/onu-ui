@@ -5,6 +5,7 @@
 
 The update plan for the component library will be postponed due to the recent search for better job opportunities. onu-ui is expected to start updating components again around mid-March. Stay tuned.
 :::
+
 ## Introduction
 
 Onu UI is a Vue.js based [UnoCSS](https://github.com/unocss/unocss) UI library that allows you to make beautiful websites. 
@@ -17,7 +18,8 @@ The component library is written with the latest [Vue3 setup script](https://vue
 
 To know how to install it, please see [Installation](./install.md).
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/785653/1676598019422-e2da3777-0106-4fe2-959c-0b5b874afcf1.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
+![img](https://cdn.nlark.com/yuque/0/2023/png/785653/1677748502094-f75aeae1-817c-4689-ade1-cb6fb3c794a6.png)
+
 
 ## Features
 
