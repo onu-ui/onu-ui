@@ -3,7 +3,7 @@
 ::: tip NOTICE !
 [Onu UI](https://github.com/onu-ui/onu-ui) is currently in WIP. It is not yet ready for production use. We appreciate your support and feedback as we work to make it ready for everyone.
 
-The update plan for the component library will be postponed due to the recent search for better job opportunities. onu-ui is expected to start updating components again around mid-March. Stay tuned.
+We anticipate resuming development of the component library by the end of March, at which point we will be offering theme configuration options and enhancing the overall ecosystem of complex components for daily business use. Stay tuned for further updates.
 :::
 
 ## Introduction
