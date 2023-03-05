@@ -31,6 +31,7 @@ export default defineConfig(() => {
       UnoCSS(),
     ],
     build: {
+      outDir: '../docs/public/play',
       target: 'esnext',
       emptyOutDir: true,
       rollupOptions: {
