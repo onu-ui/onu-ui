@@ -1,11 +1,12 @@
 <script lang="ts" setup name="OSwitch">
+import type { Ref } from 'vue'
 import { switchProps } from './props'
 
 const props = defineProps(switchProps)
 
 const emits = defineEmits(['update:modelValue', 'change'])
 
-const mv = useVModel(props, 'modelValue', emits)
+const mv = useVModel(props, 'modelValue', emits) as unknown as Ref<boolean>
 
 const style: Record<string, string | undefined> = {
   '--o-switch-dot': props.light ? props.backgroundColor : '#fff', // dot

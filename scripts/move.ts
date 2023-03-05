@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import fse from 'fs-extra'
 
 const componentsDir = resolve(__dirname, '../packages/components', 'dist')

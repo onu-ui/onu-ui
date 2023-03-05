@@ -42,7 +42,7 @@ onMounted(() => {
   visible.value = true
 })
 
-useResizeObserver(messageRef, () => {
+useResizeObserver(() => messageRef.value, () => {
   height.value = messageRef.value!.getBoundingClientRect().height
 })
 
