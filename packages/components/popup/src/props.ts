@@ -72,10 +72,8 @@ export const popupProps = {
 }
 
 export const popupEmits = {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  'update:popupVisible': (visible: boolean) => true,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  'popupVisibleChange': (visible: boolean) => true,
+  'update:popupVisible': (_visible: boolean) => true,
+  'popupVisibleChange': (_visible: boolean) => true,
 }
 
 export type PopupEmits = typeof popupEmits

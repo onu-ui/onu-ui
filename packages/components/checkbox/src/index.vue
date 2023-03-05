@@ -1,12 +1,13 @@
 <script lang="ts" setup name="OCheckbox">
 import { hash } from '@onu-ui/utils'
+import type { Ref } from 'vue'
 import { checkBoxProps } from './checkbox'
 
 const props = defineProps(checkBoxProps)
 
 const emits = defineEmits(['update:modelValue', 'change'])
 
-const mv = useVModel(props, 'modelValue', emits)
+const mv = useVModel(props, 'modelValue', emits) as unknown as Ref<boolean>
 const hashId = hash(Math.random().toString())
 
 const checked = computed(() => mv.value === true)

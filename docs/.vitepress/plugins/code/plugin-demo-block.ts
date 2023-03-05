@@ -1,4 +1,4 @@
-import { dirname, resolve } from 'path'
+import { dirname, resolve } from 'node:path'
 import fsExtra from 'fs-extra'
 import { baseParse } from '@vue/compiler-core'
 import type { AttributeNode, ElementNode } from '@vue/compiler-core'

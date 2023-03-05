@@ -1,4 +1,4 @@
-import { dirname, join, sep } from 'path'
+import { dirname, join, sep } from 'node:path'
 import fsExtra from 'fs-extra'
 import type { MarkdownRenderer } from 'vitepress'
 import { DemoTag } from './constants'

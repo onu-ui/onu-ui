@@ -9,6 +9,7 @@ import { useOffset } from './instance'
 const props = defineProps(messageProps)
 defineEmits(messageEmits)
 
+// eslint-disable-next-line unused-imports/no-unused-vars
 let stopTimer: () => void
 // init muse be false to `enter-from` animation
 const visible = ref(false)
@@ -42,7 +43,7 @@ onMounted(() => {
   visible.value = true
 })
 
-useResizeObserver(messageRef, () => {
+useResizeObserver(() => messageRef.value, () => {
   height.value = messageRef.value!.getBoundingClientRect().height
 })
 

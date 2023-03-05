@@ -4,7 +4,12 @@ import { badgeProps } from './badge'
 
 const props = defineProps(badgeProps)
 
-const resolveValue = computed(() => props.dot ? '' : isNumber(props.value) && props.value > props.max ? `${props.max}+` : props.value)
+const resolveValue = computed(() => props.dot
+  ? ''
+  : (isNumber(props.value) && props.value > props.max)
+      ? `${props.max}+`
+      : props.value,
+)
 </script>
 
 <template>

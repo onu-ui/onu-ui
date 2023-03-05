@@ -9,6 +9,7 @@ const pathSrc = path.resolve(__dirname, 'src')
 
 export default defineConfig(() => {
   return {
+    base: '/play/',
     resolve: {
       alias: {
         '~': pathSrc,
