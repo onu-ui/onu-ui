@@ -2,7 +2,7 @@
 import OIcon from '../../icon/src/index.vue'
 import { tagEmits, tagProps } from './props'
 
-const props = defineProps(tagProps)
+defineProps(tagProps)
 const emits = defineEmits(tagEmits)
 
 const handleClose = (evt: MouseEvent) => {

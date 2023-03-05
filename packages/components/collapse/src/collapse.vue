@@ -24,7 +24,7 @@ function setActiveNames(_activeNames: CollapseActiveName) {
 function toggleItem(value: string | number): void {
   const { accordion } = props
   if (accordion) {
-    setActiveNames(activeNames.value && activeNames.value[0] === value ? [] : [value])
+    setActiveNames(activeNames.value && (activeNames.value[0] === value ? [] : [value]))
   }
   else {
     const _activeNames = [...activeNames.value]

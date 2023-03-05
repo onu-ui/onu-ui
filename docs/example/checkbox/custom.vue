@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const checkVal = ref(true)
+// const checkVal = ref(true)
 </script>
 
 <template>

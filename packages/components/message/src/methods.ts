@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-
 import { createVNode, isVNode, render } from 'vue'
 import { isElement, isFunction, isString } from '@onu-ui/utils'
 import { isClient } from '@vueuse/core'
@@ -24,7 +23,9 @@ import type {
 let key = 1
 
 const normalizeOption = (params?: MessageParams) => {
-  const options: MessageOptions = !params || isString(params) || isVNode(params) || isFunction(params) ? { content: params } : params
+  const options: MessageOptions = (!params || isString(params) || isVNode(params) || isFunction(params))
+    ? { content: params }
+    : params
 
   const normalizedOptions = {
     ...messageDefaults,
@@ -78,7 +79,9 @@ const createMessage = (
   const vnode = createVNode(
     MessageConstructor,
     props,
-    isFunction(props.content) || isVNode(props.content) ? { default: props.content } : null,
+    (isFunction(props.content) || isVNode(props.content))
+      ? { default: props.content }
+      : null,
   )
   vnode.appContext = context || message._context
 

@@ -9,7 +9,7 @@ import { useOffset } from './instance'
 const props = defineProps(messageProps)
 defineEmits(messageEmits)
 
-let stopTimer: () => void
+// let stopTimer: () => void
 // init muse be false to `enter-from` animation
 const visible = ref(false)
 const height = ref(0)
@@ -21,7 +21,7 @@ function startTimer() {
   const { stop } = useTimeoutFn(() => {
     close()
   }, props.duration)
-  stopTimer = stop
+  // stopTimer = stop
 }
 
 function close() {
