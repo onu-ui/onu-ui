@@ -1,6 +1,7 @@
 <script setup lang="ts">
 function handleToClickHeader(activeNames: (string | number)[]) {
-  // console.log(activeNames)
+  // eslint-disable-next-line no-console
+  console.log(activeNames)
 }
 const expandedNames = ref(['1'])
 </script>

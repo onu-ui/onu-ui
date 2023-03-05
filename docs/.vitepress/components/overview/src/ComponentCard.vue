@@ -3,7 +3,7 @@ import { withBase } from 'vitepress'
 import type { PropType } from 'vue'
 import type { Component } from './components'
 
-const props = defineProps({
+defineProps({
   component: Object as PropType<Component>,
 })
 </script>
