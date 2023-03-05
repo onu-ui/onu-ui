@@ -19,12 +19,12 @@ hero:
       link: /guide/quick-start
 
     - theme: alt
-      text: View Components
-      link: /guide/overview
+      text: Playground
+      link: https://onu.zyob.top/play/
 
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/onu-ui/onu-ui
+      text: View Components
+      link: /guide/overview
 
 features:
   - icon: 🌈 

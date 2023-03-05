@@ -98,6 +98,7 @@ const components = [
 const nav = [
   { text: 'Guide', items: guides },
   { text: 'Components', items: components },
+  { text: 'Playground', link: 'https://onu.zyob.top/play/' },
   {
     text: `v${version}`,
     items: [
