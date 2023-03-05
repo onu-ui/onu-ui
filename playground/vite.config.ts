@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
-import Unocss from 'unocss/vite'
+import UnoCSS from 'unocss/vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -28,7 +28,7 @@ export default defineConfig(() => {
         dirs: [path.resolve(pathSrc, 'components')],
         dts: path.resolve(pathSrc, 'components.d.ts'),
       }),
-      Unocss(),
+      UnoCSS(),
     ],
     build: {
       target: 'esnext',

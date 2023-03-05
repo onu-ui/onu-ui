@@ -4,7 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
-import Unocss from 'unocss/vite'
+import UnoCSS from 'unocss/vite'
 // import { OnuResolver } from 'onu-ui'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
@@ -15,7 +15,7 @@ export default defineConfig({
   plugins: [
     Vue(),
     Inspect(),
-    Unocss(),
+    UnoCSS(),
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/core'],
       // resolvers: [OnuResolver()],

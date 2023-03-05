@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import Unocss from 'unocss/vite'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   plugins: [
-    Unocss(),
+    UnoCSS(),
     AutoImport({
       imports: ['vue', '@vueuse/core'],
       vueTemplate: true,
