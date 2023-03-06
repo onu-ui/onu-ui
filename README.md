@@ -12,12 +12,12 @@
 
 ## Features
 
-- 🌈 Components Design - Onu provides neat & beautiful crafted UI components.
-- 🔥 Introduce on demand  - Provide resolver to automatically import only used components.
-- 🎉 TS Supported - Support TypeScript & type checked & type inference.
-- 💡 Cli Build - Easy to create repo with Onu Cli.
-- 🍬 CSS Preset - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ Theme Config - Use attribute mode like unocss to design. Support theme config to customize theme.
+- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
+- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
+- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
+- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
+- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
+- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
 
 ## Usage
 
@@ -112,6 +112,11 @@ Thanks to everyone who has already contributed to OnuUI!
 
 <a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contrib.rocks/image?repo=onu-ui/onu-ui" /></a>
 
+## Discussions
+
+Since `OnuUI` is under intensive development, we need your valuable comments and feature requirements of the component
+
+Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
 ## Credits
 
 - [UnoCSS](https://github.com/unocss/unocss)
