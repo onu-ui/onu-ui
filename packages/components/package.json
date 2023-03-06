@@ -1,7 +1,7 @@
 {
   "name": "@onu-ui/components",
   "type": "module",
-  "version": "1.0.13-beta.1",
+  "version": "1.0.13-beta.2",
   "description": "Onu-UI components for use on demand",
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "license": "MIT",
