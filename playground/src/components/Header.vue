@@ -119,7 +119,9 @@ async function copyLink() {
                 px="4"
                 h-30px
                 leading-loose
+                text-baseText
                 hover="bg-bluegray-100"
+                dark="hover:bg-dark-400"
                 @click="handleSetVersion(key, ver)"
               >
                 {{ ver }}
@@ -188,7 +190,7 @@ async function copyLink() {
 
 <style scoped>
 .version-content {
-  overflow-y: auto;
+  overflow-y: scroll;
   width: 200px;
 }
 .dark .header-nav {
