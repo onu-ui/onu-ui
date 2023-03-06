@@ -15,10 +15,9 @@ const leftArrow = computed(() => props.arrowPlacement === 'left')
 const rightArrow = computed(() => props.arrowPlacement === 'right')
 
 function handleHeaderClick() {
-  if (props.disabled)
-    return
-  collapse?.toggleItem(props.name)
+  !props.disabled && collapse?.toggleItem(props.name)
 }
+
 const on = {
   beforeEnter(el: RendererElement) {
     el.style.maxHeight = 0
@@ -48,6 +47,7 @@ const on = {
     el.style.maxHeight = ''
   },
 }
+
 defineExpose({
   isActive,
 })
@@ -55,51 +55,39 @@ defineExpose({
 
 <template>
   <div o-collapse-item-base>
-    <div
-      class="o-collapse-item-title"
-      :class="[
-        isActive && 'o-collapse-item-title-active',
-        props.disabled && 'o-disabled',
+    <div o-collapse-item-wrap :class="[props.disabled && 'o-collapse-item-wrap-active', props.disabled && 'o-disabled']">
+      <div class="o-collapse-item-title" :class="[
         rightArrow && 'o-collapse-item-title-arrow-right',
-      ]"
-      @click="handleHeaderClick"
-    >
-      <div o-collapse-item-title-left>
-        <div
-          v-if="leftArrow"
-          o-collapse-item-title-arrow-base
-          :class="[
+      ]" @click="handleHeaderClick">
+        <div o-collapse-item-title-left>
+          <div v-if="leftArrow" o-collapse-item-title-arrow-base :class="[
             isActive && 'rotate-90',
-          ]"
-        >
-          <div i-carbon-chevron-right />
-        </div>
-        <div v-if="props.icon">
-          <slot name="icon">
-            <OIcon :name="props.icon" />
+          ]">
+            <div i-carbon-chevron-right />
+          </div>
+          <div v-if="props.icon">
+            <slot name="icon">
+              <OIcon :name="props.icon" />
+            </slot>
+          </div>
+          <slot name="title">
+            {{ props.title }}
           </slot>
         </div>
-        <slot name="title">
-          {{ props.title }}
-        </slot>
-      </div>
-      <div
-        v-if="rightArrow"
-        o-collapse-item-title-arrow-base
-        :class="[
+        <div v-if="rightArrow" o-collapse-item-title-arrow-base :class="[
           isActive && 'rotate-90',
-        ]"
-      >
-        <div i-carbon-chevron-right />
-      </div>
-    </div>
-    <Transition v-on="on">
-      <div v-show="isActive" o-collapse-item-wrap>
-        <div o-collapse-item-content>
-          <slot />
+        ]">
+          <div i-carbon-chevron-right />
         </div>
       </div>
-    </Transition>
+      <Transition v-on="on">
+        <div v-show="isActive" o-collapse-item-content-wrap>
+          <div o-collapse-item-content>
+            <slot />
+          </div>
+        </div>
+      </Transition>
+    </div>
   </div>
 </template>
 
