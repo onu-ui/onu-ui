@@ -67,7 +67,7 @@ defineExpose({
               isActive && 'rotate-90',
             ]"
           >
-            <div i-carbon-chevron-right />
+            <div i-carbon-chevron-right text-base />
           </div>
           <div v-if="props.icon">
             <slot name="icon">
@@ -83,7 +83,7 @@ defineExpose({
             isActive && 'rotate-90',
           ]"
         >
-          <div i-carbon-chevron-right />
+          <div i-carbon-chevron-right text-base />
         </div>
       </div>
       <Transition v-on="on">
