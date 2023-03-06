@@ -15,6 +15,7 @@ const guides = [
 const components = [
   {
     text: 'Basic',
+    collapsed: false,
     items: [
       {
         text: 'Button',
@@ -32,6 +33,7 @@ const components = [
   },
   {
     text: 'Form',
+    collapsed: false,
     items: [
       {
         text: 'Checkbox',
@@ -49,6 +51,7 @@ const components = [
   },
   {
     text: 'Data',
+    collapsed: false,
     items: [
       {
         text: 'Avatar',
@@ -70,10 +73,12 @@ const components = [
   },
   {
     text: 'Navigation',
+    collapsed: false,
     items: [],
   },
   {
     text: 'Feedback',
+    collapsed: false,
     items: [
       {
         text: 'Alert',
