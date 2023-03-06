@@ -6,7 +6,7 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 <p align="center">
-<a href="https://onu.zyob.top/">🧑‍💻 Document <sup>Beta</sup></a> |
+<a href="https://onu.zyob.top/">🧑‍💻 Document</a> |
 <a href="https://onu.zyob.top/play/">🤹‍♂️ Playground <sup>Beta</sup></a>
 </p>
 
@@ -86,6 +86,23 @@ export default defineConfig({
   ],
 })
 ```
+
+## Online Playground
+
+You can try OnuUI out with the components built-in playground.
+### Try it with our built-in playground
+
+[Playground](https://onu.zyob.top/play/)
+
+### Try it with stackblitz or codesandbox
+
+<a target="_blank" href="https://codesandbox.io/p/github/yzh990918/onu-starter/main">
+<img src="https://img.shields.io/badge/Try%20On-CodeSandbox-hsl(265%2C97%25%2C66%25)?style=for-the-badge&logo=codesandbox" height="35" />
+</a><br/>
+
+<a target="_blank"  href="https://stackblitz.com/edit/onu-starter">
+<img src="https://img.shields.io/badge/Try%20on%20Stackblitz-1877F2?style=for-the-badge&logo=stackblitz&logoColor=white" height="35" />
+</a>
 
 ## Contributing
 
