@@ -128,6 +128,7 @@ const sidebar = {
 export default defineConfig({
   title: 'Onu UI',
   description: 'Popular, beautiful and fast UnoCSS component library',
+  lastUpdated: true,
   head: [
     ['meta', { property: 'og:title', content: 'Onu UI' }],
     [
