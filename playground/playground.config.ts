@@ -50,4 +50,19 @@ export default {
     skypack: 'https://cdn.skypack.dev/',
     jsdelivr: 'https://cdn.jsdelivr.net/npm/',
   },
+  devDeps: {
+    // 开发模式下，仅用于在 onu-ui 中开发组件调试
+    'onu-ui': {
+      path: 'http://localhost:5173/play/src/onu-dev-proxy',
+    },
+    'vue': {
+      path: 'http://localhost:5173/play/src/vue-dev-proxy',
+    },
+    '@vue/compiler-sfc': {
+      path: 'http://localhost:5173/play/src/vue-sfc-dev-proxy',
+    },
+    '@vue/shared': {
+      path: 'http://localhost:5173/play/src/vue-shared-dev-proxy',
+    },
+  },
 }

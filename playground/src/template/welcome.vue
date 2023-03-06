@@ -38,7 +38,7 @@ const toggleTheme = () => {
       />
       <o-icon v-show="!isDark" h-5 w-5 cursor-pointer mx-4 name="i-carbon-sun" />
     </div>
-  <div fscw space-x-4>
+    <div fscw space-x-4>
       <o-badge :value="100">
         <o-button type="primary">
           <template #icon>
@@ -51,7 +51,7 @@ const toggleTheme = () => {
         Show Message
       </o-button>
     </div>
-   <!--   <div fscw space-x-2>
+    <div fscw space-x-2>
       <o-checkbox o="white" label="Vue" size="lg" icon="i-logos-vue" />
       <o-checkbox v-model="checkVal" label="basic use" o-primary />
     </div>
@@ -91,7 +91,7 @@ const toggleTheme = () => {
       <o-tag type="primary" bg-color="#1abc9c">
         Custom-Bg
       </o-tag>
-    </div>-->
+    </div>
 
     <p>Vue {{ vueVersion }}</p>
     <p>onuUI {{ onuUI.version }}</p>

@@ -88,8 +88,7 @@ export const useStore = (initial: Initial) => {
   })
 
   // 合并构建依赖与用户写入 import_map.json 的依赖
-  const importMap = computed<ImportMap>(() =>{
-    builtImportMap.value.imports['onu-ui'] = 'http://localhost:5173/play/src/onu-dev-proxy'
+  const importMap = computed<ImportMap>(() => {
     return mergeImportMap(builtImportMap.value, userImportMap.value)
   })
   // 监听 importMap, 生成file并修改state（state用于vue-repl）
