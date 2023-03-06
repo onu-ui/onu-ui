@@ -6,7 +6,7 @@ const guides = [
   { text: 'Quick Start', link: '/guide/quick-start' },
   { text: 'Installation', link: '/guide/install' },
   { text: 'Overview', link: '/guide/overview' },
-  { text: 'i18n', link: '/guide/i18n' },
+  { text: 'I18n', link: '/guide/i18n' },
   { text: 'Theming', link: '/guide/theme' },
   { text: 'Dark Mode', link: '/guide/dark' },
   { text: 'Changelog', link: '/guide/changelog' },
@@ -110,6 +110,14 @@ const nav = [
       {
         text: 'Release Notes',
         link: 'https://github.com/onu-ui/onu-ui/releases',
+      },
+      {
+        text: 'Contributing',
+        link: 'https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md',
+      },
+      {
+        text: 'Code of Conduct',
+        link: 'https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md',
       },
     ],
   },
