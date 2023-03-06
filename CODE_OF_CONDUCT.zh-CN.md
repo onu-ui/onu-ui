@@ -1,3 +1,5 @@
+> [English](./CODE_OF_CONDUCT.md) | 简体中文
+
 # 贡献者公约行为准则
 
 ## 承诺
