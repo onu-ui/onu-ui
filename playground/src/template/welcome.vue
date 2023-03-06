@@ -1,30 +1,59 @@
 <script setup lang="ts">
 import { ref, version as vueVersion } from 'vue'
-import onuUI from 'onu-ui'
+import onuUI, { OMessage as message } from 'onu-ui'
+
 const msg = ref('Hello Onu UI!')
 const checkVal = ref(true)
 const mv = ref(true)
 const avatarSrcs = 'https://github.com/zyyv.png'
+const open = () => {
+  message({
+    content: 'Hello OnuUI!',
+    closable: true,
+  })
+}
+
+const className = 'dark'
+const isDark = ref(false)
+
+const toggleTheme = () => {
+  if (typeof window !== 'undefined') {
+    const rootCls = document.documentElement.classList
+    isDark.value = !isDark.value
+    if (isDark.value)
+      rootCls.add(className)
+    else
+      rootCls.remove(className)
+  }
+}
 </script>
 
 <template>
-  <div class="container">
+  <div p-5 space-y-3>
     <h1>{{ msg }}</h1>
-    <div fscw gap-2>
-      <OBadge :value="100">
-        <o-button o="primary">
-          <o-icon h-5 w-5 o="gray" name="i-carbon-moon" />
+    <div inline-flex @click="toggleTheme()">
+      Toogle Theme:
+      <o-icon
+        v-show="isDark" h-5 cursor-pointer w-5 mx-4 name="i-carbon-moon"
+      />
+      <o-icon v-show="!isDark" h-5 w-5 cursor-pointer mx-4 name="i-carbon-sun" />
+    </div>
+    <div fscw space-x-4>
+      <o-badge :value="100">
+        <o-button type="primary">
+          <template #icon>
+            <div i-carbon-share text-sm />
+          </template>
           Primary
         </o-button>
-      </OBadge>
+      </o-badge>
+      <o-button type="success" @click="open">
+        Show Message
+      </o-button>
     </div>
-    <div fscw gap-2>
+    <div fscw space-x-2>
       <o-checkbox o="white" label="Vue" size="lg" icon="i-logos-vue" />
-      <o-checkbox
-        v-model="checkVal"
-        label="basic use"
-        o-primary
-      />
+      <o-checkbox v-model="checkVal" label="basic use" o-primary />
     </div>
 
     <div fscw gap-2>
@@ -41,26 +70,26 @@ const avatarSrcs = 'https://github.com/zyyv.png'
     </div>
 
     <div fscw gap-2>
-      <o-tag o="primary">
-        mary
+      <o-tag type="primary">
+        Primary
       </o-tag>
-      <o-tag o="secondary">
-        secondary
+      <o-tag type="secondary">
+        Secondary
       </o-tag>
-      <o-tag o="success">
-        success
+      <o-tag type="success">
+        Success
       </o-tag>
-      <o-tag o="warning">
-        warning
+      <o-tag type="warning">
+        Warning
       </o-tag>
-      <o-tag o="error">
-        error
+      <o-tag type="error">
+        Error
       </o-tag>
-      <o-tag o="info">
-        info
+      <o-tag type="info">
+        Info
       </o-tag>
-      <o-tag o="primary" bg-color="#1abc9c">
-        custom-bg
+      <o-tag type="primary" bg-color="#1abc9c">
+        Custom-Bg
       </o-tag>
     </div>
 
@@ -70,7 +99,8 @@ const avatarSrcs = 'https://github.com/zyyv.png'
 </template>
 
 <style>
-.container {
-  padding: 20px;
+body {
+  color: var(--onu-colors-text);
+  background-color: var(--onu-colors-background);
 }
 </style>

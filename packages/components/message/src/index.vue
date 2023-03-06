@@ -77,10 +77,10 @@ const iconTypeMap = {
           :class="type === 'info' ? '!text-info !dark:text-secondary' : `o-${type}`"
         />
         <slot>
-          <p v-if="!parseHtml">
+          <p v-if="!parseHtml" m-0>
             {{ content }}
           </p>
-          <p v-else v-html="content" />
+          <p v-else m-0 v-html="content" />
         </slot>
       </div>
 

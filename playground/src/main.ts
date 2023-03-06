@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import '@vue/repl/dist/style.css'
-import 'uno.css'
 import 'onu-ui/dist/style.css'
 import '@unocss/reset/tailwind.css'
+import 'uno.css'
 import onuUI from 'onu-ui'
 import App from './App.vue'
 

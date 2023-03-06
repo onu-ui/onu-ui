@@ -61,7 +61,7 @@ async function handleSetVersion(key: VersionKey, v: any) {
 // 分享连接
 async function copyLink() {
   const loc = document.location
-  const link = `${loc.origin}?${playConfig.compLibShort}=${
+  const link = `${`${loc.origin}/play`}?${playConfig.compLibShort}=${
     store.versions[playConfig.compLibShort]
   }&vue=${store.versions.vue}${loc.hash}`
   await navigator.clipboard.writeText(link)
