@@ -5,6 +5,7 @@
   "packageManager": "pnpm@7.28.0",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "nr volar:helper && nr stub",
     "docs": "npm -C docs run dev",
     "docs:build": "npm -C docs run build",
