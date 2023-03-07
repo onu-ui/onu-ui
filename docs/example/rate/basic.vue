@@ -1,4 +1,6 @@
-<script lang="ts" name="ORateBasic" setup>
+<script lang="ts" setup>
+import { ref } from 'vue'
+
 const val = ref(2)
 const valMax = ref(6)
 </script>

@@ -1,4 +1,5 @@
-<script lang="ts" name="ORateHalfStar" setup>
+<script lang="ts" setup>
+import { ref } from 'vue'
 const val = ref(2.5)
 </script>
 
