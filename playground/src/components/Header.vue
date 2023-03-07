@@ -58,10 +58,12 @@ async function handleSetVersion(key: VersionKey, v: any) {
   versions[key].active = v
 }
 
+const domain = `${document.location.origin}/play/`
+
 // 分享连接
 async function copyLink() {
   const loc = document.location
-  const link = `${`${loc.origin}/play`}?${playConfig.compLibShort}=${
+  const link = `${`${domain}`}?${playConfig.compLibShort}=${
     store.versions[playConfig.compLibShort]
   }&vue=${store.versions.vue}${loc.hash}`
   await navigator.clipboard.writeText(link)
@@ -75,7 +77,7 @@ async function copyLink() {
 
 <template>
   <nav class="header-nav" border-b-cyan-500 border-b shadow>
-    <div flex items-center m-2>
+    <a flex items-center m-2 cursor-pointer :href="domain">
       <img
         w-8
         h-8
@@ -88,11 +90,11 @@ async function copyLink() {
       <div ml-12px dark-text-gray-300>
         Playground
       </div>
-    </div>
+    </a>
 
     <div flex items-center m-2>
       <div v-for="(v, key) of versions" :key="key" flex items-center>
-        <span dark-text-gray-300 font-bold>{{ v.text }} Version:</span>
+        <span dark-text-gray-300 font-bold text-base>{{ v.text }} Version:</span>
         <o-popup
           position="bottom"
           :content-style="{ paddingLeft: 0, paddingRight: 0 }"
@@ -107,7 +109,7 @@ async function copyLink() {
             flex
             items-center
           >
-            <span>{{ v.active }}</span>
+            <span text-base>{{ v.active }}</span>
             <o-icon name="i-carbon-chevron-down" ml-2 />
           </div>
           <template #content>
