@@ -1,6 +1,7 @@
 import { compare } from 'compare-versions'
 import type { MaybeRef } from '@vueuse/core'
 import type { Ref, ShallowRef } from 'vue'
+import { unref } from 'vue'
 import playConfig from '../../playground.config'
 import { genVueLink } from '~/utils/dependency'
 import type { VersionKey, Versions } from '~/composables/store'
