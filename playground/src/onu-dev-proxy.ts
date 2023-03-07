@@ -1,6 +1,6 @@
 // 指向组件库导出
-import onuUI from '../../packages/onu-ui/src'
+import onuUI from 'onu-ui'
 // 指向组件库样式
-import '../../packages/onu-ui/src/style.css'
-export * from '../../packages/onu-ui/src'
+import 'onu-ui/src/style.css'
+export * from 'onu-ui'
 export default onuUI
