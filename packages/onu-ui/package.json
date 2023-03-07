@@ -1,7 +1,7 @@
 {
   "name": "onu-ui",
   "type": "module",
-  "version": "1.0.13-beta.10",
+  "version": "1.0.13-alpha",
   "description": "Onu-UI for web glassmorphism components generate by UnoCSS.",
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "license": "MIT",
