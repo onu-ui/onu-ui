@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 const mv = ref(true)
 const toggleDisabled = ref(true)
 </script>
@@ -6,7 +7,7 @@ const toggleDisabled = ref(true)
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <span text-primary>Toggle those disabled:</span> <o-switch v-model="toggleDisabled" o="error" />
+      <span text-primary dark-text-light-400>Toggle those disabled:</span> <o-switch v-model="toggleDisabled" o="error" />
     </div>
     <div fscw gap-2>
       <o-switch v-model="mv" :disabled="toggleDisabled" o="primary" />

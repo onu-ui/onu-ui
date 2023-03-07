@@ -6,7 +6,7 @@ const guides = [
   { text: 'Quick Start', link: '/guide/quick-start' },
   { text: 'Installation', link: '/guide/install' },
   { text: 'Overview', link: '/guide/overview' },
-  { text: 'i18n', link: '/guide/i18n' },
+  { text: 'I18n', link: '/guide/i18n' },
   { text: 'Theming', link: '/guide/theme' },
   { text: 'Dark Mode', link: '/guide/dark' },
   { text: 'Changelog', link: '/guide/changelog' },
@@ -15,6 +15,7 @@ const guides = [
 const components = [
   {
     text: 'Basic',
+    collapsed: false,
     items: [
       {
         text: 'Button',
@@ -32,6 +33,7 @@ const components = [
   },
   {
     text: 'Form',
+    collapsed: false,
     items: [
       {
         text: 'Checkbox',
@@ -49,6 +51,7 @@ const components = [
   },
   {
     text: 'Data',
+    collapsed: false,
     items: [
       {
         text: 'Avatar',
@@ -70,10 +73,12 @@ const components = [
   },
   {
     text: 'Navigation',
+    collapsed: false,
     items: [],
   },
   {
     text: 'Feedback',
+    collapsed: false,
     items: [
       {
         text: 'Alert',
@@ -106,6 +111,14 @@ const nav = [
         text: 'Release Notes',
         link: 'https://github.com/onu-ui/onu-ui/releases',
       },
+      {
+        text: 'Contributing',
+        link: 'https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md',
+      },
+      {
+        text: 'Code of Conduct',
+        link: 'https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md',
+      },
     ],
   },
 ]
@@ -123,6 +136,7 @@ const sidebar = {
 export default defineConfig({
   title: 'Onu UI',
   description: 'Popular, beautiful and fast UnoCSS component library',
+  lastUpdated: true,
   head: [
     ['meta', { property: 'og:title', content: 'Onu UI' }],
     [

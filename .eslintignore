@@ -3,3 +3,4 @@ public
 playground/src/*.d.ts
 example/src/*.d.ts
 es
+node_modules

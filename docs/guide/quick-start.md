@@ -33,12 +33,12 @@ To know how to install it, please see [Installation](./install.md).
 
 ## Features
 
-- 🌈 Components Design - Onu provides neat & beautiful crafted UI components.
-- 🔥 Introduce on demand  - Provide resolver to automatically import only used components.
-- 🎉 TS Supported - Support TypeScript & type checked & type inference.
-- 💡 Cli Build - Easy to create repo with Onu Cli.
-- 🍬 CSS Preset - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ Theme Config - Use attribute mode like unocss to design. Support theme config to customize theme.
+- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
+- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
+- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
+- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
+- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
+- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
 
 ## Environment
 

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 const checkVal = ref(true)
 </script>
 

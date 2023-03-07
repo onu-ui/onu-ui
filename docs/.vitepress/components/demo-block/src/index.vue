@@ -1,4 +1,7 @@
 <script lang='ts' setup name="demo-block">
+import { computed } from 'vue'
+import { isClient, useClipboard, useToggle } from '@vueuse/core'
+import { usePlayground } from './playground'
 import { demoProps } from './index'
 
 const props = defineProps(demoProps)
@@ -8,6 +11,15 @@ const decodedHighlightedCode = computed(() =>
 )
 const { copy, copied } = useClipboard({ source: decodeURIComponent(props.code) })
 const [value, toggle] = useToggle()
+
+const editOnPlayground = () => {
+  if (props.code) {
+    const { link } = usePlayground(decodeURIComponent(props.code))
+    if (!isClient)
+      return
+    window.open(link)
+  }
+}
 </script>
 
 <template>
@@ -18,10 +30,10 @@ const [value, toggle] = useToggle()
       </div>
       <div class="relative">
         <div class="o-demo_actions">
-          <a class="o-demo_action_item" group :href="codeSandBox" target="_blank">
+          <a class="o-demo_action_item" group @click="editOnPlayground">
             <div class="o-demo_action_icon i-carbon:chemistry" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
-              Open on Playground(WIP)
+              Edit in Playground
             </div>
           </a>
           <a class="o-demo_action_item" group :href="github" target="_blank">
@@ -48,11 +60,3 @@ const [value, toggle] = useToggle()
     </div>
   </ClientOnly>
 </template>
-
-<!-- <style scoped>
-.bg {
-      /* background-color: #1c1f24; */
-      background: conic-gradient(from 192deg at 46.5% 42.58%, #FA8792 -54.94deg, #561BBE 28.29deg,
-          #70E6FB 157.82deg, #FBF8B3 220.83deg, #FA8792 305.06deg, #561BBE 388.29deg);
-    }
-</style> -->

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "module": "ESNext",
     "types": [
       "../../../volar",
       "../../auto-imports"

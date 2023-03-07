@@ -56,14 +56,18 @@ defineExpose({
 <template>
   <div o-collapse-item-base>
     <div o-collapse-item-wrap :class="[props.disabled && 'o-collapse-item-wrap-active', props.disabled && 'o-disabled']">
-      <div class="o-collapse-item-title" :class="[
-        rightArrow && 'o-collapse-item-title-arrow-right',
-      ]" @click="handleHeaderClick">
+      <div
+        class="o-collapse-item-title" :class="[
+          rightArrow && 'o-collapse-item-title-arrow-right',
+        ]" @click="handleHeaderClick"
+      >
         <div o-collapse-item-title-left>
-          <div v-if="leftArrow" o-collapse-item-title-arrow-base :class="[
-            isActive && 'rotate-90',
-          ]">
-            <div i-carbon-chevron-right />
+          <div
+            v-if="leftArrow" o-collapse-item-title-arrow-base :class="[
+              isActive && 'rotate-90',
+            ]"
+          >
+            <div i-carbon-chevron-right text-base />
           </div>
           <div v-if="props.icon">
             <slot name="icon">
@@ -74,10 +78,12 @@ defineExpose({
             {{ props.title }}
           </slot>
         </div>
-        <div v-if="rightArrow" o-collapse-item-title-arrow-base :class="[
-          isActive && 'rotate-90',
-        ]">
-          <div i-carbon-chevron-right />
+        <div
+          v-if="rightArrow" o-collapse-item-title-arrow-base :class="[
+            isActive && 'rotate-90',
+          ]"
+        >
+          <div i-carbon-chevron-right text-base />
         </div>
       </div>
       <Transition v-on="on">

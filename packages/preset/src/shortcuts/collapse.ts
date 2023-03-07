@@ -1,6 +1,6 @@
 export const collapseShortcuts = {
-  'o-collapse-base': 'p2',
-  'o-collapse-item-wrap': 'border-b-(1px solid #ebeef5)',
+  'o-collapse-base': 'p2 c-baseText',
+  'o-collapse-item-wrap': 'border-b-(1px solid lightBorder)',
   'o-collapse-item-wrap-active': 'border-b-transparent',
   'o-collapse-item-title': 'fi py-3 transition-all duration-300 cursor-pointer',
   'o-collapse-item-title-arrow-right': 'justify-between',

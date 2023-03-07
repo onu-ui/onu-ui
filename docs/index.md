@@ -36,9 +36,9 @@ features:
   - icon: 🎉
     title: TS Supported
     details: Support TypeScript & type checked & type inference.
-  - icon: 💡
-    title: Cli Build
-    details: Easy to create repo with Onu Cli.
+  - icon: 💎
+    title: Iconify Icons
+    details:  Use any icon from the library you love.
   - icon: 🍬
     title: CSS Preset
     details: Has UnoCSS preset package to use, rendered UI easily.

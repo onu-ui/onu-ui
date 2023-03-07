@@ -1,22 +1,22 @@
 <template>
   <div fscw gap-6>
-    <OBadge o="primary" :value="100">
-      <OButton type="primary" light>
+    <o-badge o="primary" :value="100">
+      <o-button type="primary" light>
         Primary
-      </OButton>
-    </OBadge>
-    <OBadge :value="9">
+      </o-button>
+    </o-badge>
+    <o-badge :value="9">
       <o-avatar class="o-gray dark-o-#3a3a3c" rounded />
-    </OBadge>
-    <OBadge o="warning" value="happy">
-      <OButton type="error" light>
+    </o-badge>
+    <o-badge o="warning" value="happy">
+      <o-button type="error" light>
         Custom Color
-      </OButton>
-    </OBadge>
-    <OBadge o="info" dot :value="100">
-      <OButton type="info" light>
+      </o-button>
+    </o-badge>
+    <o-badge o="info" dot :value="100">
+      <o-button type="info" light>
         Only Dot
-      </OButton>
-    </OBadge>
+      </o-button>
+    </o-badge>
   </div>
 </template>

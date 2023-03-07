@@ -6,18 +6,18 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 <p align="center">
-<a href="https://onu.zyob.top/">🧑‍💻 Document <sup>Beta</sup></a> |
+<a href="https://onu.zyob.top/">🧑‍💻 Document</a> |
 <a href="https://onu.zyob.top/play/">🤹‍♂️ Playground <sup>Beta</sup></a>
 </p>
 
 ## Features
 
-- 🌈 Components Design - Onu provides neat & beautiful crafted UI components.
-- 🔥 Introduce on demand  - Provide resolver to automatically import only used components.
-- 🎉 TS Supported - Support TypeScript & type checked & type inference.
-- 💡 Cli Build - Easy to create repo with Onu Cli.
-- 🍬 CSS Preset - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ Theme Config - Use attribute mode like unocss to design. Support theme config to customize theme.
+- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
+- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
+- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
+- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
+- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
+- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
 
 ## Usage
 
@@ -87,6 +87,23 @@ export default defineConfig({
 })
 ```
 
+## Online Playground
+
+You can try OnuUI out with the components built-in playground.
+### Try it with our built-in playground
+
+[Playground](https://onu.zyob.top/play/)
+
+### Try it with stackblitz or codesandbox
+
+<a target="_blank" href="https://codesandbox.io/p/github/yzh990918/onu-starter/main">
+<img src="https://img.shields.io/badge/Try%20On-CodeSandbox-hsl(265%2C97%25%2C66%25)?style=for-the-badge&logo=codesandbox" height="35" />
+</a><br/>
+
+<a target="_blank"  href="https://stackblitz.com/edit/onu-starter">
+<img src="https://img.shields.io/badge/Try%20on%20Stackblitz-1877F2?style=for-the-badge&logo=stackblitz&logoColor=white" height="35" />
+</a>
+
 ## Contributing
 
 Developers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contributing Guide](./CONTRIBUTING.md).
@@ -95,6 +112,11 @@ Thanks to everyone who has already contributed to OnuUI!
 
 <a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contrib.rocks/image?repo=onu-ui/onu-ui" /></a>
 
+## Discussions
+
+Since `OnuUI` is under intensive development, we need your valuable comments and feature requirements of the component
+
+Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
 ## Credits
 
 - [UnoCSS](https://github.com/unocss/unocss)

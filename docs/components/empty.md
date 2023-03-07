@@ -31,7 +31,7 @@ Use the default `slot` to insert content at the bottom.
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | description | `string` | `No data` | Empty description. |
-| image | `string` | `undefined` | Empty image URL. |
+| image | `number` | `undefined` | Empty image URL. |
 | image-size | `string` | `undefined` | Customized Empty image width. |
 
 ## Empty Slots

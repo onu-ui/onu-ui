@@ -71,6 +71,8 @@ This repository is managed by `pnpm` and includes the following packages：
 4. `@onu-ui/preset`: UI component preset
 5. `@onu-ui/utils`: UI component utility
 6. `@onu-ui/cli`: UI component CLI
+7. `example`: Example of debugging a UI component
+8. `playground`: UI component playground
 
 ## License
 

@@ -23,4 +23,7 @@ export default defineConfig({
     presetOnu(),
   ],
   transformers: [transformerVariantGroup(), transformerDirectives()],
+  shortcuts: [{
+    fscw: 'flex justify-start items-center flex-wrap w-full',
+  }],
 })

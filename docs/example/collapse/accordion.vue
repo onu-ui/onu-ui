@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <o-card title="Collapse">
     <div space-y-2>
