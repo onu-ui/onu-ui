@@ -11,11 +11,16 @@ export const genCDNLink = (
   path = '',
   cdnUrl: string,
 ) => {
-  version = version ? `@${version}` : ''
-  if (IS_DEV && pkg === '@vue/runtime-dom')
-    pkg = 'vue'
+  if (IS_DEV && (version === `@${__COMMIT__}` || /vue/.test(pkg))) {
+    if (pkg === '@vue/runtime-dom')
+      pkg = 'vue'
 
-  return IS_DEV ? playConfig.devDeps[pkg].path : `${cdnUrl}${pkg}${version}${path}`
+    return playConfig.devDeps[pkg].path
+  }
+  else {
+    version = version ? `@${version}` : ''
+  }
+  return `${cdnUrl}${pkg}${version}${path}`
 }
 
 // 生成 vue 依赖配置

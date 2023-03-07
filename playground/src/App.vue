@@ -7,6 +7,7 @@ import Header from '~/components/Header.vue'
 import { type UserOptions, type Versions, useStore } from '~/composables/store'
 import { generate } from '~/utils/uno/uno'
 import { handleKeydown } from '~/utils/format'
+import { IS_DEV } from '~/constants'
 
 const loading = ref(true)
 // sfc 配置，他将在在 vue-repl 中用于 compiler-sfc
@@ -19,7 +20,7 @@ const initialUserOptions: UserOptions = {}
 const params = new URLSearchParams(location.search)
 // 初始版本对象，包括 vue、组件库
 const initialVersions: Versions = {
-  [playConfig.compLibShort]: params.get(playConfig.compLibShort) || 'latest',
+  [playConfig.compLibShort]: (IS_DEV ? `@${__COMMIT__}` : params.get(playConfig.compLibShort)) || 'latest',
   vue: params.get('vue') || 'latest',
 }
 

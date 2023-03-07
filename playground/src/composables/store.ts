@@ -22,7 +22,7 @@ export interface Initial {
   versions?: Versions
   userOptions?: UserOptions
 }
-export type VersionKey = 'vue' | typeof playConfig.compLibShort
+export type VersionKey = 'vue' | typeof playConfig.compLibShort | string
 export type Versions = Record<VersionKey, string>
 export interface UserOptions {
   styleSource?: string
@@ -35,7 +35,7 @@ export type SerializeState = Record<string, string> & {
 export const useStore = (initial: Initial) => {
   // 版本
   const versions = reactive(
-    initial.versions || { vue: 'latest', [playConfig.compLibShort]: 'latest' },
+    initial.versions || { vue: 'latest', [playConfig.compLibShort]: IS_DEV ? `@${__COMMIT__}` : 'latest' },
   )
   // 编译器
   const compiler = shallowRef<typeof import('vue/compiler-sfc')>()
