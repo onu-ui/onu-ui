@@ -1,4 +1,5 @@
 import { computed, ref, shallowRef } from 'vue'
+import type * as defaultCompiler from 'vue/compiler-sfc'
 import { File, type Store, type StoreState, compileFile } from '@vue/repl'
 import playConfig from '../../playground.config'
 import mainCode from '../template/main.vue?raw'
@@ -38,7 +39,7 @@ export const useStore = (initial: Initial) => {
     initial.versions || { vue: 'latest', [playConfig.compLibShort]: IS_DEV ? `@${__COMMIT__}` : 'latest' },
   )
   // 编译器
-  const compiler = shallowRef<typeof import('vue/compiler-sfc')>()
+  const compiler = shallowRef<typeof defaultCompiler>()
   // 用户配置
   const userOptions = ref<UserOptions>(initial.userOptions || {})
   // 是否隐藏
