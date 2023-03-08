@@ -115,8 +115,8 @@ async function copyLink() {
           <template #content>
             <div h-50 class="version-content">
               <p
-                v-for="(ver, index) of v.published"
-                :key="index"
+                v-for="ver of v.published"
+                :key="ver"
                 cursor-pointer
                 px="4"
                 h-30px

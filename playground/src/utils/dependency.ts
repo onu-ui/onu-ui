@@ -2,7 +2,6 @@ import playConfig from '../../playground.config'
 import type { Dependency } from '../../playground.config'
 import type { Versions } from '~/composables/store'
 import type { ImportMap } from '~/utils/import-map'
-import { IS_DEV } from '~/constants'
 
 // 生成 cdn url
 export const genCDNLink = (
@@ -11,15 +10,7 @@ export const genCDNLink = (
   path = '',
   cdnUrl: string,
 ) => {
-  if (IS_DEV && (version === `@${__COMMIT__}` || /vue/.test(pkg))) {
-    if (pkg === '@vue/runtime-dom')
-      pkg = 'vue'
-
-    return playConfig.devDeps[pkg].path
-  }
-  else {
-    version = version ? `@${version}` : ''
-  }
+  version = version ? `@${version}` : ''
   return `${cdnUrl}${pkg}${version}${path}`
 }
 

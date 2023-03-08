@@ -4,11 +4,9 @@ import { Repl } from '@vue/repl'
 import type { OMessageProps } from 'onu-ui'
 import playConfig from '../playground.config'
 import Header from '~/components/Header.vue'
-import { useStore } from '~/composables/store'
-import type { ReplStore, UserOptions, Versions } from '~/composables/store'
+import { type UserOptions, type Versions, useStore } from '~/composables/store'
 import { generate } from '~/utils/uno/uno'
 import { handleKeydown } from '~/utils/format'
-import { IS_DEV } from '~/constants'
 
 const loading = ref(true)
 // sfc 配置，他将在在 vue-repl 中用于 compiler-sfc
@@ -21,7 +19,7 @@ const initialUserOptions: UserOptions = {}
 const params = new URLSearchParams(location.search)
 // 初始版本对象，包括 vue、组件库
 const initialVersions: Versions = {
-  [playConfig.compLibShort]: (IS_DEV ? `@${__COMMIT__}` : params.get(playConfig.compLibShort)) || 'latest',
+  [playConfig.compLibShort]: params.get(playConfig.compLibShort) || 'latest',
   vue: params.get('vue') || 'latest',
 }
 
@@ -31,7 +29,7 @@ const store = useStore({
   serializedState: location.hash.slice(1), // 序列化 url 中的参数
   userOptions: initialUserOptions,
   versions: initialVersions, // 版本对象
-}) as ReplStore
+})
 
 // 初始化，设置版本、编译文件后修改 state 传给 vue-repl
 store.init().then(() => {
@@ -67,11 +65,10 @@ window.addEventListener(
 <template>
   <div class="comp-lib-play">
     <Header :store="store" />
-    <!-- store as any because store.compiler is shallowRef -->
     <Repl
       v-if="!loading"
       ref="repl"
-      :store="store as any"
+      :store="store"
       auto-resize
       :sfc-options="sfcOptions"
       :clear-console="false"

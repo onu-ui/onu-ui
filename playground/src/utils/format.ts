@@ -2,9 +2,10 @@ import { OMessage as message } from 'onu-ui'
 import type { OMessageProps } from 'onu-ui'
 import type { Fn } from '@vueuse/core'
 import type { BuiltInParserName } from 'prettier'
-import type { ReplStore } from '~/composables/store'
 
-export const formatCode = async (loadedFormat: boolean, store: ReplStore) => {
+import type { Store } from '@vue/repl'
+
+export const formatCode = async (loadedFormat: boolean, store: Store) => {
   let close: Fn | undefined
   if (!loadedFormat) {
     message({
@@ -48,7 +49,7 @@ export const formatCode = async (loadedFormat: boolean, store: ReplStore) => {
 
 // 格式化交互
 const loadedFormat = false
-export const handleKeydown = (evt: KeyboardEvent, store: ReplStore) => {
+export const handleKeydown = (evt: KeyboardEvent, store: Store) => {
   if ((evt.ctrlKey || evt.metaKey) && evt.code === 'KeyS') {
     evt.preventDefault()
     return

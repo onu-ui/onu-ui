@@ -10,8 +10,6 @@ declare module 'vue' {
     OCheckbox: typeof import('onu-ui')['OCheckbox']
     OCollapse: typeof import('onu-ui')['OCollapse']
     OCollapseItem: typeof import('onu-ui')['OCollapseItem']
-    OConfigProvider: typeof import('onu-ui')['OConfigProvider']
-    OEmpty: typeof import('onu-ui')['OEmpty']
     OIcon: typeof import('onu-ui')['OIcon']
     OMessage: typeof import('onu-ui')['OMessage']
     OPopup: typeof import('onu-ui')['OPopup']
@@ -19,6 +17,8 @@ declare module 'vue' {
     OSwitch: typeof import('onu-ui')['OSwitch']
     OTag: typeof import('onu-ui')['OTag']
     OTrigger: typeof import('onu-ui')['OTrigger']
+    OConfigProvider: typeof import('onu-ui')['OConfigProvider']
+    OEmpty: typeof import('onu-ui')['OEmpty']
   }
 }
 export {}
