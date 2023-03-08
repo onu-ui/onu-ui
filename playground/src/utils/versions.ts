@@ -5,7 +5,7 @@ import { unref } from 'vue'
 import playConfig from '../../playground.config'
 import { genVueLink } from '~/utils/dependency'
 import type { VersionKey, Versions } from '~/composables/store'
-
+import { IS_DEV } from '~/constants'
 // 发送请求到 npm 查询 vue、组件库版本
 export const getVersions = (pkg: MaybeRef<string>) => {
   const url = computed(() => `${playConfig.versionUrl}${unref(pkg)}`)
@@ -23,8 +23,10 @@ export const getSupportVersions = (pkg: string, minVersion: string) => {
     const canUserVersions = versions.value.filter(version =>
       compare(version, minVersion, '>='),
     )
-    if (canUserVersions.length > 0)
+    if (canUserVersions.length > 0) {
       canUserVersions.unshift('latest')
+      IS_DEV && canUserVersions.unshift(`@${__COMMIT__}`)
+    }
 
     return canUserVersions
   })
