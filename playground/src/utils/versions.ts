@@ -19,13 +19,14 @@ export const getVersions = (pkg: MaybeRef<string>) => {
 // 过滤支持的最小 vue、组件库版本
 export const getSupportVersions = (pkg: string, minVersion: string) => {
   const versions = getVersions(pkg)
+  const IS_VUE = pkg === 'vue'
   return computed(() => {
     const canUserVersions = versions.value.filter(version =>
       compare(version, minVersion, '>='),
     )
     if (canUserVersions.length > 0) {
       canUserVersions.unshift('latest')
-      IS_DEV && canUserVersions.unshift(`@${__COMMIT__}`)
+      IS_DEV && !IS_VUE && canUserVersions.unshift(`@${__COMMIT__}`)
     }
 
     return canUserVersions
