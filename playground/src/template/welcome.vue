@@ -47,7 +47,7 @@ const toggleTheme = () => {
           Primary
         </o-button>
       </o-badge>
-      <o-button @click="open">
+      <o-button type="success" @click="open">
         Show Message
       </o-button>
     </div>

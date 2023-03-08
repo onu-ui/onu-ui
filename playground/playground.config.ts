@@ -53,16 +53,16 @@ export default {
   devDeps: {
     // 开发模式下，仅用于在 onu-ui 中开发组件调试
     'onu-ui': {
-      path: `${location.href}/src/onu-dev-proxy`,
+      path: `${location.origin}/play/src/onu-dev-proxy`,
     },
     'vue': {
-      path: `${location.href}/src/vue-dev-proxy`,
+      path: `${location.origin}/play/src/vue-dev-proxy`,
     },
     '@vue/compiler-sfc': {
-      path: `${location.href}/src/vue-sfc-dev-proxy`,
+      path: `${location.origin}/play/src/vue-sfc-dev-proxy`,
     },
     '@vue/shared': {
-      path: `${location.href}/src/vue-shared-dev-proxy`,
+      path: `${location.origin}/play/src/vue-shared-dev-proxy`,
     },
   },
 }
