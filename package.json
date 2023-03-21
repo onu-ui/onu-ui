@@ -26,6 +26,11 @@
     "volar:helper": "esno scripts/volar-helper",
     "clean": "rimraf packages/*/{dist,es,lib}"
   },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.3"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
     "@antfu/ni": "^0.20.0",
@@ -82,10 +87,5 @@
     "*.{js,ts,tsx,vue,md}": [
       "eslint --fix"
     ]
-  },
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.3"
   }
 }
