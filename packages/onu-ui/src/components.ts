@@ -2,6 +2,7 @@ import {
   OAlert,
   OAvatar,
   OAvatarGroup,
+  OBacktop,
   OBadge,
   OButton,
   OCard,
@@ -42,4 +43,5 @@ export default [
   OConfigProvider,
   OEmpty,
   PrivateInfiniteScroll,
+  OBacktop,
 ] as Plugin[]

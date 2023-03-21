@@ -78,7 +78,12 @@ const components = [
   {
     text: 'Navigation',
     collapsed: false,
-    items: [],
+    items: [
+      {
+        text: 'Backtop',
+        link: '/components/backtop',
+      },
+    ],
   },
   {
     text: 'Feedback',
