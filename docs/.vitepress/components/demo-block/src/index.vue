@@ -14,7 +14,8 @@ const [value, toggle] = useToggle()
 
 const editOnPlayground = () => {
   if (props.code) {
-    const { link } = usePlayground(decodeURIComponent(props.code))
+    const { link } = usePlayground(props.code)
+
     if (!isClient)
       return
     window.open(link)

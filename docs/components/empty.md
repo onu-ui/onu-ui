@@ -1,3 +1,8 @@
+---
+title: Empty
+lang: en-US
+---
+
 # Empty <new-badge/>
 
 Used to display the status of empty data.
