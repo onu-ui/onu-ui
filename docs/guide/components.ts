@@ -75,6 +75,12 @@ export const Components: ComponentListItem[] = [
         link: '/components/tag.html',
         icon: '/svgs/tag.svg',
       },
+      {
+        name: 'Infinite Scroll',
+        description: 'Load more data while reach bottom of the page',
+        link: '/components/infinite-scroll.html',
+        icon: '/svgs/infinite-scroll.svg',
+      },
     ],
   },
   {

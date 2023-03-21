@@ -69,6 +69,10 @@ const components = [
         text: 'Tag',
         link: '/components/tag',
       },
+      {
+        text: 'Infinite Scroll',
+        link: '/components/infinite-scroll',
+      },
     ],
   },
   {

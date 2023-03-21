@@ -11,6 +11,11 @@ import type { ResolvedConfig } from 'vite'
 
 let config: ResolvedConfig = undefined!
 
+const externals = [
+  'vue',
+  'lodash-unified',
+]
+
 export default defineConfig({
   build: {
     emptyOutDir: false,
@@ -19,10 +24,11 @@ export default defineConfig({
       name: '@onu-ui/components',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: externals,
       output: {
         globals: {
-          vue: 'Vue',
+          'vue': 'Vue',
+          'lodash-unified': 'LodashUnified',
         },
       },
     },
@@ -46,6 +52,7 @@ export default defineConfig({
       async closeBundle() {
         const { root, build } = config
         const { outDir } = build
+
         const styleFile = resolve(root, outDir, 'style.css')
         await fs.copyFile(
           styleFile,

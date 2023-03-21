@@ -17,6 +17,7 @@ import {
   OSwitch,
   OTag,
   OTrigger,
+  PrivateInfiniteScroll,
 } from '@onu-ui/components'
 
 import type { Plugin } from 'vue'
@@ -40,4 +41,5 @@ export default [
   ORate,
   OConfigProvider,
   OEmpty,
+  PrivateInfiniteScroll,
 ] as Plugin[]
