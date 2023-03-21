@@ -17,7 +17,6 @@ Add `v-infinite-scroll` to the list to automatically execute loading method when
 
 <demo src="../example/infinite-scroll/disable-loading.vue"></demo>
 
-
 ## Directives
 
 | Name                      | Description                                                                                                      | Type     | Accepted values | Default |
