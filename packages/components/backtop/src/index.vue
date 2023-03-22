@@ -1,11 +1,12 @@
 <script setup lang="ts" name="OBacktop">
-import { backtopEmits, backtopProps } from './backtop'
-import { useBackTop } from './use-backtop'
+import { backtopEmits, backtopProps } from './props'
+import { useBackTop } from './useBacktop'
 
 const props = defineProps(backtopProps)
 const emit = defineEmits(backtopEmits)
 
 const { handleClick, visible } = useBackTop(props, emit, 'OBacktop')
+
 const backTopStyle = computed(() => ({
   right: `${props.right}px`,
   bottom: `${props.bottom}px`,

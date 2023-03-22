@@ -1,7 +1,5 @@
-import { onMounted, ref, shallowRef } from 'vue'
-import { useEventListener, useThrottleFn } from '@vueuse/core'
 import type { SetupContext } from 'vue'
-import type { OBacktopEmits, OBacktopProps } from './backtop'
+import type { OBacktopEmits, OBacktopProps } from './props'
 
 export const useBackTop = (
   props: OBacktopProps,
@@ -14,7 +12,7 @@ export const useBackTop = (
 
   const handleScroll = () => {
     if (el.value)
-      visible.value = el.value.scrollTop >= props.visibilityHeight
+      visible.value = el.value.scrollTop >= props.delta
   }
 
   const handleClick = (event: MouseEvent) => {

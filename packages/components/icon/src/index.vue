@@ -1,7 +1,7 @@
 <script lang='ts' setup name="OIcon">
-defineProps<{
-  name: String
-}>()
+import { iconProps } from './props'
+
+defineProps(iconProps)
 </script>
 
 <template>

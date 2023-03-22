@@ -23,7 +23,7 @@ Customize the button style, this display area is 40px * 40px.
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | target | `string` | `undefined` | The target to trigger scroll.
-| visibility-height | `number` | `200` | The button will not show until the scroll height reaches this value
+| delta | `number` | `200` | The button will not show until the scroll height reaches this value
 | right | `number` | `40` |  Right distance.  |
 | bottom | `number` | `40` | Bottom distance. |
 

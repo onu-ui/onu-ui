@@ -1,5 +1,5 @@
 <script lang='ts' setup name="OAvatarGroup">
-import { avatarGroupProps } from './avatar'
+import { avatarGroupProps } from './props'
 
 defineProps(avatarGroupProps)
 </script>

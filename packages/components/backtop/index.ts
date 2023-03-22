@@ -4,4 +4,4 @@ import Backtop from './src/index.vue'
 export const OBacktop = withInstall(Backtop)
 export default OBacktop
 
-export * from './src/backtop'
+export * from './src/props'
