@@ -1,5 +1,5 @@
 <script lang='ts' setup name="OAvatar">
-import { avatarProps } from './avatar'
+import { avatarProps } from './props'
 
 const props = defineProps(avatarProps)
 

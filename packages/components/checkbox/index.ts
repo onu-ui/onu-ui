@@ -4,4 +4,4 @@ import Checkbox from './src/index.vue'
 export const OCheckbox = withInstall(Checkbox)
 export default OCheckbox
 
-export * from './src/checkbox'
+export * from './src/props'
