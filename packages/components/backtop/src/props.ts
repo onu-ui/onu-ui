@@ -5,7 +5,7 @@ export const backtopProps = {
     type: String,
     default: '',
   },
-  visibilityHeight: {
+  delta: {
     type: Number,
     default: 200,
   },
