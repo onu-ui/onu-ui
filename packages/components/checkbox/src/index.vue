@@ -1,7 +1,7 @@
 <script lang="ts" setup name="OCheckbox">
 import { hash } from '@onu-ui/utils'
 import type { Ref } from 'vue'
-import { checkBoxProps } from './checkbox'
+import { checkBoxProps } from './props'
 
 const props = defineProps(checkBoxProps)
 

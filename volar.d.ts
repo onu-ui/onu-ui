@@ -19,6 +19,7 @@ declare module 'vue' {
     OSwitch: typeof import('onu-ui')['OSwitch']
     OTag: typeof import('onu-ui')['OTag']
     OTrigger: typeof import('onu-ui')['OTrigger']
+    OBacktop: typeof import('onu-ui')['OBacktop']
   }
 }
 export {}

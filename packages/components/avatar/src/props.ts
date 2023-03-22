@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import type { SizeType } from './../../types'
+import type { SizeType } from '../../types'
 
 export const avatarProps = {
   src: String,

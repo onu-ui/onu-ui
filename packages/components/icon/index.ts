@@ -3,3 +3,5 @@ import Icon from './src/index.vue'
 
 export const OIcon = withInstall(Icon)
 export default OIcon
+
+export * from './src/props'

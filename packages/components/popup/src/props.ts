@@ -34,6 +34,7 @@ export const popupProps = {
   | 'left-bottom'
   | 'right-top'
   | 'right-bottom'
+   * @default 'top'
    */
   position: {
     type: String as PropType<Placement>,
