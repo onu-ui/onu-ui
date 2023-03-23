@@ -3,7 +3,7 @@ title: Link
 lang: en-US
 ---
 
-# Link <update-badge/>
+# Link <new-badge/>
 
 Text hyperlink.
 
