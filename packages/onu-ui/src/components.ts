@@ -12,6 +12,7 @@ import {
   OConfigProvider,
   OEmpty,
   OIcon,
+  OLink,
   OMessage,
   OPopup,
   ORate,
@@ -42,4 +43,5 @@ export default [
   OConfigProvider,
   OEmpty,
   OBacktop,
+  OLink,
 ] as Plugin[]

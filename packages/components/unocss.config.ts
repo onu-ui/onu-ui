@@ -38,6 +38,12 @@ export default defineConfig({
     ...commonTheme.map((item) => {
       return `active-bg-${item}LightActive`
     }),
+    ...commonTheme.map((item) => {
+      return `hover-text-${item}LightHover`
+    }),
+    ...commonTheme.map((item) => {
+      return `active-text-${item}LightActive`
+    }),
   ],
   preflights: [{
     layer: 'base',
