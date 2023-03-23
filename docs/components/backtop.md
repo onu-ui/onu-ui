@@ -3,7 +3,7 @@ title: Backtop
 lang: en-US
 ---
 
-# Backtop <update-badge/>
+# Backtop <new-badge/>
 
 A Button to back to top.
 
