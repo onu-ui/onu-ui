@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.13",
   "description": "Onu-UI components for use on demand",
-  "author": "chris-zhu <https://github.com/chris-zhu>",
+  "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
   "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/components/README.md",
   "repository": {

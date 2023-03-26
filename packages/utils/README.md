@@ -9,4 +9,4 @@ pnpm i @onu-ui/utils
 
 ## License
 
-[MIT](../../LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
+[MIT](../../LICENSE) License © 2022 [Chris](https://github.com/zyyv)

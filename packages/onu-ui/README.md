@@ -125,4 +125,4 @@ Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussi
 
 ## License
 
-[MIT](https://github.com/onu-ui/onu-ui/blob/main/LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
+[MIT](https://github.com/onu-ui/onu-ui/blob/main/LICENSE) License © 2022 [Chris](https://github.com/zyyv)
