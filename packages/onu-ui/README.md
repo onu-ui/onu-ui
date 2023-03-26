@@ -24,8 +24,8 @@
 ### Full Import
 
 ```bash
-npm i onu-ui
-npm i unocss -D
+pnpm i onu-ui
+pnpm i unocss -D
 ```
 Add `onu-ui` in your main entry file.
 

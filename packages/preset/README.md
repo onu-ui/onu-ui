@@ -4,7 +4,7 @@ Onu-UI 的 unocss preset，作为 components 的样式支持，也可作为独�
 ## Usage
 
 ```bash
-npm i unocss @onu-ui/preset -D
+pnpm i unocss @onu-ui/preset -D
 ```
 Add preset into unocss config.
 ```ts

@@ -4,7 +4,7 @@
 ## Usage
 
 ```bash
-npm i @onu-ui/utils
+pnpm i @onu-ui/utils
 ```
 
 ## License

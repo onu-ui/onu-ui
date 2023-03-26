@@ -7,8 +7,8 @@
 ## Usage
 
 ```bash
-npm i onu-ui
-npm i unocss -D
+pnpm i onu-ui
+pnpm i unocss -D
 ```
 Add `onu-ui` in your main entry file.
 
@@ -40,19 +40,19 @@ export default defineConfig({
 You can see the preview of the following commands:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Then you can run playground to see the result.
 
 ```bash
-npm run play
+pnpm run play
 ```
 
 If you want start the dev server, you can run:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 
