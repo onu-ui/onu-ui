@@ -27,6 +27,22 @@ function handleChange() {
       isChecked && `o-radio-check-checked`,
     ]"
   >
+    <!-- todo: delete this span -->
+    <!-- hack: class such as 'o-radio-${size} c-${textColor}' does not take effect, i must be set 'o-radio-xs o-radio-sm o-radio-md o-radio-lg etc' to make it work. -->
+    <span
+      class="
+  w-0 h-0
+  c-primaryBase c-secondaryBase c-successBase c-warningBase c-errorBase c-infoBase
+  border-primaryBase border-secondaryBase border-successBase border-warningBase border-errorBase border-infoBase
+  after:bg-primaryBase after:bg-secondaryBase after:bg-successBase after:bg-warningBase after:bg-errorBase after:bg-infoBase
+  hover:border-primaryBase hover:border-secondaryBase hover:border-successBase hover:border-warningBase hover:border-errorBase hover:border-infoBase
+  bg-primaryBase bg-secondaryBase bg-successBase bg-warningBase bg-errorBase bg-infoBase
+  after:bg-primaryBase after:bg-secondaryBase after:bg-successBase after:bg-warningBase after:bg-errorBase after:bg-infoBase
+  o-radio-label-xs o-radio-label-sm o-radio-label-md o-radio-label-lg
+  o-radio-inner-xs o-radio-inner-sm o-radio-inner-md o-radio-inner-lg
+  o-radio-xs o-radio-sm o-radio-md o-radio-lg
+  "
+    />
     <span
       class="o-radio-input"
     >
