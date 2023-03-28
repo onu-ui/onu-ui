@@ -6,6 +6,7 @@ export const radioShortcuts: Record<string, string> = {
   'o-radio-input': 'inline-flex relative align-middle outline-none whitespace-nowrap cursor-pointer',
   'o-radio-original': 'opacity-0 absolute inset-0 m-0 -z-1 outline-none',
   'o-radio-inner-base': 'relative inline-block box-border border-2px border-solid border-baseBorder rounded-full cursor-pointer',
+  'o-radio-inner-after': 'after:rounded-1 after:bg-white after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:scale-0 after:transition-transform after:ease-in',
   'o-radio-xs': 'h-24px',
   'o-radio-sm': 'h-28px',
   'o-radio-md': 'h-32px',
