@@ -24,8 +24,8 @@
 ### Full Import
 
 ```bash
-npm i onu-ui
-npm i unocss -D
+pnpm i onu-ui
+pnpm i unocss -D
 ```
 Add `onu-ui` in your main entry file.
 
@@ -125,4 +125,4 @@ Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussi
 
 ## License
 
-[MIT](https://github.com/onu-ui/onu-ui/blob/main/LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
+[MIT](https://github.com/onu-ui/onu-ui/blob/main/LICENSE) License © 2022 [Chris](https://github.com/zyyv)

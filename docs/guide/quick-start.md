@@ -56,16 +56,6 @@ All components supported in modern browsers, support of neerly two or three vers
 
 You can subscribe to this feed for new version notifications: https://github.com/onu-ui/onu-ui/releases
 
-## Install
-
-```shell
-# npm
-npm i onu-ui && npm install -D unocss
-
-# pnpm
-pnpm add onu-ui && pnpm add -D unocss
-```
-
 ## Issue Help
 
 Open a [issue](https://github.com/onu-ui/onu-ui/issues) to request help.
