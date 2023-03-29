@@ -12,6 +12,7 @@
     <TheMessage />
     <TheEmpty />
     <TheLink />
+    <TheRadio />
     <TheBacktop />
     <!-- <ThePopup />
     <TheRate />
