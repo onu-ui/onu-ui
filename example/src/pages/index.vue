@@ -10,6 +10,7 @@
     <TheBadge />
     <TheTag /> -->
     <TheMessage />
+    <TheAffix />
     <TheEmpty />
     <TheLink />
     <TheBacktop />
