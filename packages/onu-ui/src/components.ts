@@ -1,4 +1,5 @@
 import {
+  OAffix,
   OAlert,
   OAvatar,
   OAvatarGroup,
@@ -44,4 +45,5 @@ export default [
   OEmpty,
   OBacktop,
   OLink,
+  OAffix,
 ] as Plugin[]
