@@ -51,6 +51,10 @@ const components = [
         text: 'Rate',
         link: '/components/rate',
       },
+      {
+        text: 'Radio',
+        link: '/components/radio',
+      },
     ],
   },
   {

@@ -1,0 +1,22 @@
+export const radioShortcuts: Record<string, string> = {
+  // radio
+  'o-radio-check-base': 'h-32px mr-32px relative inline-flex items-center c-baseText text-14px font-medium outline-none whitespace-nowrap cursor-pointer select-none last:mr-0',
+  'o-radio-check-disabled': 'p-5 box-border border-1px border-solid rounded-1',
+  'o-radio-check-checked': 'after:scale-100 after:-translate-x-1/2 after:-translate-y-1/2',
+  'o-radio-input': 'inline-flex relative align-middle outline-none whitespace-nowrap cursor-pointer',
+  'o-radio-original': 'opacity-0 absolute inset-0 m-0 -z-1 outline-none',
+  'o-radio-inner-base': 'relative inline-block box-border border-2px border-solid border-baseBorder rounded-full cursor-pointer',
+  'o-radio-inner-after': 'after:rounded-1 after:bg-white after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:scale-0 after:transition-transform after:ease-in',
+  'o-radio-xs': 'h-24px',
+  'o-radio-sm': 'h-28px',
+  'o-radio-md': 'h-32px',
+  'o-radio-lg': 'h-36px',
+  'o-radio-label-xs': 'text-12px',
+  'o-radio-label-sm': 'text-12px',
+  'o-radio-label-md': 'text-14px',
+  'o-radio-label-lg': 'text-16px',
+  'o-radio-inner-xs': 'w-12px h-12px after:w-3px after:h-3px',
+  'o-radio-inner-sm': 'w-14px h-14px after:w-4px after:h-4px',
+  'o-radio-inner-md': 'w-16px h-16px after:w-6px after:h-6px',
+  'o-radio-inner-lg': 'w-20px h-20px after:w-8px after:h-8px',
+}
