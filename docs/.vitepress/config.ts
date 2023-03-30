@@ -84,6 +84,10 @@ const components = [
     collapsed: false,
     items: [
       {
+        text: 'Affix',
+        link: '/components/affix',
+      },
+      {
         text: 'Backtop',
         link: '/components/backtop',
       },
