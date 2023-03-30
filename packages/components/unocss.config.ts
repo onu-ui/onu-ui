@@ -25,6 +25,7 @@ export default defineConfig({
     `o-radio-${s}`,
     `o-radio-inner-${s}`,
     `o-radio-label-${s}`,
+    `text-${s}`,
     ])].flat(2) as string[],
     ...commonTheme.map((item) => {
       return `o-${item}`
