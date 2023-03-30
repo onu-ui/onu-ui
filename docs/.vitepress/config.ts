@@ -33,6 +33,10 @@ const components = [
         text: 'Link',
         link: '/components/link',
       },
+      {
+        text: 'Text',
+        link: '/components/text',
+      },
     ],
   },
   {
