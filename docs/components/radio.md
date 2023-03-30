@@ -73,7 +73,7 @@ If you do not want label's color to change when selected, you can use `not-text-
 | model-value / v-model | `string \| number \| boolean` | `undefined` | Binding value. |
 | label | `string` | `undefined` | The value of Radio. |
 | disabled | `boolean` | `false` |  Whether Radio is disabled.  |
-| size | `boolean` | `true` | Whether the component has underline.  |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | The size of Radio.  |
 | fill | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Change radio fill color. |
 | text-color | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `undefined` | Change the label color when radio is checked. |
 | label-color | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `undefined` | Change radio label color. |
@@ -97,7 +97,7 @@ If you do not want label's color to change when selected, you can use `not-text-
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | model-value / v-model | `string \| number \| boolean` | `undefined` | Binding value. |
-| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `md` | The size of radio buttons or bordered radios.  |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | The size of radio buttons or bordered radios.  |
 | disabled | `boolean` | `false` |  Whether the nesting radios are disabled.  |
 | name | `string` | `undefined` | Native `name` attribute. |
 | id | `string` | `undefined` | Native `id` attribute. |
