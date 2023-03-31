@@ -22,9 +22,21 @@ export default defineConfig({
     `o-checkbox-${s}`,
     `o-tag-${s}`,
     `o-switch-${s}`,
+    `o-radio-${s}`,
+    `o-radio-inner-${s}`,
+    `o-radio-label-${s}`,
     ])].flat(2) as string[],
     ...commonTheme.map((item) => {
       return `o-${item}`
+    }),
+    ...commonTheme.map((item) => {
+      return `text-${item}Base`
+    }),
+    ...commonTheme.map((item) => {
+      return `border-${item}Base`
+    }),
+    ...commonTheme.map((item) => {
+      return `bg-${item}Base`
     }),
     ...commonTheme.map((item) => {
       return `hover-bg-${item}LightHover`
@@ -43,6 +55,9 @@ export default defineConfig({
     }),
     ...commonTheme.map((item) => {
       return `active-text-${item}LightActive`
+    }),
+    ...commonTheme.map((item) => {
+      return `after-bg-${item}LightHover`
     }),
   ],
   preflights: [{

@@ -17,6 +17,9 @@ export * from './config-provider'
 export * from './empty'
 export * from './backtop'
 export * from './link'
+export * from './radio'
+export * from './radio-group'
+export * from './affix'
 
 // plugins
 export * from './message'

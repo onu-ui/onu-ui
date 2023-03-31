@@ -18,6 +18,7 @@ import { triggerShortcuts } from './trigger'
 import { rateShortcuts } from './rate'
 import { emptyShortcuts } from './empty'
 import { linkShortcuts } from './link'
+import { radioShortcuts } from './radio'
 
 export default [
   baseShortcuts,
@@ -56,4 +57,6 @@ export default [
   emptyShortcuts,
   // link
   linkShortcuts,
+  // radio
+  radioShortcuts,
 ] as UserShortcuts<Theme>

@@ -19,4 +19,13 @@ export default [
       }
     }
   },
+  (input: string) => {
+    const prefix = 'o-after:'
+    if (input.startsWith(prefix)) {
+      return {
+        matcher: input.slice(prefix.length),
+        selector: s => `${s}::after`,
+      }
+    }
+  },
 ] as Variant<Theme>[]
