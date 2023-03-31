@@ -29,6 +29,12 @@ export const Components: ComponentListItem[] = [
         link: '/components/link.html',
         icon: '/svgs/link.svg',
       },
+      {
+        name: 'Text',
+        description: 'Text are used to customize text.',
+        link: '/components/text.html',
+        icon: '/svgs/text.svg',
+      },
     ],
   },
   {
@@ -51,6 +57,12 @@ export const Components: ComponentListItem[] = [
         description: 'Rate is a set of radio buttons that allow the user to rate something.',
         link: '/components/rate.html',
         icon: '/svgs/rate.svg',
+      },
+      {
+        name: 'Radio',
+        description: 'Radio buttons allow the user to select one option from a set.',
+        link: '/components/radio.html',
+        icon: '/svgs/radio.svg',
       },
     ],
   },
@@ -91,6 +103,12 @@ export const Components: ComponentListItem[] = [
         description: 'BackTop are used to return the page to the top.',
         link: '/components/backtop.html',
         icon: '/svgs/backtop.svg',
+      },
+      {
+        name: 'Affix',
+        description: 'Affix are used to set up anchor links.',
+        link: '/components/affix.html',
+        icon: '/svgs/affix.svg',
       },
     ],
   },
