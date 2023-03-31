@@ -10,8 +10,10 @@
     <TheBadge />
     <TheTag /> -->
     <TheMessage />
+    <TheAffix />
     <TheEmpty />
     <TheLink />
+    <TheRadio />
     <TheBacktop />
     <!-- <ThePopup />
     <TheRate />

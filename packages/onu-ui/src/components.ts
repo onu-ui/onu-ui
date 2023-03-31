@@ -1,4 +1,5 @@
 import {
+  OAffix,
   OAlert,
   OAvatar,
   OAvatarGroup,
@@ -15,6 +16,8 @@ import {
   OLink,
   OMessage,
   OPopup,
+  ORadio,
+  ORadioGroup,
   ORate,
   OSwitch,
   OTag,
@@ -44,4 +47,7 @@ export default [
   OEmpty,
   OBacktop,
   OLink,
+  ORadio,
+  ORadioGroup,
+  OAffix,
 ] as Plugin[]

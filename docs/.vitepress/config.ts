@@ -51,6 +51,10 @@ const components = [
         text: 'Rate',
         link: '/components/rate',
       },
+      {
+        text: 'Radio',
+        link: '/components/radio',
+      },
     ],
   },
   {
@@ -79,6 +83,10 @@ const components = [
     text: 'Navigation',
     collapsed: false,
     items: [
+      {
+        text: 'Affix',
+        link: '/components/affix',
+      },
       {
         text: 'Backtop',
         link: '/components/backtop',
