@@ -29,6 +29,10 @@ const components = [
         text: 'Icon',
         link: '/components/icon',
       },
+      {
+        text: 'Link',
+        link: '/components/link',
+      },
     ],
   },
   {

@@ -1,13 +1,13 @@
 <p align="center">
-<img src="./public/logo.svg" style="width:100px;" />
+<img src="https://raw.githubusercontent.com/imageList/imglist/master/img/logo.svg" style="width:100px;" />
 <h1 align="center">Onu UI (WIP)</h1>
 <p align="center">Popular, beautiful and fast UnoCSS component library.</p>
 </p>
 <p align="center">
 <a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 <p align="center">
-<a href="https://onu.zyob.top/">🧑‍💻 Document</a> |
-<a href="https://onu.zyob.top/play/">🤹‍♂️ Playground <sup>Beta</sup></a>
+<a href="https://onu.zyob.top/">🧑‍💻 Document <sup>Beta</sup></a> |
+<a href="https://onu.zyob.top/">🤹‍♂️ Preview</a>
 </p>
 
 ## Features
@@ -24,8 +24,8 @@
 ### Full Import
 
 ```bash
-npm i onu-ui
-npm i unocss -D
+pnpm i onu-ui
+pnpm i unocss -D
 ```
 Add `onu-ui` in your main entry file.
 
@@ -117,6 +117,7 @@ Thanks to everyone who has already contributed to OnuUI!
 Since `OnuUI` is under intensive development, we need your valuable comments and feature requirements of the component
 
 Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
+
 ## Credits
 
 - [UnoCSS](https://github.com/unocss/unocss)
@@ -124,4 +125,4 @@ Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussi
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [chris-zhu](https://github.com/chris-zhu)
+[MIT](https://github.com/onu-ui/onu-ui/blob/main/LICENSE) License © 2022 [Chris](https://github.com/zyyv)

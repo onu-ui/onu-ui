@@ -17,6 +17,7 @@ import { popupShortcuts } from './popup'
 import { triggerShortcuts } from './trigger'
 import { rateShortcuts } from './rate'
 import { emptyShortcuts } from './empty'
+import { linkShortcuts } from './link'
 
 export default [
   baseShortcuts,
@@ -53,4 +54,6 @@ export default [
   rateShortcuts,
   // empty
   emptyShortcuts,
+  // link
+  linkShortcuts,
 ] as UserShortcuts<Theme>

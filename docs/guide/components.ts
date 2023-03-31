@@ -23,6 +23,12 @@ export const Components: ComponentListItem[] = [
         link: '/components/icon.html',
         icon: '/svgs/icon.svg',
       },
+      {
+        name: 'Link',
+        description: 'Icon are used to customize some jump anchor links.',
+        link: '/components/link.html',
+        icon: '/svgs/link.svg',
+      },
     ],
   },
   {
@@ -80,6 +86,17 @@ export const Components: ComponentListItem[] = [
         description: 'Load more data while reach bottom of the page',
         link: '/components/infinite-scroll.html',
         icon: '/svgs/infinite-scroll.svg',
+      },
+    ],
+  },
+  {
+    name: 'Navigation',
+    components: [
+      {
+        name: 'BackTop',
+        description: 'BackTop are used to return the page to the top.',
+        link: '/components/backtop.html',
+        icon: '/svgs/backtop.svg',
       },
     ],
   },

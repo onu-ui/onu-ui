@@ -16,6 +16,7 @@ export * from './collapse'
 export * from './config-provider'
 export * from './empty'
 export * from './backtop'
+export * from './link'
 
 // plugins
 export * from './message'

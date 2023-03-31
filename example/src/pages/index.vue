@@ -11,6 +11,7 @@
     <TheTag /> -->
     <TheMessage />
     <TheEmpty />
+    <TheLink />
     <TheBacktop />
     <!-- <ThePopup />
     <TheRate />
