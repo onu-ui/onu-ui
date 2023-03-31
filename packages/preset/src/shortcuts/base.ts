@@ -15,4 +15,5 @@ export const baseShortcuts: Record<string, string> = {
                    !c-context`,
   'o-description': 'text-darkSubText break-all',
   'o-disabled': 'opacity-40 cursor-not-allowed',
+  'text-md': 'text-base',
 }

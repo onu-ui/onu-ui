@@ -21,6 +21,7 @@ import {
   ORate,
   OSwitch,
   OTag,
+  OText,
   OTrigger,
 } from '@onu-ui/components'
 
@@ -50,4 +51,5 @@ export default [
   ORadio,
   ORadioGroup,
   OAffix,
+  OText,
 ] as Plugin[]

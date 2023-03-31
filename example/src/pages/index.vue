@@ -8,14 +8,15 @@
     <TheCheckbox />
     <TheAlert />
     <TheBadge />
-    <TheTag /> -->
+    <TheTag />
+    <TheLink />
+    <TheRadio /> -->
     <TheMessage />
     <TheAffix />
     <TheEmpty />
-    <TheLink />
-    <TheRadio />
-    <TheBacktop />
-    <!-- <ThePopup />
+    <TheText />
+    <!-- <TheBacktop />
+    <ThePopup />
     <TheRate />
     <TheCollapse /> -->
   </div>
