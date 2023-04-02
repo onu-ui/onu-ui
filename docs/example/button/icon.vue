@@ -1,6 +1,7 @@
 <template>
   <div space-y-2>
     <div fscw gap-2>
+      <o-button type="warning" icon="i-carbon-logo-github" />
       <o-button type="secondary">
         <template #icon>
           <div i-carbon-share />
@@ -18,6 +19,9 @@
       </o-button>
     </div>
     <div fscw gap-2>
+      <o-button type="warning" icon="i-carbon-logo-github">
+        Github
+      </o-button>
       <o-button type="secondary">
         <template #icon>
           <div i-carbon-share />

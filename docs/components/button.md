@@ -56,7 +56,7 @@ Use `shadow` to show Button's shadow.
 
 Use icons to add more meaning to Button. You can use icon alone to save some space, or use it with text.
 
-Use the `icon` slots to add icon.
+Use the `icon` slots or `icon` property to add icon.
 
 <demo src="../example/button/icon.vue"></demo>
 
@@ -90,6 +90,7 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 | to | `string` | `undefined` | Determine whether it's a link button. |
 | rounded | `boolean` | `false` | Determine whether it's a round button. |
 | loading | `boolean` | `false` | Determine whether it's loading.  |
+| icon | `string` | `undefined` | Icon's name.  |
 | disabled | `boolean` | `false` | Disable the button. |
 
 
