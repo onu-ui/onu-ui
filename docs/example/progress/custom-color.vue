@@ -36,10 +36,10 @@ const decrease = () => {
     <o-progress :percentage="percentage" :color="customColors" />
     <o-progress :percentage="percentage" :color="customColors" />
     <div>
-      <o-button class="mr-2" @click="decrease">
+      <o-button class="mr-2" @click="increase">
         +
       </o-button>
-      <o-button @click="increase">
+      <o-button @click="decrease">
         -
       </o-button>
     </div>
