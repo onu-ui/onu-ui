@@ -81,6 +81,10 @@ const components = [
         text: 'Tag',
         link: '/components/tag',
       },
+      {
+        text: 'Progress',
+        link: '/components/progress',
+      },
     ],
   },
   {

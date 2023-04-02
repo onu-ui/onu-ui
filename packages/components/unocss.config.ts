@@ -40,6 +40,9 @@ export default defineConfig({
       return `bg-${item}Base`
     }),
     ...commonTheme.map((item) => {
+      return `bg-${item}Light`
+    }),
+    ...commonTheme.map((item) => {
       return `hover-bg-${item}LightHover`
     }),
     ...commonTheme.map((item) => {
