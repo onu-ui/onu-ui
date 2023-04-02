@@ -87,6 +87,10 @@ const startLoading = () => {
         <OButton size="lg" o="warning">
           Large
         </OButton>
+        <OButton size="lg" type="warning" icon="i-carbon-logo-github" />
+        <OButton size="lg" type="warning" icon="i-carbon-logo-github">
+          Github
+        </OButton>
         <o-button :to="githubUrl" o="primary">
           <template #icon>
             <div i-carbon-logo-github />
