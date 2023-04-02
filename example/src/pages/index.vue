@@ -10,12 +10,13 @@
     <TheBadge />
     <TheTag />
     <TheLink />
+    <TheAffix />
     <TheRadio /> -->
     <TheMessage />
-    <TheAffix />
     <TheEmpty />
-    <TheText />
-    <!-- <TheBacktop />
+    <TheProgress />
+    <!-- <TheText />
+    <TheBacktop />
     <ThePopup />
     <TheRate />
     <TheCollapse /> -->
