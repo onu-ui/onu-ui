@@ -93,6 +93,12 @@ export const Components: ComponentListItem[] = [
         link: '/components/tag.html',
         icon: '/svgs/tag.svg',
       },
+      {
+        name: 'Progress',
+        description: 'Progress can be used to show the progress of a task or to show the passing of time..',
+        link: '/components/progress.html',
+        icon: '/svgs/progress.svg',
+      },
     ],
   },
   {

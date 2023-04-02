@@ -25,6 +25,7 @@ declare module 'vue' {
     ORadioGroup: typeof import('onu-ui')['ORadioGroup']
     OAffix: typeof import('onu-ui')['OAffix']
     OText: typeof import('onu-ui')['OText']
+    OProgress: typeof import('onu-ui')['OProgress']
   }
 }
 export {}
