@@ -8,7 +8,7 @@ const typeLight = computed(() => props.type !== 'default' && props.light)
 const defaultLight = computed(() => props.type === 'default' && props.light)
 const defaultText = computed(() => props.type === 'default' && props.text)
 const slots = useSlots()
-const onlyIcon = computed(() => slots.icon && !slots.default)
+const onlyIcon = computed(() => (slots.icon || props.icon) && !slots.default)
 const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 </script>
 
@@ -34,7 +34,9 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
     ]"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />
-    <slot v-else name="icon" />
+    <slot v-else name="icon">
+      <div v-if="icon" :class="icon" />
+    </slot>
     <slot />
   </component>
 </template>
