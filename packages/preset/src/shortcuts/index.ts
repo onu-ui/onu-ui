@@ -19,6 +19,7 @@ import { rateShortcuts } from './rate'
 import { emptyShortcuts } from './empty'
 import { linkShortcuts } from './link'
 import { radioShortcuts } from './radio'
+import { progressShortcuts } from './progress'
 
 export default [
   baseShortcuts,
@@ -59,4 +60,6 @@ export default [
   linkShortcuts,
   // radio
   radioShortcuts,
+  // progress
+  progressShortcuts,
 ] as UserShortcuts<Theme>

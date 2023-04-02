@@ -64,9 +64,14 @@ export default {
         60%{ box-shadow: 0 0 0 4px #1890ff33; }
         80%{ box-shadow: 0 0 0 6px #1890ff1a; }
         100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
+      indeterminate: '{0%{ left: -100%; } 100%{ left: 100%; }}',
     },
     durations: {
       switching: '0.3s',
+      indeterminate: '3s',
+    },
+    counts: {
+      indeterminate: 'infinite',
     },
   },
 } as Theme

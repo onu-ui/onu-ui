@@ -16,6 +16,7 @@ import {
   OLink,
   OMessage,
   OPopup,
+  OProgress,
   ORadio,
   ORadioGroup,
   ORate,
@@ -52,4 +53,5 @@ export default [
   ORadioGroup,
   OAffix,
   OText,
+  OProgress,
 ] as Plugin[]

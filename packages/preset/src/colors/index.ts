@@ -88,6 +88,7 @@ export const lightTheme = {
   '--onu-colors-background': 'var(--onu-colors-white)',
   '--onu-colors-background-light': 'var(--onu-colors-black-light)',
   '--onu-colors-background-gray': 'var(--onu-colors-gray600)',
+  '--onu-colors-background-gray-light': 'var(--onu-colors-gray200)',
   '--onu-colors-backgroundAlpha': 'rgba(255, 255, 255, 0.8)',
   '--onu-colors-foreground': 'var(--onu-colors-black)',
   '--onu-colors-backgroundContrast': 'var(--onu-colors-white)',
@@ -143,6 +144,7 @@ export const lightTheme = {
 
   '--onu-theme-secondary': 'var(--onu-colors-purple600)',
   '--onu-theme-secondaryHsl': `${hex2rgba('#A855F7')}`,
+  '--onu-theme-secondaryLight': 'var(--onu-colors-purple200)',
   '--onu-theme-secondaryBorder': 'var(--onu-colors-purple600)',
   '--onu-theme-secondaryLightHover': 'var(--onu-colors-purple500)',
   '--onu-theme-secondaryLightActive': 'var(--onu-colors-purple700)',
@@ -152,6 +154,7 @@ export const lightTheme = {
 
   '--onu-theme-success': 'var(--onu-colors-green600)',
   '--onu-theme-successHsl': `${hex2rgba('#0ACF83')}`,
+  '--onu-theme-successLight': 'var(--onu-colors-green200)',
   '--onu-theme-successBorder': 'var(--onu-colors-green600)',
   '--onu-theme-successLightHover': 'var(--onu-colors-green500)',
   '--onu-theme-successLightActive': 'var(--onu-colors-green700)',
@@ -161,6 +164,7 @@ export const lightTheme = {
 
   '--onu-theme-warning': 'var(--onu-colors-yellow600)',
   '--onu-theme-warningHsl': `${hex2rgba('#F5A524')}`,
+  '--onu-theme-warningLight': 'var(--onu-colors-yellow200)',
   '--onu-theme-warningBorder': 'var(--onu-colors-yellow500)',
   '--onu-theme-warningLightHover': 'var(--onu-colors-yellow500)',
   '--onu-theme-warningLightActive': 'var(--onu-colors-yellow700)',
@@ -170,6 +174,7 @@ export const lightTheme = {
 
   '--onu-theme-error': 'var(--onu-colors-red600)',
   '--onu-theme-errorHsl': `${hex2rgba('#FF5C5C')}`,
+  '--onu-theme-errorLight': 'var(--onu-colors-red200)',
   '--onu-theme-errorBorder': 'var(--onu-colors-red600)',
   '--onu-theme-errorLightHover': 'var(--onu-colors-red500)',
   '--onu-theme-errorLightActive': 'var(--onu-colors-red700)',
@@ -179,6 +184,7 @@ export const lightTheme = {
 
   '--onu-theme-info': 'var(--onu-colors-gray700)',
   '--onu-theme-infoHsl': `${hex2rgba('#7E868C')}`,
+  '--onu-theme-infoLight': 'var(--onu-colors-gray200)',
   '--onu-theme-infoBorder': 'var(--onu-colors-gray700)',
   '--onu-theme-infoLightHover': 'var(--onu-colors-gray500)',
   '--onu-theme-infoLightActive': 'var(--onu-colors-gray800)',
