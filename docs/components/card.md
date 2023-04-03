@@ -81,8 +81,8 @@ Here is the fully defined form of the card exaples.
 | cover | `string` | `undefined` | Card header's cover. |
 | size | `'sm' \| 'md' ` | `'md'` | Size of the card. |
 | shadow | `'always' \| 'hover'` | `never` | When to show card's shadow |
-| divider | `boolean` | `false` | Whether show embed style card. |
-| embed | `boolean` | `false` | Whether show Card divider. |
+| divider | `boolean` | `false` | Whether show Card divider. |
+| embed | `boolean` | `false` | Whether show embed style card. |
 | header | `string` \| `VNode` | `undefined` | Customer card's header. |
 | extra | `string` \| `VNode` | `undefined` | Customer card's header extra. |
 | actions | `string` \| `VNode` | `undefined` | Customer card's actions bar. |
