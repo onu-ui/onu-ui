@@ -17,6 +17,7 @@ export const buttonProps = {
   },
   disabled: Boolean,
   loading: Boolean,
+  icon: String,
 }
 
 export type OButtonProps = ExtractPropTypes<typeof buttonProps>
