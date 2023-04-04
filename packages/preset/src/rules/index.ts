@@ -34,5 +34,5 @@ export default [
   ['o-dashed', { 'border-style': 'dashed' }],
   ['o-solid', { 'background-color': 'rgba(var(--onu-c-context), 1) !important', 'border-color': 'rgba(var(--onu-c-context), 1)', 'color': 'white !important' }],
   ['o-bg-clip-half', { 'clip-path': 'polygon(0% 0%, 50% 0, 50% 50%, 50% 100%, 0% 100%)' }],
-  [/^aftc-(.*)$/, ([, s]: string[]) => ({ content: `'${s === 'DEFAULT' ? '' : s}'` })],
+  [/^psdc-(.*)$/, ([, s]: string[]) => ({ content: `'${s === 'DEFAULT' ? '' : s}'` })], // set content for pseudo element
 ] as Rule<Theme>[]

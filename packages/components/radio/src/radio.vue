@@ -42,9 +42,9 @@ function handleChange() {
         @blur="isFocus = false"
         @change="handleChange"
       >
-      <!-- use `o-after:aftc-DEFAULT` to set `::after{ content: '' }` -->
+      <!-- use `o-after:psdc-DEFAULT` to set `::after{ content: '' }` -->
       <span
-        class="o-radio-inner-base o-after:aftc-DEFAULT o-radio-inner-after"
+        class="o-radio-inner-base o-after:psdc-DEFAULT o-radio-inner-after"
         :class="[
           isDisabled && `o-disabled after:cursor-not-allowed`,
           `o-radio-inner-${size}`,
