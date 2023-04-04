@@ -1,5 +1,5 @@
 <script lang="ts" setup name="OCard">
-import OButton from '../../button/src/index.vue'
+import OButton from '../../button/src/button.vue'
 import type { ShadowType } from '../../types'
 import { cardProps } from './props'
 

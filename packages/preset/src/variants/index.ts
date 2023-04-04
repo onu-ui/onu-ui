@@ -28,4 +28,34 @@ export default [
       }
     }
   },
+  (input: string) => {
+    const prefix = 'o-before:'
+    if (input.startsWith(prefix)) {
+      return {
+        matcher: input.slice(prefix.length),
+        selector: s => `${s}::before`,
+      }
+    }
+  },
+  // o-children:[.o-button]:bg-red => .o-children\:\[.o-button\]\:bg-red > .o-button { bg-red }
+  (input: string) => {
+    const prefix = 'o-children:'
+    const reg = /(o-children:)\[(.*)\]:(.*)$/
+    if (input.startsWith(prefix)) {
+      return {
+        matcher: input.replace(reg, '$3'),
+        selector: s => `${s} > ${input.replace(reg, '$2')}`,
+      }
+    }
+  },
+  (input: string) => {
+    const prefix = 'o-sibling:'
+    const reg = /(o-sibling:)\[(.*)\]:(.*)$/
+    if (input.startsWith(prefix)) {
+      return {
+        matcher: input.replace(reg, '$3'),
+        selector: s => `${s} + ${input.replace(reg, '$2')}`,
+      }
+    }
+  },
 ] as Variant<Theme>[]
