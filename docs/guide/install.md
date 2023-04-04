@@ -86,7 +86,7 @@ export default defineConfig({
 
 ## Get Volar Typescript support
 
-You can add the `OnuUI` global component type definition to `compilerOptions.types` in your project's `tsconfig.json`. Then [volar](https://github.com/johnsoncodehk/volar) will help you have a better experience while developing.
+You can add the `OnuUI` global component type definition to `compilerOptions.types` in your project's `tsconfig.json`. [Volar](https://github.com/johnsoncodehk/volar) will help you have a better experience while developing.
 
 ```json
 // tsconfig.json

@@ -8,13 +8,12 @@ lang: en-US
 Rate is a set of radio buttons that allow the user to rate something.
 
 ## Basic usage
-`Rate` uses a five-point scale by default, you can also set `max` to set the maximum score.
-Then confirm the rating by clicking on the stars.
+`Rate` uses a five-point scale by default, though you can set `max` to set the maximum score. Then you can confirm the rating by clicking on the stars.
 
 <demo src="../example/rate/basic.vue"></demo>
 
 ## Custom color
-You can set the color of the rating icon via `color`, and also via `void-color` for unselected rating icons.
+You can set the color of the rating icon via `color` and also via `void-color` for unselected rating icons.
 
 <demo src="../example/rate/customColor.vue"></demo>
 

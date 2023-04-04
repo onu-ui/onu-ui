@@ -9,15 +9,15 @@ Single selection among multiple options.
 
 ## Basic usage
 
-Radio should not have too many options. Otherwise, use the Select component instead.
+`Radio` should not have many options. Otherwise, use the `Select` component instead.
 
-Creating a radio component is easy, you just need to bind a variable to Radio's `v-model`. It equals to the value of `label` of the chosen radio. The type of label is `String`, `Number` or `Boolean`.
+Creating a radio component is easy, just bind a variable to `Radio`'s `v-model`. It equals to the value of `label` of the chosen radio. Labels can be a `String`, `Number` or `Boolean`.
 
 <demo src="../example/radio/basic.vue"></demo>
 
 ## Disabled
 
-`disabled` attribute is used to disable the radio.
+The `disabled` attribute is used to disable the radio.
 
 You just need to add the `disabled` attribute.
 
@@ -25,43 +25,43 @@ You just need to add the `disabled` attribute.
 
 ## Radio button group
 
-Suitable for choosing from some mutually exclusive options.
+Suitable for choosing from mutually exclusive options.
 
-Combine `o-radio-group` with `o-radio` to display a radio group. Bind a variable with `v-model` of `o-radio-group` element and set label value in `o-radio`. It also provides `change` event with the current value as its parameter.
+Combine `o-radio-group` with `o-radio` to display a `Radio` group. Bind a variable with `v-model` of the `o-radio-group` element and set the label value in `o-radio`. It also provides the `change` event with the current value as its parameter.
 
 <demo src="../example/radio/group.vue"></demo>
 
 ## With borders
 
-The `border` attribute adds a border to Radios.
+The `border` attribute adds a border to `Radio`s.
 
 <demo src="../example/radio/border.vue"></demo>
 
 ## Sizes
 
-Besides default size, Radio component provides three additional sizes for you to choose among different scenarios.
+Besides the default size, `Radio` provides three additional sizes for you to choose among different scenarios.
 
-Use attribute size to set additional sizes with `xs`, `sm`, `md`, `lg`.
+Use attribute `size` to set additional sizes with `xs`, `sm`, `md`, `lg`.
 
 <demo src="../example/radio/size.vue"></demo>
 
 ## Colors
 
-You can change the checked color with `fill` prop.
+You can change the checked color with the `fill` prop.
 
 <demo src="../example/radio/color.vue"></demo>
 
 ## Text Colors
 
-You can also individually set the color of the text with `text-color` prop when the radio button is selected.
+You can individually set the color of the text with the `text-color` prop when the radio button is selected.
 
 <demo src="../example/radio/text-color.vue"></demo>
 
 ## Label Colors
 
-You can set the color of the label text with `label-color` prop.
+You can set the color of the label text with the `label-color` prop.
 
-If you do not want label's color to change when selected, you can use `not-text-color` prop.
+If you do not want label's color to change when selected, you can use the `not-text-color` prop.
 
 <demo src="../example/radio/label-color.vue"></demo>
 

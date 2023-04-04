@@ -13,7 +13,7 @@ For more icon information view [@unocss/preset-icons](https://github.com/unocss/
 
 ## Basic usage
 
-Use the `name` attribute to define Icon. In addition,the `o` attribute can be used to set the color theme of the icon.
+Use the `name` attribute to define Icon. In addition, the `o` attribute can be used to set the color theme of the icon.
 
 ```html
 <o-icon o-primary name="i-[icon-name]"></o-icon>

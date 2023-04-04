@@ -9,29 +9,29 @@ Switch is a checkbox that is styled to look like a switch button.
 
 ## Basic usage
 
-Use o variants to determine component colors.
+Use `o` variants to determine component colors.
 
 <demo src="../example/switch/basic.vue"></demo>
 
 ## Light style
 
-If you want to use plain style, just use set `light` attribute to `true`.
+If you want to use the light style, set the `light` attribute to `true`.
 
 <demo src="../example/switch/light.vue"></demo>
 
 ## Custom dot color
 
-Don't like the theme color? Provides you with the greatest possible custom color.
+Don't like the theme color? `Switch` provides access to custom colors.
 
-You can set `o` variant to active color. And set `background-color` attribute to unactive color.
+You can set the `o` variant to a custom active color. Set the `background-color` attribute to an unactive color.
 
 <demo src="../example/switch/customColor.vue"></demo>
 
 ## Sizes
 
-Besides default size, Switch component provides three additional sizes for you to choose among different scenarios.
+Besides the default size, `Switch` provides three additional sizes for you to choose among different scenarios.
 
-Use attribute `size` to set additional sizes with `sm`,`md`,`lg`.
+Use the attribute `size` to set additional sizes with `sm`,`md`,`lg`.
 
 <demo src="../example/switch/size.vue"></demo>
 
@@ -39,7 +39,7 @@ Use attribute `size` to set additional sizes with `sm`,`md`,`lg`.
 
 The `disabled` attribute determines if the switch is disabled.
 
-Use `disabled` attribute to determine whether a switch is disabled. It accepts a `Boolean` value.
+Use the `disabled` attribute to determine whether a switch is disabled. `Switch` accepts a `Boolean` value.
 
 <demo src="../example/switch/disabled.vue"></demo>
 
