@@ -14,6 +14,53 @@ const startLoading = () => {
   <OCard title="Button">
     <div space-y-2>
       <div fsc gap-2>
+        <o-button-group>
+          <OButton type="primary">
+            Previous Page
+            <template #icon>
+              <div i-carbon-chevron-left />
+            </template>
+          </OButton>
+          <OButton type="secondary" class="align-bottom">
+            Next Page <div i-carbon-chevron-right />
+          </OButton>
+        </o-button-group>
+        <o-button-group>
+          <OButton>
+            <template #icon>
+              <div i-carbon-asleep />
+            </template>
+          </OButton>
+          <OButton>
+            <template #icon>
+              <div i-carbon-basketball />
+            </template>
+          </OButton>
+          <OButton>
+            <template #icon>
+              <div i-carbon-ai-status-rejected />
+            </template>
+          </OButton>
+        </o-button-group>
+        <o-button-group spacer>
+          <OButton rounded-full type="primary">
+            <template #icon>
+              <div i-carbon-asleep />
+            </template>
+          </OButton>
+          <OButton rounded-full type="primary">
+            <template #icon>
+              <div i-carbon-basketball />
+            </template>
+          </OButton>
+          <OButton rounded-full type="primary">
+            <template #icon>
+              <div i-carbon-ai-status-rejected />
+            </template>
+          </OButton>
+        </o-button-group>
+      </div>
+      <div fsc gap-2>
         <OButton o="primary">
           Primary
         </OButton>
