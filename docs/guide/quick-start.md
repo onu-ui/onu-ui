@@ -68,4 +68,4 @@ Developers interested in contributing should read the [Code of Conduct](https://
 
 Thank you to all the people who already contributed to Onu UI!
 
-<a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contributors.nn.ci/api?repo=onu-ui/onu-ui" /></a>
+<a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contrib.rocks/image?repo=onu-ui/onu-ui" /></a>
