@@ -8,20 +8,20 @@ lang: en-US
 Badges are used to inform the user of the status of specific data.
 
 ## Basic usage
-`Badge` use `error` theme color by default. You only need to set the `value` attribute to display the corresponding badge.
+`Badge` uses the `error` theme by default. You only need to set the `value` attribute to display the corresponding badge.
 
 <demo src="../example/badge/basic.vue"></demo>
 
 ## Custom color
-We have `o` variant to handle contextual colors.
+The `o` variant handles contextual colors.
 
-`Badge` can also be used as a dot. You can set `dot` attribute to display a dot. And it has the highest priority.
+`Badge` can also be used as a dot. You can set `dot` attribute to display a dot. Dots have the highest priority.
 
 <demo src="../example/badge/customColor.vue"></demo>
 
 ## Values
 `Badge` can display a number or a string. If the value is greater than 99, it will be displayed as 99+.
-Or you can set `max` attribute to change the maximum value.
+Otherwise, you can set the `max` attribute to change the maximum value.
 
 <demo src="../example/badge/values.vue"></demo>
 

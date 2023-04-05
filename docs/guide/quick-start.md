@@ -16,7 +16,7 @@ Onu UI is beautiful by design and features a suite of customization options that
 
 The component library is written with the latest [Vue3 setup script](https://vuejs.org/guide/typescript/composition-api.html), full of [Typescript](https://www.typescriptlang.org/), and uses [Vite](https://vitejs.dev/) and [Tsup](https://github.com/egoist/tsup) to package and build the component library. In addition, we also embrace the latest front-end ecological cutting-edge technology, thanks to [VueUse](https://vueuse.org/), and the huge Vite plugin ecosystem. 
 
-To know how to install it, please see [Installation](./install.md).
+To install, please see [Installation](./install.md).
 
 ![img](https://cdn.nlark.com/yuque/0/2023/png/785653/1677748502094-f75aeae1-817c-4689-ade1-cb6fb3c794a6.png)
 
@@ -60,7 +60,7 @@ You can subscribe to this feed for new version notifications: https://github.com
 
 Open a [issue](https://github.com/onu-ui/onu-ui/issues) to request help.
 
-If you take maybe some bugs, please use the `OnuUI Playground(todo)` to provide a minimal reproduction.
+If you submit any bugs, please use the `OnuUI Playground(todo)` to provide a minimal reproduction.
 
 ## Contributing
 

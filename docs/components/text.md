@@ -9,25 +9,25 @@ Used for text.
 
 ## Basic usage
 
-Use the `type` attribute to define Text's type.
+Use the `type` attribute to define the `Text` type.
 
 <demo src="../example/text/basic.vue"></demo>
 
 ## Gradient
 
-Use the `gradient` to render a gradient Text.
+Use the `gradient` attribute to render a gradient `Text`.
 
 <demo src="../example/text/gradient.vue"></demo>
 
 ## Size
 
-Use attribute `size` to set additional sizes with `xs`, `sm`, `md`(base) or `lg`.
+Use the `size` attribute to set additional sizes with `xs`, `sm`, `md`(default) or `lg`.
 
 <demo src="../example/text/size.vue"></demo>
 
 ## Ellipsis
 
-Pass the `truncated` prop to render an ellipsis when the text exceeds the width of the viewport or max-width set.
+Pass the `truncated` prop to render an ellipsis when the text exceeds the width of the viewport or the max-width set.
 
 <demo src="../example/text/ellipsis.vue"></demo>
 
