@@ -62,7 +62,11 @@ Use the `icon` slots or `icon` property to add icon.
 
 ## Button Group
 
-TODO
+Displayed as a button group, can be used to group a series of similar operations.
+
+Use tag `<o-button-group>` to group your buttons.
+
+<demo src="../example/button/group.vue"></demo>
 
 ## Loading Button
 
@@ -80,7 +84,9 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 
 <demo src="../example/button/size.vue"></demo>
 
-## Button Props
+## Button API
+
+### Button Props
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Button type. |
@@ -94,10 +100,24 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 | disabled | `boolean` | `false` | Disable the button. |
 
 
-
-## Button Slots
+### Button Slots
 
 | Name | Parameters | Description | 
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 | icon | `()` | Customize icon component. |
+
+## Button Group API
+
+### Button Group Props
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `''` | Control the size of buttons in this button-group. |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `''` | Control the size of buttons in this button-group.  |
+| spacer | `boolean` | `false` |  The dividing line between groups of buttons.  |
+
+### Button Group Slots
+
+| Name | Parameters | Description | 
+| --- | --- | --- |
+| default | `Button` | Customize button group content. |
