@@ -1,6 +1,6 @@
 {
   "name": "@onu-ui/preset",
-  "version": "1.0.13",
+  "version": "1.0.14-beta.0",
   "description": "Onu-UI css rules for unocss preset",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
