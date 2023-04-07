@@ -108,7 +108,7 @@ export const lightTheme = {
   '--onu-colors-border': '#dcdfe6',
   '--onu-colors-border-light': '#efeff5',
   '--onu-colors-border-darker': '#cdd0d6',
-
+  '--onu-colors-maskBg': 'rgba(0, 0, 0, .3)',
   '--onu-colors-headerBackground': 'hsla(0,0%,100%,0.8)',
   '--onu-colors-menuBackground': 'rgba(255, 255, 255, 0.8)',
   '--onu-colors-headerIconColor': 'var(--onu-colors-gray400)',

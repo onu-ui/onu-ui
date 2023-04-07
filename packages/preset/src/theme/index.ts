@@ -44,6 +44,7 @@ export default {
     embed: 'var(--onu-colors-embed)',
     darkContext: 'var(--onu-colors-darkContext)',
     lightContext: 'var(--onu-colors-lightContext)',
+    maskBg: 'var(--onu-colors-maskBg)',
   },
   fontFamily: {
     sans: 'Avenir, Helvetica, Arial, sans-serif',
@@ -57,6 +58,7 @@ export default {
     trigger: '0px 4px 10px #0000001a',
     cardMD: '0px 0px 12px rgb(0 0 0 / 12%)',
     cardSM: '0px 0px 6px rgb(0 0 0 / 12%)',
+    dialog: '0 5px 30px 0 rgb(0 0 0 / 12%)',
   },
   animation: {
     keyframes: {

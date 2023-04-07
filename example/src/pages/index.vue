@@ -10,10 +10,11 @@
     <TheTag />
     <TheLink />
     <TheAffix />
-    <TheRadio /> -->
+    <TheRadio />
     <TheButton />
     <TheMessage />
-    <TheEmpty />
+    <TheEmpty /> -->
+    <TheDialog />
     <!-- <TheText />
     <TheProgress />
     <TheBacktop />
