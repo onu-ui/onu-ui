@@ -10,4 +10,19 @@ describe('o-button-group', () => {
 
     expect(wrapper.html()).toContain('Test')
   })
+  test('render the correct amount of buttons', () => {
+    const buttons = [1, 2, 3].map(() => OButton)
+
+    const wrapper = mount(OButtonGroup, {
+      slots: {
+        default: buttons,
+      },
+      propsData: {
+        value: 'test-button-group',
+      },
+    })
+
+    const renderedButtons = wrapper.findAllComponents(OButton)
+    expect(renderedButtons.length).toBe(buttons.length)
+  })
 })
