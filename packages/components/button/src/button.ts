@@ -18,6 +18,10 @@ export const buttonProps = {
   disabled: Boolean,
   loading: Boolean,
   icon: String,
+  value: {
+    type: [String, Number, undefined] as PropType<string | number | undefined>,
+    default: undefined,
+  },
 }
 
 export type OButtonProps = ExtractPropTypes<typeof buttonProps>
