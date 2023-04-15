@@ -17,12 +17,27 @@ describe('o-button-group', () => {
       slots: {
         default: buttons,
       },
-      propsData: {
-        value: 'test-button-group',
-      },
     })
 
     const renderedButtons = wrapper.findAllComponents(OButton)
     expect(renderedButtons.length).toBe(buttons.length)
+  })
+  test('updates v-model value to the correct button clicked', async () => {
+    const buttons = [1, 2, 3].map(index => shallowMount(OButton, { props: { value: index } }))
+
+    const wrapper = mount(OButtonGroup, {
+      slots: {
+        default: buttons,
+      },
+      props: {
+        'modelValue': '1',
+        'onUpdate:modelValue': (value: string) => wrapper.setProps({ modelValue: value }),
+      },
+
+    })
+
+    await wrapper.find('button:nth-child(3)').trigger('click')
+
+    expect(wrapper.props('modelValue')).toBe(2)
   })
 })
