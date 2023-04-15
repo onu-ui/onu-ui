@@ -4,6 +4,7 @@ import { buttonProps } from './button'
 export const buttonGroupProps = {
   type: buttonProps.type,
   size: buttonProps.size,
+  multiple: Boolean,
   spacer: Boolean,
 }
 
