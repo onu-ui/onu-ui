@@ -3,6 +3,9 @@ import { buttonProps } from './button'
 import { buttonGroupContextKey } from './constants'
 
 const props = defineProps(buttonProps)
+
+const emit = defineEmits(['click'])
+
 const buttonGroupContext = inject(buttonGroupContextKey, undefined)
 
 // todo: The property should follow this inheritance rule: component props > custom group rule > formItem props > form props > global size > default
@@ -17,6 +20,10 @@ const defaultText = computed(() => _type.value === 'default' && props.text)
 const slots = useSlots()
 const onlyIcon = computed(() => (slots.icon || props.icon) && !slots.default)
 const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
+
+const onClick = (event) => {
+  emit('click', event, props.value)
+}
 </script>
 
 <template>
@@ -39,6 +46,7 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
       defaultText ? 'o-button-defaultText' : '',
       dashed && 'border-dashed',
     ]"
+    @click="onClick"
   >
     <div v-if="loading" i-carbon-circle-dash animate-spin />
     <slot v-else name="icon">
