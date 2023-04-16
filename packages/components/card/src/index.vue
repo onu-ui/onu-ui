@@ -41,7 +41,7 @@ const shadowCls: Record<ShadowType, string> = {
     <!-- header -->
     <div :class="[slots.header && 'o-card-header']">
       <slot name="header">
-        <div v-if="needRenderHeader" class="o-card-header">
+        <div v-if="needRenderHeader">
           <div class="o-card-header-wrapper">
             <h4 v-if="title" class="o-card-header-title">
               {{ title }}
@@ -50,15 +50,15 @@ const shadowCls: Record<ShadowType, string> = {
               {{ description }}
             </p>
           </div>
-          <div class="o-card-header-extra">
-            <slot name="extra">
-              <OButton v-if="extra" o="primary" text size="xs">
-                {{ extra }}
-              </OButton>
-            </slot>
-          </div>
         </div>
       </slot>
+      <div class="o-card-header-extra">
+        <slot name="extra">
+          <OButton v-if="extra" o="primary" text size="xs">
+            {{ extra }}
+          </OButton>
+        </slot>
+      </div>
     </div>
     <!-- body -->
     <div
