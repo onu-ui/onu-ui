@@ -55,6 +55,8 @@ You can change the background of the Progress with the `bg-color` property.
 
 You can add `striped` prop to Progress to apply a stripe over the progress bar's background color.
 
+You can use `striped-flow` to get the stripes to flow, with `duration` to control the animation duration.
+
 <demo src="../example/progress/striped.vue"></demo>
 
 ## Circular Progress
@@ -85,10 +87,11 @@ Use default slot to add customized content.
 | text-inside | `boolean` | `false` | Whether to place the percentage inside progress bar, only works when `type` is 'line'. |
 | status | `'success' \| 'error' \| 'warning'` | `''` | The current status of progress bar. |
 | indeterminate | `boolean` | `false` | Set indeterminate progress. |
-| duration | `number` | `3` | Control the animation duration of indeterminate progress. |
+| duration | `number` | `3` | Control the animation duration of indeterminate progress or striped flow progress. |
 | color | `string \| function \| array` | `''` | Progress bar color. Overrides `status` prop. |
 | bg-color | `string \| function \| array` | `''` | Progress bar Background color. |
 | striped | `boolean` | `false` | Stripe over the progress bar's color. |
+| striped-flow | `boolean` | `false` | Get the stripes to flow. |
 | not-text-color | `boolean` | `false` | Do not synchronize the text color with the progress bar color. |
 | width | `number` | `126` | The canvas width of circle progress bar. |
 | show-text | `boolean` | `true` | Whether to show percentage. |

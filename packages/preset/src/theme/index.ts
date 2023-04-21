@@ -65,13 +65,16 @@ export default {
         80%{ box-shadow: 0 0 0 6px #1890ff1a; }
         100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
       indeterminate: '{0%{ left: -100%; } 100%{ left: 100%; }}',
+      stripedFlowing: '{0%{background-position: -100%;} 100%{background-position: 100%;}}',
     },
     durations: {
       switching: '0.3s',
       indeterminate: '3s',
+      stripedFlowing: '3s',
     },
     counts: {
       indeterminate: 'infinite',
+      stripedFlowing: 'infinite',
     },
   },
 } as Theme
