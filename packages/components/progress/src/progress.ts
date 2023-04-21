@@ -106,6 +106,10 @@ export const progressProps = {
   },
   striped: Boolean,
   /**
+   * @description Let the stripes flow.
+   */
+  stripedFlow: Boolean,
+  /**
    * @direction Do not synchronize the text color with the progress bar color.
    */
   notTextColor: Boolean,

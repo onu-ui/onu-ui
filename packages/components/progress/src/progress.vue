@@ -186,6 +186,7 @@ function getColors(color: ProgressColor[]) {
           class="o-progress-bar-inner"
           :class="[
             indeterminate && `o-progress-indeterminate`,
+            striped && stripedFlow && `animate-stripedFlowing`,
             color ? `bg-${stroke}Base` : `bg-${status || 'primary'}Base`]"
           :style="barStyle"
         >
