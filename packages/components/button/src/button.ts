@@ -15,6 +15,7 @@ export const buttonProps = {
     type: String as PropType<SizeType | ''>,
     default: '',
   },
+  rounded: Boolean,
   disabled: Boolean,
   loading: Boolean,
   icon: String,
