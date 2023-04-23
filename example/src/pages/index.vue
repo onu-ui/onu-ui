@@ -14,12 +14,12 @@
     <TheButton />
     <TheMessage />
     <TheEmpty />
-    <!-- <TheText />
+    <TheText />
     <TheProgress />
     <TheBacktop />
     <ThePopup />
     <TheRate />
-    <TheCollapse /> -->
+    <TheCollapse />
     <TheToolTip />
   </div>
 </template>
