@@ -27,6 +27,7 @@ declare module 'vue' {
     OText: typeof import('onu-ui')['OText']
     OProgress: typeof import('onu-ui')['OProgress']
     OButtonGroup: typeof import('onu-ui')['OButtonGroup']
+    OToolTip: typeof import('onu-ui')['OToolTip']
   }
 }
 export {}

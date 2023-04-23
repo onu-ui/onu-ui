@@ -24,6 +24,7 @@ import {
   OSwitch,
   OTag,
   OText,
+  OToolTip,
   OTrigger,
 } from '@onu-ui/components'
 
@@ -56,4 +57,5 @@ export default [
   OAffix,
   OText,
   OProgress,
+  OToolTip,
 ] as Plugin[]

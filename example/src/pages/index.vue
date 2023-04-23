@@ -20,5 +20,6 @@
     <ThePopup />
     <TheRate />
     <TheCollapse /> -->
+    <TheToolTip />
   </div>
 </template>
