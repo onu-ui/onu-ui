@@ -12,8 +12,8 @@ function handleToClickBasic(theme: string, icon: string) {
 <template>
   <div space-y-2>
     <div fscw gap-2>
-      <o-button type="secondary" @click="handleToClickBasic('secondary', 'i-eos-icons:loading')">
-        <o-icon name="i-eos-icons:loading" class="!text-white text-2xl" />
+      <o-button type="primary" @click="handleToClickBasic('primary', 'i-carbon:logo-twitter')">
+        <o-icon name="i-carbon:logo-twitter" class="!text-white text-2xl" />
       </o-button>
       <o-button type="error" @click="handleToClickBasic('error', 'i-carbon:logo-youtube')">
         <o-icon name="i-carbon:logo-youtube" class="!text-white text-2xl" />

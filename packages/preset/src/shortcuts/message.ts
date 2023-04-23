@@ -3,7 +3,7 @@ import type { ThemeType } from '../type'
 
 export const messageShortcuts: Record<string, string> = {
   // message
-  'o-message-base': 'fixed o-transparent left-1/2 translate-x--1/2 o-transition shadow-md py-2 px-3 fi rounded of-hidden gap-3 text-sm font-semibold',
+  'o-message-base': 'fixed bg-baseBackground dark-bg-arrow c-baseText left-1/2 translate-x--1/2 o-transition shadow-md py-2 px-3 fi rounded of-hidden gap-3 text-sm font-semibold',
   'o-message-closable': 'cursor-pointer',
   'o-message-content': 'fi gap-2',
 }
