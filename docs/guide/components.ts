@@ -140,6 +140,12 @@ export const Components: ComponentListItem[] = [
         icon: '/svgs/popup.svg',
       },
       {
+        name: 'ToolTip',
+        description: 'Tooltip can be used to show a message when hovering over an element.',
+        link: '/components/tooltip.html',
+        icon: '/svgs/tooltip.svg',
+      },
+      {
         name: 'Collapse',
         description: 'Collapse is used for showing and hiding content.',
         link: '/components/collpase.html',

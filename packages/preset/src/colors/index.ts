@@ -86,6 +86,7 @@ export const lightTheme = {
   '--onu-colors-black-light': 'var(--onu-colors-white)',
 
   '--onu-colors-background': 'var(--onu-colors-white)',
+  '--onu-colors-darker': '#303133',
   '--onu-colors-background-light': 'var(--onu-colors-black-light)',
   '--onu-colors-background-gray': 'var(--onu-colors-gray600)',
   '--onu-colors-background-gray-light': 'var(--onu-colors-gray200)',

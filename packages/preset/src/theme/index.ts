@@ -41,6 +41,7 @@ export default {
     darkText: 'var(--onu-colors-text-darker)',
     darkSubText: 'var(--onu-colors-text-light)',
     grayBg: 'var(--onu-colors-grayBg)',
+    darkerBg: 'var(--onu-colors-darker)',
     embed: 'var(--onu-colors-embed)',
     darkContext: 'var(--onu-colors-darkContext)',
     lightContext: 'var(--onu-colors-lightContext)',

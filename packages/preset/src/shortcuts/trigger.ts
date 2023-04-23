@@ -1,7 +1,12 @@
 export const triggerShortcuts: Record<string, string> = {
   // trigger
-  'o-trigger-popup-content': 'box-border px-2 py-3 shadow-trigger rounded dark:bg-arrow c-context bg-baseBackground b-lightBorder border text-sm c-baseText',
+  'o-trigger-popup-content': 'box-border px-2 py-3 shadow-trigger rounded dark:bg-arrow c-context bg-baseBackground b-lightBorder border text-sm',
   'o-trigger-popup-arrow': 'absolute z-2 bg-light-100 dark:(bg-grayBg b-grayBg) border b-light-900 box-border w-2 h-2 ',
+  'o-trigger-popup-tooltip': 'p-2',
+  'o-trigger-popup-darker': 'bg-darkerBg c-lightContext dark-bg-darkerBg dark-c-lightContext',
+  'o-trigger-popup-lighter': 'bg-white c-darkContext dark-bg-white',
+  'o-trigger-popup-arrow-darker': 'bg-darkerBg b-darkerBg',
+  'o-trigger-popup-arrow-lighter': 'bg-white b-light-900 dark-bg-white dark-b-light-900',
   'o-trigger-top': 'b-t-0 b-l-0 rounded-br-sm',
   'o-trigger-left': 'b-b-0 b-l-0 rounded-tr-sm',
   'o-trigger-right': 'b-t-0 b-r-0 rounded-bl-sm',

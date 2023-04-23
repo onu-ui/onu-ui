@@ -12,6 +12,10 @@ export const toolTipProps = {
     type: Boolean,
     default: false,
   },
+  type: {
+    type: String as PropType<'Dark' | 'Light'>,
+    default: 'Dark',
+  },
   content: String,
   /** trigger type: 'hover','click','focus','contextMenu' */
   trigger: {
@@ -51,6 +55,7 @@ export const toolTipProps = {
   contentStyle: {
     type: Object as PropType<CSSProperties>,
   },
+  backgroundColor: String,
   /**
    * The class name of the popup arrow
    */

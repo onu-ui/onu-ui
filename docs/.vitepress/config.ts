@@ -118,6 +118,10 @@ const components = [
         link: '/components/popup',
       },
       {
+        text: 'ToolTip',
+        link: '/components/tooltip',
+      },
+      {
         text: 'Collapse',
         link: '/components/collapse',
       },

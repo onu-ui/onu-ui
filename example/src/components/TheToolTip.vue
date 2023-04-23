@@ -146,6 +146,29 @@
           </OToolTip>
         </div>
       </OCard>
+      <OCard title="backgroundColor" description="Custom BackgroundColor">
+        <div fsc gap-2>
+          <OToolTip content="Here is the text content" background-color="#722ED1">
+            <o-button type="secondary">
+              backgroundColor
+            </o-button>
+          </OToolTip>
+        </div>
+      </OCard>
+      <OCard title="Type" description="ToolTip Type">
+        <div fsc gap-2>
+          <OToolTip content="Here is the text content" type="Light">
+            <o-button>
+              Light
+            </o-button>
+          </OToolTip>
+          <OToolTip content="Here is the text content" type="Dark">
+            <o-button type="info">
+              Dark
+            </o-button>
+          </OToolTip>
+        </div>
+      </OCard>
     </div>
   </o-card>
 </template>
