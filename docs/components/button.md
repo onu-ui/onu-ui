@@ -23,7 +23,7 @@ Use `disabled` attribute to determine whether a button is disabled. It accepts a
 
 ## Rounded Button
 
-Use `rounded-full` or `rounded="full"` attribute to define a rounded Button
+Use `rounded-full` shortcut of unocss or `rounded` attribute to define a rounded Button.
 
 <demo src="../example/button/round.vue"></demo>
 
@@ -92,6 +92,8 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 | type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Button type. |
 | size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Button size.  |
 | light | `boolean` | `false` |  Determine whether it's a light button.  |
+| dashed | `boolean` | `false` |  Determine whether it's a dashed button.  |
+| shadow | `boolean` | `false` |  Show button's shadow.  |
 | text | `boolean` | `false` | Determine whether it's a text button. |
 | to | `string` | `undefined` | Determine whether it's a link button. |
 | rounded | `boolean` | `false` | Determine whether it's a round button. |

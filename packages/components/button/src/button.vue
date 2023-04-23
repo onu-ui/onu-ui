@@ -34,6 +34,7 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
       typeBtn && `o-solid ${isDisabled ? '' : `hover-border-${_type}BorderHover hover-bg-${_type}LightHover hover-text-white active-text-white active-border-${_type}BorderActive active-bg-${_type}LightActive`} `,
       typeLight && `${isDisabled ? 'o-button-light-disable' : 'o-button-light'}`,
       text && `${isDisabled ? 'o-button-text-disable' : 'o-button-text'}`,
+      rounded && 'rounded-full',
       shadow ? 'shadow-context:50' : 'shadow-transparent',
       defaultLight ? 'o-button-defaultLight' : '',
       defaultText ? 'o-button-defaultText' : '',
