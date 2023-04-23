@@ -4,5 +4,9 @@ export default {
     empty: {
       emptyText: '暂无数据',
     },
+    dialog: {
+      cancelText: '取消',
+      okText: '确定',
+    },
   },
 }

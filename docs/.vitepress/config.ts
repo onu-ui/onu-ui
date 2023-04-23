@@ -106,6 +106,10 @@ const components = [
     collapsed: false,
     items: [
       {
+        text: 'Dialog',
+        link: '/components/dialog',
+      },
+      {
         text: 'Alert',
         link: '/components/alert',
       },

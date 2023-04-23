@@ -12,6 +12,7 @@ import {
   OCollapse,
   OCollapseItem,
   OConfigProvider,
+  ODialog,
   OEmpty,
   OIcon,
   OLink,
@@ -56,4 +57,5 @@ export default [
   OAffix,
   OText,
   OProgress,
+  ODialog,
 ] as Plugin[]

@@ -21,6 +21,7 @@ import { emptyShortcuts } from './empty'
 import { linkShortcuts } from './link'
 import { radioShortcuts } from './radio'
 import { progressShortcuts } from './progress'
+import { dialogShortcuts } from './dialog'
 
 export default [
   baseShortcuts,
@@ -64,4 +65,6 @@ export default [
   radioShortcuts,
   // progress
   progressShortcuts,
+  // dialog
+  dialogShortcuts,
 ] as UserShortcuts<Theme>

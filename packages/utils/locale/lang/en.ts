@@ -4,5 +4,9 @@ export default {
     empty: {
       emptyText: 'No data',
     },
+    dialog: {
+      cancelText: 'cancel',
+      okText: 'confirm',
+    },
   },
 }
