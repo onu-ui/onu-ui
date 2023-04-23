@@ -12,5 +12,10 @@
     "vue-sfc"
   ],
   "i18n-ally.keystyle": "nested",
-  "unocss.root": ["./docs","./packages/components","./playground","./example"],
+  "unocss.root": [
+    "./docs",
+    "./packages/components",
+    "./playground",
+    "./example"
+  ],
 }
