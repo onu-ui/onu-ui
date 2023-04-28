@@ -30,15 +30,21 @@ features:
   - icon: 🌈 
     title: Components Design
     details: Onu provides neat & beautiful crafted UI components.
+    link: /guide/overview.html
+    linkText: Getting Started
   - icon: 🔥 
     title: Introduce on demand 
     details: Provide resolver to automatically import only used components.
+    link: /guide/install.html
+    linkText: Learn More
   - icon: 🎉
     title: TS Supported
     details: Support TypeScript & type checked & type inference.
   - icon: 💎
     title: Iconify Icons
     details:  Use any icon from the library you love.
+    link: /components/icon.html
+    linkText: Getting Started
   - icon: 🍬
     title: CSS Preset
     details: Has UnoCSS preset package to use, rendered UI easily.

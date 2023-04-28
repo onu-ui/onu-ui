@@ -2,20 +2,10 @@
  * Colors
  * -------------------------------------------------------------------------- */
 :root {
-  /* --vp-c-accent: #dab40b;
-  --vp-c-brand: #6da13f;
-  --vp-c-brand-light: #7ec242;
-  --vp-c-brand-lighter: #93d31c;
-  --vp-c-brand-dark: #668d11;
-  --vp-c-brand-darker: #52730d; */
-  /* --vp-c-text-code: #5d6f5d; */
   --vp-code-block-bg: rgba(125, 125, 125, 0.04);
-  /* fix TIP on light: the default one is too light (2 in contrast) */
   --vp-custom-block-tip-text: rgb(12, 124, 108);
   --vp-custom-block-tip-border: rgba(12, 124, 108, 0.5);
   --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1);
-  /* fix contrast on gray cards: used by --vp-c-text-2 */
-  /* --vp-c-text-light-2: rgba(56 56 56 / 70%); */
   --vp-custom-title-text: #606266;
   --vp-layout-max-width: 1580px;
   --vp-sidebar-width: 252px;
@@ -30,6 +20,8 @@
   --n-border-color-popover: rgba(239, 239, 245, 1);
   --n-border-radius: 3px;
   --n-font-size: 14px;
+  --vp-code-tab-active-text-color: var(--vp-c-text-1);
+  --vp-code-copy-code-active-text: var(--vp-c-text-2);
   --n-th-color: rgba(250, 250, 252, 1);
   --n-th-color-modal: rgba(250, 250, 252, 1);
   --n-th-color-popover: rgba(250, 250, 252, 1);
@@ -63,6 +55,13 @@
     #42d392 50%
   );
   --vp-home-hero-image-filter: blur(40px);
+
+  --vp-code-tab-divider: var(--vp-c-divider);
+  --vp-code-copy-code-bg: rgba(125,125,125,0.1);
+  --vp-code-copy-code-hover-bg: rgba(125,125,125,0.2);
+  --vp-c-disabled-bg: rgba(125,125,125,0.2);
+  --vp-code-tab-text-color: var(--vp-c-text-2);
+  --vp-code-tab-hover-text-color: var(--vp-c-text-1);
 }
 
 @media (min-width: 640px) {
@@ -80,11 +79,9 @@
 .dark {
   --vp-code-block-bg: rgba(0, 0, 0, 0.2);
   --vp-c-text-code: #c0cec0;
-  /* fix TIP: check the same above (these are the defaults) */
   --vp-custom-block-tip-text: rgb(18, 181, 157);
   --vp-custom-block-tip-border: rgba(18, 181, 157, 0.5);
   --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1);
-  /* fix contrast on gray cards: check the same above (this is the default) */
   --vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
   --vp-custom-title-text: #cfd3dc;
 
@@ -111,6 +108,33 @@
   --n-code-text-color: rgba(255, 255, 255, 0.82);
   --n-code-color: rgba(255, 255, 255, 0.12);
   --n-code-border: 1px solid #0000;
+  --vp-code-tab-text-color: var(--vp-c-text-dark-2);
+  --vp-code-tab-active-text-color: var(--vp-c-text-dark-1);
+  --vp-code-tab-hover-text-color: var(--vp-c-text-dark-1);
+  --vp-code-copy-code-active-text: var(--vp-c-text-dark-2);
+}
+
+
+/* Safari has a very bad performance on gradient and filter */
+.browser-safari, .browser-firefox {
+  --vp-home-hero-image-background-image: transparent;
+  --vp-home-hero-image-filter: '';
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.dark {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
 }
 
 .dark [img-light] {
@@ -242,3 +266,57 @@ b {
   max-width: 368px!important;
 }
 
+.vp-code-group .tabs label {
+  background-color: transparent;
+}
+
+table {
+  width: 100% !important;
+  display: table;
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand);
+}
+
+.VPHero .image-bg {
+  z-index: 1;
+  opacity: 0.8;
+  transition: opacity 1s ease;
+}
+
+.VPHero .image-container:hover .image-bg {
+  opacity: 0.2;
+}
+
+
+/**
+ * VitePress: Custom fix
+ * -------------------------------------------------------------------------- */
+
+/*
+  Use lighter colors for links in dark mode for a11y.
+  Also specify some classes twice to have higher specificity
+  over scoped class data attribute.
+*/
+.dark .vp-doc a,
+.dark .vp-doc a > code,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink:hover,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink.active,
+.dark .link.link:hover,
+.dark .link.link.active,
+.dark .edit-link-button.edit-link-button,
+.dark .pager-link .title {
+  color: var(--vp-c-brand-lighter);
+}
+
+.dark .vp-doc a:hover,
+.dark .vp-doc a > code:hover {
+  color: var(--vp-c-brand-lightest);
+  opacity: 1;
+}
+
+/* Transition by color instead of opacity */
+.dark .vp-doc .custom-block a {
+  transition: color 0.25s;
+}

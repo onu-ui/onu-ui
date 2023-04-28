@@ -17,7 +17,7 @@ const teamMembers = [
     avatar: 'https://www.github.com/yzh990918.png',
     name: 'yzh990918',
     desc: 'Author, Core team member of OnuUI',
-    title: 'An open source fullstack developer',
+    title: 'An open source developer',
     links: [
       { icon: 'github', link: 'https://github.com/yzh990918' },
       { icon: 'twitter', link: 'https://twitter.com/zhihaoy18640576i' },
