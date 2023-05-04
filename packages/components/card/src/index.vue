@@ -7,7 +7,7 @@ const props = defineProps(cardProps)
 const slots = useSlots()
 
 // 是否展示头部区域
-const needRenderHeader = computed(() => !slots.header && (props.title || props.description || props.extra || slots.extra))
+const needRenderHeader = computed(() => (!slots.header && (props.title || props.description || props.extra || slots.extra)) || slots.header)
 const needRenderBody = computed(() => props.content || slots.default)
 const needRenderActions = computed(() => slots.actions)
 const onlyRenderContent = !needRenderHeader.value && !needRenderActions.value && needRenderBody.value
@@ -39,7 +39,7 @@ const shadowCls: Record<ShadowType, string> = {
       <img :src="cover">
     </div>
     <!-- header -->
-    <div :class="[slots.header && 'o-card-header']">
+    <div class="relative" :class="[slots.header && 'o-card-header']">
       <slot name="header">
         <div v-if="needRenderHeader" class="o-card-header">
           <div class="o-card-header-wrapper">
@@ -50,15 +50,15 @@ const shadowCls: Record<ShadowType, string> = {
               {{ description }}
             </p>
           </div>
-          <div class="o-card-header-extra">
-            <slot name="extra">
-              <OButton v-if="extra" o="primary" text size="xs">
-                {{ extra }}
-              </OButton>
-            </slot>
-          </div>
         </div>
       </slot>
+      <div class="o-card-header-extra">
+        <slot name="extra">
+          <OButton v-if="extra" type="primary" text size="xs">
+            {{ extra }}
+          </OButton>
+        </slot>
+      </div>
     </div>
     <!-- body -->
     <div

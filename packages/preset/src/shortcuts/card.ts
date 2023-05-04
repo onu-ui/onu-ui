@@ -9,7 +9,7 @@ export const cardShortcuts: Record<string, string> = {
   'o-card-header-wrapper': 'flex flex-col flex-1 gap-1.5',
   'o-card-header-title': 'text-title font-medium',
   'o-card-header-description': 'text-xs text-darkSubText break-all !m-0',
-  'o-card-header-extra': '',
+  'o-card-header-extra': 'absolute right-4 top-2.5',
   'o-card-body': 'p-4 pt-1.5 leading-normal text-sm dark:c-darkText',
   'o-card-actions': 'p-4 pt-2',
   'o-card-bordered': 'border b-lightBorder important-shadow-none',
