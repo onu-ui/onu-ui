@@ -312,7 +312,7 @@ table {
 
 .dark .vp-doc a:hover,
 .dark .vp-doc a > code:hover {
-  color: var(--vp-c-brand-lightest);
+  /* color: var(--vp-c-brand-lightest); */
   opacity: 1;
 }
 

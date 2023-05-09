@@ -16,7 +16,7 @@ const teamMembers = [
   {
     avatar: 'https://www.github.com/yzh990918.png',
     name: 'yzh990918',
-    desc: 'Author, Core team member of OnuUI',
+    desc: 'Author of OnuUI & Core team member of Anse',
     title: 'An open source developer',
     links: [
       { icon: 'github', link: 'https://github.com/yzh990918' },

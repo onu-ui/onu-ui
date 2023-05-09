@@ -3,7 +3,7 @@
 ::: tip NOTICE !
 [Onu UI](https://github.com/onu-ui/onu-ui) is currently in WIP. It is not yet ready for production use. We appreciate your support and feedback as we work to make it ready for everyone.
 
-We anticipate resuming development of the component library by the end of March, at which point we will be offering theme configuration options and enhancing the overall ecosystem of complex components for daily business use. Stay tuned for further updates.
+At present, the component library still needs a large number of components. You are welcome to contribute components, and you are also welcome to make comments and suggestions!
 :::
 
 ## Introduction
@@ -18,7 +18,16 @@ The component library is written with the latest [Vue3 setup script](https://vue
 
 To install, please see [Installation](./install.md).
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/785653/1677748502094-f75aeae1-817c-4689-ade1-cb6fb3c794a6.png)
+
+## Features
+
+- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
+- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
+- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
+- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
+- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
+- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
+
 
 ## Online Playground
 
@@ -30,15 +39,11 @@ To install, please see [Installation](./install.md).
 <img src="https://img.shields.io/badge/Try%20on%20Stackblitz-1877F2?style=for-the-badge&logo=stackblitz&logoColor=white" height="35" />
 </a>
 
+## Best Practice
 
-## Features
+- [onu-starter](https://github.com/yzh990918/onu-starter)
 
-- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
-- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
-- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
-- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
-- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
+More coming soon... welcome PR.
 
 ## Environment
 
@@ -49,18 +54,20 @@ All components supported in modern browsers, support of neerly two or three vers
 | last 2 versions                                                         | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              |
 
 
-
 ## Latest Version
 
 [![npm version](https://img.shields.io/github/package-json/v/onu-ui/onu-ui)](https://www.npmjs.com/package/onu-ui)
 
 You can subscribe to this feed for new version notifications: https://github.com/onu-ui/onu-ui/releases
 
-## Issue Help
+## Discussions
 
-Open a [issue](https://github.com/onu-ui/onu-ui/issues) to request help.
+Since `OnuUI` is under intensive development, we need your valuable comments and feature requirements of the component
 
-If you submit any bugs, please use the `OnuUI Playground(todo)` to provide a minimal reproduction.
+Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
+
+If you submit any bugs, please use the [OnuUI Playground](https://onu.zyob.top/play/) to provide a minimal reproduction.
+
 
 ## Contributing
 
