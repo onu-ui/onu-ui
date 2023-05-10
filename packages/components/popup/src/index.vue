@@ -23,6 +23,7 @@ const handlePopupVisibleChange = (visible: boolean) => {
     :position="position"
     :popup-container="popupContainer"
     :popup-visible="computedPopupVisible"
+    :update-at-scroll="updateAtScroll"
     show-arrow
     :popup-offset="10"
     :content-class="['o-trigger-popup-content', contentClass]"

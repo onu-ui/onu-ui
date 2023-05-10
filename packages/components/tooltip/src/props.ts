@@ -74,6 +74,12 @@ export const toolTipProps = {
   popupContainer: {
     type: [String, Object] as PropType<string | HTMLElement | undefined>,
   },
+
+  /** Whether to update the position of the popup when the container is scrolled */
+  updateAtScroll: {
+    type: Boolean,
+    default: false,
+  },
 }
 
 export const toolTipEmits = {
