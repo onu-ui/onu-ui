@@ -62,6 +62,7 @@ Customize the background color through the `background-color` property.
 | arrow-class | `string` | `undefined` | The class name of the ToolTip arrow. |
 | arrow-style | `CSSProperties` | `undefined` | The style of the ToolTip arrow. |
 | popup-container | `string \| HTMLElement  \| undefined` | `undefined` | Mount container for ToolTip box. |
+| update-at-scroll | `boolean `| `false`  | Whether to update the position of the popup when the container is scrolled. |
 
 
 ## Tooltip Slots

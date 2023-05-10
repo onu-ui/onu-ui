@@ -45,6 +45,8 @@ They are: `hover` | `click` | `focus` | `context-menu`.
 | arrow-class | `string` | `undefined` | The class name of the popup arrow. |
 | arrow-style | `CSSProperties` | `undefined` | The style of the popup arrow. |
 | popup-container | `string \| HTMLElement  \| undefined` | `undefined` | Mount container for popup box. |
+| update-at-scroll | `boolean `| `false`  | Whether to update the position of the popup when the container is scrolled. |
+
 
 
 ## Popup Slots
