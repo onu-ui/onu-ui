@@ -112,7 +112,7 @@ export default defineComponent({
           offset: props.popupOffset,
           translate: props.popupTranslate,
           customStyle: props.popupStyle,
-          autoFitPosition: false,
+          autoFitPosition: true,
         },
       )
       if (props.autoFitTransformOrigin) {
