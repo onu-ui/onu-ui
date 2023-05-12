@@ -16,7 +16,7 @@
     "play:dev": "npm -C playground run dev",
     "play:build": "npm -C playground run build",
     "example": "npm -C example run dev",
-    "lint": "eslint --cache .",
+    "lint": "eslint .",
     "lint:fix": "nr lint --fix",
     "release": "bumpp package.json packages/**/package.json",
     "deploy": "nr build && nr play:build && nr docs:build",
@@ -24,7 +24,8 @@
     "test:update": "vitest -u",
     "test:coverage": "vitest --coverage",
     "volar:helper": "esno scripts/volar-helper",
-    "clean": "rimraf packages/*/{dist,es,lib}"
+    "clean": "rimraf packages/*/{dist,es,lib}",
+    "postinstall": "npx simple-git-hooks"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
@@ -76,11 +77,11 @@
     "vue-tsc": "^1.0.8"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue,md}": [
-      "eslint --fix"
+      "pnpm lint:fix"
     ]
   }
 }
