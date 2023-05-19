@@ -1,0 +1,41 @@
+{
+  "name": "@onu-ui/nuxt",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Onu-UI module for Nuxt 3",
+  "author": "Chris <https://github.com/zyyv>",
+  "license": "MIT",
+  "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/nuxt/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "directory": "packages/nuxt"
+  },
+  "bugs": {
+    "url": "https://github.com/onu-ui/onu-ui/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build",
+    "prepack": "nuxt-module-build"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.5.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^0.3.1",
+    "@nuxt/schema": "^3.5.0",
+    "@types/node": "^18"
+  }
+}
