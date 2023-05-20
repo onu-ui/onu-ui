@@ -1,5 +1,6 @@
 import type { Variant } from 'unocss'
 import type { Theme } from '@unocss/preset-uno'
+
 export default [
   (input: string) => {
     const prefix = 'o-disabled:'

@@ -2,7 +2,7 @@ import { cloneVNode } from 'vue'
 import type { VNode } from 'vue'
 import { isArray, isArrayChildren, isComponent, isElement, isFunction } from './is'
 
-export const getChildrenArray = (vn: VNode) => {
+export function getChildrenArray(vn: VNode) {
   if (isArrayChildren(vn, vn.children))
     return vn.children
 
@@ -16,10 +16,9 @@ export const getChildrenArray = (vn: VNode) => {
  * Return the first element
  * @param children
  */
-export const getFirstElementFromChildren = (children: VNode[] | undefined): HTMLElement | undefined => {
+export function getFirstElementFromChildren(children: VNode[] | undefined): HTMLElement | undefined {
   if (children && children.length > 0) {
     for (const child of children) {
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       const element = getFirstElementFromVNode(child)
       if (element)
         return element
@@ -33,7 +32,7 @@ export const getFirstElementFromChildren = (children: VNode[] | undefined): HTML
  * @param vnode
  * @returns
  */
-export const getFirstElementFromVNode = (vnode: VNode): HTMLElement | undefined => {
+export function getFirstElementFromVNode(vnode: VNode): HTMLElement | undefined {
   if (isElement(vnode))
     return vnode.el as HTMLElement
   if (isComponent(vnode)) {
@@ -58,10 +57,8 @@ export const getFirstElementFromVNode = (vnode: VNode): HTMLElement | undefined 
  * @param extraProps
  * @returns
  */
-export const mergeFirstChild = (
-  children: VNode[] | undefined,
-  extraProps: Record<string, any> | ((vn: VNode) => Record<string, any>),
-): boolean => {
+export function mergeFirstChild(children: VNode[] | undefined,
+  extraProps: Record<string, any> | ((vn: VNode) => Record<string, any>)): boolean {
   if (children && children.length > 0) {
     for (let i = 0; i < children.length; i++) {
       const child = children[i]
@@ -82,7 +79,7 @@ export const mergeFirstChild = (
 }
 
 /** whether VNode[] is empty */
-export const isEmptyChildren = (children?: VNode[]) => {
+export function isEmptyChildren(children?: VNode[]) {
   if (!children)
     return true
   for (const item of children) {

@@ -22,7 +22,7 @@ import type {
 
 let key = 1
 
-const normalizeOption = (params?: MessageParams) => {
+function normalizeOption(params?: MessageParams) {
   const options: MessageOptions = (!params || isString(params) || isVNode(params) || isFunction(params))
     ? { content: params }
     : params
@@ -51,10 +51,8 @@ const normalizeOption = (params?: MessageParams) => {
   return normalizedOptions as CreateMessageType
 }
 
-const createMessage = (
-  { appendTo, ...options }: CreateMessageType,
-  context?: AppContext | null,
-) => {
+function createMessage({ appendTo, ...options }: CreateMessageType,
+  context?: AppContext | null) {
   const { nextZIndex } = useZindex()
 
   const id = `message_${key++}`

@@ -8,7 +8,7 @@ const emits = defineEmits(['update:modelValue', 'change'])
 
 const curVal = ref(props.modelValue)
 const isAtLeftHalf = ref(false)
-const setCurValue = (item: number, e: MouseEvent) => {
+function setCurValue(item: number, e: MouseEvent) {
   if (props.readonly)
     return
   if (props.allowHalf) {
@@ -18,14 +18,14 @@ const setCurValue = (item: number, e: MouseEvent) => {
   curVal.value = isAtLeftHalf.value ? item - 0.5 : item
 }
 
-const resetCurValue = () => {
+function resetCurValue() {
   if (props.readonly)
     return
   curVal.value = props.modelValue
 }
 watch(() => props.modelValue, () => resetCurValue())
 
-const selectVal = () => {
+function selectVal() {
   if (props.readonly)
     return
   emits('update:modelValue', curVal.value)

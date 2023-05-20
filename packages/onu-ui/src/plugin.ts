@@ -6,7 +6,7 @@ import type { InstallOptions } from '../../utils'
 
 const INSTALLED_KEY = Symbol('OnuUI_Installed')
 
-export const createInstaller = (components: Plugin[] = []) => {
+export function createInstaller(components: Plugin[] = []) {
   const install = (app: App, options?: InstallOptions) => {
     if (app[INSTALLED_KEY])
       return

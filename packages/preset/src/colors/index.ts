@@ -322,6 +322,6 @@ export const darkTheme = {
 
 }
 
-export const getCSSPreflights = (theme: any) => {
+export function getCSSPreflights(theme: any) {
   return Object.entries(theme).map(([key, value]: [string, any]) => `${key}: ${value}`).join(';')
 }

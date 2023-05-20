@@ -3,7 +3,7 @@ import type { MessageContext } from './type'
 
 export const instances: MessageContext[] = shallowReactive([])
 
-export const getInstance = (id: string) => {
+export function getInstance(id: string) {
   const idx = instances.findIndex((item) => {
     return item.id === id
   })
@@ -14,7 +14,7 @@ export const getInstance = (id: string) => {
   return { current, prev }
 }
 
-export const useOffset = (id: string): number => {
+export function useOffset(id: string): number {
   const { prev } = getInstance(id)
 
   if (!prev)

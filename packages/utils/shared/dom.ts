@@ -9,14 +9,12 @@ export const isServerRendering = (() => {
   }
 })()
 
-const NOOP = () => {
+function NOOP() {
   return undefined
 }
 
-export const querySelector = (
-  selectors: string,
-  container?: Document | HTMLElement,
-) => {
+export function querySelector(selectors: string,
+  container?: Document | HTMLElement) {
   if (isServerRendering)
     return NOOP()
 
@@ -25,10 +23,8 @@ export const querySelector = (
   )
 }
 
-export const getElement = (
-  target: string | HTMLElement | undefined,
-  container?: Document | HTMLElement,
-): HTMLElement | undefined => {
+export function getElement(target: string | HTMLElement | undefined,
+  container?: Document | HTMLElement): HTMLElement | undefined {
   if (isString(target)) {
     const selector = target[0] === '#' ? `[id='${target.slice(1)}']` : target
     return querySelector(selector, container)

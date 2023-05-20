@@ -7,6 +7,7 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import AutoImport from 'unplugin-auto-import/vite'
 import fs from 'fs-extra'
 import type { ResolvedConfig } from 'vite'
+
 // https://vitejs.dev/config/
 
 let config: ResolvedConfig = undefined!

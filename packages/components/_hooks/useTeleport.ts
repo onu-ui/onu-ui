@@ -7,7 +7,7 @@ import type { Ref } from 'vue'
  * @param param0
  * @returns teleportContainer: mounted Teleport container,containerRef:  popupContainer element
  */
-export const useTeleport = ({
+export function useTeleport({
   popupContainer,
   visible,
   defaultContainer = 'body',
@@ -17,7 +17,7 @@ export const useTeleport = ({
   visible: Ref<boolean>
   defaultContainer?: string
   documentContainer?: boolean
-}) => {
+}) {
   const teleportContainer: any = ref(popupContainer.value)
   const containerRef = ref<HTMLElement>()
 

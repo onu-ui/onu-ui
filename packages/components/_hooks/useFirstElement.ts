@@ -1,6 +1,7 @@
 import { getFirstElementFromChildren } from '@onu-ui/utils'
 import type { VNode } from 'vue'
-export const useFirstElement = () => {
+
+export function useFirstElement() {
   const children: { value?: VNode[] } = {}
   const firstElement = ref<HTMLElement>()
 

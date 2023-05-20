@@ -10,6 +10,7 @@ import {
   collapseEmits,
   collapseProps,
 } from './props'
+
 const props = defineProps(collapseProps)
 const emit = defineEmits(collapseEmits)
 const activeNames = ref(props.expandedNames)
