@@ -34,9 +34,6 @@ export default defineNuxtModule({
   meta: {
     name: '@onu/nuxt',
     configKey: 'onu',
-    compatibility: {
-      nuxt: '^3.0.0',
-    },
   },
   async setup() {
     COMPONENT_LIST.forEach((name) => {

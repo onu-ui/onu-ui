@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "onu-ui": "workspace:*",
-    "vue": "^3.2.41",
-    "vue-router": "^4.1.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.1"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.44.5",
+    "@unocss/reset": "^0.44.7",
     "resize-observer-polyfill": "^1.5.1",
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-vue-layouts": "^0.7.0"

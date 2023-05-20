@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "description": "Onu-UI docs",
-  "keywords": ["onu-ui", "docs"],
+  "keywords": [
+    "onu-ui",
+    "docs"
+  ],
   "scripts": {
     "dev": "vitepress dev --port 9999 --open --host",
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "@vueuse/core": "^9.1.1",
+    "@vueuse/core": "^9.13.0",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {

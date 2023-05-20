@@ -7,6 +7,10 @@
     "react-hooks/rules-of-hooks": "off",
     "no-sequences": "off",
     "no-alert": "off",
-    "no-console": ["error", { "allow": ["error"] }]
+    "no-console": ["error", { "allow": ["error"] }],
+    "vue/block-tag-newline": "off",
+    "vue/component-name-in-template-casing": "off",
+    "vue/custom-event-name-casing": "off",
+    "vue/no-restricted-v-bind": "off"
   }
 }

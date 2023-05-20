@@ -68,7 +68,7 @@ const iconTypeMap = {
 
 <template>
   <!-- <Teleport :to="props.appendTo"> -->
-  <Transition name="fade" :o="props.type" @after-leave="$emit('destroy')">
+  <Transition name="fade" @after-leave="$emit('destroy')">
     <div v-show="visible" :id="id" ref="messageRef" o-message-base :style="customStyle">
       <div o-message-content>
         <OIcon
