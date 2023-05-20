@@ -1,10 +1,17 @@
-<script lang='ts' setup name="OAlert">
+<script lang='ts' setup>
 import OIcon from '../../icon/src/index.vue'
 import { alertEmits, alertProps } from './props'
 
+defineOptions({
+  name: 'OAlert',
+})
 const props = defineProps(alertProps)
 const emit = defineEmits(alertEmits)
-const slots = useSlots()
+const slots = defineSlots<{
+  default(props: unknown): any
+  icon(props: unknown): any
+  title(props: unknown): any
+}>()
 
 const visible = ref(true)
 

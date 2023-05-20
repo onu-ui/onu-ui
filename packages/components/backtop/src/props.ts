@@ -1,4 +1,4 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPublicPropTypes } from 'vue'
 
 export const backtopProps = {
   target: {
@@ -19,7 +19,7 @@ export const backtopProps = {
   },
 } as const
 
-export type OBacktopProps = ExtractPropTypes<typeof backtopProps>
+export type OBacktopProps = ExtractPublicPropTypes<typeof backtopProps>
 
 export const backtopEmits = {
   click: (evt: MouseEvent) => evt instanceof MouseEvent,

@@ -1,8 +1,15 @@
-<script setup lang="ts" name="OButton">
-import { buttonProps } from './button'
+<script setup lang="ts">
+import { buttonProps } from './props'
 import { buttonGroupContextKey } from './constants'
 
+defineOptions({
+  name: 'OButton',
+})
 const props = defineProps(buttonProps)
+defineSlots<{
+  default(props: unknown): any
+  icon(props: unknown): any
+}>()
 const buttonGroupContext = inject(buttonGroupContextKey, undefined)
 
 // todo: The property should follow this inheritance rule: component props > custom group rule > formItem props > form props > global size > default

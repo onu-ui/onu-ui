@@ -1,9 +1,15 @@
-<script setup lang="ts" name="OBacktop">
+<script setup lang="ts">
 import { backtopEmits, backtopProps } from './props'
 import { useBackTop } from './useBacktop'
 
+defineOptions({
+  name: 'OBacktop',
+})
 const props = defineProps(backtopProps)
 const emit = defineEmits(backtopEmits)
+defineSlots<{
+  default(props: unknown): any
+}>()
 
 const { handleClick, visible } = useBackTop(props, emit, 'OBacktop')
 

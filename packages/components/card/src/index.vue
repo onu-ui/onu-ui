@@ -1,8 +1,11 @@
-<script lang="ts" setup name="OCard">
+<script lang="ts" setup>
 import OButton from '../../button/src/button.vue'
 import type { ShadowType } from '../../types'
 import { cardProps } from './props'
 
+defineOptions({
+  name: 'OCard',
+})
 const props = defineProps(cardProps)
 const slots = useSlots()
 

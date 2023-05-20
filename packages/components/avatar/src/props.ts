@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPublicPropTypes, PropType } from 'vue'
 import type { SizeType } from '../../types'
 
 export const avatarProps = {
@@ -20,6 +20,6 @@ export const avatarGroupProps = {
   },
 }
 
-export type OAvatarProps = ExtractPropTypes<typeof avatarProps>
+export type OAvatarProps = ExtractPublicPropTypes<typeof avatarProps>
 
-export type OAvatarGroupProps = ExtractPropTypes<typeof avatarGroupProps>
+export type OAvatarGroupProps = ExtractPublicPropTypes<typeof avatarGroupProps>

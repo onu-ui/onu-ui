@@ -1,7 +1,11 @@
-<script setup lang="ts" name="OAffix">
+<script setup lang="ts">
 import { getScrollContainer } from '@onu-ui/utils'
 import type { CSSProperties } from 'vue'
-import { affixEmits, affixProps } from './affix'
+import { affixEmits, affixProps } from './props'
+
+defineOptions({
+  name: 'OAffix',
+})
 
 const props = defineProps(affixProps)
 const emit = defineEmits(affixEmits)

@@ -1,8 +1,14 @@
-<script setup lang="ts" name="OButtonGroup">
-import { buttonGroupProps } from './button-group'
+<script setup lang="ts">
+import { buttonGroupProps } from './props'
 import { buttonGroupContextKey } from './constants'
 
+defineOptions({
+  name: 'OButtonGroup',
+})
 const props = defineProps(buttonGroupProps)
+defineSlots<{
+  default(props: unknown): any
+}>()
 
 provide(
   buttonGroupContextKey,

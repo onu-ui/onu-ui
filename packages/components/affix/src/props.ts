@@ -1,5 +1,5 @@
-import type { ExtractPropTypes } from 'vue'
-import { isBoolean, isNumber } from './../../../utils/shared/is'
+import type { ExtractPublicPropTypes } from 'vue'
+import { isBoolean, isNumber } from '../../../utils/shared/is'
 
 export const affixProps = {
   zIndex: {
@@ -21,10 +21,10 @@ export const affixProps = {
   },
 } as const
 
-export type OAffixProps = ExtractPropTypes<typeof affixProps>
-
 export const affixEmits = {
   scroll: ({ scrollTop, fixed }: { scrollTop: number; fixed: boolean }) => isNumber(scrollTop) && isBoolean(fixed),
   change: (fixed: boolean) => isBoolean(fixed),
 }
+
+export type OAffixProps = ExtractPublicPropTypes<typeof affixProps>
 export type OAffixEmits = typeof affixEmits
