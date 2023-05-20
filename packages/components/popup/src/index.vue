@@ -32,6 +32,9 @@ function handlePopupVisibleChange(visible: boolean) {
     :arrow-style="arrowStyle"
     animation-name="o-fade-in-fade-out"
     auto-fit-transform-origin
+    :duration="duration"
+    :popup-style="popupStyle"
+    :popup-translate="popupTranslate"
     @popup-visible-change="handlePopupVisibleChange"
   >
     <slot />
