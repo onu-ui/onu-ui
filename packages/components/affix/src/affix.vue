@@ -45,7 +45,7 @@ const affixStyle = computed<CSSProperties>(() => {
   }
 })
 
-const update = () => {
+function update() {
   if (!scrollContainer.value)
     return
 
@@ -70,7 +70,7 @@ const update = () => {
   fixed.value = isFixed
 }
 
-const handleScroll = () => {
+function handleScroll() {
   updateRoot()
   emit('scroll', {
     scrollTop: scrollTop.value,

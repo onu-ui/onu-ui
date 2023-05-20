@@ -7,7 +7,7 @@ const props = defineProps(radioGroupProps)
 const emit = defineEmits(radioGroupEmits)
 const radioGroupRef = ref<HTMLDivElement>()
 
-const changeEvent = (value: ORadioGroupProps['modelValue']) => {
+function changeEvent(value: ORadioGroupProps['modelValue']) {
   emit('update:modelValue', value)
   nextTick(() => emit('change', value))
 }

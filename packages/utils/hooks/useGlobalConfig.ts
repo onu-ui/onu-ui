@@ -4,6 +4,7 @@ import { configProviderContextKey } from '../tokens'
 import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
 import type { MaybeRef, ProvideFn } from '../types'
+
 const globalConfig = ref<InstallOptions>()
 
 /**

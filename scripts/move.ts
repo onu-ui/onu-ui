@@ -6,7 +6,7 @@ const volarPath = resolve(process.cwd(), 'volar.d.ts')
 const targetDir = resolve(__dirname, '../packages/onu-ui', 'es/components')
 const volarTargetPath = resolve(__dirname, '../packages/onu-ui', 'volar.d.ts')
 
-const main = async () => {
+async function main() {
   try {
     await fse.ensureDir(componentsDir)
     await fse.ensureFile(volarPath)

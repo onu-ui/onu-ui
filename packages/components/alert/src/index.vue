@@ -8,7 +8,7 @@ const slots = useSlots()
 
 const visible = ref(true)
 
-const handleClose = (evt: MouseEvent) => {
+function handleClose(evt: MouseEvent) {
   visible.value = false
   emit('close', evt)
 }

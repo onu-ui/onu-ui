@@ -8,7 +8,7 @@ export default defineConfig({
     presetIcons({
       cdn: 'https://esm.sh/',
     }),
-    presetUno(),
+    presetUno({ preflight: false }),
     presetOnu(),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],

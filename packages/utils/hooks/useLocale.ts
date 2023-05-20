@@ -14,13 +14,13 @@ export interface OnuLocaleContext {
   t: OnuTranslator
 }
 
-export const translate = (path: string, option: OnuTranslatorOption | undefined, locale: language) => {
+export function translate(path: string, option: OnuTranslatorOption | undefined, locale: language) {
   return (deepGet(locale, path, path) as string).replace(/\{(\w+)\}/g, (_, key) => `${option?.[key] ?? `{${key}}`}`)
 }
 
 export const buildTranslator = (locale: MaybeRef<language>): OnuTranslator => (path, option) => translate(path, option, unref(locale))
 
-export const buildLocaleContext = (locale: MaybeRef<language>): OnuLocaleContext => {
+export function buildLocaleContext(locale: MaybeRef<language>): OnuLocaleContext {
   const lang = computed(() => unref(locale).name)
   const RefLocale = isRef(locale) ? locale : ref(locale)
 

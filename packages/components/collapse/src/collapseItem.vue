@@ -5,6 +5,7 @@ import { computed, inject } from 'vue'
 import OIcon from '../../icon/src/index.vue'
 import type { RendererElement } from './props'
 import { collapseContextKey, collapseItemProps } from './props'
+
 const props = defineProps(collapseItemProps)
 const collapse = inject(collapseContextKey)
 

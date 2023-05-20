@@ -2,7 +2,7 @@ import type { Theme } from '@unocss/preset-uno'
 
 const PREFIX_THEME = '--onu-theme'
 
-const getColorsTheme = (theme: string) => {
+function getColorsTheme(theme: string) {
   return {
     [`${theme}`]: `var(${PREFIX_THEME}-${theme}Hsl)`,
     [`${theme}Base`]: `var(${PREFIX_THEME}-${theme})`,

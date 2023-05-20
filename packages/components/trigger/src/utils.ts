@@ -2,7 +2,7 @@ import { isArray } from '@onu-ui/utils'
 import type { CSSProperties } from 'vue'
 import type { Placement } from '../../types'
 
-const getViewPortSize = () => {
+function getViewPortSize() {
   return {
     width: document.documentElement.clientWidth || window.innerWidth,
     height: document.documentElement.clientHeight || window.innerHeight,
@@ -33,10 +33,8 @@ interface ScrollRect {
   height: number
 }
 
-export const getElementScrollRect = (
-  element: HTMLElement,
-  containerRect: DOMRect,
-) => {
+export function getElementScrollRect(element: HTMLElement,
+  containerRect: DOMRect) {
   const rect = element.getBoundingClientRect()
 
   return {
@@ -60,7 +58,7 @@ interface PositionOffset {
   top: number
 }
 
-const getBoundaryPosition = (position: Placement): BasePosition => {
+function getBoundaryPosition(position: Placement): BasePosition {
   switch (position) {
     case 'top':
     case 'top-left':
@@ -83,10 +81,8 @@ const getBoundaryPosition = (position: Placement): BasePosition => {
   }
 }
 
-const changePosition = (
-  position: Placement,
-  direction: BasePosition,
-): Placement => {
+function changePosition(position: Placement,
+  direction: BasePosition): Placement {
   switch (direction) {
     case 'top':
       switch (position) {
@@ -137,8 +133,7 @@ const changePosition = (
   }
 }
 
-const getPopupOffset = (
-  position: Placement,
+function getPopupOffset(position: Placement,
   triggerRect: ScrollRect,
   popupRect: ScrollRect,
   {
@@ -147,8 +142,7 @@ const getPopupOffset = (
   }: {
     offset?: number
     translate?: TriggerPopupTranslate
-  } = {},
-): PositionOffset => {
+  } = {}): PositionOffset {
   const _translate = (isArray(translate) ? translate : translate[position]) ?? [
     0, 0,
   ]
@@ -238,8 +232,7 @@ const getPopupOffset = (
   }
 }
 
-const getFitPosition = (
-  position: Placement,
+function getFitPosition(position: Placement,
   popupPosition: PositionOffset,
   {
     containerRect,
@@ -253,8 +246,7 @@ const getFitPosition = (
     popupRect: ScrollRect
     offset: number
     translate: TriggerPopupTranslate
-  },
-) => {
+  }) {
   const direction = getBoundaryPosition(position)
   const viewPortSize = getViewPortSize()
 
@@ -371,7 +363,7 @@ const getFitPosition = (
   }
 }
 
-export const getTransformOrigin = (position: Placement) => {
+export function getTransformOrigin(position: Placement) {
   let originX = '0'
   if (['top', 'bottom'].includes(position))
     originX = '50%'
@@ -387,8 +379,7 @@ export const getTransformOrigin = (position: Placement) => {
   return `${originX} ${originY}`
 }
 
-export const getPopupStyle = (
-  position: Placement,
+export function getPopupStyle(position: Placement,
   containerRect: DOMRect,
   triggerRect: ScrollRect,
   popupRect: ScrollRect,
@@ -402,8 +393,7 @@ export const getPopupStyle = (
     translate?: TriggerPopupTranslate
     customStyle?: CSSProperties
     autoFitPosition?: boolean
-  } = {},
-): { style: CSSProperties; position: Placement } => {
+  } = {}): { style: CSSProperties; position: Placement } {
   let finalPosition = position
   let popupPosition = getPopupOffset(position, triggerRect, popupRect, {
     offset,
@@ -433,16 +423,14 @@ export const getPopupStyle = (
   }
 }
 
-export const getArrowStyle = (
-  position: Placement,
+export function getArrowStyle(position: Placement,
   triggerRect: ScrollRect,
   popupRect: ScrollRect,
   {
     customStyle = {},
   }: {
     customStyle?: CSSProperties
-  },
-): CSSProperties => {
+  }): CSSProperties {
   if (['top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'].includes(position)) {
     let offsetLeft = Math.abs(
       triggerRect.scrollLeft + triggerRect.width / 2 - popupRect.scrollLeft,
@@ -497,14 +485,14 @@ export const getArrowStyle = (
   }
 }
 
-export const isScrollElement = (element: HTMLElement) => {
+export function isScrollElement(element: HTMLElement) {
   return (
     element.scrollHeight > element.offsetHeight
     || element.scrollWidth > element.offsetWidth
   )
 }
 
-export const getScrollElements = (container: HTMLElement | undefined) => {
+export function getScrollElements(container: HTMLElement | undefined) {
   const scrollElements: HTMLElement[] = []
   let element: HTMLElement | undefined = container
   while (element && element !== document.documentElement) {

@@ -32,7 +32,7 @@ const computedArrowStyle = computed<CSSProperties | undefined>(() => {
   }
 })
 
-const handlePopupVisibleChange = (visible: boolean) => {
+function handlePopupVisibleChange(visible: boolean) {
   _popupVisible.value = visible
   emit('update:popupVisible', visible)
   emit('popupVisibleChange', visible)
@@ -54,6 +54,9 @@ const handlePopupVisibleChange = (visible: boolean) => {
     :arrow-style="computedArrowStyle"
     animation-name="o-fade-in-fade-out"
     auto-fit-transform-origin
+    :duration="duration"
+    :popup-style="popupStyle"
+    :popup-translate="popupTranslate"
     @popup-visible-change="handlePopupVisibleChange"
   >
     <slot />

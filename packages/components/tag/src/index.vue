@@ -5,11 +5,11 @@ import { tagEmits, tagProps } from './props'
 defineProps(tagProps)
 const emits = defineEmits(tagEmits)
 
-const handleClose = (evt: MouseEvent) => {
+function handleClose(evt: MouseEvent) {
   emits('close', evt)
 }
 
-const handleClick = (evt: MouseEvent) => {
+function handleClick(evt: MouseEvent) {
   emits('click', evt)
 }
 </script>

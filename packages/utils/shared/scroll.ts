@@ -1,7 +1,7 @@
 import { isClient } from '@vueuse/core'
 import { getStyle } from './style'
 
-export const isScroll = (el: HTMLElement, isVertical?: boolean): boolean => {
+export function isScroll(el: HTMLElement, isVertical?: boolean): boolean {
   if (!isClient)
     return false
 
@@ -16,10 +16,8 @@ export const isScroll = (el: HTMLElement, isVertical?: boolean): boolean => {
   return ['scroll', 'auto', 'overlay'].some(s => overflow.includes(s))
 }
 
-export const getScrollContainer = (
-  el: HTMLElement,
-  isVertical?: boolean,
-): Window | HTMLElement | undefined => {
+export function getScrollContainer(el: HTMLElement,
+  isVertical?: boolean): Window | HTMLElement | undefined {
   if (!isClient)
     return
 

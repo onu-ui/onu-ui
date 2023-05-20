@@ -2,13 +2,13 @@ import { isFunction } from '@onu-ui/utils'
 import ResizeObserver from 'resize-observer-polyfill'
 import type { Ref } from 'vue'
 
-export const useResizeObserver = ({
+export function useResizeObserver({
   elementRef,
   onResize,
 }: {
   elementRef: Ref<HTMLElement | undefined>
   onResize: (entry?: ResizeObserverEntry) => void
-}) => {
+}) {
   let resizeObserver: ResizeObserver | null
 
   const createResizeObserver = () => {

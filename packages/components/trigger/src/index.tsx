@@ -26,8 +26,7 @@ const TriggerPositionStyls = {
 }
 
 export default defineComponent({
-  name: 'Trigger',
-  components: {},
+  name: 'OTrigger',
   inheritAttrs: false,
   props: TriggerProps,
   emits: triggerEmits,

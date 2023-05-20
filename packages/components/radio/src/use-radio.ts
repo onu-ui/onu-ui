@@ -4,26 +4,26 @@ import type { SizeType } from '../../types'
 import { radioGroupKey } from './constants'
 import type { ORadioEmits, ORadioProps } from './radio'
 
-const useProp = <T>(name: string): ComputedRef<T | undefined> => {
+function useProp<T>(name: string): ComputedRef<T | undefined> {
   const vm = getCurrentInstance()!
   return computed(() => (vm.proxy?.$props as any)[name] ?? undefined)
 }
 
-const useDisabled = (fallback?: MaybeRef<boolean | undefined>) => {
+function useDisabled(fallback?: MaybeRef<boolean | undefined>) {
   const disabled = useProp<boolean>('disabled')
   return computed(
     () => disabled.value || unref(fallback) || false,
   )
 }
 
-const useSize = (fallback?: MaybeRef<SizeType | undefined>) => {
+function useSize(fallback?: MaybeRef<SizeType | undefined>) {
   const size = useProp<SizeType>('size')
   return computed(
     () => size.value || unref(fallback) || 'md',
   )
 }
 
-export const useRadio = (props: { label: ORadioProps['label']; modelValue?: ORadioProps['modelValue'] }, emit?: SetupContext<ORadioEmits>['emit']) => {
+export function useRadio(props: { label: ORadioProps['label']; modelValue?: ORadioProps['modelValue'] }, emit?: SetupContext<ORadioEmits>['emit']) {
   const radioRef = ref<HTMLInputElement>()
   const radioGroup = inject(radioGroupKey, undefined)
   const isGroup = computed(() => Boolean(radioGroup))
