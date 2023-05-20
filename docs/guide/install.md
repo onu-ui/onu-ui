@@ -97,3 +97,30 @@ You can add the `OnuUI` global component type definition to `compilerOptions.typ
   }
 }
 ```
+
+## Using modules in Nuxt
+Add `@onu-ui/nuxt` dependency to your project
+
+
+```bash
+pnpm i @onu-ui/nuxt -D
+```
+
+Add `@onu-ui/nuxt` to the `modules` section of `nuxt.config.ts`
+
+```typescript
+{
+  export default defineNuxtConfig({
+    // ...
+    modules: [
+      // ...
+      '@onu-ui/nuxt'
+    ],
+    // ...
+    css: [
+      // ...
+      'onu-ui/dist/style.css'
+    ]
+  })
+}
+```
