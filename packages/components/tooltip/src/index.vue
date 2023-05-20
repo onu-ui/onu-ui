@@ -32,7 +32,7 @@ const computedArrowStyle = computed<CSSProperties | undefined>(() => {
   }
 })
 
-const handlePopupVisibleChange = (visible: boolean) => {
+function handlePopupVisibleChange(visible: boolean) {
   _popupVisible.value = visible
   emit('update:popupVisible', visible)
   emit('popupVisibleChange', visible)

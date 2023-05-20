@@ -3,7 +3,7 @@ import { presetOnu } from 'onu-ui'
 
 export default defineConfig({
   presets: [
-    presetUno({ preflight: false }),
+    presetUno(),
     presetAttributify(),
     presetIcons({
       scale: 1.1,
