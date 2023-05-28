@@ -6,15 +6,17 @@ import { demoProps } from './index'
 
 const props = defineProps(demoProps)
 
-const decodedHighlightedCode = computed(() =>
-  decodeURIComponent(props.highlightedCode),
-)
-const { copy, copied } = useClipboard({ source: decodeURIComponent(props.code) })
+const code = computed(() => props.sfcTsCode || props.sfcJsCode)
+const decodedHighlightedCode = computed(() => decodeURIComponent(props.sfcTsHtml || props.sfcJsHtml))
+
+const { copy, copied } = useClipboard({ source: decodeURIComponent(code.value) })
 const [value, toggle] = useToggle()
 
+const github = computed(() => 'https://github.com/onu-ui/onu-ui/tree/main' + props.metadata.relativePath)
+
 const editOnPlayground = () => {
-  if (props.code) {
-    const { link } = usePlayground(props.code)
+  if (code.value) {
+    const { link } = usePlayground(code.value)
     if (!isClient)
       return
     window.open(link)
@@ -55,7 +57,7 @@ const editOnPlayground = () => {
             </div>
           </a>
         </div>
-        <div v-show="value" :class="`language-${lang} extra-class`" v-html="decodedHighlightedCode" />
+        <div v-show="value" class="language-vue extra-class" v-html="decodedHighlightedCode" />
       </div>
     </div>
   </ClientOnly>

@@ -1,19 +1,20 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { Metadata } from 'markdown-it-vitepress-demo'
 
 export const demoProps = {
-  github: {
-    type: String,
-    default: 'https://github.com/onu-ui/onu-ui',
-  },
-  codeSandBox: {
-    type: String,
-    default: 'https://codesandbox.io/',
-  },
-  highlightedCode: {
+  sfcTsCode: {
     type: String,
     default: '',
   },
-  code: {
+  sfcJsCode: {
+    type: String,
+    default: '',
+  },
+  sfcTsHtml: {
+    type: String,
+    default: '',
+  },
+  sfcJsHtml: {
     type: String,
     default: '',
   },
@@ -25,9 +26,9 @@ export const demoProps = {
     type: String,
     default: '',
   },
-  lang: {
-    type: String,
-    default: 'vue',
+  metadata: {
+    type: Object as PropType<Metadata>,
+    required: true as const
   },
   expand: {
     type: Boolean,
