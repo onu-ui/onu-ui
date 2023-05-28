@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
-import { applyPlugins } from './plugins/code'
+import vitepressDemoPlugin from 'markdown-it-vitepress-demo'
 
 const guides = [
   { text: 'Quick Start', link: '/guide/quick-start' },
@@ -221,7 +221,7 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      applyPlugins(md)
+      md.use(vitepressDemoPlugin)
     },
     theme: {
       light: 'vitesse-light',
