@@ -12,7 +12,7 @@ const decodedHighlightedCode = computed(() => decodeURIComponent(props.sfcTsHtml
 const { copy, copied } = useClipboard({ source: decodeURIComponent(code.value) })
 const [value, toggle] = useToggle()
 
-const github = computed(() => 'https://github.com/onu-ui/onu-ui/tree/main' + props.metadata.relativePath)
+const github = computed(() => `https://github.com/onu-ui/onu-ui/tree/main/${props.metadata.relativePath}`)
 
 const editOnPlayground = () => {
   if (code.value) {
