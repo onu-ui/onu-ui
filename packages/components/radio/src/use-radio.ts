@@ -1,5 +1,5 @@
 import type { ComputedRef, SetupContext } from 'vue'
-import type { MaybeRef } from '../../../utils/types'
+import type { MaybeRef } from '@onu-ui/utils'
 import type { SizeType } from '../../types'
 import { radioGroupKey } from './constants'
 import type { ORadioEmits, ORadioProps } from './radio'
