@@ -3,12 +3,13 @@ import { getScrollContainer } from '@onu-ui/utils'
 import type { CSSProperties } from 'vue'
 import { affixEmits, affixProps } from './props'
 
+const props = defineProps(affixProps)
+
+const emit = defineEmits(affixEmits)
+
 defineOptions({
   name: 'OAffix',
 })
-
-const props = defineProps(affixProps)
-const emit = defineEmits(affixEmits)
 
 const target = shallowRef<HTMLElement>()
 const root = shallowRef<HTMLDivElement>()
