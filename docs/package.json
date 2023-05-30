@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^13.0.1",
+    "markdown-it-vitepress-demo": "^0.1.5"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3"

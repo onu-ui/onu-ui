@@ -16,7 +16,7 @@ export default {
   ...theme,
   enhanceApp({ app }) {
     app.use(OnuUI, { locale: en })
-    app.component('Demo', DemoBlock)
+    app.component('DemoContainer', DemoBlock)
     app.component('Overview', Overview)
     app.component('WarnBadge', WarnBadge)
     app.component('CommnBadge', CommnBadge)
