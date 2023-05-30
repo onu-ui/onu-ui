@@ -29,11 +29,15 @@ The Checkbox accepts `md` and `lg` properties to change its size.
 
 You can define the `icon` property to customize the checkbox's icon.
 
-
 <demo src="../example/checkbox/custom.vue"></demo>
 
+## Checkbox Group
 
+Suitable for choosing from mutually exclusive options.
 
+Combine `o-checkbox-group` with `o-checkbox` to display a `Checkbox` group. Bind a variable with v-model of the o-checkbox-group element and set the label value in o-checkbox. It also provides the change event with the current value as its parameter.
+
+<demo src="../example/checkbox/group.vue"></demo>
 
 ## Checkbox Props
 

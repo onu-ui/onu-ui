@@ -1,6 +1,6 @@
 export const checkboxShortcuts: Record<string, string> = {
   // checkbox
-  'o-checkbox-base': 'fsc gap-1 inline-flex cursor-pointer text-sm text-baseText gap-2',
+  'o-checkbox-base': 'fsc gap-1 inline-flex cursor-pointer text-sm text-baseText gap-2 mr-32px last:mr-0',
   'o-checkbox': 'o-transition rounded border b-baseBorder fcc peer-checked-(bg-primaryBase b-primaryBase scale-full children-scale-full)',
   'o-checkbox-icon': 'o-transition scale-0 text-(white base)',
   'o-checkbox-icon-custom': '!bg-transparent !b-baseBorder',
