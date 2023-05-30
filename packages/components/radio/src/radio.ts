@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { isBoolean, isNumber, isString } from '../../../utils/shared/is'
+import { isBoolean, isNumber, isString } from '@onu-ui/utils'
 import type { SizeType, ThemeType } from '../../types'
 
 export const radioPropsBase = {

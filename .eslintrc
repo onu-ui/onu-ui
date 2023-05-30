@@ -14,21 +14,6 @@
           "error"
         ]
       }
-    ],
-    "vue/block-tag-newline": "off",
-    "vue/component-name-in-template-casing": "off",
-    "vue/custom-event-name-casing": "off",
-    "vue/no-restricted-v-bind": "off",
-    "vue/define-macros-order": [
-      "error",
-      {
-        "order": [
-          "defineOptions",
-          "defineProps",
-          "defineEmits",
-          "defineSlots"
-        ]
-      }
     ]
   }
 }

@@ -66,7 +66,7 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "unbuild": "^1.2.1",
-    "unocss": "^0.51.13",
+    "unocss": "^0.46.4",
     "unplugin-auto-import": "^0.16.0",
     "unplugin-vue-components": "^0.24.1",
     "vite": "^4.3.8",

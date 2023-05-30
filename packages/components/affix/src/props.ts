@@ -1,5 +1,5 @@
 import type { ExtractPublicPropTypes } from 'vue'
-import { isBoolean, isNumber } from '../../../utils/shared/is'
+import { isBoolean, isNumber } from '@onu-ui/utils'
 
 export const affixProps = {
   zIndex: {
