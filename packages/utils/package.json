@@ -35,7 +35,7 @@
     "stub": "tsup --watch"
   },
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^3.3.0"
   },
   "publishConfig": {
     "access": "public",

@@ -9,12 +9,12 @@
   "dependencies": {
     "onu-ui": "workspace:*",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.1"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.44.7",
+    "@unocss/reset": "^0.55.1",
     "resize-observer-polyfill": "^1.5.1",
-    "vite-plugin-pages": "^0.25.0",
-    "vite-plugin-vue-layouts": "^0.7.0"
+    "vite-plugin-pages": "^0.31.0",
+    "vite-plugin-vue-layouts": "^0.8.0"
   }
 }
