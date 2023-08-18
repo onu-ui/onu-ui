@@ -70,7 +70,6 @@
     "vite": "^4.4.9",
     "vite-plugin-dts": "^3.5.2",
     "vite-plugin-inspect": "^0.7.38",
-    "vite-plugin-vue-setup-extend": "^0.4.0",
     "vitepress": "1.0.0-rc.4",
     "vitest": "^0.34.2",
     "vue": "^3.3.4",

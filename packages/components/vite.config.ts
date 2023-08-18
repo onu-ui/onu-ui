@@ -3,12 +3,9 @@ import Vue from '@vitejs/plugin-vue'
 import VueJSX from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
-import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import AutoImport from 'unplugin-auto-import/vite'
 import fs from 'fs-extra'
 import type { ResolvedConfig } from 'vite'
-
-// https://vitejs.dev/config/
 
 let config: ResolvedConfig = undefined!
 
@@ -31,7 +28,6 @@ export default defineConfig({
   plugins: [
     Vue(),
     VueJSX(),
-    VueSetupExtend(),
     UnoCSS(),
     AutoImport({
       imports: ['vue', '@vueuse/core'],
