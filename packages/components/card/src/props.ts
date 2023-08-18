@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPublicPropTypes, PropType } from 'vue'
 import type { INode, ShadowType, SizeType } from '../../types'
 
 export const cardProps = {
@@ -51,4 +51,4 @@ export const cardProps = {
   embed: Boolean,
 } as const
 
-export type OCardProps = ExtractPropTypes<typeof cardProps>
+export type OCardProps = ExtractPublicPropTypes<typeof cardProps>

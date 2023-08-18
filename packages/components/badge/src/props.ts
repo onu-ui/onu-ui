@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPublicPropTypes, PropType } from 'vue'
 
 export const badgeProps = {
   max: {
@@ -19,4 +19,4 @@ export const badgeProps = {
   },
 }
 
-export type OBadgeProps = ExtractPropTypes<typeof badgeProps>
+export type OBadgeProps = ExtractPublicPropTypes<typeof badgeProps>

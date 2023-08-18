@@ -10,7 +10,7 @@ export function useBackTop(props: OBacktopProps,
 
   const handleScroll = () => {
     if (el.value)
-      visible.value = el.value.scrollTop >= props.delta
+      visible.value = el.value.scrollTop >= props.delta!
   }
 
   const handleClick = (event: MouseEvent) => {

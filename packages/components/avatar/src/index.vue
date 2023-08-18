@@ -1,7 +1,13 @@
-<script lang='ts' setup name="OAvatar">
+<script lang='ts' setup>
 import { avatarProps } from './props'
 
 const props = defineProps(avatarProps)
+defineOptions({
+  name: 'OAvatar',
+})
+defineSlots<{
+  default(props: unknown): any
+}>()
 
 const IsBgMode = computed(() => props.mode === 'bg')
 </script>

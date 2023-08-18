@@ -1,8 +1,14 @@
-<script lang="ts" setup name="OBadge">
+<script lang="ts" setup>
 import { isNumber } from '@onu-ui/utils'
 import { badgeProps } from './props'
 
 const props = defineProps(badgeProps)
+defineOptions({
+  name: 'OBadge',
+})
+defineSlots<{
+  default(props: unknown): any
+}>()
 
 const resolveValue = computed(() =>
   props.dot

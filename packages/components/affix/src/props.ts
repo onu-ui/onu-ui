@@ -1,4 +1,4 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPublicPropTypes } from 'vue'
 import { isBoolean, isNumber } from '@onu-ui/utils'
 
 export const affixProps = {
@@ -21,10 +21,10 @@ export const affixProps = {
   },
 } as const
 
-export type OAffixProps = ExtractPropTypes<typeof affixProps>
-
 export const affixEmits = {
   scroll: ({ scrollTop, fixed }: { scrollTop: number; fixed: boolean }) => isNumber(scrollTop) && isBoolean(fixed),
   change: (fixed: boolean) => isBoolean(fixed),
 }
+
+export type OAffixProps = ExtractPublicPropTypes<typeof affixProps>
 export type OAffixEmits = typeof affixEmits

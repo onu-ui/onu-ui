@@ -1,5 +1,5 @@
 import type { InjectionKey } from 'vue'
-import type { OButtonProps } from './button'
+import type { OButtonProps } from './props'
 
 export interface OButtonGroupContext {
   size?: OButtonProps['size']

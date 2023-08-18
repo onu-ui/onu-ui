@@ -21,4 +21,11 @@ export const buttonProps = {
   icon: String,
 }
 
+export const buttonGroupProps = {
+  type: buttonProps.type,
+  size: buttonProps.size,
+  spacer: Boolean,
+}
+
 export type OButtonProps = ExtractPropTypes<typeof buttonProps>
+export type OButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>
