@@ -68,7 +68,7 @@ Commit messages 请遵循[conventional-changelog 标准](https://www.conventiona
 3. `@onu-ui/components`: 组件库
 4. `@onu-ui/preset`: 组件库 UnoCSS 预设
 5. `@onu-ui/utils`: 组件库工具方法
-6. `@onu-ui/cli`: 组件库脚手架
+6. `@onu-ui/nuxt`: 组件库 Nuxt 模块
 7. `example`: 调试组件库的示例
 8. `playground`: 组件库演练场
 

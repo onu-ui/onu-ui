@@ -2,11 +2,11 @@
 import OIcon from '../../icon/src/index.vue'
 import { alertEmits, alertProps } from './props'
 
-const props = defineProps(alertProps)
-const emit = defineEmits(alertEmits)
 defineOptions({
   name: 'OAlert',
 })
+const props = defineProps(alertProps)
+const emit = defineEmits(alertEmits)
 const slots = defineSlots<{
   default(props: unknown): any
   icon(props: unknown): any

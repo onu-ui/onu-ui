@@ -3,10 +3,10 @@ import OButton from '../../button/src/button.vue'
 import type { ShadowType } from '../../types'
 import { cardProps } from './props'
 
-const props = defineProps(cardProps)
 defineOptions({
   name: 'OCard',
 })
+const props = defineProps(cardProps)
 const slots = useSlots()
 
 // 是否展示头部区域

@@ -22,8 +22,8 @@
   "exports": {
     ".": {
       "types": "./dist/components/index.d.ts",
-      "require": "./dist/components.umd.cjs",
-      "import": "./dist/components.js"
+      "import": "./dist/components.js",
+      "require": "./dist/components.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },

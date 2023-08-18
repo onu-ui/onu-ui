@@ -2,10 +2,10 @@
 import { isNumber } from '@onu-ui/utils'
 import { badgeProps } from './props'
 
-const props = defineProps(badgeProps)
 defineOptions({
   name: 'OBadge',
 })
+const props = defineProps(badgeProps)
 defineSlots<{
   default(props: unknown): any
 }>()

@@ -23,8 +23,8 @@
   "exports": {
     ".": {
       "types": "./dist/types/onu-ui/src/index.d.ts",
-      "require": "./dist/onu-ui.umd.cjs",
-      "import": "./dist/onu-ui.js"
+      "import": "./dist/onu-ui.js",
+      "require": "./dist/onu-ui.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },

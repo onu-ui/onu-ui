@@ -2,10 +2,10 @@
 import { buttonGroupProps } from './props'
 import { buttonGroupContextKey } from './constants'
 
-const props = defineProps(buttonGroupProps)
 defineOptions({
   name: 'OButtonGroup',
 })
+const props = defineProps(buttonGroupProps)
 defineSlots<{
   default(props: unknown): any
 }>()

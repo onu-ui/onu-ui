@@ -1,10 +1,10 @@
 <script lang='ts' setup>
 import { avatarProps } from './props'
 
-const props = defineProps(avatarProps)
 defineOptions({
   name: 'OAvatar',
 })
+const props = defineProps(avatarProps)
 defineSlots<{
   default(props: unknown): any
 }>()

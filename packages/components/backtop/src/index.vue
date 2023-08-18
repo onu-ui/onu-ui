@@ -2,11 +2,11 @@
 import { backtopEmits, backtopProps } from './props'
 import { useBackTop } from './useBacktop'
 
-const props = defineProps(backtopProps)
-const emit = defineEmits(backtopEmits)
 defineOptions({
   name: 'OBacktop',
 })
+const props = defineProps(backtopProps)
+const emit = defineEmits(backtopEmits)
 defineSlots<{
   default(props: unknown): any
 }>()

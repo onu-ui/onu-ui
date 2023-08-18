@@ -1,10 +1,10 @@
 <script lang='ts' setup>
 import { avatarGroupProps } from './props'
 
-defineProps(avatarGroupProps)
 defineOptions({
   name: 'OAvatarGroup',
 })
+defineProps(avatarGroupProps)
 defineSlots<{
   default(props: unknown): any
 }>()
