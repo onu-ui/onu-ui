@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Components } from '@onu-ui/docs/guide/components'
+import { Components } from './components'
 import SubTitle from './SubTitle.vue'
 import ComponentCard from './ComponentCard.vue'
 </script>
