@@ -31,7 +31,7 @@ Link with icon.
 
 <demo src="../example/link/icon.vue"></demo>
 
-## Backtop Props
+## Link Props
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'default'` | Link type. |
@@ -40,7 +40,7 @@ Link with icon.
 | href | `string` | `undefined` | Same as native hyperlink's href. |
 | icon | `string` | `undefined` | Icon's name. |
 
-## Backtop Slots
+## Link Slots
 | Name | Parameters | Description | 
 | --- | --- | --- |
 | default | `()` | Customize default content. |
