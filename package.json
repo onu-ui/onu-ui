@@ -2,7 +2,7 @@
   "name": "@onu-ui/monorepo",
   "version": "1.0.14-beta.2",
   "private": true,
-  "packageManager": "pnpm@7.32.4",
+  "packageManager": "pnpm@8.6.12",
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
