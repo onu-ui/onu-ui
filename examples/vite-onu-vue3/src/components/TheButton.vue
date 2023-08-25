@@ -2,7 +2,7 @@
 const githubUrl = 'https://github.com/onu-ui/onu-ui'
 
 const loading = ref(false)
-const startLoading = () => {
+function startLoading() {
   loading.value = true
   setTimeout(() => {
     loading.value = false

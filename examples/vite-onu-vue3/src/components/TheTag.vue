@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const handleClose = () => {
+function handleClose() {
   alert('click the close icon')
 }
 
-const handleClick = () => {
+function handleClick() {
   alert('click the tag')
 }
 </script>

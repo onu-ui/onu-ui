@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { OButton, OCard, OMessage } from 'onu-ui'
 
-function handleToClickTheme(type: String) {
+function handleToClickTheme(type: string) {
   OMessage[`${type}`]({
     content: type,
   })

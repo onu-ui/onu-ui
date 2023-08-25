@@ -1,9 +1,9 @@
 {
-  "name": "playground",
+  "name": "vite-onu-vue3",
   "private": true,
   "scripts": {
-    "dev": "vite --port=9898 --open",
-    "build": "vite build",
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -12,8 +12,8 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.55.1",
-    "resize-observer-polyfill": "^1.5.1",
+    "@unocss/reset": "latest",
+    "unocss": "latest",
     "vite-plugin-pages": "^0.31.0",
     "vite-plugin-vue-layouts": "^0.8.0"
   }

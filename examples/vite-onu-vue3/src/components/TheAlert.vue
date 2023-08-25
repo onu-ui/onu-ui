@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 const title = 'With Title'
-const handleClose = () => {
+function handleClose() {
   // eslint-disable-next-line no-console
   console.log('click the close icon')
 }
