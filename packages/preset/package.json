@@ -33,10 +33,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "stub": "tsup --watch --onSuccess \"pnpm run --filter '../components' stub\""
+    "build": "unbuild",
+    "stub": "unbuild --stub"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@unocss/core": "^0.55.3",
+    "@unocss/preset-mini": "^0.55.3"
   }
 }

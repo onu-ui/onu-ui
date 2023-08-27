@@ -2,8 +2,10 @@
 </script>
 
 <template>
-  <div>
-    11
+  <div wrapper>
+    <button>
+      Test
+    </button>
   </div>
 </template>
 
