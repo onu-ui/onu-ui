@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/imageList/imglist/master/img/logo.svg" style="width:100px;" />
+<img src="./public/logo.svg" style="width:100px;" />
 <h1 align="center">Onu UI (WIP)</h1>
 <p align="center">Popular, beautiful and fast UnoCSS component library.</p>
 </p>

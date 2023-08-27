@@ -201,7 +201,7 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.svg',
     editLink: {
       pattern: 'https://github.com/onu-ui/onu-ui/edit/main/docs/:path',
       text: 'Suggest changes to this page',
