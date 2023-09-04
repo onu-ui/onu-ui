@@ -1,5 +1,5 @@
 import type { DynamicShortcut } from 'unocss'
-import type { ThemeType } from '../type'
+import type { ThemeType } from '../types'
 
 export const messageShortcuts: Record<string, string> = {
   // message

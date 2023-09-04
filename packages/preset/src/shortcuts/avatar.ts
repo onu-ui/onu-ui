@@ -1,5 +1,5 @@
 import type { DynamicShortcut } from 'unocss'
-import type { SizeType } from '../type'
+import type { SizeType } from '../types'
 
 export const avatarShortcuts: Record<string, string> = {
   // avatar
