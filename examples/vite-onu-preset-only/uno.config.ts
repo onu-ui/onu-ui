@@ -1,15 +1,13 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import { defineConfig } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
 
 export default defineConfig({
   envMode: 'dev',
   presets: [
-    presetUno(),
-    presetIcons(),
-    presetAttributify(),
-    presetOnu(),
+    presetOnu() as any,
   ],
   shortcuts: {
     wrapper: 'w-screen h-screen flex items-center justify-center',
   },
+  configDeps: ['../../packages/preset/src/shortcuts/index.ts'],
 })

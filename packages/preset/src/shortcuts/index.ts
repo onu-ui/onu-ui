@@ -1,7 +1,6 @@
 import type { Theme } from '@unocss/preset-uno'
 import type { UserShortcuts } from 'unocss'
 import { baseShortcuts } from './base'
-import { commonShortcuts } from './common'
 import { alertShortcuts } from './alert'
 import { avatarDynamicShortcuts, avatarShortcuts } from './avatar'
 import { badgeShortcuts } from './badge'
@@ -22,46 +21,7 @@ import { linkShortcuts } from './link'
 import { radioShortcuts } from './radio'
 import { progressShortcuts } from './progress'
 
-export default [
-  baseShortcuts,
-  commonShortcuts,
-  // alert
-  alertShortcuts,
-  // avatar
-  avatarShortcuts,
-  ...avatarDynamicShortcuts,
-  // badge
-  badgeShortcuts,
-  // button
-  buttonShortcuts,
-  buttonGroupShortcuts,
-  // card
-  cardShortcuts,
-  // checkbox
-  checkboxShortcuts,
-  // collapse
-  collapseShortcuts,
-  // icon
-  iconShortcuts,
-  // message
-  messageShortcuts,
-  ...messageDynamicShortcuts,
-  // switch
-  switchShortcuts,
-  // tag
-  tagShortcuts,
-  // popup
-  popupShortcuts,
-  // trigger
-  triggerShortcuts,
-  // rate
-  rateShortcuts,
-  // empty
-  emptyShortcuts,
-  // link
-  linkShortcuts,
-  // radio
-  radioShortcuts,
-  // progress
-  progressShortcuts,
+export const shortcuts = [
+  // btn
+  ['btn', 'inline-flex shrink-0 text-teal'],
 ] as UserShortcuts<Theme>

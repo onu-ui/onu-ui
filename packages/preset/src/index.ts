@@ -1,15 +1,15 @@
-import { type Preset, definePreset } from 'unocss'
+import { definePreset } from 'unocss'
 import { presetUseful } from 'unocss-preset-useful'
 import { presetUno } from '@unocss/preset-uno'
 import { presetAttributify } from '@unocss/preset-attributify'
 import { presetIcons } from '@unocss/preset-icons'
-import shortcuts from './shortcuts/index'
+import { shortcuts } from './shortcuts'
 import theme from './theme'
 import rules from './rules'
 import variants from './variants'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 
-export function presetOnu(options: PrsetOnuOptions): Preset {
+export function presetOnu(options: PrsetOnuOptions = {}) {
   const { presets } = resolveOptions(options)
   return definePreset({
     name: '@onu-ui/preset',
@@ -25,8 +25,8 @@ function resolveOptions(options: PrsetOnuOptions) {
   const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
     uno: true,
-    attributify: false,
-    icons: false,
+    attributify: true,
+    icons: true,
     useful: true,
   }
   const optionsWithDefault = Object.assign({}, defaultOptions, options)

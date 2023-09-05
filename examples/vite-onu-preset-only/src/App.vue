@@ -3,7 +3,7 @@
 
 <template>
   <div wrapper>
-    <button>
+    <button class="btn">
       Test
     </button>
   </div>
