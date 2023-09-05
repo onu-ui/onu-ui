@@ -22,6 +22,44 @@ import { radioShortcuts } from './radio'
 import { progressShortcuts } from './progress'
 
 export const shortcuts = [
-  // btn
-  ['btn', 'inline-flex shrink-0 text-teal text-2xl font-bold items-center justify-center rounded-full w-10 h-10'],
+  baseShortcuts,
+  // alert
+  alertShortcuts,
+  // avatar
+  avatarShortcuts,
+  ...avatarDynamicShortcuts,
+  // badge
+  badgeShortcuts,
+  // button
+  buttonShortcuts,
+  buttonGroupShortcuts,
+  // card
+  cardShortcuts,
+  // checkbox
+  checkboxShortcuts,
+  // collapse
+  collapseShortcuts,
+  // icon
+  iconShortcuts,
+  // message
+  messageShortcuts,
+  ...messageDynamicShortcuts,
+  // switch
+  switchShortcuts,
+  // tag
+  tagShortcuts,
+  // popup
+  popupShortcuts,
+  // trigger
+  triggerShortcuts,
+  // rate
+  rateShortcuts,
+  // empty
+  emptyShortcuts,
+  // link
+  linkShortcuts,
+  // radio
+  radioShortcuts,
+  // progress
+  progressShortcuts,
 ] as UserShortcuts<Theme>

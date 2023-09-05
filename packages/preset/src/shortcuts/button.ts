@@ -8,10 +8,15 @@ export const buttonShortcuts: Record<string, string> = {
   // 'o-button-text': 'o-text',
   // 'o-button-defaultText': '!bg-transparent !text-baseText',
   // 'o-button-text-disable': '!bg-transparent !border-transparent !c-context',
-  // 'o-button-xs': 'px-2.5 h-6 text-xs shadow-xs',
-  // 'o-button-sm': 'px-3 h-7 text-sm shadow-sm',
-  // 'o-button-md': 'px-4 h-8 text-sm shadow-md',
-  // 'o-button-lg': 'px-4 h-9 text-base shadow-lg',
+  'btn-xs': 'px-2.5 h-6 text-xs shadow-xs',
+  'btn-sm': 'px-3 h-7 text-sm shadow-sm',
+  'btn-md': 'px-4 h-8 text-base shadow-md',
+  'btn-lg': 'px-4 h-9 text-lg shadow-lg',
 
-  btn: 'inline-flex shrink-1',
+  'btn': `btn-md fcc gap-1 inline-flex 
+  cursor-pointer rounded leading-none bg-gray 
+  text-baseText border border-baseBorder  
+  font-medium whitespace-nowrap
+  text-center box-border o-transition select-none 
+  !focus:outline-none`,
 }

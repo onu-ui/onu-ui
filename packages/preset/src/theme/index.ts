@@ -1,4 +1,6 @@
 import type { Theme } from '@unocss/preset-uno'
+import { deepMerge } from '@onu-ui/utils'
+import { nomarlizeAnimate } from 'unocss-preset-useful'
 
 const PREFIX_THEME = '--onu-theme'
 
@@ -59,12 +61,9 @@ export default {
     cardMD: '0px 0px 12px rgb(0 0 0 / 12%)',
     cardSM: '0px 0px 6px rgb(0 0 0 / 12%)',
   },
-  animation: {
+  animation: deepMerge({
     keyframes: {
-      switching: `{0%{ box-shadow: 0 0 0 2px #1890ff66; }
-        60%{ box-shadow: 0 0 0 4px #1890ff33; }
-        80%{ box-shadow: 0 0 0 6px #1890ff1a; }
-        100%{ box-shadow: 0 0 0 8px #1890ff0d; }}`,
+      switching: '{0%{ box-shadow: 0 0 0 2px #1890ff66; }60%{ box-shadow: 0 0 0 4px #1890ff33; }80%{ box-shadow: 0 0 0 6px #1890ff1a; }100%{ box-shadow: 0 0 0 8px #1890ff0d; }}',
       indeterminate: '{0%{ left: -100%; } 100%{ left: 100%; }}',
       stripedFlowing: '{0%{background-position: -100%;} 100%{background-position: 100%;}}',
     },
@@ -77,5 +76,5 @@ export default {
       indeterminate: 'infinite',
       stripedFlowing: 'infinite',
     },
-  },
+  }, nomarlizeAnimate([])),
 } as Theme
