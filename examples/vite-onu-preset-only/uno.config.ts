@@ -1,13 +1,13 @@
 import { defineConfig } from 'unocss'
-import { presetOnu } from '@onu-ui/preset'
+import { presetOnu } from '../../packages/preset/dist/index.mjs'
 
 export default defineConfig({
   envMode: 'dev',
   presets: [
-    presetOnu() as any,
+    presetOnu(),
   ],
   shortcuts: {
-    wrapper: 'w-screen h-screen flex items-center justify-center',
+    wrapper: 'w-screen h-screen fcc',
   },
-  configDeps: ['../../packages/preset/src/shortcuts/index.ts'],
+  configDeps: ['../../packages/preset/dist/index.mjs'],
 })

@@ -1,5 +1,5 @@
 import type { Theme } from '@unocss/preset-uno'
-import type { UserShortcuts } from 'unocss'
+import type { UserShortcuts } from '@unocss/core'
 import { baseShortcuts } from './base'
 import { alertShortcuts } from './alert'
 import { avatarDynamicShortcuts, avatarShortcuts } from './avatar'
@@ -23,5 +23,5 @@ import { progressShortcuts } from './progress'
 
 export const shortcuts = [
   // btn
-  ['btn', 'inline-flex shrink-0 text-teal'],
+  ['btn', 'inline-flex shrink-0 text-teal text-2xl font-bold items-center justify-center rounded-full w-10 h-10'],
 ] as UserShortcuts<Theme>

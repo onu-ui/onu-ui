@@ -1,7 +1,7 @@
 import type { AttributifyOptions } from '@unocss/preset-attributify'
 import type { IconsOptions } from '@unocss/preset-icons'
 import type { PresetUnoOptions } from '@unocss/preset-uno'
-import type { Preset } from 'unocss'
+import type { Preset } from '@unocss/core'
 import type { UsefulOptions } from 'unocss-preset-useful'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg'

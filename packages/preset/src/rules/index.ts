@@ -1,5 +1,5 @@
 import { parseColor } from '@unocss/preset-mini/utils'
-import type { ParsedColorValue, Rule, RuleContext } from 'unocss'
+import type { ParsedColorValue, Rule, RuleContext } from '@unocss/core'
 import type { Theme } from '@unocss/preset-uno'
 import theme from '../theme'
 import { SwitchSizeMap } from '../constants'
