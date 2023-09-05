@@ -163,9 +163,6 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4
     devDependencies:
-      '@onu-ui/preset':
-        specifier: link:../../packages/preset
-        version: link:../../packages/preset
       '@unocss/reset':
         specifier: latest
         version: 0.55.7

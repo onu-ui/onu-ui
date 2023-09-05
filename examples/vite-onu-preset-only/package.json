@@ -10,7 +10,6 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@onu-ui/preset": "link:../../packages/preset",
     "@unocss/reset": "latest",
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
