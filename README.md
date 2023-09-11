@@ -1,8 +1,9 @@
 <p align="center">
-<img src="./public/logo.svg" style="width:100px;" />
-<h1 align="center">Onu UI (WIP)</h1>
-<p align="center">Popular, beautiful and fast UnoCSS component library.</p>
+  <img src="./public/logo.svg" style="width:100px;" />
+  <h1 align="center">Onu UI (WIP)</h1>
+  <p align="center">Bullheaded and lightweight UnoCSS ui library.</p>
 </p>
+
 <p align="center">
 <a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 <p align="center">
