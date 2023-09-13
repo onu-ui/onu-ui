@@ -42,10 +42,7 @@
   "dependencies": {
     "@onu-ui/utils": "workspace:*",
     "@unocss/core": "latest",
-    "@unocss/preset-attributify": "latest",
-    "@unocss/preset-icons": "latest",
     "@unocss/preset-mini": "latest",
-    "@unocss/preset-uno": "latest",
-    "unocss-preset-useful": "latest"
+    "unocss-preset-useful": "^0.2.5"
   }
 }

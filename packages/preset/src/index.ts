@@ -1,7 +1,4 @@
 import { presetUseful } from 'unocss-preset-useful'
-import { presetUno } from '@unocss/preset-uno'
-import { presetAttributify } from '@unocss/preset-attributify'
-import { presetIcons } from '@unocss/preset-icons'
 import type { Theme } from '@unocss/preset-uno'
 import type { Preset } from '@unocss/core'
 import { shortcuts } from './shortcuts'
@@ -27,25 +24,9 @@ export function presetOnu(options: PrsetOnuOptions = {}): Preset<Theme> {
 function resolveOptions(options: PrsetOnuOptions) {
   const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
-    uno: true,
-    attributify: true,
-    icons: true,
-    useful: true,
   }
   const optionsWithDefault = Object.assign({}, defaultOptions, options)
-
-  const presets: any = []
-  const presetMap = {
-    uno: presetUno,
-    attributify: presetAttributify,
-    icons: presetIcons,
-    useful: presetUseful,
-  }
-  for (const [key, preset] of Object.entries(presetMap)) {
-    const option = optionsWithDefault[key as keyof typeof presetMap]
-    if (option)
-      presets.push(preset(typeof option === 'boolean' ? {} as any : option))
-  }
+  const presets = [presetUseful(optionsWithDefault)]
 
   return {
     ...optionsWithDefault,

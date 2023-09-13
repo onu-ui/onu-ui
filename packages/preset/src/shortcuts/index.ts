@@ -1,4 +1,4 @@
-import type { Theme } from '@unocss/preset-uno'
+import type { Theme } from '@unocss/preset-mini'
 import type { UserShortcuts } from '@unocss/core'
 import { baseShortcuts } from './base'
 import { alertShortcuts } from './alert'

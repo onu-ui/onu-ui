@@ -1,6 +1,5 @@
-import type { Theme } from '@unocss/preset-uno'
+import type { Theme } from '@unocss/preset-mini'
 import { deepMerge } from '@onu-ui/utils'
-import { nomarlizeAnimate } from 'unocss-preset-useful'
 
 const PREFIX_THEME = '--onu-theme'
 
@@ -76,5 +75,5 @@ export default {
       indeterminate: 'infinite',
       stripedFlowing: 'infinite',
     },
-  }, nomarlizeAnimate([])),
+  }, {}),
 } as Theme
