@@ -1,3 +1,3 @@
 <template>
-  <o-empty image="https://placeimg.com/400/225/arch" description="This is a Description" />
+  <o-empty image="https://placehold.co/600x400" description="This is a Description" />
 </template>
