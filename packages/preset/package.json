@@ -38,5 +38,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "@unocss/core": "^0.56.5"
+  },
+  "dependencies": {
+    "@unocss/preset-mini": "^0.56.5"
   }
 }

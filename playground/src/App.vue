@@ -53,7 +53,7 @@ window.addEventListener(
   'message',
   (event) => {
     if (typeof event.data === 'string') {
-      generate(event.data, (css: string) => {
+      generate(event.data, (css) => {
         const frame = document.querySelectorAll('iframe')
         if (frame.length > 0)
           frame[0].contentWindow?.postMessage(css, '*')
