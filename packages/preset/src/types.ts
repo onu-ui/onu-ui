@@ -1,7 +1,7 @@
 import type { Preset } from '@unocss/core'
 import type { UsefulOptions } from 'unocss-preset-useful'
 
-export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
+export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 export type ThemeType = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'
 
 export interface PrsetOnuOptions extends UsefulOptions {

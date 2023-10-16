@@ -1,6 +1,5 @@
 import { presetUseful } from 'unocss-preset-useful'
-import type { Theme } from '@unocss/preset-uno'
-import type { Preset } from '@unocss/core'
+import { definePreset } from '@unocss/core'
 import { shortcuts } from './shortcuts'
 import theme from './theme'
 import rules from './rules'
@@ -9,7 +8,7 @@ import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 
 export type { PrsetOnuOptions }
 
-export function presetOnu(options: PrsetOnuOptions = {}): Preset<Theme> {
+export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
   const { presets } = resolveOptions(options)
   return {
     name: '@onu-ui/preset',
@@ -19,7 +18,7 @@ export function presetOnu(options: PrsetOnuOptions = {}): Preset<Theme> {
     shortcuts,
     presets,
   }
-}
+})
 
 function resolveOptions(options: PrsetOnuOptions) {
   const defaultOptions: PrsetOnuOptions = {
