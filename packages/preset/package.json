@@ -43,9 +43,9 @@
     "@unocss/core": "^0.56.5"
   },
   "dependencies": {
-    "@unocss/preset-mini": "^0.56.5",
     "@onu-ui/utils": "workspace:*",
     "@unocss/core": "^0.56.5",
+    "@unocss/preset-mini": "^0.56.5",
     "unocss-preset-useful": "^0.2.5"
   }
 }

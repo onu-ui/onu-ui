@@ -29,8 +29,9 @@ export function getFirstElementFromChildren(children: VNode[] | undefined): HTML
 
 /**
  * Determine the VNode type and return the corresponding element
+ *
  * @param vnode
- * @returns
+ * @returns HTMLElement
  */
 export function getFirstElementFromVNode(vnode: VNode): HTMLElement | undefined {
   if (isElement(vnode))
@@ -55,10 +56,12 @@ export function getFirstElementFromVNode(vnode: VNode): HTMLElement | undefined 
  * merge extraProps for child
  * @param children
  * @param extraProps
- * @returns
+ * @returns {boolean} whether merge success
  */
-export function mergeFirstChild(children: VNode[] | undefined,
-  extraProps: Record<string, any> | ((vn: VNode) => Record<string, any>)): boolean {
+export function mergeFirstChild(
+  children: VNode[] | undefined,
+  extraProps: Record<string, any> | ((vn: VNode) => Record<string, any>),
+): boolean {
   if (children && children.length > 0) {
     for (let i = 0; i < children.length; i++) {
       const child = children[i]
