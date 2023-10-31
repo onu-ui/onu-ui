@@ -1,5 +1,6 @@
 import { defineConfig } from 'unocss'
-import { presetOnu } from '../../packages/preset/dist/index.mjs'
+import transformAlias from 'unocss-transformer-alias'
+import { presetOnu } from '../../packages/preset/dist/index.js'
 
 export default defineConfig({
   envMode: 'dev',
@@ -9,5 +10,8 @@ export default defineConfig({
   shortcuts: {
     wrapper: 'w-screen h-screen fcc',
   },
-  configDeps: ['../../packages/preset/dist/index.mjs'],
+  transformers: [
+    transformAlias(),
+  ],
+  configDeps: ['../../packages/preset/dist/index.js'],
 })

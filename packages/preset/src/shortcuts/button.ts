@@ -10,13 +10,12 @@ export const buttonShortcuts: Record<string, string> = {
   // 'o-button-text-disable': '!bg-transparent !border-transparent !c-context',
   'btn-xs': 'px-2.5 h-6 text-xs shadow-xs',
   'btn-sm': 'px-3 h-7 text-sm shadow-sm',
-  'btn-md': 'px-4 h-8 text-base shadow-md',
+  'btn-md': 'px-2.5 py-1.5 text-white',
   'btn-lg': 'px-4 h-9 text-lg shadow-lg',
 
-  'btn': `btn-md fcc gap-1 inline-flex 
-  cursor-pointer rounded leading-none bg-gray 
-  text-baseText border border-baseBorder  
-  font-medium whitespace-nowrap
-  text-center box-border o-transition select-none 
+  'btn': `btn-md fcc gap-1 inline-flex text-sm o-[rgb(var(--color-primary-DEFAULT))] bg-context
+  cursor-pointer rounded
+  whitespace-nowrap
+  o-transition select-none 
   !focus:outline-none`,
 }

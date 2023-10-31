@@ -22,7 +22,7 @@ function getColorsTheme(theme: string) {
 
 export default {
   colors: {
-    context: 'rgba(var(--onu-c-context),%alpha)',
+    context: 'rgb(var(--onu-c-context) / %alpha)',
     ...getColorsTheme('primary'),
     ...getColorsTheme('secondary'),
     ...getColorsTheme('success'),
