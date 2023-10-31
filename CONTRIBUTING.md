@@ -26,8 +26,8 @@ We use [Github issues](https://github.com/onu-ui/onu-ui/issues) for bug reports 
 ## Sending a pull request
 
 1. Fork [the repository](https://github.com/onu-ui/onu-ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
-2. Use `pnpm install` install the dependencies
-3. Use `pnpm run dev` start project, RUN `pnpm run play` start the `playground`, RUN `pnpm run docs` to write docs, usually a dev server and document server can be debugged.
+2. Use `pnpm install` to install the dependencies
+3. Use `pnpm run dev` to start project, RUN `pnpm run play` to start the `playground`, RUN `pnpm run docs` to write docs. Usually, a development server and a document server can be debugged.
 4. Make changes to the codebase. Please add tests if applicable.
 5. Make sure the test suite passes with `pnpm run test`.
 6. Use `pnpm run test:ci` to RUN `CI` tests before you commit your code.
