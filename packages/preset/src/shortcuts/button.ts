@@ -1,21 +1,42 @@
-export const buttonShortcuts: Record<string, string> = {
-  // button
-  // 'o-button-base': 'fcc gap-1 inline-flex cursor-pointer rounded leading-none bg-transparent text-baseText border border-baseBorder  font-medium whitespace-nowrap text-center box-border o-transition select-none  !focus:outline-none',
-  // 'o-hover-active-base': 'hover-border-[var(--onu-theme-primaryLight)] hover-text-primaryBase hover-bg-[var(--onu-theme-primaryLight)] active-border-primaryBorder active-text-primaryBase',
-  // 'o-button-light': 'o-light',
-  // 'o-button-light-disable': 'o-light-simple',
-  // 'o-button-defaultLight': 'bg-transparent !border-primaryBorder text-primaryBase hover-bg-transparent',
-  // 'o-button-text': 'o-text',
-  // 'o-button-defaultText': '!bg-transparent !text-baseText',
-  // 'o-button-text-disable': '!bg-transparent !border-transparent !c-context',
-  'btn-xs': 'px-2.5 h-6 text-xs shadow-xs',
-  'btn-sm': 'px-3 h-7 text-sm shadow-sm',
-  'btn-md': 'px-2.5 py-1.5 text-white',
-  'btn-lg': 'px-4 h-9 text-lg shadow-lg',
+import { spliteObject } from '../utils'
 
-  'btn': `btn-md fcc gap-1 inline-flex text-sm o-[rgb(var(--color-primary-DEFAULT))] bg-context
-  cursor-pointer rounded
-  whitespace-nowrap
-  o-transition select-none 
-  !focus:outline-none`,
-}
+export const buttonShortcuts: Record<string, string> = spliteObject({
+  'btn-xs': 'px-2.5 py-1.5 text-xs',
+  'btn-sm': 'px-2.5 py-1.5 text-sm',
+  'btn-md': 'px-3 py-2 text-sm',
+  'btn-lg': 'px-3.5 py-2.5 text-base',
+  'btn-hover': 'hover-(o-[rgb(var(--color-primary-600))])',
+  'btn-focus': 'focus-(o-[rgb(var(--color-primary-600))])',
+  'btn-active': 'active-(scale-95)',
+  'btn-disabled': `
+          disabled:(cursor-not-allowed opacity-75 shadow-none) 
+          hover:(o-[rgb(var(--color-primary-DEFAULT))])
+          active-(scale-100) 
+        `,
+  'btn-default': `
+          btn-md btn-hover btn-active btn-focus
+          text-black dark-text-white bg-transparent
+          inline-flex items-center justify-center gap-1 
+          cursor-pointer rounded shadow-sm
+          o-transition select-none
+          ring-1 ring-current
+        `,
+  'btn-ghost': `
+          bg-[rgb(var(--color-primary-100))] dark-bg-[rgb(var(--color-primary-900))]
+          text-context dark-text-context shadow-none
+          hover-(bg-context text-white) dark-hover-text-black
+          `,
+  'btn-outline': `
+          bg-transparent ring-1
+          text-context dark-text-context
+          hover-(bg-context text-white) dark-hover-text-black
+          `,
+  'btn-link': `
+          bg-transparent underline underline-offset-2 shadow-none 
+          text-context dark-text-context
+          `,
+  'btn': `
+          btn-default o-[rgb(var(--color-primary-DEFAULT))] 
+          text-white dark-text-black bg-context ring-0
+        `,
+})
