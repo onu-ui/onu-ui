@@ -1,34 +1,9 @@
 import type { Theme } from '@unocss/preset-mini'
 import { deepMerge } from '@onu-ui/utils'
 
-const PREFIX_THEME = '--onu-theme'
-
-function getColorsTheme(theme: string) {
-  return {
-    [`${theme}`]: `var(${PREFIX_THEME}-${theme}Hsl)`,
-    [`${theme}Base`]: `var(${PREFIX_THEME}-${theme})`,
-    [`${theme}Light`]: `var(${PREFIX_THEME}-${theme}Light)`,
-    [`${theme}LightHover`]: `var(${PREFIX_THEME}-${theme}LightHover)`,
-    [`${theme}LightActive`]: `var(${PREFIX_THEME}-${theme}LightActive)`,
-    [`${theme}LightContrast`]: `var(${PREFIX_THEME}-${theme}LightContrast)`,
-    [`${theme}Border`]: `var(${PREFIX_THEME}-${theme}Border)`,
-    [`${theme}BorderHover`]: `var(${PREFIX_THEME}-${theme}BorderHover)`,
-    [`${theme}BorderActive`]: `var(${PREFIX_THEME}-${theme}BorderActive)`,
-    [`${theme}SolidHover`]: `var(${PREFIX_THEME}-${theme}SolidHover)`,
-    [`${theme}SolidContrast`]: `var(${PREFIX_THEME}-${theme}SolidContrast)`,
-    [`${theme}Shadow`]: `var(${PREFIX_THEME}-${theme}Shadow)`,
-  }
-}
-
 export default {
   colors: {
     context: 'rgb(var(--onu-c-context) / %alpha)',
-    ...getColorsTheme('primary'),
-    ...getColorsTheme('secondary'),
-    ...getColorsTheme('success'),
-    ...getColorsTheme('warning'),
-    ...getColorsTheme('error'),
-    ...getColorsTheme('info'),
     baseText: 'var(--onu-colors-text)',
     baseBorder: 'var(--onu-colors-border)',
     lightBorder: 'var(--onu-colors-border-light)',

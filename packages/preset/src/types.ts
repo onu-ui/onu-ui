@@ -11,6 +11,11 @@ export interface PrsetOnuOptions extends UsefulOptions {
    * @default 'o-'
    */
   prefix?: string
+
+  /**
+   * Theme primary color.
+   */
+  color?: string
 }
 
 export type ResolveOnuOptions = Required<PrsetOnuOptions> & {

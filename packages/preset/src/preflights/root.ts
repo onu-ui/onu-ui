@@ -1,3 +1,5 @@
+import { getColors } from 'theme-colors'
+
 export default `
 :root {
   --color-primary-50: 250 245 255;
@@ -12,16 +14,25 @@ export default `
   --color-primary-900: 88 28 135;
   --color-primary-950: 59 7 100;
   --color-primary-DEFAULT: var(--color-primary-500);
-  --color-gray-50: 248 250 252;
-  --color-gray-100: 241 245 249;
-  --color-gray-200: 226 232 240;
-  --color-gray-300: 203 213 225;
-  --color-gray-400: 148 163 184;
-  --color-gray-500: 100 116 139;
-  --color-gray-600: 71 85 105;
-  --color-gray-700: 51 65 85;
-  --color-gray-800: 30 41 59;
-  --color-gray-900: 15 23 42;
-  --color-gray-950: 2 6 23;
+  
 }
 `.trim()
+
+const gray = `
+--color-gray-50: 248 250 252;
+--color-gray-100: 241 245 249;
+--color-gray-200: 226 232 240;
+--color-gray-300: 203 213 225;
+--color-gray-400: 148 163 184;
+--color-gray-500: 100 116 139;
+--color-gray-600: 71 85 105;
+--color-gray-700: 51 65 85;
+--color-gray-800: 30 41 59;
+--color-gray-900: 15 23 42;
+--color-gray-950: 2 6 23;
+`.trim()
+
+export function generateThemeCSS(color: string) {
+  const theme = getColors(color)
+  return theme
+}
