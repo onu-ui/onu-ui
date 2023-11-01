@@ -22,6 +22,7 @@ export default [
       }
     }
   }],
+  // TODO: unuse
   [/^o-switch-(.+)$/, ([, s]: string[]) => {
     if (['sm', 'md', 'lg'].includes(s)) {
       return {
