@@ -8,7 +8,7 @@ export default defineConfig({
     presetOnu(),
   ],
   shortcuts: {
-    wrapper: 'w-screen h-screen fcc',
+    wrapper: 'w-screen h-screen fccc',
   },
   transformers: [
     transformAlias(),

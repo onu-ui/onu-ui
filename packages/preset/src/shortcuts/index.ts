@@ -20,6 +20,7 @@ import { emptyShortcuts } from './empty'
 import { linkShortcuts } from './link'
 import { radioShortcuts } from './radio'
 import { progressShortcuts } from './progress'
+import { inputShortcuts } from './input'
 
 export const shortcuts = [
   baseShortcuts,
@@ -62,4 +63,6 @@ export const shortcuts = [
   radioShortcuts,
   // progress
   progressShortcuts,
+
+  inputShortcuts,
 ] as UserShortcuts<Theme>

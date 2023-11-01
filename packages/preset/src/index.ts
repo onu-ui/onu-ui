@@ -19,7 +19,8 @@ export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
     shortcuts,
     presets,
     preflights: [{
-      getCSS: () => generateThemeCSS(color),
+      getCSS: () => rootCSS,
+      // getCSS: () => generateThemeCSS(color),
       layer: '@onu-ui/preset',
     }],
   }

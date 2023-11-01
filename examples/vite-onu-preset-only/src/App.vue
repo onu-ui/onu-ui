@@ -1,42 +1,59 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { ref } from 'vue'
+
+const value = ref('')
+const disabled = ref(true)
+
+document.body.classList.add('dark')
 
 function toggleTheme() {
   document.body.classList.toggle('dark')
+}
+
+function toggleDisabled() {
+  disabled.value = !disabled.value
 }
 </script>
 
 <template>
   <div wrapper gap-2>
-    <button class="btn-default" @click="toggleTheme">
-      Button
-    </button>
-    <button class="btn">
-      <i inline-block i-carbon:favorite-filled />
-      Button
-    </button>
-    <button class="btn">
-      Button
-    </button>
-    <button class="btn btn-xs">
-      Button
-      <i inline-block i-carbon:favorite-filled />
-    </button>
-    <button class="btn btn-xs aspect-square rd-full">
-      <i inline-block i-carbon:favorite-filled />
-    </button>
-    <button class="btn btn-ghost">
-      Button
-    </button>
-    <button class="btn btn-outline">
-      Button
-    </button>
-    <button class="btn btn-link">
-      Button
-    </button>
-    <button disabled class="btn btn-disabled">
-      Button
-    </button>
+    <div fcc gap-2 flex-wrap>
+      <button class="btn-default" :disabled="disabled">
+        btn-default
+      </button>
+      <button class="btn" @click="toggleDisabled">
+        <i inline-block i-carbon:favorite-filled />
+        toggleDisabled
+      </button>
+      <button class="btn" @click="toggleTheme">
+        toggleTheme
+      </button>
+      <button class="btn btn-xs">
+        btn btn-xs
+        <i inline-block i-carbon:favorite-filled />
+      </button>
+      <button class="btn btn-xs aspect-square rd-full">
+        <i inline-block i-carbon:favorite-filled />
+      </button>
+      <button class="btn btn-ghost">
+        btn btn-ghost
+      </button>
+      <button class="btn btn-outline">
+        btn btn-outline
+      </button>
+      <button class="btn btn-link">
+        btn btn-link
+      </button>
+      <button :disabled="disabled" class="btn">
+        disabled
+      </button>
+    </div>
+    <div fcc gap-2>
+      <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">
+      <input v-model="value" type="text" :disabled="disabled" class="input" placeholder="input...">
+      <input v-model="value" type="text" class="input input-sm" placeholder="input input-sm...">
+      <input v-model="value" type="text" :disabled="disabled" class="input input-none" placeholder="input input-none...">
+    </div>
   </div>
 </template>
 
@@ -47,7 +64,7 @@ function toggleTheme() {
 }
 
 :root .dark {
-  background-color: #222222;
+  background-color: #1a1817;
   color: #ffffff;
 }
 </style>
