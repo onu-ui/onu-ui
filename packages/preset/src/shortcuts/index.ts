@@ -23,6 +23,15 @@ import { progressShortcuts } from './progress'
 import { inputShortcuts } from './input'
 
 export const shortcuts = [
+  // done
+  // button
+  buttonShortcuts,
+  buttonGroupShortcuts,
+
+  // input
+  inputShortcuts,
+  // TODO
+
   baseShortcuts,
   // alert
   alertShortcuts,
@@ -31,9 +40,7 @@ export const shortcuts = [
   ...avatarDynamicShortcuts,
   // badge
   badgeShortcuts,
-  // button
-  buttonShortcuts,
-  buttonGroupShortcuts,
+
   // card
   cardShortcuts,
   // checkbox
@@ -64,5 +71,4 @@ export const shortcuts = [
   // progress
   progressShortcuts,
 
-  inputShortcuts,
 ] as UserShortcuts<Theme>
