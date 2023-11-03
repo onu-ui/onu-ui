@@ -10,7 +10,7 @@ export const buttonShortcuts: Record<string, string> = spliteObject({
   'btn-active': 'active:scale-95',
   'btn-disabled': `
         disabled:(
-                cursor-not-allowed opacity-64 shadow-none
+                cursor-not-allowed op-32 shadow-none
                 hover:o-[rgb(var(--color-primary-DEFAULT))]
                 active:scale-100
         )
@@ -39,6 +39,6 @@ export const buttonShortcuts: Record<string, string> = spliteObject({
           `,
   'btn': `
           btn-default o-[rgb(var(--color-primary-DEFAULT))] 
-          text-white dark:text-black bg-context ring-0
+          text-white dark:text-black bg-context ring-0 disabled:op-64
         `,
 })

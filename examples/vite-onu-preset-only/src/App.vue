@@ -23,6 +23,12 @@ function toggleDisabled() {
       <button class="btn-default" :disabled="disabled">
         btn-default
       </button>
+      <a class="btn-default" :disabled="disabled">
+        btn-default
+      </a>
+      <a class="btn" :disabled="disabled">
+        btn-default
+      </a>
       <button class="btn" @click="toggleDisabled">
         <i inline-block i-carbon:favorite-filled />
         toggleDisabled
