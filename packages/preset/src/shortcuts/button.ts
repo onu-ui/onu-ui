@@ -28,6 +28,11 @@ export const buttonShortcuts: Record<string, string> = spliteObject({
           text-context dark:text-context shadow-none
           hover:(bg-context text-white) dark:hover:text-black
           `,
+  'btn-light': `
+          bg-[rgb(var(--color-primary-100))] dark:bg-[rgb(var(--color-primary-900))]
+          text-context dark:text-context shadow-none
+          hover:(bg-context text-white) dark:hover:text-black
+          `,
   'btn-outline': `
           bg-transparent ring-1
           text-context dark:text-context
@@ -36,6 +41,12 @@ export const buttonShortcuts: Record<string, string> = spliteObject({
   'btn-link': `
           bg-transparent underline underline-offset-2 shadow-none 
           text-context dark:text-context
+          `,
+  'btn-border': '',
+  'btn-dashed': `
+          btn-outline ring-0 relative hover:text-context dark:hover:text-context
+          after:(content-empty absolute inset-0 b-(~ context dashed) rounded)
+          hover:bg-[rgb(var(--color-primary-100))] hover:dark:bg-[rgb(var(--color-primary-900))]
           `,
   'btn': `
           btn-default o-[rgb(var(--color-primary-DEFAULT))] 

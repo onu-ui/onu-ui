@@ -1,4 +1,4 @@
-import { defineConfig } from 'unocss'
+import { defineConfig, transformerVariantGroup } from 'unocss'
 import transformAlias from 'unocss-transformer-alias'
 import { presetOnu } from '../../packages/preset/dist/index.js'
 
@@ -12,6 +12,7 @@ export default defineConfig({
   },
   transformers: [
     transformAlias(),
+    transformerVariantGroup(),
   ],
   configDeps: ['../../packages/preset/dist/index.js'],
 })
