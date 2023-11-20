@@ -12,7 +12,7 @@ const decodedHighlightedCode = computed(() =>
 const { copy, copied } = useClipboard({ source: decodeURIComponent(props.code) })
 const [value, toggle] = useToggle()
 
-const editOnPlayground = () => {
+function editOnPlayground() {
   if (props.code) {
     const { link } = usePlayground(props.code)
     if (!isClient)
@@ -30,7 +30,7 @@ const editOnPlayground = () => {
       </div>
       <div class="relative">
         <div class="o-demo_actions">
-          <a class="o-demo_action_item" group @click="editOnPlayground">
+          <a href="javascript:void(0);" class="o-demo_action_item" group @click="editOnPlayground">
             <div class="o-demo_action_icon i-carbon:chemistry" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
               Edit in Playground
@@ -42,13 +42,13 @@ const editOnPlayground = () => {
               Edit on GitHub
             </div>
           </a>
-          <a class="o-demo_action_item" group @click="copy()">
+          <a href="javascript:void(0);" class="o-demo_action_item" group @click="copy()">
             <div class="o-demo_action_icon i-carbon:copy" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
               {{ copied ? 'Copied' : 'Copy code' }}
             </div>
           </a>
-          <a class="o-demo_action_item" group @click="toggle()">
+          <a href="javascript:void(0);" class="o-demo_action_item" group @click="toggle()">
             <div class="o-demo_action_icon i-carbon:fit-to-width" />
             <div class="o-demo_tooltip" group-hover:opacity-100>
               {{ value ? 'Hidden code' : 'Show code' }}
