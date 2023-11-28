@@ -1,4 +1,4 @@
-<script setup lang="ts" name="OMessage">
+<script setup lang="ts">
 import type { CSSProperties } from 'vue'
 import { computed, onMounted, ref } from 'vue'
 import { useResizeObserver, useTimeoutFn } from '@vueuse/core'
@@ -6,6 +6,9 @@ import OIcon from '../../icon/src/index.vue'
 import { messageEmits, messageProps } from './type'
 import { useOffset } from './instance'
 
+defineOptions({
+  name: 'OMessage',
+})
 const props = defineProps(messageProps)
 defineEmits(messageEmits)
 

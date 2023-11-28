@@ -1,9 +1,12 @@
-<script setup lang="ts" name="OProgress">
+<script setup lang="ts">
 import { isFunction, isString } from '@onu-ui/utils'
 import type { CSSProperties } from 'vue'
 import type { ProgressColor } from './progress'
 import { SIZE_MAP, STATUS_COLOR_MAP, STATUS_MAP, TYPE_MAP, progressProps } from './progress'
 
+defineOptions({
+  name: 'OProgress',
+})
 const props = defineProps(progressProps)
 
 const stripedStyle = {

@@ -1,4 +1,4 @@
-<script setup lang="ts" name="OCollapseItem">
+<script setup lang="ts">
 // TODO test
 import { computed, inject } from 'vue'
 
@@ -6,6 +6,9 @@ import OIcon from '../../icon/src/index.vue'
 import type { RendererElement } from './props'
 import { collapseContextKey, collapseItemProps } from './props'
 
+defineOptions({
+  name: 'OCollapseItem',
+})
 const props = defineProps(collapseItemProps)
 const collapse = inject(collapseContextKey)
 

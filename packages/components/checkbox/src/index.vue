@@ -1,8 +1,11 @@
-<script lang="ts" setup name="OCheckbox">
+<script lang="ts" setup>
 import { hash } from '@onu-ui/utils'
 import type { Ref } from 'vue'
 import { checkBoxProps } from './props'
 
+defineOptions({
+  name: 'OCheckbox',
+})
 const props = defineProps(checkBoxProps)
 
 const emits = defineEmits(['update:modelValue', 'change'])

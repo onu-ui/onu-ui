@@ -1,6 +1,9 @@
-<script lang='ts' setup name="OIcon">
+<script lang='ts' setup>
 import { iconProps } from './props'
 
+defineOptions({
+  name: 'OIcon',
+})
 defineProps(iconProps)
 </script>
 

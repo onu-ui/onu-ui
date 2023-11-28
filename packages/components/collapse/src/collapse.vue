@@ -1,4 +1,4 @@
-<script setup lang="ts" name="OCollapse">
+<script setup lang="ts">
 // TODO test
 import { provide, ref, watch } from 'vue'
 import type {
@@ -11,6 +11,9 @@ import {
   collapseProps,
 } from './props'
 
+defineOptions({
+  name: 'OCollapse',
+})
 const props = defineProps(collapseProps)
 const emit = defineEmits(collapseEmits)
 const activeNames = ref(props.expandedNames)

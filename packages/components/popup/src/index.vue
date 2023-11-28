@@ -1,7 +1,10 @@
-<script setup lang='ts' name="OPopup">
+<script setup lang='ts'>
 import OTrigger from '../../trigger/src/index'
 import { popupEmits, popupProps } from './props'
 
+defineOptions({
+  name: 'OPopup',
+})
 const props = defineProps(popupProps)
 const emit = defineEmits(popupEmits)
 

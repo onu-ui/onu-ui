@@ -1,8 +1,11 @@
-<script setup lang='ts' name="OToolTip">
+<script setup lang='ts'>
 import type { CSSProperties } from 'vue'
 import OTrigger from '../../trigger/src/index'
 import { toolTipEmits, toolTipProps } from './props'
 
+defineOptions({
+  name: 'OToolTip',
+})
 const props = defineProps(toolTipProps)
 const emit = defineEmits(toolTipEmits)
 

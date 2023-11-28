@@ -1,7 +1,10 @@
-<script setup lang="ts" name="OText">
+<script setup lang="ts">
 import type { CSSProperties } from 'vue'
 import { fontMap, textProps } from './text'
 
+defineOptions({
+  name: 'OText',
+})
 const props = defineProps(textProps)
 
 // todo: The size property should follow this inheritance rule: component props > custom group rule > formItem props > form props > global size > default

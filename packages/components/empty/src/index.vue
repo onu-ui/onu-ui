@@ -1,8 +1,11 @@
-<script setup lang='ts' name="OEmpty">
+<script setup lang='ts'>
 import { useLocale } from '@onu-ui/utils'
 import type { CSSProperties } from 'vue'
 import { emptyProps } from './props'
 
+defineOptions({
+  name: 'OEmpty',
+})
 const props = defineProps(emptyProps)
 
 const { t } = useLocale()

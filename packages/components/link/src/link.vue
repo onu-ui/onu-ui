@@ -1,5 +1,9 @@
-<script setup lang="ts" name="OLink">
+<script setup lang="ts">
 import { linkEmits, linkProps } from './link'
+
+defineOptions({
+  name: 'OLink',
+})
 
 const props = defineProps(linkProps)
 const emit = defineEmits(linkEmits)

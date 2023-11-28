@@ -1,8 +1,11 @@
-<script setup lang="ts" name="ORadioGroup">
+<script setup lang="ts">
 import { radioGroupKey } from './constants'
 import type { ORadioGroupProps } from './radio-group'
 import { radioGroupEmits, radioGroupProps } from './radio-group'
 
+defineOptions({
+  name: 'ORadioGroup',
+})
 const props = defineProps(radioGroupProps)
 const emit = defineEmits(radioGroupEmits)
 const radioGroupRef = ref<HTMLDivElement>()

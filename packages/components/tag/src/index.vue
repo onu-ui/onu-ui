@@ -1,7 +1,10 @@
-<script lang='ts' setup name="OTag">
+<script lang='ts' setup>
 import OIcon from '../../icon/src/index.vue'
 import { tagEmits, tagProps } from './props'
 
+defineOptions({
+  name: 'OTag',
+})
 defineProps(tagProps)
 const emits = defineEmits(tagEmits)
 

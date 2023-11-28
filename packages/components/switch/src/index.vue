@@ -1,7 +1,10 @@
-<script lang="ts" setup name="OSwitch">
+<script lang="ts" setup>
 import type { Ref } from 'vue'
 import { switchProps } from './props'
 
+defineOptions({
+  name: 'OSwitch',
+})
 const props = defineProps(switchProps)
 
 const emits = defineEmits(['update:modelValue', 'change'])

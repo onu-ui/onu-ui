@@ -1,8 +1,11 @@
-<script lang="ts" setup name="ORate">
+<script lang="ts" setup>
 import { computed } from 'vue'
 import OIcon from '../../icon/src/index.vue'
 import { rateProps } from './props'
 
+defineOptions({
+  name: 'ORate',
+})
 const props = defineProps(rateProps)
 const emits = defineEmits(['update:modelValue', 'change'])
 

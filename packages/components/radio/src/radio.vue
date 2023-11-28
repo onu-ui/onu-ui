@@ -1,7 +1,10 @@
-<script setup lang="ts" name="ORadio">
+<script setup lang="ts">
 import { radioEmits, radioProps } from './radio'
 import { useRadio } from './use-radio'
 
+defineOptions({
+  name: 'ORadio',
+})
 const props = defineProps(radioProps)
 const emit = defineEmits(radioEmits)
 

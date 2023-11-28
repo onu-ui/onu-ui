@@ -1,9 +1,12 @@
-<script lang='ts' setup name="demo-block">
+<script lang='ts' setup>
 import { computed } from 'vue'
 import { isClient, useClipboard, useToggle } from '@vueuse/core'
 import { usePlayground } from './playground'
 import { demoProps } from './index'
 
+defineOptions({
+  name: 'ODemoBlock',
+})
 const props = defineProps(demoProps)
 
 const decodedHighlightedCode = computed(() =>
