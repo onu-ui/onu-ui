@@ -25,7 +25,7 @@ provide(
   </div>
 </template>
 
-<style scope>
+<style scoped>
 .o-button-group > .o-button-base + .o-button-base {
   margin-left: 0;
 }
