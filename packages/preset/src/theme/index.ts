@@ -21,6 +21,9 @@ export default {
     embed: 'var(--onu-colors-embed)',
     darkContext: 'var(--onu-colors-darkContext)',
     lightContext: 'var(--onu-colors-lightContext)',
+
+    // refactor color system
+    primary: '',
   },
   fontFamily: {
     sans: 'Avenir, Helvetica, Arial, sans-serif',
