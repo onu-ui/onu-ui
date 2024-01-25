@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const handleVisibleChange = (visible: boolean) => {
-  // eslint-disable-next-line no-console
+function handleVisibleChange(visible: boolean) {
   console.log(visible)
 }
 </script>

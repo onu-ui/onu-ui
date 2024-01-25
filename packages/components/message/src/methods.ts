@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import { createVNode, isVNode, render } from 'vue'
 import { isElement, isFunction, isString } from '@onu-ui/utils'
 import { isClient } from '@vueuse/core'
@@ -40,7 +39,6 @@ function normalizeOption(params?: MessageParams) {
 
     // should fallback to default value with a warning
     if (!isElement(appendTo as any)) {
-      // eslint-disable-next-line no-console
       console.warn('appendTo must be a valid Element String')
       appendTo = document.body
     }
@@ -51,8 +49,7 @@ function normalizeOption(params?: MessageParams) {
   return normalizedOptions as CreateMessageType
 }
 
-function createMessage({ appendTo, ...options }: CreateMessageType,
-  context?: AppContext | null) {
+function createMessage({ appendTo, ...options }: CreateMessageType, context?: AppContext | null) {
   const { nextZIndex } = useZindex()
 
   const id = `message_${key++}`
@@ -94,6 +91,7 @@ function createMessage({ appendTo, ...options }: CreateMessageType,
       vm.exposed!.visible = false
     },
   }
+
   const instance: MessageContext = {
     id,
     vnode,
@@ -101,6 +99,7 @@ function createMessage({ appendTo, ...options }: CreateMessageType,
     props: (vnode.component as any).props,
     vm,
   }
+
   return instance
 }
 

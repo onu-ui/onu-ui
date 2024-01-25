@@ -1,11 +1,11 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { OAlert } from '@onu-ui/components'
 
 const ALERT_DESCRIPTION = 'Test content'
 const ALERT_TITLE = 'Test title'
 describe('o-alert', () => {
-  test('alert render test', () => {
+  it('alert render test', () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -17,7 +17,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-alert-title').text()).toBe(ALERT_TITLE)
   })
 
-  test('light alert', () => {
+  it('light alert', () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -29,7 +29,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-alert-light').exists()).toBeTruthy()
   })
 
-  test('alert with icon', () => {
+  it('alert with icon', () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -42,7 +42,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-alert-icon div').classes()).include('i-carbon-logo-github')
   })
 
-  test('alert width close icon', async () => {
+  it('alert width close icon', async () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -61,7 +61,7 @@ describe('o-alert', () => {
     expect(wrapper.emitted()).toBeDefined()
   })
 
-  test('alert width close text', async () => {
+  it('alert width close text', async () => {
     const wrapper = mount(OAlert, {
       props: {
         title: ALERT_TITLE,
@@ -78,7 +78,7 @@ describe('o-alert', () => {
     expect(wrapper.emitted()).toBeDefined()
   })
 
-  test('should work with `slots`', async () => {
+  it('should work with `slots`', async () => {
     const wrapper = mount(OAlert, {
       slots: {
         default: 'content',

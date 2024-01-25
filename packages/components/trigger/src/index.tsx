@@ -276,7 +276,7 @@ export default defineComponent({
     const handleOutsideClick = (e: MouseEvent) => {
       if (
         firstElement.value?.contains(e.target as HTMLElement)
-            || popupRef.value?.contains(e.target as HTMLElement)
+        || popupRef.value?.contains(e.target as HTMLElement)
       )
         return
 
@@ -284,7 +284,6 @@ export default defineComponent({
         if (item.value?.contains(e.target as HTMLElement))
           return
       }
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       removeOutsideListener()
       changeVisible(false)
     }

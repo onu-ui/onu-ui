@@ -89,7 +89,7 @@ Here is the fully defined form of the card exaples.
 
 ## Card Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 | header | `()` | Customize content of the Card header. |

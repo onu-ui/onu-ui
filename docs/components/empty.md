@@ -2,10 +2,9 @@
 
 Used to display the status of empty data.
 
-## Basic usage 
+## Basic usage
 
 <demo src="../example/empty/basic.vue" />
-
 
 ## Custom Description, Image
 
@@ -25,7 +24,6 @@ Use the default `slot` to insert content at the bottom.
 
 <demo src="../example/empty/slot.vue" />
 
-
 ## Empty Props
 
 | Name | Type | Default | Description |
@@ -36,9 +34,8 @@ Use the default `slot` to insert content at the bottom.
 
 ## Empty Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Custom bottom content. |
 | image | `()` | Custom image. |
 | description | `()` | Custom description. |
-

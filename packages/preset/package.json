@@ -35,7 +35,8 @@
   ],
   "scripts": {
     "dev": "tsup --watch --env.NODE_ENV development",
-    "build": "tsup --env.NODE_ENV production"
+    "build": "tsup --env.NODE_ENV production",
+    "prebuild": "esno scripts/prefilght.ts"
   },
   "publishConfig": {
     "access": "public"
@@ -45,9 +46,9 @@
   },
   "dependencies": {
     "@onu-ui/utils": "workspace:*",
-    "@unocss/core": "^0.56.5",
-    "@unocss/preset-mini": "^0.56.5",
+    "@unocss/core": "^0.58.3",
+    "@unocss/preset-mini": "^0.58.3",
     "theme-colors": "^0.1.0",
-    "unocss-preset-useful": "^0.2.5"
+    "unocss-preset-useful": "^0.3.7"
   }
 }

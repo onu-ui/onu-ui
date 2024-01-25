@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import { OMessage } from 'onu-ui'
-const open1 = () => {
+
+function open1() {
   OMessage({
     content: 'This is a primary message',
     type: 'primary',
@@ -8,7 +9,7 @@ const open1 = () => {
   })
 }
 
-const open2 = () => {
+function open2() {
   OMessage({
     content: 'This is a secondary message',
     type: 'secondary',
@@ -16,7 +17,7 @@ const open2 = () => {
 
   })
 }
-const open3 = () => {
+function open3() {
   OMessage({
     content: 'This is a success message',
     type: 'success',
@@ -24,7 +25,7 @@ const open3 = () => {
 
   })
 }
-const open4 = () => {
+function open4() {
   OMessage({
     content: 'This is a warning message',
     type: 'warning',
@@ -32,7 +33,7 @@ const open4 = () => {
 
   })
 }
-const open5 = () => {
+function open5() {
   OMessage({
     content: 'This is a error message',
     type: 'error',
@@ -40,7 +41,7 @@ const open5 = () => {
 
   })
 }
-const open6 = () => {
+function open6() {
   OMessage({
     content: 'This is a info message',
     type: 'info',

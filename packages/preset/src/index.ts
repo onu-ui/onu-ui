@@ -5,12 +5,12 @@ import theme from './theme'
 import rules from './rules'
 import variants from './variants'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
-import rootCSS, { generateThemeCSS } from './preflights/root'
+import preflights from './preflights'
 
 export type { PrsetOnuOptions }
 
 export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
-  const { presets, color } = resolveOptions(options)
+  const { presets } = resolveOptions(options)
   return {
     name: '@onu-ui/preset',
     theme,
@@ -18,11 +18,7 @@ export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
     variants,
     shortcuts,
     presets,
-    preflights: [{
-      getCSS: () => rootCSS,
-      // getCSS: () => generateThemeCSS(color),
-      layer: '@onu-ui/preset',
-    }],
+    preflights,
   }
 })
 

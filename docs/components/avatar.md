@@ -37,7 +37,6 @@ TODO
 
 TODO
 
-
 ## Avatar Props
 
 | Name | Type | Default | Description |
@@ -46,14 +45,11 @@ TODO
 | mode | `'bg' \| 'img'` | `'bg'` | Avatar mode. |
 | src | `string` | `undefined` | The source of the image for an image avatar. |
 
-
-
 ## Avatar Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content |
-
 
 ## Avatar Group Props
 

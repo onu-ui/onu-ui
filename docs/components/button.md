@@ -45,7 +45,6 @@ Use `text` to define Button's text style. Buttons without border and background.
 
 <demo src="../example/button/text.vue"></demo>
 
-
 ## Shadow Button
 
 Use `shadow` to show Button's shadow.
@@ -101,10 +100,9 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 | icon | `string` | `undefined` | Icon's name.  |
 | disabled | `boolean` | `false` | Disable the button. |
 
-
 ### Button Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 | icon | `()` | Customize icon component. |
@@ -120,6 +118,6 @@ Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 
 ### Button Group Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `Button` | Customize button group content. |

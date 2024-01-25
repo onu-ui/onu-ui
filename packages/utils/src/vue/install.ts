@@ -1,8 +1,7 @@
 import type { App } from 'vue'
 import type { SFCInstallWithContext, SFCWithInstall } from '../types'
 
-export function withInstall<T, E extends Record<string, any>>(main: T,
-  extra?: E) {
+export function withInstall<T, E extends Record<string, any>>(main: T, extra?: E) {
   (main as SFCWithInstall<T>).install = (app): void => {
     for (const comp of [main, ...Object.values(extra ?? {})])
       app.component(comp.name, comp)

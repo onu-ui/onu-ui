@@ -41,7 +41,7 @@ Link with icon.
 | icon | `string` | `undefined` | Icon's name. |
 
 ## Link Slots
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 | icon | `()` | Customize icon content. |

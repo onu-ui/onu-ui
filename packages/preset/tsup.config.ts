@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { defineConfig } from 'tsup'
-import { type Plugin } from 'esbuild'
+import type { Plugin } from 'esbuild'
 
 export default defineConfig(({ env }) => {
   return {

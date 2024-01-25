@@ -30,7 +30,7 @@ Use `closable` to show close icon and close message.
 Use `icon` to show icon before content
 <demo src="../example/message/icon.vue"></demo>
 
-## Duration 
+## Duration
 
 Use `duration` to control the `message` components display time. the defaultValue is `5000 ms`
 
@@ -75,10 +75,7 @@ OMessage.close()
 </script>
 ```
 
-
-
 <demo src="../example/message/trigger.vue" />
-
 
 ## Message Props
 
@@ -94,11 +91,8 @@ OMessage.close()
 | offset | `number` | `20` | Set the distance to the top of viewport. |
 | zIndex | `number` | `0` | Set the zIndex of Message. |
 
+## Message methods
 
-
-## Message methods 
-
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | close | `() => void` | Triggers when the message was closed. |
-

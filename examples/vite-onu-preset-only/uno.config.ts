@@ -5,14 +5,20 @@ import { presetOnu } from '../../packages/preset/dist/index.js'
 export default defineConfig({
   envMode: 'dev',
   presets: [
-    presetOnu(),
+    presetOnu({
+      webFonts: {
+        fonts: {
+          dm: 'DM Sans',
+        },
+      },
+    }),
   ],
   shortcuts: {
     wrapper: 'w-screen h-screen fccc',
   },
   transformers: [
-    transformAlias(),
     transformerVariantGroup(),
+    transformAlias(),
   ],
   configDeps: ['../../packages/preset/dist/index.js'],
 })

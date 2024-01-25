@@ -6,7 +6,7 @@ function utoa(data: string) {
 
 const MAIN_FILE_NAME = 'App.vue'
 
-export const usePlayground = (source: string) => {
+export function usePlayground(source: string) {
   const code = decodeURIComponent(source)
   const originCode = {
     [MAIN_FILE_NAME]: code,

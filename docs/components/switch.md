@@ -57,5 +57,3 @@ TODO
 | light | `boolean` | `false` | Determine whether it's a light switch.     | boolean |
 | disabled | `boolean` | `false` | Disable the switch. |
 | background-color | `string` | `undefined` | Custom the switch dot or background color. |
-
-

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { OMessage as message } from 'onu-ui'
-const open = () => {
+
+function open() {
   message({
     parseHtml: true,
     content: '<strong>This is <i>HTML</i> string</strong>',

@@ -23,7 +23,7 @@ function useSize(fallback?: MaybeRef<SizeType | undefined>) {
   )
 }
 
-export function useRadio(props: { label: ORadioProps['label']; modelValue?: ORadioProps['modelValue'] }, emit?: SetupContext<ORadioEmits>['emit']) {
+export function useRadio(props: { label: ORadioProps['label'], modelValue?: ORadioProps['modelValue'] }, emit?: SetupContext<ORadioEmits>['emit']) {
   const radioRef = ref<HTMLInputElement>()
   const radioGroup = inject(radioGroupKey, undefined)
   const isGroup = computed(() => Boolean(radioGroup))

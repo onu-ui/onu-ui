@@ -8,16 +8,15 @@ At present, the component library still needs a large number of components. You 
 
 ## Introduction
 
-Onu UI is a Vue.js based [UnoCSS](https://github.com/unocss/unocss) UI library that allows you to make beautiful websites. 
+Onu UI is a Vue.js based [UnoCSS](https://github.com/unocss/unocss) UI library that allows you to make beautiful websites.
 
 It includes a comprehensive collection of prebuilt components that are ready for use in production right out of the box.
 
 Onu UI is beautiful by design and features a suite of customization options that make it easy to implement your own custom design system on top of our components.
 
-The component library is written with the latest [Vue3 setup script](https://vuejs.org/guide/typescript/composition-api.html), full of [Typescript](https://www.typescriptlang.org/), and uses [Vite](https://vitejs.dev/) and [Tsup](https://github.com/egoist/tsup) to package and build the component library. In addition, we also embrace the latest front-end ecological cutting-edge technology, thanks to [VueUse](https://vueuse.org/), and the huge Vite plugin ecosystem. 
+The component library is written with the latest [Vue3 setup script](https://vuejs.org/guide/typescript/composition-api.html), full of [Typescript](https://www.typescriptlang.org/), and uses [Vite](https://vitejs.dev/) and [Tsup](https://github.com/egoist/tsup) to package and build the component library. In addition, we also embrace the latest front-end ecological cutting-edge technology, thanks to [VueUse](https://vueuse.org/), and the huge Vite plugin ecosystem.
 
 To install, please see [Installation](./install.md).
-
 
 ## Features
 
@@ -27,7 +26,6 @@ To install, please see [Installation](./install.md).
 - 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
 - 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
 - ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
-
 
 ## Online Playground
 
@@ -53,7 +51,6 @@ All components supported in modern browsers, support of neerly two or three vers
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | last 2 versions                                                         | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              | last 2 versions                                              |
 
-
 ## Latest Version
 
 [![npm version](https://img.shields.io/github/package-json/v/onu-ui/onu-ui)](https://www.npmjs.com/package/onu-ui)
@@ -67,7 +64,6 @@ Since `OnuUI` is under intensive development, we need your valuable comments and
 Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
 
 If you submit any bugs, please use the [OnuUI Playground](https://onu.zyob.top/play/) to provide a minimal reproduction.
-
 
 ## Contributing
 

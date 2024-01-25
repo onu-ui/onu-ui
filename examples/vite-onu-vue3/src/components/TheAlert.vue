@@ -2,7 +2,6 @@
 const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 const title = 'With Title'
 function handleClose() {
-  // eslint-disable-next-line no-console
   console.log('click the close icon')
 }
 </script>

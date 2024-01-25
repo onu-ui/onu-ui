@@ -80,7 +80,7 @@ export const commonTriggerProps = {
    * The duration of the popup animation
    */
   duration: {
-    type: [Number, Object] as PropType< | number | { enter: number; leave: number }>,
+    type: [Number, Object] as PropType< | number | { enter: number, leave: number }>,
   },
   /**
    * The moving distance of the popup

@@ -1,15 +1,15 @@
-[build.environment]
-  NETLIFY_USE_PNPM = "true"
-  NODE_VERSION = "16"
-
 [build]
-  publish = "docs/.vitepress/dist"
-  command = "pnpm install && pnpm -w run deploy"
+publish = "docs/.vitepress/dist"
+command = "pnpm install && pnpm -w run deploy"
+
+[build.environment]
+NETLIFY_USE_PNPM = "true"
+NODE_VERSION = "16"
 
 [[redirects]]
-  from = "/play/*"
-  to = "/play/index.html"
-  status = 200  
+from = "/play/*"
+to = "/play/index.html"
+status = 200
 
 [functions]
-  node_bundler = "esbuild"
+node_bundler = "esbuild"

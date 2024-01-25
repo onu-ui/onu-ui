@@ -9,7 +9,7 @@ const index = ref(0)
 </script>
 
 <template>
-  <div wrapper gap-2>
+  <div font-dm wrapper gap-2>
     <ButtonLayout />
     <div fcc gap-2>
       <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">

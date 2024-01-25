@@ -1,6 +1,7 @@
 import * as __unocss from 'unocss'
 import { $fetch } from 'ohmyfetch'
 import type { UserConfig } from 'unocss'
+
 const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor
 
 const CDN_BASE = 'https://esm.sh/'

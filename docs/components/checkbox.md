@@ -5,9 +5,7 @@ lang: en-US
 
 # Checkbox <update-badge/>
 
-
 Checkboxes are used to select or deselect a value.
-
 
 ## Basic usage
 
@@ -29,11 +27,7 @@ The Checkbox accepts `md` and `lg` properties to change its size.
 
 You can define the `icon` property to customize the checkbox's icon.
 
-
 <demo src="../example/checkbox/custom.vue"></demo>
-
-
-
 
 ## Checkbox Props
 
@@ -44,10 +38,4 @@ You can define the `icon` property to customize the checkbox's icon.
 | size | `'md' \| 'lg'` | `md` | Checkbox's size. |
 | icon | `string` | `i-carbon-checkmark` | Customize icon's name. |
 | disabled | `boolean` | `false` | Whether the Checkbox is disabled. |
-|label |	`string`	| `undefined` |	Checkbox label. |
-
-
-
-
-
-
+| label | `string` | `undefined` | Checkbox label. |

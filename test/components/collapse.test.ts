@@ -1,5 +1,5 @@
 import { nextTick } from 'vue'
-import { describe, expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { OCollapse, OCollapseItem } from '@onu-ui/components'
 import { config, mount } from '@vue/test-utils'
 import type { OCollapseItemInstance } from '@onu-ui/components/collapse/src/props'
@@ -11,7 +11,7 @@ config.global.stubs = {
 
 // const CONTENT_TEST = 'content test'
 describe('o-collapse', () => {
-  test('o-collapse render test', async () => {
+  it('o-collapse render test', async () => {
     const wrapper = mount(OCollapse, {
       props: {
         expandedNames: ['1'],
@@ -53,7 +53,7 @@ describe('o-collapse', () => {
     expect(collapseItemWrappers[0].getCurrentComponent().exposed!.isActive.value).toBe(false)
   })
 
-  test('o-collapse event:change', async () => {
+  it('o-collapse event:change', async () => {
     const onChange = vi.fn()
     let expandedNames: (string | number)[] = ['1']
     const onUpdate = (newVal: (string | number)[]) => {

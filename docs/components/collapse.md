@@ -22,11 +22,10 @@ Activate accordion mode using the accordion attribute.
 
 ## ExpandedNames
 
-Privide the `Array` , which contains the names of the expanded panels. 
-The expanded panel will be expanded when the component is mounted. 
+Privide the `Array` , which contains the names of the expanded panels.
+The expanded panel will be expanded when the component is mounted.
 
 <demo src="../example/collapse/expandedNames.vue"></demo>
-
 
 ## Custom title
 Besides using the title attribute, you can customize panel title with named slots, which makes adding custom content, e.g. icons, possible.
@@ -43,7 +42,6 @@ Arrow placement on item.
 | arrordion | `boolean` | `false` | Accordion mode. |
 | expandedNames | `Array<string \| number>` | `[]` | Contains the names of the expanded panels. |
 
-
 ## CollapseItem Props
 
 | Name | Type | Default | Description |
@@ -53,18 +51,16 @@ Arrow placement on item.
 | disabled | `boolean` | `false`  | Disabled collapseItem. |
 | arrow-placement | `'left' \| 'right'` | `left` | Display arrow placement in collapse item. |
 
-
 ## CollapseItem Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Collapse item content. |
 | title | `()` | Collapse item title text. |
 | icon | `()` | Collapse item icon. |
 
-
 ## CollapseItem Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | change | `(value: CollapseActiveName) => typeof isNumber(value) \|\| isString(value) \|\| isArray(value)` | Triggers when click collapse item. |

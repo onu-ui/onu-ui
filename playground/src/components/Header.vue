@@ -29,7 +29,7 @@ const appDark = useDark({
 const replDark = useDark()
 const toggleAppTheme = useToggle(appDark)
 const toggleReplTheme = useToggle(replDark)
-const toggleTheme = () => {
+function toggleTheme() {
   toggleAppTheme()
   toggleReplTheme()
 }

@@ -12,7 +12,7 @@ const decodedHighlightedCode = computed(() =>
 const { copy, copied } = useClipboard({ source: decodeURIComponent(props.code) })
 const [value, toggle] = useToggle()
 
-const editOnPlayground = () => {
+function editOnPlayground() {
   if (props.code) {
     const { link } = usePlayground(props.code)
     if (!isClient)

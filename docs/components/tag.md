@@ -13,7 +13,6 @@ Use the `type` attribute to define Tag's type. In addition, the `bgColor` attrib
 
 <demo src="../example/tag/basic.vue"></demo>
 
-
 ## Removable Tag
 
 `closable` attribute can be used to define a removable tag. It accepts a `Boolean`. By default the removal of Tag has a fading animation. If you don't want to use it, you can set the `disable-transitions` attribute, which accepts a `Boolean`, to `true`. `close` event triggers when Tag is removed.
@@ -29,7 +28,6 @@ TODO
 ## Sizes
 
 Besides default size, Tag component provides three additional sizes for you to choose among different scenarios.
-
 
 Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
 
@@ -64,18 +62,15 @@ TODO
 | bgColor | `string` | `undefined` | Background color of the tag. |
 | rounded | `boolean` | `false`  | Whether tag is rounded. |
 
-
 ## Tag Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 
 ## Tag Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | click | `() => void` | Triggers when Tag is clicked. |
 | close | `() => void` | Triggers when Tag is removed. |
-
-

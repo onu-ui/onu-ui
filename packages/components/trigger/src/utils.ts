@@ -33,8 +33,7 @@ interface ScrollRect {
   height: number
 }
 
-export function getElementScrollRect(element: HTMLElement,
-  containerRect: DOMRect) {
+export function getElementScrollRect(element: HTMLElement, containerRect: DOMRect) {
   const rect = element.getBoundingClientRect()
 
   return {
@@ -81,8 +80,7 @@ function getBoundaryPosition(position: Placement): BasePosition {
   }
 }
 
-function changePosition(position: Placement,
-  direction: BasePosition): Placement {
+function changePosition(position: Placement, direction: BasePosition): Placement {
   switch (direction) {
     case 'top':
       switch (position) {
@@ -133,18 +131,16 @@ function changePosition(position: Placement,
   }
 }
 
-function getPopupOffset(position: Placement,
-  triggerRect: ScrollRect,
-  popupRect: ScrollRect,
-  {
-    offset = 0,
-    translate = [0, 0],
-  }: {
-    offset?: number
-    translate?: TriggerPopupTranslate
-  } = {}): PositionOffset {
+function getPopupOffset(position: Placement, triggerRect: ScrollRect, popupRect: ScrollRect, {
+  offset = 0,
+  translate = [0, 0],
+}: {
+  offset?: number
+  translate?: TriggerPopupTranslate
+} = {}): PositionOffset {
   const _translate = (isArray(translate) ? translate : translate[position]) ?? [
-    0, 0,
+    0,
+    0,
   ]
 
   switch (position) {
@@ -232,21 +228,19 @@ function getPopupOffset(position: Placement,
   }
 }
 
-function getFitPosition(position: Placement,
-  popupPosition: PositionOffset,
-  {
-    containerRect,
-    triggerRect,
-    popupRect,
-    offset,
-    translate,
-  }: {
-    containerRect: DOMRect
-    triggerRect: ScrollRect
-    popupRect: ScrollRect
-    offset: number
-    translate: TriggerPopupTranslate
-  }) {
+function getFitPosition(position: Placement, popupPosition: PositionOffset, {
+  containerRect,
+  triggerRect,
+  popupRect,
+  offset,
+  translate,
+}: {
+  containerRect: DOMRect
+  triggerRect: ScrollRect
+  popupRect: ScrollRect
+  offset: number
+  translate: TriggerPopupTranslate
+}) {
   const direction = getBoundaryPosition(position)
   const viewPortSize = getViewPortSize()
 
@@ -275,7 +269,7 @@ function getFitPosition(position: Placement,
       })
       if (
         viewPortSize.height
-          - (containerRect.top + fitPosition.top + popupRect.height)
+        - (containerRect.top + fitPosition.top + popupRect.height)
         > 0
       ) {
         finalPosition = changePosition(position, 'bottom')
@@ -312,7 +306,7 @@ function getFitPosition(position: Placement,
       })
       if (
         viewPortSize.width
-          - (containerRect.left + fitPosition.left + popupRect.width)
+        - (containerRect.left + fitPosition.left + popupRect.width)
         > 0
       ) {
         finalPosition = changePosition(position, 'right')
@@ -379,21 +373,17 @@ export function getTransformOrigin(position: Placement) {
   return `${originX} ${originY}`
 }
 
-export function getPopupStyle(position: Placement,
-  containerRect: DOMRect,
-  triggerRect: ScrollRect,
-  popupRect: ScrollRect,
-  {
-    offset = 0,
-    translate = [0, 0],
-    customStyle = {},
-    autoFitPosition = false,
-  }: {
-    offset?: number
-    translate?: TriggerPopupTranslate
-    customStyle?: CSSProperties
-    autoFitPosition?: boolean
-  } = {}): { style: CSSProperties; position: Placement } {
+export function getPopupStyle(position: Placement, containerRect: DOMRect, triggerRect: ScrollRect, popupRect: ScrollRect, {
+  offset = 0,
+  translate = [0, 0],
+  customStyle = {},
+  autoFitPosition = false,
+}: {
+  offset?: number
+  translate?: TriggerPopupTranslate
+  customStyle?: CSSProperties
+  autoFitPosition?: boolean
+} = {}): { style: CSSProperties, position: Placement } {
   let finalPosition = position
   let popupPosition = getPopupOffset(position, triggerRect, popupRect, {
     offset,
@@ -423,14 +413,11 @@ export function getPopupStyle(position: Placement,
   }
 }
 
-export function getArrowStyle(position: Placement,
-  triggerRect: ScrollRect,
-  popupRect: ScrollRect,
-  {
-    customStyle = {},
-  }: {
-    customStyle?: CSSProperties
-  }): CSSProperties {
+export function getArrowStyle(position: Placement, triggerRect: ScrollRect, popupRect: ScrollRect, {
+  customStyle = {},
+}: {
+  customStyle?: CSSProperties
+}): CSSProperties {
   if (['top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'].includes(position)) {
     let offsetLeft = Math.abs(
       triggerRect.scrollLeft + triggerRect.width / 2 - popupRect.scrollLeft,

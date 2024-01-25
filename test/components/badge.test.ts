@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { OBadge } from '@onu-ui/components'
@@ -12,8 +12,8 @@ function _mount(options: any) {
   })
 }
 
-describe('Badge Component', () => {
-  test('basic', async () => {
+describe('badge Component', () => {
+  it('basic', async () => {
     const wrapper = _mount({
       template: '<OBadge :value="99"></OBadge>',
     })
@@ -22,7 +22,7 @@ describe('Badge Component', () => {
     expect(wrapper.find('.o-badge sup').text()).toBe('99')
   })
 
-  test('max value', async () => {
+  it('max value', async () => {
     const wrapper = _mount({
       template: `
         <OBadge id="badgeSimple" :value="100"></OBadge>
@@ -36,7 +36,7 @@ describe('Badge Component', () => {
     expect(wrapper.find('#badgeMax sup').text()).toBe('999+')
   })
 
-  test('dot', async () => {
+  it('dot', async () => {
     const wrapper = _mount({
       template: '<OBadge dot :value="99"></OBadge>',
     })

@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import { en, pt, zhCn } from 'onu-ui'
 import { ref } from 'vue'
+
 const locale = ref(en)
 </script>
 

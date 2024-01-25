@@ -1,8 +1,8 @@
 import { resolve } from 'node:path'
+import process from 'node:process'
 import fs from 'fs-extra'
 
 const componentsDir = resolve(__dirname, '../packages/components', 'dist')
-// eslint-disable-next-line n/prefer-global/process
 const volarPath = resolve(process.cwd(), 'volar.d.ts')
 const targetDir = resolve(__dirname, '../packages/onu-ui', 'es/components')
 const volarTargetPath = resolve(__dirname, '../packages/onu-ui', 'volar.d.ts')

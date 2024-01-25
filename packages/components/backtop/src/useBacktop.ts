@@ -1,9 +1,7 @@
 import type { SetupContext } from 'vue'
 import type { OBacktopEmits, OBacktopProps } from './props'
 
-export function useBackTop(props: OBacktopProps,
-  emit: SetupContext<OBacktopEmits>['emit'],
-  componentName: string) {
+export function useBackTop(props: OBacktopProps, emit: SetupContext<OBacktopEmits>['emit'], componentName: string) {
   const el = shallowRef<HTMLElement>()
   const container = shallowRef<Document | HTMLElement>()
   const visible = ref(false)
