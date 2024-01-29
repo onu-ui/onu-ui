@@ -1,6 +1,7 @@
 {
   "name": "vite-onu-preset-only",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
