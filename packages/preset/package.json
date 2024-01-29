@@ -46,9 +46,9 @@
   },
   "dependencies": {
     "@onu-ui/utils": "workspace:*",
-    "@unocss/core": "^0.58.3",
-    "@unocss/preset-mini": "^0.58.3",
+    "@unocss/core": "^0.58.4",
+    "@unocss/preset-mini": "^0.58.4",
     "theme-colors": "^0.1.0",
-    "unocss-preset-useful": "^0.3.7"
+    "unocss-preset-useful": "^0.4.0"
   }
 }
