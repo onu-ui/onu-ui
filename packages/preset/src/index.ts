@@ -25,7 +25,7 @@ export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
 function resolveOptions(options: PrsetOnuOptions) {
   const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
-    color: '#1890ff',
+    color: '#9955FF', // 153 85 255
   }
   const optionsWithDefault = Object.assign({}, defaultOptions, options)
   const presets = [presetUseful(optionsWithDefault)]
