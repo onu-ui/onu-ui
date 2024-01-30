@@ -1,30 +1,48 @@
 import { expect, it } from 'vitest'
 import { buttonShortcuts } from '../shortcuts/button'
-import { generateThemeCSS } from '../preflights/root'
-import { spliteSpace } from './index'
+import { generateThemeCSS } from '../utils'
+import { spliteObject, spliteSpace } from './index'
 
 it('spliteSpace', () => {
-  const btn = buttonShortcuts.btn
-  expect(spliteSpace(btn))
-    .toMatchInlineSnapshot('"btn-default o-[rgb(var(--color-primary-DEFAULT))] text-white dark:text-black bg-context ring-0"')
+  expect(spliteObject(buttonShortcuts))
+    .toMatchInlineSnapshot(`
+      {
+        "btn": "btn-default o-[rgb(var(--color-primary-DEFAULT))] text-white dark:text-black bg-context ring-0 disabled:op-64",
+        "btn-active": "active:scale-95",
+        "btn-border": "",
+        "btn-dashed": "btn-outline ring-0 relative hover:text-context dark:hover:text-context after:(content-empty absolute inset-0 b-(~ context dashed) rounded) hover:bg-[rgb(var(--color-primary-100))] hover:dark:bg-[rgb(var(--color-primary-900))]",
+        "btn-default": "btn-md btn-hover btn-active btn-focus btn-disabled text-black dark:text-white bg-transparent inline-flex items-center justify-center gap-1 cursor-pointer rounded shadow-sm o-transition select-none ring-1 ring-current",
+        "btn-disabled": "disabled:( cursor-not-allowed op-32 shadow-none hover:o-[rgb(var(--color-primary-DEFAULT))] active:scale-100 )",
+        "btn-focus": "focus:o-[rgb(var(--color-primary-600))]",
+        "btn-hover": "hover:o-[rgb(var(--color-primary-600))]",
+        "btn-lg": "px-3.5 py-2.5 text-base",
+        "btn-light": "bg-[rgb(var(--color-primary-100))] dark:bg-[rgb(var(--color-primary-900))] text-context dark:text-context shadow-none hover:(bg-context text-white) dark:hover:text-black",
+        "btn-link": "bg-transparent underline underline-offset-2 shadow-none text-context dark:text-context",
+        "btn-md": "px-3 py-2 text-sm",
+        "btn-outline": "bg-transparent ring-1 text-context dark:text-context hover:(bg-context text-white) dark:hover:text-black",
+        "btn-sm": "px-2.5 py-1.5 text-sm",
+        "btn-soft": "bg-[rgb(var(--color-primary-100))] dark:bg-[rgb(var(--color-primary-900))] text-context dark:text-context shadow-none hover:(bg-context text-white) dark:hover:text-black",
+        "btn-xs": "px-2.5 py-1.5 text-xs",
+      }
+    `)
 })
 
 it('generate theme css', () => {
-  const theme = generateThemeCSS('168,85,247')
+  const theme = generateThemeCSS('#9955FF')
 
   expect(theme).toMatchInlineSnapshot(`
     {
-      "100": "#F6EEFE",
-      "200": "#E9D5FD",
-      "300": "#DCBBFC",
-      "400": "#C288F9",
-      "50": "#FBF7FF",
-      "500": "#A855F7",
-      "600": "#974DDE",
-      "700": "#653394",
-      "800": "#4C266F",
-      "900": "#321A4A",
-      "950": "#221131",
+      "100": "#F5EEFF",
+      "200": "#E6D5FF",
+      "300": "#D6BBFF",
+      "400": "#B888FF",
+      "50": "#FAF7FF",
+      "500": "#9955FF",
+      "600": "#8A4DE6",
+      "700": "#5C3399",
+      "800": "#452673",
+      "900": "#2E1A4D",
+      "950": "#1F1133",
     }
   `)
 })

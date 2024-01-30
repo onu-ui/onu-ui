@@ -1,11 +1,10 @@
 import type { Preflight } from 'unocss'
-
-const injectPreflights = '__Prefilghts_Placeholder__'
+import reset from './reset'
 
 const preflights: Preflight[] = [
   {
-    getCSS: () => injectPreflights,
-    layer: '@onu-ui/preset',
+    getCSS: () => reset,
+    layer: '@onu-ui/preset-reset',
   },
 ]
 

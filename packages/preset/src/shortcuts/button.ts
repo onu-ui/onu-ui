@@ -23,7 +23,7 @@ export const buttonShortcuts: Record<string, string> = spliteObject({
           o-transition select-none
           ring-1 ring-current
         `,
-  'btn-ghost': `
+  'btn-soft': `
           bg-[rgb(var(--color-primary-100))] dark:bg-[rgb(var(--color-primary-900))]
           text-context dark:text-context shadow-none
           hover:(bg-context text-white) dark:hover:text-black
