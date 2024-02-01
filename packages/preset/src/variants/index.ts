@@ -1,7 +1,7 @@
 import type { Variant } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 
-export default [
+export const variants = [
   (input: string) => {
     const prefix = 'o-disabled:'
     if (input.startsWith(prefix)) {

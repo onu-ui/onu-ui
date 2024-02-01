@@ -1,14 +1,14 @@
 import { parseColor } from '@unocss/preset-mini/utils'
 import type { ParsedColorValue, Rule, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
-import theme from '../theme'
+import { theme } from '../theme'
 import { SwitchSizeMap } from '../constants'
 
 export function parseColors(body: string, _theme: Theme = theme): ParsedColorValue | undefined {
   return parseColor(body, _theme)
 }
 
-export default [
+export const rules = [
   [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
     const color = parseColor(body, theme)
     if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {

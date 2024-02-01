@@ -8,15 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.14"
+    "vue": "^3.4.15"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.58.3",
     "@vitejs/plugin-vue": "^5.0.3",
     "typescript": "^5.3.3",
-    "unocss": "^0.58.3",
+    "unocss": "^0.58.4",
     "unocss-transformer-alias": "^0.0.7",
-    "vite": "^5.0.11",
+    "vite": "^5.0.12",
     "vue-tsc": "^1.8.27"
   }
 }

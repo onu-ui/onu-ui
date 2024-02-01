@@ -1,31 +1,32 @@
 import { presetUseful } from 'unocss-preset-useful'
-import { definePreset } from '@unocss/core'
+import { PresetOrFactory, definePreset } from '@unocss/core'
 import { shortcuts } from './shortcuts'
-import theme from './theme'
-import rules from './rules'
-import variants from './variants'
+import { theme } from './theme'
+import { rules } from './rules'
+import { variants } from './variants'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
-import preflights from './preflights'
+import { preflights } from './preflights'
 
 export type { PrsetOnuOptions }
 
 export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
-  const { presets } = resolveOptions(options)
+  const resolvedOptions = resolveOptions(options)
+
   return {
     name: '@onu-ui/preset',
     theme,
     rules,
     variants,
     shortcuts,
-    presets,
-    preflights,
+    presets: resolvedOptions.presets,
+    preflights: preflights(resolvedOptions),
   }
 })
 
 function resolveOptions(options: PrsetOnuOptions) {
   const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
-    color: '#9955FF', // 153 85 255
+    color: '#9955FF',
   }
   const optionsWithDefault = Object.assign({}, defaultOptions, options)
   const presets = [presetUseful(optionsWithDefault)]
