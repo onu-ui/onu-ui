@@ -1,7 +1,6 @@
 import { expect, it } from 'vitest'
-import { buttonShortcuts } from '../shortcuts/button'
-import { generateThemeCSS } from '../utils'
-import { spliteObject, spliteSpace } from './index'
+import { button as buttonShortcuts } from '../shortcuts/button'
+import { spliteObject } from './index'
 
 it('spliteSpace', () => {
   expect(spliteObject(buttonShortcuts))
@@ -25,24 +24,4 @@ it('spliteSpace', () => {
         "btn-xs": "px-2.5 py-1.5 text-xs",
       }
     `)
-})
-
-it('generate theme css', () => {
-  const theme = generateThemeCSS('#9955FF')
-
-  expect(theme).toMatchInlineSnapshot(`
-    {
-      "100": "#F5EEFF",
-      "200": "#E6D5FF",
-      "300": "#D6BBFF",
-      "400": "#B888FF",
-      "50": "#FAF7FF",
-      "500": "#9955FF",
-      "600": "#8A4DE6",
-      "700": "#5C3399",
-      "800": "#452673",
-      "900": "#2E1A4D",
-      "950": "#1F1133",
-    }
-  `)
 })

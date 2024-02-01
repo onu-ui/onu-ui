@@ -1,6 +1,6 @@
 import { spliteObject } from '../utils'
 
-export const inputShortcuts: Record<string, string> = spliteObject({
+export const input: Record<string, string> = spliteObject({
   'input-xs': 'px-2.5 py-1.5 text-xs',
   'input-sm': 'px-2.5 py-1.5 text-sm',
   'input-md': 'px-3 py-2 text-sm',

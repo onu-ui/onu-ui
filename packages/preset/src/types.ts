@@ -1,4 +1,4 @@
-import type { Preset } from '@unocss/core'
+import type { Preset } from 'unocss'
 import type { UsefulOptions } from 'unocss-preset-useful'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md

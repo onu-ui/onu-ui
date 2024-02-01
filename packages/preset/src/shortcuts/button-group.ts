@@ -1,4 +1,4 @@
-export const buttonGroupShortcuts: Record<string, string> = {
+export const buttonGroup: Record<string, string> = {
   'btn-group': `
         flex items-center justify-center gap-0
         [&>.btn]:(rounded-0 bg-[rgb(var(--color-gray-300))])

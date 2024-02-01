@@ -1,6 +1,6 @@
 import { spliteObject } from '../utils'
 
-export const buttonShortcuts: Record<string, string> = spliteObject({
+export const button: Record<string, string> = spliteObject({
   'btn-xs': 'px-2.5 py-1.5 text-xs',
   'btn-sm': 'px-2.5 py-1.5 text-sm',
   'btn-md': 'px-3 py-2 text-sm',

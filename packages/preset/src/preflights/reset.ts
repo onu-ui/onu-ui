@@ -1,4 +1,6 @@
-export default `
+import type { Preflight } from 'unocss'
+
+const resetCSS = `
 /*
 Please read: https://github.com/unocss/unocss/blob/main/packages/reset/tailwind-compat.md
 */
@@ -388,3 +390,8 @@ Make elements with the HTML hidden attribute stay hidden by default.
   display: none;
 }
 `.trim()
+
+export const resetPreflight: Preflight = {
+  getCSS: () => resetCSS,
+  layer: '@onu-ui/preset-reset',
+}

@@ -1,5 +1,5 @@
 import { presetUseful } from 'unocss-preset-useful'
-import { PresetOrFactory, definePreset } from '@unocss/core'
+import { PresetOrFactory, definePreset } from 'unocss'
 import { shortcuts } from './shortcuts'
 import { theme } from './theme'
 import { rules } from './rules'
@@ -14,7 +14,7 @@ export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
 
   return {
     name: '@onu-ui/preset',
-    theme,
+    theme: theme(resolvedOptions),
     rules,
     variants,
     shortcuts,

@@ -1,74 +1,11 @@
 import type { Theme } from '@unocss/preset-mini'
-import type { UserShortcuts } from '@unocss/core'
-import { baseShortcuts } from './base'
-import { alertShortcuts } from './alert'
-import { avatarDynamicShortcuts, avatarShortcuts } from './avatar'
-import { badgeShortcuts } from './badge'
-import { buttonShortcuts } from './button'
-import { buttonGroupShortcuts } from './button-group'
-import { cardShortcuts } from './card'
-import { checkboxShortcuts } from './checkbox'
-import { collapseShortcuts } from './collapse'
-import { iconShortcuts } from './icon'
-import { messageDynamicShortcuts, messageShortcuts } from './message'
-import { switchShortcuts } from './switch'
-import { tagShortcuts } from './tag'
-import { popupShortcuts } from './popup'
-import { triggerShortcuts } from './trigger'
-import { rateShortcuts } from './rate'
-import { emptyShortcuts } from './empty'
-import { linkShortcuts } from './link'
-import { radioShortcuts } from './radio'
-import { progressShortcuts } from './progress'
-import { inputShortcuts } from './input'
+import type { UserShortcuts } from 'unocss'
+import { button } from './button'
+import { buttonGroup } from './button-group'
+import { input } from './input'
 
 export const shortcuts = [
-  // done
-  // button
-  buttonShortcuts,
-  buttonGroupShortcuts,
-
-  // input
-  inputShortcuts,
-  // TODO
-
-  baseShortcuts,
-  // alert
-  alertShortcuts,
-  // avatar
-  avatarShortcuts,
-  ...avatarDynamicShortcuts,
-  // badge
-  badgeShortcuts,
-
-  // card
-  cardShortcuts,
-  // checkbox
-  checkboxShortcuts,
-  // collapse
-  collapseShortcuts,
-  // icon
-  iconShortcuts,
-  // message
-  messageShortcuts,
-  ...messageDynamicShortcuts,
-  // switch
-  switchShortcuts,
-  // tag
-  tagShortcuts,
-  // popup
-  popupShortcuts,
-  // trigger
-  triggerShortcuts,
-  // rate
-  rateShortcuts,
-  // empty
-  emptyShortcuts,
-  // link
-  linkShortcuts,
-  // radio
-  radioShortcuts,
-  // progress
-  progressShortcuts,
-
+  button,
+  buttonGroup,
+  input,
 ] as UserShortcuts<Theme>
