@@ -41,7 +41,7 @@
     "access": "public"
   },
   "dependencies": {
-    "magic-color": "^0.0.2",
+    "magic-color": "^0.0.3",
     "unocss-preset-useful": "^0.4.0"
   },
   "devDependencies": {

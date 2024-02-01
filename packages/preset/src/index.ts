@@ -1,5 +1,6 @@
 import { presetUseful } from 'unocss-preset-useful'
-import { PresetOrFactory, definePreset } from 'unocss'
+import type { PresetFactory } from 'unocss'
+import { definePreset } from 'unocss'
 import { shortcuts } from './shortcuts'
 import { theme } from './theme'
 import { rules } from './rules'
@@ -9,7 +10,7 @@ import { preflights } from './preflights'
 
 export type { PrsetOnuOptions }
 
-export const presetOnu = definePreset((options: PrsetOnuOptions = {}) => {
+export const presetOnu: PresetFactory<object, PrsetOnuOptions> = definePreset((options: PrsetOnuOptions = {}) => {
   const resolvedOptions = resolveOptions(options)
 
   return {

@@ -5,8 +5,6 @@ import type { ResolveOnuOptions } from '../types'
 export function themePreflight(options: ResolveOnuOptions): Preflight {
   const { color } = options
 
-  // TODO: dark theme
-
   return {
     getCSS: () => {
       const themeObj = theme(color, {
@@ -23,6 +21,9 @@ export function themePreflight(options: ResolveOnuOptions): Preflight {
   :root {
   ${Object.entries(themeObj).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
   --color-primary-DEFAULT: var(--color-primary-500);
+  }
+  .dark {
+    --color-primary-DEFAULT: var(--color-primary-400);
   }
       `.trim()
     },

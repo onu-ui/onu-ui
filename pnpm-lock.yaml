@@ -251,8 +251,8 @@ importers:
   packages/preset:
     dependencies:
       magic-color:
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
       unocss-preset-useful:
         specifier: ^0.4.0
         version: 0.4.0(unocss@0.58.4)
@@ -7012,8 +7012,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /magic-color@0.0.2:
-    resolution: {integrity: sha512-opWVi7Fy+nqsLCGHsLrFjCmSWb90BHPl0GGWkVTUVSsgc+XGGQeyKHisaw0YwnBKMDqdMosG4WNLuDANppI25g==}
+  /magic-color@0.0.3:
+    resolution: {integrity: sha512-/Un61WWiE7JTk0KA5oGvClQlbbC+6x3n3/zQ6ykICb3AfZXSpZcU6iVSzxL5+Y7rVn+exSK7WT8wNcxIVMezxQ==}
     dev: false
 
   /magic-string@0.27.0:
