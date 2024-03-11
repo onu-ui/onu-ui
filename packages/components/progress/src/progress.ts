@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { SizeType } from '../../types'
 
-export interface ProgressColor { color: string; percentage: number }
+export interface ProgressColor { color: string, percentage: number }
 export type ProgressFn = (percentage: number) => string
 
 export const TYPE_MAP = {

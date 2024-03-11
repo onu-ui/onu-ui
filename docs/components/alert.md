@@ -66,18 +66,15 @@ Use the `center` attribute to center the text.
 
 ##  Alert Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Content of the alert description. |
 | title | `()` | Content of the alert title. |
 | icon | `()` | Icon of the alert content. |
 | close | `()` | Close area of the alert header. |
 
-
 ##  Alert Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | close | `(evt: MouseEvent) => void` | Trigger when alert is closed. |
-
-

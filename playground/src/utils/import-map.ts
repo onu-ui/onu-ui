@@ -3,7 +3,7 @@ export interface ImportMap {
   scopes?: Record<string, string>
 }
 
-export const mergeImportMap = (a: ImportMap, b: ImportMap): ImportMap => {
+export function mergeImportMap(a: ImportMap, b: ImportMap): ImportMap {
   return {
     imports: {
       ...(a.imports || {}),

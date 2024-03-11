@@ -13,8 +13,7 @@ function NOOP() {
   return undefined
 }
 
-export function querySelector(selectors: string,
-  container?: Document | HTMLElement) {
+export function querySelector(selectors: string, container?: Document | HTMLElement) {
   if (isServerRendering)
     return NOOP()
 
@@ -23,8 +22,7 @@ export function querySelector(selectors: string,
   )
 }
 
-export function getElement(target: string | HTMLElement | undefined,
-  container?: Document | HTMLElement): HTMLElement | undefined {
+export function getElement(target: string | HTMLElement | undefined, container?: Document | HTMLElement): HTMLElement | undefined {
   if (isString(target)) {
     const selector = target[0] === '#' ? `[id='${target.slice(1)}']` : target
     return querySelector(selector, container)

@@ -38,11 +38,8 @@ If the value is 0, it will not be displayed. You can set `showZero` attribute to
 | dot | `boolean` | `false` | Only a dot style. |
 | showZero | `boolean` | `false` | Whether to display the number 0. |
 
-
 ## Badge Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Badge's content. |
-
-

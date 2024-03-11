@@ -22,7 +22,7 @@ export const affixProps = {
 } as const
 
 export const affixEmits = {
-  scroll: ({ scrollTop, fixed }: { scrollTop: number; fixed: boolean }) => isNumber(scrollTop) && isBoolean(fixed),
+  scroll: ({ scrollTop, fixed }: { scrollTop: number, fixed: boolean }) => isNumber(scrollTop) && isBoolean(fixed),
   change: (fixed: boolean) => isBoolean(fixed),
 }
 

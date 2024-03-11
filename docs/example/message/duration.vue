@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { OMessage as message } from 'onu-ui'
+
 function handleToClickBasic(theme: string, time: number) {
   message[theme]({
     content: 'this is basic content',

@@ -33,7 +33,7 @@ export type SerializeState = Record<string, string> & {
   _o?: UserOptions
 }
 
-export const useStore = (initial: Initial) => {
+export function useStore(initial: Initial) {
   // 版本
   const versions = reactive(
     initial.versions || { vue: 'latest', [playConfig.compLibShort]: IS_DEV ? `@${__COMMIT__}` : 'latest' },

@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { OSwitch } from '@onu-ui/components'
@@ -12,8 +12,8 @@ function _mount(options: any) {
   })
 }
 
-describe('Switch Component', () => {
-  test('modelValue', async () => {
+describe('switch Component', () => {
+  it('modelValue', async () => {
     const switchVal = ref(true)
     const wrapper = _mount({
       template: `
@@ -34,7 +34,7 @@ describe('Switch Component', () => {
     expect(switchVal.value).toBeFalsy()
   })
 
-  test('size', async () => {
+  it('size', async () => {
     const wrapper = mount(OSwitch, {
       props: {
         size: 'sm',
@@ -44,7 +44,7 @@ describe('Switch Component', () => {
     expect(wrapper.find('.o-switch-sm').exists()).toBeTruthy()
   })
 
-  test('disabled', async () => {
+  it('disabled', async () => {
     const switchDisabled = ref(true)
     const wrapper = _mount({
       template: `

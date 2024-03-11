@@ -8,7 +8,7 @@ const customColors = [
   { color: '#1989fa', percentage: 80 },
   { color: '#6f7ad3', percentage: 100 },
 ]
-const customColorMethod = (percentage: number) => {
+function customColorMethod(percentage: number) {
   if (percentage < 30)
     return '#909399'
 
@@ -17,12 +17,12 @@ const customColorMethod = (percentage: number) => {
 
   return '#67c23a'
 }
-const increase = () => {
+function increase() {
   percentage.value += 10
   if (percentage.value > 100)
     percentage.value = 100
 }
-const decrease = () => {
+function decrease() {
   percentage.value -= 10
   if (percentage.value < 0)
     percentage.value = 0

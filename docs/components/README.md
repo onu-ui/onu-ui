@@ -4,7 +4,7 @@ This section will help you standardize component's API documentation.
 
 ## [Component Name] Props
 
-Highlight `Type` and `Default` with code blocks. 
+Highlight `Type` and `Default` with code blocks.
 
 Base types do not need single quotes
 
@@ -15,16 +15,16 @@ Base types do not need single quotes
 
 ## [Component Name] Slots
 
-Highlight `Parameters` with code blocks. 
+Highlight `Parameters` with code blocks.
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | test | `(options: { collapsed: boolean })` | Custom icons for folding panels. |
 
 ## [Component Name] Methods
 
-Highlight `Parameters` with code blocks. 
+Highlight `Parameters` with code blocks.
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | test | `(options: { collapsed: boolean })` | Custom icons for folding panels. |

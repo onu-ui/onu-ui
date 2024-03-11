@@ -6,7 +6,7 @@ const msg = ref('Hello Onu UI!')
 const checkVal = ref(true)
 const mv = ref(true)
 const avatarSrcs = 'https://github.com/zyyv.png'
-const open = () => {
+function open() {
   message({
     content: 'Hello OnuUI!',
     closable: true,
@@ -16,7 +16,7 @@ const open = () => {
 const className = 'dark'
 const isDark = ref(false)
 
-const toggleTheme = () => {
+function toggleTheme() {
   if (typeof window !== 'undefined') {
     const rootCls = document.documentElement.classList
     isDark.value = !isDark.value

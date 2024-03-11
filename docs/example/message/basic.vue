@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { OMessage as message } from 'onu-ui'
-const open = () => {
+
+function open() {
   message('This is a message')
 }
 </script>

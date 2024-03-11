@@ -77,7 +77,6 @@ Use default slot to add customized content.
 
 <demo src="../example/progress/customize.vue"></demo>
 
-
 ## Progress Props
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -99,6 +98,6 @@ Use default slot to add customized content.
 | format | `(percentage: number) => string` | `(percentage: number): string => percentage + '%'` | Custom text format. |
 
 ## Progress Slots
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customized content, parameter is `{ percentage }` |

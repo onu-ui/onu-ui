@@ -1,4 +1,3 @@
-
 > [English](./CONTRIBUTING.md) | 简体中文
 
 # 贡献指南
@@ -71,7 +70,6 @@ Commit messages 请遵循[conventional-changelog 标准](https://www.conventiona
 6. `@onu-ui/nuxt`: 组件库 Nuxt 模块
 7. `example`: 调试组件库的示例
 8. `playground`: 组件库演练场
-
 
 ## License
 

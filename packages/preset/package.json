@@ -1,5 +1,6 @@
 {
   "name": "@onu-ui/preset",
+  "type": "module",
   "version": "1.0.14-beta.2",
   "description": "Onu-UI css rules for unocss preset",
   "author": "Chris <https://github.com/zyyv>",
@@ -33,16 +34,17 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "stub": "tsup --watch --onSuccess \"pnpm run --filter '../components' stub\""
+    "dev": "tsup --watch",
+    "build": "tsup"
   },
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@unocss/core": "^0.56.5"
-  },
   "dependencies": {
-    "@unocss/preset-mini": "^0.56.5"
+    "magic-color": "^0.0.3",
+    "unocss-preset-useful": "^0.4.0"
+  },
+  "devDependencies": {
+    "@unocss/preset-mini": "^0.58.4"
   }
 }

@@ -1,7 +1,0 @@
-dist
-public
-es
-node_modules
-playground/*
-example/*
-docs/*

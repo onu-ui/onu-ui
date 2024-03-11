@@ -27,16 +27,14 @@ Customize the button style, this display area is 40px * 40px.
 | right | `number` | `40` |  Right distance.  |
 | bottom | `number` | `40` | Bottom distance. |
 
-
 ## Backtop Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | click | `(evt: MouseEvent) => void` | Triggers when click. |
 
-
 ## Backtop Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |

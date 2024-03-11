@@ -82,12 +82,12 @@ If you do not want label's color to change when selected, you can use the `not-t
 | name | `string` | `undefined` | Native `name` attribute. |
 
 ### Radio Methods
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | change | `(value: string \| number \| boolean) => void` | Triggers when the bound value changes. |
 
 ### Radio Slots
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 
@@ -103,7 +103,7 @@ If you do not want label's color to change when selected, you can use the `not-t
 | id | `string` | `undefined` | Native `id` attribute. |
 
 ### RadioGroup Methods
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | change | `(value: string \| number \| boolean) => void` | Triggers when the bound value changes. |
 

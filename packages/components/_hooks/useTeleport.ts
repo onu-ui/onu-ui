@@ -2,11 +2,6 @@ import { onMounted, ref, watch } from 'vue'
 import { getElement } from '@onu-ui/utils'
 import type { Ref } from 'vue'
 
-/**
- *
- * @param param0
- * @returns teleportContainer: mounted Teleport container,containerRef:  popupContainer element
- */
 export function useTeleport({
   popupContainer,
   visible,

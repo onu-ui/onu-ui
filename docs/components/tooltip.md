@@ -7,7 +7,6 @@ lang: en-US
 
 Tooltip can be used to show a message when hovering over an element.
 
-
 ## Basic
 
 Move the mouse in or click to pop up bubbles, which can operate on the elements on the floating layer, and carry complex content and operations.
@@ -22,7 +21,6 @@ Set `type` to modify theme, the default is `Dark`.
 
 <demo src="../example/tooltip/type.vue"></demo>
 
-
 ## Trigger
 
 By setting `trigger`, you can specify different trigger methods.
@@ -30,7 +28,6 @@ By setting `trigger`, you can specify different trigger methods.
 They are: `hover` | `click` | `focus` | `context-menu`.
 
 <demo src="../example/tooltip/trigger.vue"></demo>
-
 
 ## Position
 
@@ -43,8 +40,6 @@ They are: `hover` | `click` | `focus` | `context-menu`.
 Customize the background color through the `background-color` property.
 
 <demo src="../example/tooltip/bg.vue"></demo>
-
-
 
 ## Tooltip Props
 
@@ -64,18 +59,14 @@ Customize the background color through the `background-color` property.
 | popup-container | `string \| HTMLElement  \| undefined` | `undefined` | Mount container for ToolTip box. |
 | update-at-scroll | `boolean `| `false`  | Whether to update the position of the popup when the container is scrolled. |
 
-
 ## Tooltip Slots
 
-
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | content | `()` | Custom ToolTip content. |
 
 ## Tooltip Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | popup-visible-change | `(visible: boolean) => void` | Triggered when the text bubble display status changes. |
-
-

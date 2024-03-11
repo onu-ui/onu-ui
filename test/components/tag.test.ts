@@ -1,10 +1,10 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { OTag } from '@onu-ui/components'
 
 const Tag_Content = 'Test content'
 describe('o-alert', () => {
-  test('alert render test', () => {
+  it('alert render test', () => {
     const wrapper = mount(OTag, {
       slots: {
         default: Tag_Content,
@@ -14,7 +14,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-tag-content').text()).toBe(Tag_Content)
   })
 
-  test('light tag', () => {
+  it('light tag', () => {
     const wrapper = mount(OTag, {
       props: {
         light: true,
@@ -27,7 +27,7 @@ describe('o-alert', () => {
     expect(wrapper.find('.o-tag-light').exists()).toBeTruthy()
   })
 
-  test('closable', async () => {
+  it('closable', async () => {
     const wrapper = mount(OTag, {
       props: {
         closable: true,
@@ -45,7 +45,7 @@ describe('o-alert', () => {
     expect(wrapper.emitted()).toBeDefined()
   })
 
-  test('color', () => {
+  it('color', () => {
     const wrapper = mount(OTag, {
       props: {
         bgColor: 'rgb(0, 0, 0)',
@@ -55,7 +55,7 @@ describe('o-alert', () => {
     expect(vm.$el.style.backgroundColor).toEqual('rgb(0, 0, 0)')
   })
 
-  test('size', () => {
+  it('size', () => {
     const wrapper = mount(OTag, {
       props: {
         size: 'lg',

@@ -1,3 +1,5 @@
+import { isArray, isObject } from './is'
+
 export function hash(str: string) {
   let i
   let l
@@ -52,4 +54,33 @@ export function deepGet(target: any, path: string | string[], defaultValue: any)
   }
 
   return index === pathArray.length ? target : defaultValue
+}
+
+export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> }
+
+export function deepMerge<T>(original: T, patch: DeepPartial<T>): T {
+  const o = original as any
+  const p = patch as any
+
+  if (isArray(o) && isArray(p))
+    return [...o, ...p] as any
+
+  if (isArray(o))
+    return [...o] as any
+
+  const output = { ...o }
+  if (isObject(o) && isObject(p)) {
+    Object.keys(p).forEach((key) => {
+      if (isObject(p[key])) {
+        if (!(key in o))
+          Object.assign(output, { [key]: p[key] })
+        else
+          output[key] = deepMerge(o[key], p[key])
+      }
+      else {
+        Object.assign(output, { [key]: p[key] })
+      }
+    })
+  }
+  return output
 }

@@ -39,21 +39,19 @@ You can set `position` attribute to change the fixed position, the default value
 | target | `string` | `''` |  Target container. (CSS selector)  |
 | z-index | `number` | `100` | `z-index` of affix |
 
-
 ## Affix Methods
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | change | `(fixed: boolean) => void` | Triggers when fixed state changed. |
 | scroll | `(value: { scrollTop: number, fixed: boolean }) => void` | Triggers when scrolling. |
 
-
 ## Affix Slots
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |
 
 ## Affix Exposes
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | update | `() => void` | Update affix state manually. |
 | updateRoot | `() => void` | Update rootRect info. |

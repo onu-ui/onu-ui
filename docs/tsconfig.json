@@ -9,13 +9,13 @@
     },
     "types": ["../volar", "./auto-imports"]
   },
-  "exclude": [
-    "**/dist/**"
-  ],
   "include": [
     "**/*.ts",
     "**/*.d.ts",
     "**/*.vue",
     ".vitepress/env.d.ts"
+  ],
+  "exclude": [
+    "**/dist/**"
   ]
 }
