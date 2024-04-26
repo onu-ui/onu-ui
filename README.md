@@ -2,6 +2,7 @@
   <img src="./public/logo.svg" style="width:100px;" />
   <h1 align="center">Onu UI (WIP)</h1>
   <p align="center">Bullheaded and lightweight UnoCSS ui library.</p>
+  <p align="center"><sub>作者很菜很懒，写不下去了</sub></p>
 </p>
 
 <p align="center">
