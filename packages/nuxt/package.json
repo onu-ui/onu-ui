@@ -31,12 +31,12 @@
     "prepack": "nuxt-module-build"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.9.3",
+    "@nuxt/kit": "^3.11.2",
     "onu-ui": "workspace:*"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.9.3",
-    "@types/node": "^20.11.10"
+    "@nuxt/module-builder": "^0.7.0",
+    "@nuxt/schema": "^3.11.2",
+    "@types/node": "^20.14.2"
   }
 }

@@ -41,10 +41,10 @@
     "access": "public"
   },
   "dependencies": {
-    "magic-color": "^0.0.3",
-    "unocss-preset-useful": "^0.4.0"
+    "magic-color": "^1.0.4",
+    "unocss-preset-useful": "^0.4.2"
   },
   "devDependencies": {
-    "@unocss/preset-mini": "^0.58.4"
+    "@unocss/preset-mini": "^0.60.4"
   }
 }
