@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@types/prettier": "^3.0.0",
-    "@unocss/reset": "^0.60.4",
+    "@unocss/reset": "^0.61.0",
     "execa": "^9.2.0",
-    "prettier": "^3.3.1"
+    "prettier": "^3.3.2"
   }
 }

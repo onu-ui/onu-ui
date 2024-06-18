@@ -45,6 +45,6 @@
     "unocss-preset-useful": "^0.4.2"
   },
   "devDependencies": {
-    "@unocss/preset-mini": "^0.60.4"
+    "@unocss/preset-mini": "^0.61.0"
   }
 }
