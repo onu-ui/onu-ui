@@ -50,7 +50,7 @@ function toggleDisabled() {
 
       <div fcc gap-2>
         Size:
-        <button class="btn-(~ xs default)" :disabled="disabled">
+        <button class="btn-(~ size-xs default)" :disabled="disabled">
           btn btn-xs
         </button>
         <button class="btn btn-sm btn-default" :disabled="disabled">
@@ -66,9 +66,6 @@ function toggleDisabled() {
 
       <button class="btn btn-xs aspect-square rd-full">
         <i inline-block i-carbon:favorite-filled />
-      </button>
-      <button class="btn btn-ghost" :disabled="disabled">
-        btn btn-ghost
       </button>
       <button class="btn btn-outline" :disabled="disabled">
         btn btn-outline
