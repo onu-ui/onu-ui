@@ -3,13 +3,13 @@ import { ref } from 'vue'
 import ButtonLayout from './comonents/o-button.vue'
 
 const value = ref('')
-const disabled = ref(true)
+const disabled = ref(false)
 const count = ref(4)
 const index = ref(0)
 </script>
 
 <template>
-  <div font-dm wrapper gap-2>
+  <div wrapper gap-2>
     <ButtonLayout />
     <div fcc gap-2>
       <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">
@@ -33,7 +33,7 @@ const index = ref(0)
   color: #222222;
 }
 
-:root .dark {
+.dark {
   background-color: #1a1817;
   color: #ffffff;
 }

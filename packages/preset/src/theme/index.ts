@@ -1,14 +1,17 @@
 import type { Theme } from '@unocss/preset-mini'
-import { theme as themeGenerator } from 'magic-color'
+import { mc } from 'magic-color'
 import type { ResolveOnuOptions } from '../types'
 
 export function theme(options: ResolveOnuOptions): Theme {
+  const { color } = options
+  const colors = mc.theme(color)
+
   return {
     colors: {
-      context: 'rgb(var(--onu-c-context) / %alpha)',
+      context: 'hsl(var(--onu-color-context) / %alpha)',
       primary: {
-        DEFAULT: options.color,
-        ...themeGenerator(options.color),
+        DEFAULT: colors[500],
+        ...colors,
       },
     },
   }

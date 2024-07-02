@@ -6,7 +6,7 @@ export default defineConfig({
   envMode: 'dev',
   presets: [
     presetOnu({
-      color: '#E94E4E',
+      // color: '#E94E4E',
       // webFonts: {
       //   fonts: {
       //     dm: 'DM Sans',

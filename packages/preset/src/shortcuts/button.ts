@@ -9,13 +9,13 @@ const Size = {
 
 export const button: UserShortcuts = [
   [/^btn(?:-size)?-(.*)$/, ([, s]) => s in Size ? Size[s] : undefined],
-  ['btn-hover', 'hover:o-[rgb(var(--color-primary-600))]'],
-  ['btn-focus', 'focus:o-[rgb(var(--color-primary-600))]'],
-  ['btn-active', 'active:scale-95'],
+  ['btn-hover', 'hover:o-[hsl(var(--onu-color-600))]'],
+  //   ['btn-focus', 'focus:o-[hsl(var(--onu-color-700))]'],
+  ['btn-active', 'active:scale-95 active:o-[hsl(var(--onu-color-700))]'],
   ['btn-disabled', `
         disabled:(
                 cursor-not-allowed op-32 shadow-none
-                hover:o-[rgb(var(--color-primary-DEFAULT))]
+                hover:o-[hsl(var(--onu-color-DEFAULT))]
                 active:scale-100
         )
         `],
@@ -24,23 +24,23 @@ export const button: UserShortcuts = [
           text-black dark:text-white bg-transparent
           inline-flex items-center justify-center gap-1 
           cursor-pointer rounded shadow-sm
-          o-transition select-none
+          o-transition font-onu
           ring-1 ring-current
         `],
   ['btn-soft', `
-          bg-[rgb(var(--color-primary-100))] dark:bg-[rgb(var(--color-primary-900))]
+          bg-[hsl(var(--onu-color-100))] dark:bg-[hsl(var(--onu-color-900))]
           text-context dark:text-context shadow-none
-          hover:(bg-context text-white) dark:hover:text-black
+          hover:(bg-context text-gray-100) dark:hover:text-black
           `],
   ['btn-light', `
-          bg-[rgb(var(--color-primary-100))] dark:bg-[rgb(var(--color-primary-900))]
+          bg-[hsl(var(--onu-color-100))] dark:bg-[hsl(var(--onu-color-900))]
           text-context dark:text-context shadow-none
-          hover:(bg-context text-white) dark:hover:text-black
+          hover:(bg-context text-gray-100) dark:hover:text-black
           `],
   ['btn-outline', `
           bg-transparent ring-1
           text-context dark:text-context
-          hover:(bg-context text-white) dark:hover:text-black
+          hover:(bg-context text-gray-100) dark:hover:text-black
           `],
   ['btn-link', `
           bg-transparent underline underline-offset-2 shadow-none 
@@ -50,10 +50,12 @@ export const button: UserShortcuts = [
   ['btn-dashed', `
           btn-outline ring-0 relative hover:text-context dark:hover:text-context
           after:(content-empty absolute inset-0 b-(~ context dashed) rounded)
-          hover:bg-[rgb(var(--color-primary-100))] hover:dark:bg-[rgb(var(--color-primary-900))]
+          hover:bg-[hsl(var(--onu-color-100))] hover:dark:bg-[hsl(var(--onu-color-900))]
           `],
   ['btn', `
-          btn-default o-[rgb(var(--color-primary-DEFAULT))] 
-          text-white dark:text-black bg-context ring-0 disabled:op-64
+          btn-default ring-0
+          o-[hsl(var(--onu-color-500))] bg-context
+          text-[hsl(var(--onu-color-text))] dark:text-[hsl(var(--onu-color-text))] 
+          disabled:op-64
         `],
 ]

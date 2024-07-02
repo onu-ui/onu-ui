@@ -1,5 +1,5 @@
 import type { Preflight } from 'unocss'
-import { theme } from 'magic-color'
+import { mc } from 'magic-color'
 import type { ResolveOnuOptions } from '../types'
 
 export function themePreflight(options: ResolveOnuOptions): Preflight {
@@ -7,24 +7,24 @@ export function themePreflight(options: ResolveOnuOptions): Preflight {
 
   return {
     getCSS: () => {
-      const themeObj = theme(color, {
-        type: 'rgb',
-        render: (meta) => {
-          return [
-            `--color-primary-${meta[0]}`,
-            meta[1].replace(/rgb\((.*)\)/, '$1').replace(/,/g, ''),
-          ]
-        },
+      const themeObj = mc.theme(color, {
+        type: 'hsl',
+        render: meta => [`--onu-color-${meta[0]}`, meta[1].replace(/hsl\((.*)\)/, '$1')],
       })
 
       return `
-  :root {
+:root {
+  color-scheme: light dark;
   ${Object.entries(themeObj).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
-  --color-primary-DEFAULT: var(--color-primary-500);
-  }
-  .dark {
-    --color-primary-DEFAULT: var(--color-primary-400);
-  }
+  --onu-color-DEFAULT: var(--onu-color-500);
+  --onu-color-text: var(--onu-color-100);
+}
+
+.dark {
+  --onu-color-DEFAULT: var(--onu-color-600);
+  --onu-color-text: var(--onu-color-950);
+}
+
       `.trim()
     },
     layer: '@onu-ui/preset-theme',

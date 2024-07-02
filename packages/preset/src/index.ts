@@ -1,6 +1,11 @@
-import { presetUseful } from 'unocss-preset-useful'
 import type { PresetFactory } from 'unocss'
 import { definePreset } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
+import { presetUno } from '@unocss/preset-uno'
+import { presetAttributify } from '@unocss/preset-attributify'
+import { presetIcons } from '@unocss/preset-icons'
+import presetWebFonts from '@unocss/preset-web-fonts'
+import { mc } from 'magic-color'
 import { shortcuts } from './shortcuts'
 import { theme } from './theme'
 import { rules } from './rules'
@@ -10,7 +15,7 @@ import { preflights } from './preflights'
 
 export type { PrsetOnuOptions }
 
-export const presetOnu: PresetFactory<object, PrsetOnuOptions> = definePreset((options: PrsetOnuOptions = {}) => {
+export const presetOnu = definePreset<Theme>((options: PrsetOnuOptions = {}) => {
   const resolvedOptions = resolveOptions(options)
 
   return {
@@ -19,21 +24,28 @@ export const presetOnu: PresetFactory<object, PrsetOnuOptions> = definePreset((o
     rules,
     variants,
     shortcuts,
-    presets: resolvedOptions.presets,
     preflights: preflights(resolvedOptions),
+    presets: [
+      presetUno(),
+      presetAttributify(),
+      presetIcons(),
+      presetWebFonts({
+        fonts: {
+          onu: ['DM Sans', 'DM Sans:400,700'],
+        },
+      }),
+    ],
   }
 })
 
-function resolveOptions(options: PrsetOnuOptions) {
+function resolveOptions(options: PrsetOnuOptions): ResolveOnuOptions {
   const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
-    color: '#9955FF',
+    // color: '#9955FF',
+    color: mc.random(),
+    font: ['DM Sans', 'DM Sans:400,700'],
   }
-  const optionsWithDefault = Object.assign({}, defaultOptions, options)
-  const presets = [presetUseful(optionsWithDefault)]
+  const resolvedOptions = Object.assign({}, defaultOptions, options)
 
-  return {
-    ...optionsWithDefault,
-    presets,
-  } as ResolveOnuOptions
+  return resolvedOptions as ResolveOnuOptions
 }

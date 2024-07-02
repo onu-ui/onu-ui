@@ -1,18 +1,28 @@
-import { parseColor } from '@unocss/preset-mini/utils'
+import { h, parseColor } from '@unocss/preset-mini/utils'
 import type { Rule, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 
 export const rules = [
   [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
+    // if (h.cssvar(body) != null) {
+    //   return {
+    //     '--onu-color-context': h.cssvar(body),
+    //   }
+    // }
+
     const color = parseColor(body, theme)
-    if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
+    console.log(body)
+    console.log(color)
+    console.log('\n')
+
+    if (color?.cssColor?.type === 'hsl' && color.cssColor.components) {
       return {
-        '--onu-c-context': `${color.cssColor.components.join(',')}`,
+        '--onu-color-context': `${color.cssColor.components.join(' ')}`,
       }
     }
     else {
       return {
-        '--onu-c-context': color?.color,
+        '--onu-color-context': color?.color,
       }
     }
   }],

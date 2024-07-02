@@ -1,12 +1,13 @@
 <script lang='ts' setup>
 import { ref } from 'vue'
 
-const disabled = ref(true)
+import { useDark } from '@vueuse/core'
 
-// document.body.classList.add('')
+const disabled = ref(false)
 
-function toggleTheme() {
-  document.body.classList.toggle('dark')
+const isDark = useDark()
+function toggleDark() {
+  isDark.value = !isDark.value
 }
 
 function toggleDisabled() {
@@ -17,6 +18,7 @@ function toggleDisabled() {
 <template>
   <div>
     <div fcc gap-10 mb-10>
+      <!--
       <div w-5 h-5 bg-primary-50 />
       <div w-5 h-5 bg-primary-100 />
       <div w-5 h-5 bg-primary-200 />
@@ -28,13 +30,14 @@ function toggleDisabled() {
       <div w-5 h-5 bg-primary-800 />
       <div w-5 h-5 bg-primary-900 />
       <div w-5 h-5 bg-primary-950 />
+       -->
     </div>
     <div fcc gap-10 mb-10>
-      <button class="btn" @click="toggleDisabled">
+      <button class="btn" @click="toggleDisabled()">
         <i inline-block i-carbon:favorite-filled />
         Toggle Disabled
       </button>
-      <button class="btn" @click="toggleTheme">
+      <button class="btn" @click="toggleDark()">
         Toggle Theme
       </button>
     </div>
@@ -50,10 +53,10 @@ function toggleDisabled() {
 
       <div fcc gap-2>
         Size:
-        <button class="btn-(~ size-xs default)" :disabled="disabled">
+        <button btn="size-xs default" :disabled="disabled">
           btn btn-xs
         </button>
-        <button class="btn btn-sm btn-default" :disabled="disabled">
+        <button class="btn-sm btn-default" :disabled="disabled">
           btn btn-sm
         </button>
         <button class="btn btn-md" :disabled="disabled">
@@ -62,6 +65,9 @@ function toggleDisabled() {
         <button class="btn btn-lg" :disabled="disabled">
           btn btn-lg
         </button>
+        <div btn>
+          btn
+        </div>
       </div>
 
       <button class="btn btn-xs aspect-square rd-full">

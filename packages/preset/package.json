@@ -41,10 +41,13 @@
     "access": "public"
   },
   "dependencies": {
-    "magic-color": "^1.0.4",
+    "@unocss/preset-attributify": "^0.61.0",
+    "@unocss/preset-icons": "^0.61.0",
+    "@unocss/preset-mini": "^0.61.0",
+    "@unocss/preset-uno": "^0.61.0",
+    "@unocss/preset-web-fonts": "^0.61.0",
+    "magic-color": "^1.1.0",
     "unocss-preset-useful": "^0.4.2"
-  },
-  "devDependencies": {
-    "@unocss/preset-mini": "^0.61.0"
   }
+
 }
