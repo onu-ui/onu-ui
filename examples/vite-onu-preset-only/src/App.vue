@@ -19,7 +19,7 @@ const index = ref(0)
     </div>
     <div fcc gap-2>
       <div class="btn-group">
-        <button v-for="i in count" :key="i" class="btn" :class="index === i - 1 ? 'btn-active' : ''" @click="index = i - 1">
+        <button v-for="i in count" :key="i" class="btn btn-solid-cover" :class="index === i - 1 ? 'btn-group-active' : ''" @click="index = i - 1">
           Button
         </button>
       </div>

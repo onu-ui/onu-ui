@@ -23,7 +23,7 @@ export const button: UserShortcuts = [
   ['btn-default', `
         btn-md btn-hover btn-active btn-focus btn-disabled
         text-black dark:text-white bg-transparent
-        inline-flex items-center justify-center gap-1 
+        inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer rounded shadow-sm
         o-transition font-onu font-medium
         border-(~ current) of-hidden
