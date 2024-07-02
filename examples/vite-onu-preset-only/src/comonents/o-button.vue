@@ -17,7 +17,7 @@ function toggleDisabled() {
 
 <template>
   <div>
-    <div fcc gap-10 mb-10>
+    <div flex items-center justify-center gap-10 mb-10>
       <!--
       <div w-5 h-5 bg-primary-50 />
       <div w-5 h-5 bg-primary-100 />
@@ -32,7 +32,7 @@ function toggleDisabled() {
       <div w-5 h-5 bg-primary-950 />
        -->
     </div>
-    <div fcc gap-10 mb-10>
+    <div flex items-center justify-center gap-10 mb-10>
       <button class="btn" @click="toggleDisabled()">
         <i inline-block i-carbon:favorite-filled />
         Toggle Disabled
@@ -43,7 +43,7 @@ function toggleDisabled() {
     </div>
 
     <div fccc gap-2 flex-wrap>
-      <div fcc gap-2>
+      <div flex items-center justify-center gap-2>
         Default:
 
         <button class="btn-default" :disabled="disabled">
@@ -51,7 +51,7 @@ function toggleDisabled() {
         </button>
       </div>
 
-      <div fcc gap-2>
+      <div flex items-center justify-center gap-2>
         Size:
         <button btn="size-xs default" :disabled="disabled">
           btn btn-xs
@@ -70,21 +70,41 @@ function toggleDisabled() {
         </div>
       </div>
 
-      <button class="btn btn-xs aspect-square rd-full">
-        <i inline-block i-carbon:favorite-filled />
-      </button>
-      <button class="btn btn-outline" :disabled="disabled">
-        btn btn-outline
-      </button>
-      <button class="btn btn-dashed" :disabled="disabled">
-        btn-dashed
-      </button>
-      <button class="btn btn-link" :disabled="disabled">
-        btn btn-link
-      </button>
-      <button :disabled="disabled" class="btn">
-        disabled
-      </button>
+      <div flex items-center justify-center gap-2>
+        <button class="btn">
+          icon <i inline-block i-carbon:favorite-filled />
+        </button>
+        <button class="btn btn-soft" :disabled="disabled">
+          btn btn-soft
+        </button>
+        <button class="btn btn-outline" :disabled="disabled">
+          btn btn-outline
+        </button>
+        <button class="btn btn-solid" :disabled="disabled">
+          btn-solid
+        </button>
+        <button class="btn btn-solid-cover" :disabled="disabled">
+          btn-solid-cover
+        </button>
+        <button class="btn btn-dashed" :disabled="disabled">
+          btn-dashed
+        </button>
+        <button class="btn btn-dashed-cover" :disabled="disabled">
+          btn-dashed-cover
+        </button>
+        <button class="btn btn-link" :disabled="disabled">
+          btn btn-link
+        </button>
+        <button class="btn btn-ghost" :disabled="disabled">
+          btn btn-ghost
+        </button>
+        <button class="btn btn-ghost-light" :disabled="disabled">
+          btn btn-ghost-light
+        </button>
+        <button :disabled="disabled" class="btn">
+          disabled
+        </button>
+      </div>
     </div>
   </div>
 </template>

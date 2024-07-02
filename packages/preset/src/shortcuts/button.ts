@@ -8,54 +8,47 @@ const Size = {
 }
 
 export const button: UserShortcuts = [
+  ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context)'],
   [/^btn(?:-size)?-(.*)$/, ([, s]) => s in Size ? Size[s] : undefined],
   ['btn-hover', 'hover:o-[hsl(var(--onu-color-600))]'],
   //   ['btn-focus', 'focus:o-[hsl(var(--onu-color-700))]'],
   ['btn-active', 'active:scale-95 active:o-[hsl(var(--onu-color-700))]'],
   ['btn-disabled', `
         disabled:(
-                cursor-not-allowed op-32 shadow-none
-                hover:o-[hsl(var(--onu-color-DEFAULT))]
-                active:scale-100
+          cursor-not-allowed op-32 shadow-none
+          hover:o-[hsl(var(--onu-color-DEFAULT))]
+          active:scale-100
         )
         `],
   ['btn-default', `
-          btn-md btn-hover btn-active btn-focus btn-disabled
-          text-black dark:text-white bg-transparent
-          inline-flex items-center justify-center gap-1 
-          cursor-pointer rounded shadow-sm
-          o-transition font-onu
-          ring-1 ring-current
+        btn-md btn-hover btn-active btn-focus btn-disabled
+        text-black dark:text-white bg-transparent
+        inline-flex items-center justify-center gap-1 
+        cursor-pointer rounded shadow-sm
+        o-transition font-onu font-medium
+        border-(~ current) of-hidden
         `],
+  ['btn-text', `bg-transparent text-context dark:text-context shadow-none`],
+  ['btn-link', `btn-text hover:(underline underline-offset-4)`],
+  ['btn-ghost', `btn-text btn-disabled-theme-color bg-hover hover:bg-context hover:o-theme-color-text`],
+  ['btn-ghost-light', `btn-text btn-disabled-theme-color hover:bg-[hsl(var(--onu-color-100))] dark:hover:bg-[hsl(var(--onu-color-900))]`],
   ['btn-soft', `
-          bg-[hsl(var(--onu-color-100))] dark:bg-[hsl(var(--onu-color-900))]
-          text-context dark:text-context shadow-none
-          hover:(bg-context text-gray-100) dark:hover:text-black
-          `],
-  ['btn-light', `
-          bg-[hsl(var(--onu-color-100))] dark:bg-[hsl(var(--onu-color-900))]
-          text-context dark:text-context shadow-none
-          hover:(bg-context text-gray-100) dark:hover:text-black
+          text-[hsl(var(--onu-color-600))]! bg-[hsl(var(--onu-color-100))] hover:bg-[hsl(var(--onu-color-200))]
+          dark:text-[hsl(var(--onu-color-400))]! dark:bg-[hsl(var(--onu-color-900))] dark:hover:bg-[hsl(var(--onu-color-800))]
+          shadow-none
           `],
   ['btn-outline', `
-          bg-transparent ring-1
+          bg-transparent border-1
           text-context dark:text-context
-          hover:(bg-context text-gray-100) dark:hover:text-black
-          `],
-  ['btn-link', `
-          bg-transparent underline underline-offset-2 shadow-none 
-          text-context dark:text-context
-          `],
-  ['btn-border', ''],
-  ['btn-dashed', `
-          btn-outline ring-0 relative hover:text-context dark:hover:text-context
-          after:(content-empty absolute inset-0 b-(~ context dashed) rounded)
-          hover:bg-[hsl(var(--onu-color-100))] hover:dark:bg-[hsl(var(--onu-color-900))]
-          `],
+        `],
+  ['btn-outline-cover', `btn-outline hover:bg-[hsl(var(--onu-color-600))] hover:o-theme-color-text`],
+  ['btn-solid', `btn-outline`],
+  ['btn-solid-cover', `btn-outline-cover btn-disabled-theme-color`],
+  ['btn-dashed', `btn-outline border-dashed`],
+  ['btn-dashed-cover', `btn-outline btn-disabled-theme-color hover:bg-[hsl(var(--onu-color-100))] dark:hover:bg-[hsl(var(--onu-color-900))] border-dashed`],
   ['btn', `
-          btn-default ring-0
-          o-[hsl(var(--onu-color-500))] bg-context
-          text-[hsl(var(--onu-color-text))] dark:text-[hsl(var(--onu-color-text))] 
+          btn-default border-0
+          o-[hsl(var(--onu-color-500))] bg-context o-theme-color-text
           disabled:op-64
         `],
 ]

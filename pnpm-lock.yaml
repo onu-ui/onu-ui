@@ -253,16 +253,27 @@ importers:
 
   packages/preset:
     dependencies:
+      '@unocss/preset-attributify':
+        specifier: ^0.61.0
+        version: 0.61.0
+      '@unocss/preset-icons':
+        specifier: ^0.61.0
+        version: 0.61.0
+      '@unocss/preset-mini':
+        specifier: ^0.61.0
+        version: 0.61.0
+      '@unocss/preset-uno':
+        specifier: ^0.61.0
+        version: 0.61.0
+      '@unocss/preset-web-fonts':
+        specifier: ^0.61.0
+        version: 0.61.0
       magic-color:
         specifier: ^1.1.0
         version: 1.1.0
       unocss-preset-useful:
         specifier: ^0.4.2
         version: 0.4.2(unocss@0.61.0(rollup@4.18.0)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)))
-    devDependencies:
-      '@unocss/preset-mini':
-        specifier: ^0.61.0
-        version: 0.61.0
 
   packages/utils: {}
 

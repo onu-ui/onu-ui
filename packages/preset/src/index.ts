@@ -33,6 +33,7 @@ export const presetOnu = definePreset<Theme>((options: PrsetOnuOptions = {}) => 
         fonts: {
           onu: ['DM Sans', 'DM Sans:400,700'],
         },
+        inlineImports: false,
       }),
     ],
   }
@@ -41,8 +42,8 @@ export const presetOnu = definePreset<Theme>((options: PrsetOnuOptions = {}) => 
 function resolveOptions(options: PrsetOnuOptions): ResolveOnuOptions {
   const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
-    // color: '#9955FF',
-    color: mc.random(),
+    color: '#919b46',
+    // color: mc.random(),
     font: ['DM Sans', 'DM Sans:400,700'],
   }
   const resolvedOptions = Object.assign({}, defaultOptions, options)

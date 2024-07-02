@@ -8,8 +8,8 @@ import { defaults } from './defaults'
 type StaticOrDynamicShortcuts = (StaticShortcut | DynamicShortcut<Theme>)[]
 
 export const shortcuts = [
-  ...(button as StaticOrDynamicShortcuts),
+  ...defaults as StaticOrDynamicShortcuts,
+  ...button as StaticOrDynamicShortcuts,
   buttonGroup,
   input,
-  defaults,
 ] as UserShortcuts<Theme>
