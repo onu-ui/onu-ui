@@ -6,8 +6,9 @@ import playConfig from '../../playground.config'
 import { genVueLink } from '~/utils/dependency'
 import type { VersionKey, Versions } from '~/composables/store'
 import { IS_DEV } from '~/constants'
+
 // 发送请求到 npm 查询 vue、组件库版本
-export const getVersions = (pkg: MaybeRef<string>) => {
+export function getVersions(pkg: MaybeRef<string>) {
   const url = computed(() => `${playConfig.versionUrl}${unref(pkg)}`)
   return useFetch(url, {
     initialData: [],
@@ -17,7 +18,7 @@ export const getVersions = (pkg: MaybeRef<string>) => {
 }
 
 // 过滤支持的最小 vue、组件库版本
-export const getSupportVersions = (pkg: string, minVersion: string) => {
+export function getSupportVersions(pkg: string, minVersion: string) {
   const versions = getVersions(pkg)
   const IS_VUE = pkg === 'vue'
   return computed(() => {
@@ -47,7 +48,6 @@ export async function setVueVersion(
   state.vueRuntimeURL = runtimeDom
   versions.vue = version
 
-  // eslint-disable-next-line no-console
   console.info(`[@vue/repl] Now using Vue version: ${version}`)
 }
 

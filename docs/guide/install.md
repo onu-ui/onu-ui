@@ -101,7 +101,6 @@ You can add the `OnuUI` global component type definition to `compilerOptions.typ
 ## Using modules in Nuxt
 Add `@onu-ui/nuxt` dependency to your project
 
-
 ```bash
 pnpm i @onu-ui/nuxt -D
 ```

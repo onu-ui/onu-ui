@@ -7,7 +7,6 @@ lang: en-US
 
 When the mouse hovers, focus, or click on a component, a bubble-like card floating layer will pop up. You can manipulate the elements on the card.
 
-
 ## Basic
 
 Move the mouse in or click to pop up bubbles, which can operate on the elements on the floating layer, and carry complex content and operations.
@@ -22,13 +21,11 @@ They are: `hover` | `click` | `focus` | `context-menu`.
 
 <demo src="../example/popup/trigger.vue"></demo>
 
-
 ## Position
 
 `Popup` supports 12 different positions. They are: `top` `left` `right` `bottom` `top-left` `top-right` `bottom-left` `bottom-right` `left-top` `left-bottom` `right-top` `right-bottom`.
 
 <demo src="../example/popup/position.vue"></demo>
-
 
 ## Popup Props
 
@@ -47,19 +44,14 @@ They are: `hover` | `click` | `focus` | `context-menu`.
 | popup-container | `string \| HTMLElement  \| undefined` | `undefined` | Mount container for popup box. |
 | update-at-scroll | `boolean `| `false`  | Whether to update the position of the popup when the container is scrolled. |
 
-
-
 ## Popup Slots
 
-
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | title | `()` | Custom popup title. |
 | content | `()` | Custom popup content. |
 ## Popup Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | popup-visible-change | `(visible: boolean) => void` | Triggered when the text bubble display status changes. |
-
-

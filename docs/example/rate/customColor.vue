@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+
 const val = ref(2)
 const valPrimary = ref(4)
 </script>

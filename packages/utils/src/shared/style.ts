@@ -2,8 +2,7 @@ import { isClient } from '@vueuse/core'
 import type { CSSProperties } from 'vue'
 import { camelize } from 'vue'
 
-export function getStyle(element: HTMLElement,
-  styleName: keyof CSSProperties): string {
+export function getStyle(element: HTMLElement, styleName: keyof CSSProperties): string {
   if (!isClient || !element || !styleName)
     return ''
 

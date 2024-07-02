@@ -1,17 +1,17 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": [
-    "**/dist/**"
-  ],
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "outDir": "./dist/types"
+  },
   "include": [
     "**/*.ts",
     "**/*.d.ts",
     "**/*.vue",
     "**/*.tsx"
   ],
-  "compilerOptions": {
-    "declaration": false,
-    "composite": false,
-    "outDir": "./dist/types"
-  }
+  "exclude": [
+    "**/dist/**"
+  ]
 }

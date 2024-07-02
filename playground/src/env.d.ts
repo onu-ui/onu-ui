@@ -9,4 +9,4 @@ interface ImportMeta {
   readonly env: ImportMetaEnv
 }
 
-declare var __COMMIT__: string
+declare let __COMMIT__: string

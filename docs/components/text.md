@@ -52,6 +52,6 @@ Use attribute `tag` or `font` to override element.
 | gradient | `string` | `''` | Render the gradient text, use css `linear-gradient`. |
 
 ## Text Slots
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content. |

@@ -35,9 +35,8 @@ Get all icons, try on [icones](https://icones.js.org/)
 | name | `string` | `undefined` | Icon's name. |
 | o | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `undefined` | Inherit from color. |
 
-
 ## Icon Slots
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | default | `()` | Customize default content |

@@ -16,8 +16,7 @@ export function isScroll(el: HTMLElement, isVertical?: boolean): boolean {
   return ['scroll', 'auto', 'overlay'].some(s => overflow.includes(s))
 }
 
-export function getScrollContainer(el: HTMLElement,
-  isVertical?: boolean): Window | HTMLElement | undefined {
+export function getScrollContainer(el: HTMLElement, isVertical?: boolean): Window | HTMLElement | undefined {
   if (!isClient)
     return
 

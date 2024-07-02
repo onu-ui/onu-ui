@@ -21,7 +21,6 @@ You can set the color of the rating icon via `color` and also via `void-color` f
 Half-stars can also be achieved by adding an `allow-half` attribute when rating.
 <demo src="../example/rate/halfStar.vue"></demo>
 
-
 ## Rate Props
 
 | Name | Type | Default | Description |
@@ -34,12 +33,8 @@ Half-stars can also be achieved by adding an `allow-half` attribute when rating.
 | void-color | `string` | `undefined` | Unselected icon color. |
 | text | `string` | `undefined` | Text displayed at the end of the star.  |
 
-
 ## Rate Methods
 
-| Name | Parameters | Description | 
+| Name | Parameters | Description |
 | --- | --- | --- |
 | change | `(value: number) => void` | Triggers when rate value is changed. |
-
-
-

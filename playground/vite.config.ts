@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import execa from 'execa'
+
 const commit = execa.sync('git', ['rev-parse', 'HEAD']).stdout.slice(0, 7)
 const pathSrc = path.resolve(__dirname, 'src')
 

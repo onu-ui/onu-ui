@@ -1,10 +1,10 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { OCard } from '@onu-ui/components'
 
 const CARD_TEXT_CONTENT = 'Test Content'
 describe('o-card', () => {
-  test('card render test', () => {
+  it('card render test', () => {
     const wrapper = mount(OCard, {
       props: {
         content: CARD_TEXT_CONTENT,
@@ -14,7 +14,7 @@ describe('o-card', () => {
     expect(wrapper.text()).toEqual(CARD_TEXT_CONTENT)
   })
 
-  test('card title description extra test', () => {
+  it('card title description extra test', () => {
     const wrapper = mount(OCard, {
       props: {
         title: 'Test title',
@@ -40,7 +40,7 @@ describe('o-card', () => {
     expect(slotWrapper.find('.primary').text()).toBe('test-link')
   })
 
-  test('card size test', () => {
+  it('card size test', () => {
     const wrapper = mount(OCard, {
       props: {
         title: 'Test title',
@@ -51,7 +51,7 @@ describe('o-card', () => {
     expect(wrapper.find('.o-card-sm').exists()).toBeTruthy()
   })
 
-  test('card cover test', () => {
+  it('card cover test', () => {
     const wrapper = mount(OCard, {
       props: {
         cover:
@@ -63,7 +63,7 @@ describe('o-card', () => {
     expect(wrapper.find('.o-card-cover img').exists()).toBeTruthy()
   })
 
-  test('card hoverable test', () => {
+  it('card hoverable test', () => {
     const wrapper = mount(OCard, {
       props: {
         title: 'Test title',
@@ -74,7 +74,7 @@ describe('o-card', () => {
     expect(wrapper.find('.o-card-hoverable').exists()).toBeTruthy()
   })
 
-  test('should work with `slots`', () => {
+  it('should work with `slots`', () => {
     const wrapper = mount(OCard, {
       slots: {
         header: () => 'header',

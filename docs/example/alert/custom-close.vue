@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
 
-const handleClose = () => {
+function handleClose() {
   alert('click the close icon')
 }
 </script>

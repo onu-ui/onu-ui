@@ -7,7 +7,6 @@
 ## Setup
 1. Add `@onu-ui/nuxt` dependency to your project
 
-
 ```bash
 pnpm i @onu-ui/nuxt -D
 ```
