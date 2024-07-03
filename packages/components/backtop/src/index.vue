@@ -8,7 +8,7 @@ defineOptions({
 const props = defineProps(backtopProps)
 const emit = defineEmits(backtopEmits)
 defineSlots<{
-  default(props: unknown): any
+  default: (props: unknown) => any
 }>()
 
 const { handleClick, visible } = useBackTop(props, emit, 'OBacktop')

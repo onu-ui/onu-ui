@@ -7,8 +7,8 @@ defineOptions({
 })
 const props = defineProps(buttonProps)
 defineSlots<{
-  default(props: unknown): any
-  icon(props: unknown): any
+  default: (props: unknown) => any
+  icon: (props: unknown) => any
 }>()
 const buttonGroupContext = inject(buttonGroupContextKey, undefined)
 

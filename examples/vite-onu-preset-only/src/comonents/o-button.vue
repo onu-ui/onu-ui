@@ -1,14 +1,7 @@
 <script lang='ts' setup>
 import { ref } from 'vue'
 
-import { useDark } from '@vueuse/core'
-
 const disabled = ref(false)
-
-const isDark = useDark()
-function toggleDark() {
-  isDark.value = !isDark.value
-}
 
 function toggleDisabled() {
   disabled.value = !disabled.value
@@ -18,27 +11,9 @@ function toggleDisabled() {
 <template>
   <div>
     <div flex items-center justify-center gap-10 mb-10>
-      <!--
-      <div w-5 h-5 bg-primary-50 />
-      <div w-5 h-5 bg-primary-100 />
-      <div w-5 h-5 bg-primary-200 />
-      <div w-5 h-5 bg-primary-300 />
-      <div w-5 h-5 bg-primary-400 />
-      <div w-5 h-5 bg-primary-500 />
-      <div w-5 h-5 bg-primary-600 />
-      <div w-5 h-5 bg-primary-700 />
-      <div w-5 h-5 bg-primary-800 />
-      <div w-5 h-5 bg-primary-900 />
-      <div w-5 h-5 bg-primary-950 />
-       -->
-    </div>
-    <div flex items-center justify-center gap-10 mb-10>
       <button class="btn" @click="toggleDisabled()">
         <i inline-block i-carbon:favorite-filled />
         Toggle Disabled
-      </button>
-      <button class="btn" @click="toggleDark()">
-        Toggle Theme
       </button>
     </div>
 
@@ -71,8 +46,8 @@ function toggleDisabled() {
       </div>
 
       <div flex items-center justify-center gap-2>
-        <button class="btn">
-          icon <i inline-block i-carbon:favorite-filled />
+        <button class="btn" animate-pulse>
+          loading <i inline-block i-ri-loader-2-fill animate-spin />
         </button>
         <button class="btn btn-soft" :disabled="disabled">
           btn btn-soft

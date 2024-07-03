@@ -277,8 +277,9 @@ export default defineComponent({
       if (
         firstElement.value?.contains(e.target as HTMLElement)
         || popupRef.value?.contains(e.target as HTMLElement)
-      )
+      ) {
         return
+      }
 
       for (const item of triggerChildrenRefs) {
         if (item.value?.contains(e.target as HTMLElement))

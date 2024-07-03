@@ -14,7 +14,7 @@ function parseComponentsDeclaration(code: string) {
     return {}
 
   return Object.fromEntries(
-    Array.from(code.matchAll(/(?<!\/\/)\s+\s+['"]?(.+?)['"]?:\s(.+?)\n/g)).map(
+    Array.from(code.matchAll(/(?<!\/\/)\s{2,}['"]?(.+?)['"]?:\s(.+)\n/g)).map(
       i => [i[1], i[2]],
     ),
   )

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
+    "magic-color": "^1.1.0",
     "vue": "^3.4.31"
   },
   "devDependencies": {

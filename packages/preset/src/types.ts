@@ -1,5 +1,4 @@
 import type { WebFontMeta } from '@unocss/preset-web-fonts'
-import type { Preset } from 'unocss'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 export type ThemeType = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'

@@ -6,7 +6,7 @@ defineOptions({
 })
 const props = defineProps(avatarProps)
 defineSlots<{
-  default(props: unknown): any
+  default: (props: unknown) => any
 }>()
 
 const IsBgMode = computed(() => props.mode === 'bg')

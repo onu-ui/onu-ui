@@ -7,7 +7,7 @@ defineOptions({
 })
 const props = defineProps(buttonGroupProps)
 defineSlots<{
-  default(props: unknown): any
+  default: (props: unknown) => any
 }>()
 
 provide(

@@ -35,6 +35,7 @@
     "@iconify-json/carbon": "^1.1.36",
     "@iconify-json/fluent-emoji": "^1.1.18",
     "@iconify-json/logos": "^1.1.43",
+    "@iconify-json/ri": "^1.1.21",
     "@onu-ui/components": "workspace:*",
     "@onu-ui/preset": "workspace:*",
     "@onu-ui/utils": "workspace:*",

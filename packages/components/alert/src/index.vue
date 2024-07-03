@@ -8,9 +8,9 @@ defineOptions({
 const props = defineProps(alertProps)
 const emit = defineEmits(alertEmits)
 const slots = defineSlots<{
-  default(props: unknown): any
-  icon(props: unknown): any
-  title(props: unknown): any
+  default: (props: unknown) => any
+  icon: (props: unknown) => any
+  title: (props: unknown) => any
 }>()
 
 const visible = ref(true)

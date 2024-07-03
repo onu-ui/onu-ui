@@ -22,7 +22,7 @@ export async function evaluateUserConfig<U = UserConfig>(
       'const $1 = await __import("unocss");',
     )
     .replace(
-      /import\s*({[\S\s]*?})\s*from\s*(["'])([\w-@/]+)\2/g,
+      /import\s*(\{[\s\S]*?\})\s*from\s*(["'])([\w-@/]+)\2/g,
       'const $1 = await __import("$3");',
     )
     .replace(

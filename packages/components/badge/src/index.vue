@@ -7,7 +7,7 @@ defineOptions({
 })
 const props = defineProps(badgeProps)
 defineSlots<{
-  default(props: unknown): any
+  default: (props: unknown) => any
 }>()
 
 const resolveValue = computed(() =>

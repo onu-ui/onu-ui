@@ -6,7 +6,7 @@ defineOptions({
 })
 defineProps(avatarGroupProps)
 defineSlots<{
-  default(props: unknown): any
+  default: (props: unknown) => any
 }>()
 </script>
 

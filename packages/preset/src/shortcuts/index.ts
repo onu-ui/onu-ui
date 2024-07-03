@@ -10,6 +10,6 @@ type StaticOrDynamicShortcuts = (StaticShortcut | DynamicShortcut<Theme>)[]
 export const shortcuts = [
   ...defaults as StaticOrDynamicShortcuts,
   ...button as StaticOrDynamicShortcuts,
-  buttonGroup,
+  ...buttonGroup as StaticOrDynamicShortcuts,
   input,
 ] as UserShortcuts<Theme>
