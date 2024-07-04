@@ -4,6 +4,7 @@ import { useDark } from '@vueuse/core'
 import { mc } from 'magic-color'
 import { resolveTheme } from '../../../packages/preset/src'
 import ButtonLayout from './comonents/o-button.vue'
+import AvatarLayout from './comonents/o-avatar.vue'
 
 const value = ref('')
 const disabled = ref(false)
@@ -50,6 +51,7 @@ function randomTheme() {
     </button>
 
     <ButtonLayout />
+    <AvatarLayout />
     <div fcc gap-2>
       <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">
       <input v-model="value" type="text" :disabled="disabled" class="input" placeholder="input...">

@@ -2,6 +2,8 @@ import { parseColor } from '@unocss/preset-mini/utils'
 import type { Rule, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 
+import { masks } from './mask'
+
 export const rules = [
   [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
     const color = parseColor(body, theme)
@@ -33,4 +35,5 @@ export const rules = [
       'color': `hsl(var(--onu-color-${key}) / var(--un-text-opacity))`,
     }
   }],
+  ...masks,
 ] as Rule<Theme>[]
