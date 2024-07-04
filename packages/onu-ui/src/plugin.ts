@@ -1,4 +1,4 @@
-import * as plugins from '@onu-ui/components'
+// import * as plugins from '@onu-ui/components'
 import type { App, Plugin } from 'vue'
 import { provideGlobalConfig } from '../../utils'
 import { version } from '../package.json'
@@ -18,7 +18,7 @@ export function createInstaller(components: Plugin[] = []) {
       provideGlobalConfig(options, app, true)
 
     // plugin install
-    app.config.globalProperties.$message = plugins.OMessage
+    // app.config.globalProperties.$message = plugins.OMessage
   }
 
   return {
