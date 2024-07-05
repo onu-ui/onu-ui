@@ -6,12 +6,10 @@ import { defaults } from './defaults'
 import { avatar } from './avatar'
 import { badge } from './badge'
 
-type StaticOrDynamicShortcuts = (StaticShortcut | DynamicShortcut<Theme>)[]
-
 export const shortcuts = [
-  ...defaults as StaticOrDynamicShortcuts,
-  ...avatar as StaticOrDynamicShortcuts,
-  ...badge as StaticOrDynamicShortcuts,
-  ...button as StaticOrDynamicShortcuts,
+  defaults,
+  avatar,
+  badge,
+  button,
   input,
-] as UserShortcuts<Theme>
+].flat() as UserShortcuts<Theme>

@@ -6,6 +6,7 @@ import { resolveTheme } from '../../../packages/preset/src'
 import ButtonLayout from './comonents/o-button.vue'
 import AvatarLayout from './comonents/o-avatar.vue'
 import BadgeLayout from './comonents/o-badge.vue'
+import InputLayout from './comonents/o-input.vue'
 
 const isDark = useDark()
 function toggleDark() {
