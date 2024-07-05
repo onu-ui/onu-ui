@@ -5,11 +5,7 @@ import { mc } from 'magic-color'
 import { resolveTheme } from '../../../packages/preset/src'
 import ButtonLayout from './comonents/o-button.vue'
 import AvatarLayout from './comonents/o-avatar.vue'
-
-const value = ref('')
-const disabled = ref(false)
-const count = ref(4)
-const index = ref(0)
+import BadgeLayout from './comonents/o-badge.vue'
 
 const isDark = useDark()
 function toggleDark() {
@@ -52,19 +48,8 @@ function randomTheme() {
 
     <ButtonLayout />
     <AvatarLayout />
-    <div fcc gap-2>
-      <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">
-      <input v-model="value" type="text" :disabled="disabled" class="input" placeholder="input...">
-      <input v-model="value" type="text" class="input input-sm" placeholder="input input-sm...">
-      <input v-model="value" type="text" :disabled="disabled" class="input input-none" placeholder="input input-none...">
-    </div>
-    <div fcc gap-2>
-      <div class="btn-group">
-        <button v-for="i in count" :key="i" class="btn btn-solid-cover" :class="index === i - 1 ? 'btn-group-active' : ''" @click="index = i - 1">
-          Button
-        </button>
-      </div>
-    </div>
+    <BadgeLayout />
+    <InputLayout />
   </div>
 </template>
 

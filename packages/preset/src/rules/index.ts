@@ -1,20 +1,28 @@
 import { parseColor } from '@unocss/preset-mini/utils'
 import type { Rule, RuleContext } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
+import { mc } from 'magic-color'
 
 import { masks } from './mask'
 
 export const rules = [
   [/^o-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
     const color = parseColor(body, theme)
-    if (color?.cssColor?.type === 'hsl' && color.cssColor.components) {
-      return {
-        '--onu-color-context': `${color.cssColor.components.join(' ')}`,
+    if (color) {
+      if (color.cssColor?.type === 'hsl') {
+        if (color.cssColor.components) {
+          return {
+            '--onu-color-context': `${color.cssColor.components.join(' ')}`,
+          }
+        }
       }
-    }
-    else {
-      return {
-        '--onu-color-context': color?.color,
+      else {
+        if (color.color && mc.valid(color.color)) {
+          const magicColor = mc(color.color)
+          return {
+            '--onu-color-context': `${magicColor.hsl().join(' ')}`,
+          }
+        }
       }
     }
   }],

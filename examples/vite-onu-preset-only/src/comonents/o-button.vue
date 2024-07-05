@@ -6,6 +6,8 @@ const disabled = ref(false)
 function toggleDisabled() {
   disabled.value = !disabled.value
 }
+
+const index = ref(0)
 </script>
 
 <template>
@@ -79,6 +81,14 @@ function toggleDisabled() {
         <button :disabled="disabled" class="btn">
           disabled
         </button>
+      </div>
+
+      <div flex items-center justify-center gap-2>
+        <div class="btn-group">
+          <button v-for="i in 4" :key="i" class="btn btn-solid-cover" :class="index === i - 1 ? 'btn-group-active' : ''" @click="index = i - 1">
+            Button
+          </button>
+        </div>
       </div>
     </div>
   </div>

@@ -2,15 +2,15 @@ import type { UserShortcuts } from 'unocss'
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
-  xs: 'px-2.5 py-1.5 text-xs',
-  sm: 'px-2.5 py-1.5 text-sm',
-  md: 'px-3 py-2 text-sm',
-  lg: 'px-3.5 py-2.5 text-base',
+  xs: 'px-2.5 py-1.5 text-xs rounded-md',
+  sm: 'px-2.5 py-1.5 text-sm rounded-md',
+  md: 'px-3 py-2 text-sm rounded-md',
+  lg: 'px-3.5 py-2.5 text-base rounded-lg',
 }
 
 export const button: UserShortcuts = [
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
-  [/^btn(?:-size)?-(.*)$/, ([, s]) => s in Size ? Size[s] : undefined],
+  [/^btn(?:-size)?-(.*)$/, ([, s]) => s in Size ? `${Size[s]}` : undefined],
   ['btn-hover', 'hover:o-theme-600'],
   //   ['btn-focus', 'focus:o-theme-700'],
   ['btn-active', 'active:scale-95 active:o-theme-700'],
@@ -25,7 +25,7 @@ export const button: UserShortcuts = [
         btn-md btn-hover btn-active btn-focus btn-disabled
         text-current bg-transparent
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
-        cursor-pointer rounded shadow-sm
+        cursor-pointer shadow-sm
         o-transition font-onu font-medium
         border-(~ current) of-hidden
         `],
