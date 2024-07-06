@@ -21,11 +21,18 @@ color-scheme: light dark;
 ${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
 --onu-color-DEFAULT: var(--onu-color-500);
 --onu-color-text: var(--onu-color-100);
+--onu-color-text-invert: var(--onu-color-950);
 }
 
 .dark {
 --onu-color-DEFAULT: var(--onu-color-600);
 --onu-color-text: var(--onu-color-950);
+--onu-color-text-invert: var(--onu-color-100);
+}
+
+::selection {
+  color: hsl(var(--onu-color-DEFAULT) / 0.99) !important;
+  background-color: hsl(var(--onu-color-text) / 0.99) !important;
 }
   `.trim()
 

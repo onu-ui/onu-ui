@@ -1,5 +1,3 @@
-import { spliteObject } from '../utils'
-
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
