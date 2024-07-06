@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
-    "magic-color": "^1.1.0",
+    "magic-color": "^1.1.2",
     "vue": "^3.4.31"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.5.3",
-    "unocss": "^0.61.0",
-    "unocss-transformer-alias": "^0.0.7",
-    "vite": "^5.3.2",
-    "vue-tsc": "^2.0.24"
+    "unocss": "^0.61.2",
+    "unocss-transformer-alias": "^0.0.8",
+    "vite": "^5.3.3",
+    "vue-tsc": "^2.0.26"
   }
 }

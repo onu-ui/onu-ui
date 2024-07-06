@@ -7,5 +7,5 @@ export function preflights(options: ResolveOnuOptions): Preflight[] {
   return [
     resetPreflight,
     themePreflight(options),
-  ]
+  ].flat()
 }

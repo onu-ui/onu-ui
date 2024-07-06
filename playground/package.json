@@ -15,14 +15,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vue/repl": "^4.2.1",
+    "@vue/repl": "^4.3.1",
     "compare-versions": "^6.1.0",
     "ohmyfetch": "^0.4.21",
     "onu-ui": "workspace:*"
   },
   "devDependencies": {
     "@types/prettier": "^3.0.0",
-    "@unocss/reset": "^0.61.0",
+    "@unocss/reset": "^0.61.2",
     "execa": "^9.3.0",
     "prettier": "^3.3.2"
   }

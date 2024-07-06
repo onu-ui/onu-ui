@@ -9,24 +9,17 @@ const Size: Record<SizeType, string> = {
   lg: 'px-3.5 py-2.5 text-base',
 }
 
-const baseInputFocus = 'focus:(o-theme-DEFAULT ring-2px ring-context)'
-const baseInputHover = 'hover:o-theme-600'
-const baseInputDisabled = `
-  disabled:(
-    cursor-not-allowed op-64 shadow-none
-    hover:(o-gray-100)
-    bg-context:64 o-gray-100
-  )
-`
-
 export const input = [
   [/^input(?:-size)?-(.*)$/, ([, s]) => s in Size ? `${Size[s]}` : undefined],
-  ['input-bordered', `border-context`],
-  ['input-dashed', `border-dashed border-context focus-within:ring-0`],
+  ['input-bordered', `border-op-100`],
+  ['input-dashed', `border-dashed border-op-100 focus-within:ring-0`],
+  ['input-placeholder', `placeholder:color-[hsl(var(--onu-color-300))] dark:placeholder:color-[hsl(var(--onu-color-700))]`],
 
-  // ['input-focus', `${baseInputFocus} ` + `[&_input]:(${baseInputFocus})`],
-  ['input-focus', `focus-within:(o-theme-DEFAULT o-border-theme-900 ring-(1px context))`],
-  ['input-hover', 'hover:border-theme-context'],
+  ['input-focus', [`focus-within:(ring-(1px context))`, {
+    // TODO: UnoCSS feature, use yield to generate the value into `focus-within` variant.
+    '--un-ring-color': 'hsl(var(--onu-color-border, var(--onu-color-context)) / var(--un-ring-opacity, 1)) !important',
+  }]],
+  ['input-hover', 'hover:(border-op-100)'],
   ['input-disabled', `
           disabled:(
             cursor-not-allowed op-64 shadow-none
@@ -35,17 +28,18 @@ export const input = [
           )
   `],
   ['input-default', `
-          input-md input-hover input-disabled appearance-none o-transition
-          focus-within:(o-theme-DEFAULT border-theme-context)
-          border border-transparent bg-transparent
-          placeholder:color-gray-400
+          input-md input-hover input-disabled appearance-none o-transition 
+          border border-theme-context border-op-0 o-border-theme-400 dark:o-border-theme-600
+          bg-transparent
+          text-context
           outline-none rounded
+          placeholder:color-gray-400
+          focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)
         `],
   ['input', `
           input-default input-bordered input-focus
-          placeholder:color-[hsl(var(--onu-color-300))] dark:placeholder:color-[hsl(var(--onu-color-700))]
-          o-theme-600 dark:o-theme-400 text-context
+          input-placeholder [&_input]:input-placeholder
+          text-context o-theme-600 dark:o-theme-400
         `],
-  ['input-none', 'ring-0 !bg-transparent'],
 ]
