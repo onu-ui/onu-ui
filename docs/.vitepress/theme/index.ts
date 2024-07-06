@@ -1,4 +1,3 @@
-import OnuUI, { OMessage, en } from 'onu-ui'
 import theme from 'vitepress/theme'
 import { h } from 'vue'
 import DemoBlock from '../components/demo-block'
@@ -15,7 +14,6 @@ import 'uno.css'
 export default {
   ...theme,
   enhanceApp({ app }) {
-    app.use(OnuUI, { locale: en })
     app.component('Demo', DemoBlock)
     app.component('Overview', Overview)
     app.component('WarnBadge', WarnBadge)
@@ -23,8 +21,6 @@ export default {
     app.component('UpdateBadge', UpdateBadge)
     app.component('NewBadge', NewBadge)
     app.component('TeamMember', TeamMember)
-
-    app.config.globalProperties.$message = OMessage
   },
   Layout() {
     return h(theme.Layout, null, {
