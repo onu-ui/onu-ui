@@ -15,7 +15,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.5.3",
-    "unocss": "^0.61.2",
+    "unocss": "^0.61.3",
     "unocss-transformer-alias": "^0.0.8",
     "vite": "^5.3.3",
     "vue-tsc": "^2.0.26"

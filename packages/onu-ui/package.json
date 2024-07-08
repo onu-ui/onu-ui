@@ -2,7 +2,7 @@
   "name": "onu-ui",
   "type": "module",
   "version": "1.0.14-beta.2",
-  "description": "Onu-UI for web glassmorphism components generate by UnoCSS.",
+  "description": "Opinionated and lightweight UnoCSS ui library.",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
   "homepage": "https://github.com/onu-ui/onu-ui#readme",

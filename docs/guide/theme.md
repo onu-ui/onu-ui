@@ -1,3 +1,0 @@
-# Customized Theme
-
-Documentation coming soon...

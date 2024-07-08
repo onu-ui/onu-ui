@@ -1,25 +1,21 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-sidebar: false
-
-title: Onu UI
-titleTemplate: Popular, beautiful and fast UnoCSS component library
 
 hero:
-  name: Onu UI
-  text: Popular, beautiful and fast UnoCSS component library
-  tagline: A Vue.js based UnoCSS UI library that allows you to make beautiful websites
+  name: "Onu UI"
+  text: "Opinionated and lightweight UI library"
+  tagline: UnoCSS · Pure Shortcutify · On demand
   image:
     src: /logo.svg
-    alt: Onu-UI
-
+    alt: Onu UI
   actions:
     - theme: brand
       text: Get Started
       link: /guide/quick-start
 
     - theme: alt
-      text: Playground
+      text: Playground (TODO)
       link: https://onu.zyob.top/play/
 
     - theme: alt
@@ -27,28 +23,28 @@ hero:
       link: /guide/overview
 
 features:
-  - icon: 🌈
+  - icon: ✨
     title: Components Design
     details: Onu provides neat & beautiful crafted UI components.
     link: /guide/overview.html
     linkText: Getting Started
   - icon: 🔥
-    title: Introduce on demand
+    title: Shortcutify
+    details: Pure atom css shortcuts render UI.
+  - icon: 🍬
+    title: On demand
     details: Provide resolver to automatically import only used components.
     link: /guide/install.html
     linkText: Learn More
+  - icon: 🌈
+    title: Themeable
+    details: Color gradient algorithm automatically generates themes.
   - icon: 🎉
     title: TS Supported
     details: Support TypeScript & type checked & type inference.
   - icon: 💎
     title: Iconify Icons
-    details:  Use any icon from the library you love.
+    details:  Use any icon from iconify that you love.
     link: /components/icon.html
     linkText: Getting Started
-  - icon: 🍬
-    title: CSS Preset
-    details: Has UnoCSS preset package to use, rendered UI easily.
-  - icon: ⚙️
-    title: Theme Config
-    details: Use attribute mode like unocss to design. Support theme config to customize theme.
 ---

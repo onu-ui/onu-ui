@@ -2,7 +2,7 @@
   "name": "@onu-ui/preset",
   "type": "module",
   "version": "1.0.14-beta.2",
-  "description": "Onu-UI css rules for unocss preset",
+  "description": "Opinionated Onu UI preset for UnoCSS.",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
   "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/preset/README.md",
@@ -41,12 +41,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@unocss/preset-attributify": "^0.61.2",
-    "@unocss/preset-icons": "^0.61.2",
-    "@unocss/preset-mini": "^0.61.2",
-    "@unocss/preset-uno": "^0.61.2",
-    "@unocss/preset-web-fonts": "^0.61.2",
-    "magic-color": "^1.1.2",
-    "unocss-preset-useful": "^0.4.2"
+    "@unocss/preset-attributify": "^0.61.3",
+    "@unocss/preset-icons": "^0.61.3",
+    "@unocss/preset-mini": "^0.61.3",
+    "@unocss/preset-uno": "^0.61.3",
+    "@unocss/preset-web-fonts": "^0.61.3",
+    "magic-color": "^1.1.2"
   }
 }

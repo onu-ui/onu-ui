@@ -12,8 +12,8 @@
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.61.2",
-    "unocss": "^0.61.2",
+    "@unocss/reset": "^0.61.3",
+    "unocss": "^0.61.3",
     "vite-plugin-pages": "^0.32.3",
     "vite-plugin-vue-layouts": "^0.11.0"
   }
