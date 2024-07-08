@@ -20,7 +20,7 @@ import { ref } from 'vue'
 
         <button class="btn">
           Inbox
-          <div class="badge o-red">
+          <div class="badge badge-sm o-red">
             +99
           </div>
         </button>
