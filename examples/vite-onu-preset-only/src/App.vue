@@ -7,6 +7,7 @@ import ButtonLayout from './comonents/o-button.vue'
 import AvatarLayout from './comonents/o-avatar.vue'
 import BadgeLayout from './comonents/o-badge.vue'
 import InputLayout from './comonents/o-input.vue'
+import SwitchLayout from './comonents/o-switch.vue'
 
 const isDark = useDark()
 function toggleDark() {
@@ -51,6 +52,7 @@ function randomTheme() {
     <AvatarLayout />
     <BadgeLayout />
     <InputLayout />
+    <SwitchLayout />
   </div>
 </template>
 

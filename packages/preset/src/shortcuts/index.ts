@@ -5,6 +5,7 @@ import { input } from './input'
 import { defaults } from './defaults'
 import { avatar } from './avatar'
 import { badge } from './badge'
+import { switches } from './switch'
 
 export const shortcuts = [
   defaults,
@@ -12,4 +13,5 @@ export const shortcuts = [
   badge,
   button,
   input,
+  switches,
 ].flat() as UserShortcuts<Theme>

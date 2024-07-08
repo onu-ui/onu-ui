@@ -1,10 +1,22 @@
-import { parseColor } from '@unocss/preset-mini/utils'
-import type { CSSValueInput, Rule, RuleContext } from 'unocss'
+import { h, parseColor } from '@unocss/preset-mini/utils'
+import type { CSSValueInput, Rule } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import { mc } from 'magic-color'
 
-function resolveContextColor(matches: RegExpMatchArray, theme: Theme): string | undefined {
-  const color = parseColor(matches[2], theme)
+/**
+ * Resolve context color for hsl string.
+ *
+ * @param str color string
+ * @param theme Uno theme
+ * @returns hsl string without `hsl()`
+ *
+ * @example
+ * ```ts
+ * resolveContextColor('red', theme) => '0 100 50'
+ * ```
+ */
+function resolveContextColor(str: string, theme: Theme): string | undefined {
+  const color = parseColor(str, theme)
   if (color) {
     if (color.cssColor?.type === 'hsl') {
       if (color.cssColor.components) {
@@ -27,7 +39,7 @@ function resolveContextColorByKey(matches: RegExpMatchArray, theme: Theme, key: 
     }
   }
 
-  const color = resolveContextColor(matches, theme)
+  const color = resolveContextColor(matches[2], theme)
   if (color) {
     return {
       [key]: color,
@@ -112,6 +124,60 @@ export const contexts: Rule<Theme>[] = [
     return {
       '--un-border-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
       'border-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-border-opacity))`,
+    }
+  }],
+  /**
+   * Any variable for any value.
+   *
+   * @returns
+   * ```ts
+   *  {
+   *    --onu-custom-variable: value
+   *  }
+   * ```
+   *
+   * @example
+   * [variable::color]
+   * [varibale::theme-50]
+   * [varibale::theme-key-alpha]
+   * [varibale::anything]
+   */
+  [/^\[([^:]+)::(.+?)(?:-(\d+))?\]$/, ([, variable, name, no], { theme }) => {
+    const cssCustomKey = `--${variable}`
+    if (name === 'theme' && no != null) {
+      return {
+        [cssCustomKey]: `hsl(var(--onu-color-${no}) / 1)`,
+      }
+    }
+
+    const color = parseColor(`${name}${no ? `-${no}` : ''}`, theme)
+    if (color) {
+      console.log(color)
+
+      let maybeColor = ''
+      if (color.cssColor?.type === 'hsl') {
+        if (color.cssColor.components) {
+          maybeColor = `${color.cssColor.components.join(' ')}`
+        }
+      }
+      else {
+        if (color.color && mc.valid(color.color)) {
+          const magicColor = mc(color.color)
+          maybeColor = `${magicColor.hsl().join(' ')}`
+        }
+      }
+
+      if (maybeColor) {
+        const cssCustomOpacityKey = `${cssCustomKey}-opacity`
+        return {
+          [cssCustomOpacityKey]: color.cssColor?.alpha ?? 1,
+          [cssCustomKey]: `hsl(${maybeColor} / var(${cssCustomOpacityKey}))`,
+        }
+      }
+    }
+
+    return {
+      [cssCustomKey]: h.bracket(name) ?? name,
     }
   }],
 ]
