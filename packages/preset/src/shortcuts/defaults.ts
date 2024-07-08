@@ -7,7 +7,7 @@ const maskImages = {
 }
 
 export const defaults: UserShortcuts = [
-  ['o-transition', 'transiton-all duration-150'],
+  ['o-transition', 'transition-all duration-150'],
   ['o-theme-text', 'text-[hsl(var(--onu-color-text))] dark:text-[hsl(var(--onu-color-text))]'],
 
   // mask

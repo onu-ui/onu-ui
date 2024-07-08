@@ -22,7 +22,7 @@ export const button: UserShortcuts = [
         )
         `],
   ['btn-default', `
-        btn-md btn-hover btn-active btn-focus btn-disabled
+        btn-md btn-hover btn-active btn-disabled
         text-current bg-transparent
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer shadow-sm
@@ -31,7 +31,7 @@ export const button: UserShortcuts = [
         `],
   ['btn-text', `bg-transparent text-context dark:text-context shadow-none`],
   ['btn-link', `btn-text hover:(underline underline-offset-4)`],
-  ['btn-ghost', `btn-text btn-disabled-theme-color bg-hover hover:bg-context hover:o-theme-text`],
+  ['btn-ghost', `btn-text btn-disabled-theme-color hover:bg-context hover:o-theme-text`],
   ['btn-ghost-light', `btn-text btn-disabled-theme-color hover:bg-theme-100 dark:hover:bg-theme-900`],
   ['btn-soft', `
         text-theme-600 bg-theme-100 hover:bg-theme-200
