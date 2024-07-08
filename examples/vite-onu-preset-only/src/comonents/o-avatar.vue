@@ -4,7 +4,7 @@ import { ref } from 'vue'
 
 <template>
   <div>
-    <div fccc gap-2 flex-wrap>
+    <div gap-2 flex-wrap>
       <div flex items-center justify-center gap-2>
         <div class="avatar">
           <div class="rounded">

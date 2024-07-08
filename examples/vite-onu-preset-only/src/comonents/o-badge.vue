@@ -4,7 +4,7 @@ import { ref } from 'vue'
 
 <template>
   <div>
-    <div fccc gap-2 flex-wrap mt-4>
+    <div gap-2 flex-wrap mt-4>
       <div flex items-center justify-center gap-2>
         <span class="badge-default">Badge</span>
         <span class="badge badge-lg">Badge</span>

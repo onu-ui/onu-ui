@@ -19,7 +19,7 @@ const index = ref(0)
       </button>
     </div>
 
-    <div fccc gap-2 flex-wrap>
+    <div gap-2 flex-wrap>
       <div flex items-center justify-center gap-2>
         Default:
 
