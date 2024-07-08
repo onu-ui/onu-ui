@@ -15,8 +15,8 @@ export { resolveTheme } from './utils'
 
 export type { PrsetOnuOptions }
 
-export const presetOnu = definePreset<Theme>((options: PrsetOnuOptions = {}) => {
-  const resolvedOptions = resolveOptions(options)
+export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
+  const resolvedOptions = resolveOptions(options!)
 
   return {
     name: '@onu-ui/preset',
@@ -31,7 +31,7 @@ export const presetOnu = definePreset<Theme>((options: PrsetOnuOptions = {}) => 
       presetIcons(),
       presetWebFonts({
         fonts: {
-          onu: ['DM Sans', 'DM Sans:400,700'],
+          onu: resolvedOptions.font,
         },
         inlineImports: false,
       }),
@@ -40,9 +40,8 @@ export const presetOnu = definePreset<Theme>((options: PrsetOnuOptions = {}) => 
 })
 
 function resolveOptions(options: PrsetOnuOptions): ResolveOnuOptions {
-  const defaultOptions: PrsetOnuOptions = {
+  const defaultOptions: Omit<PrsetOnuOptions, 'color'> = {
     prefix: 'o-',
-    color: '#919b46',
     font: ['DM Sans', 'DM Sans:400,700'],
   }
   const resolvedOptions = Object.assign({}, defaultOptions, options)

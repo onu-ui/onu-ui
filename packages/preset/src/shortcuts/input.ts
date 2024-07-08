@@ -26,7 +26,7 @@ export const input = [
           )
   `],
   ['input-default', `
-          input-md input-hover input-disabled appearance-none o-transition 
+          font-onu input-md input-hover input-disabled appearance-none o-transition 
           border border-theme-context border-op-0 o-border-theme-400 dark:o-border-theme-600
           bg-transparent
           text-context

@@ -11,7 +11,7 @@ const Size: Record<SizeType, string> = {
 export const badge: UserShortcuts = [
   [/^badge(?:-size)?(?:-(.+))?$/, ([, s]) => s in Size ? Size[s] : undefined],
   ['badge-default', `
-      inline-flex items-center justify-center gap-2 o-transition w-fit
+      font-onu inline-flex items-center justify-center gap-2 o-transition w-fit
       badge-md rounded-full 
       border border-color-gray-200 dark:border-color-gray-600 text-gray-400
     `],

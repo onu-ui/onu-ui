@@ -6,16 +6,11 @@ export default defineConfig({
   envMode: 'dev',
   presets: [
     presetOnu({
-      // color: '#E94E4E',
-      // webFonts: {
-      //   fonts: {
-      //     dm: 'DM Sans',
-      //   },
-      // },
+      color: '#608e57',
     }),
   ],
   shortcuts: {
-    wrapper: 'w-screen h-screen fccc',
+    wrapper: 'flex flex-col justify-center items-center',
   },
   transformers: [
     transformerVariantGroup(),

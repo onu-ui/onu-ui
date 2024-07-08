@@ -152,8 +152,6 @@ export const contexts: Rule<Theme>[] = [
 
     const color = parseColor(`${name}${no ? `-${no}` : ''}`, theme)
     if (color) {
-      console.log(color)
-
       let maybeColor = ''
       if (color.cssColor?.type === 'hsl') {
         if (color.cssColor.components) {

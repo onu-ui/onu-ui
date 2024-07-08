@@ -14,7 +14,7 @@ export interface PrsetOnuOptions {
   /**
    * Theme primary color.
    */
-  color?: string
+  color: string
 
   /**
    * Onu default font loaded by google fonts.
