@@ -3,9 +3,14 @@
   /* --vp-c-text-2: hsl(var(--onu-color-500) / 1); */
   /* --vp-c-text-3: hsl(var(--onu-color-800) / 1); */
 
-  --vp-c-brand-1: hsl(var(--onu-color-DEFAULT) / 1); 
+  --vp-c-brand-1: hsl(var(--onu-color-500) / 1); 
+  --vp-c-brand-2: hsl(var(--onu-color-600) / 1);
   --vp-button-brand-bg: hsl(var(--onu-color-DEFAULT) / 1);
   --vp-button-brand-hover-bg: hsl(var(--onu-color-600) / 1);
+}
+
+.dark {
+  --vp-c-brand-2: hsl(var(--onu-color-400) / 1);
 }
 
 
@@ -21,4 +26,8 @@
 .VPTeamMembersItem .profile {
   display: flex;
   flex-direction: column;
+}
+
+strong a {
+  font-weight: 600;
 }

@@ -4,13 +4,14 @@ export default antfu({
   ignores: [
     'dist',
     'public',
-    'es',
     'node_modules',
     'playground/*',
     'example/*',
     'docs/*',
   ],
   rules: {
+    'vue/block-tag-newline': 'off',
+    'vue/padding-line-between-blocks': 'off',
     'react/display-name': 'off',
     'react-hooks/rules-of-hooks': 'off',
     'no-sequences': 'off',
@@ -21,6 +22,6 @@ export default antfu({
     'ts/prefer-literal-enum-member': 'off',
     // TODO: remove it when ...
     'vue/require-toggle-inside-transition': 'off',
-    ' @typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
   },
 })

@@ -11,8 +11,8 @@ hero:
     alt: Onu UI
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/quick-start
+      text: Getting Start
+      link: /guide/
 
     - theme: alt
       text: Playground (TODO)
