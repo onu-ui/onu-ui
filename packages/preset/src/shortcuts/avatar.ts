@@ -11,7 +11,7 @@ const Size: Record<SizeType, string> = {
 export const avatar: UserShortcuts = [
   [/^avatar(?:-size)?(?:-(.+))?$/, ([, s]) => s in Size ? Size[s] : undefined],
   ['avatar', `
-      relative inline-flex avatar-md
+      relative inline-flex avatar-md select-none
       [&>div]:(flex aspect-ratio-square of-hidden)
       [&_img]:(w-full h-full object-cover) o-theme-text
     `],
