@@ -152,6 +152,9 @@ importers:
 
   docs:
     devDependencies:
+      '@iconify-json/carbon':
+        specifier: ^1.1.36
+        version: 1.1.36
       '@onu-ui/preset':
         specifier: workspace:*
         version: link:../packages/preset

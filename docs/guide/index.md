@@ -38,18 +38,45 @@ All components of Onu UI are implemented by UnoCSS shortcuts, which is a pure at
 
 ## Features
 
-- **Pure atomic css** - no need to introduce additional css files.
-- **Simple and efficient** - render UI with the least amount of code.
-- **Easy to expand** - atomic css allows you to freely combine the styles you want.
-- **Dynamic theme** - generated with magic colors that conform to human visual perception.
-- **Quickly started** - atomic css and vue component library can be used together.
+<ul important="list-none pl-0">
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-badge shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Pure atomic css</b> no need to introduce additional css files.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-ibm-watsonx-code-assistant-for-z-refactor shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Simple and efficient</b> render UI with the least amount of code.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-ibm-watson-studio shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Expand Easily </b> atomic css allows you to freely combine the styles you want.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-color-palette shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Dynamic theme</b> generated with magic colors that conform to human visual perception.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-chart-relationship shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Quickly started</b> atomic css and vue component library can be used together.
+</li>
 
-- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
-- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
-- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
-- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
-- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-heat-map-02 shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Components Design</b> Neat & beautiful crafted UI components.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-join-inner shrink-0 group-hover:text-theme-500 />
+<b shrink-0>On demand</b> Provide resolver to automatically import only used components.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-types shrink-0 group-hover:text-theme-500 />
+<b shrink-0>Typescript Support</b> Support TypeScript & type checked & type inference.
+</li>
+<li flex="~ items-center gap-2" class="group">
+<i i-carbon-3rd-party-connected shrink-0 group-hover:text-theme-500 />
+<b shrink-0><a important-fw-600 href="https://icones.js.org/" target="_blank">Iconify Icons</a></b> Use any icon from the library you love.
+</li>
+</ul>
 
 ## Online Playground
 

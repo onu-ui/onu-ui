@@ -28,7 +28,14 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
     presets: [
       presetUno(),
       presetAttributify(),
-      presetIcons(),
+      presetIcons({
+        extraProperties: {
+          'display': 'inline-block',
+          'height': '1em',
+          'width': '1em',
+          'vertical-align': 'text-bottom',
+        },
+      }),
       presetWebFonts({
         fonts: {
           onu: resolvedOptions.font,

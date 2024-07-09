@@ -1,4 +1,4 @@
-import { defineConfig, transformerVariantGroup } from 'unocss'
+import { defineConfig, transformerDirectives, transformerVariantGroup } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
 
 export default defineConfig({
@@ -9,6 +9,7 @@ export default defineConfig({
     }),
   ],
   transformers: [
+    transformerDirectives(),
     transformerVariantGroup(),
   ],
 })
