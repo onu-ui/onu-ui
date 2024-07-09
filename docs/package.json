@@ -10,6 +10,9 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress previes"
   },
+  "dependencies": {
+    "floating-vue": "^5.2.2"
+  },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.36",
     "@iconify-json/line-md": "^1.1.38",

@@ -12,6 +12,8 @@ body {
   --vp-button-brand-bg: hsl(var(--onu-color-DEFAULT) / 1);
   --vp-button-brand-hover-bg: hsl(var(--onu-color-600) / 1);
   --vp-c-gutter: hsl(var(--onu-color-100) / 1);
+
+  --vp-nav-bg-color: transparent;
 }
 
 .dark {
@@ -33,7 +35,7 @@ body {
   --uno: flex flex-col;
 }
 
-.vp-doc h2 {
+.vp-doc h2, .vp-doc h3 {
   --uno: flex items-center gap-2;
 }
 
@@ -41,7 +43,10 @@ body {
   --uno: backdrop-blur-md;
 }
 
-strong a {
-  --uno: fw-600!;
+.VPNavBar.home {
+  --uno: backdrop-blur-md;
 }
 
+strong a {
+  --uno: fw-600 !;
+}

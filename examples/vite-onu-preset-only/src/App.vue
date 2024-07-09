@@ -33,6 +33,7 @@ function randomTheme() {
   themeColors.value.push(color)
   generateTheme(color)
 }
+
 </script>
 
 <template>
@@ -40,7 +41,7 @@ function randomTheme() {
     <div flex items-center justify-center gap-2>
       <div v-for="c in themeColors" :key="c" cursor-pointer w-10 h-10 rd :style="{ backgroundColor: c }" @click="generateTheme(c)" />
     </div>
-
+    <div>{{ themeColors }}</div>
     <button btn @click="randomTheme()">
       Random Theme
     </button>

@@ -2,7 +2,6 @@ import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { version } from '../package.json'
-import { DefaultThemeColor } from './theme/data/colors'
 
 const Guides: DefaultTheme.NavItemWithLink[] = [
   { text: 'What is Onu UI', link: '/guide/' },
@@ -118,10 +117,7 @@ export default defineConfig({
         ],
       },
       {
-        component: 'ThemePattle',
-        props: {
-          color: DefaultThemeColor,
-        },
+        component: 'ThemePalette',
       },
     ],
     sidebar: [

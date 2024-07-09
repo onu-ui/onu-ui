@@ -3,9 +3,11 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
+import FloatingVue from 'floating-vue'
 import HomePage from './components/HomePage.vue'
-import ThemePattle from './components/ThemePattle.vue'
+import ThemePalette from './components/ThemePalette.vue'
 
+import 'floating-vue/dist/style.css'
 import '@shikijs/vitepress-twoslash/style.css'
 import './style.css'
 import './override.css'
@@ -19,7 +21,9 @@ export default {
     })
   },
   enhanceApp({ app }) {
+    app.component('ThemePalette', ThemePalette)
+
     app.use(TwoslashFloatingVue)
-    app.component('ThemePattle', ThemePattle)
+    app.use(FloatingVue)
   },
 } satisfies Theme

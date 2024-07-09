@@ -4,7 +4,7 @@ outline: deep
 
 # Getting Start
 
-## Installation for `UnoCSS`
+## <i i-logos-unocss /> Installation for `UnoCSS`
 
 ::: code-group
   ```bash [pnpm]
@@ -20,7 +20,7 @@ outline: deep
 
 The Onu UI presets are framework-agnostic, allowing you to use them in any project that supports UnoCSS.
 
-```ts twoslash{8}
+```ts {8}
 // uno.config.ts
 import { defineConfig } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
@@ -36,7 +36,7 @@ export default defineConfig({
 
 Theme colors are required. You can pass your theme color in the `color` option. The Onu UI presets use [Magicolor](https://github.com/zyyv/magic-color) underneath to generate a complete set of theme styles based on your theme color. You can preview and debug in the [Magicolor Playground](https://color.zyob.top/).
 
-### Built-in Presets
+### <i i-carbon-window-preset /> Built-in Presets
 
 ::: info 💡 Tips
 `@onu-ui/preset` internally integrates a collection of commonly used presets, offering an All-in-One solution, so you don't need to register additional presets for use.
@@ -45,7 +45,7 @@ Theme colors are required. You can pass your theme color in the `color` option. 
 The built-in preset collections in Onu UI presets include:
 
 ```ts
-[
+const builtInPresets = [
   presetUno(), // The default preset for UnoCSS.
   presetAttributify(), // Attributify mode.
   presetIcons({ /* options */ }), // Icons preset.
@@ -53,7 +53,7 @@ The built-in preset collections in Onu UI presets include:
 ]
 ```
 
-### Options
+### <i i-carbon-sync-settings /> Options
 
 ```ts
 export interface PrsetOnuOptions {
@@ -79,6 +79,6 @@ export interface PrsetOnuOptions {
 }
 ```
 
-## Installation for `Vue`
+## <i i-logos-vue /> Installation for `Vue`
 
 TODO
