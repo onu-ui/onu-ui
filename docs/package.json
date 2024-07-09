@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.36",
+    "@iconify-json/logos": "^1.1.43",
     "@onu-ui/preset": "workspace:*",
     "unocss": "^0.61.3",
     "vitepress": "^1.3.0"

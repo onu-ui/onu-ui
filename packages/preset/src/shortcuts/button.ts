@@ -41,7 +41,7 @@ export const button: UserShortcuts = [
         shadow-none
         `],
   ['btn-outline', `
-        bg-transparent border-1
+        bg-transparent border-1 border-solid
         text-context dark:text-context
         `],
   ['btn-outline-cover', `btn-outline hover:bg-theme-600 hover:o-theme-text`],

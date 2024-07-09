@@ -11,7 +11,7 @@ hero:
     alt: Onu UI
   actions:
     - theme: brand
-      text: Getting Start
+      text: Getting Started
       link: /guide/
 
     - theme: alt

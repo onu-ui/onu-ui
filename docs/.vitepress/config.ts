@@ -1,5 +1,66 @@
+import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { version } from '../package.json'
+
+const Guides: DefaultTheme.NavItemWithLink[] = [
+  { text: 'What is Onu UI', link: '/guide/' },
+  { text: 'Getting Started', link: '/guide/getting-started' },
+]
+
+const Components: DefaultTheme.SidebarItem[] = [
+  {
+    text: 'Basic',
+    collapsed: false,
+    items: [
+      { text: 'Button', link: '/components/button' },
+      { text: 'Badge', link: '/components/badge' },
+      { text: 'Icon', link: '/components/icon' },
+      { text: 'Link', link: '/components/link' },
+      { text: 'Text', link: '/components/text' },
+    ],
+  },
+  {
+    text: 'Form',
+    collapsed: false,
+    items: [
+      { text: 'Checkbox', link: '/components/checkbox' },
+      { text: 'Switch', link: '/components/switch' },
+      { text: 'Rate', link: '/components/rate' },
+      { text: 'Radio', link: '/components/radio' },
+    ],
+  },
+  {
+    text: 'Data',
+    collapsed: false,
+    items: [
+      { text: 'Avatar', link: '/components/avatar' },
+      { text: 'Card', link: '/components/card' },
+      { text: 'Empty', link: '/components/empty' },
+      { text: 'Tag', link: '/components/tag' },
+      { text: 'Progress', link: '/components/progress' },
+    ],
+  },
+  {
+    text: 'Navigation',
+    collapsed: false,
+    items: [
+      { text: 'Affix', link: '/components/affix' },
+      { text: 'Backtop', link: '/components/backtop' },
+    ],
+  },
+  {
+    text: 'Feedback',
+    collapsed: false,
+    items: [
+      { text: 'Alert', link: '/components/alert' },
+      { text: 'Message', link: '/components/message' },
+      { text: 'Popup', link: '/components/popup' },
+      { text: 'ToolTip', link: '/components/tooltip' },
+      { text: 'Collapse', link: '/components/collapse' },
+    ],
+  },
+]
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -15,9 +76,7 @@ export default defineConfig({
       dark: 'vitesse-dark',
     },
     codeTransformers: [
-      transformerTwoslash({
-        processHoverInfo: info => info.replace(/_unocss_core\./g, ''),
-      }),
+      transformerTwoslash(),
     ],
   },
   head: [
@@ -33,10 +92,40 @@ export default defineConfig({
     },
     logo: '/logo.svg',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Components', items: [
+        {
+          text: 'overview',
+          link: '/components/overview',
+        },
+        ...Components as any,
+      ] },
+      {
+        text: `v${version}`,
+        items: [
+          {
+            text: 'Release Notes',
+            link: 'https://github.com/onu-ui/onu-ui/releases',
+          },
+          {
+            text: 'Contributing',
+            link: 'https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md',
+          },
+          {
+            text: 'Code of Conduct',
+            link: 'https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md',
+          },
+        ],
+      },
     ],
     sidebar: [
+      {
+        text: 'Guide',
+        items: Guides,
+      },
+      {
+        text: 'Components',
+        items: Components,
+      },
       {
         text: 'Examples',
         items: [

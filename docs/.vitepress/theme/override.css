@@ -32,6 +32,12 @@ body {
   flex-direction: column;
 }
 
+.vp-doc h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 strong a {
   font-weight: 600 !important;
 }
