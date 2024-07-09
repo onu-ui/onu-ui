@@ -11,10 +11,12 @@ body {
   --vp-c-brand-2: hsl(var(--onu-color-600) / 1);
   --vp-button-brand-bg: hsl(var(--onu-color-DEFAULT) / 1);
   --vp-button-brand-hover-bg: hsl(var(--onu-color-600) / 1);
+  --vp-c-gutter: hsl(var(--onu-color-100) / 1);
 }
 
 .dark {
   --vp-c-brand-2: hsl(var(--onu-color-400) / 1);
+  --vp-c-gutter: hsl(var(--onu-color-900) / 1);
 }
 
 
@@ -28,16 +30,18 @@ body {
 }
 
 .VPTeamMembersItem .profile {
-  display: flex;
-  flex-direction: column;
+  --uno: flex flex-col;
 }
 
 .vp-doc h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  --uno: flex items-center gap-2;
+}
+
+.VPLocalSearchBox .backdrop {
+  --uno: backdrop-blur-md;
 }
 
 strong a {
-  font-weight: 600 !important;
+  --uno: fw-600!;
 }
+
