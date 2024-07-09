@@ -155,6 +155,9 @@ importers:
       '@iconify-json/carbon':
         specifier: ^1.1.36
         version: 1.1.36
+      '@iconify-json/line-md':
+        specifier: ^1.1.38
+        version: 1.1.38
       '@iconify-json/logos':
         specifier: ^1.1.43
         version: 1.1.43
@@ -1329,6 +1332,9 @@ packages:
 
   '@iconify-json/fluent-emoji@1.1.18':
     resolution: {integrity: sha512-LLXbamtfQctodGAOlBEKuXyLs2TrwY/EI0EvNmttuf128V/Bkb872bNmlsKzVrescix3NOvqr0EMhyW/L/Upww==}
+
+  '@iconify-json/line-md@1.1.38':
+    resolution: {integrity: sha512-W+y4G/7QqO1sTGUypwsm0UUwjbGt/BjRg4kZylek7BwH5EG8f1uUJgcZwRASjsH4xGL+LVQbw6FAGbQ1UHNCow==}
 
   '@iconify-json/logos@1.1.43':
     resolution: {integrity: sha512-UtvL1yDHUr9dl1Tqihh6K9m5dmbYKOYyLf3i9aKhymSW76QjOCGjpgQc0PQ4GJCAdU1cAMu+WO61TgPxdonrlg==}
@@ -6386,6 +6392,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/fluent-emoji@1.1.18':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/line-md@1.1.38':
     dependencies:
       '@iconify/types': 2.0.0
 
