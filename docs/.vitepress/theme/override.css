@@ -48,8 +48,8 @@ body {
   }
 }
 
-.VPTeamMembersItem .profile {
-  --uno: flex flex-col;
+.VPTeamMembersItem .profile .avatar {
+  --uno: block;
 }
 
 .vp-doc h2, .vp-doc h3 {
