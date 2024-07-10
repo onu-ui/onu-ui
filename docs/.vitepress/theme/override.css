@@ -27,8 +27,25 @@ body {
 }
 
 .VPHero .image-container .image-bg {
+  top: calc(50% - 96px);
+  left: calc(50% - 96px);
   opacity: 1;
   transition: opacity .6s ease;
+  --uno: animate-spin animate-duration-8000;
+}
+
+@media (min-width: 640px) {
+  .VPHero .image-container .image-bg {
+    top: calc(50% - 128px);
+    left: calc(50% - 128px);
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHero .image-container .image-bg {
+    top: calc(50% - 160px);
+    left: calc(50% - 160px);
+  }
 }
 
 .VPTeamMembersItem .profile {
