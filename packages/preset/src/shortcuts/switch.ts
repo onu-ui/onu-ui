@@ -1,3 +1,5 @@
+import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
@@ -7,8 +9,11 @@ const Size: Record<SizeType, string> = {
   lg: 'w-14 h-7 [offset::1.75rem]',
 }
 
-export const switches = [
-  [/^switch(?:-size)?-(.*)$/, ([, s]) => s in Size ? `${Size[s]}` : undefined],
+export const switches: UserShortcuts<Theme> = [
+  [/^switch(?:-size)?-(.*)$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
+  }],
   ['switch-disabled', `disabled:(cursor-not-allowed checked:op-50)`],
   ['switch', [`switch-md switch-disabled shrink-0 cursor-pointer appearance-none 
     rounded-full o-transition duration-200

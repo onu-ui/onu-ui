@@ -2,25 +2,14 @@
   "compilerOptions": {
     "target": "esnext",
     "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "onu-ui": [
-        "./packages/onu-ui/src/index.ts"
-      ],
-      "@onu-ui/components": [
-        "./packages/components/index.ts"
-      ],
-      "@onu-ui/utils": [
-        "./packages/utils/index.ts"
-      ],
-      "@onu-ui/preset": [
-        "./packages/preset/src/index.ts"
-      ]
+      "onu-ui": ["./packages/onu-ui/src/index.ts"],
+      "@onu-ui/components": ["./packages/components/index.ts"],
+      "@onu-ui/utils": ["./packages/utils/index.ts"],
+      "@onu-ui/preset": ["./packages/preset/src/index.ts"]
     },
     "resolveJsonModule": true,
     "types": [
@@ -29,7 +18,6 @@
     ],
     "strict": true,
     "strictNullChecks": true,
-    "noImplicitAny": false,
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
@@ -40,6 +28,8 @@
     "**/test/dts/**",
     "**/playground/**",
     "**/example/**",
-    "**/packages/components/**"
+    "**/packages/components/**",
+    "**/packages/onu-ui/**",
+    "**/packages/utils/**"
   ]
 }

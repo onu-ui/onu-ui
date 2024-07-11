@@ -54,8 +54,8 @@ export const contexts: Rule<Theme>[] = [
    *
    * @example
    * o-red
-   * o-#f00
-   * o-[rgb(255,0,0)]
+   * o-#ff0
+   * o-[rgb(255,255,0)]
    *
    * @returns
    *

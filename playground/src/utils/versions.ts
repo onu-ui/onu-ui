@@ -12,7 +12,10 @@ export function getVersions(pkg: MaybeRef<string>) {
   const url = computed(() => `${playConfig.versionUrl}${unref(pkg)}`)
   return useFetch(url, {
     initialData: [],
-    afterFetch: ctx => ((ctx.data = ctx.data.versions), ctx),
+    afterFetch: (ctx) => {
+      ctx.data = ctx.data.versions
+      return ctx
+    },
     refetch: true,
   }).json<string[]>().data as Ref<string[]>
 }
@@ -27,7 +30,9 @@ export function getSupportVersions(pkg: string, minVersion: string) {
     )
     if (canUserVersions.length > 0) {
       canUserVersions.unshift('latest')
-      IS_DEV && !IS_VUE && canUserVersions.unshift(`@${__COMMIT__}`)
+      if (IS_DEV && !IS_VUE) {
+        canUserVersions.unshift(`@${__COMMIT__}`)
+      }
     }
 
     return canUserVersions
@@ -48,6 +53,7 @@ export async function setVueVersion(
   state.vueRuntimeURL = runtimeDom
   versions.vue = version
 
+  // eslint-disable-next-line no-console
   console.info(`[@vue/repl] Now using Vue version: ${version}`)
 }
 

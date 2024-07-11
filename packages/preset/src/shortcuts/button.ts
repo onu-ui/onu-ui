@@ -1,4 +1,5 @@
 import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
@@ -8,9 +9,12 @@ const Size: Record<SizeType, string> = {
   lg: 'px-3.5 py-2.5 text-base rounded-lg',
 }
 
-export const button: UserShortcuts = [
+export const button: UserShortcuts<Theme> = [
+  [/^btn-(.+)$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
+  }],
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
-  [/^btn(?:-size)?-(.*)$/, ([, s]) => s in Size ? `${Size[s]}` : undefined],
   ['btn-hover', 'hover:o-theme-600'],
   //   ['btn-focus', 'focus:o-theme-700'],
   ['btn-active', 'active:scale-95 active:o-theme-700'],

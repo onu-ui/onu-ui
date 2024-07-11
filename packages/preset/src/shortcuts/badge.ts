@@ -1,4 +1,5 @@
 import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
@@ -8,8 +9,11 @@ const Size: Record<SizeType, string> = {
   lg: 'px-10px text-16px h-22px',
 }
 
-export const badge: UserShortcuts = [
-  [/^badge(?:-size)?(?:-(.+))?$/, ([, s]) => s in Size ? Size[s] : undefined],
+export const badge: UserShortcuts<Theme> = [
+  [/^badge(?:-size)?(?:-(.+))?$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
+  }],
   ['badge-default', `
       font-onu inline-flex items-center justify-center gap-2 o-transition w-fit
       badge-md rounded-full 

@@ -12,16 +12,5 @@ export default antfu({
   rules: {
     'vue/block-tag-newline': 'off',
     'vue/padding-line-between-blocks': 'off',
-    'react/display-name': 'off',
-    'react-hooks/rules-of-hooks': 'off',
-    'no-sequences': 'off',
-    'no-alert': 'off',
-    'no-console': 'off',
-    'antfu/no-import-dist': 'off',
-    'ts/no-use-before-define': 'off',
-    'ts/prefer-literal-enum-member': 'off',
-    // TODO: remove it when ...
-    'vue/require-toggle-inside-transition': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
   },
 })

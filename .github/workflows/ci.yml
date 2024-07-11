@@ -10,46 +10,56 @@ on:
       - main
 
 jobs:
-  lint:
+  typecheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout 🥴
+        uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Install pnpm 🚀
+        uses: pnpm/action-setup@v4
 
-      - name: Set node
-        uses: actions/setup-node@v3
+      - name: Set node LTS ✨
+        uses: actions/setup-node@v4
         with:
-          node-version: 16.x
-          cache: pnpm
+          node-version: lts/*
 
-      - name: Install
-        run: pnpm install --no-frozen-lockfile
+      - name: Install Dependencies 🧱
+        run: pnpm i
 
-      - name: Lint
-        run: pnpm run lint
+      - name: Build 📦️
+        run: pnpm build
+
+      - name: Typecheck 👻
+        run: pnpm typecheck
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node: [lts/*]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout 🥴
+        uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Install pnpm 🚀
+        uses: pnpm/action-setup@v4
 
-      - name: Set node
-        uses: actions/setup-node@v3
+      - name: Set node ${{ matrix.node }}
+        uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: ${{ matrix.node }}
           cache: pnpm
 
-      - name: Install
-        run: pnpm install --no-frozen-lockfile
+      - name: Install Dependencies 📦️
+        run: pnpm i
 
-      - name: Build
-        run: pnpm run build
+      - name: Build 📦️
+        run: pnpm build
 
-      - name: Test
-        run: pnpm run test
+      - name: Test 🍔
+        run: pnpm test

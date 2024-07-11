@@ -34,7 +34,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch",
+    "stub": "tsup --watch",
     "build": "tsup"
   },
   "publishConfig": {
@@ -46,6 +46,6 @@
     "@unocss/preset-mini": "^0.61.3",
     "@unocss/preset-uno": "^0.61.3",
     "@unocss/preset-web-fonts": "^0.61.3",
-    "magic-color": "^1.1.2"
+    "magic-color": "^1.2.1"
   }
 }

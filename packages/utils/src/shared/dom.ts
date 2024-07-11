@@ -4,7 +4,8 @@ export const isServerRendering = (() => {
   try {
     return !(typeof window !== 'undefined' && document !== undefined)
   }
-  catch (e) {
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  catch (_: unknown) {
     return true
   }
 })()

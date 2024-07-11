@@ -1,4 +1,5 @@
 import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
@@ -8,8 +9,11 @@ const Size: Record<SizeType, string> = {
   lg: 'w-20',
 }
 
-export const avatar: UserShortcuts = [
-  [/^avatar(?:-size)?(?:-(.+))?$/, ([, s]) => s in Size ? Size[s] : undefined],
+export const avatar: UserShortcuts<Theme> = [
+  [/^avatar(?:-size)?(?:-(.+))?$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
+  }],
   ['avatar', `
       relative inline-flex avatar-md select-none
       [&>div]:(flex aspect-ratio-square of-hidden)

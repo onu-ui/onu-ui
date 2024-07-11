@@ -1,3 +1,4 @@
+/* eslint-disable ts/prefer-literal-enum-member */
 // https://github.com/vuejs/vue-next/blob/master/packages/shared/src/shapeFlags.ts
 export enum ShapeFlags {
   ELEMENT = 1,

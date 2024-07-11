@@ -18,5 +18,3 @@ node_modules
 packages/onu-ui/*.css
 docs/.vitepress/cache/
 docs/public/play
-
-docs-next

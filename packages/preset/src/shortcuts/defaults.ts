@@ -1,3 +1,4 @@
+import type { Theme } from '@unocss/preset-mini'
 import type { UserShortcuts } from 'unocss'
 
 const maskImages = {
@@ -6,7 +7,7 @@ const maskImages = {
   triangle: `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTc0JyBoZWlnaHQ9JzE0OScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBmaWxsPSdibGFjaycgZD0nbTg3IDE0OC40NzYtODYuNjAzLjE4NUw0My44NiA3NC40MjMgODcgMGw0My4xNCA3NC40MjMgNDMuNDYzIDc0LjIzOHonIGZpbGwtcnVsZT0nZXZlbm9kZCcvPjwvc3ZnPg==`,
 }
 
-export const defaults: UserShortcuts = [
+export const defaults: UserShortcuts<Theme> = [
   ['o-transition', 'transition-all duration-150'],
   ['o-theme-text', 'text-[hsl(var(--onu-color-text))] dark:text-[hsl(var(--onu-color-text))]'],
 
@@ -14,8 +15,8 @@ export const defaults: UserShortcuts = [
   [/^mask-(\w+)$/, ([, k]) => {
     if (k in maskImages) {
       return ['mask', {
-        '-webkit-mask-image': `url(${maskImages[k]})`,
-        'mask-image': `url(${maskImages[k]})`,
+        '-webkit-mask-image': `url(${maskImages[k as keyof typeof maskImages]})`,
+        'mask-image': `url(${maskImages[k as keyof typeof maskImages]})`,
       }]
     }
   }, { autocomplete: `mask-(${Object.keys(maskImages).join('|')})` }],

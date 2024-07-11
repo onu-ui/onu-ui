@@ -1,3 +1,5 @@
+import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
@@ -7,8 +9,11 @@ const Size: Record<SizeType, string> = {
   lg: 'px-3.5 py-2.5 text-base',
 }
 
-export const input = [
-  [/^input(?:-size)?-(.*)$/, ([, s]) => s in Size ? `${Size[s]}` : undefined],
+export const input: UserShortcuts<Theme> = [
+  [/^input(?:-size)?-(.*)$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
+  }],
   ['input-bordered', `border-op-100`],
   ['input-dashed', `border-dashed border-op-100 focus-within:ring-0`],
   ['input-placeholder', `placeholder:color-[hsl(var(--onu-color-300))] dark:placeholder:color-[hsl(var(--onu-color-700))]`],

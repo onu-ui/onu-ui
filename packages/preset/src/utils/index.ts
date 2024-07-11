@@ -9,7 +9,7 @@ export function spliteObject(obj: Record<string, string>) {
 }
 
 export function resolveTheme(color: string) {
-  const theme: Record<string, string> = mc.theme(color, {
+  const theme = mc.theme(color, {
     type: 'hsl',
     // render: meta => [`--onu-color-${meta[0]}`, meta[1].replace(/hsl\((.*)\)/, '$1')],
   })

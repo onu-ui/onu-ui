@@ -66,7 +66,7 @@ export function mergeFirstChild(
     for (let i = 0; i < children.length; i++) {
       const child = children[i]
       if (isElement(child) || isComponent(child)) {
-        const props = isFunction(extraProps) ? extraProps(child) : extraProps
+        const props = isFunction(extraProps) ? (extraProps as any)(child) : extraProps
         children[i] = cloneVNode(child, props, true)
         return true
       }

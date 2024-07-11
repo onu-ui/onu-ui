@@ -52,6 +52,7 @@ export function useStore(initial: Initial) {
   const state = reactive({
     mainFile: MAIN_FILE,
     files,
+    // @ts-expect-error anyway
     activeFile: files[APP_FILE],
     errors: [],
     vueRuntimeURL: '',
@@ -66,6 +67,7 @@ export function useStore(initial: Initial) {
     addFile,
     init,
     deleteFile,
+    // @ts-expect-error anyway
     getImportMap,
     initialShowOutput: false,
     initialOutputMode: 'preview',
@@ -157,21 +159,27 @@ export function useStore(initial: Initial) {
 
   // 根据 url 参数生成文件信息
   function initFiles(serializedState: string) {
+    // @ts-expect-error vue-repl 的 File 类型
     const files: StoreState['files'] = {}
     if (serializedState) {
       const saved = deserialize(serializedState)
       for (const [filename, file] of Object.entries(saved)) {
         if (filename === '_o')
           continue
+        // @ts-expect-error vue-repl 的 File 类型
         files[filename] = new File(filename, file as string)
       }
       userOptions.value = saved._o || {}
     }
     else {
+      // @ts-expect-error vue-repl 的 File 类型
       files[APP_FILE] = new File(APP_FILE, welcomeCode)
     }
+    // @ts-expect-error vue-repl 的 File 类型
     files[MAIN_FILE] = new File(MAIN_FILE, mainCode, hideFile.value)
+    // @ts-expect-error vue-repl 的 File 类型
     if (!files[USER_IMPORT_MAP]) {
+      // @ts-expect-error vue-repl 的 File 类型
       files[USER_IMPORT_MAP] = new File(
         USER_IMPORT_MAP,
         JSON.stringify({ imports: {} }, undefined, 2),
@@ -208,6 +216,7 @@ export function useStore(initial: Initial) {
     if (filename === LIB_INSTALL)
       return
 
+    // eslint-disable-next-line no-alert
     if (confirm(`Are you sure you want to delete ${filename}?`)) {
       if (state.activeFile.filename === filename)
         setActive(APP_FILE)

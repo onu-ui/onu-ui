@@ -18,15 +18,15 @@ export async function evaluateUserConfig<U = UserConfig>(
 ): Promise<U | undefined> {
   const code = configStr
     .replace(
-      /import\s*(.*?)\s*from\s*(["'])unocss\2/g,
+      /import\s+(\S+)\s+from\s+(["'])unocss\2/g,
       'const $1 = await __import("unocss");',
     )
     .replace(
-      /import\s*(\{[\s\S]*?\})\s*from\s*(["'])([\w-@/]+)\2/g,
+      /import\s+(\S+)\s+from\s*(["'])([-@/\w]+)\2/g,
       'const $1 = await __import("$3");',
     )
     .replace(
-      /import\s*(.*?)\s*from\s*(["'])([\w-@/]+)\2/g,
+      /import\s+(\S+)\s+from\s*(["'])([-@/\w]+)\2/g,
       'const $1 = (await __import("$3")).default;',
     )
     .replace(/export default /, 'return ')
