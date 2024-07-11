@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
+import nodePolyfills from 'rollup-plugin-polyfill-node'
 
 export default defineConfig({
   optimizeDeps: {
@@ -26,4 +27,9 @@ export default defineConfig({
       ],
     }),
   ],
+  build: {
+    rollupOptions: {
+      plugins: [nodePolyfills()],
+    },
+  },
 })
