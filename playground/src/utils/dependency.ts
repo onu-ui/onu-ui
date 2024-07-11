@@ -5,12 +5,7 @@ import type { ImportMap } from '~/utils/import-map'
 import { IS_DEV } from '~/constants'
 
 // 生成 cdn url
-export const genCDNLink = (
-  pkg: string,
-  version: string | undefined = '',
-  path = '',
-  cdnUrl: string,
-) => {
+export function genCDNLink(pkg: string, version: string | undefined = '', path = '', cdnUrl: string) {
   if (IS_DEV && (version === `@${__COMMIT__}` || /vue/.test(pkg))) {
     if (pkg === '@vue/runtime-dom')
       pkg = 'vue'
@@ -24,7 +19,7 @@ export const genCDNLink = (
 }
 
 // 生成 vue 依赖配置
-export const genVueLink = (version: string) => {
+export function genVueLink(version: string) {
   const compilerSfc = genCDNLink(
     '@vue/compiler-sfc',
     version,
@@ -45,10 +40,10 @@ export const genVueLink = (version: string) => {
 
 // 生成构建依赖对象
 // （包括 vue、ui组件库，将在store中与用户依赖合并传递给 vue-repl）
-export const genImportMap = ({
+export function genImportMap({
   vue,
   [playConfig.compLibShort]: lib,
-}: Partial<Versions> = {}): ImportMap => {
+}: Partial<Versions> = {}): ImportMap {
   // 指定组件库依赖路径，用于去cdn加载 组件库
   const deps: Record<string, Dependency> = {
     ...playConfig.coreDeps,

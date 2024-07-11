@@ -1,5 +1,6 @@
 import { getCurrentInstance } from 'vue'
 import UnoUI from 'onu-ui'
+
 let installed = false
 
 export function libInstall() {

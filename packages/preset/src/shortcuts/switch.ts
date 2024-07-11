@@ -1,8 +1,29 @@
-export const switchShortcuts: Record<string, string> = {
-  // switch
-  'o-switch-base': 'b-(~ $o-switch-bc) bg-$o-switch-dot',
-  'o-switch-base-active': 'checked-(b-context bg-$o-switch-dot-active)',
-  'o-switch-shadow': 'shadow-switch checked-shadow-switchActive',
-  'o-switch': 'o-switch-base o-switch-base-active o-switch-shadow appearance-none cursor-pointer flex-shrink-0 o-transition duration-300 rounded-full',
-  'o-switch-disabled': 'o-disabled',
+import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
+import type { SizeType } from '../types'
+
+const Size: Record<SizeType, string> = {
+  xs: 'w-6 h-4 [offset::0.5rem]',
+  sm: 'w-8 h-5 [offset::0.75rem]',
+  md: 'w-12 h-6 [offset::1.5rem]',
+  lg: 'w-14 h-7 [offset::1.75rem]',
 }
+
+export const switches: UserShortcuts<Theme> = [
+  [/^switch(?:-size)?-(.*)$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
+  }],
+  ['switch-disabled', `disabled:(cursor-not-allowed checked:op-50)`],
+  ['switch', [`switch-md switch-disabled shrink-0 cursor-pointer appearance-none 
+    rounded-full o-transition duration-200
+    border border-color-current bg-current
+    text-context text-op-32! o-theme-DEFAULT
+    [tglbg::#fff] dark:[tglbg::#000]
+    [tglhandleborder::[0_0]]
+    [calcOffset::[calc(var(--offset)_*_-1)]]
+    checked:([calcOffset::var(--offset)] text-op-100!)
+    `, {
+    'box-shadow': `var(--calcOffset) 0 0 2px var(--tglbg) inset,0 0 0 2px var(--tglbg) inset,var(--tglhandleborder)`,
+  }]],
+]

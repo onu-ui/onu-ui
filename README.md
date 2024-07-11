@@ -2,127 +2,36 @@
   <img src="./public/logo.svg" style="width:100px;" />
   <h1 align="center">Onu UI (WIP)</h1>
   <p align="center">Bullheaded and lightweight UnoCSS ui library.</p>
-  <p align="center"><sub>作者很菜很懒，写不下去了</sub></p>
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
+<a href="https://www.npmjs.com/package/onu-ui"><img src="https://img.shields.io/npm/v/onu-ui?color=608e57&amp;label=" alt="NPM version"></a></p>
 <p align="center">
-<a href="https://onu.zyob.top/">🧑‍💻 Document <sup>Beta</sup></a> |
-<a href="https://onu.zyob.top/play/">🤹‍♂️ Playground</a>
 </p>
 
 ## Features
 
-- 🌈 **Components Design** - Onu provides neat & beautiful crafted UI components.
-- 🔥 **On demand Import**  - Provide resolver to automatically import only used components.
-- 🎉 **Typescript Supported** - Support TypeScript & type checked & type inference.
-- 💎 **[Iconify Icons](https://icones.js.org/)** - Use any icon from the library you love.
-- 🍬 **[CSS Preset](https://github.com/onu-ui/onu-ui/tree/main/packages/preset)** - Has UnoCSS preset package to use, rendered UI easily.
-- ⚙️ **Theme Config** - Use attribute mode like unocss to design. Support theme config to customize theme.
+- 💎 **Pure atomic css** - no need to introduce additional css files.
+- 🍬 **Simple and efficient** - render UI with the least amount of code.
+- 💜 **Expand Easily** - atomic css allows you to freely combine the styles you want.
+- 🎨 **Dynamic theme** - generated with Magicolor that conform to human visual perception.
+- 🌗 **Toggle theme** - Automatically adapts to dark / light mode.
+- 🔥 **Components Design** - Neat & beautiful crafted UI components.
+- 🌈 **On demand** - Provide resolver to automatically import only used components.
+- 🚀 **Typescript Support** - Support TypeScript & type checked & type inference.
+- 😃 **Iconify Icons** - Use any icon from the library you love.
+- 💪 **Quickly started** - atomic css and vue component library can be used together.
 
-## Usage
+## Documentation
 
-### Full Import
+Read the 🧑‍💻 [documentation](https://onu.zyob.top) for more details.
 
-```bash
-pnpm i onu-ui
-pnpm i unocss -D
-```
-Add `onu-ui` in your main entry file.
-
-```ts
-// main.ts
-import OnuUI from 'onu-ui'
-import 'uno.css'
-import 'onu-ui/dist/style.css'
-
-createApp(App).use(OnuUI).mount('#app')
-```
-
-### Custom UnoCSS config
-
-Custom your UnoCSS config:
-```ts
-// uno.config.ts
-import { defineConfig, presetAttributify, presetUno } from 'unocss'
-import { presetOnu } from 'onu-ui'
-
-export default defineConfig({
-  presets: [
-    // ...
-    presetUno(),
-    presetAttributify(),
-    presetOnu(),
-  ],
-})
-```
-
-### On-demand Import:
-
-You need to use an additional plugin to import components you used. First you need to install [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) and [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import).
-
-```shell
-npm install -D unplugin-vue-components unplugin-auto-import
-```
-
-Then add the code below into your Vite config file.
-
-```ts
-// vite.config.ts
-import { defineConfig } from 'vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { OnuResolver } from 'onu-ui'
-
-export default defineConfig({
-  // ...
-  plugins: [
-    // ...
-    AutoImport({
-      resolvers: [OnuResolver()],
-    }),
-    Components({
-      resolvers: [OnuResolver()],
-    }),
-  ],
-})
-```
-
-## Online Playground
-
-You can try OnuUI out with the components built-in playground.
-### Try it with our built-in playground
-
-[Playground](https://onu.zyob.top/play/)
-
-### Try it with stackblitz or codesandbox
-
-<a target="_blank" href="https://codesandbox.io/p/github/yzh990918/onu-starter/main">
-<img src="https://img.shields.io/badge/Try%20On-CodeSandbox-hsl(265%2C97%25%2C66%25)?style=for-the-badge&logo=codesandbox" height="35" />
-</a><br/>
-
-<a target="_blank"  href="https://stackblitz.com/edit/onu-starter">
-<img src="https://img.shields.io/badge/Try%20on%20Stackblitz-1877F2?style=for-the-badge&logo=stackblitz&logoColor=white" height="35" />
-</a>
-
-## Contributing
-
-Developers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contributing Guide](./CONTRIBUTING.md).
-
-Thanks to everyone who has already contributed to OnuUI!
-
-<a href="https://github.com/onu-ui/onu-ui/graphs/contributors"><img src="https://contributors.nn.ci/api?repo=onu-ui/onu-ui" /></a>
-
-## Discussions
-
-Since `OnuUI` is under intensive development, we need your valuable comments and feature requirements of the component
-
-Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
+Have fun with the 🤹‍♂️ <a href="https://onu.zyob.top/play/">Playground <sup>Beta</sup></a>.
 
 ## Credits
 
 - [UnoCSS](https://github.com/unocss/unocss)
+- [daisyui](https://github.com/saadeghi/daisyui)
 - [@nuxt/ui](https://github.com/nuxt/ui)
 
 ## License

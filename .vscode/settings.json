@@ -3,19 +3,11 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": false,
-  "i18n-ally.localesPaths": "packages/utils/locale/lang",
-  "i18n-ally.enabledParsers": [
-    "ts"
-  ],
-  "i18n-ally.enabledFrameworks": [
-    "vue",
-    "vue-sfc"
-  ],
-  "i18n-ally.keystyle": "nested",
   "unocss.root": [
     "./docs",
     "./packages/components",
     "./playground",
     "./example"
-  ]
+  ],
+  "vitest.disableWorkspaceWarning": true
 }

@@ -1,3 +1,0 @@
-<template>
-  <o-empty />
-</template>

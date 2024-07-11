@@ -1,0 +1,69 @@
+body {
+  --uno: font-onu;
+}
+
+:root {
+  /* --vp-c-text-1: hsl(var(--onu-color-DEFAULT) / 1); */
+  /* --vp-c-text-2: hsl(var(--onu-color-500) / 1); */
+  /* --vp-c-text-3: hsl(var(--onu-color-800) / 1); */
+
+  --vp-c-brand-1: hsl(var(--onu-color-500) / 1);
+  --vp-c-brand-2: hsl(var(--onu-color-600) / 1);
+  --vp-button-brand-bg: hsl(var(--onu-color-DEFAULT) / 1);
+  --vp-button-brand-hover-bg: hsl(var(--onu-color-600) / 1);
+  --vp-c-gutter: hsl(var(--onu-color-100) / 1);
+
+  --vp-nav-bg-color: transparent;
+}
+
+.dark {
+  --vp-c-brand-2: hsl(var(--onu-color-400) / 1);
+  --vp-c-gutter: hsl(var(--onu-color-900) / 1);
+}
+
+
+.VPHero .image-container:hover .image-bg {
+  opacity: 0.4;
+}
+
+.VPHero .image-container .image-bg {
+  top: calc(50% - 96px);
+  left: calc(50% - 96px);
+  opacity: 1;
+  transition: opacity .6s ease;
+  --uno: animate-spin animate-duration-8000;
+}
+
+@media (min-width: 640px) {
+  .VPHero .image-container .image-bg {
+    top: calc(50% - 128px);
+    left: calc(50% - 128px);
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHero .image-container .image-bg {
+    top: calc(50% - 160px);
+    left: calc(50% - 160px);
+  }
+}
+
+.VPTeamMembersItem .profile .avatar {
+  --uno: block;
+}
+
+.vp-doc h2, .vp-doc h3 {
+  --uno: flex items-center gap-2;
+}
+
+.VPLocalSearchBox .backdrop {
+  --uno: backdrop-blur-md;
+}
+
+.VPNavBar {
+  --uno: backdrop-blur-md;
+}
+
+strong a {
+  --uno: fw-600 !;
+}

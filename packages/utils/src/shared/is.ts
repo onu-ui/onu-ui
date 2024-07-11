@@ -3,10 +3,9 @@ import { ShapeFlags } from './enums'
 
 export const toTypeString = (v: any) => Object.prototype.toString.call(v)
 export const isDef = <T = any>(val?: T): val is T => typeof val !== 'undefined'
-export const isBoolean = (val: any): val is boolean => typeof val === 'boolean'
-// eslint-disable-next-line @typescript-eslint/ban-types
-export const isFunction = <T extends Function> (val: any): val is T => typeof val === 'function'
-export const isNumber = (val: any): val is number => typeof val === 'number'
+export const isBoolean = (val: unknown): val is boolean => typeof val === 'boolean'
+export const isFunction = <T extends () => void> (val: any): val is T => typeof val === 'function'
+export const isNumber = (val: unknown): val is number => typeof val === 'number'
 export const isString = (val: unknown): val is string => typeof val === 'string'
 export function isObject(val: unknown): val is Record<any, any> {
   return val !== null && typeof val === 'object'

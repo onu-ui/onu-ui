@@ -11,9 +11,9 @@ export default defineConfig({
   test: {
     clearMocks: true,
     environment: 'jsdom',
-    transformMode: {
-      web: [/\.[jt]sx$/],
-    },
+    // transformMode: {
+    //   web: [/\.[jt]sx$/],
+    // },
   },
   resolve: {
     alias: {

@@ -1,34 +1,29 @@
-import OnuUI, { OMessage, en } from 'onu-ui'
-import theme from 'vitepress/theme'
+// https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import DemoBlock from '../components/demo-block'
-import Overview from '../components/overview'
-import WarnBadge from '../components/WarnBadge'
-import CommnBadge from '../components/CommnBadge'
-import UpdateBadge from '../components/UpdateBadge'
-import NewBadge from '../components/NewBadge'
-import TeamMember from '../components/TeamMember'
-import './main.css'
-import 'onu-ui/dist/style.css'
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
+import FloatingVue from 'floating-vue'
+import HomePage from './components/HomePage.vue'
+import ThemePalette from './components/ThemePalette.vue'
+
+import 'floating-vue/dist/style.css'
+import '@shikijs/vitepress-twoslash/style.css'
+import './style.css'
+import './override.css'
 import 'uno.css'
 
 export default {
-  ...theme,
-  enhanceApp({ app }) {
-    app.use(OnuUI, { locale: en })
-    app.component('Demo', DemoBlock)
-    app.component('Overview', Overview)
-    app.component('WarnBadge', WarnBadge)
-    app.component('CommnBadge', CommnBadge)
-    app.component('UpdateBadge', UpdateBadge)
-    app.component('NewBadge', NewBadge)
-    app.component('TeamMember', TeamMember)
-
-    app.config.globalProperties.$message = OMessage
-  },
-  Layout() {
-    return h(theme.Layout, null, {
-      'home-features-after': () => h(TeamMember),
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      'home-features-after': () => h(HomePage),
     })
   },
-}
+  enhanceApp({ app }) {
+    app.component('ThemePalette', ThemePalette)
+
+    app.use(TwoslashFloatingVue)
+    app.use(FloatingVue)
+  },
+} satisfies Theme

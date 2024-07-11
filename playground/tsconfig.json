@@ -7,6 +7,6 @@
     },
     "types": ["../volar"]
   },
-  "exclude": ["**/dist/**"],
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"]
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"],
+  "exclude": ["**/dist/**"]
 }

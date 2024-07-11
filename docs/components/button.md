@@ -1,125 +1,125 @@
 ---
-title: Button
-lang: en-US
+outline: deep
 ---
 
-# Button <update-badge/>
+# Button
 
-Buttons allow the user to take actions or make choices.
+Create a button with icon or link capabilities.
 
-## Basic usage
+## <i i-logos-unocss /> With UnoCSS
 
-Use `type` and `light` to define Button's style.
+### Usage
 
-<demo src="../example/button/basic.vue"></demo>
+#### Basic
 
-## Disabled Button
+```html
+<button class="btn">Button</button>
+<button btn>Button</button>
+```
 
-The `disabled` attribute determines if the button is disabled.
+<div flex="~ gap-2 items-center">
+<button class="btn">Button</button>
+<button btn>Button</button>
+</div>
 
-Use `disabled` attribute to determine whether a button is disabled. It accepts a `Boolean` value.
+#### Types
 
-<demo src="../example/button/disable.vue"></demo>
+```html
+<button btn btn-soft>soft</button>
+<button btn btn-outline>outline</button>
+<button btn btn-solid>solid</button>
+<button btn btn-solid-cover>solid-cover</button>
+<button btn="~ dashed">dashed</button>
+<button btn="~ dashed-cover">dashed-cover</button>
+<button btn="~ link">link</button>
+<button btn="~ ghost">ghost</button>
+<button btn="~ ghost-light">ghost-light</button>
+```
 
-## Rounded Button
+<div grid="~ cols-3 gap-2 items-center">
+<button btn btn-soft>soft</button>
+<button btn btn-outline>outline</button>
+<button btn btn-solid>solid</button>
+<button btn btn-solid-cover>solid-cover</button>
+<button btn="~ dashed">dashed</button>
+<button btn="~ dashed-cover">dashed-cover</button>
+<button btn="~ link">link</button>
+<button btn="~ ghost">ghost</button>
+<button btn="~ ghost-light">ghost-light</button>
+</div>
 
-Use `rounded-full` shortcut of unocss or `rounded` attribute to define a rounded Button.
+#### Sizes
 
-<demo src="../example/button/round.vue"></demo>
+```html
+<button btn btn-xs >extra small</button>
+<button btn btn-sm>small</button>
+<button btn btn-md>medium (default size)</button>
+<button btn btn-lg>Button</button>
+```
 
-## Dashed Button
+<div flex="~ gap-2 items-center">
+<button btn btn-xs >extra small</button>
+<button btn btn-sm>small</button>
+<button btn btn-md>medium</button>
+<button btn btn-lg>large</button>
+</div>
 
-Use `dashed` attribute to define a dashed style Button
+#### Disabled
 
-<demo src="../example/button/dashed.vue"></demo>
+```html
+<button btn disabled>Disabled</button>
+```
 
-## Link Button
+<button btn disabled>Disabled</button>
 
-Use `to` attribute to specify the jump link.
+#### With Icon
 
-<demo src="../example/button/link.vue"></demo>
+```html
+<button btn>
+  <i i-carbon-add></i>
+  Add
+</button>
+<button btn animate-pulse disabled>
+  loading <i inline-block i-carbon-assembly-reference animate-spin />
+</button>
+<button btn rounded-full>
+  Download <i i-carbon-download />
+</button>
+<button btn aspect-square rounded-full class="group">
+  <i i-carbon-favorite group-hover:i-carbon-favorite-filled></i>
+</button>
+```
 
-## Text Button
+<div flex="~ gap-2 items-center">
+<button btn>
+  <i i-carbon-add></i>
+  Add
+</button>
+<button btn animate-pulse disabled>
+  Loading <i inline-block i-carbon-assembly-reference animate-spin />
+</button>
+<button btn rounded-full>
+  Download <i i-carbon-download />
+</button>
+<button btn aspect-square rounded-full class="group">
+  <i i-carbon-favorite group-hover:i-carbon-favorite-filled></i>
+</button>
+</div>
 
-Use `text` to define Button's text style. Buttons without border and background.
+#### Colors
 
-<demo src="../example/button/text.vue"></demo>
+```html
+<button btn o='red' hover:o-red-600 >Red</button>
+<button btn o="yellow hover:yellow-600">Yellow</button>
+<button btn class="o-teal hover:o-teal-600">Teal</button>
+```
 
+<div flex="~ gap-2 items-center">
+<button btn o='red' hover:o-red-600 >Red</button>
+<button btn o="yellow hover:yellow-600">Yellow</button>
+<button btn class="o-teal hover:o-teal-600">Teal</button>
+</div>
 
-## Shadow Button
+## <i i-logos-vue /> With Vue
 
-Use `shadow` to show Button's shadow.
-
-<demo src="../example/button/shadow.vue"></demo>
-
-## Icon Button
-
-Use icons to add more meaning to Button. You can use icon alone to save some space, or use it with text.
-
-Use the `icon` slots or `icon` property to add icon.
-
-<demo src="../example/button/icon.vue"></demo>
-
-## Button Group
-
-Displayed as a button group, can be used to group a series of similar operations.
-
-Use tag `<o-button-group>` to group your buttons.
-
-<demo src="../example/button/group.vue"></demo>
-
-## Loading Button
-
-Click the button to load data, then the button displays a loading state.
-
-Set `loading` attribute to `true` to display loading state.
-
-<demo src="../example/button/loading.vue"></demo>
-
-## Sizes
-
-Besides default size, Button component provides three additional sizes for you to choose among different scenarios.
-
-Use attribute `size` to set additional sizes with `xs`, `sm`,`md`,`lg`.
-
-<demo src="../example/button/size.vue"></demo>
-
-## Button API
-
-### Button Props
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'primary'` | Button type. |
-| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Button size.  |
-| light | `boolean` | `false` |  Determine whether it's a light button.  |
-| dashed | `boolean` | `false` |  Determine whether it's a dashed button.  |
-| shadow | `boolean` | `false` |  Show button's shadow.  |
-| text | `boolean` | `false` | Determine whether it's a text button. |
-| to | `string` | `undefined` | Determine whether it's a link button. |
-| rounded | `boolean` | `false` | Determine whether it's a round button. |
-| loading | `boolean` | `false` | Determine whether it's loading.  |
-| icon | `string` | `undefined` | Icon's name.  |
-| disabled | `boolean` | `false` | Disable the button. |
-
-
-### Button Slots
-
-| Name | Parameters | Description | 
-| --- | --- | --- |
-| default | `()` | Customize default content. |
-| icon | `()` | Customize icon component. |
-
-## Button Group API
-
-### Button Group Props
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| type | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'error' \| 'info'` | `''` | Control the size of buttons in this button-group. |
-| size | `'xs' \| 'sm' \| 'md' \| 'lg'` | `''` | Control the size of buttons in this button-group.  |
-| spacer | `boolean` | `false` |  The dividing line between groups of buttons.  |
-
-### Button Group Slots
-
-| Name | Parameters | Description | 
-| --- | --- | --- |
-| default | `Button` | Customize button group content. |
+TODO

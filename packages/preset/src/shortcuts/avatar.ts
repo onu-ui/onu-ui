@@ -1,36 +1,31 @@
-import type { DynamicShortcut } from 'unocss'
-import type { SizeType } from '../type'
+import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
+import type { SizeType } from '../types'
 
-export const avatarShortcuts: Record<string, string> = {
-  // avatar
-  'o-avatar-base': 'fcc of-hidden shadow-sm aspect-square rounded-full bg-context text-white',
-  'o-avatar-mode-bg': 'bg-cover',
-  'o-avatar-mode-img': 'object-cover select-none',
-  'o-avatar-xs': 'h-6 text-xs shadow-xs',
-  'o-avatar-sm': 'h-8 text-sm shadow-sm',
-  'o-avatar-md': 'h-10 text-sm shadow-md',
-  'o-avatar-lg': 'h-15 text-base shadow-md',
-  'o-avatar-group-base': 'flex space-x--4 children-relative',
-
+const Size: Record<SizeType, string> = {
+  xs: 'w-10',
+  sm: 'w-13',
+  md: 'w-16',
+  lg: 'w-20',
 }
 
-export const avatarDynamicShortcuts: DynamicShortcut[] = [
-  [/^o-avatar-group-(.*)$/, ([,s]) => {
-    if (['xs', 'sm', 'md', 'lg'].includes(s)) {
-      const size = s as SizeType
-      const avatarSizeMap: Record<SizeType, string> = {
-        xs: 'h-6 text-xs shadow-xs',
-        sm: 'h-8 text-sm shadow-sm',
-        md: 'h-10 text-sm shadow-md',
-        lg: 'h-15 text-base shadow-md',
-      }
-      const avatarGroupSpaceMap: Record<SizeType, string> = {
-        xs: 'space-x--2',
-        sm: 'space-x--3',
-        md: 'space-x--4',
-        lg: 'space-x--6',
-      }
-      return `important-${avatarGroupSpaceMap[size]} ${avatarSizeMap[size].split(' ').map(selector => `important-children-${selector}`).join(' ')}`
-    }
+export const avatar: UserShortcuts<Theme> = [
+  [/^avatar(?:-size)?(?:-(.+))?$/, ([, s]) => {
+    if (s in Size)
+      return Size[s as SizeType]
   }],
+  ['avatar', `
+      relative inline-flex avatar-md select-none
+      [&>div]:(flex aspect-ratio-square of-hidden)
+      [&_img]:(w-full h-full object-cover) o-theme-text
+    `],
+  ['avatar-group', `
+      flex of-hidden
+      [&_.avatar]:(of-hidden rounded-full border border-3px border-current)
+    `],
+  ['avatar-placeholder', `
+      bg-theme-500 dark:bg-theme-600
+      [&>div]:(flex items-center justify-center)
+    `],
+  [/^avatar-(online|offline)$/, ([, s]) => `before:(content-empty absolute top-7% right-7% z-10 block w-15% h-15% rounded-full o-theme-${s === 'online' ? '500' : '900'} o-theme-text bg-context ring ring-2px ring-current)`],
 ]

@@ -70,7 +70,6 @@ window.addEventListener(
     <!-- store as any because store.compiler is shallowRef -->
     <Repl
       v-if="!loading"
-      ref="repl"
       :store="store as any"
       auto-resize
       :sfc-options="sfcOptions"
@@ -83,7 +82,7 @@ window.addEventListener(
       class="loading-wrapper"
       flex
       items-center
-      justify-center
+      justify-centre
       flex-col
     >
       <o-icon w-6 h-6 name="i-carbon-circle-dash" />

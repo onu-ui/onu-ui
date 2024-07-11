@@ -1,24 +1,25 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext", "dom"],
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
     "jsx": "preserve",
-    "types": ["node", "vite/client"],
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
     "paths": {
       "onu-ui": ["./packages/onu-ui/src/index.ts"],
-      "@onu-ui/components": ["./packages/components/index.ts"],
-      "@onu-ui/utils": ["./packages/utils/index.ts"],
       "@onu-ui/preset": ["./packages/preset/src/index.ts"]
-    }
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "**/dist/**",
@@ -26,6 +27,8 @@
     "**/test/dts/**",
     "**/playground/**",
     "**/example/**",
-    "**/packages/components/**"
+    "**/packages/components/**",
+    "**/packages/onu-ui/**",
+    "**/packages/utils/**"
   ]
 }

@@ -1,7 +1,8 @@
 {
   "name": "@onu-ui/preset",
+  "type": "module",
   "version": "1.0.14-beta.2",
-  "description": "Onu-UI css rules for unocss preset",
+  "description": "Opinionated Onu UI preset for UnoCSS.",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
   "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/preset/README.md",
@@ -22,27 +23,29 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "stub": "tsup --watch --onSuccess \"pnpm run --filter '../components' stub\""
+    "stub": "tsup --watch",
+    "build": "tsup"
   },
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@unocss/core": "^0.56.5"
-  },
   "dependencies": {
-    "@unocss/preset-mini": "^0.56.5"
+    "@unocss/preset-attributify": "^0.61.3",
+    "@unocss/preset-icons": "^0.61.3",
+    "@unocss/preset-mini": "^0.61.3",
+    "@unocss/preset-uno": "^0.61.3",
+    "@unocss/preset-web-fonts": "^0.61.3",
+    "magic-color": "^1.2.1"
   }
 }

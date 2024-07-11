@@ -4,7 +4,7 @@ import type { Fn } from '@vueuse/core'
 import type { BuiltInParserName } from 'prettier'
 import type { ReplStore } from '~/composables/store'
 
-export const formatCode = async (loadedFormat: boolean, store: ReplStore) => {
+export async function formatCode(loadedFormat: boolean, store: ReplStore) {
   let close: Fn | undefined
   if (!loadedFormat) {
     message({
@@ -48,7 +48,7 @@ export const formatCode = async (loadedFormat: boolean, store: ReplStore) => {
 
 // 格式化交互
 const loadedFormat = false
-export const handleKeydown = (evt: KeyboardEvent, store: ReplStore) => {
+export function handleKeydown(evt: KeyboardEvent, store: ReplStore) {
   if ((evt.ctrlKey || evt.metaKey) && evt.code === 'KeyS') {
     evt.preventDefault()
     return

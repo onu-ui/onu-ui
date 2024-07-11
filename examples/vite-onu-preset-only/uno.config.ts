@@ -1,11 +1,18 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
-import { presetOnu } from '@onu-ui/preset'
+import { defineConfig, transformerVariantGroup } from 'unocss'
+import { presetOnu } from '../../packages/preset/src'
 
 export default defineConfig({
+  envMode: 'dev',
   presets: [
-    presetUno(),
-    presetIcons(),
-    presetAttributify(),
-    presetOnu(),
+    presetOnu({
+      color: '#608e57',
+    }),
   ],
+  shortcuts: {
+    wrapper: 'flex flex-col justify-center items-center',
+  },
+  transformers: [
+    transformerVariantGroup(),
+  ],
+  configDeps: ['../../packages/preset/dist/index.js'],
 })
