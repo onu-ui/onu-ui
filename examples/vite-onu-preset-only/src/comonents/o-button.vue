@@ -90,6 +90,17 @@ const index = ref(0)
           </button>
         </div>
       </div>
+      <div flex items-center justify-center gap-2>
+        <button btn btn-red hover:btn-red-600>
+          Red
+        </button>
+        <button btn="~ yellow hover:yellow-600">
+          Yellow
+        </button>
+        <button btn o-blue hover:o-blue-600>
+          Blue
+        </button>
+      </div>
     </div>
   </div>
 </template>

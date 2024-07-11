@@ -1,6 +1,7 @@
 import type { UserShortcuts } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
+import { resolveContextColorByKey } from '../utils'
 
 const Size: Record<SizeType, string> = {
   xs: 'px-2.5 py-1.5 text-xs rounded-md',
@@ -10,9 +11,12 @@ const Size: Record<SizeType, string> = {
 }
 
 export const button: UserShortcuts<Theme> = [
-  [/^btn-(.+)$/, ([, s]) => {
+  [/^btn-(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]
+    const colorValue = resolveContextColorByKey([undefined, undefined, s] as any, theme, '--onu-color-context')
+    if (colorValue)
+      return [colorValue]
   }],
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
   ['btn-hover', 'hover:o-theme-600'],

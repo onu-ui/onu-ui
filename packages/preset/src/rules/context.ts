@@ -1,51 +1,8 @@
 import { h, parseColor } from '@unocss/preset-mini/utils'
-import type { CSSValueInput, Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import { mc } from 'magic-color'
-
-/**
- * Resolve context color for hsl string.
- *
- * @param str color string
- * @param theme Uno theme
- * @returns hsl string without `hsl()`
- *
- * @example
- * ```ts
- * resolveContextColor('red', theme) => '0 100 50'
- * ```
- */
-function resolveContextColor(str: string, theme: Theme): string | undefined {
-  const color = parseColor(str, theme)
-  if (color) {
-    if (color.cssColor?.type === 'hsl') {
-      if (color.cssColor.components) {
-        return `${color.cssColor.components.join(' ')}`
-      }
-    }
-    else {
-      if (color.color && mc.valid(color.color)) {
-        const magicColor = mc(color.color)
-        return `${magicColor.hsl().join(' ')}`
-      }
-    }
-  }
-}
-
-function resolveContextColorByKey(matches: RegExpMatchArray, theme: Theme, key: string): CSSValueInput | undefined {
-  if (matches[1] != null) {
-    return {
-      [key]: `var(--onu-color-${matches[2]})`,
-    }
-  }
-
-  const color = resolveContextColor(matches[2], theme)
-  if (color) {
-    return {
-      [key]: color,
-    }
-  }
-}
+import { resolveContextColorByKey } from '../utils'
 
 export const contexts: Rule<Theme>[] = [
   /**
@@ -57,8 +14,6 @@ export const contexts: Rule<Theme>[] = [
    * o-#ff0
    * o-[rgb(255,255,0)]
    *
-   * @returns
-   *
    * ```ts
    * {
    *  '--onu-color-context': 255 100 50,
@@ -69,7 +24,6 @@ export const contexts: Rule<Theme>[] = [
    * o-theme-100
    * o-theme-DEFAULT
    *
-   * @returns
    * ```ts
    * {
    *  '--onu-color-context': var(--onu-color-100),

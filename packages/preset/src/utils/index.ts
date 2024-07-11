@@ -1,4 +1,7 @@
+import type { Theme } from '@unocss/preset-mini'
+import { parseColor } from '@unocss/preset-mini/utils'
 import { mc } from 'magic-color'
+import type { CSSValue } from 'unocss'
 
 export function spliteSpace(str: string) {
   return str.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ')
@@ -40,5 +43,72 @@ ${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n
     css,
     theme,
     meta: themeMetas,
+  }
+}
+
+/**
+ * Resolve context color for hsl string.
+ *
+ * @param str color string
+ * @param theme Uno theme
+ * @returns hsl string without `hsl()`
+ *
+ * @example
+ * ```ts
+ * resolveContextColor('red', theme) => '0 100 50'
+ * ```
+ */
+function resolveContextColor(str: string, theme: Theme): string | undefined {
+  const color = parseColor(str, theme)
+  if (color) {
+    if (color.cssColor?.type === 'hsl') {
+      if (color.cssColor.components) {
+        return `${color.cssColor.components.join(' ')}`
+      }
+    }
+    else {
+      if (color.color && mc.valid(color.color)) {
+        const magicColor = mc(color.color)
+        return `${magicColor.hsl().join(' ')}`
+      }
+    }
+  }
+}
+
+/**
+ * Resolve context color by key.
+ *
+ * @param matches RegExp matches
+ * @param theme Theme
+ * @param key display key or theme key
+ * @returns CSSValueInput | undefined
+ *
+ * @example
+ * ```ts
+ * resolveContextColorByKey([, theme, 500], theme, '--onu-color-context')
+ *
+ * => {
+ *   '--onu-color-context': '0 100 50',
+ * }
+ *
+ * resolveContextColorByKey([, , red], theme, '--onu-color-context')
+ *
+ * => {
+ *   '--onu-color-context': '0 100 50',
+ * }
+ * ```
+ */
+export function resolveContextColorByKey(matches: RegExpMatchArray, theme: Theme, key: string): CSSValue | undefined {
+  if (matches[1] != null) {
+    return {
+      [key]: `var(--onu-color-${matches[2]})`,
+    }
+  }
+
+  const color = resolveContextColor(matches[2], theme)
+  if (color) {
+    return {
+      [key]: color,
+    }
   }
 }

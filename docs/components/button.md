@@ -109,15 +109,15 @@ Create a button with icon or link capabilities.
 #### Colors
 
 ```html
-<button btn o='red' hover:o-red-600 >Red</button>
-<button btn o="yellow hover:yellow-600">Yellow</button>
-<button btn class="o-teal hover:o-teal-600">Teal</button>
+<button btn btn-red hover:btn-red-600>Red</button>
+<button btn="~ yellow hover:yellow-600" >Yellow</button>
+<button btn o-blue hover:o-blue-600>Blue</button>
 ```
 
 <div flex="~ gap-2 items-center">
-<button btn o='red' hover:o-red-600 >Red</button>
-<button btn o="yellow hover:yellow-600">Yellow</button>
-<button btn class="o-teal hover:o-teal-600">Teal</button>
+  <button btn btn-red hover:btn-red-600>Red</button>
+  <button btn="~ yellow hover:yellow-600" >Yellow</button>
+  <button btn o-blue hover:o-blue-600>Blue</button>
 </div>
 
 ## <i i-logos-vue /> With Vue
