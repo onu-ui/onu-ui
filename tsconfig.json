@@ -17,6 +17,7 @@
     "strict": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },

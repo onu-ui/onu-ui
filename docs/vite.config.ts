@@ -3,11 +3,11 @@ import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import nodePolyfills from 'rollup-plugin-polyfill-node'
 
+const externals = ['local-pkg', 'pkg-types', 'mlly', 'fs']
+
 export default defineConfig({
   optimizeDeps: {
-    exclude: [
-      'vitepress',
-    ],
+    exclude: ['vitepress', ...externals],
   },
   server: {
     hmr: {
@@ -29,6 +29,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
+      external: externals,
       plugins: [nodePolyfills()],
     },
   },
