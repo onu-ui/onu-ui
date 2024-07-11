@@ -23,7 +23,7 @@
     "test:coverage": "vitest --coverage",
     "volar:helper": "esno scripts/volar-helper",
     "clean": "rimraf packages/*/dist --glob",
-    "postinstall": "pnpx simple-git-hooks",
+    "postinstall": "npx simple-git-hooks",
     "major": "taze minor -wIr",
     "typecheck": "tsc --noEmit"
   },
