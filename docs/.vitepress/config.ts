@@ -6,6 +6,7 @@ import { version } from '../package.json'
 const Guides: DefaultTheme.NavItemWithLink[] = [
   { text: 'What is Onu UI', link: '/guide/' },
   { text: 'Getting Started', link: '/guide/getting-started' },
+  { text: 'Built-In', link: '/guide/built-in' },
 ]
 
 const Components: DefaultTheme.SidebarItem[] = [
