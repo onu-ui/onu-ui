@@ -1,6 +1,7 @@
 import type { UserShortcuts } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
+import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
   xs: 'px-5px text-10px h-12px',
@@ -10,9 +11,10 @@ const Size: Record<SizeType, string> = {
 }
 
 export const badge: UserShortcuts<Theme> = [
-  [/^badge(?:-size)?(?:-(.+))?$/, ([, s]) => {
+  [/^badge(?:-size)?(?:-(.+))?$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]
+    return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['badge-default', `
       font-onu inline-flex items-center justify-center gap-2 o-transition w-fit

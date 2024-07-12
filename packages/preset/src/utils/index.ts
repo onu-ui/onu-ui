@@ -112,3 +112,16 @@ export function resolveContextColorByKey(matches: RegExpMatchArray, theme: Theme
     }
   }
 }
+
+export function resolveRuleWithContext(s: string, theme: Theme, key: string) {
+  const withTheme = s.split('-')
+  let value: CSSValue | undefined
+  if (withTheme.length === 2 && withTheme[0] === 'theme') {
+    value = resolveContextColorByKey([undefined, ...withTheme] as any, theme, key)
+  }
+  else {
+    value = resolveContextColorByKey([undefined, undefined, s] as any, theme, key)
+  }
+  if (value)
+    return [value]
+}
