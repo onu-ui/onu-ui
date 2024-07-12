@@ -8,7 +8,7 @@ Create a button with icon or link capabilities.
 
 ## <i i-logos-unocss /> With UnoCSS
 
-### Usage
+### <i i-carbon:use-case-usage /> Usage
 
 #### Basic
 
