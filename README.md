@@ -16,7 +16,7 @@
 - 💜 **Expand Easily** - atomic css allows you to freely combine the styles you want.
 - 🎨 **Dynamic theme** - generated with Magicolor that conform to human visual perception.
 - 🌗 **Toggle theme** - Automatically adapts to dark / light mode.
-- 🔥 **Components Design** - Neat & beautiful crafted UI components.
+- 🔥 **UI Design** - Neat & beautiful crafted UI components.
 - 🌈 **On demand** - Provide resolver to automatically import only used components.
 - 🚀 **Typescript Support** - Support TypeScript & type checked & type inference.
 - 😃 **Iconify Icons** - Use any icon from the library you love.

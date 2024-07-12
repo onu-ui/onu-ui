@@ -44,7 +44,7 @@ features:
     details: Automatically adapts to dark / light mode
 
   - icon: <i i-carbon-heat-map-02 />
-    title: Components Design
+    title: UI Design
     details: Neat & beautiful crafted UI components
     link: /components/overview
     linkText: Getting Started
