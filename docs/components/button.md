@@ -15,11 +15,13 @@ Create a button with icon or link capabilities.
 ```html
 <button class="btn">Button</button>
 <button btn>Button</button>
+<button btn-default>Button</button>
 ```
 
 <div flex="~ gap-2 items-center">
 <button class="btn">Button</button>
 <button btn>Button</button>
+<button btn-default>Button</button>
 </div>
 
 #### Types
