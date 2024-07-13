@@ -99,7 +99,7 @@ function resolveContextColor(str: string, theme: Theme): string | undefined {
  * ```
  */
 export function resolveContextColorByKey(matches: RegExpMatchArray, theme: Theme, key: string): CSSValue | undefined {
-  if (matches[1] != null) {
+  if (matches[1] != null && isThemeMetaKey(matches[2])) {
     return {
       [key]: `var(--onu-color-${matches[2]})`,
     }
@@ -124,4 +124,9 @@ export function resolveRuleWithContext(s: string, theme: Theme, key: string) {
   }
   if (value)
     return [value]
+}
+
+export function isThemeMetaKey(key: string) {
+  const keys = ['DEFAULT', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950', 'text', 'bg', 'border', 'context']
+  return keys.includes(key)
 }

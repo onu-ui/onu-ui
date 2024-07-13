@@ -2,7 +2,7 @@ import { h, parseColor } from '@unocss/preset-mini/utils'
 import type { Rule } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import { mc } from 'magic-color'
-import { resolveContextColorByKey } from '../utils'
+import { isThemeMetaKey, resolveContextColorByKey } from '../utils'
 
 export const contexts: Rule<Theme>[] = [
   /**
@@ -59,25 +59,31 @@ export const contexts: Rule<Theme>[] = [
    */
   [/^o-border-(theme-)?(.*)$/, (matches, { theme }) => resolveContextColorByKey(matches, theme, '--onu-color-border')],
 
-  [/^bg-theme-(\w+)(?:-|:(\d+))?$/, ([, key, alpha]) => {
+  [/^bg-theme-(\w+)(?:[-:](\d+))?$/, ([, key, alpha]) => {
     key = key === 'context' ? 'bg' : key
-    return {
-      '--un-bg-opacity': alpha ? `${Number.parseInt(alpha) / 100}` : '1',
-      'background-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-bg-opacity))`,
+    if (isThemeMetaKey(key)) {
+      return {
+        '--un-bg-opacity': alpha ? `${Number.parseInt(alpha) / 100}` : '1',
+        'background-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-bg-opacity))`,
+      }
     }
   }],
-  [/^text-theme-(\w+)(?:-|:(\d+))?$/, ([, key, alpha]) => {
+  [/^text-theme-(\w+)(?:[-:](\d+))?$/, ([, key, alpha]) => {
     key = key === 'context' ? 'text' : key
-    return {
-      '--un-text-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
-      'color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-text-opacity))`,
+    if (isThemeMetaKey(key)) {
+      return {
+        '--un-text-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
+        'color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-text-opacity))`,
+      }
     }
   }],
-  [/^border-theme-(\w+)(?:-|:(\d+))?$/, ([, key, alpha]) => {
+  [/^border-theme-(\w+)(?:[-:](\d+))?$/, ([, key, alpha]) => {
     key = key === 'context' ? 'border' : key
-    return {
-      '--un-border-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
-      'border-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-border-opacity))`,
+    if (isThemeMetaKey(key)) {
+      return {
+        '--un-border-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
+        'border-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-border-opacity))`,
+      }
     }
   }],
   /**
