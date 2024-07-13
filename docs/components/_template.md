@@ -13,12 +13,16 @@ Component description.
 #### Basic
 
 ```html
-<div class="component">Component</div>
+<div component>Component</div>
 ```
 
 <div flex="~ gap-2 items-center">
-  <div class="component">Component</div>
+  <div component>Component</div>
 </div>
+
+### <i i-carbon:chart-bubble-packed /> Compose
+
+Compose with other components.
 
 ## <i i-logos-vue /> With Vue
 
