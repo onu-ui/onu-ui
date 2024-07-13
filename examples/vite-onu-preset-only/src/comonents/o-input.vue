@@ -7,11 +7,12 @@ const disabled = ref(false)
 
 <template>
   <div space-y-2>
+    <input input="~ red" placeholder="input with disabled...">
     <div flex items-center justify-center gap-2>
       <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">
       <input v-model="value" type="text" :disabled="disabled" class="input" placeholder="input...">
       <input v-model="value" type="text" class="input input-sm" placeholder="input input-sm...">
-      <input v-model="value" type="text" :disabled="disabled" class="input input-none" placeholder="input input-none...">
+      <input v-model="value" type="text" :disabled="disabled" class="input" placeholder="input...">
     </div>
     <div flex items-center justify-center gap-2>
       <input v-model="value" type="text" :disabled="disabled" class="input input-xs" placeholder="input-xs...">

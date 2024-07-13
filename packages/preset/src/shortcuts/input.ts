@@ -33,8 +33,8 @@ export const input: UserShortcuts<Theme> = [
           )
   `],
   ['input-default', `
-          font-onu input-md input-hover input-disabled appearance-none o-transition 
-          border border-theme-context border-op-0 o-border-theme-400 dark:o-border-theme-600
+          font-onu input-md input-hover input-disabled appearance-none
+          border border-solid border-theme-context border-op-0 o-border-theme-400 dark:o-border-theme-600
           bg-transparent
           text-context
           outline-none rounded
