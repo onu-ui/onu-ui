@@ -23,6 +23,6 @@
     "@types/prettier": "^3.0.0",
     "@unocss/reset": "^0.61.3",
     "execa": "^9.3.0",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.3"
   }
 }
