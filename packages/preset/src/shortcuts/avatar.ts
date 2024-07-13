@@ -11,7 +11,7 @@ const Size: Record<SizeType, string> = {
 }
 
 export const avatar: UserShortcuts<Theme> = [
-  [/^avatar(?:-size)?(?:-(.+))?$/, ([, s], { theme }) => {
+  [/^avatar-(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]
     return resolveRuleWithContext(s, theme, '--onu-color-context')

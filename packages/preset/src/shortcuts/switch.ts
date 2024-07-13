@@ -1,6 +1,7 @@
 import type { UserShortcuts } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
+import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
   xs: 'w-6 h-4 [offset::0.5rem]',
@@ -10,9 +11,10 @@ const Size: Record<SizeType, string> = {
 }
 
 export const switches: UserShortcuts<Theme> = [
-  [/^switch(?:-size)?-(.*)$/, ([, s]) => {
+  [/^switch-(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]
+    return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['switch-disabled', `disabled:(cursor-not-allowed checked:op-50)`],
   ['switch', [`switch-md switch-disabled shrink-0 cursor-pointer appearance-none 

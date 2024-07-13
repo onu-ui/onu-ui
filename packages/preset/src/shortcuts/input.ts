@@ -1,6 +1,7 @@
 import type { UserShortcuts } from 'unocss'
 import type { Theme } from '@unocss/preset-mini'
 import type { SizeType } from '../types'
+import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
   xs: 'px-2.5 py-1.5 text-xs',
@@ -10,9 +11,10 @@ const Size: Record<SizeType, string> = {
 }
 
 export const input: UserShortcuts<Theme> = [
-  [/^input(?:-size)?-(.*)$/, ([, s]) => {
+  [/^input-(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]
+    return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['input-bordered', `border-op-100`],
   ['input-dashed', `border-dashed border-op-100 focus-within:ring-0`],
