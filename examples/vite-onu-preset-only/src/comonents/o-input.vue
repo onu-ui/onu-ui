@@ -7,7 +7,8 @@ const disabled = ref(false)
 
 <template>
   <div space-y-2>
-    <input input="~ red" placeholder="input with disabled...">
+    <input input="~ red" placeholder="input...">
+    <input ml-2 input disabled value="i'm disabled" placeholder="input...">
     <div flex items-center justify-center gap-2>
       <input v-model="value" type="text" :disabled="disabled" class="input-default" placeholder="input-default...">
       <input v-model="value" type="text" :disabled="disabled" class="input" placeholder="input...">
@@ -22,7 +23,7 @@ const disabled = ref(false)
     </div>
     <div flex items-center justify-center gap-2>
       <label class="input input-bordered flex items-center gap-2 focus-within:text-purple">
-        <input type="text" class="grow" placeholder="Search">
+        <input disabled value="Search Disabled" type="text" class="grow" placeholder="Search">
         <i inline-block i-carbon-search />
       </label>
       <label class="input input-dashed flex items-center gap-2">
