@@ -20,7 +20,6 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
   return {
     name: '@onu-ui/preset',
-    theme: theme(resolvedOptions),
     rules,
     variants,
     shortcuts,
@@ -43,6 +42,17 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
         inlineImports: false,
       }),
     ],
+    extendTheme(defaultTheme) {
+      const { colors } = theme(resolvedOptions)
+
+      return {
+        ...defaultTheme,
+        colors: {
+          ...defaultTheme.colors,
+          ...colors,
+        },
+      }
+    },
   }
 })
 
