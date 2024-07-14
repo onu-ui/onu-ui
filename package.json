@@ -9,6 +9,7 @@
     "dev": "pnpm stub",
     "docs": "pnpm -C docs run dev",
     "docs:build": "pnpm -C docs run build",
+    "docs:preview": "pnpm docs:build && pnpm -C docs run preview",
     "stub": "pnpm -r --parallel --filter=./packages/* run stub",
     "build": "pnpm clean && pnpm -r --filter=./packages/preset run build",
     "play": "pnpm -C playground run dev",

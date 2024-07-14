@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress previes"
+    "preview": "vitepress preview"
   },
   "dependencies": {
     "@onu-ui/preset": "workspace:*",
