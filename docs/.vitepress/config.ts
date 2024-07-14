@@ -25,6 +25,7 @@ const Components: DefaultTheme.SidebarItem[] = [
     text: 'Form',
     collapsed: false,
     items: [
+      { text: 'Input', link: '/components/input' },
       { text: 'Checkbox', link: '/components/checkbox' },
       { text: 'Switch', link: '/components/switch' },
       { text: 'Rate', link: '/components/rate' },

@@ -5,6 +5,8 @@ import type { ResolveOnuOptions } from '../types'
 export function theme(options: ResolveOnuOptions): Theme {
   const { color } = options
   const colors = mc.theme(color)
+  // Gray basic color
+  const grays = mc.theme('#888888')
 
   return {
     colors: {
@@ -12,6 +14,10 @@ export function theme(options: ResolveOnuOptions): Theme {
       primary: {
         DEFAULT: colors[500],
         ...colors,
+      },
+      gray: {
+        DEFAULT: grays[500],
+        ...grays,
       },
     },
   }

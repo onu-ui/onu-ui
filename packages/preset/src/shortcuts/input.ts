@@ -27,24 +27,35 @@ export const input: UserShortcuts<Theme> = [
   ['input-hover', 'hover:(border-op-100)'],
   ['input-disabled', `
           disabled:(
-            cursor-not-allowed op-64 shadow-none
-            hover:(o-gray-100)
-            bg-context:64 o-gray-100
+            cursor-not-allowed border-op-0!
+            bg-gray-100:80 text-gray-300
+            dark:(bg-gray-900:32 text-gray-700)
           )
+
+          has-[>input[disabled]]:(
+            cursor-not-allowed
+            border-op-0!
+            bg-gray-100:80 text-gray-300
+            dark:(bg-gray-900:32 text-gray-700)
+          )
+
+          [&>input]:has-[>input[disabled]]:cursor-not-allowed
   `],
   ['input-default', `
-          font-onu input-md input-hover input-disabled appearance-none o-transition 
-          border border-theme-context border-op-0 o-border-theme-400 dark:o-border-theme-600
+          font-onu input-md input-hover appearance-none
+          input-disabled
+          border border-solid border-theme-context border-op-0
           bg-transparent
-          text-context
           outline-none rounded
-          placeholder:color-gray-400
+          placeholder:color-gray-300
           focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)
+          o-black dark:o-white
         `],
   ['input', `
           input-default input-bordered input-focus
           input-placeholder [&_input]:input-placeholder
-          text-context o-theme-600 dark:o-theme-400
+          text-context
+          o-theme-400 dark:o-theme-600
         `],
 ]
