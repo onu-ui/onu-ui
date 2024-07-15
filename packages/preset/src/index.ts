@@ -11,8 +11,6 @@ import { variants } from './variants'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 import { preflights } from './preflights'
 
-export { resolveTheme } from './utils'
-
 export type { PrsetOnuOptions }
 
 export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {

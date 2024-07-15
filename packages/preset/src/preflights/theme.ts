@@ -1,6 +1,6 @@
 import type { Preflight } from 'unocss'
 import type { ResolveOnuOptions } from '../types'
-import { resolveTheme } from '../utils'
+import { resolveTheme } from '../helper'
 
 export function themePreflight(options: ResolveOnuOptions): Preflight {
   const { color } = options

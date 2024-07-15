@@ -1,7 +1,7 @@
 <script lang='ts' setup>
 import { ref } from 'vue'
 import { Menu } from 'floating-vue'
-import { resolveTheme } from '@onu-ui/preset'
+import { resolveTheme } from '@onu-ui/preset/helper'
 import { mc } from 'magic-color'
 import { DefaultThemeColor } from '../data/colors'
 
@@ -32,7 +32,6 @@ function switchTheme(c: string) {
   color.value = c
 
   const { meta } = resolveTheme(c)
-
   for (const key in meta) {
     document.documentElement.style.setProperty(key, meta[key])
   }
