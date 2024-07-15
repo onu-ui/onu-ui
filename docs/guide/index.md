@@ -56,7 +56,7 @@ If you submit any bugs, please use the [OnuUI Playground](https://onu.zyob.top/p
 
 ## <i i-carbon-user-favorite-alt-filled /> Contributing
 
-Developers interested in contributing should read the [Code of Conduct](https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md) and the [Contributing Guide](https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md).
+Developers interested in contributing should read the [Contributing Guide](https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md).
 
 Thank you to all the people who already contributed to Onu UI!
 
