@@ -23,42 +23,41 @@ hero:
       link: /components/overview
 
 features:
-  - icon: <i i-carbon-badge />
+  - icon: <i i-carbon-badge></i>
     title: Pure atomic css
     details: No need to introduce additional css files
 
-  - icon: <i i-carbon-ibm-watsonx-code-assistant-for-z-refactor />
+  - icon: <i i-carbon-ibm-watsonx-code-assistant-for-z-refactor></i>
     title: Simple and efficient
     details: Render UI with the least amount of code
 
-  - icon: <i i-carbon-ibm-watson-studio />
+  - icon: <i i-carbon-ibm-watson-studio></i>
     title: Expand Easily
     details: Atomic css allows you to freely combine the styles you want
 
-  - icon: <i i-carbon-color-palette />
+  - icon: <i i-carbon-color-palette></i>
     title: Dynamic theme
     details: Generated with <a href="https://github.com/zyyv/magic-color" target="_blank">Magicolor</a> that conform to human visual perception
 
-  - icon: <i i-carbon-haze-night />
+  - icon: <i i-carbon-haze-night></i>
     title: Toggle theme
     details: Automatically adapts to dark / light mode
 
-  - icon: <i i-carbon-heat-map-02 />
+  - icon: <i i-carbon-heat-map-02></i>
     title: UI Design
     details: Neat & beautiful crafted UI components
     link: /components/overview
     linkText: Getting Started
 
-  - icon: <i i-carbon-join-inner />
+  - icon: <i i-carbon-join-inner></i>
     title: On demand
     details: Provide resolver to automatically import only used components
 
-  - icon: <i i-carbon-types />
+  - icon: <i i-carbon-types></i>
     title: Typescript Support
     details: Support TypeScript & type checked & type inference
 
-  # - icon: <i i-carbon-chart-bubble-packed />
-  - icon: <i i-line-md-iconify1 />
+  - icon: <i i-line-md-iconify1></i>
     title: Iconify Icons
     details: Use any icon from the library you love
     link: https://unocss.dev/presets/icons
