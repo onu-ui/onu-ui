@@ -11,14 +11,13 @@ body {
   --vp-c-brand-2: hsl(var(--onu-color-600) / 1);
   --vp-button-brand-bg: hsl(var(--onu-color-DEFAULT) / 1);
   --vp-button-brand-hover-bg: hsl(var(--onu-color-600) / 1);
-  --vp-c-gutter: hsl(var(--onu-color-100) / 1);
+  --vp-c-gutter: var(--vp-c-divider);
 
   --vp-nav-bg-color: transparent;
 }
 
 .dark {
   --vp-c-brand-2: hsl(var(--onu-color-400) / 1);
-  --vp-c-gutter: hsl(var(--onu-color-900) / 1);
 }
 
 
