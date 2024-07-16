@@ -67,3 +67,15 @@ body {
 strong a {
   --uno: fw-600 !;
 }
+
+.v-popper--theme-dropdown .v-popper__inner {
+  background: var(--vp-c-bg-elv);
+  color: hsl(var(--onu-color-400) / 1);
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: none;
+}
+
+.v-popper__arrow-outer, .v-popper__arrow-inner{
+  display: none;
+}

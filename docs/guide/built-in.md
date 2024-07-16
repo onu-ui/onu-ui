@@ -23,9 +23,9 @@ The built-in preset collections in Onu UI presets include:
 If you want to override the built-in presets, make sure it doesn't bring any destructive changes.
 :::
 
-```ts {10-13}
+```ts twoslash {10-13}
 // uno.config.ts
-import { defineConfig } from 'unocss'
+import { defineConfig, presetUno } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
 
 export default defineConfig({

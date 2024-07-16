@@ -3,7 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
-import FloatingVue from 'floating-vue'
+import FloatingVue, { Menu } from 'floating-vue'
 import HomePage from './components/HomePage.vue'
 import ThemePalette from './components/ThemePalette.vue'
 
@@ -25,5 +25,6 @@ export default {
 
     app.use(TwoslashFloatingVue)
     app.use(FloatingVue)
+    app.component('VMenu', Menu)
   },
 } satisfies Theme

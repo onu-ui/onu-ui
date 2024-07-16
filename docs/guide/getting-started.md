@@ -28,8 +28,7 @@ import { presetOnu } from '@onu-ui/preset'
 export default defineConfig({
   presets: [
     presetOnu({
-      // Default theme color is random, you can specify your own theme color
-      color: 'Your theme base color',
+      /* options */
     })
   ]
 })

@@ -1,6 +1,5 @@
 <script lang='ts' setup>
 import { ref } from 'vue'
-import { Menu } from 'floating-vue'
 import { resolveTheme } from '@onu-ui/preset/helper'
 import { mc } from 'magic-color'
 import { DefaultThemeColor } from '../data/colors'
@@ -40,14 +39,16 @@ function switchTheme(c: string) {
 
 <template>
   <div flex="~ items-center justify-center" px-3>
-    <Menu :distance="10" :arrow-padding="36">
+    <!-- @unocss-skip-start -->
+    <VMenu :distance="8" :delay="{ show: 0, hide: 400 }">
+      <!-- @unocss-skip-end -->
       <div cursor-pointer text-xl :style="{ color }" i-carbon-color-switch :title="color" />
 
       <template #popper>
         <section shadow p-4 grid="~ cols-5 gap-3 wrap">
           <div
             v-for="meta in builtInColors" :key="meta.name" cursor-pointer w-4 rd aspect-square :style="{ backgroundColor: meta.color }"
-            ring="~ offset-2 0 context"
+            ring="~ offset-2 0 context offset-context"
             :class="color === meta.color ? 'ring-1px o-theme-DEFAULT' : ''"
             :title="meta.name"
             @click="switchTheme(meta.color)"
@@ -55,6 +56,6 @@ function switchTheme(c: string) {
           <div text-lg i-carbon-ibm-event-streams cursor-pointer title="random color" @click="switchTheme(mc.random())" />
         </section>
       </template>
-    </Menu>
+    </VMenu>
   </div>
 </template>
