@@ -14,6 +14,7 @@ body {
   --vp-c-gutter: var(--vp-c-divider);
 
   --vp-nav-bg-color: transparent;
+  --vp-nav-height: 56px;
 }
 
 .dark {
