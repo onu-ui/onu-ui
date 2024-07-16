@@ -20,7 +20,7 @@ outline: deep
 
 The Onu UI presets are framework-agnostic, allowing you to use them in any project that supports UnoCSS.
 
-```ts {8}
+```ts twoslash {9}
 // uno.config.ts
 import { defineConfig } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
@@ -28,7 +28,8 @@ import { presetOnu } from '@onu-ui/preset'
 export default defineConfig({
   presets: [
     presetOnu({
-      color: 'Your theme base color', // Required.
+      // Default theme color is random, you can specify your own theme color
+      color: 'Your theme base color',
     })
   ]
 })
@@ -49,8 +50,10 @@ export interface PrsetOnuOptions {
 
   /**
    * Theme primary color.
+   *
+   * @default 'auto' (random color)
    */
-  color: string
+  color?: string
 
   /**
    * Onu default font loaded by google fonts.

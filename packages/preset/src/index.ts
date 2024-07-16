@@ -4,6 +4,7 @@ import { presetUno } from '@unocss/preset-uno'
 import { presetAttributify } from '@unocss/preset-attributify'
 import { presetIcons } from '@unocss/preset-icons'
 import presetWebFonts from '@unocss/preset-web-fonts'
+import { random } from 'magic-color'
 import { shortcuts } from './shortcuts'
 import { theme } from './theme'
 import { rules } from './rules'
@@ -14,7 +15,7 @@ import { preflights } from './preflights'
 export type { PrsetOnuOptions }
 
 export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
-  const resolvedOptions = resolveOptions(options!)
+  const resolvedOptions = resolveOptions(options)
 
   return {
     name: '@onu-ui/preset',
@@ -54,12 +55,17 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
   }
 })
 
-function resolveOptions(options: PrsetOnuOptions): ResolveOnuOptions {
-  const defaultOptions: Omit<PrsetOnuOptions, 'color'> = {
+function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
+  const defaultOptions: PrsetOnuOptions = {
     prefix: 'o-',
     font: ['DM Sans', 'DM Sans:400,700'],
+    color: 'auto',
   }
-  const resolvedOptions = Object.assign({}, defaultOptions, options)
+  const resolvedOptions = {
+    ...defaultOptions,
+    ...options,
+    color: options.color === 'auto' ? random() : options.color,
+  }
 
   return resolvedOptions as ResolveOnuOptions
 }
