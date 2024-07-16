@@ -1,5 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
+import { withMagicMove } from 'vitepress-plugin-magic-move'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { version } from '../package.json'
 
@@ -65,7 +66,7 @@ const Components: DefaultTheme.SidebarItem[] = [
 ]
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMagicMove(defineConfig({
   lang: 'en-US',
   title: 'Onu UI',
   titleTemplate: 'Onu UI',
@@ -152,4 +153,4 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present Chris',
     },
   },
-})
+}) as any)

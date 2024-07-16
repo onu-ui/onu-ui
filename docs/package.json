@@ -11,7 +11,9 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "floating-vue": "^5.2.2"
+    "floating-vue": "^5.2.2",
+    "shiki-magic-move": "^0.4.2",
+    "vitepress-plugin-magic-move": "^1.1.2"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.36",
