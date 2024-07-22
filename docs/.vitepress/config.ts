@@ -94,13 +94,20 @@ export default defineConfig({
     },
     logo: '/logo.svg',
     nav: [
-      { text: 'Components', items: [
-        {
-          text: 'overview',
-          link: '/components/overview',
-        },
-        ...Components as any,
-      ] },
+      {
+        text: 'Guide',
+        items: Guides,
+      },
+      {
+        text: 'Components',
+        items: [
+          {
+            text: 'overview',
+            link: '/components/overview',
+          },
+          ...Components as any,
+        ],
+      },
       {
         text: `v${version}`,
         items: [
@@ -111,10 +118,6 @@ export default defineConfig({
           {
             text: 'Contributing',
             link: 'https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md',
-          },
-          {
-            text: 'Code of Conduct',
-            link: 'https://github.com/onu-ui/onu-ui/blob/main/CODE_OF_CONDUCT.md',
           },
         ],
       },
