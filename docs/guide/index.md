@@ -20,17 +20,17 @@ About the Vue components library was written with the latest [Vue3 setup script]
 
 For example:
 
-::: code-group
-  ```html [unocss]
-  <button btn>Button</button>
-  <button btn="~ sm">Button</button>
-  ```
-  ```vue [vue]
-  import { Button } from 'onu-ui'
+:::magic-move
+```html [unocss]
+<button btn>Button</button>
+<button btn="~ sm">Button</button>
+```
+```vue [vue]
+import { Button } from 'onu-ui'
 
-  <Button>Button</Button>
-  <Button size='sm'>Button</Button>
-  ```
+<Button>Button</Button>
+<Button size='sm'>Button</Button>
+```
 :::
 
 <button btn>Button</button>

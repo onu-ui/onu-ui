@@ -10,6 +10,7 @@ import ThemePalette from './components/ThemePalette.vue'
 
 import 'floating-vue/dist/style.css'
 import '@shikijs/vitepress-twoslash/style.css'
+import 'shiki-magic-move/style.css'
 import './style.css'
 import './override.css'
 import 'uno.css'
