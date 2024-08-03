@@ -9,6 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
     HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
+    Overview: typeof import('./.vitepress/theme/components/Overview.vue')['default']
     ThemePalette: typeof import('./.vitepress/theme/components/ThemePalette.vue')['default']
+    ThemePaletteInner: typeof import('./.vitepress/theme/components/ThemePaletteInner.vue')['default']
   }
 }

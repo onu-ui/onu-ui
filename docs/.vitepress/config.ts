@@ -7,6 +7,7 @@ const Guides: DefaultTheme.NavItemWithLink[] = [
   { text: 'What is Onu UI', link: '/guide/' },
   { text: 'Getting Started', link: '/guide/getting-started' },
   { text: 'Built-In', link: '/guide/built-in' },
+  { text: 'Dynamic Theme', link: '/guide/dynamic-theme' },
 ]
 
 const Components: DefaultTheme.SidebarItem[] = [
