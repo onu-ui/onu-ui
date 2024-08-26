@@ -44,11 +44,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@unocss/preset-attributify": "^0.62.3",
-    "@unocss/preset-icons": "^0.62.3",
-    "@unocss/preset-mini": "^0.62.3",
-    "@unocss/preset-uno": "^0.62.3",
-    "@unocss/preset-web-fonts": "^0.62.3",
-    "magic-color": "^1.2.1"
+    "@unocss/preset-attributify": "catalog:",
+    "@unocss/preset-icons": "catalog:",
+    "@unocss/preset-mini": "catalog:",
+    "@unocss/preset-uno": "catalog:",
+    "@unocss/preset-web-fonts": "catalog:",
+    "magic-color": "catalog:"
   }
 }
