@@ -8,16 +8,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vueuse/core": "^10.11.0",
+    "@vueuse/core": "^11.0.3",
     "magic-color": "^1.2.1",
-    "vue": "^3.4.35"
+    "vue": "^3.4.38"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
     "typescript": "^5.5.4",
-    "unocss": "^0.61.9",
+    "unocss": "^0.62.3",
     "unocss-transformer-alias": "^0.0.8",
-    "vite": "^5.3.5",
+    "vite": "^5.4.2",
     "vue-tsc": "^2.0.29"
   }
 }
