@@ -1,7 +1,7 @@
 <p align="center">
   <img src="./public/logo.svg" style="width:100px;" />
   <h1 align="center">Onu UI (WIP)</h1>
-  <p align="center">Bullheaded and lightweight UnoCSS ui library.</p>
+  <p align="center">Opinionated and lightweight UnoCSS ui library.</p>
 </p>
 
 <p align="center">
