@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useDark } from '@vueuse/core'
 import { mc } from 'magic-color'
-import { resolveTheme } from '../../../packages/preset/src/helper'
+import { resolveTheme } from '@onu-ui/preset/helper'
 import ButtonLayout from './comonents/o-button.vue'
 import AvatarLayout from './comonents/o-avatar.vue'
 import BadgeLayout from './comonents/o-badge.vue'

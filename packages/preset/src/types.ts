@@ -1,4 +1,5 @@
 import type { WebFontMeta } from '@unocss/preset-web-fonts'
+import type { IconsOptions } from '@unocss/preset-icons'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 export type ThemeType = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'
@@ -24,7 +25,12 @@ export interface PrsetOnuOptions {
    * @default ['DM Sans', 'DM Sans:400,700']
    * @example `font-onu`
    */
-  font?: WebFontMeta | string | (WebFontMeta | string)[]
+  fonts?: WebFontMeta | string | (WebFontMeta | string)[]
+
+  /**
+   * Icons options.
+   */
+  icons?: IconsOptions
 }
 
 export type ResolveOnuOptions = Required<PrsetOnuOptions>
