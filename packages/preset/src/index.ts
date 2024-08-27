@@ -1,4 +1,5 @@
 import { definePreset } from 'unocss'
+import type { DynamicRule, DynamicShortcut, RuleMeta } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 import { presetUno } from '@unocss/preset-uno'
 import { presetAttributify } from '@unocss/preset-attributify'
@@ -50,7 +51,7 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
 function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {
-    prefix: 'o-',
+    prefix: '',
     fonts: ['DM Sans', 'DM Sans:400,700'],
     color: 'auto',
     icons: {
@@ -79,4 +80,13 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   }
 
   return resolvedOptions
+}
+
+function normalizeMeta(data: DynamicRule<Theme>[] | DynamicShortcut<Theme>, meta: RuleMeta) {
+  if (Array.isArray(data)) {
+    const originMeta = data[2]
+
+    return data.map(r => [...r, meta])
+  }
+  return data
 }

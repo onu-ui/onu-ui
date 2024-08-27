@@ -2,13 +2,12 @@ import type { WebFontMeta } from '@unocss/preset-web-fonts'
 import type { IconsOptions } from '@unocss/preset-icons'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
-export type ThemeType = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info'
 
 export interface PrsetOnuOptions {
   /**
    * Prefix of all of Onu's utility.
    *
-   * @default 'o-'
+   * @default (In Vue component, it will be 'o-')
    */
   prefix?: string
 
