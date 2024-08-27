@@ -1,6 +1,7 @@
 {
   "name": "@onu-ui/utils",
   "version": "1.0.14-beta.2",
+  "private": true,
   "description": "Onu-UI utils library",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
