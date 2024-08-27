@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@onu-ui/preset": "workspace:*",
     "@vueuse/core": "catalog:",
     "magic-color": "catalog:",
     "vue": "catalog:"

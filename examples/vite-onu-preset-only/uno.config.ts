@@ -1,5 +1,5 @@
 import { defineConfig, transformerVariantGroup } from 'unocss'
-import { presetOnu } from '../../packages/preset/src'
+import { presetOnu } from '@onu-ui/preset'
 
 export default defineConfig({
   envMode: 'dev',
