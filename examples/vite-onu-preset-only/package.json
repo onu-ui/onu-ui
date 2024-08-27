@@ -20,5 +20,5 @@
     "unocss-transformer-alias": "catalog:",
     "vite": "catalog:",
     "vue-tsc": "catalog:"
-  }
+  },"version": "1.1.0"
 }
