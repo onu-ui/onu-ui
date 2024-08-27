@@ -1,6 +1,61 @@
 packages:
   - playground
-  - 'examples/*'
-  - 'packages/*'
+  - examples/*
+  - packages/*
   - '!**/test/**'
   - docs
+catalog:
+  '@antfu/eslint-config': 2.27.1
+  '@iconify-json/carbon': ^1.1.37
+  '@iconify-json/fluent-emoji': ^1.1.19
+  '@iconify-json/line-md': ^1.1.40
+  '@iconify-json/logos': ^1.1.44
+  '@iconify-json/ri': ^1.1.22
+  '@shikijs/vitepress-twoslash': ^1.14.1
+  '@types/fs-extra': ^11.0.4
+  '@types/node': ^22.5.0
+  '@types/prettier': ^3.0.0
+  '@unocss/preset-attributify': ^0.62.3
+  '@unocss/preset-icons': ^0.62.3
+  '@unocss/preset-mini': ^0.62.3
+  '@unocss/preset-uno': ^0.62.3
+  '@unocss/preset-web-fonts': ^0.62.3
+  '@unocss/reset': ^0.62.3
+  '@vitejs/plugin-vue': ^5.1.2
+  '@vitejs/plugin-vue-jsx': ^4.0.1
+  '@vitest/coverage-c8': ^0.33.0
+  '@vitest/ui': ^2.0.5
+  '@vue/repl': ^4.3.1
+  '@vue/test-utils': ^2.4.6
+  '@vueuse/core': ^11.0.3
+  bumpp: ^9.5.2
+  compare-versions: ^6.1.1
+  cross-env: ^7.0.3
+  eslint: ^9.9.1
+  esno: ^4.7.0
+  execa: ^9.3.1
+  floating-vue: ^5.2.2
+  fs-extra: ^11.2.0
+  jsdom: ^25.0.0
+  lint-staged: ^15.2.9
+  magic-color: ^1.2.1
+  npm-run-all: ^4.1.5
+  ohmyfetch: ^0.4.21
+  prettier: ^3.3.3
+  rimraf: ^6.0.1
+  simple-git-hooks: ^2.11.1
+  taze: ^0.16.6
+  tsup: ^8.2.4
+  typescript: ^5.5.4
+  unbuild: ^2.0.0
+  unocss: ^0.62.3
+  unocss-transformer-alias: ^0.0.8
+  unplugin-auto-import: ^0.18.2
+  unplugin-vue-components: ^0.27.4
+  vite: ^5.4.2
+  vite-plugin-dts: 4.0.3
+  vite-plugin-inspect: ^0.8.7
+  vitepress: ^1.3.4
+  vitest: ^2.0.5
+  vue: ^3.4.38
+  vue-tsc: ^2.0.29
