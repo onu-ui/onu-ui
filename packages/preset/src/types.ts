@@ -9,7 +9,7 @@ export interface PrsetOnuOptions {
   /**
    * Prefix of all of Onu's utility.
    *
-   * @default (In Vue component, it will be 'o-')
+   * @default (In Vue component, it will be 'n-')
    */
   prefix?: string
 

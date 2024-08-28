@@ -1,16 +1,30 @@
 {
   "name": "onu-ui",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "Onu UI Vue Components",
+  "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["Onu UI", "UnoCSS", "vue", "ui library"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./onu-ui.css": "./dist/onu-ui.css"
+  },
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uno": "unocss -m",
+    "uno-watch": "unocss -w"
+
   },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
+    "@vitejs/plugin-vue": "catalog:",
     "unocss": "catalog:",
     "vite": "catalog:",
     "vue": "catalog:"

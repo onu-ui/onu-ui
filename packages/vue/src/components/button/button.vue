@@ -30,7 +30,7 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
     v-bind="binds"
     :disabled="isDisabled"
     :aria-disabled="isDisabled"
-    class="o-button-base"
+    class="btn-default"
     :class="[
       isDisabled ? 'o-disabled' : 'o-hover-active-base',
       `o-button-${_size}`,
