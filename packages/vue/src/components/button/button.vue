@@ -4,7 +4,7 @@ import type { SizeType } from '../../composables/useProps'
 import { buttonProps } from './props'
 
 defineOptions({
-  name: 'OButton',
+  name: 'NButton',
 })
 
 const props = defineProps(buttonProps)
@@ -16,10 +16,10 @@ defineSlots<{
 
 const size = computed(() => {
   const sizeMap: Record<SizeType, string> = {
-    xs: 'n-btn-xs',
-    sm: 'n-btn-sm',
-    md: 'n-btn-md',
-    lg: 'n-btn-lg',
+    xs: 'btn-xs',
+    sm: 'btn-sm',
+    md: 'btn-md',
+    lg: 'btn-lg',
   }
   return sizeMap[props.size]
 })
@@ -36,7 +36,7 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
     v-bind="binds"
     :disabled="isDisabled"
     :aria-disabled="isDisabled"
-    class="n-btn-default"
+    class="btn-default"
     :class="[
       size,
       onlyIcon && 'aspect-square px-0',

@@ -1,4 +1,7 @@
-import NButton from './button.vue'
+import { withInstall } from '../../../../utils/src'
+import Button from './button.vue'
 
-export { NButton }
+export const NButton = withInstall(Button)
+export default NButton
+
 export * from './props'

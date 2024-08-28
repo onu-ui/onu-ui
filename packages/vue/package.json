@@ -1,5 +1,6 @@
 {
   "name": "onu-ui",
+  "type": "module",
   "version": "1.0.0",
   "description": "Onu UI Vue Components",
   "author": "Chris <https://github.com/zyyv>",
@@ -7,17 +8,17 @@
   "keywords": ["Onu UI", "UnoCSS", "vue", "ui library"],
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "import": "./dist/onu-ui.js",
+      "require": "./dist/onu-ui.umd.cjs"
     },
-    "./onu-ui.css": "./dist/onu-ui.css"
+    "./dist/onu-ui.css": "./dist/onu-ui.css"
   },
   "main": "index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build && pnpm uno",
     "uno": "unocss -m",
     "uno-watch": "unocss -w"
 

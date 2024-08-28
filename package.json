@@ -54,6 +54,7 @@
     "jsdom": "catalog:",
     "lint-staged": "catalog:",
     "npm-run-all": "catalog:",
+    "onu-ui": "workspace:*",
     "prettier": "catalog:",
     "rimraf": "catalog:",
     "simple-git-hooks": "catalog:",

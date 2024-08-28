@@ -11,7 +11,7 @@ export default defineConfig({
   },
   presets: [
     presetOnu({
-      prefix: 'n-',
+      color: '#608e57',
     }),
   ],
 })
