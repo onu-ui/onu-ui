@@ -22,15 +22,19 @@ describe('onu preset', () => {
   })
 
   it('with prefix', async () => {
-    const uno = createOnu({ prefix: 'u-' })
+    const uno = createOnu({ prefix: 'n-' })
 
     const { css } = await uno.generate(`
-      <div class="u-btn u-btn-red">Hello</div>
+      <div class="n-btn n-btn-red n-o-red">Hello</div>
     `, { preflights: false })
 
     expect(await formatCSSCode(css)).toMatchInlineSnapshot(`
       "/* layer: default */
-      .u-btn {
+      .n-btn-red,
+      .n-o-red {
+        --onu-color-context: 0 91 71;
+      }
+      .n-btn {
         --onu-color-context: var(--onu-color-500);
         --onu-color-context: var(--onu-color-text);
         border-width: 0px;
@@ -39,11 +43,8 @@ describe('onu preset', () => {
         --un-bg-opacity: 1;
         background-color: hsl(var(--onu-color-context) / var(--un-bg-opacity));
       }
-      .u-btn:disabled {
+      .n-btn:disabled {
         opacity: 0.64;
-      }
-      .u-btn-red {
-        --onu-color-context: 0 91 71;
       }
       "
     `)
