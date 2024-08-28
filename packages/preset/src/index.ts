@@ -54,6 +54,7 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
     prefix: '',
     fonts: ['DM Sans', 'DM Sans:400,700'],
     color: 'auto',
+    preflights: true,
     icons: {
       extraProperties: {
         'display': 'inline-block',

@@ -5,7 +5,11 @@ import { themePreflight } from './theme'
 
 export function preflights(options: ResolveOnuOptions): Preflight[] {
   return [
-    resetPreflight,
+    options.preflights
+      ? [
+          resetPreflight,
+        ]
+      : [],
     themePreflight(options),
   ].flat()
 }

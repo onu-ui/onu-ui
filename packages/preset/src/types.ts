@@ -21,6 +21,13 @@ export interface PrsetOnuOptions {
   color?: string
 
   /**
+   * Enable preflights styles. (Reset styles)
+   *
+   * @default true
+   */
+  preflights?: boolean
+
+  /**
    * Onu default font loaded by google fonts.
    *
    * @default ['DM Sans', 'DM Sans:400,700']
