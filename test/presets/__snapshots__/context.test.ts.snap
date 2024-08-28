@@ -1,10 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`onu context > matched tokens 1`] = `
-"/* layer: shortcuts */
-.dark .o-theme-text,
-.o-theme-text{--un-text-opacity:1;color:hsl(var(--onu-color-text) / var(--un-text-opacity));}
-/* layer: default */
+"/* layer: default */
 .o-\\[rgb\\(255\\,255\\,0\\)\\],
 .o-\\#ff0{--onu-color-context:60 100 50;}
 .o-red{--onu-color-context:0 91 71;}
@@ -41,5 +38,7 @@ exports[`onu context > matched tokens 1`] = `
 .border-theme-100-50,
 .border-theme-100\\:50{--un-border-opacity:0.5;border-color:hsl(var(--onu-color-100, var(--onu-color-context)) / var(--un-border-opacity));}
 .border-theme-context{--un-border-opacity:1;border-color:hsl(var(--onu-color-border, var(--onu-color-context)) / var(--un-border-opacity));}
-.border-theme-DEFAULT{--un-border-opacity:1;border-color:hsl(var(--onu-color-DEFAULT, var(--onu-color-context)) / var(--un-border-opacity));}"
+.border-theme-DEFAULT{--un-border-opacity:1;border-color:hsl(var(--onu-color-DEFAULT, var(--onu-color-context)) / var(--un-border-opacity));}
+.dark .o-theme-text,
+.o-theme-text{--un-text-opacity:1;color:hsl(var(--onu-color-text) / var(--un-text-opacity));}"
 `;
