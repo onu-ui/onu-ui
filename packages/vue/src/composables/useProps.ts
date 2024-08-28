@@ -9,6 +9,6 @@ export const readonly = { type: Boolean } as const
 export const loadable = { type: Boolean } as const
 
 export const sizeable = {
-  type: String as PropType<SizeType | ''>,
+  type: String as PropType<SizeType>,
   default: 'md',
 } as const
