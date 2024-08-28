@@ -106,8 +106,8 @@ catalogs:
       specifier: ^15.2.9
       version: 15.2.9
     magic-color:
-      specifier: ^1.2.1
-      version: 1.2.1
+      specifier: ^1.2.2
+      version: 1.2.2
     npm-run-all:
       specifier: ^4.1.5
       version: 4.1.5
@@ -335,7 +335,7 @@ importers:
         version: 11.0.3(vue@3.4.38(typescript@5.5.4))
       magic-color:
         specifier: 'catalog:'
-        version: 1.2.1
+        version: 1.2.2
       vue:
         specifier: 'catalog:'
         version: 3.4.38(typescript@5.5.4)
@@ -378,7 +378,7 @@ importers:
         version: 0.62.3
       magic-color:
         specifier: 'catalog:'
-        version: 1.2.1
+        version: 1.2.2
 
   packages/utils:
     dependencies:
@@ -388,6 +388,12 @@ importers:
 
   packages/vue:
     devDependencies:
+      '@onu-ui/preset':
+        specifier: workspace:*
+        version: link:../preset
+      unocss:
+        specifier: 'catalog:'
+        version: 0.62.3(postcss@8.4.41)(rollup@4.21.0)(vite@5.4.2(@types/node@22.5.0))
       vite:
         specifier: 'catalog:'
         version: 5.4.2(@types/node@22.5.0)
@@ -1283,8 +1289,8 @@ packages:
     resolution: {integrity: sha512-f5DRIOZf7wxogefH03RjMPMdBF7ADTWUMoOs9kaJo06EfwF+aFhMZMDZxHg/Xe12hptN9xoZjGso2fdjapBRIA==}
     engines: {node: '>=10'}
 
-  '@magic-color/core@1.2.1':
-    resolution: {integrity: sha512-w2ZcvOEcZg6y9iVeCBweKO596rd+x2YpdMm76Wcntfc69She6HFJ9zLP0I2+0z2dexpj5jgs4kjrBHnd8ASCGQ==}
+  '@magic-color/core@1.2.2':
+    resolution: {integrity: sha512-9xebygQfieuc9bZdbctfouH7/naMHRfvHPbJZWS/axREUqapNlH+TlQbILcGUD0tBHJqZdmKrQN61Mxqw7HnGw==}
 
   '@microsoft/api-extractor-model@7.29.4':
     resolution: {integrity: sha512-LHOMxmT8/tU1IiiiHOdHFF83Qsi+V8d0kLfscG4EvQE9cafiR8blOYr8SfkQKWB1wgEilQgXJX3MIA4vetDLZw==}
@@ -2294,8 +2300,8 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
-  chroma-js@2.4.2:
-    resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
+  chroma-js@2.6.0:
+    resolution: {integrity: sha512-BLHvCB9s8Z1EV4ethr6xnkl/P2YRFOGqfgvuMG/MyCbZPrTA+NeiByY6XvgF0zP4/2deU2CXnWyMa3zu1LqQ3A==}
 
   ci-info@4.0.0:
     resolution: {integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==}
@@ -3641,8 +3647,8 @@ packages:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
 
-  magic-color@1.2.1:
-    resolution: {integrity: sha512-rjc2c7UCf66vdsVvb+8RNRHjzU6buNoEXyW5LAe+wLjMuWnV0/e3X3Sv5Q3BxqFe2aB8xJ1kLQZnk2YCtpbNHw==}
+  magic-color@1.2.2:
+    resolution: {integrity: sha512-35l5QqUPKgT7ifSTuXx2DZL+ODIs2u6oto5N9JZLNDP2iWxO8DDM2q1f+z2hYS09Z2fdPzPQFO3HSa+oIHfvMA==}
 
   magic-string@0.30.10:
     resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
@@ -6275,7 +6281,7 @@ snapshots:
       string-argv: 0.3.2
       type-detect: 4.1.0
 
-  '@magic-color/core@1.2.1': {}
+  '@magic-color/core@1.2.2': {}
 
   '@microsoft/api-extractor-model@7.29.4(@types/node@22.5.0)':
     dependencies:
@@ -7644,7 +7650,7 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chroma-js@2.4.2: {}
+  chroma-js@2.6.0: {}
 
   ci-info@4.0.0: {}
 
@@ -9209,10 +9215,10 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
-  magic-color@1.2.1:
+  magic-color@1.2.2:
     dependencies:
-      '@magic-color/core': 1.2.1
-      chroma-js: 2.4.2
+      '@magic-color/core': 1.2.2
+      chroma-js: 2.6.0
 
   magic-string@0.30.10:
     dependencies:
