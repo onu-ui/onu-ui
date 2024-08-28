@@ -1,5 +1,7 @@
 import type { WebFontMeta } from '@unocss/preset-web-fonts'
 import type { IconsOptions } from '@unocss/preset-icons'
+import type { DynamicShortcut, Rule, StaticShortcut } from '@unocss/core'
+import type { Theme } from '@unocss/preset-mini'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 
@@ -33,3 +35,6 @@ export interface PrsetOnuOptions {
 }
 
 export type ResolveOnuOptions = Required<PrsetOnuOptions>
+
+export type CustomRule = Rule<Theme>
+export type CustomShortcut = StaticShortcut | DynamicShortcut<Theme>

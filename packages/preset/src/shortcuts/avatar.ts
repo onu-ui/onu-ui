@@ -1,6 +1,4 @@
-import type { UserShortcuts } from 'unocss'
-import type { Theme } from '@unocss/preset-mini'
-import type { SizeType } from '../types'
+import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
@@ -10,7 +8,7 @@ const Size: Record<SizeType, string> = {
   lg: 'w-20',
 }
 
-export const avatar: UserShortcuts<Theme> = [
+export const avatar: CustomShortcut[] = [
   [/^avatar-(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]

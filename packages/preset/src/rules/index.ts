@@ -1,10 +1,8 @@
-import type { Rule } from 'unocss'
-import type { Theme } from '@unocss/preset-mini'
-
+import type { CustomRule } from '../types'
 import { masks } from './mask'
 import { contexts } from './context'
 
-export const rules: Rule<Theme>[] = [
+export const rules: CustomRule[] = [
   contexts,
   masks,
 ].flat()

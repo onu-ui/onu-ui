@@ -1,7 +1,6 @@
-import type { Rule } from 'unocss'
-import type { Theme } from '@unocss/preset-mini'
+import type { CustomRule } from '../types'
 
-export const masks = [
+export const masks: CustomRule[] = [
   ['mask', {
     '-webkit-mask-size': 'contain',
     'mask-size': 'contain',
@@ -10,4 +9,4 @@ export const masks = [
     '-webkit-mask-position': 'center',
     'mask-position': 'center',
   }],
-] as Rule<Theme>[]
+]

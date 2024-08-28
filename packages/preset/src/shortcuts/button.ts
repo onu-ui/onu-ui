@@ -1,6 +1,4 @@
-import type { UserShortcuts } from 'unocss'
-import type { Theme } from '@unocss/preset-mini'
-import type { SizeType } from '../types'
+import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
@@ -10,7 +8,7 @@ const Size: Record<SizeType, string> = {
   lg: 'px-3.5 py-2.5 text-base rounded-lg',
 }
 
-export const button: UserShortcuts<Theme> = [
+export const button: CustomShortcut[] = [
   [/^btn-(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]

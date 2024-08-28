@@ -1,7 +1,7 @@
 import type { Theme } from '@unocss/preset-mini'
 import { parseColor } from '@unocss/preset-mini/utils'
 import { mc } from 'magic-color'
-import type { CSSValue } from 'unocss'
+import type { CSSValue } from '@unocss/core'
 
 export function spliteSpace(str: string) {
   return str.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ')
