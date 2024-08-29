@@ -1,26 +1,18 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { disabled, loadable, readonly, sizeable } from '../../composables/useProps'
+import { disabled, loadable, readonly, sizeable } from '@/composables/useProps'
+
+export type ButtonVariants = 'default' | 'soft' | 'outline' | 'solid' | 'solid-cover' | 'dashed' | 'dashed-cover' | 'link' | 'ghost' | 'ghost-light'
 
 export const buttonProps = {
   to: String,
-  shadow: Boolean,
-  light: Boolean,
-  dashed: Boolean,
-  text: Boolean,
-  size: sizeable,
   rounded: Boolean,
+  icon: String,
+
+  size: sizeable,
   disabled,
   readonly,
   loading: loadable,
-  icon: String,
-  variant: {
-    type: String as PropType<''>,
-    default: 'md',
-  },
-  default: {
-    type: Boolean,
-    default: false,
-  },
+  variant: { type: String as PropType<ButtonVariants> },
 }
 
 export const buttonGroupProps = {

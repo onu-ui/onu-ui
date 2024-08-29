@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useAttrs, useSlots } from 'vue'
-import type { SizeType } from '../../composables/useProps'
 import { buttonProps } from './props'
+import type { SizeType } from '@/composables/useProps'
 
 defineOptions({
   name: 'OButton',
@@ -14,21 +14,40 @@ defineSlots<{
   icon: (props: unknown) => any
 }>()
 
-const sizeMap: Record<SizeType, string> = {
-  xs: 'btn-xs',
-  sm: 'btn-sm',
-  md: 'btn-md',
-  lg: 'btn-lg',
-}
+const slots = useSlots()
+const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 
-const size = computed(() => sizeMap[props.size])
+const sizes = computed(() => {
+  const sizeMap: Record<SizeType, string> = {
+    xs: 'btn-xs',
+    sm: 'btn-sm',
+    md: 'btn-md',
+    lg: 'btn-lg',
+  }
 
-const isDefault = computed(() => props.variant === 'default')
+  return sizeMap[props.size]
+})
+
+const base = computed(() => {
+  const variants = {
+    'default': 'btn-default',
+    'soft': 'btn btn-soft',
+    'outline': 'btn btn-outline',
+    'solid': 'btn btn-solid',
+    'solid-cover': 'btn btn-solid-cover',
+    'dashed': 'btn btn-dashed',
+    'dashed-cover': 'btn btn-dashed-cover',
+    'link': 'btn btn-link',
+    'ghost': 'btn btn-ghost',
+    'ghost-light': 'btn btn-ghost-light',
+  }
+
+  return [props.variant ? variants[props.variant] ?? 'btn' : 'btn']
+})
+
 const isDisabled = computed(() => props.loading || props.disabled)
 
-const slots = useSlots()
 const onlyIcon = computed(() => (slots.icon || props.icon) && !slots.default)
-const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 </script>
 
 <template>
@@ -37,9 +56,9 @@ const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
     v-bind="binds"
     :disabled="isDisabled"
     :aria-disabled="isDisabled"
-    class="btn-default"
     :class="[
-      size,
+      sizes,
+      base,
       onlyIcon && 'aspect-square px-0',
       rounded && 'rounded-full',
     ]"
