@@ -1,5 +1,5 @@
-import type { ExtractPropTypes } from 'vue'
-import { sizeable } from '../../composables/useProps'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { disabled, loadable, readonly, sizeable } from '../../composables/useProps'
 
 export const buttonProps = {
   to: String,
@@ -9,9 +9,18 @@ export const buttonProps = {
   text: Boolean,
   size: sizeable,
   rounded: Boolean,
-  disabled: Boolean,
-  loading: Boolean,
+  disabled,
+  readonly,
+  loading: loadable,
   icon: String,
+  variant: {
+    type: String as PropType<''>,
+    default: 'md',
+  },
+  default: {
+    type: Boolean,
+    default: false,
+  },
 }
 
 export const buttonGroupProps = {

@@ -14,17 +14,18 @@ defineSlots<{
   icon: (props: unknown) => any
 }>()
 
-const size = computed(() => {
-  const sizeMap: Record<SizeType, string> = {
-    xs: 'btn-xs',
-    sm: 'btn-sm',
-    md: 'btn-md',
-    lg: 'btn-lg',
-  }
-  return sizeMap[props.size]
-})
+const sizeMap: Record<SizeType, string> = {
+  xs: 'btn-xs',
+  sm: 'btn-sm',
+  md: 'btn-md',
+  lg: 'btn-lg',
+}
 
+const size = computed(() => sizeMap[props.size])
+
+const isDefault = computed(() => props.variant === 'default')
 const isDisabled = computed(() => props.loading || props.disabled)
+
 const slots = useSlots()
 const onlyIcon = computed(() => (slots.icon || props.icon) && !slots.default)
 const binds = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
