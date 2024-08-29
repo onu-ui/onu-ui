@@ -1,6 +1,6 @@
 import type { Plugin } from 'vue'
-import { NButton } from './button'
+import { OButton } from './button'
 
 export default [
-  NButton,
+  OButton,
 ] as unknown as Plugin[]

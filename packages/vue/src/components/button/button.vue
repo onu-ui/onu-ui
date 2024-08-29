@@ -4,7 +4,7 @@ import type { SizeType } from '../../composables/useProps'
 import { buttonProps } from './props'
 
 defineOptions({
-  name: 'NButton',
+  name: 'OButton',
 })
 
 const props = defineProps(buttonProps)
