@@ -1,0 +1,24 @@
+{
+  "name": "vite-onu-vue",
+  "type": "module",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "catalog:",
+    "onu-ui": "workspace:*",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@onu-ui/preset": "workspace:*",
+    "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "unocss": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

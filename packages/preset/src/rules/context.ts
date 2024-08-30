@@ -1,10 +1,9 @@
 import { h, parseColor } from '@unocss/preset-mini/utils'
-import type { Rule } from 'unocss'
-import type { Theme } from '@unocss/preset-mini'
 import { mc } from 'magic-color'
 import { isThemeMetaKey, resolveContextColorByKey } from '../utils'
+import type { CustomRule } from '../types'
 
-export const contexts: Rule<Theme>[] = [
+export const contexts: CustomRule[] = [
   /**
    * o-<color> o-theme-<color>
    * Any color type for context. Will be converted to HSL.

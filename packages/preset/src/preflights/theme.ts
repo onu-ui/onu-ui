@@ -1,4 +1,4 @@
-import type { Preflight } from 'unocss'
+import type { Preflight } from '@unocss/core'
 import type { ResolveOnuOptions } from '../types'
 import { resolveTheme } from '../helper'
 
@@ -6,7 +6,7 @@ export function themePreflight(options: ResolveOnuOptions): Preflight {
   const { color } = options
 
   return {
-    getCSS: () => resolveTheme(color).css,
+    getCSS: () => resolveTheme(color).cssMinify,
     layer: '@onu-ui/preset-theme',
   }
 }

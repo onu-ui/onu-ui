@@ -15,6 +15,7 @@ catalog:
   '@types/fs-extra': ^11.0.4
   '@types/node': ^22.5.0
   '@types/prettier': ^3.0.0
+  '@unocss/cli': ^0.62.3
   '@unocss/preset-attributify': ^0.62.3
   '@unocss/preset-icons': ^0.62.3
   '@unocss/preset-mini': ^0.62.3
@@ -38,7 +39,7 @@ catalog:
   fs-extra: ^11.2.0
   jsdom: ^25.0.0
   lint-staged: ^15.2.9
-  magic-color: ^1.2.1
+  magic-color: ^1.2.2
   npm-run-all: ^4.1.5
   ohmyfetch: ^0.4.21
   prettier: ^3.3.3

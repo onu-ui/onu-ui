@@ -1,4 +1,4 @@
-import type { Variant } from 'unocss'
+import type { Variant } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 
 export const variants = [

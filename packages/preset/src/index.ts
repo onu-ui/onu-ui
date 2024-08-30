@@ -1,4 +1,4 @@
-import { definePreset } from 'unocss'
+import { definePreset } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 import { presetUno } from '@unocss/preset-uno'
 import { presetAttributify } from '@unocss/preset-attributify'
@@ -19,9 +19,10 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
   return {
     name: '@onu-ui/preset',
+    layer: 'onu-ui',
     rules,
-    variants,
     shortcuts,
+    variants,
     preflights: preflights(resolvedOptions),
     presets: [
       presetUno(),
@@ -48,11 +49,13 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
   }
 })
 
+export default presetOnu
+
 function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {
-    prefix: 'o-',
     fonts: ['DM Sans', 'DM Sans:400,700'],
     color: 'auto',
+    preflights: true,
     icons: {
       extraProperties: {
         'display': 'inline-block',
@@ -80,3 +83,14 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
 
   return resolvedOptions
 }
+
+// function normalizeMeta<T = CustomRule | CustomShortcut>(dynamicRuleOrShourtcut: T, patchMeta: RuleMeta): T {
+//   if (Array.isArray(dynamicRuleOrShourtcut)) {
+//     const meta = dynamicRuleOrShourtcut[2]
+//       ? Object.assign({}, dynamicRuleOrShourtcut[2], patchMeta)
+//       : patchMeta
+
+//     return [dynamicRuleOrShourtcut[0], dynamicRuleOrShourtcut[1], meta] as T
+//   }
+//   return dynamicRuleOrShourtcut
+// }

@@ -9,17 +9,17 @@ export function resolveTheme(color: string) {
 
   const css = `
 :root {
-color-scheme: light dark;
-${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
---onu-color-DEFAULT: var(--onu-color-500);
---onu-color-text: var(--onu-color-100);
---onu-color-text-invert: var(--onu-color-950);
+  color-scheme: light dark;
+  ${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
+  --onu-color-DEFAULT: var(--onu-color-500);
+  --onu-color-text: var(--onu-color-100);
+  --onu-color-text-invert: var(--onu-color-950);
 }
 
 .dark {
---onu-color-DEFAULT: var(--onu-color-600);
---onu-color-text: var(--onu-color-950);
---onu-color-text-invert: var(--onu-color-100);
+  --onu-color-DEFAULT: var(--onu-color-600);
+  --onu-color-text: var(--onu-color-950);
+  --onu-color-text-invert: var(--onu-color-100);
 }
 
 ::selection {
@@ -32,5 +32,6 @@ ${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n
     css,
     theme,
     meta: themeMetas,
+    cssMinify: css.replace(/\n\s*/g, '').replace(/\s*([{}:!])\s*/g, '$1'),
   }
 }

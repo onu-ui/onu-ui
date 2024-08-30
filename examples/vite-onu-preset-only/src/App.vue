@@ -3,11 +3,11 @@ import { ref } from 'vue'
 import { useDark } from '@vueuse/core'
 import { mc } from 'magic-color'
 import { resolveTheme } from '@onu-ui/preset/helper'
-import ButtonLayout from './comonents/o-button.vue'
-import AvatarLayout from './comonents/o-avatar.vue'
-import BadgeLayout from './comonents/o-badge.vue'
-import InputLayout from './comonents/o-input.vue'
-import SwitchLayout from './comonents/o-switch.vue'
+import ButtonLayout from './components/o-button.vue'
+import AvatarLayout from './components/o-avatar.vue'
+import BadgeLayout from './components/o-badge.vue'
+import InputLayout from './components/o-input.vue'
+import SwitchLayout from './components/o-switch.vue'
 
 const isDark = useDark()
 function toggleDark() {

@@ -1,14 +1,10 @@
 import type { Theme } from '@unocss/preset-mini'
 import { parseColor } from '@unocss/preset-mini/utils'
 import { mc } from 'magic-color'
-import type { CSSValue } from 'unocss'
+import type { CSSValue } from '@unocss/core'
 
 export function spliteSpace(str: string) {
   return str.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ')
-}
-
-export function spliteObject(obj: Record<string, string>) {
-  return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, spliteSpace(v)]))
 }
 
 /**
