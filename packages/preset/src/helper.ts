@@ -9,7 +9,6 @@ export function resolveTheme(color: string) {
 
   const css = `
 :root {
-  color-scheme: light dark;
   ${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
   --onu-color-DEFAULT: var(--onu-color-500);
   --onu-color-text: var(--onu-color-100);
