@@ -7,13 +7,6 @@ export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 
 export interface PrsetOnuOptions {
   /**
-   * Prefix of all of Onu's utility.
-   *
-   * @default (In Vue component, it will be 'n-')
-   */
-  prefix?: string
-
-  /**
    * Theme primary color.
    *
    * @default 'auto' (random color)

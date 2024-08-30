@@ -1,5 +1,4 @@
 import { definePreset } from '@unocss/core'
-import type { RuleMeta } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
 import { presetUno } from '@unocss/preset-uno'
 import { presetAttributify } from '@unocss/preset-attributify'
@@ -10,7 +9,7 @@ import { shortcuts } from './shortcuts'
 import { theme } from './theme'
 import { rules } from './rules'
 import { variants } from './variants'
-import type { CustomRule, CustomShortcut, PrsetOnuOptions, ResolveOnuOptions } from './types'
+import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 import { preflights } from './preflights'
 
 export type { PrsetOnuOptions }
@@ -20,8 +19,8 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
   return {
     name: '@onu-ui/preset',
-    rules: rules.map(r => normalizeMeta(r, { prefix: resolvedOptions.prefix })),
-    shortcuts: shortcuts.map(s => normalizeMeta(s, { prefix: resolvedOptions.prefix })),
+    rules,
+    shortcuts,
     variants,
     preflights: preflights(resolvedOptions),
     presets: [
@@ -51,7 +50,6 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
 function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {
-    prefix: '',
     fonts: ['DM Sans', 'DM Sans:400,700'],
     color: 'auto',
     preflights: true,
@@ -83,13 +81,13 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   return resolvedOptions
 }
 
-function normalizeMeta<T = CustomRule | CustomShortcut>(dynamicRuleOrShourtcut: T, patchMeta: RuleMeta): T {
-  if (Array.isArray(dynamicRuleOrShourtcut)) {
-    const meta = dynamicRuleOrShourtcut[2]
-      ? Object.assign({}, dynamicRuleOrShourtcut[2], patchMeta)
-      : patchMeta
+// function normalizeMeta<T = CustomRule | CustomShortcut>(dynamicRuleOrShourtcut: T, patchMeta: RuleMeta): T {
+//   if (Array.isArray(dynamicRuleOrShourtcut)) {
+//     const meta = dynamicRuleOrShourtcut[2]
+//       ? Object.assign({}, dynamicRuleOrShourtcut[2], patchMeta)
+//       : patchMeta
 
-    return [dynamicRuleOrShourtcut[0], dynamicRuleOrShourtcut[1], meta] as T
-  }
-  return dynamicRuleOrShourtcut
-}
+//     return [dynamicRuleOrShourtcut[0], dynamicRuleOrShourtcut[1], meta] as T
+//   }
+//   return dynamicRuleOrShourtcut
+// }
