@@ -4,12 +4,10 @@ import { resetPreflight } from './reset'
 import { themePreflight } from './theme'
 
 export function preflights(options: ResolveOnuOptions): Preflight[] {
-  return [
-    options.preflights
-      ? [
-          resetPreflight,
-        ]
-      : [],
-    themePreflight(options),
-  ].flat()
+  return options.preflights
+    ? [
+        resetPreflight,
+        themePreflight(options),
+      ]
+    : []
 }
