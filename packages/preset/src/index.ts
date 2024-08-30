@@ -19,6 +19,7 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
   return {
     name: '@onu-ui/preset',
+    layer: 'onu-ui',
     rules,
     shortcuts,
     variants,
@@ -47,6 +48,8 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
     },
   }
 })
+
+export default presetOnu
 
 function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {

@@ -11,8 +11,12 @@ function toggleDark() {
 <template>
   <div wrapper gap-2>
     Onu Vue Example
-    <OButton variant="dashed" class="btn-red" @click="toggleDark()">
+    <OButton variant="dashed" class="btn-teal" rounded size="lg" @click="toggleDark()">
       Toggle Dark
+    </OButton>
+
+    <OButton variant="link" to="https://google.com" target="_blank">
+      Google
     </OButton>
   </div>
 </template>

@@ -14,6 +14,7 @@
     "vue": "catalog:"
   },
   "devDependencies": {
+    "@onu-ui/preset": "workspace:*",
     "@vitejs/plugin-vue": "catalog:",
     "typescript": "catalog:",
     "unocss": "catalog:",

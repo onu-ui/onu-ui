@@ -11,7 +11,7 @@
     "docs:build": "pnpm -C docs run build",
     "docs:preview": "pnpm docs:build && pnpm -C docs run preview",
     "stub": "pnpm -r --parallel --filter=./packages/* run stub",
-    "build": "pnpm clean && pnpm -r --filter=./packages/preset run build",
+    "build": "pnpm clean && pnpm -r --filter=./packages/* run build",
     "play": "pnpm -C playground run dev",
     "play:build": "pnpm -C playground run build",
     "example": "pnpm -C examples/vite-onu-preset-only run dev",
