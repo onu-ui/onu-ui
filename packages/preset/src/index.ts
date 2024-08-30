@@ -11,6 +11,7 @@ import { rules } from './rules'
 import { variants } from './variants'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 import { preflights } from './preflights'
+import { LAYER_ONU_PRESET, LAYER_ONU_UI } from './layers'
 
 export type { PrsetOnuOptions }
 
@@ -19,7 +20,8 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
 
   return {
     name: '@onu-ui/preset',
-    layer: 'onu-ui',
+    layer: LAYER_ONU_PRESET,
+    layers: LAYER_ONU_UI,
     rules,
     shortcuts,
     variants,

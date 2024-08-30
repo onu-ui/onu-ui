@@ -7,6 +7,5 @@ export function themePreflight(options: ResolveOnuOptions): Preflight {
 
   return {
     getCSS: () => resolveTheme(color).cssMinify,
-    layer: '@onu-ui/preset-theme',
   }
 }

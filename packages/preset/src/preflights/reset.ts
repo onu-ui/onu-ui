@@ -4,5 +4,4 @@ const resetCSS = `*,::before,::after{box-sizing:border-box;border-width:0;border
 
 export const resetPreflight: Preflight = {
   getCSS: () => resetCSS,
-  layer: '@onu-ui/preset-reset',
 }
