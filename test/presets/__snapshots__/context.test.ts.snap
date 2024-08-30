@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`onu context > matched tokens 1`] = `
-"/* layer: default */
+"/* layer: @onu-ui/preset */
 .o-\\[rgb\\(255\\,255\\,0\\)\\],
 .o-\\#ff0{--onu-color-context:60 100 50;}
 .o-red{--onu-color-context:0 91 71;}
