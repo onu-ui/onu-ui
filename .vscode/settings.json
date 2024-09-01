@@ -5,9 +5,9 @@
   "editor.formatOnSave": false,
   "unocss.root": [
     "./docs",
-    "./packages/components",
+    "./packages/vue",
     "./playground",
-    "./example"
+    "./examples"
   ],
   "vitest.disableWorkspaceWarning": true
 }

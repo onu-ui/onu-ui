@@ -1,6 +1,7 @@
 {
   "name": "vite-onu-preset-only",
   "type": "module",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -20,5 +21,5 @@
     "unocss-transformer-alias": "catalog:",
     "vite": "catalog:",
     "vue-tsc": "catalog:"
-  },"version": "1.1.0"
+  }
 }

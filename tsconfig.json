@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2018",
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "paths": {
-      "onu-ui": ["./packages/onu-ui/src/index.ts"],
+      "onu-ui": ["./packages/vue/src/index.ts"],
       "@onu-ui/preset": ["./packages/preset/src/index.ts"],
-      "@onu-ui/preset/helper": ["./packages/preset/src/helper.ts"]
+      "@onu-ui/preset/helper": ["./packages/preset/src/helper.ts"],
+      "@/*": ["./packages/vue/src/*"]
     },
     "resolveJsonModule": true,
     "types": [
@@ -18,7 +19,6 @@
     "strict": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
@@ -26,10 +26,6 @@
     "**/dist/**",
     "**/node_modules/**",
     "**/test/dts/**",
-    "**/playground/**",
-    "**/example/**",
-    "**/packages/components/**",
-    "**/packages/onu-ui/**",
-    "**/packages/utils/**"
+    "**/playground/**"
   ]
 }
