@@ -19,6 +19,9 @@ export const avatar: CustomShortcut[] = [
       [&>div]:(flex aspect-ratio-square of-hidden)
       [&_img]:(w-full h-full object-cover) o-theme-text
     `],
+  [/^avatar-group-(.+)$/, ([, s]) => `
+      [&_.avatar]:(${Size[s as SizeType]})
+    `],
   ['avatar-group', `
       flex of-hidden
       [&_.avatar]:(of-hidden rounded-full border border-3px border-current)

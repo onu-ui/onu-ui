@@ -30,12 +30,14 @@ const base = computed(() => [
   props.size ? sizeMap[props.size] : '',
   props.variant ? variants[props.variant] : '',
   slots.default && !props.src ? 'avatar-placeholder' : '',
+  props.online ? 'avatar-online' : '',
+  props.offline ? 'avatar-offline' : '',
 ])
 
 </script>
 
 <template>
-  <div :class="base">
+  <div :class="base" :w>
     <div v-bind="binds">
       <img v-if="src" :src>
       <slot v-else />

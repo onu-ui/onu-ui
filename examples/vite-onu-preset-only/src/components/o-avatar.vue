@@ -11,22 +11,22 @@
           </div>
         </div>
         <div class="avatar avatar-lg">
-          <div class="w-10 rounded">
+          <div class="rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
         </div>
         <div class="avatar avatar-md">
-          <div class="w-24 rounded">
+          <div class="rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
         </div>
         <div class="avatar avatar-sm">
-          <div class="w-24 rounded">
+          <div class="rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
         </div>
         <div class="avatar avatar-xs">
-          <div class="w-24 rounded">
+          <div class="rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
         </div>
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div flex items-center justify-center gap-2>
-        <div class="avatar-group space-x--6">
+        <div class="avatar-group avatar-group-sm space-x--6">
           <div class="avatar">
             <div class="">
               <img src="https://avatars.githubusercontent.com/u/42139754">

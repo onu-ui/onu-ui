@@ -18,10 +18,10 @@
     "dist"
   ],
   "scripts": {
+    "dev": "vite build -w & pnpm uno-watch",
     "build": "vite build && pnpm uno",
     "uno": "unocss -m",
     "uno-watch": "unocss -w"
-
   },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
