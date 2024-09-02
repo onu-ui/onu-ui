@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "stub:block": "tsup --watch"
+    "dev": "tsup --watch"
   },
   "peerDependencies": {
     "vue": "^3.3.0"

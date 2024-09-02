@@ -36,8 +36,8 @@ git checkout -b my-new-branch-or-feature
 5. Run `pnpm build` to build the packages: the examples will use the built packages
 
 6. For examples:
-  - `pnpm example`: to run the `@onu-ui/preset` supported examples
-  - `pnpm example-vue`: to run the `onu-ui` vue components examples
+  - `pnpm dev-preset`: to run the `@onu-ui/preset` supported examples
+  - `pnpm dev-vue`: to run the `onu-ui` vue components examples
 
 7. Run the tests: `pnpm test` and `pnpm typecheck`.
 

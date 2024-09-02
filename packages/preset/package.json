@@ -37,7 +37,7 @@
     "dist"
   ],
   "scripts": {
-    "stub": "tsup --watch",
+    "dev": "tsup --watch",
     "build": "tsup"
   },
   "publishConfig": {
