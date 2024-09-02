@@ -4,7 +4,8 @@ import { templateProps } from './props'
 defineOptions({
   name: 'OTemplate',
 })
-const props = defineProps(templateProps)
+
+defineProps(templateProps)
 </script>
 
 <template>
