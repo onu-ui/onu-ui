@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="avatar avatar-lg">
-          <div class="w-24 rounded">
+          <div class="w-10 rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
         </div>

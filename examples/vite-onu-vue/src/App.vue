@@ -18,6 +18,13 @@ function toggleDark() {
     <OButton variant="link" to="https://google.com" target="_blank">
       Google
     </OButton>
+
+    <OAvatar src="https://avatars.githubusercontent.com/u/42139754" />
+    <OAvatar w-10 rounded src="https://avatars.githubusercontent.com/u/42139754" />
+    <OAvatar variant="hexagon" src="https://avatars.githubusercontent.com/u/42139754" />
+    <OAvatar w-10 rounded>
+      <span>+99</span>
+    </OAvatar>
   </div>
 </template>
 

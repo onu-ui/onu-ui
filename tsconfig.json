@@ -9,6 +9,7 @@
       "onu-ui": ["./packages/vue/src/index.ts"],
       "@onu-ui/preset": ["./packages/preset/src/index.ts"],
       "@onu-ui/preset/helper": ["./packages/preset/src/helper.ts"],
+      "@onu-ui/utils": ["./packages/utils/src/index.ts"],
       "@/*": ["./packages/vue/src/*"]
     },
     "resolveJsonModule": true,

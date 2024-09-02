@@ -401,6 +401,9 @@ importers:
 
   packages/preset:
     dependencies:
+      '@onu-ui/utils':
+        specifier: workspace:*
+        version: link:../utils
       '@unocss/preset-attributify':
         specifier: 'catalog:'
         version: 0.62.3
