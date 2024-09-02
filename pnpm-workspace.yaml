@@ -8,6 +8,7 @@ catalog:
   '@antfu/eslint-config': 2.27.1
   '@iconify-json/carbon': ^1.1.37
   '@iconify-json/fluent-emoji': ^1.1.19
+  '@iconify-json/lets-icons': ^1.2.0
   '@iconify-json/line-md': ^1.1.40
   '@iconify-json/logos': ^1.1.44
   '@iconify-json/ri': ^1.1.22

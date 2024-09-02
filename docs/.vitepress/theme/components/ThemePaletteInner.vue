@@ -46,6 +46,6 @@ function switchTheme(c: string) {
       :title="meta.name"
       @click="switchTheme(meta.color)"
     />
-    <div text-lg i-carbon-ibm-event-streams cursor-pointer title="random color" @click="switchTheme(mc.random())" />
+    <div text-lg i-lets-icons-sort-random-light cursor-pointer title="random color" @click="switchTheme(mc.random())" />
   </section>
 </template>
