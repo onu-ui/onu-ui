@@ -44,7 +44,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@onu-ui/utils": "workspace:*",
     "@unocss/preset-attributify": "catalog:",
     "@unocss/preset-icons": "catalog:",
     "@unocss/preset-mini": "catalog:",
