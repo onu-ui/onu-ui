@@ -17,9 +17,9 @@ const Components: DefaultTheme.SidebarItem[] = [
     items: [
       { text: 'Button', link: '/components/button' },
       { text: 'Badge', link: '/components/badge' },
-      { text: 'Icon', link: '/components/icon' },
-      { text: 'Link', link: '/components/link' },
-      { text: 'Text', link: '/components/text' },
+      // { text: 'Icon', link: '/components/icon' },
+      // { text: 'Link', link: '/components/link' },
+      // { text: 'Text', link: '/components/text' },
     ],
   },
   {
@@ -27,10 +27,10 @@ const Components: DefaultTheme.SidebarItem[] = [
     collapsed: false,
     items: [
       { text: 'Input', link: '/components/input' },
-      { text: 'Checkbox', link: '/components/checkbox' },
-      { text: 'Switch', link: '/components/switch' },
-      { text: 'Rate', link: '/components/rate' },
-      { text: 'Radio', link: '/components/radio' },
+      // { text: 'Checkbox', link: '/components/checkbox' },
+      // { text: 'Switch', link: '/components/switch' },
+      // { text: 'Rate', link: '/components/rate' },
+      // { text: 'Radio', link: '/components/radio' },
     ],
   },
   {
@@ -38,29 +38,29 @@ const Components: DefaultTheme.SidebarItem[] = [
     collapsed: false,
     items: [
       { text: 'Avatar', link: '/components/avatar' },
-      { text: 'Card', link: '/components/card' },
-      { text: 'Empty', link: '/components/empty' },
-      { text: 'Tag', link: '/components/tag' },
-      { text: 'Progress', link: '/components/progress' },
+      // { text: 'Card', link: '/components/card' },
+      // { text: 'Empty', link: '/components/empty' },
+      // { text: 'Tag', link: '/components/tag' },
+      // { text: 'Progress', link: '/components/progress' },
     ],
   },
   {
     text: 'Navigation',
     collapsed: false,
     items: [
-      { text: 'Affix', link: '/components/affix' },
-      { text: 'Backtop', link: '/components/backtop' },
+      // { text: 'Affix', link: '/components/affix' },
+      // { text: 'Backtop', link: '/components/backtop' },
     ],
   },
   {
     text: 'Feedback',
     collapsed: false,
     items: [
-      { text: 'Alert', link: '/components/alert' },
-      { text: 'Message', link: '/components/message' },
-      { text: 'Popup', link: '/components/popup' },
-      { text: 'ToolTip', link: '/components/tooltip' },
-      { text: 'Collapse', link: '/components/collapse' },
+      // { text: 'Alert', link: '/components/alert' },
+      // { text: 'Message', link: '/components/message' },
+      // { text: 'Popup', link: '/components/popup' },
+      // { text: 'ToolTip', link: '/components/tooltip' },
+      // { text: 'Collapse', link: '/components/collapse' },
     ],
   },
 ]
