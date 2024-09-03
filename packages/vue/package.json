@@ -31,6 +31,9 @@
     "uno": "unocss -m",
     "uno-watch": "unocss -w"
   },
+  "dependencies": {
+    "@onu-ui/utils": "workspace:*"
+  },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
     "@vitejs/plugin-vue": "catalog:",

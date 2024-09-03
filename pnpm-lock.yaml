@@ -430,6 +430,10 @@ importers:
         version: 3.4.31(typescript@5.5.4)
 
   packages/vue:
+    dependencies:
+      '@onu-ui/utils':
+        specifier: workspace:*
+        version: link:../utils
     devDependencies:
       '@onu-ui/preset':
         specifier: workspace:*
