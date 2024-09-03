@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import FloatingVue, { Menu } from 'floating-vue'
+import OnuUI from 'onu-ui'
 import Overview from './components/Overview.vue'
 import ThemePalette from './components/ThemePalette.vue'
 import ThemePaletteInner from './components/ThemePaletteInner.vue'
@@ -12,6 +13,7 @@ import 'floating-vue/dist/style.css'
 import '@shikijs/vitepress-twoslash/style.css'
 import './style.css'
 import './override.css'
+import 'onu-ui/dist/onu-ui.css'
 import 'uno.css'
 
 export default {
@@ -29,5 +31,6 @@ export default {
 
     app.use(TwoslashFloatingVue)
     app.use(FloatingVue)
+    app.use(OnuUI)
   },
 } satisfies Theme

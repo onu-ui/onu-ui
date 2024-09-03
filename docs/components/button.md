@@ -24,7 +24,7 @@ Create a button with icon or link capabilities.
 <button btn-default>Button</button>
 </div>
 
-#### Types
+#### Variants
 
 ```html
 <button btn btn-soft>soft</button>
@@ -124,4 +124,10 @@ Create a button with icon or link capabilities.
 
 ## <i i-logos-vue /> With Vue
 
-TODO
+```vue
+<template>
+  <OButton>button</OButton>
+</template>
+```
+
+<OButton>button</OButton>

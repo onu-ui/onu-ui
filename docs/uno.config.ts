@@ -7,6 +7,7 @@ export default defineConfig({
   presets: [
     presetOnu({
       color: DefaultThemeColor,
+      preflights: false,
     }),
   ],
   transformers: [

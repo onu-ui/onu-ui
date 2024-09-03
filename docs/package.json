@@ -10,7 +10,8 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "floating-vue": "catalog:"
+    "floating-vue": "catalog:",
+    "onu-ui": "workspace:*"
   },
   "devDependencies": {
     "@iconify-json/carbon": "catalog:",

@@ -66,4 +66,97 @@ export interface PrsetOnuOptions {
 
 ## <i i-logos-vue /> Installation for `Vue`
 
-TODO
+::: code-group
+  ```bash [pnpm]
+  pnpm i onu-ui
+  ```
+  ```bash [yarn]
+  yarn add onu-ui
+  ```
+  ```bash [npm]
+  npm i onu-ui
+  ```
+:::
+
+`onu-ui` Package is a Vue 3 component library that uses the Onu UI presets by default.
+
+```ts twoslash {3,5,8}
+// main.ts
+import { createApp } from 'vue'
+import OnuUI from 'onu-ui'
+import App from './App.vue'
+import 'onu-ui/dist/onu-ui.css'
+
+createApp(App)
+  .use(OnuUI)
+  .mount('#app')
+```
+
+::: tip
+
+To enhance the capabilities of Onu components, I strongly recommend that you install `UnoCSS` and `@onu-ui/preset` at the same time.
+
+::: details
+
+```bash
+pnpm i -D unocss @onu-ui/preset
+```
+
+Undering `UnoCSS` and `@onu-ui/preset`, you can easily customize the theme of the components.
+
+```ts
+// main.ts
+import { createApp } from 'vue'
+import OnuUI from 'onu-ui'
+import App from './App.vue'
+import 'onu-ui/dist/onu-ui.css'
+import 'uno.css' // [!code ++]
+
+createApp(App)
+  .use(OnuUI)
+  .mount('#app')
+```
+
+<br />
+
+```ts
+// uno.config.ts
+import { defineConfig } from 'unocss'
+import { presetOnu } from '@onu-ui/preset'
+
+export default defineConfig({
+  presets: [
+    // ...
+    presetOnu({ // [!code ++]
+      preflights: false, // [!code ++]
+    }) // [!code ++]
+  ]
+})
+```
+
+<br />
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import UnoCSS from 'unocss/vite'
+
+export default defineConfig({
+  plugins: [
+    // ...
+    UnoCSS() // [!code ++]
+  ]
+})
+```
+
+:::
+
+Then you can use the Onu UI components in your Vue project, such as:
+
+```vue
+<template>
+  <OButton>Button</OButton>
+</template>
+```
+
+<OButton>Button</OButton>
