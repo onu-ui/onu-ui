@@ -27,7 +27,7 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
     variants,
     preflights: preflights(resolvedOptions),
     presets: [
-      presetUno(),
+      presetUno({ preflight: resolvedOptions.preflights }),
       presetAttributify(),
       presetIcons(resolvedOptions.icons),
       presetWebFonts({

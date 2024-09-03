@@ -41,13 +41,6 @@ Theme colors are **Random** by default. You can pass your theme color in the `co
 ```ts
 export interface PrsetOnuOptions {
   /**
-   * Prefix of all of Onu's utility.
-   *
-   * @default 'o-'
-   */
-  prefix?: string
-
-  /**
    * Theme primary color.
    *
    * @default 'auto' (random color)
@@ -55,12 +48,24 @@ export interface PrsetOnuOptions {
   color?: string
 
   /**
+   * Enable preflights styles. (Reset styles)
+   *
+   * @default true
+   */
+  preflights?: boolean
+
+  /**
    * Onu default font loaded by google fonts.
    *
    * @default ['DM Sans', 'DM Sans:400,700']
    * @example `font-onu`
    */
-  font?: WebFontMeta | string | (WebFontMeta | string)[]
+  fonts?: WebFontMeta | string | (WebFontMeta | string)[]
+
+  /**
+   * Icons options.
+   */
+  icons?: IconsOptions
 }
 ```
 
