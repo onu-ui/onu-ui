@@ -80,16 +80,14 @@ export interface PrsetOnuOptions {
 
 `onu-ui` Package is a Vue 3 component library that uses the Onu UI presets by default.
 
-```ts twoslash {3,5,8}
+```ts
 // main.ts
 import { createApp } from 'vue'
 import OnuUI from 'onu-ui'
 import App from './App.vue'
 import 'onu-ui/dist/onu-ui.css'
 
-createApp(App)
-  .use(OnuUI)
-  .mount('#app')
+createApp(App).use(OnuUI).mount('#app')
 ```
 
 ::: tip
@@ -112,9 +110,7 @@ import App from './App.vue'
 import 'onu-ui/dist/onu-ui.css'
 import 'uno.css' // [!code ++]
 
-createApp(App)
-  .use(OnuUI)
-  .mount('#app')
+createApp(App).use(OnuUI).mount('#app')
 ```
 
 <br />
