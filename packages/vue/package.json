@@ -5,6 +5,14 @@
   "description": "Onu UI Vue Components",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/onu-ui/onu-ui/issues"
+  },
   "keywords": ["Onu UI", "UnoCSS", "vue", "ui library"],
   "exports": {
     ".": {
