@@ -1,5 +1,6 @@
 {
   "name": "@onu-ui/utils",
+  "type": "module",
   "version": "1.1.1",
   "description": "Onu-UI utils library",
   "author": "Chris <https://github.com/zyyv>",
@@ -22,11 +23,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "import": "./dist/index.js"
     }
   },
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -38,9 +40,6 @@
     "vue": "^3.3.0"
   },
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts"
+    "access": "public"
   }
 }
