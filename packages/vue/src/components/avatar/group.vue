@@ -20,7 +20,7 @@ const base = [
   props.vertical ? 'flex-col' : 'flex-row',
 ]
 
-const binds = props.vertical ? { 'space-y': props.spaceX } : { 'space-x': props.spaceX }
+const binds = props.vertical ? { 'space-y': props['space-y'] } : { 'space-x': props['space-x'] }
 
 // <div space-x="-6" space-y="-6"></div>
 </script>

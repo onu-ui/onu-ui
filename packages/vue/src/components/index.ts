@@ -3,7 +3,7 @@ import { OButton } from './button'
 import { OAvatar, OAvatarGroup } from './avatar'
 
 export default [
-  OButton,
   OAvatar,
   OAvatarGroup,
+  OButton,
 ] as unknown as Plugin[]
