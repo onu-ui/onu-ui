@@ -48,6 +48,7 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
         },
       }
     },
+    options: resolvedOptions,
   }
 })
 
