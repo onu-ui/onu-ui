@@ -1,7 +1,7 @@
 {
   "name": "@onu-ui/preset",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Opinionated Onu UI preset for UnoCSS.",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
