@@ -33,7 +33,7 @@ export const button: CustomShortcut[] = [
         o-transition font-onu font-medium
         border-(~ current) of-hidden
         `],
-  ['btn-text', `bg-transparent text-context dark:text-context shadow-none`],
+  ['btn-text', `bg-transparent text-context dark:text-context shadow-none p0 border-0`],
   ['btn-link', `btn-text hover:(underline underline-offset-4)`],
   ['btn-ghost', `btn-text btn-disabled-theme-color hover:bg-context hover:o-theme-text`],
   ['btn-ghost-light', `btn-text btn-disabled-theme-color hover:bg-theme-100 dark:hover:bg-theme-900`],
