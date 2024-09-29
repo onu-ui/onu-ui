@@ -13,7 +13,12 @@
   "bugs": {
     "url": "https://github.com/onu-ui/onu-ui/issues"
   },
-  "keywords": ["Onu UI", "UnoCSS", "vue", "ui library"],
+  "keywords": [
+    "Onu UI",
+    "UnoCSS",
+    "vue",
+    "ui library"
+  ],
   "exports": {
     ".": {
       "import": "./dist/onu-ui.js",

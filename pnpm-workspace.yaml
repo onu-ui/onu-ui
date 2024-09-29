@@ -5,59 +5,59 @@ packages:
   - '!**/test/**'
   - docs
 catalog:
-  '@antfu/eslint-config': 2.27.1
-  '@iconify-json/carbon': ^1.1.37
-  '@iconify-json/fluent-emoji': ^1.1.19
+  '@antfu/eslint-config': ^3.7.3
+  '@iconify-json/carbon': ^1.2.1
+  '@iconify-json/fluent-emoji': ^1.2.0
   '@iconify-json/lets-icons': ^1.2.0
-  '@iconify-json/line-md': ^1.1.40
-  '@iconify-json/logos': ^1.1.44
-  '@iconify-json/ri': ^1.1.22
-  '@shikijs/vitepress-twoslash': ^1.14.1
+  '@iconify-json/line-md': ^1.2.1
+  '@iconify-json/logos': ^1.2.0
+  '@iconify-json/ri': ^1.2.0
+  '@shikijs/vitepress-twoslash': ^1.21.0
   '@types/fs-extra': ^11.0.4
-  '@types/node': ^22.5.0
+  '@types/node': ^22.7.4
   '@types/prettier': ^3.0.0
-  '@unocss/cli': ^0.62.3
-  '@unocss/preset-attributify': ^0.62.3
-  '@unocss/preset-icons': ^0.62.3
-  '@unocss/preset-mini': ^0.62.3
-  '@unocss/preset-uno': ^0.62.3
-  '@unocss/preset-web-fonts': ^0.62.3
-  '@unocss/reset': ^0.62.3
-  '@vitejs/plugin-vue': ^5.1.2
+  '@unocss/cli': ^0.63.1
+  '@unocss/preset-attributify': ^0.63.1
+  '@unocss/preset-icons': ^0.63.1
+  '@unocss/preset-mini': ^0.63.1
+  '@unocss/preset-uno': ^0.63.1
+  '@unocss/preset-web-fonts': ^0.63.1
+  '@unocss/reset': ^0.63.1
+  '@vitejs/plugin-vue': ^5.1.4
   '@vitejs/plugin-vue-jsx': ^4.0.1
   '@vitest/coverage-c8': ^0.33.0
-  '@vitest/ui': ^2.0.5
-  '@vue/repl': ^4.3.1
+  '@vitest/ui': ^2.1.1
+  '@vue/repl': ^4.4.2
   '@vue/test-utils': ^2.4.6
-  '@vueuse/core': ^11.0.3
-  bumpp: ^9.5.2
+  '@vueuse/core': ^11.1.0
+  bumpp: ^9.6.1
   compare-versions: ^6.1.1
   cross-env: ^7.0.3
-  eslint: ^9.9.1
-  esno: ^4.7.0
-  execa: ^9.3.1
+  eslint: ^9.11.1
+  esno: ^4.8.0
+  execa: ^9.4.0
   floating-vue: ^5.2.2
   fs-extra: ^11.2.0
-  jsdom: ^25.0.0
-  lint-staged: ^15.2.9
+  jsdom: ^25.0.1
+  lint-staged: ^15.2.10
   magic-color: ^1.2.2
   npm-run-all: ^4.1.5
   ohmyfetch: ^0.4.21
   prettier: ^3.3.3
   rimraf: ^6.0.1
   simple-git-hooks: ^2.11.1
-  taze: ^0.16.6
-  tsup: ^8.2.4
-  typescript: ^5.5.4
+  taze: ^0.17.2
+  tsup: ^8.3.0
+  typescript: ^5.6.2
   unbuild: ^2.0.0
-  unocss: ^0.62.3
+  unocss: ^0.63.1
   unocss-transformer-alias: ^0.0.8
-  unplugin-auto-import: ^0.18.2
+  unplugin-auto-import: ^0.18.3
   unplugin-vue-components: ^0.27.4
-  vite: ^5.4.2
+  vite: ^5.4.8
   vite-plugin-dts: 4.0.3
   vite-plugin-inspect: ^0.8.7
   vitepress: ^1.3.4
-  vitest: ^2.0.5
-  vue: ^3.4.38
-  vue-tsc: ^2.0.29
+  vitest: ^2.1.1
+  vue: ^3.5.10
+  vue-tsc: ^2.1.6

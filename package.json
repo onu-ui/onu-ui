@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.1.2",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.11.0",
   "license": "MIT",
   "scripts": {
     "dev": "pnpm dev-preset",
@@ -27,7 +27,7 @@
     "volar:helper": "esno scripts/volar-helper",
     "clean": "rimraf packages/*/dist --glob",
     "postinstall": "npx simple-git-hooks",
-    "major": "taze minor -wIr",
+    "taze": "taze major -wIr",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
@@ -79,6 +79,8 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue,md}": []
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
   }
 }
