@@ -5,6 +5,7 @@ import { defaults } from './defaults'
 import { avatar } from './avatar'
 import { badge } from './badge'
 import { switches } from './switch'
+import { radio } from './radio'
 
 export const shortcuts: CustomShortcut[] = [
   defaults,
@@ -13,4 +14,5 @@ export const shortcuts: CustomShortcut[] = [
   button,
   input,
   switches,
+  radio,
 ].flat()
