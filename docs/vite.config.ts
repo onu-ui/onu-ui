@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    UnoCSS(),
+    UnoCSS() as any,
     Components({
       dirs: [
         '.vitepress/theme/components',
