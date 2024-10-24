@@ -33,12 +33,12 @@ export const radio: CustomShortcut[] = [
   [
     'radio',
     `
-      radio-md radio-circle relative flex items-center
+      radio-md radio-circle relative flex items-center o-black dark:o-white
       checked:child-input:border-context:40
       disabled:child-input:(cursor-not-allowed op-50)
       child-input:(
         checked:border-context:30 cursor-pointer
-        appearance-none border border-gray-300:50 o-transition
+        appearance-none border border-solid border-gray-300:50 o-transition
       )
     `,
   ],
@@ -46,7 +46,7 @@ export const radio: CustomShortcut[] = [
     'radio-dot',
     `
       absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-      size-0 opacity-0
+      size-0 opacity-0 cursor-pointer
       peer-checked:(size-$radio-dot-size opacity-100)
       peer-disabled:(cursor-not-allowed op-50)
       bg-context o-transition
