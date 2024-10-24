@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
 import { createGenerator } from 'unocss'
+import { describe, expect, it } from 'vitest'
 import { presetOnu } from '../../packages/preset/src/index'
 import { contextTargets, unContextTargets } from '../features/assets/context-targets'
 

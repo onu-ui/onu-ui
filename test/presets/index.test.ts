@@ -1,6 +1,6 @@
-import { describe, expect, it } from 'vitest'
-import { createGenerator } from 'unocss'
 import type { PrsetOnuOptions } from '../../packages/preset/src/index'
+import { createGenerator } from 'unocss'
+import { describe, expect, it } from 'vitest'
 import { presetOnu } from '../../packages/preset/src/index'
 import { formatCSSCode } from '../utils'
 

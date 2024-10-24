@@ -1,7 +1,7 @@
+import type { CustomRule } from '../types'
 import { h, parseColor } from '@unocss/preset-mini/utils'
 import { mc } from 'magic-color'
 import { isThemeMetaKey, resolveContextColorByKey } from '../utils'
-import type { CustomRule } from '../types'
 
 export const contexts: CustomRule[] = [
   /**

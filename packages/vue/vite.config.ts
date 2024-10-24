@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
-import UnoCSS from 'unocss/vite'
 import Vue from '@vitejs/plugin-vue'
+import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
 
 const r = (path: string) => resolve(__dirname, path)
 

@@ -16,7 +16,7 @@ export const switches: CustomShortcut[] = [
   }],
   ['switch-disabled', `disabled:(cursor-not-allowed checked:op-50)`],
   ['switch', [`switch-md switch-disabled shrink-0 cursor-pointer appearance-none 
-    rounded-full o-transition duration-200
+    rounded-full o-transition-300
     border border-color-current bg-current
     text-context text-op-32! o-theme-DEFAULT
     [tglbg::#fff] dark:[tglbg::#000]

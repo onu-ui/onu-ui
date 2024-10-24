@@ -30,7 +30,7 @@ const Components: DefaultTheme.SidebarItem[] = [
       // { text: 'Checkbox', link: '/components/checkbox' },
       // { text: 'Switch', link: '/components/switch' },
       // { text: 'Rate', link: '/components/rate' },
-      // { text: 'Radio', link: '/components/radio' },
+      { text: 'Radio', link: '/components/radio' },
     ],
   },
   {

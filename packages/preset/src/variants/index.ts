@@ -59,4 +59,25 @@ export const variants = [
   //     }
   //   }
   // },
+
+  creataChildSelectorVariant('input'),
 ] as Variant<Theme>[]
+
+function creataChildSelectorVariant(selector: string): Variant {
+  return {
+    match: (input: string) => {
+      const prefix = `child-${selector}:`
+      if (input.startsWith(prefix)) {
+        return {
+          matcher: input.slice(prefix.length),
+          selector: (s) => {
+            if (selector.startsWith('non-')) {
+              return `${s} > :not(${selector.slice(4)})`
+            }
+            return `${s} > ${selector}`
+          },
+        }
+      }
+    },
+  }
+}

@@ -1,5 +1,5 @@
-import { isClient } from '@vueuse/core'
 import type { CSSProperties } from 'vue'
+import { isClient } from '@vueuse/core'
 import { camelize } from 'vue'
 
 export function getStyle(element: HTMLElement, styleName: keyof CSSProperties): string {

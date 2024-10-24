@@ -1,11 +1,28 @@
 <script setup lang="ts">
 import { useDark } from '@vueuse/core'
+import { ref } from 'vue'
 
 const isDark = useDark()
 function toggleDark() {
   isDark.value = !isDark.value
 }
 
+const checked2 = ref(false)
+
+function handleSetCheck() {
+  checked2.value = !checked2.value
+}
+
+function handleChange() {
+  // console.log('2------', v)
+}
+
+const radioOptions = [
+  { value: 'option1', label: 'Option 1' },
+  { value: 'option2', label: 'Option 2' },
+  { value: 333, label: 'Option 3' },
+]
+const selectedOption = ref('option1')
 </script>
 
 <template>
@@ -41,6 +58,18 @@ function toggleDark() {
         <span>+99</span>
       </OAvatar>
     </OAvatarGroup>
+
+    <ORadioGroup
+      v-model="selectedOption"
+      :options="radioOptions"
+      name="exampleRadio"
+    />
+
+    <ORadio v-model="checked2" name="xx" :value="false" @change="handleChange" />
+
+    <o-button type="primary" @click="handleSetCheck">
+      {{ checked2 ? 'uncheck' : 'check' }} value2
+    </o-button>
   </div>
 </template>
 
