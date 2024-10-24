@@ -32,8 +32,8 @@ export const button: CustomShortcut[] = [
         o-transition font-onu font-medium
         border-(~ current) of-hidden
         `],
-  ['btn-text', `bg-transparent text-context dark:text-context shadow-none p0 border-0`],
-  ['btn-link', `btn-text hover:(underline underline-offset-4)`],
+  ['btn-text', `bg-transparent text-context dark:text-context shadow-none border-0`],
+  ['btn-link', `btn-text p0 hover:(underline underline-offset-4)`],
   ['btn-ghost', `btn-text btn-disabled-theme-color hover:bg-context hover:o-theme-text`],
   ['btn-ghost-light', `btn-text btn-disabled-theme-color hover:bg-theme-100 dark:hover:bg-theme-900`],
   ['btn-soft', `
@@ -59,20 +59,29 @@ export const button: CustomShortcut[] = [
         `],
 
   // buttonn-group
-  [/^btn-group(?:-(\w+))?$/, ([s]) => {
-    const size = s ?? 'md'
-    if (!(size in Size))
-      return
+  [/^btn-group(?:-(\w+))?$/, ([, s]) => {
+    s ??= 'h'
 
-    //     const tokens = Size[size]
+    const base = `
+    flex items-center justify-center
+    [&>.btn-group-active]:(bg-theme-500 o-theme-text)
+    `
 
-    return `
-                flex items-center justify-center gap-2px
-                [&>.btn]:(rounded-0 bg-[hsl(var(--color-gray-300))])
-                dark:[&>.btn]:(bg-[hsl(var(--color-gray-700))])
-                first:[&>.btn]:(rounded-l-md) last:[&>.btn]:(rounded-r-md)
-                [&>.btn-group-active]:(bg-[hsl(var(--onu-color-500))] o-theme-text)!
-            `
+    if (s === 'h') {
+      return `
+      ${base}
+      [&>.btn]:(rounded-0 border-r-0)
+      first:[&>.btn]:(rounded-l-md) 
+      last:[&>.btn]:(rounded-r-md border-r-1)
+    `
+    }
+    else if (s === 'v') {
+      return `
+      ${base} flex-col
+      [&>.btn]:(rounded-0 border-b-0)
+      first:[&>.btn]:(rounded-t-md)
+      last:[&>.btn]:(rounded-b-md border-b-1)
+    `
+    }
   }],
-
 ]

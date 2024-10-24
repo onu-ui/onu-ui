@@ -83,8 +83,14 @@ const index = ref(0)
         </button>
       </div>
 
-      <div flex items-center justify-center gap-2>
+      <div flex items-center justify-center gap-2 my-2>
         <div class="btn-group">
+          <button v-for="i in 4" :key="i" class="btn btn-solid-cover" :class="index === i - 1 ? 'btn-group-active' : ''" @click="index = i - 1">
+            Button
+          </button>
+        </div>
+
+        <div class="btn-group-v">
           <button v-for="i in 4" :key="i" class="btn btn-solid-cover" :class="index === i - 1 ? 'btn-group-active' : ''" @click="index = i - 1">
             Button
           </button>

@@ -42,7 +42,7 @@ function handleChange(e: Event) {
     </label>
   </div> -->
   <div flex="~ gap-2">
-    <label v-for="v in valueList" :key="v" radio="~ lg square teal" :for="v">
+    <label v-for="v in valueList" :key="v" radio="~ lg square teal dark:purple" :for="v">
       <input
         :id="v"
         :value="v" name="custom" type="radio" :checked="model === v"
