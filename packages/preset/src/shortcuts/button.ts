@@ -17,12 +17,11 @@ export const button: CustomShortcut[] = [
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
   ['btn-hover', 'hover:o-theme-600'],
   //   ['btn-focus', 'focus:o-theme-700'],
-  ['btn-active', 'active:scale-95 active:o-theme-700'],
+  ['btn-active', 'active:o-theme-700'],
   ['btn-disabled', `
         disabled:(
           cursor-not-allowed op-32 shadow-none
           hover:o-theme-DEFAULT
-          active:scale-100
         )
         `],
   ['btn-default', `
