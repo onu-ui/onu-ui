@@ -1,7 +1,7 @@
-import type { WebFontMeta } from '@unocss/preset-web-fonts'
-import type { IconsOptions } from '@unocss/preset-icons'
 import type { DynamicShortcut, Rule, StaticShortcut } from '@unocss/core'
+import type { IconsOptions } from '@unocss/preset-icons'
 import type { Theme } from '@unocss/preset-mini'
+import type { WebFontMeta } from '@unocss/preset-web-fonts'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 

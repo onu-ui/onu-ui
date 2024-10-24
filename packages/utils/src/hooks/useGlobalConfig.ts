@@ -1,9 +1,9 @@
-import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
 import type { App, Ref } from 'vue'
-import { configProviderContextKey } from '../tokens'
-import { mergeObjects } from '../shared'
 import type { InstallOptions } from '../tokens'
 import type { MaybeRef, ProvideFn } from '../types'
+import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
+import { mergeObjects } from '../shared'
+import { configProviderContextKey } from '../tokens'
 
 const globalConfig = ref<InstallOptions>()
 

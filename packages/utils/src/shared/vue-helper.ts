@@ -1,5 +1,5 @@
-import { cloneVNode } from 'vue'
 import type { VNode } from 'vue'
+import { cloneVNode } from 'vue'
 import { isArray, isArrayChildren, isComponent, isElement, isFunction } from './is'
 
 export function getChildrenArray(vn: VNode) {

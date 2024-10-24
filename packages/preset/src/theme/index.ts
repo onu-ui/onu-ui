@@ -1,6 +1,6 @@
 import type { Theme } from '@unocss/preset-mini'
-import { mc } from 'magic-color'
 import type { ResolveOnuOptions } from '../types'
+import { mc } from 'magic-color'
 
 export function theme(options: ResolveOnuOptions): Theme {
   const { color } = options
