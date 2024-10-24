@@ -1,7 +1,7 @@
-import { theme as createTheme } from 'magic-color'
+import { mc } from 'magic-color'
 
 export function resolveTheme(color: string) {
-  const theme = createTheme(color, {
+  const theme = mc.theme(color, {
     type: 'hsl',
     // render: meta => [`--onu-color-${meta[0]}`, meta[1].replace(/hsl\((.*)\)/, '$1')],
   })

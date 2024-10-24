@@ -1,17 +1,17 @@
-import { definePreset } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
-import { presetUno } from '@unocss/preset-uno'
+import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
+import { definePreset } from '@unocss/core'
 import { presetAttributify } from '@unocss/preset-attributify'
 import { presetIcons } from '@unocss/preset-icons'
+import { presetUno } from '@unocss/preset-uno'
 import presetWebFonts from '@unocss/preset-web-fonts'
-import { random } from 'magic-color'
+import { mc } from 'magic-color'
+import { LAYER_ONU_PRESET, LAYER_ONU_UI } from './layers'
+import { preflights } from './preflights'
+import { rules } from './rules'
 import { shortcuts } from './shortcuts'
 import { theme } from './theme'
-import { rules } from './rules'
 import { variants } from './variants'
-import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
-import { preflights } from './preflights'
-import { LAYER_ONU_PRESET, LAYER_ONU_UI } from './layers'
 
 export type { PrsetOnuOptions }
 
@@ -77,7 +77,7 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const resolvedOptions: ResolveOnuOptions = {
     ...defaultOptions,
     ...options,
-    color: options.color === 'auto' ? random() : options.color!,
+    color: options.color === 'auto' ? mc.random() : options.color!,
     icons: {
       ...defaultOptions.icons,
       ...options.icons ?? {},

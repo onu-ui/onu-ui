@@ -7,7 +7,7 @@ const maskImages = {
 }
 
 export const defaults: CustomShortcut[] = [
-  [/^o-transition(-(\d+))?$/, ([, d]) => `transition-all duration-${d || 200} ease-in-out`],
+  [/^o-transition(?:-(\d+))?$/, ([, d]) => `transition-all duration-${d || 200}`],
   ['o-theme-text', 'text-[hsl(var(--onu-color-text))] dark:text-[hsl(var(--onu-color-text))]'],
 
   // mask

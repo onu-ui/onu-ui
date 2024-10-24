@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { resolveTheme } from '@onu-ui/preset/helper'
 import { useDark } from '@vueuse/core'
 import { mc } from 'magic-color'
-import { resolveTheme } from '@onu-ui/preset/helper'
-import ButtonLayout from './components/o-button.vue'
+import { ref } from 'vue'
 import AvatarLayout from './components/o-avatar.vue'
 import BadgeLayout from './components/o-badge.vue'
+import ButtonLayout from './components/o-button.vue'
 import InputLayout from './components/o-input.vue'
+import RadioLayout from './components/o-radio.vue'
 import SwitchLayout from './components/o-switch.vue'
 
 const isDark = useDark()
@@ -54,33 +55,7 @@ function randomTheme() {
     <BadgeLayout />
     <InputLayout />
     <SwitchLayout />
-
-    <label class="radio radio-theme-400" for="foo">
-      <input
-        id="foo" value="foo" name="output" type="radio" :checked="true"
-        class="peer"
-      >
-      <span />
-    </label>
-
-    <label class="relative flex items-center cursor-pointer" for="foo">
-      <input
-        id="foo" value="foo" name="output" type="radio" :checked="true"
-        class="peer h-4 w-4 cursor-pointer appearance-none rounded-full border border-slate-300:50 checked:border-purple:30 transition-all"
-      >
-      <span
-        class="absolute bg-purple size-0 rounded-full peer-checked:size-2.2 transition-all duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      />
-    </label>
-    <label class="relative flex items-center cursor-pointer" for="foo">
-      <input
-        id="foo" value="foo" name="output" type="radio" :checked="true"
-        class="peer h-4 w-4 cursor-pointer appearance-none rounded-full border border-slate-300:50 checked:border-purple:30 transition-all"
-      >
-      <span
-        class="absolute bg-purple size-0 rounded-full peer-checked:size-2.2 transition-all duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      />
-    </label>
+    <RadioLayout />
   </div>
 </template>
 

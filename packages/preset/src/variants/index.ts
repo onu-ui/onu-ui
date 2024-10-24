@@ -61,7 +61,6 @@ export const variants = [
   // },
 
   creataChildSelectorVariant('input'),
-  creataChildSelectorVariant('non-input'),
 ] as Variant<Theme>[]
 
 function creataChildSelectorVariant(selector: string): Variant {
