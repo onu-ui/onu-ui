@@ -204,9 +204,9 @@ video {
   display: none;
 }
 :root {
-  --onu-color-50: 258 100 97;
+  --onu-color-50: 255 100 98;
   --onu-color-100: 256 100 95;
-  --onu-color-200: 255 100 92;
+  --onu-color-200: 256 100 92;
   --onu-color-300: 258 100 85;
   --onu-color-400: 261 100 76;
   --onu-color-500: 264 100 67;
