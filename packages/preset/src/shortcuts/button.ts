@@ -47,7 +47,11 @@ export const button: CustomShortcut[] = [
         bg-transparent border-1 border-solid
         text-context dark:text-context
         `],
-  ['btn-outline-cover', `btn-outline hover:bg-theme-600 hover:o-theme-text`],
+  ['btn-outline-cover', `
+        btn-outline hover:bg-context hover:border-context text-theme-500!
+        hover:o-theme-200 dark:hover:o-theme-800
+        active:o-theme-300 dark:active:o-theme-700
+        `],
   ['btn-solid', `btn-outline`],
   ['btn-solid-cover', `btn-outline-cover btn-disabled-theme-color`],
   ['btn-dashed', `btn-outline border-dashed`],
@@ -64,7 +68,7 @@ export const button: CustomShortcut[] = [
 
     const base = `
     flex items-center justify-center
-    [&>.btn-group-active]:(bg-theme-500 o-theme-text)
+    [&>.btn-group-active]:(bg-theme-500 text-theme-100! dark:text-theme-900! hover:border-theme-500)
     `
 
     if (s === 'h') {

@@ -11,7 +11,7 @@ function handleChange(e: Event) {
 </script>
 
 <template>
-  <!-- <div flex="~ gap-2">
+  <div flex="~ gap-2">
     <label v-for="v in valueList" :key="v" radio="~ xs theme-400" :for="v">
       <input
         :id="v" :value="v" name="custom" type="radio" :checked="model === v"
@@ -40,7 +40,7 @@ function handleChange(e: Event) {
       >
       <span class="radio-dot" />
     </label>
-  </div> -->
+  </div>
   <div flex="~ gap-2">
     <label v-for="v in valueList" :key="v" radio="~ lg square teal dark:purple" :for="v">
       <input
