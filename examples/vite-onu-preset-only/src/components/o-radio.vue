@@ -12,7 +12,7 @@ function handleChange(e: Event) {
 
 <template>
   <div flex="~ gap-2">
-    <label v-for="v in valueList" :key="v" radio="~ xs theme-400" :for="v">
+    <label v-for="v in valueList" :key="v" radio="~ xs theme-500" :for="v">
       <input
         :id="v" :value="v" name="custom" type="radio" :checked="model === v"
         class="peer"
@@ -22,7 +22,7 @@ function handleChange(e: Event) {
     </label>
   </div>
   <div flex="~ gap-2">
-    <label v-for="v in valueList" :key="v" radio="~ sm theme-400" :for="v">
+    <label v-for="v in valueList" :key="v" radio="~ sm theme-500" :for="v">
       <input
         :id="v" :value="v" name="custom" type="radio" :checked="model === v"
         class="peer"
@@ -42,7 +42,7 @@ function handleChange(e: Event) {
     </label>
   </div>
   <div flex="~ gap-2">
-    <label v-for="v in valueList" :key="v" radio="~ lg square teal dark:purple" :for="v">
+    <label v-for="v in valueList" :key="v" radio="~ lg square teal" :for="v">
       <input
         :id="v"
         :value="v" name="custom" type="radio" :checked="model === v"

@@ -49,7 +49,8 @@ The radio component is a form control that allows the user to select a single op
 
 Use the `radio-<color>` class to change the color of the radio.
 
-```html
+```html {1}
+<!-- radio-theme-400 radio-purple radio-green dark:radio-red -->
 <label radio="~ theme-400" for="foo">
   <input
     class="peer" /* Required for UnoCSS */
@@ -74,7 +75,7 @@ Use the `radio-<color>` class to change the color of the radio.
     <span class="radio-dot" />
   </label>
 
-  <label radio="~ purple" for="foo">
+  <label radio="~ purple dark:red" for="foo">
     <input
       class="peer"
       type="radio"
@@ -84,7 +85,7 @@ Use the `radio-<color>` class to change the color of the radio.
     <span class="radio-dot" />
   </label>
 
-  <label radio="~ green" for="foo">
+  <label radio="~ green dark:blue" for="foo">
     <input
       class="peer"
       type="radio"
