@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /guide/
+      link: /guide/getting-started
 
     - theme: alt
       text: Playground (TODO)

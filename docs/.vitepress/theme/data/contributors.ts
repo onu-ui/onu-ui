@@ -8,8 +8,8 @@ export const teamMembers = [
     orgLink: 'https://unocss.dev/',
     links: [
       { icon: 'github', link: 'https://github.com/zyyv' },
+      { icon: 'bluesky', link: 'https://bsky.app/profile/zyyv.bsky.social' },
       { icon: 'mastodon', link: 'https://elk.zone/mas.to/@chris_zhu' },
-      { icon: 'twitter', link: 'https://twitter.com/chris_zyyv' },
     ],
   },
   {

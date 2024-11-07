@@ -149,7 +149,7 @@ export default defineConfig({
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/onu-ui/onu-ui' },
-      { icon: 'x', link: 'https://twitter.com/chris_zyyv' },
+      { icon: 'bluesky', link: 'https://bsky.app/profile/zyyv.bsky.social' },
     ],
     footer: {
       message: 'Released under the MIT License.',
