@@ -5,7 +5,7 @@ const Size: Record<SizeType, number> = {
   xs: 4.5,
   sm: 5.25,
   md: 6,
-  lg: 6.5,
+  lg: 6.75,
 }
 
 export const switches: CustomShortcut[] = [
@@ -23,11 +23,14 @@ export const switches: CustomShortcut[] = [
     border-(~ 2 transparent solid) rd-full
     bg-gray-300 dark:bg-gray-700
     [&>input]:(size-0 op-0) 
-    has-[>input:checked]:bg-context o-theme-400 dark:o-theme-500
+    has-[>input:checked]:bg-context
+    has-[>input:disabled]:(cursor-not-allowed op-72)
     `],
   ['switch-dot', `
-    bg-light dark:bg-dark rd-full o-transition aspect-square pointer-events-none
-    h-$dot-size peer-checked:translate-x-$dot-size
+    bg-light dark:bg-dark 
+    flex items-center justify-center select-none of-hidden rd-full h-$dot-size aspect-square
+    o-transition pointer-events-none
+    peer-checked:translate-x-$dot-size
     `],
   ['switch-default', `o-theme-dark dark:o-theme-light`],
 ]

@@ -28,7 +28,7 @@ const Components: DefaultTheme.SidebarItem[] = [
     items: [
       { text: 'Input', link: '/components/input' },
       // { text: 'Checkbox', link: '/components/checkbox' },
-      // { text: 'Switch', link: '/components/switch' },
+      { text: 'Switch', link: '/components/switch' },
       // { text: 'Rate', link: '/components/rate' },
       { text: 'Radio', link: '/components/radio' },
     ],

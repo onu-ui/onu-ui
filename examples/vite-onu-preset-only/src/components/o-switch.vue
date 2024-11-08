@@ -28,19 +28,26 @@ const disabled = ref(false)
           <span switch-dot />
         </label>
 
-        <label switch="~ sm">
+        <label switch="~ sm theme-400">
           <input v-model="checked" class="peer" type="checkbox" :disabled="disabled">
           <span switch-dot />
         </label>
 
-        <label switch="~ md">
+        <label switch="~ md theme-400">
           <input v-model="checked" class="peer" type="checkbox" :disabled="disabled">
           <span switch-dot />
         </label>
 
-        <label switch="~ lg">
+        <label switch="~ lg red">
           <input v-model="checked" class="peer" type="checkbox" :disabled="disabled">
           <span switch-dot />
+        </label>
+
+        <label switch="~ theme-400">
+          <input v-model="checked" class="peer" type="checkbox" :disabled="disabled">
+          <div switch-dot important:bg-op-50>
+            <i :class="checked ? 'i-carbon-moon' : 'i-carbon-sun'" />
+          </div>
         </label>
       </div>
     </div>

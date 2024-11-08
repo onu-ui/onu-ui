@@ -8,6 +8,7 @@ import Overview from './components/Overview.vue'
 import ThemePalette from './components/ThemePalette.vue'
 import ThemePaletteInner from './components/ThemePaletteInner.vue'
 import HomePage from './components/HomePage.vue'
+import { installExampleComponents } from './examples'
 
 import 'floating-vue/dist/style.css'
 import '@shikijs/vitepress-twoslash/style.css'
@@ -28,6 +29,8 @@ export default {
     app.component('ThemePaletteInner', ThemePaletteInner)
     app.component('Overview', Overview)
     app.component('VMenu', Menu)
+    
+    installExampleComponents(app)
 
     app.use(TwoslashFloatingVue)
     app.use(FloatingVue)
