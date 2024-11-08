@@ -1,9 +1,10 @@
 <script lang='ts' setup>
+import OCard from './o-card.vue'
 </script>
 
 <template>
-  <div>
-    <div gap-2 flex-wrap>
+  <OCard title="Avatar Component" desc="Avatar component with custom style">
+    <div flex="~ col gap-2">
       <div flex items-center justify-center gap-2>
         <div class="avatar">
           <div class="rounded">
@@ -30,7 +31,19 @@
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
         </div>
+      </div>
+      <div flex items-center justify-center gap-2>
         <div class="avatar mask-hexagon">
+          <div class="w-24 rounded">
+            <img src="https://avatars.githubusercontent.com/u/42139754">
+          </div>
+        </div>
+        <div class="avatar mask-squircle">
+          <div class="w-24 rounded">
+            <img src="https://avatars.githubusercontent.com/u/42139754">
+          </div>
+        </div>
+        <div class="avatar mask-triangle">
           <div class="w-24 rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
           </div>
@@ -78,5 +91,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </OCard>
 </template>

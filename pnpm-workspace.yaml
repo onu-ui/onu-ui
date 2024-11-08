@@ -60,4 +60,5 @@ catalog:
   vitepress: ^1.5.0
   vitest: ^2.1.4
   vue: ^3.5.12
+  vue-flow-layout: ^0.1.1
   vue-tsc: ^2.1.10

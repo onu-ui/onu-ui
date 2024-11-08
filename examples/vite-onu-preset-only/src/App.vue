@@ -3,6 +3,7 @@ import { resolveTheme } from '@onu-ui/preset/helper'
 import { useDark } from '@vueuse/core'
 import { mc } from 'magic-color'
 import { ref } from 'vue'
+import { FlowLayout } from 'vue-flow-layout'
 import AvatarLayout from './components/o-avatar.vue'
 import BadgeLayout from './components/o-badge.vue'
 import ButtonLayout from './components/o-button.vue'
@@ -50,12 +51,14 @@ function randomTheme() {
       Toggle Dark
     </button>
 
-    <ButtonLayout />
-    <AvatarLayout />
-    <BadgeLayout />
-    <InputLayout />
-    <SwitchLayout />
-    <RadioLayout />
+    <FlowLayout :cols="2" :gap="24" w-90vw>
+      <ButtonLayout />
+      <AvatarLayout />
+      <BadgeLayout />
+      <InputLayout />
+      <SwitchLayout />
+      <RadioLayout />
+    </FlowLayout>
   </div>
 </template>
 

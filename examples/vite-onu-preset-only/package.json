@@ -12,7 +12,8 @@
     "@onu-ui/preset": "workspace:*",
     "@vueuse/core": "catalog:",
     "magic-color": "catalog:",
-    "vue": "catalog:"
+    "vue": "catalog:",
+    "vue-flow-layout": "catalog:"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:",
