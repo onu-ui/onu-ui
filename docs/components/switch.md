@@ -14,7 +14,7 @@ A control that allows the user to toggle between checked and not checked.
 
 ```html {3}
 <label switch="~ theme-400 dark:theme-500">
-  <input 
+  <input
     class="peer" // Add peer class to the input element
     type="checkbox"
   />
@@ -57,7 +57,7 @@ We have built-in theme color for the active state, you can initialize the color 
 
 #### Size
 
-默认使用 `md` 大小，你可以使用 `switch-xs|sm|md|lg` 来改变大小。
+Default size is `md`, you can use `switch-xs|sm|md|lg` to change the size.
 
 ```html {1}
 <label switch="~ md theme-400">
@@ -107,8 +107,15 @@ We have built-in theme color for the active state, you can initialize the color 
 
 ### <i i-carbon:chart-bubble-packed /> Compose
 
+```html
+<label switch="~ theme-400">
+  <input v-model="checked" class="peer" type="checkbox">
+  <div switch-dot important:bg-op-50>
+    <i :class="checked ? 'i-carbon-moon' : 'i-carbon-sun'" />
+  </div>
+</label>
+```
 <SwitchCompose />
-
 
 ## <i i-logos-vue /> With Vue
 
