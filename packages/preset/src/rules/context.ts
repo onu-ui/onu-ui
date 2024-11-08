@@ -137,4 +137,28 @@ export const contexts: CustomRule[] = [
       [cssCustomKey]: h.bracket(name) ?? name,
     }
   }],
+
+  [/^o-round(?:-(.+))?$/, ([,d]) => {
+    if (d) {
+      const rounds: any = {
+        none: 0,
+        sm: 0.3,
+        md: 0.5,
+        lg: 0.75,
+        xl: 1,
+      }
+
+      if (d in rounds) {
+        return {
+          '--onu-radius': `${rounds[d]}rem`,
+          'border-radius': 'calc(var(--onu-radius) - 2px)',
+        }
+      }
+    }
+    else {
+      return {
+        'border-radius': 'calc(var(--onu-radius) - 2px)',
+      }
+    }
+  }],
 ]

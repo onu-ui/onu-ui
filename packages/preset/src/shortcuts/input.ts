@@ -44,7 +44,7 @@ export const input: CustomShortcut[] = [
           input-disabled
           border border-solid border-theme-context border-op-0
           bg-transparent
-          outline-none rounded
+          outline-none o-round
           placeholder:color-gray-300
           focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)

@@ -2,10 +2,10 @@ import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
-  xs: 'px-2.5 py-1.5 text-xs rounded-md',
-  sm: 'px-2.5 py-1.5 text-sm rounded-md',
-  md: 'px-3 py-2 text-sm rounded-md',
-  lg: 'px-3.5 py-2.5 text-base rounded-lg',
+  xs: 'px-2.5 py-1.5 text-xs',
+  sm: 'px-2.5 py-1.5 text-sm',
+  md: 'px-3 py-2 text-sm',
+  lg: 'px-3.5 py-2.5 text-base o-round-lg',
 }
 
 export const button: CustomShortcut[] = [
@@ -25,7 +25,7 @@ export const button: CustomShortcut[] = [
         )
         `],
   ['btn-default', `
-        btn-md btn-hover btn-active btn-disabled
+        btn-md btn-hover btn-active btn-disabled o-round
         text-current bg-transparent
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer shadow-sm

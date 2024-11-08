@@ -13,6 +13,7 @@ export function resolveTheme(color: string) {
   --onu-color-DEFAULT: var(--onu-color-500);
   --onu-color-text: var(--onu-color-100);
   --onu-color-text-invert: var(--onu-color-950);
+  --onu-radius: 0.5rem;
 }
 
 .dark {
