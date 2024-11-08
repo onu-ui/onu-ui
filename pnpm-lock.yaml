@@ -39,19 +39,10 @@ catalogs:
     '@types/prettier':
       specifier: ^3.0.0
       version: 3.0.0
-    '@unocss/preset-attributify':
-      specifier: ^0.64.0
-      version: 0.64.0
-    '@unocss/preset-icons':
-      specifier: ^0.64.0
-      version: 0.64.0
     '@unocss/preset-mini':
       specifier: ^0.64.0
       version: 0.64.0
     '@unocss/preset-uno':
-      specifier: ^0.64.0
-      version: 0.64.0
-    '@unocss/preset-web-fonts':
       specifier: ^0.64.0
       version: 0.64.0
     '@unocss/reset':
@@ -404,24 +395,16 @@ importers:
 
   packages/preset:
     dependencies:
-      '@unocss/preset-attributify':
-        specifier: 'catalog:'
-        version: 0.64.0
-      '@unocss/preset-icons':
-        specifier: 'catalog:'
-        version: 0.64.0
       '@unocss/preset-mini':
-        specifier: 'catalog:'
-        version: 0.64.0
-      '@unocss/preset-uno':
-        specifier: 'catalog:'
-        version: 0.64.0
-      '@unocss/preset-web-fonts':
         specifier: 'catalog:'
         version: 0.64.0
       magic-color:
         specifier: 'catalog:'
         version: 2.0.0
+    devDependencies:
+      unocss:
+        specifier: 'catalog:'
+        version: 0.64.0(postcss@8.4.47)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0))(vue@3.5.12(typescript@5.6.3))
 
   packages/utils:
     dependencies:

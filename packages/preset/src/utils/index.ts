@@ -1,5 +1,5 @@
-import type { CSSValue } from '@unocss/core'
 import type { Theme } from '@unocss/preset-mini'
+import type { CSSValue } from 'unocss'
 import { parseColor } from '@unocss/preset-mini/utils'
 import { mc } from 'magic-color'
 

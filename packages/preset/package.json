@@ -44,11 +44,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@unocss/preset-attributify": "catalog:",
-    "@unocss/preset-icons": "catalog:",
     "@unocss/preset-mini": "catalog:",
-    "@unocss/preset-uno": "catalog:",
-    "@unocss/preset-web-fonts": "catalog:",
     "magic-color": "catalog:"
+  },
+  "devDependencies": {
+    "unocss": "catalog:"
   }
 }
