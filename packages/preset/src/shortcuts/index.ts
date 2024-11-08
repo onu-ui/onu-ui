@@ -2,6 +2,7 @@ import type { CustomShortcut } from '../types'
 import { avatar } from './avatar'
 import { badge } from './badge'
 import { button } from './button'
+import { cards } from './card'
 import { defaults } from './defaults'
 import { input } from './input'
 import { radio } from './radio'
@@ -15,4 +16,5 @@ export const shortcuts: CustomShortcut[] = [
   input,
   switches,
   radio,
+  cards,
 ].flat()

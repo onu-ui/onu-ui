@@ -139,25 +139,16 @@ export const contexts: CustomRule[] = [
   }],
 
   [/^o-round(?:-(.+))?$/, ([,d]) => {
-    if (d) {
-      const rounds: any = {
-        none: 0,
-        sm: 0.3,
-        md: 0.5,
-        lg: 0.75,
-        xl: 1,
-      }
-
-      if (d in rounds) {
-        return {
-          '--onu-radius': `${rounds[d]}rem`,
-          'border-radius': 'calc(var(--onu-radius) - 2px)',
-        }
-      }
+    const rounds: any = {
+      sm: -4,
+      md: -2,
+      lg: 0,
+      xl: 4,
     }
-    else {
+
+    if (d in rounds) {
       return {
-        'border-radius': 'calc(var(--onu-radius) - 2px)',
+        'border-radius': `calc(var(--onu-radius) + ${rounds[d]}px)`,
       }
     }
   }],

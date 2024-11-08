@@ -25,7 +25,7 @@ export const button: CustomShortcut[] = [
         )
         `],
   ['btn-default', `
-        btn-md btn-hover btn-active btn-disabled o-round
+        btn-md btn-hover btn-active btn-disabled o-round-md
         text-current bg-transparent
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer shadow-sm
