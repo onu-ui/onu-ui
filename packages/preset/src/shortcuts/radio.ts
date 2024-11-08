@@ -33,7 +33,7 @@ export const radio: CustomShortcut[] = [
   [
     'radio',
     `
-      radio-md radio-circle relative flex items-center o-black dark:o-white
+      radio-md radio-circle relative flex items-center o-dark dark:o-light
       checked:child-input:border-context:40
       disabled:child-input:(cursor-not-allowed op-50)
       child-input:(

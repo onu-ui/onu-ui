@@ -48,7 +48,7 @@ export const input: CustomShortcut[] = [
           placeholder:color-gray-300
           focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)
-          o-black dark:o-white
+          o-dark dark:o-light
         `],
   ['input', `
           input-default input-bordered input-focus

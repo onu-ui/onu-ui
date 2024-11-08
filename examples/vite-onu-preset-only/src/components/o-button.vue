@@ -31,16 +31,16 @@ const index = ref(0)
       <div flex items-center justify-center gap-2>
         Size:
         <button btn="size-xs default" :disabled="disabled">
-          btn btn-xs
+          btn-xs
         </button>
         <button class="btn-sm btn-default" :disabled="disabled">
-          btn btn-sm
+          btn-sm
         </button>
         <button class="btn btn-md" :disabled="disabled">
-          btn btn-md
+          btn-md
         </button>
         <button class="btn btn-lg" :disabled="disabled">
-          btn btn-lg
+          btn-lg
         </button>
         <div btn>
           btn
