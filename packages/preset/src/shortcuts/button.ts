@@ -5,7 +5,7 @@ const Size: Record<SizeType, string> = {
   xs: 'px-2.5 py-1.5 text-xs',
   sm: 'px-2.5 py-1.5 text-sm',
   md: 'px-3 py-2 text-sm',
-  lg: 'px-3.5 py-2.5 text-base o-round-lg',
+  lg: 'px-3.5 py-2.5 text-base o-radius-lg',
 }
 
 export const button: CustomShortcut[] = [
@@ -25,7 +25,7 @@ export const button: CustomShortcut[] = [
         )
         `],
   ['btn-default', `
-        btn-md btn-hover btn-active btn-disabled o-round-md
+        btn-md btn-hover btn-active btn-disabled o-radius-md
         text-current bg-transparent
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer shadow-sm

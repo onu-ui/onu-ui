@@ -138,7 +138,7 @@ export const contexts: CustomRule[] = [
     }
   }],
 
-  [/^o-round(?:-(.+))?$/, ([,d]) => {
+  [/^o-radius(?:-(.+))?$/, ([,d]) => {
     const rounds: any = {
       sm: -4,
       md: -2,

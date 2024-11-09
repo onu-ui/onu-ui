@@ -22,7 +22,7 @@ export const switches: CustomShortcut[] = [
     switch-md inline-flex items-center cursor-pointer o-transition
     border-(~ 2 transparent solid) rd-full
     bg-gray-300 dark:bg-gray-700
-    [&>input]:(size-0 op-0) 
+    [&>input]:(size-0 op-0)
     has-[>input:checked]:bg-context
     has-[>input:disabled]:(cursor-not-allowed op-72)
     `],
