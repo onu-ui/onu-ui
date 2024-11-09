@@ -30,6 +30,14 @@ import SwitchLayout from './components/o-switch.vue'
       <SwitchLayout />
       <RadioLayout />
       <CheckboxLayout />
+      <OCard title="Card Component" desc="Card description">
+        I'm a card body
+        <template #footer>
+          <button btn>
+            Click me
+          </button>
+        </template>
+      </OCard>
     </FlowLayout>
   </div>
 </template>
