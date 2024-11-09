@@ -109,6 +109,7 @@ export default defineConfig({
           ...Components as any,
         ],
       },
+      { text: 'Examples', link: '/example/', target: '_blank' },
       {
         text: `v${version}`,
         items: [
@@ -156,4 +157,5 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present Chris',
     },
   },
+  outDir: './dist'
 })

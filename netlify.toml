@@ -1,5 +1,5 @@
 [build]
-publish = "docs/.vitepress/dist"
+publish = "docs/dist"
 command = "pnpm run deploy"
 
 [build.environment]
@@ -9,4 +9,9 @@ NODE_VERSION = "20"
 [[redirects]]
 from = "/play/*"
 to = "/play/index.html"
+status = 200
+
+[[redirects]]
+from = "/example/*"
+to = "/example/index.html"
 status = 200
