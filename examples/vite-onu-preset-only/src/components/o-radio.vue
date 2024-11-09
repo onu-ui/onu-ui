@@ -1,7 +1,4 @@
 <script lang='ts' setup>
-import { ref } from 'vue'
-import OCard from './o-card.vue'
-
 const model = ref('foo')
 
 const valueList = ['foo', 'bar', 'baz', 'qux', 'quux']

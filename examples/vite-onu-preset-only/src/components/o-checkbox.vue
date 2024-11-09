@@ -1,7 +1,4 @@
 <script lang='ts' setup>
-import { ref } from 'vue'
-import OCard from './o-card.vue'
-
 const isChecked = ref(false)
 const isDisabled = ref(false)
 </script>
@@ -65,24 +62,28 @@ const isDisabled = ref(false)
     </div>
 
     <template #footer>
-      <label for="checkedControl" flex gap-2 cursor-pointer>
-        <label checkbox>
+      <label for="checkedControl" flex items-center gap-2 cursor-pointer select-none>
+        <label switch="~ theme-400">
           <input id="checkedControl" v-model="isChecked" class="peer" type="checkbox">
-          <div checkbox-dot>
-            <i i-carbon-checkmark />
-          </div>
+          <span switch-dot />
         </label>
         <span>Checked</span>
       </label>
 
-      <label for="disabledControl" flex gap-2 cursor-pointer>
-        <label checkbox>
+      <label for="disabledControl" flex items-center gap-2 cursor-pointer select-none>
+        <label switch="~ yellow">
           <input id="disabledControl" v-model="isDisabled" class="peer" type="checkbox">
-          <div checkbox-dot>
-            <i i-carbon-checkmark />
-          </div>
+          <span switch-dot />
         </label>
         <span>Disabled</span>
+      </label>
+
+      <label for="themeControl" flex items-center gap-2 cursor-pointer select-none>
+        <label switch="~ theme-400">
+          <input id="themeControl" class="peer" type="checkbox" @change="toggleDark()">
+          <span switch-dot />
+        </label>
+        <span>Toggle Dark</span>
       </label>
     </template>
   </OCard>

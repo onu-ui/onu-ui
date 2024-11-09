@@ -1,7 +1,3 @@
-<script lang='ts' setup>
-import OCard from './o-card.vue'
-</script>
-
 <template>
   <OCard title="Avatar Component" desc="Avatar component with custom style">
     <div flex="~ col gap-2">

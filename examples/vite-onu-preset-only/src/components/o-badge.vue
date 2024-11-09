@@ -1,7 +1,3 @@
-<script lang='ts' setup>
-import OCard from './o-card.vue'
-</script>
-
 <template>
   <OCard title="Badge Component" desc="Badge component with custom style">
     <div gap-2 flex-wrap mt-4>

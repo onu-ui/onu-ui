@@ -12,6 +12,8 @@
     "@onu-ui/preset": "workspace:*",
     "@vueuse/core": "catalog:",
     "magic-color": "catalog:",
+    "unplugin-auto-import": "catalog:",
+    "unplugin-vue": "5.1.5",
     "vue": "catalog:",
     "vue-flow-layout": "catalog:"
   },
