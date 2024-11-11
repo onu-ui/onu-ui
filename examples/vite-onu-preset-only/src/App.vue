@@ -10,35 +10,37 @@ import SwitchLayout from './components/o-switch.vue'
 </script>
 
 <template>
-  <div wrapper gap-2 mb-10 text-sm>
-    <div flex items-center justify-center gap-2>
-      <div v-for="c in themeColors" :key="c" cursor-pointer w-10 h-10 rd :style="{ backgroundColor: c }" @click="generateTheme(c)" />
+  <div>
+    <header flex="~ items-center gap-3" text-lg hover:children:text-theme-400 px-3 py-1.5 rd-full fixed z-10 backdrop-blur-sm top-2 right-2 border="~ solid theme-400-20">
+      <button i-carbon-color-palette title="Change to a random theme" @click="randomTheme()" />
+      <button i-carbon-rotate-counterclockwise-alt-filled title="Switch Radius" @click="changeRadius()" />
+      <button i-carbon-sun dark:i-carbon-moon title="Dark/Light" @click="toggleDark()" />
+      <a href="https://github.com/onu-ui/onu-ui" target="_blank" i-carbon-logo-github />
+    </header>
+    <div fixed left-2 top-2 z-10 backdrop-blur-sm px-3 py-1.5 rd-lg max-w-93 border="~ solid theme-400-20">
+      <div flex items-center justify-start gap-2 flex-wrap>
+        <div v-for="c in themeColors" :key="c" :title="c" flex items-center justify-center cursor-pointer w-6 aspect-square rd :style="{ backgroundColor: c }" @click="generateTheme(c)" />
+      </div>
     </div>
-    <div>{{ themeColors }}</div>
-    <button btn @click="randomTheme()">
-      Random Theme
-    </button>
-    <button class="btn" @click="toggleDark()">
-      Toggle Dark
-    </button>
-
-    <FlowLayout :cols="2" :gap="24" w-90vw>
-      <ButtonLayout />
-      <AvatarLayout />
-      <BadgeLayout />
-      <InputLayout />
-      <SwitchLayout />
-      <RadioLayout />
-      <CheckboxLayout />
-      <OCard title="Card Component" desc="Card description">
-        I'm a card body
-        <template #footer>
-          <button btn>
-            Click me
-          </button>
-        </template>
-      </OCard>
-    </FlowLayout>
+    <div w-full px-10 mt-14 mb-10 text-sm>
+      <FlowLayout :cols="2" :gap="24" w-full>
+        <ButtonLayout />
+        <AvatarLayout />
+        <BadgeLayout />
+        <InputLayout />
+        <SwitchLayout />
+        <RadioLayout />
+        <CheckboxLayout />
+        <OCard title="Card Component" desc="Card description">
+          I'm a card body
+          <template #footer>
+            <button btn>
+              Click me
+            </button>
+          </template>
+        </OCard>
+      </FlowLayout>
+    </div>
   </div>
 </template>
 

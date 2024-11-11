@@ -21,3 +21,17 @@ export function randomTheme() {
   themeColors.value.push(color)
   generateTheme(color)
 }
+
+const radius = [0, 0.3, 0.5, 0.75, 1]
+const raduiIdx = ref(2)
+
+export function changeRadius() {
+  if (raduiIdx.value >= radius.length - 1) {
+    raduiIdx.value = 0
+  }
+  else {
+    raduiIdx.value++
+  }
+
+  document.documentElement.style.setProperty('--onu-radius', `${radius[raduiIdx.value]}rem`)
+}
