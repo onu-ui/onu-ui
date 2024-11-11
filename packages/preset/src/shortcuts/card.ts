@@ -1,7 +1,7 @@
 import type { CustomShortcut } from '../types'
 
 export const cards: CustomShortcut[] = [
-  ['card', `border border-solid border-gray-300:40 dark:border-gray-700:40 o-radius-xl of-hidden`],
+  ['card', `border border-solid border-gray-300:40 dark:border-gray-700:40 o-radius-xl of-hidden shadow-sm`],
   [`card-header`, `flex items-center justify-between p-6 gap-2`],
   [`card-title`, `text-lg font-semibold`],
   [`card-desc`, `text-sm text-gray-500`],

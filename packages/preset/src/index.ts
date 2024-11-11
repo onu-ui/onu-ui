@@ -34,13 +34,17 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
       }),
     ],
     extendTheme(defaultTheme) {
-      const { colors } = theme(resolvedOptions)
+      const { colors, fontSize } = theme(resolvedOptions)
 
       return {
         ...defaultTheme,
         colors: {
           ...defaultTheme.colors,
           ...colors,
+        },
+        fontSize: {
+          ...defaultTheme.fontSize,
+          ...fontSize,
         },
       }
     },
