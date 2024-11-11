@@ -3,13 +3,18 @@ import { mc } from 'magic-color'
 import { ref } from 'vue'
 
 export const themeColors = ref([
+  '#608e57',
   '#919b46',
   '#339448',
-  '#ef584e',
+  '#32324d',
 ])
+
+export const themeIdx = ref(0)
 
 export function generateTheme(color: string) {
   const { meta } = resolveTheme(color)
+  const i = themeColors.value.indexOf(color)
+  themeIdx.value = i
 
   for (const key in meta) {
     document.documentElement.style.setProperty(key, meta[key])

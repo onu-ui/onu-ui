@@ -19,7 +19,12 @@ import SwitchLayout from './components/o-switch.vue'
     </header>
     <div fixed left-2 top-2 z-10 backdrop-blur-sm px-3 py-1.5 rd-lg max-w-93 border="~ solid theme-400-20">
       <div flex items-center justify-start gap-2 flex-wrap>
-        <div v-for="c in themeColors" :key="c" :title="c" flex items-center justify-center cursor-pointer w-6 aspect-square rd :style="{ backgroundColor: c }" @click="generateTheme(c)" />
+        <div
+          v-for="c in themeColors" :key="c"
+          :class="c === themeColors[themeIdx] ? 'ring o-theme-200 dark:o-theme-800 ring-context' : ''"
+          :title="c" flex items-center justify-center cursor-pointer w-6 aspect-square rd :style="{ backgroundColor: c }"
+          @click="generateTheme(c)"
+        />
       </div>
     </div>
     <div w-full px-10 mt-14 mb-10 text-sm>
