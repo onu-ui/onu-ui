@@ -5,7 +5,7 @@ const isDisabled = ref(false)
 
 <template>
   <OCard title="Checkbox" desc="A checkbox is a form element that allows the user to select multiple options from a range of options." show-close>
-    <div class="flex gap-2 items-center">
+    <div class="flex gap-2">
       <label checkbox="~ xs">
         <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot>

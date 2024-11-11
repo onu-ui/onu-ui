@@ -14,7 +14,7 @@ export const radio: CustomShortcut[] = [
     if (s in Size) {
       const _s = Size[s as SizeType]
       return [
-        `child-input:(${_s[0]})`,
+        `important:child-input:(${_s[0]})`,
         {
           '--radio-dot-size': _s[1],
         },
@@ -33,7 +33,7 @@ export const radio: CustomShortcut[] = [
   [
     'radio',
     `
-      radio-md radio-circle relative flex items-center o-dark dark:o-light
+      radio-md radio-circle relative flex items-center shrink-0 h-fit o-dark dark:o-light
       checked:child-input:border-context:40
       disabled:child-input:(cursor-not-allowed op-72)
       child-input:(

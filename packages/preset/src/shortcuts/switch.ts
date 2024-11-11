@@ -19,7 +19,7 @@ export const switches: CustomShortcut[] = [
     return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['switch', `
-    switch-md inline-flex items-center cursor-pointer o-transition
+    switch-md inline-flex items-center cursor-pointer o-transition shrink-0
     border-(~ 2 transparent solid) rd-full
     bg-gray-300 dark:bg-gray-700
     [&>input]:(size-0 op-0)

@@ -30,7 +30,7 @@ export const button: CustomShortcut[] = [
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer shadow-sm
         o-transition font-onu font-medium
-        border-(~ current) of-hidden
+        border-(~ current) relative
         `],
   ['btn-text', `bg-transparent text-context dark:text-context shadow-none border-0`],
   ['btn-link', `btn-text p0 hover:(underline underline-offset-4)`],

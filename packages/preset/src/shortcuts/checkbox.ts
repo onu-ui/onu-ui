@@ -15,7 +15,7 @@ export const checkboxs: CustomShortcut[] = [
     return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['checkbox-default', `
-      o-radius-sm cursor-pointer border-(1 solid context) 
+      o-radius-sm cursor-pointer border-(1 solid context) shrink-0
       relative of-hidden o-transition bg-transparent
       child-input:hidden children:select-none
       has-[>input:checked]:bg-context
