@@ -1,8 +1,7 @@
 <script lang='ts' setup>
-defineProps<{
+const props = defineProps<{
   title: string
   desc?: string
-  showClose?: boolean
 }>()
 
 defineSlots<{
@@ -11,6 +10,10 @@ defineSlots<{
 }>()
 
 const slots = useSlots()
+const path = computed(() => {
+  const name = props.title.toLowerCase().split(/\s+/)[0]
+  return `https://github.com/onu-ui/onu-ui/blob/main/examples/vite-onu-preset-only/src/components/o-${name}.vue`
+})
 </script>
 
 <template>
@@ -24,7 +27,7 @@ const slots = useSlots()
           {{ desc }}
         </p>
       </div>
-      <i v-if="showClose" card-close text-xl i-carbon-close />
+      <a card-close un-text="lg theme-400!" i-carbon:arrow-up-right hover="animate-rubber-band" :href="path" target="_blank" />
     </div>
     <div card-body>
       <slot />

@@ -85,7 +85,7 @@ function toggleDisabled() {
         </template>
       </OCard>
 
-      <OCard title="Button Colors">
+      <OCard title="Button Custom Colors">
         <div flex="~ gap-2">
           <button btn btn-red hover:btn-red-600>
             Red
