@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.1.5",
   "private": true,
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@10.5.0",
   "license": "MIT",
   "scripts": {
     "dev": "pnpm dev-preset",
