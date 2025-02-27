@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.1.5",
   "private": true,
-  "packageManager": "pnpm@10.5.0",
+  "packageManager": "pnpm@10.5.2",
   "license": "MIT",
   "scripts": {
     "dev": "pnpm dev-preset",
@@ -42,8 +42,8 @@
     "@types/fs-extra": "catalog:",
     "@types/node": "catalog:",
     "@unocss/cli": "catalog:",
-    "@unocss/preset-mini": "catalog:",
     "@unocss/preset-uno": "catalog:",
+    "@unocss/preset-wind4": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vitest/coverage-c8": "catalog:",

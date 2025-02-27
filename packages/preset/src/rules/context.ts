@@ -1,5 +1,5 @@
 import type { CustomRule } from '../types'
-import { h, parseColor } from '@unocss/preset-mini/utils'
+import { h, parseColor } from '@unocss/preset-wind4/utils'
 import { mc } from 'magic-color'
 import { isThemeMetaKey, resolveContextColorByKey } from '../utils'
 

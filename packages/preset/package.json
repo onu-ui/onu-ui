@@ -44,7 +44,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@unocss/preset-mini": "catalog:",
+    "@unocss/preset-wind4": "catalog:",
     "magic-color": "catalog:"
   },
   "devDependencies": {
