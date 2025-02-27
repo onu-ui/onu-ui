@@ -1,6 +1,6 @@
-import type { Theme } from '@unocss/preset-mini'
+import type { Theme } from '@unocss/preset-wind4'
 import type { CSSValue } from 'unocss'
-import { parseColor } from '@unocss/preset-mini/utils'
+import { parseColor } from '@unocss/preset-wind4/utils'
 import { mc } from 'magic-color'
 
 export function spliteSpace(str: string) {

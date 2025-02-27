@@ -3,10 +3,10 @@ import { describe, expect, it } from 'vitest'
 import { presetOnu } from '../../packages/preset/src/index'
 import { contextTargets, unContextTargets } from '../features/assets/context-targets'
 
-describe('onu context', () => {
+describe('onu context', async () => {
   const testColor = '#9955FF'
 
-  const uno = createGenerator({
+  const uno = await createGenerator({
     presets: [presetOnu({ color: testColor })],
   })
 

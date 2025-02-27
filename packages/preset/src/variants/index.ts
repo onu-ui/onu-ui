@@ -1,5 +1,5 @@
 import type { Variant } from '@unocss/core'
-import type { Theme } from '@unocss/preset-mini'
+import type { Theme } from '@unocss/preset-wind4'
 
 export const variants = [
   (input: string) => {
