@@ -10,19 +10,19 @@
   },
   "dependencies": {
     "@onu-ui/preset": "workspace:*",
-    "@vueuse/core": "catalog:",
-    "magic-color": "catalog:",
-    "unplugin-auto-import": "catalog:",
+    "@vueuse/core": "catalog:vue",
+    "magic-color": "catalog:unocss",
+    "unplugin-auto-import": "catalog:build",
     "unplugin-vue": "5.1.5",
-    "vue": "catalog:",
-    "vue-flow-layout": "catalog:"
+    "vue": "catalog:vue",
+    "vue-flow-layout": "catalog:vue"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "catalog:",
-    "typescript": "catalog:",
-    "unocss": "catalog:",
-    "unocss-transformer-alias": "catalog:",
-    "vite": "catalog:",
-    "vue-tsc": "catalog:"
+    "@vitejs/plugin-vue": "catalog:vue",
+    "typescript": "catalog:build",
+    "unocss": "catalog:unocss",
+    "unocss-transformer-alias": "catalog:unocss",
+    "vite": "catalog:build",
+    "vue-tsc": "catalog:vue"
   }
 }

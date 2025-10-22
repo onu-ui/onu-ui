@@ -7,8 +7,8 @@ import { formatCSSCode } from '../utils'
 describe('onu preset', () => {
   const color = '#9955FF'
 
-  function createOnu(options: PrsetOnuOptions = {}) {
-    return createGenerator({
+  async function createOnu(options: PrsetOnuOptions = {}) {
+    return await createGenerator({
       presets: [
         presetOnu(options),
       ],
@@ -16,7 +16,7 @@ describe('onu preset', () => {
   }
 
   it('preflights', async () => {
-    const uno = createOnu({ color })
+    const uno = await createOnu({ color })
     const { css } = await uno.generate('')
     expect(await formatCSSCode(css)).toMatchSnapshot()
   })

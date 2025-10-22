@@ -10,16 +10,16 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "floating-vue": "catalog:",
+    "floating-vue": "catalog:vue",
     "onu-ui": "workspace:*"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "catalog:",
-    "@iconify-json/lets-icons": "catalog:",
-    "@iconify-json/line-md": "catalog:",
-    "@iconify-json/logos": "catalog:",
+    "@iconify-json/carbon": "catalog:icons",
+    "@iconify-json/lets-icons": "catalog:icons",
+    "@iconify-json/line-md": "catalog:icons",
+    "@iconify-json/logos": "catalog:icons",
     "@onu-ui/preset": "workspace:*",
-    "unocss": "catalog:",
-    "vitepress": "catalog:"
+    "unocss": "catalog:unocss",
+    "vitepress": "catalog:docs"
   }
 }

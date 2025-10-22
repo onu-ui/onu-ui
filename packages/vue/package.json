@@ -41,9 +41,9 @@
   },
   "devDependencies": {
     "@onu-ui/preset": "workspace:*",
-    "@vitejs/plugin-vue": "catalog:",
-    "unocss": "catalog:",
-    "vite": "catalog:",
-    "vue": "catalog:"
+    "@vitejs/plugin-vue": "catalog:vue",
+    "unocss": "catalog:unocss",
+    "vite": "catalog:build",
+    "vue": "catalog:vue"
   }
 }

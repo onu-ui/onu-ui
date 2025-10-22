@@ -1,7 +1,7 @@
 import type { DynamicShortcut, Rule, StaticShortcut } from '@unocss/core'
 import type { IconsOptions } from '@unocss/preset-icons'
-import type { Theme } from '@unocss/preset-mini'
 import type { WebFontMeta } from '@unocss/preset-web-fonts'
+import type { Theme } from '@unocss/preset-wind4'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 
@@ -12,13 +12,6 @@ export interface PrsetOnuOptions {
    * @default 'auto' (random color)
    */
   color?: string
-
-  /**
-   * Enable preflights styles. (Reset styles)
-   *
-   * @default true
-   */
-  preflights?: boolean
 
   /**
    * Onu default font loaded by google fonts.

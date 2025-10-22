@@ -16,14 +16,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vue/repl": "catalog:",
-    "compare-versions": "catalog:",
-    "ohmyfetch": "catalog:"
+    "@vue/repl": "catalog:vue",
+    "compare-versions": "catalog:dev",
+    "ohmyfetch": "catalog:dev"
   },
   "devDependencies": {
-    "@types/prettier": "catalog:",
-    "@unocss/reset": "catalog:",
-    "execa": "catalog:",
-    "prettier": "catalog:"
+    "@types/prettier": "catalog:dev",
+    "@unocss/reset": "catalog:unocss",
+    "execa": "catalog:dev",
+    "prettier": "catalog:dev"
   }
 }

@@ -1,7 +1,8 @@
-import type { Theme } from '@unocss/preset-mini'
+import type { Theme } from '@unocss/preset-wind4'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
+import { presetWind4 } from '@unocss/preset-wind4'
 import { mc } from 'magic-color'
-import { definePreset, presetAttributify, presetIcons, presetUno, presetWebFonts } from 'unocss'
+import { definePreset, presetAttributify, presetIcons, presetWebFonts } from 'unocss'
 import { LAYER_ONU_PRESET, LAYER_ONU_UI } from './layers'
 import { preflights } from './preflights'
 import { rules } from './rules'
@@ -23,7 +24,7 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
     variants,
     preflights: preflights(resolvedOptions),
     presets: [
-      presetUno({ preflight: resolvedOptions.preflights }),
+      presetWind4(),
       presetAttributify(),
       presetIcons(resolvedOptions.icons),
       presetWebFonts({
@@ -34,17 +35,13 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
       }),
     ],
     extendTheme(defaultTheme) {
-      const { colors, fontSize } = theme(resolvedOptions)
+      const { colors } = theme(resolvedOptions)
 
       return {
         ...defaultTheme,
         colors: {
           ...defaultTheme.colors,
           ...colors,
-        },
-        fontSize: {
-          ...defaultTheme.fontSize,
-          ...fontSize,
         },
       }
     },
@@ -58,7 +55,6 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {
     fonts: ['DM Sans', 'DM Sans:400,700'],
     color: 'auto',
-    preflights: true,
     icons: {
       extraProperties: {
         'display': 'inline-block',

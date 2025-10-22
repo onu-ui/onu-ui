@@ -44,10 +44,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@unocss/preset-mini": "catalog:",
-    "magic-color": "catalog:"
+    "@unocss/preset-wind4": "catalog:unocss",
+    "magic-color": "catalog:unocss"
   },
   "devDependencies": {
-    "unocss": "catalog:"
+    "unocss": "catalog:unocss"
   }
 }
