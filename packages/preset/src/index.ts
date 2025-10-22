@@ -2,7 +2,7 @@ import type { Theme } from '@unocss/preset-wind4'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 import { presetWind4 } from '@unocss/preset-wind4'
 import { mc } from 'magic-color'
-import { definePreset, presetAttributify, presetIcons, presetWebFonts } from 'unocss'
+import { definePreset, mergeDeep, presetAttributify, presetIcons, presetWebFonts } from 'unocss'
 import { LAYER_ONU_PRESET, LAYER_ONU_UI } from './layers'
 import { preflights } from './preflights'
 import { rules } from './rules'
@@ -74,22 +74,8 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
     ...defaultOptions,
     ...options,
     color: options.color === 'auto' ? mc.random() : options.color!,
-    icons: {
-      ...defaultOptions.icons,
-      ...options.icons ?? {},
-    },
+    icons: mergeDeep(defaultOptions.icons, options.icons ?? {}),
   }
 
   return resolvedOptions
 }
-
-// function normalizeMeta<T = CustomRule | CustomShortcut>(dynamicRuleOrShourtcut: T, patchMeta: RuleMeta): T {
-//   if (Array.isArray(dynamicRuleOrShourtcut)) {
-//     const meta = dynamicRuleOrShourtcut[2]
-//       ? Object.assign({}, dynamicRuleOrShourtcut[2], patchMeta)
-//       : patchMeta
-
-//     return [dynamicRuleOrShourtcut[0], dynamicRuleOrShourtcut[1], meta] as T
-//   }
-//   return dynamicRuleOrShourtcut
-// }
