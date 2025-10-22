@@ -63,6 +63,7 @@
     "rimraf": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
     "taze": "catalog:dev",
+    "tsdown": "catalog:build",
     "tsup": "catalog:build",
     "typescript": "catalog:build",
     "unbuild": "catalog:build",
