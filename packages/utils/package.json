@@ -36,11 +36,14 @@
     "build": "tsdown",
     "dev": "tsdown --watch"
   },
-  "devDependencies": {
-    "tsdown": "catalog:build"
-  },
   "peerDependencies": {
     "vue": "^3.5.41"
+  },
+  "dependencies": {
+    "@vueuse/core": "catalog:vue"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:build"
   },
   "publishConfig": {
     "access": "public"

@@ -22,7 +22,7 @@ export const presetOnu = definePreset<PrsetOnuOptions, Theme>((options) => {
     rules,
     shortcuts,
     variants,
-    preflights: preflights(resolvedOptions),
+    preflights: resolvedOptions.preflights ? preflights(resolvedOptions) : [],
     presets: [
       presetWind4(),
       presetAttributify(),
@@ -53,6 +53,7 @@ export default presetOnu
 
 function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {
+    preflights: true,
     fonts: ['DM Sans', 'DM Sans:400,700'],
     color: 'auto',
     icons: {

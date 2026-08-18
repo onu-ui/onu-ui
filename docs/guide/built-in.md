@@ -14,7 +14,7 @@ Onu comes with a collection of useful features built-in, so you don't have to co
 
 The built-in preset collections in Onu UI presets include:
 
-- `presetUno()`: The default preset for UnoCSS.
+- `presetWind4()`: The default Wind4 preset for UnoCSS.
 - `presetAttributify()`: Attributify mode.
 - `presetIcons()`: Icons preset.
 - `presetWebFonts()`: Web fonts preset.
@@ -25,7 +25,7 @@ If you want to override the built-in presets, make sure it doesn't bring any des
 
 ```ts twoslash {10-13}
 // uno.config.ts
-import { defineConfig, presetUno } from 'unocss'
+import { defineConfig, presetWind4 } from 'unocss'
 import { presetOnu } from '@onu-ui/preset'
 
 export default defineConfig({
@@ -34,7 +34,7 @@ export default defineConfig({
       /* options */
     }),
     // Override the built-in presets
-    presetUno({
+    presetWind4({
       /* Uno options */
     }),
   ]

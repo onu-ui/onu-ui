@@ -25,6 +25,13 @@ export interface PrsetOnuOptions {
    * Icons options.
    */
   icons?: IconsOptions
+
+  /**
+   * Whether to include Onu's default preflights.
+   *
+   * @default true
+   */
+  preflights?: boolean
 }
 
 export type ResolveOnuOptions = Required<PrsetOnuOptions>

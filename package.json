@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "pnpm dev-preset",
-    "build": "pnpm clean && pnpm -r --filter=./packages/* run build",
+    "build": "pnpm clean && pnpm -r --filter='./packages/*' run build",
     "dev-vue": "pnpm example-vue & pnpm -C packages/vue run dev",
     "dev-preset": "pnpm example & pnpm -C packages/preset run dev",
     "docs": "pnpm -C docs run dev",
@@ -29,7 +29,7 @@
     "test:update": "vitest -u",
     "test:coverage": "vitest --coverage",
     "volar:helper": "esno scripts/volar-helper",
-    "clean": "rimraf packages/*/dist --glob",
+    "clean": "rimraf 'packages/*/dist' --glob",
     "postinstall": "npx simple-git-hooks",
     "taze": "taze major -wIr",
     "typecheck": "tsc --noEmit"

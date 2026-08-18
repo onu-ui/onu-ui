@@ -3,7 +3,7 @@ import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vite'
 
-const r = (path: string) => resolve(__dirname, path)
+const r = (path: string) => resolve(import.meta.dirname, path)
 
 export default defineConfig({
   plugins: [

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "floating-vue": "catalog:vue",
+    "magic-color": "catalog:unocss",
     "onu-ui": "workspace:*"
   },
   "devDependencies": {
