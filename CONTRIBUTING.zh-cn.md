@@ -32,7 +32,7 @@ Onu UI 仓库是一个使用 pnpm 工作区的 monorepo。用于安装和链接�
 
 1. 将 Onu UI 仓库 fork 到你自己的 GitHub 账户，然后克隆到你的本地环境。
 
-2. 确保你使用的是最新的 Node.js LTS (>= 18.x)。
+2. 确保你使用的是 Node.js >= 22.13.0。
 
 3. Onu UI 使用 pnpm 包管理器，请参阅根目录 `package.json` 中的 `packageManager` 字段。如果你在多个项目中使用不同版本的 pnpm，建议通过运行 `corepack enable` 启用 [Corepack](https://github.com/nodejs/corepack)。
 

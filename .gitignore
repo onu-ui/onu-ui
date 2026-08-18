@@ -9,6 +9,7 @@
 *.vsix
 .temp
 .eslintcache
+.pnpm-store
 
 coverage
 dist

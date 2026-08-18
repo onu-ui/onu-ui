@@ -13,7 +13,6 @@
     "@vueuse/core": "catalog:vue",
     "magic-color": "catalog:unocss",
     "unplugin-auto-import": "catalog:build",
-    "unplugin-vue": "5.1.5",
     "vue": "catalog:vue",
     "vue-flow-layout": "catalog:vue"
   },

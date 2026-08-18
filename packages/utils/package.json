@@ -33,11 +33,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:build"
   },
   "peerDependencies": {
-    "vue": "^3.3.0"
+    "vue": "^3.5.41"
   },
   "publishConfig": {
     "access": "public"

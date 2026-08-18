@@ -18,10 +18,9 @@
   "dependencies": {
     "@vue/repl": "catalog:vue",
     "compare-versions": "catalog:dev",
-    "ohmyfetch": "catalog:dev"
+    "ofetch": "catalog:dev"
   },
   "devDependencies": {
-    "@types/prettier": "catalog:dev",
     "@unocss/reset": "catalog:unocss",
     "execa": "catalog:dev",
     "prettier": "catalog:dev"

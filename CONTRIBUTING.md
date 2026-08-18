@@ -31,7 +31,7 @@ To develop and test Onu UI, follow these steps:
 
 1. Fork the Onu UI repository to your own GitHub account, then clone it to your local environment.
 
-2. Ensure you are using the latest Node.js LTS (>= 18.x).
+2. Ensure you are using Node.js >= 22.13.0.
 
 3. Onu UI uses the pnpm package manager. Refer to the `packageManager` field in the root `package.json`. If you use different versions of pnpm in multiple projects, it is recommended to enable [Corepack](https://github.com/nodejs/corepack) by running `corepack enable`.
 
