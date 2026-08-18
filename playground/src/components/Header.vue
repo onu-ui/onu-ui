@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { OMessage as message } from 'onu-ui'
 import type { ComputedRef } from 'vue'
-import type { OMessageProps } from 'onu-ui'
 import playConfig from '../../playground.config'
 import logo from '../assets/logo.svg'
 import { getSupportVersions } from '~/utils/versions'
 import type { ReplStore, VersionKey } from '~/composables/store'
+import { message } from '~/utils/message'
 
 const { store } = defineProps<{
   store: ReplStore
@@ -71,7 +70,7 @@ async function copyLink() {
   message({
     content: 'Sharable URL has been copied to clipboard.',
     type: 'success',
-  } as OMessageProps)
+  })
 }
 </script>
 

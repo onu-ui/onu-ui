@@ -24,6 +24,7 @@ catalogs:
   # Development tools
   dev:
     '@antfu/eslint-config': ^9.3.0
+    '@oxc-parser/binding-wasm32-wasi': 0.131.0
     '@types/fs-extra': ^11.0.4
     '@types/node': ^26.2.0
     bumpp: ^12.2.1

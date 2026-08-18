@@ -1,16 +1,15 @@
-import { OMessage as message } from 'onu-ui'
-import type { OMessageProps } from 'onu-ui'
 import type { Fn } from '@vueuse/core'
 import type { BuiltInParserName } from 'prettier'
 import type { ReplStore } from '~/composables/store'
+import { message } from '~/utils/message'
 
 export async function formatCode(loadedFormat: boolean, store: ReplStore) {
   let close: Fn | undefined
   if (!loadedFormat) {
-    message({
+    close = message({
       content: 'Loading Prettier...',
       type: 'info',
-    } as OMessageProps)
+    })
   }
   // 加载依赖
   const [format, parserHtml, parserTypeScript, parserBabel, parserPostcss]

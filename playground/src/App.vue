@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { OMessage as message } from 'onu-ui'
 import { Repl } from '@vue/repl'
-import type { OMessageProps } from 'onu-ui'
 import playConfig from '../playground.config'
 import Header from '~/components/Header.vue'
 import { useStore } from '~/composables/store'
 import type { ReplStore, UserOptions, Versions } from '~/composables/store'
 import { generate } from '~/utils/uno/uno'
 import { handleKeydown } from '~/utils/format'
+import { message } from '~/utils/message'
 import { IS_DEV } from '~/constants'
 
 const loading = ref(true)
@@ -39,7 +38,7 @@ store.init().then(() => {
   message({
     content: 'please wait patiently',
     type: 'info',
-  } as OMessageProps)
+  })
 })
 
 // 将默认的虚拟文件信息添加到url上,

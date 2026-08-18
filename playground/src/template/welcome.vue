@@ -1,16 +1,13 @@
 <script setup lang="ts">
 import { ref, version as vueVersion } from 'vue'
-import onuUI, { OMessage as message } from 'onu-ui'
+import onuUI from 'onu-ui'
 
 const msg = ref('Hello Onu UI!')
 const checkVal = ref(true)
 const mv = ref(true)
 const avatarSrcs = 'https://github.com/zyyv.png'
 function open() {
-  message({
-    content: 'Hello OnuUI!',
-    closable: true,
-  })
+  console.info('Hello OnuUI!')
 }
 
 const className = 'dark'
