@@ -15,8 +15,9 @@ describe('onu semantic theme', () => {
     expect(css).toContain('--onu-color-primary-foreground-light:')
     expect(css).toContain('--onu-color-primary-foreground-dark:')
     expect(css).toContain('--onu-color-primary-foreground: var(--onu-color-primary-foreground-light);')
+    expect(css).toContain('--onu-color-muted: var(--onu-color-muted-light);')
     expect(css).toContain('--onu-color-muted-foreground: 55.6% 0 0;')
-    expect(css).toContain('--onu-color-border-default: 92.2% 0 0;')
+    expect(css).toContain('--onu-color-border-default: var(--onu-color-border-light);')
     expect(css).toContain('--onu-color-ring: var(--onu-color-500);')
     expect(css).toContain('--onu-color-background: 14.5% 0 0;')
     expect(css).toContain('--onu-color-primary: var(--onu-color-600);')
@@ -29,6 +30,8 @@ describe('onu semantic theme', () => {
 
     expect(purple.meta['--onu-color-primary-foreground-light']).toBe('var(--onu-color-50)')
     expect(olive.meta['--onu-color-primary-foreground-light']).toBe('var(--onu-color-950)')
+    expect(purple.meta['--onu-color-muted-light']).toBe('var(--onu-color-50)')
+    expect(purple.meta['--onu-color-accent-dark']).toBe('var(--onu-color-950)')
   })
 
   it('provides utilities for every semantic color role', async () => {
@@ -89,5 +92,7 @@ describe('onu semantic theme', () => {
     expect(css).toContain('--onu-color-accent')
     expect(css).toContain('--onu-color-ring')
     expect(css).toContain(':focus-visible')
+    expect(css).toContain('--un-translate-y:1px')
+    expect(css).toContain('pointer-events:none')
   })
 })

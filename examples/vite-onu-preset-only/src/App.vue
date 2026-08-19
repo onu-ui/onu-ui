@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import { FlowLayout } from 'vue-flow-layout'
+import AlertLayout from './components/o-alert.vue'
 import AvatarLayout from './components/o-avatar.vue'
 import BadgeLayout from './components/o-badge.vue'
 import ButtonLayout from './components/o-button.vue'
 import CheckboxLayout from './components/o-checkbox.vue'
+import EmptyboxLayout from './components/o-emptybox.vue'
 import InputLayout from './components/o-input.vue'
+import KbdLayout from './components/o-kbd.vue'
 import RadioLayout from './components/o-radio.vue'
+import SeparatorLayout from './components/o-separator.vue'
+import SkeletonLayout from './components/o-skeleton.vue'
+import SpinnerLayout from './components/o-spinner.vue'
 import SwitchLayout from './components/o-switch.vue'
 import SemanticTheme from './components/semantic-theme.vue'
 
@@ -31,14 +37,21 @@ const isWideLayout = useMediaQuery('(min-width: 768px)')
         </div>
 
         <div flex items-center gap-1 rounded-full border border-border bg-card p-1 text-card-foreground shadow-sm>
-          <button class="size-8 flex items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground" title="随机主题色" @click="randomTheme()">
+          <button class="size-8 flex items-center justify-center rounded-full outline-none o-transition hover:bg-accent hover:text-accent-foreground active:translate-y-1px focus-visible:ring-3px focus-visible:ring-ring/50" type="button" title="随机主题色" aria-label="随机主题色" @click="randomTheme()">
             <i i-carbon-color-palette />
           </button>
-          <button class="size-8 flex items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground" title="切换圆角" @click="changeRadius()">
+          <button class="size-8 flex items-center justify-center rounded-full outline-none o-transition hover:bg-accent hover:text-accent-foreground active:translate-y-1px focus-visible:ring-3px focus-visible:ring-ring/50" type="button" title="切换圆角" aria-label="切换圆角" @click="changeRadius()">
             <i i-carbon-rotate-counterclockwise-alt-filled />
           </button>
-          <button class="size-8 flex items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground" title="切换亮色或暗色" @click="toggleDark()">
-            <i i-carbon-sun dark:i-carbon-moon />
+          <button
+            class="size-8 flex items-center justify-center rounded-full outline-none o-transition hover:bg-accent hover:text-accent-foreground active:translate-y-1px focus-visible:ring-3px focus-visible:ring-ring/50"
+            type="button"
+            :title="isDark ? '切换到亮色模式' : '切换到暗色模式'"
+            :aria-label="isDark ? '切换到亮色模式' : '切换到暗色模式'"
+            :aria-pressed="isDark"
+            @click="toggleDark()"
+          >
+            <i :class="isDark ? 'i-carbon-moon' : 'i-carbon-sun'" />
           </button>
           <a class="size-8 flex items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground" href="https://github.com/onu-ui/onu-ui" target="_blank" title="查看 GitHub">
             <i i-carbon-logo-github />
@@ -59,6 +72,16 @@ const isWideLayout = useMediaQuery('(min-width: 768px)')
           <p mt-4 max-w-2xl text-base leading-7 text-muted-foreground>
             点击右上角可以切换主题色、圆角和暗色模式。下面每个区域都直接使用新的语义颜色 utility。
           </p>
+          <div mt-4 flex flex-wrap items-center gap-2 text-xs>
+            <span inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-card-foreground>
+              <span size-2 rounded-full bg-primary />
+              当前主题 {{ currentThemeColor }}
+            </span>
+            <span inline-flex items-center gap-2 rounded-full bg-muted px-3 py-1.5 text-muted-foreground>
+              <i :class="isDark ? 'i-carbon-moon' : 'i-carbon-sun'" />
+              {{ isDark ? '暗色模式' : '亮色模式' }}
+            </span>
+          </div>
         </div>
 
         <div rounded-2xl border border-border bg-card p-3 shadow-sm>
@@ -77,7 +100,30 @@ const isWideLayout = useMediaQuery('(min-width: 768px)')
         </div>
       </section>
 
-      <SemanticTheme />
+      <SemanticTheme :theme-color="currentThemeColor" :is-dark="isDark" />
+
+      <section mt-12>
+        <div mb-5>
+          <p text-sm font-medium text-primary>
+            Pure CSS foundations
+          </p>
+          <h2 mt-1 text-2xl font-semibold tracking-tight>
+            新增基础外观组件
+          </h2>
+          <p mt-2 max-w-3xl text-sm leading-6 text-muted-foreground>
+            Alert、Empty、Kbd、Separator、Skeleton 和 Spinner 全部由 preset shortcuts 构成。它们没有组件状态、事件处理或运行时 JavaScript。
+          </p>
+        </div>
+
+        <FlowLayout :cols="isWideLayout ? 2 : 1" :gap="24" w-full>
+          <AlertLayout />
+          <EmptyboxLayout />
+          <KbdLayout />
+          <SeparatorLayout />
+          <SkeletonLayout />
+          <SpinnerLayout />
+        </FlowLayout>
+      </section>
 
       <section mt-12>
         <div mb-5>

@@ -16,18 +16,18 @@ export const button: CustomShortcut[] = [
   }],
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
   ['btn-hover', 'hover:o-theme-600'],
-  ['btn-focus', 'focus-visible:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)'],
-  ['btn-active', 'active:o-theme-700'],
+  ['btn-focus', 'focus-visible:(outline-none border-ring ring-3px ring-ring/50)'],
+  ['btn-active', 'active:(translate-y-1px o-theme-700)'],
   ['btn-disabled', `
         disabled:(
-          cursor-not-allowed op-32 shadow-none
+          pointer-events-none cursor-not-allowed op-50 shadow-none
           hover:o-theme-DEFAULT
         )
         `],
   ['btn-default', `
         btn-md btn-hover btn-focus btn-active btn-disabled o-radius-md
         text-current bg-transparent
-        inline-flex items-center justify-center gap-1 children:flex-shrink-0
+        inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap children:flex-shrink-0
         cursor-pointer shadow-sm
         o-transition font-onu font-medium
         border-(~ current) relative
@@ -59,7 +59,7 @@ export const button: CustomShortcut[] = [
   ['btn', `
         btn-default border-0 border-context
         o-theme-500 bg-context
-        disabled:op-64 o-theme-text
+        o-theme-text
         `],
 
   // buttonn-group

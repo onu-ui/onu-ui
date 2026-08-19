@@ -12,25 +12,39 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    OAlert: typeof import('./components/o-alert.vue')['default']
     OAvatar: typeof import('./components/o-avatar.vue')['default']
     OBadge: typeof import('./components/o-badge.vue')['default']
     OButton: typeof import('./components/o-button.vue')['default']
     OCard: typeof import('./components/o-card.vue')['default']
     OCheckbox: typeof import('./components/o-checkbox.vue')['default']
+    OEmptybox: typeof import('./components/o-emptybox.vue')['default']
     OInput: typeof import('./components/o-input.vue')['default']
+    OKbd: typeof import('./components/o-kbd.vue')['default']
     ORadio: typeof import('./components/o-radio.vue')['default']
+    OSeparator: typeof import('./components/o-separator.vue')['default']
+    OSkeleton: typeof import('./components/o-skeleton.vue')['default']
+    OSpinner: typeof import('./components/o-spinner.vue')['default']
     OSwitch: typeof import('./components/o-switch.vue')['default']
+    SemanticTheme: typeof import('./components/semantic-theme.vue')['default']
   }
 }
 
 // For TSX support
 declare global {
+  const OAlert: typeof import('./components/o-alert.vue')['default']
   const OAvatar: typeof import('./components/o-avatar.vue')['default']
   const OBadge: typeof import('./components/o-badge.vue')['default']
   const OButton: typeof import('./components/o-button.vue')['default']
   const OCard: typeof import('./components/o-card.vue')['default']
   const OCheckbox: typeof import('./components/o-checkbox.vue')['default']
+  const OEmptybox: typeof import('./components/o-emptybox.vue')['default']
   const OInput: typeof import('./components/o-input.vue')['default']
+  const OKbd: typeof import('./components/o-kbd.vue')['default']
   const ORadio: typeof import('./components/o-radio.vue')['default']
+  const OSeparator: typeof import('./components/o-separator.vue')['default']
+  const OSkeleton: typeof import('./components/o-skeleton.vue')['default']
+  const OSpinner: typeof import('./components/o-spinner.vue')['default']
   const OSwitch: typeof import('./components/o-switch.vue')['default']
+  const SemanticTheme: typeof import('./components/semantic-theme.vue')['default']
 }

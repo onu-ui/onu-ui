@@ -17,10 +17,10 @@ export const checkboxs: CustomShortcut[] = [
   ['checkbox-default', `
       o-radius-sm cursor-pointer border-(1 solid context) shrink-0
       relative of-hidden o-transition bg-transparent
-      has-[>input:focus-visible]:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)
-      child-input:hidden children:select-none
+      has-[>input:focus-visible]:(outline-none border-ring ring-3px ring-ring/50)
+      child-input:(absolute inset-0 size-full op-0 cursor-pointer) children:select-none
       has-[>input:checked]:bg-context
-      has-[>input:disabled]:(op-72 cursor-not-allowed)
+      has-[>input:disabled]:(pointer-events-none op-50 cursor-not-allowed)
     `],
   ['checkbox', `checkbox-default checkbox-md`],
   ['checkbox-dot', `

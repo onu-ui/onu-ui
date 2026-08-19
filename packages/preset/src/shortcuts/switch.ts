@@ -19,12 +19,12 @@ export const switches: CustomShortcut[] = [
     return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['switch', `
-    switch-md inline-flex items-center cursor-pointer o-transition shrink-0
+    switch-md relative inline-flex items-center cursor-pointer o-transition shrink-0
     border-(~ 2 transparent solid) rd-full
-    bg-muted has-[>input:focus-visible]:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)
-    [&>input]:(size-0 op-0)
+    bg-input has-[>input:focus-visible]:(outline-none border-ring ring-3px ring-ring/50)
+    [&>input]:(absolute inset-0 size-full op-0 cursor-pointer)
     has-[>input:checked]:bg-context
-    has-[>input:disabled]:(cursor-not-allowed op-72)
+    has-[>input:disabled]:(pointer-events-none cursor-not-allowed op-50)
     `],
   ['switch-dot', `
     bg-background

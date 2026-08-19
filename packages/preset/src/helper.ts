@@ -7,6 +7,16 @@ export function resolveTheme(color: string) {
   const semanticMetas: Record<string, string> = {
     '--onu-color-primary-foreground-light': `var(--onu-color-${resolveForegroundStep(theme[500], theme)})`,
     '--onu-color-primary-foreground-dark': `var(--onu-color-${resolveForegroundStep(theme[600], theme)})`,
+    '--onu-color-secondary-light': 'var(--onu-color-100)',
+    '--onu-color-secondary-dark': 'var(--onu-color-950)',
+    '--onu-color-muted-light': 'var(--onu-color-50)',
+    '--onu-color-muted-dark': 'var(--onu-color-950)',
+    '--onu-color-accent-light': 'var(--onu-color-100)',
+    '--onu-color-accent-dark': 'var(--onu-color-950)',
+    '--onu-color-border-light': 'var(--onu-color-200)',
+    '--onu-color-border-dark': 'var(--onu-color-50) / 12%',
+    '--onu-color-input-light': 'var(--onu-color-200)',
+    '--onu-color-input-dark': 'var(--onu-color-50) / 16%',
   }
 
   const css = `
@@ -25,16 +35,16 @@ export function resolveTheme(color: string) {
   ${Object.entries(semanticMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
   --onu-color-primary-foreground: var(--onu-color-primary-foreground-light);
   --onu-color-context: var(--onu-color-primary);
-  --onu-color-secondary: 97% 0 0;
+  --onu-color-secondary: var(--onu-color-secondary-light);
   --onu-color-secondary-foreground: 20.5% 0 0;
-  --onu-color-muted: 97% 0 0;
+  --onu-color-muted: var(--onu-color-muted-light);
   --onu-color-muted-foreground: 55.6% 0 0;
-  --onu-color-accent: 97% 0 0;
+  --onu-color-accent: var(--onu-color-accent-light);
   --onu-color-accent-foreground: 20.5% 0 0;
   --onu-color-destructive: 57.7% 0.245 27.325;
   --onu-color-destructive-foreground: 98.5% 0 0;
-  --onu-color-border-default: 92.2% 0 0;
-  --onu-color-input: 92.2% 0 0;
+  --onu-color-border-default: var(--onu-color-border-light);
+  --onu-color-input: var(--onu-color-input-light);
   --onu-color-ring: var(--onu-color-500);
   --onu-radius: 0.5rem;
 }
@@ -51,17 +61,17 @@ export function resolveTheme(color: string) {
   --onu-color-popover-foreground: 98.5% 0 0;
   --onu-color-primary: var(--onu-color-600);
   --onu-color-primary-foreground: var(--onu-color-primary-foreground-dark);
-  --onu-color-secondary: 26.9% 0 0;
+  --onu-color-secondary: var(--onu-color-secondary-dark);
   --onu-color-secondary-foreground: 98.5% 0 0;
-  --onu-color-muted: 26.9% 0 0;
+  --onu-color-muted: var(--onu-color-muted-dark);
   --onu-color-muted-foreground: 70.8% 0 0;
-  --onu-color-accent: 26.9% 0 0;
+  --onu-color-accent: var(--onu-color-accent-dark);
   --onu-color-accent-foreground: 98.5% 0 0;
   --onu-color-destructive: 70.4% 0.191 22.216;
   --onu-color-destructive-foreground: 98.5% 0 0;
-  --onu-color-border-default: 100% 0 0 / 10%;
-  --onu-color-input: 100% 0 0 / 15%;
-  --onu-color-ring: 55.6% 0 0;
+  --onu-color-border-default: var(--onu-color-border-dark);
+  --onu-color-input: var(--onu-color-input-dark);
+  --onu-color-ring: var(--onu-color-600);
 }
 
 ::selection {

@@ -1,6 +1,6 @@
 import { resolveTheme } from '@onu-ui/preset/helper'
 import { mc } from 'magic-color'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export const themeColors = ref([
   '#608e57',
@@ -10,6 +10,7 @@ export const themeColors = ref([
 ])
 
 export const themeIdx = ref(0)
+export const currentThemeColor = computed(() => themeColors.value[themeIdx.value] ?? themeColors.value[0])
 
 export function generateTheme(color: string) {
   const { meta } = resolveTheme(color)

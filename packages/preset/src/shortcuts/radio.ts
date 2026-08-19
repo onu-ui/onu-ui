@@ -34,9 +34,9 @@ export const radio: CustomShortcut[] = [
     'radio',
     `
       radio-md radio-circle relative flex items-center shrink-0 h-fit o-dark dark:o-light
-      has-[>input:focus-visible]:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)
+      has-[>input:focus-visible]:(outline-none border-ring ring-3px ring-ring/50)
+      has-[>input:disabled]:(pointer-events-none cursor-not-allowed op-50)
       checked:child-input:border-context:40
-      disabled:child-input:(cursor-not-allowed op-72)
       child-input:(
         checked:border-context:30 cursor-pointer
         appearance-none border border-solid border-input o-transition
@@ -48,7 +48,7 @@ export const radio: CustomShortcut[] = [
     `
       pos-center size-0 opacity-0 cursor-pointer
       peer-checked:(size-$radio-dot-size opacity-100)
-      peer-disabled:(cursor-not-allowed op-50)
+      peer-disabled:cursor-not-allowed
       bg-context o-transition
     `,
   ],

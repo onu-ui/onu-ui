@@ -80,7 +80,7 @@ const isDisabled = ref(false)
 
       <label for="themeControl" flex items-center gap-2 cursor-pointer select-none>
         <label switch="~ theme-400">
-          <input id="themeControl" class="peer" type="checkbox" @change="toggleDark()">
+          <input id="themeControl" class="peer" type="checkbox" :checked="isDark" @change="toggleDark()">
           <span switch-dot />
         </label>
         <span>Toggle Dark</span>
