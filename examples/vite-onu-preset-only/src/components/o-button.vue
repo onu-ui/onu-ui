@@ -14,7 +14,7 @@ function toggleDisabled() {
       </button>
 
       <OCard title="Button Size">
-        <div flex="~ gap-2 items-center">
+        <div flex="~ gap-2 items-center wrap">
           <button btn="default size-xs" :disabled="disabled">
             btn-xs
           </button>
@@ -28,7 +28,7 @@ function toggleDisabled() {
             btn-lg
           </button>
         </div>
-        <div flex="~ gap-2 items-center" mt-2>
+        <div flex="~ gap-2 items-center wrap" mt-2>
           <button btn="~ size-xs" :disabled="disabled">
             btn-xs
           </button>
@@ -86,7 +86,7 @@ function toggleDisabled() {
       </OCard>
 
       <OCard title="Button Custom Colors">
-        <div flex="~ gap-2">
+        <div flex="~ gap-2 wrap">
           <button btn btn-red hover:btn-red-600>
             Red
           </button>

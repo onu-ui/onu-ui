@@ -16,25 +16,23 @@ export const input: CustomShortcut[] = [
   }],
   ['input-bordered', `border-op-100`],
   ['input-dashed', `border-dashed border-op-100 focus-within:ring-0`],
-  ['input-placeholder', `placeholder:color-[oklch(var(--onu-color-300))] dark:placeholder:color-[oklch(var(--onu-color-700))]`],
+  ['input-placeholder', `placeholder:text-muted-foreground`],
 
   ['input-focus', [`focus-within:(ring-(1px context))`, {
     // TODO: UnoCSS feature, use yield to generate the value into `focus-within` variant.
-    '--un-ring-color': 'oklch(var(--onu-color-border, var(--onu-color-context)) / var(--un-ring-opacity, 1)) !important',
+    '--un-ring-color': 'oklch(var(--onu-color-border, var(--onu-color-context, var(--onu-color-ring))) / var(--un-ring-opacity, 1)) !important',
   }]],
   ['input-hover', 'hover:(border-op-100)'],
   ['input-disabled', `
           disabled:(
             cursor-not-allowed border-op-0!
-            bg-gray-100:80 text-gray-300
-            dark:(bg-gray-900:32 text-gray-700)
+            bg-muted text-muted-foreground
           )
 
           has-[>input[disabled]]:(
             cursor-not-allowed
             border-op-0!
-            bg-gray-100:80 text-gray-300
-            dark:(bg-gray-900:32 text-gray-700)
+            bg-muted text-muted-foreground
           )
 
           [&>input]:has-[>input[disabled]]:cursor-not-allowed
@@ -43,9 +41,9 @@ export const input: CustomShortcut[] = [
           font-onu input-md input-hover appearance-none
           input-disabled
           border border-solid border-theme-context border-op-0
-          bg-transparent
+          bg-background text-foreground
           outline-none o-radius-md
-          placeholder:color-gray-300
+          placeholder:text-muted-foreground
           focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)
           o-dark dark:o-light
@@ -53,7 +51,7 @@ export const input: CustomShortcut[] = [
   ['input', `
           input-default input-bordered input-focus
           input-placeholder [&_input]:input-placeholder
-          text-context
+          text-foreground
           o-theme-400 dark:o-theme-600
         `],
 ]

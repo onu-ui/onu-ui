@@ -18,30 +18,71 @@ exports[`onu preset > preflights 1`] = `
 }
 /* layer: @onu-ui/prelight */
 :root {
-  --onu-color-50: 255 100 98;
-  --onu-color-100: 258 100 95;
-  --onu-color-200: 256 100 92;
-  --onu-color-300: 258 100 85;
-  --onu-color-400: 261 100 76;
-  --onu-color-500: 264 100 67;
-  --onu-color-600: 268 93 58;
-  --onu-color-700: 269 78 50;
-  --onu-color-800: 269 78 42;
-  --onu-color-900: 269 75 35;
-  --onu-color-950: 267 81 23;
+  --onu-color-50: 96.991% 0.016 297.528;
+  --onu-color-100: 94.328% 0.032 299.668;
+  --onu-color-200: 89.507% 0.058 297.204;
+  --onu-color-300: 81.326% 0.108 297.859;
+  --onu-color-400: 71.123% 0.174 297.843;
+  --onu-color-500: 61.658% 0.239 297.199;
+  --onu-color-600: 55.793% 0.266 297.612;
+  --onu-color-700: 51.056% 0.258 297.263;
+  --onu-color-800: 44.984% 0.227 297.554;
+  --onu-color-900: 39.327% 0.192 298.383;
+  --onu-color-950: 29.301% 0.146 296.034;
   --onu-color-DEFAULT: var(--onu-color-500);
   --onu-color-text: var(--onu-color-100);
   --onu-color-text-invert: var(--onu-color-950);
+  --onu-color-background: 100% 0 0;
+  --onu-color-foreground: 14.5% 0 0;
+  --onu-color-card: 100% 0 0;
+  --onu-color-card-foreground: 14.5% 0 0;
+  --onu-color-popover: 100% 0 0;
+  --onu-color-popover-foreground: 14.5% 0 0;
+  --onu-color-primary: var(--onu-color-500);
+  --onu-color-primary-foreground-light: var(--onu-color-50);
+  --onu-color-primary-foreground-dark: var(--onu-color-50);
+  --onu-color-primary-foreground: var(--onu-color-primary-foreground-light);
+  --onu-color-context: var(--onu-color-primary);
+  --onu-color-secondary: 97% 0 0;
+  --onu-color-secondary-foreground: 20.5% 0 0;
+  --onu-color-muted: 97% 0 0;
+  --onu-color-muted-foreground: 55.6% 0 0;
+  --onu-color-accent: 97% 0 0;
+  --onu-color-accent-foreground: 20.5% 0 0;
+  --onu-color-destructive: 57.7% 0.245 27.325;
+  --onu-color-destructive-foreground: 98.5% 0 0;
+  --onu-color-border-default: 92.2% 0 0;
+  --onu-color-input: 92.2% 0 0;
+  --onu-color-ring: var(--onu-color-500);
   --onu-radius: 0.5rem;
 }
 .dark {
   --onu-color-DEFAULT: var(--onu-color-600);
   --onu-color-text: var(--onu-color-950);
   --onu-color-text-invert: var(--onu-color-100);
+  --onu-color-background: 14.5% 0 0;
+  --onu-color-foreground: 98.5% 0 0;
+  --onu-color-card: 20.5% 0 0;
+  --onu-color-card-foreground: 98.5% 0 0;
+  --onu-color-popover: 20.5% 0 0;
+  --onu-color-popover-foreground: 98.5% 0 0;
+  --onu-color-primary: var(--onu-color-600);
+  --onu-color-primary-foreground: var(--onu-color-primary-foreground-dark);
+  --onu-color-secondary: 26.9% 0 0;
+  --onu-color-secondary-foreground: 98.5% 0 0;
+  --onu-color-muted: 26.9% 0 0;
+  --onu-color-muted-foreground: 70.8% 0 0;
+  --onu-color-accent: 26.9% 0 0;
+  --onu-color-accent-foreground: 98.5% 0 0;
+  --onu-color-destructive: 70.4% 0.191 22.216;
+  --onu-color-destructive-foreground: 98.5% 0 0;
+  --onu-color-border-default: 100% 0 0 / 10%;
+  --onu-color-input: 100% 0 0 / 15%;
+  --onu-color-ring: 55.6% 0 0;
 }
 ::selection {
-  color: hsl(var(--onu-color-DEFAULT) / 0.99) !important;
-  background-color: hsl(var(--onu-color-text) / 0.99) !important;
+  color: oklch(var(--onu-color-DEFAULT) / 0.99) !important;
+  background-color: oklch(var(--onu-color-text) / 0.99) !important;
 }
 /* layer: base */
 *,
@@ -61,8 +102,13 @@ html,
   tab-size: 4;
   font-family: var(
     --default-font-family,
-    ui-sans-serif,
-    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    Arial,
     sans-serif,
     "Apple Color Emoji",
     "Segoe UI Emoji",
@@ -140,7 +186,7 @@ table {
   border-color: inherit;
   border-collapse: collapse;
 }
-:-moz-focusring {
+:-moz-focusring:where(:not(iframe)) {
   outline: auto;
 }
 progress {

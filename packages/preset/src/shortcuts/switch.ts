@@ -21,13 +21,13 @@ export const switches: CustomShortcut[] = [
   ['switch', `
     switch-md inline-flex items-center cursor-pointer o-transition shrink-0
     border-(~ 2 transparent solid) rd-full
-    bg-gray-300 dark:bg-gray-700
+    bg-muted has-[>input:focus-visible]:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)
     [&>input]:(size-0 op-0)
     has-[>input:checked]:bg-context
     has-[>input:disabled]:(cursor-not-allowed op-72)
     `],
   ['switch-dot', `
-    bg-light dark:bg-dark 
+    bg-background
     flex items-center justify-center select-none of-hidden rd-full h-$dot-size aspect-square
     o-transition pointer-events-none
     peer-checked:translate-x-$dot-size

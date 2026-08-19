@@ -17,6 +17,7 @@ export const checkboxs: CustomShortcut[] = [
   ['checkbox-default', `
       o-radius-sm cursor-pointer border-(1 solid context) shrink-0
       relative of-hidden o-transition bg-transparent
+      has-[>input:focus-visible]:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)
       child-input:hidden children:select-none
       has-[>input:checked]:bg-context
       has-[>input:disabled]:(op-72 cursor-not-allowed)

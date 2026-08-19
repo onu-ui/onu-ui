@@ -29,7 +29,7 @@ export const badge: CustomShortcut[] = [
       badge-size-md 
       border-(~ solid context) bg-context hover:(bg-context:80 border-context:80)
       o-theme-dark dark:o-theme-light
-      text-light dark:text-dark
+      text-primary-foreground
     `],
   ['badge', `badge-default o-theme-400 dark:o-theme-500`],
   ['badge-outline', `!bg-transparent text-context dark:text-context`],

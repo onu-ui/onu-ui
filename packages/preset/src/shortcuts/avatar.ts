@@ -24,7 +24,7 @@ export const avatar: CustomShortcut[] = [
     `],
   ['avatar-group', `
       flex of-hidden
-      [&_.avatar]:(of-hidden rounded-full border border-3px border-current)
+      [&_.avatar]:(of-hidden rounded-full border border-3px border-background)
     `],
   ['avatar-placeholder', `
       [&>div]:(flex items-center justify-center bg-theme-500 dark:bg-theme-600)

@@ -5,7 +5,7 @@ const disabled = ref(false)
 
 <template>
   <OCard title="Switch Component" desc="Switch component with custom style">
-    <div flex items-center gap-2>
+    <div flex items-center gap-2 flex-wrap>
       <label switch="~ default">
         <input v-model="checked" class="peer" type="checkbox" :disabled="disabled">
         <span switch-dot dot-red />

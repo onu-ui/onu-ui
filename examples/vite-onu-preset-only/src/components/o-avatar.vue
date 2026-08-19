@@ -1,7 +1,7 @@
 <template>
   <OCard title="Avatar Component" desc="Avatar component with custom style">
     <div flex="~ col gap-2">
-      <div flex items-center justify-center gap-2>
+      <div flex items-center justify-center gap-2 flex-wrap>
         <div class="avatar hover:animate-rubber-band">
           <div class="rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <div flex items-center justify-center gap-2>
+      <div flex items-center justify-center gap-2 flex-wrap>
         <div class="avatar mask-hexagon hover:animate-rubber-band">
           <div class="w-24 rounded">
             <img src="https://avatars.githubusercontent.com/u/42139754">
@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-      <div flex items-center justify-center gap-2>
+      <div flex items-center justify-center gap-2 flex-wrap>
         <div class="avatar-group avatar-group-sm space-x--6">
           <div class="avatar hover:animate-rubber-band">
             <div class="">
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div flex items-center justify-center gap-2>
+      <div flex items-center justify-center gap-2 flex-wrap>
         <div class="avatar">
           <div class=" w-24 rounded-full ring ring-context o-theme-200">
             <img src="https://avatars.githubusercontent.com/u/42139754">

@@ -16,7 +16,7 @@ export const button: CustomShortcut[] = [
   }],
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
   ['btn-hover', 'hover:o-theme-600'],
-  //   ['btn-focus', 'focus:o-theme-700'],
+  ['btn-focus', 'focus-visible:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)'],
   ['btn-active', 'active:o-theme-700'],
   ['btn-disabled', `
         disabled:(
@@ -25,7 +25,7 @@ export const button: CustomShortcut[] = [
         )
         `],
   ['btn-default', `
-        btn-md btn-hover btn-active btn-disabled o-radius-md
+        btn-md btn-hover btn-focus btn-active btn-disabled o-radius-md
         text-current bg-transparent
         inline-flex items-center justify-center gap-1 children:flex-shrink-0
         cursor-pointer shadow-sm
@@ -34,8 +34,8 @@ export const button: CustomShortcut[] = [
         `],
   ['btn-text', `bg-transparent text-context dark:text-context shadow-none border-0`],
   ['btn-link', `btn-text p0 hover:(underline underline-offset-4)`],
-  ['btn-ghost', `btn-text btn-disabled-theme-color hover:bg-context hover:o-theme-text`],
-  ['btn-ghost-light', `btn-text btn-disabled-theme-color hover:bg-theme-100 dark:hover:bg-theme-900`],
+  ['btn-ghost', `btn-text btn-disabled-theme-color hover:(bg-accent text-accent-foreground)`],
+  ['btn-ghost-light', `btn-text btn-disabled-theme-color hover:bg-muted`],
   ['btn-soft', `
         text-theme-600 bg-theme-100 hover:bg-theme-200
         dark:text-theme-400! dark:bg-theme-900 dark:hover:bg-theme-800

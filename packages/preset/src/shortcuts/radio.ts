@@ -34,11 +34,12 @@ export const radio: CustomShortcut[] = [
     'radio',
     `
       radio-md radio-circle relative flex items-center shrink-0 h-fit o-dark dark:o-light
+      has-[>input:focus-visible]:(outline-none ring-2 ring-ring ring-offset-2 ring-offset-background)
       checked:child-input:border-context:40
       disabled:child-input:(cursor-not-allowed op-72)
       child-input:(
         checked:border-context:30 cursor-pointer
-        appearance-none border border-solid border-gray-300:50 o-transition
+        appearance-none border border-solid border-input o-transition
       )
     `,
   ],
