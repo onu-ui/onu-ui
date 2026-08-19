@@ -3,34 +3,48 @@ import type { CSSValue } from 'unocss'
 import { parseColor } from '@unocss/preset-wind4/utils'
 import { mc } from 'magic-color'
 
+export function createOklchTheme(color: string) {
+  const colors = mc.theme(color, { type: 'oklch' })
+
+  return Object.fromEntries(
+    Object.entries(colors).map(([key, value]) => [key, value.replace(/NaN/g, '0')]),
+  ) as typeof colors
+}
+
 export function spliteSpace(str: string) {
   return str.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ')
 }
 
 /**
- * Resolve context color for hsl string.
+ * Resolve context color as OKLCH components.
  *
  * @param str color string
  * @param theme Uno theme
- * @returns hsl string without `hsl()`
+ * @returns OKLCH string without `oklch()`
  *
  * @example
  * ```ts
- * resolveContextColor('red', theme) => '0 100 50'
+ * resolveContextColor('red', theme) => '63.7% 0.237 25.331'
  * ```
  */
-function resolveContextColor(str: string, theme: Theme): string | undefined {
+export function resolveContextColor(str: string, theme: Theme): string | undefined {
   const color = parseColor(str, theme)
   if (color) {
-    if (color.cssColor?.type === 'hsl') {
+    if (color.cssColor?.type === 'oklch') {
       if (color.cssColor.components) {
         return `${color.cssColor.components.join(' ')}`
       }
     }
     else {
       if (color.color && mc.valid(color.color)) {
-        const magicColor = mc(color.color)
-        return `${magicColor.hsl().join(' ')}`
+        try {
+          const magicColor = mc(color.color)
+          const [lightness, chroma, hue] = magicColor.oklch(false)
+          return `${lightness}% ${chroma} ${Number.isFinite(hue) ? hue : 0}`
+        }
+        catch {
+          return undefined
+        }
       }
     }
   }
@@ -49,13 +63,13 @@ function resolveContextColor(str: string, theme: Theme): string | undefined {
  * resolveContextColorByKey([, theme, 500], theme, '--onu-color-context')
  *
  * => {
- *   '--onu-color-context': '0 100 50',
+ *   '--onu-color-context': '63.7% 0.237 25.331',
  * }
  *
  * resolveContextColorByKey([, , red], theme, '--onu-color-context')
  *
  * => {
- *   '--onu-color-context': '0 100 50',
+ *   '--onu-color-context': '63.7% 0.237 25.331',
  * }
  * ```
  */

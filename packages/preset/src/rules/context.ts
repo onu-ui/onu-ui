@@ -1,12 +1,11 @@
 import type { CustomRule } from '../types'
 import { h, parseColor } from '@unocss/preset-wind4/utils'
-import { mc } from 'magic-color'
-import { isThemeMetaKey, resolveContextColorByKey } from '../utils'
+import { isThemeMetaKey, resolveContextColor, resolveContextColorByKey } from '../utils'
 
 export const contexts: CustomRule[] = [
   /**
    * o-<color> o-theme-<color>
-   * Any color type for context. Will be converted to HSL.
+   * Any color type for context. Will be converted to OKLCH.
    *
    * @example
    * o-red
@@ -15,7 +14,7 @@ export const contexts: CustomRule[] = [
    *
    * ```ts
    * {
-   *  '--onu-color-context': 255 100 50,
+   *  '--onu-color-context': 96.8% 0.211 109.8,
    * }
    * ```
    *
@@ -62,8 +61,8 @@ export const contexts: CustomRule[] = [
     key = key === 'context' ? 'bg' : key
     if (isThemeMetaKey(key)) {
       return {
-        '--un-bg-opacity': alpha ? `${Number.parseInt(alpha) / 100}` : '1',
-        'background-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-bg-opacity))`,
+        '--un-bg-opacity': alpha ? `${Number.parseInt(alpha)}%` : '100%',
+        'background-color': `oklch(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-bg-opacity))`,
       }
     }
   }],
@@ -71,8 +70,8 @@ export const contexts: CustomRule[] = [
     key = key === 'context' ? 'text' : key
     if (isThemeMetaKey(key)) {
       return {
-        '--un-text-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
-        'color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-text-opacity))`,
+        '--un-text-opacity': alpha ? `${Number.parseInt(alpha)}%` : '100%',
+        'color': `oklch(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-text-opacity))`,
       }
     }
   }],
@@ -80,8 +79,8 @@ export const contexts: CustomRule[] = [
     key = key === 'context' ? 'border' : key
     if (isThemeMetaKey(key)) {
       return {
-        '--un-border-opacity': alpha ? Number.parseInt(alpha) / 100 : 1,
-        'border-color': `hsl(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-border-opacity))`,
+        '--un-border-opacity': alpha ? `${Number.parseInt(alpha)}%` : '100%',
+        'border-color': `oklch(var(--onu-color-${key}, var(--onu-color-context)) / var(--un-border-opacity))`,
       }
     }
   }],
@@ -105,30 +104,19 @@ export const contexts: CustomRule[] = [
     const cssCustomKey = `--${variable}`
     if (name === 'theme' && no != null) {
       return {
-        [cssCustomKey]: `hsl(var(--onu-color-${no}) / 1)`,
+        [cssCustomKey]: `oklch(var(--onu-color-${no}) / 1)`,
       }
     }
 
     const color = parseColor(`${name}${no ? `-${no}` : ''}`, theme)
     if (color) {
-      let maybeColor = ''
-      if (color.cssColor?.type === 'hsl') {
-        if (color.cssColor.components) {
-          maybeColor = `${color.cssColor.components.join(' ')}`
-        }
-      }
-      else {
-        if (color.color && mc.valid(color.color)) {
-          const magicColor = mc(color.color)
-          maybeColor = `${magicColor.hsl().join(' ')}`
-        }
-      }
+      const maybeColor = resolveContextColor(`${name}${no ? `-${no}` : ''}`, theme)
 
       if (maybeColor) {
         const cssCustomOpacityKey = `${cssCustomKey}-opacity`
         return {
           [cssCustomOpacityKey]: color.cssColor?.alpha ?? 1,
-          [cssCustomKey]: `hsl(${maybeColor} / var(${cssCustomOpacityKey}))`,
+          [cssCustomKey]: `oklch(${maybeColor} / var(${cssCustomOpacityKey}))`,
         }
       }
     }

@@ -1,11 +1,8 @@
-import { mc } from 'magic-color'
+import { createOklchTheme } from './utils'
 
 export function resolveTheme(color: string) {
-  const theme = mc.theme(color, {
-    type: 'hsl',
-    // render: meta => [`--onu-color-${meta[0]}`, meta[1].replace(/hsl\((.*)\)/, '$1')],
-  })
-  const themeMetas = Object.fromEntries(Object.entries(theme).map(([k, v]) => [`--onu-color-${k}`, v.replace(/hsl\((.*)\)/, '$1')]))
+  const theme = createOklchTheme(color)
+  const themeMetas = Object.fromEntries(Object.entries(theme).map(([k, v]) => [`--onu-color-${k}`, v.replace(/oklch\((.*)\)/, '$1')]))
 
   const css = `
 :root {
@@ -23,8 +20,8 @@ export function resolveTheme(color: string) {
 }
 
 ::selection {
-  color: hsl(var(--onu-color-DEFAULT) / 0.99) !important;
-  background-color: hsl(var(--onu-color-text) / 0.99) !important;
+  color: oklch(var(--onu-color-DEFAULT) / 0.99) !important;
+  background-color: oklch(var(--onu-color-text) / 0.99) !important;
 }
   `.trim()
 

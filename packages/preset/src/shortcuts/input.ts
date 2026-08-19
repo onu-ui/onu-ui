@@ -16,11 +16,11 @@ export const input: CustomShortcut[] = [
   }],
   ['input-bordered', `border-op-100`],
   ['input-dashed', `border-dashed border-op-100 focus-within:ring-0`],
-  ['input-placeholder', `placeholder:color-[hsl(var(--onu-color-300))] dark:placeholder:color-[hsl(var(--onu-color-700))]`],
+  ['input-placeholder', `placeholder:color-[oklch(var(--onu-color-300))] dark:placeholder:color-[oklch(var(--onu-color-700))]`],
 
   ['input-focus', [`focus-within:(ring-(1px context))`, {
     // TODO: UnoCSS feature, use yield to generate the value into `focus-within` variant.
-    '--un-ring-color': 'hsl(var(--onu-color-border, var(--onu-color-context)) / var(--un-ring-opacity, 1)) !important',
+    '--un-ring-color': 'oklch(var(--onu-color-border, var(--onu-color-context)) / var(--un-ring-opacity, 1)) !important',
   }]],
   ['input-hover', 'hover:(border-op-100)'],
   ['input-disabled', `
