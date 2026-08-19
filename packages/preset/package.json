@@ -21,17 +21,10 @@
   ],
   "sideEffects": false,
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./helper": {
-      "types": "./dist/helper.d.ts",
-      "import": "./dist/helper.js"
-    }
+    ".": "./dist/index.js",
+    "./helper": "./dist/helper.js",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"

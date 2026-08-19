@@ -10,6 +10,7 @@
 .temp
 .eslintcache
 .pnpm-store
+.agents/
 
 coverage
 dist

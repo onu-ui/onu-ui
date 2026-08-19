@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🥴
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install pnpm 🚀
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: Set node LTS ✨
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
@@ -38,19 +38,19 @@ jobs:
 
     strategy:
       matrix:
-        node: [lts/*]
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [ lts/* ]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
       fail-fast: false
 
     steps:
       - name: Checkout 🥴
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install pnpm 🚀
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: Set node ${{ matrix.node }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm

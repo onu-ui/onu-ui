@@ -64,16 +64,16 @@ catalogs:
 
   # UnoCSS ecosystem
   unocss:
-    '@unocss/cli': ^66.7.5
-    '@unocss/core': ^66.7.5
-    '@unocss/preset-icons': ^66.7.5
-    '@unocss/preset-mini': ^66.7.5
-    '@unocss/preset-uno': ^66.7.5
-    '@unocss/preset-web-fonts': ^66.7.5
-    '@unocss/preset-wind4': ^66.7.5
-    '@unocss/reset': ^66.7.5
+    '@unocss/cli': ^66.8.0
+    '@unocss/core': ^66.8.0
+    '@unocss/preset-icons': ^66.8.0
+    '@unocss/preset-mini': ^66.8.0
+    '@unocss/preset-uno': ^66.8.0
+    '@unocss/preset-web-fonts': ^66.8.0
+    '@unocss/preset-wind4': ^66.8.0
+    '@unocss/reset': ^66.8.0
     magic-color: ^2.2.5
-    unocss: ^66.7.5
+    unocss: ^66.8.0
     unocss-transformer-alias: ^0.1.0
 
   # Vue ecosystem
@@ -86,3 +86,28 @@ catalogs:
     vue: ^3.5.41
     vue-flow-layout: ^0.2.0
     vue-tsc: ^3.3.10
+
+minimumReleaseAgeExclude:
+  - '@unocss/cli@66.8.0'
+  - '@unocss/config@66.8.0'
+  - '@unocss/core@66.8.0'
+  - '@unocss/extractor-arbitrary-variants@66.8.0'
+  - '@unocss/inspector@66.8.0'
+  - '@unocss/preset-attributify@66.8.0'
+  - '@unocss/preset-icons@66.8.0'
+  - '@unocss/preset-mini@66.8.0'
+  - '@unocss/preset-tagify@66.8.0'
+  - '@unocss/preset-typography@66.8.0'
+  - '@unocss/preset-uno@66.8.0'
+  - '@unocss/preset-web-fonts@66.8.0'
+  - '@unocss/preset-wind3@66.8.0'
+  - '@unocss/preset-wind4@66.8.0'
+  - '@unocss/preset-wind@66.8.0'
+  - '@unocss/reset@66.8.0'
+  - '@unocss/rule-utils@66.8.0'
+  - '@unocss/transformer-attributify-jsx@66.8.0'
+  - '@unocss/transformer-compile-class@66.8.0'
+  - '@unocss/transformer-directives@66.8.0'
+  - '@unocss/transformer-variant-group@66.8.0'
+  - '@unocss/vite@66.8.0'
+  - unocss@66.8.0
