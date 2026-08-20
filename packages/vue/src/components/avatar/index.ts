@@ -4,5 +4,6 @@ import Avatar from './index.vue'
 
 export const OAvatar = withInstall(Avatar)
 export const OAvatarGroup = withInstall(AvatarGroup)
+export default OAvatar
 
 export * from './props'

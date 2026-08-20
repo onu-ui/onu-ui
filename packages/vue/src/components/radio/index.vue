@@ -1,19 +1,21 @@
-<script lang='ts' setup>
+<script setup lang="ts">
 import type { ORadioProps } from './props'
-import { computed, ref } from 'vue'
+import { computed, useAttrs, useId } from 'vue'
 import { radioProps } from './props'
 
 defineOptions({
   name: 'ORadio',
+  inheritAttrs: false,
 })
 
 const props = defineProps(radioProps)
 const emits = defineEmits<{
   change: [value: unknown]
 }>()
-const model = defineModel()
+const model = defineModel<string | number | boolean>()
 
-const hashId = ref(Math.random().toString(36).substring(7))
+const inputId = useId()
+const attrs = useAttrs()
 const isChecked = computed(() => model.value === props.value)
 
 const sizeMap: Record<ORadioProps['size'], string> = {
@@ -27,8 +29,7 @@ const shapeMap: Record<ORadioProps['shape'], string> = {
   square: 'radio-square',
 }
 
-const sizes = computed(() => sizeMap[props.size])
-const shapes = computed(() => shapeMap[props.shape])
+const classes = computed(() => [sizeMap[props.size], shapeMap[props.shape]])
 
 function handleChange(e: Event) {
   const { dataset: { type }, value } = e.target as HTMLInputElement & { dataset: { type: 'number' | 'string' | 'boolean' } }
@@ -46,26 +47,30 @@ function handleChange(e: Event) {
   model.value = _val
   emits('change', _val)
 }
+
+function forwardedAttrs() {
+  const { class: _class, style: _style, ...rest } = attrs
+  return rest
+}
 </script>
 
 <template>
-  <label
-    class="radio radio-theme-400" :class="[
-      sizes,
-      shapes,
-    ]" :for="hashId"
-  >
-    <input
-      :id="hashId"
-      :name="name"
-      :data-type="typeof value"
-      :disabled="disabled"
-      :value="value"
-      :checked="isChecked"
-      type="radio"
-      class="peer"
-      @change="handleChange"
-    >
-    <span class="radio-dot" />
+  <label class="inline-flex items-center gap-2 cursor-pointer" :class="attrs.class" :style="attrs.style" :for="inputId">
+    <span class="radio radio-theme-400" :class="classes">
+      <input
+        v-bind="forwardedAttrs()"
+        :id="inputId"
+        :name="name"
+        :data-type="typeof value"
+        :disabled="disabled"
+        :value="value"
+        :checked="isChecked"
+        type="radio"
+        class="peer"
+        @change="handleChange"
+      >
+      <span class="radio-dot" />
+    </span>
+    <span v-if="$slots.default"><slot /></span>
   </label>
 </template>

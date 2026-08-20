@@ -19,14 +19,21 @@
     "vue",
     "ui library"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/onu-ui.js",
       "require": "./dist/onu-ui.umd.cjs"
     },
+    "./style.css": "./dist/onu-ui.css",
     "./dist/onu-ui.css": "./dist/onu-ui.css"
   },
-  "main": "index.js",
+  "main": "./dist/onu-ui.umd.cjs",
+  "module": "./dist/onu-ui.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -35,6 +42,9 @@
     "build": "vite build && pnpm uno",
     "uno": "unocss -m",
     "uno-watch": "unocss -w"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
   },
   "dependencies": {
     "@onu-ui/utils": "workspace:*"
@@ -45,5 +55,8 @@
     "unocss": "catalog:unocss",
     "vite": "catalog:build",
     "vue": "catalog:vue"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

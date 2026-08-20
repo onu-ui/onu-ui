@@ -1,4 +1,4 @@
-<script lang='ts' setup>
+<script setup lang="ts">
 import ORadio from './index.vue'
 import { radioGroupProps } from './props'
 
@@ -8,19 +8,26 @@ defineOptions({
 
 defineProps(radioGroupProps)
 
-const model = defineModel()
+const model = defineModel<string | number | boolean>()
 </script>
 
 <template>
-  <div flex="~ gap-2">
+  <div
+    class="flex gap-2"
+    :class="direction === 'vertical' ? 'flex-col items-start' : 'flex-row items-center flex-wrap'"
+    role="radiogroup"
+  >
     <ORadio
-      v-for="(item, idx) in options"
-      :key="`${item.value}-${idx}`"
-      v-model="model as any"
+      v-for="item in options"
+      :key="`${typeof item.value}:${String(item.value)}`"
+      v-model="model"
       :value="item.value"
       :shape="shape"
       :size="size"
       :name="name"
-    />
+      :disabled="disabled || item.disabled"
+    >
+      {{ item.label ?? item.value }}
+    </ORadio>
   </div>
 </template>

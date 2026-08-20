@@ -1,4 +1,5 @@
-<script lang='ts' setup>
+<script setup lang="ts">
+import { computed } from 'vue'
 import { avatarGroupProps } from './props'
 
 defineOptions({
@@ -7,26 +8,36 @@ defineOptions({
 
 const props = defineProps(avatarGroupProps)
 
-const sizeMap = {
+const sizeClasses = {
   xs: 'avatar-group-xs',
   sm: 'avatar-group-sm',
   md: 'avatar-group-md',
   lg: 'avatar-group-lg',
 }
 
-const base = [
+const classes = computed(() => [
   'avatar-group',
-  sizeMap[props.size],
+  sizeClasses[props.size],
   props.vertical ? 'flex-col' : 'flex-row',
-]
+])
 
-const binds = props.vertical ? { 'space-y': props['space-y'] } : { 'space-x': props['space-x'] }
-
-// <div space-x="-6" space-y="-6"></div>
+const overlapStyle = computed(() => ({
+  '--onu-avatar-group-overlap': `${Number(props.vertical ? props['space-y'] : props['space-x']) * 0.25}rem`,
+}))
 </script>
 
 <template>
-  <div :class="base" v-bind="binds">
+  <div :class="classes" :style="overlapStyle">
     <slot />
   </div>
 </template>
+
+<style scoped>
+.avatar-group.flex-row > :deep(.avatar:not(:first-child)) {
+  margin-left: var(--onu-avatar-group-overlap);
+}
+
+.avatar-group.flex-col > :deep(.avatar:not(:first-child)) {
+  margin-top: var(--onu-avatar-group-overlap);
+}
+</style>

@@ -4,5 +4,6 @@ import Radio from './index.vue'
 
 export const ORadio = withInstall(Radio)
 export const ORadioGroup = withInstall(RadioGroup)
+export default ORadio
 
 export * from './props'

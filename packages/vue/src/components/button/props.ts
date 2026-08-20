@@ -5,6 +5,10 @@ export type ButtonVariants = 'default' | 'soft' | 'outline' | 'solid' | 'solid-c
 
 export const buttonProps = {
   to: String,
+  type: {
+    type: String as PropType<'button' | 'submit' | 'reset'>,
+    default: 'button',
+  },
   rounded: Boolean,
   icon: String,
 
@@ -12,12 +16,18 @@ export const buttonProps = {
   disabled,
   readonly,
   loading: loadable,
-  variant: { type: String as PropType<ButtonVariants> },
+  variant: {
+    type: String as PropType<ButtonVariants>,
+  },
 }
 
 export const buttonGroupProps = {
   size: buttonProps.size,
   spacer: Boolean,
+  orientation: {
+    type: String as PropType<'horizontal' | 'vertical'>,
+    default: 'horizontal',
+  },
 }
 
 export type OButtonProps = ExtractPropTypes<typeof buttonProps>

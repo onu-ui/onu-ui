@@ -1,14 +1,14 @@
 import type { App, Plugin } from 'vue'
 import { version } from '../package.json'
 
-const INSTALLED_KEY = Symbol('Onu_UI_Installed')
+const installedApps = new WeakSet<App>()
 
 export function createInstaller(components: Plugin[] = []) {
   const install = (app: App) => {
-    if ((app as any)[INSTALLED_KEY])
+    if (installedApps.has(app))
       return
 
-    (app as any)[INSTALLED_KEY] = true
+    installedApps.add(app)
     components.forEach(c => app.use(c))
   }
 

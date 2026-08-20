@@ -25,6 +25,10 @@ export const radioProps = {
 
 export const radioGroupProps = {
   ...baseProps,
+  direction: {
+    type: String as PropType<'horizontal' | 'vertical'>,
+    default: 'horizontal',
+  },
   options: {
     type: Array as PropType<Array<{ value: string | number | boolean, label?: string, disabled?: boolean }>>,
     required: true,
@@ -32,3 +36,4 @@ export const radioGroupProps = {
 }
 
 export type ORadioProps = ExtractPropTypes<typeof radioProps>
+export type ORadioGroupProps = ExtractPropTypes<typeof radioGroupProps>

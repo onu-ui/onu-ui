@@ -6,6 +6,10 @@ export type AvatarVariants = 'squircle' | 'hexagon' | 'triangle'
 export const avatarProps = {
   size: sizeable,
   src: String,
+  alt: {
+    type: String,
+    default: '',
+  },
   variant: { type: String as PropType<AvatarVariants> },
   online: Boolean,
   offline: Boolean,

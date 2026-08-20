@@ -1,6 +1,5 @@
 <script lang='ts' setup>
-import type { SizeType } from '@/composables/useProps'
-import { computed, useAttrs, useSlots } from 'vue'
+import { computed, useSlots } from 'vue'
 import { avatarProps } from './props'
 
 defineOptions({
@@ -9,15 +8,7 @@ defineOptions({
 })
 
 const props = defineProps(avatarProps)
-const binds = Object.assign({}, useAttrs())
 const slots = useSlots()
-
-const sizeMap: Record<SizeType, string> = {
-  xs: 'avatar-xs',
-  sm: 'avatar-sm',
-  md: 'avatar-md',
-  lg: 'avatar-lg',
-}
 
 const variants = {
   hexagon: 'mask-hexagon',
@@ -27,7 +18,7 @@ const variants = {
 
 const base = computed(() => [
   'avatar',
-  props.size ? sizeMap[props.size] : '',
+  `avatar-${props.size}`,
   props.variant ? variants[props.variant] : '',
   slots.default && !props.src ? 'avatar-placeholder' : '',
   props.online ? 'avatar-online' : '',
@@ -37,9 +28,9 @@ const base = computed(() => [
 </script>
 
 <template>
-  <div :class="base" :w>
-    <div v-bind="binds">
-      <img v-if="src" :src>
+  <div :class="base">
+    <div :w>
+      <img v-if="src" :src :alt>
       <slot v-else />
     </div>
   </div>
