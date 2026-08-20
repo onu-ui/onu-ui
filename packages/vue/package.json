@@ -47,10 +47,10 @@
     "vue": "^3.5.0"
   },
   "dependencies": {
-    "@onu-ui/utils": "workspace:*"
+    "@onu-ui/preset": "workspace:*",
+    "@vueuse/core": "catalog:vue"
   },
   "devDependencies": {
-    "@onu-ui/preset": "workspace:*",
     "@vitejs/plugin-vue": "catalog:vue",
     "unocss": "catalog:unocss",
     "vite": "catalog:build",

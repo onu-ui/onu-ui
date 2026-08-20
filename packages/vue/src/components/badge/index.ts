@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Badge from './index.vue'
 
 export const OBadge = withInstall(Badge)

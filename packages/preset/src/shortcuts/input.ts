@@ -43,12 +43,11 @@ export const input: CustomShortcut[] = [
           placeholder:text-muted-foreground
           focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)
-          o-dark dark:o-light
         `],
   ['input', `
           input-default input-bordered input-focus
           input-placeholder [&_input]:input-placeholder
           text-foreground
-          o-theme-400 dark:o-theme-600
+          o-theme-primary
         `],
 ]

@@ -10,8 +10,6 @@ export default defineConfig({
     },
   },
   presets: [
-    presetOnu({
-      color: '#608e57',
-    }),
+    presetOnu(),
   ],
 })

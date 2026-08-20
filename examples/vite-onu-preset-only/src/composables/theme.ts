@@ -1,35 +1,49 @@
 import { resolveTheme } from '@onu-ui/preset/helper'
+import { useStyleTag } from '@vueuse/core'
 import { mc } from 'magic-color'
-import { computed, ref } from 'vue'
+import { computed, shallowRef } from 'vue'
 
-export const themeColors = ref([
-  '#608e57',
+export const themeColors = shallowRef<(string | undefined)[]>([
+  undefined,
   '#919b46',
   '#339448',
   '#32324d',
 ])
 
-export const themeIdx = ref(0)
-export const currentThemeColor = computed(() => themeColors.value[themeIdx.value] ?? themeColors.value[0])
+export const themeIdx = shallowRef(0)
 
-export function generateTheme(color: string) {
-  const { meta } = resolveTheme(color)
-  const i = themeColors.value.indexOf(color)
-  themeIdx.value = i
+const selectedThemeColor = shallowRef<string>()
+const themeCss = computed(() => resolveTheme(selectedThemeColor.value).cssMinify)
 
-  for (const key in meta) {
-    document.documentElement.style.setProperty(key, meta[key])
+const themeStyle = useStyleTag(themeCss, {
+  id: 'onu-example-theme',
+  immediate: false,
+})
+
+export const currentThemeColor = computed(() => selectedThemeColor.value ?? '默认黑白灰')
+
+export function generateTheme(color?: string) {
+  let index = themeColors.value.indexOf(color)
+
+  if (index === -1) {
+    themeColors.value = [...themeColors.value, color]
+    index = themeColors.value.length - 1
   }
+
+  selectedThemeColor.value = color
+  themeIdx.value = index
+
+  themeStyle.unload()
+  themeStyle.load()
 }
 
 export function randomTheme() {
   const color = mc.random()
-  themeColors.value.push(color)
   generateTheme(color)
 }
 
 const radius = [0, 0.3, 0.5, 0.75, 1]
-const raduiIdx = ref(2)
+const raduiIdx = shallowRef(2)
 
 export function changeRadius() {
   if (raduiIdx.value >= radius.length - 1) {

@@ -10,7 +10,6 @@ export default defineConfig({
   plugins: [
     Vue(),
     dts({
-      aliasesExclude: ['@onu-ui/utils'],
       entryRoot: 'src',
       include: ['src'],
       insertTypesEntry: true,

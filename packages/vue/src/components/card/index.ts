@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Card from './index.vue'
 
 export const OCard = withInstall(Card)

@@ -6,6 +6,18 @@ import { presetOnu } from '../../packages/preset/src/index'
 describe('onu semantic theme', () => {
   const color = '#9955FF'
 
+  it('uses shadcn-compatible neutral tokens by default', () => {
+    const { css, theme } = resolveTheme()
+
+    expect(theme[500]).toBe('oklch(55.6% 0 0)')
+    expect(css).toContain('--onu-color-primary: var(--onu-color-900);')
+    expect(css).toContain('--onu-color-secondary-dark: var(--onu-color-800);')
+    expect(css).toContain('--onu-color-muted-light: var(--onu-color-100);')
+    expect(css).toContain('--onu-color-ring: var(--onu-color-400);')
+    expect(css).toContain('--onu-color-primary: var(--onu-color-200);')
+    expect(css).toContain('--onu-color-ring: var(--onu-color-500);')
+  })
+
   it('generates light and dark semantic variables', () => {
     const { css } = resolveTheme(color)
 
@@ -94,5 +106,39 @@ describe('onu semantic theme', () => {
     expect(css).toContain(':focus-visible')
     expect(css).toContain('--un-translate-y:1px')
     expect(css).toContain('pointer-events:none')
+  })
+
+  it('uses semantic primary colors for the default button', async () => {
+    const uno = await createGenerator({
+      presets: [presetOnu()],
+    })
+    const { css } = await uno.generate('btn', { preflights: false })
+
+    expect(css).toContain('--onu-color-context:var(--onu-color-primary)')
+    expect(css).toContain('--onu-color-primary-foreground')
+    expect(css).toContain('--onu-button-bg-opacity:90%')
+    expect(css).not.toContain('--onu-color-context:var(--onu-color-500)')
+    expect(css).not.toContain('--onu-color-context:var(--onu-color-600)')
+  })
+
+  it('keeps default component contexts connected to semantic primary', async () => {
+    const uno = await createGenerator({
+      presets: [presetOnu()],
+    })
+    const { css } = await uno.generate([
+      'alert',
+      'badge',
+      'btn',
+      'checkbox',
+      'input',
+      'radio',
+      'switch-default',
+    ].join(' '), { preflights: false })
+
+    expect(css).toContain('--onu-color-context:var(--onu-color-primary)')
+    expect(css).not.toContain('--onu-color-context:var(--onu-color-dark)')
+    expect(css).not.toContain('--onu-color-context:var(--onu-color-light)')
+    expect(css).not.toContain('--onu-color-context:var(--onu-color-400)')
+    expect(css).not.toContain('--onu-color-context:var(--onu-color-500)')
   })
 })

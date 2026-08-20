@@ -17,8 +17,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      '@onu-ui/preset/helper': r('./packages/preset/src/helper.ts'),
       '@onu-ui/preset': r('./packages/preset'),
-      '@onu-ui/utils': r('./packages/utils'),
     },
   },
 })

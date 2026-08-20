@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Switch from './index.vue'
 
 export const OSwitch = withInstall(Switch)

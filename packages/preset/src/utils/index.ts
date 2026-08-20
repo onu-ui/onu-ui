@@ -3,6 +3,20 @@ import type { CSSValue } from 'unocss'
 import { parseColor } from '@unocss/preset-wind4/utils'
 import { mc } from 'magic-color'
 
+export const neutralTheme = {
+  50: 'oklch(98.5% 0 0)',
+  100: 'oklch(97% 0 0)',
+  200: 'oklch(92.2% 0 0)',
+  300: 'oklch(87% 0 0)',
+  400: 'oklch(70.8% 0 0)',
+  500: 'oklch(55.6% 0 0)',
+  600: 'oklch(43.9% 0 0)',
+  700: 'oklch(37.1% 0 0)',
+  800: 'oklch(26.9% 0 0)',
+  900: 'oklch(20.5% 0 0)',
+  950: 'oklch(14.5% 0 0)',
+} as const
+
 export function createOklchTheme(color: string) {
   const colors = mc.theme(color, { type: 'oklch' })
 
@@ -102,6 +116,6 @@ export function resolveRuleWithContext(s: string, theme: Theme, key: string) {
 }
 
 export function isThemeMetaKey(key: string) {
-  const keys = ['DEFAULT', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950', 'text', 'bg', 'border', 'context']
+  const keys = ['DEFAULT', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950', 'primary', 'text', 'bg', 'border', 'context']
   return keys.includes(key)
 }

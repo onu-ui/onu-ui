@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import ButtonGroup from './group.vue'
 import Button from './index.vue'
 

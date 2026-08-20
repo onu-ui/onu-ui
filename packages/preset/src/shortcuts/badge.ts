@@ -28,10 +28,10 @@ export const badge: CustomShortcut[] = [
       font-onu inline-flex items-center justify-center o-transition w-fit rounded-full
       badge-size-md 
       border-(~ solid context) bg-context hover:(bg-context:80 border-context:80)
-      o-theme-dark dark:o-theme-light
+      o-theme-primary
       text-primary-foreground
     `],
-  ['badge', `badge-default o-theme-400 dark:o-theme-500`],
+  ['badge', `badge-default`],
   ['badge-outline', `!bg-transparent text-context dark:text-context`],
   ['badge-dot', 'px-2px! h-6px!'],
 ]

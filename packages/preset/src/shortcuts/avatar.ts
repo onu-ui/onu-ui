@@ -27,7 +27,7 @@ export const avatar: CustomShortcut[] = [
       [&_.avatar]:(of-hidden rounded-full border border-3px border-background)
     `],
   ['avatar-placeholder', `
-      [&>div]:(flex items-center justify-center bg-theme-500 dark:bg-theme-600)
+      [&>div]:(flex items-center justify-center bg-primary text-primary-foreground)
     `],
   [/^avatar-(online|offline)$/, ([, s]) => `before:(content-empty absolute top-7% right-7% z-10 block w-15% h-15% rounded-full o-theme-${s === 'online' ? '500' : '900'} o-theme-text bg-context ring ring-2px ring-current)`],
 ]

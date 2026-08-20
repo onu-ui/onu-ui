@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Input from './index.vue'
 
 export const OInput = withInstall(Input)

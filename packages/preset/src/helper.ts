@@ -1,37 +1,43 @@
 import { mc } from 'magic-color'
-import { createOklchTheme } from './utils'
+import { createOklchTheme, neutralTheme } from './utils'
 
-export function resolveTheme(color: string) {
-  const theme = createOklchTheme(color)
+export function resolveTheme(color?: string) {
+  const hasCustomColor = Boolean(color)
+  const theme = color ? createOklchTheme(color) : neutralTheme
   const themeMetas = Object.fromEntries(Object.entries(theme).map(([k, v]) => [`--onu-color-${k}`, v.replace(/oklch\((.*)\)/, '$1')]))
   const semanticMetas: Record<string, string> = {
-    '--onu-color-primary-foreground-light': `var(--onu-color-${resolveForegroundStep(theme[500], theme)})`,
-    '--onu-color-primary-foreground-dark': `var(--onu-color-${resolveForegroundStep(theme[600], theme)})`,
+    '--onu-color-primary-foreground-light': hasCustomColor ? `var(--onu-color-${resolveForegroundStep(theme[500], theme)})` : 'var(--onu-color-50)',
+    '--onu-color-primary-foreground-dark': hasCustomColor ? `var(--onu-color-${resolveForegroundStep(theme[600], theme)})` : 'var(--onu-color-900)',
     '--onu-color-secondary-light': 'var(--onu-color-100)',
-    '--onu-color-secondary-dark': 'var(--onu-color-950)',
-    '--onu-color-muted-light': 'var(--onu-color-50)',
-    '--onu-color-muted-dark': 'var(--onu-color-950)',
+    '--onu-color-secondary-dark': `var(--onu-color-${hasCustomColor ? 950 : 800})`,
+    '--onu-color-muted-light': `var(--onu-color-${hasCustomColor ? 50 : 100})`,
+    '--onu-color-muted-dark': `var(--onu-color-${hasCustomColor ? 950 : 800})`,
     '--onu-color-accent-light': 'var(--onu-color-100)',
-    '--onu-color-accent-dark': 'var(--onu-color-950)',
+    '--onu-color-accent-dark': `var(--onu-color-${hasCustomColor ? 950 : 800})`,
     '--onu-color-border-light': 'var(--onu-color-200)',
-    '--onu-color-border-dark': 'var(--onu-color-50) / 12%',
+    '--onu-color-border-dark': `var(--onu-color-50) / ${hasCustomColor ? 12 : 10}%`,
     '--onu-color-input-light': 'var(--onu-color-200)',
-    '--onu-color-input-dark': 'var(--onu-color-50) / 16%',
+    '--onu-color-input-dark': `var(--onu-color-50) / ${hasCustomColor ? 16 : 15}%`,
   }
+
+  const primaryLightStep = hasCustomColor ? 500 : 900
+  const primaryDarkStep = hasCustomColor ? 600 : 200
+  const ringLightStep = hasCustomColor ? 500 : 400
+  const ringDarkStep = hasCustomColor ? 600 : 500
 
   const css = `
 :root {
   ${Object.entries(themeMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
-  --onu-color-DEFAULT: var(--onu-color-500);
-  --onu-color-text: var(--onu-color-100);
-  --onu-color-text-invert: var(--onu-color-950);
+  --onu-color-DEFAULT: var(--onu-color-${primaryLightStep});
+  --onu-color-text: var(--onu-color-${hasCustomColor ? 100 : 50});
+  --onu-color-text-invert: var(--onu-color-${hasCustomColor ? 950 : 900});
   --onu-color-background: 100% 0 0;
   --onu-color-foreground: 14.5% 0 0;
   --onu-color-card: 100% 0 0;
   --onu-color-card-foreground: 14.5% 0 0;
   --onu-color-popover: 100% 0 0;
   --onu-color-popover-foreground: 14.5% 0 0;
-  --onu-color-primary: var(--onu-color-500);
+  --onu-color-primary: var(--onu-color-${primaryLightStep});
   ${Object.entries(semanticMetas).map(([key, value]) => `${key}: ${value};`).join('\n  ')}
   --onu-color-primary-foreground: var(--onu-color-primary-foreground-light);
   --onu-color-context: var(--onu-color-primary);
@@ -45,21 +51,21 @@ export function resolveTheme(color: string) {
   --onu-color-destructive-foreground: 98.5% 0 0;
   --onu-color-border-default: var(--onu-color-border-light);
   --onu-color-input: var(--onu-color-input-light);
-  --onu-color-ring: var(--onu-color-500);
+  --onu-color-ring: var(--onu-color-${ringLightStep});
   --onu-radius: 0.5rem;
 }
 
 .dark {
-  --onu-color-DEFAULT: var(--onu-color-600);
-  --onu-color-text: var(--onu-color-950);
-  --onu-color-text-invert: var(--onu-color-100);
+  --onu-color-DEFAULT: var(--onu-color-${primaryDarkStep});
+  --onu-color-text: var(--onu-color-${hasCustomColor ? 950 : 900});
+  --onu-color-text-invert: var(--onu-color-${hasCustomColor ? 100 : 50});
   --onu-color-background: 14.5% 0 0;
   --onu-color-foreground: 98.5% 0 0;
   --onu-color-card: 20.5% 0 0;
   --onu-color-card-foreground: 98.5% 0 0;
   --onu-color-popover: 20.5% 0 0;
   --onu-color-popover-foreground: 98.5% 0 0;
-  --onu-color-primary: var(--onu-color-600);
+  --onu-color-primary: var(--onu-color-${primaryDarkStep});
   --onu-color-primary-foreground: var(--onu-color-primary-foreground-dark);
   --onu-color-secondary: var(--onu-color-secondary-dark);
   --onu-color-secondary-foreground: 98.5% 0 0;
@@ -71,7 +77,7 @@ export function resolveTheme(color: string) {
   --onu-color-destructive-foreground: 98.5% 0 0;
   --onu-color-border-default: var(--onu-color-border-dark);
   --onu-color-input: var(--onu-color-input-dark);
-  --onu-color-ring: var(--onu-color-600);
+  --onu-color-ring: var(--onu-color-${ringDarkStep});
 }
 
 ::selection {

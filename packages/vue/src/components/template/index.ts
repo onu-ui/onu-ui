@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Template from './index.vue'
 
 export const OTemplate = withInstall(Template)

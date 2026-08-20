@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Spinner from './index.vue'
 
 export const OSpinner = withInstall(Spinner)

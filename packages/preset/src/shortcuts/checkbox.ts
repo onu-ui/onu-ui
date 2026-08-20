@@ -22,7 +22,7 @@ export const checkboxs: CustomShortcut[] = [
       has-[>input:checked]:bg-context
       has-[>input:disabled]:(pointer-events-none op-50 cursor-not-allowed)
     `],
-  ['checkbox', `checkbox-default checkbox-md`],
+  ['checkbox', `checkbox-default checkbox-md o-theme-primary`],
   ['checkbox-dot', `
       pos-center flex items-center justify-center of-hidden
       size-0 op-0 o-transition

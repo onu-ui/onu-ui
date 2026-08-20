@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Skeleton from './index.vue'
 
 export const OSkeleton = withInstall(Skeleton)

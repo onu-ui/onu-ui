@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Empty from './index.vue'
 
 export const OEmpty = withInstall(Empty)

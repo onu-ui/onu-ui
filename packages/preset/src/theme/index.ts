@@ -1,13 +1,13 @@
 import type { Theme } from '@unocss/preset-mini'
 import type { ResolveOnuOptions } from '../types'
-import { createOklchTheme } from '../utils'
+import { createOklchTheme, neutralTheme } from '../utils'
 import { semanticColor } from './semantic'
 
 export function theme(options: ResolveOnuOptions): Theme {
   const { color } = options
-  const colors = createOklchTheme(color)
+  const colors = color ? createOklchTheme(color) : neutralTheme
   // Gray basic color
-  const grays = createOklchTheme('#888888')
+  const grays = neutralTheme
 
   return {
     colors: {

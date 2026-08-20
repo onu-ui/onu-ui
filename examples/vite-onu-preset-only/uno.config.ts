@@ -4,9 +4,7 @@ import { defineConfig, transformerVariantGroup } from 'unocss'
 export default defineConfig({
   envMode: 'dev',
   presets: [
-    presetOnu({
-      color: '#608e57',
-    }),
+    presetOnu(),
   ],
   shortcuts: {
     wrapper: 'flex flex-col justify-center items-center',

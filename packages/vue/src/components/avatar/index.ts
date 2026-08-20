@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import AvatarGroup from './group.vue'
 import Avatar from './index.vue'
 

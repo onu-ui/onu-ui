@@ -32,5 +32,5 @@ export const switches: CustomShortcut[] = [
     o-transition pointer-events-none
     peer-checked:translate-x-$dot-size
     `],
-  ['switch-default', `o-theme-dark dark:o-theme-light`],
+  ['switch-default', `o-theme-primary`],
 ]

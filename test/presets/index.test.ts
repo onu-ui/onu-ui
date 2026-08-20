@@ -15,6 +15,10 @@ describe('onu preset', () => {
     })
   }
 
+  it('does not resolve an omitted color to auto', () => {
+    expect(presetOnu().options?.color).toBeUndefined()
+  })
+
   it('preflights', async () => {
     const uno = await createOnu({ color })
     const { css } = await uno.generate('')

@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Separator from './index.vue'
 
 export const OSeparator = withInstall(Separator)

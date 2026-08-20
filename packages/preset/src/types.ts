@@ -8,8 +8,7 @@ export type SizeType = 'xs' | 'sm' | 'md' | 'lg' // default: md
 export interface PrsetOnuOptions {
   /**
    * Theme primary color.
-   *
-   * @default 'auto' (random color)
+   * Uses a shadcn-compatible neutral theme when omitted.
    */
   color?: string
 
@@ -34,7 +33,9 @@ export interface PrsetOnuOptions {
   preflights?: boolean
 }
 
-export type ResolveOnuOptions = Required<PrsetOnuOptions>
+export interface ResolveOnuOptions extends Omit<Required<PrsetOnuOptions>, 'color'> {
+  color?: string
+}
 
 export type CustomRule = Rule<Theme>
 export type CustomShortcut = StaticShortcut | DynamicShortcut<Theme>

@@ -15,13 +15,13 @@ export const button: CustomShortcut[] = [
     return resolveRuleWithContext(s, theme, '--onu-color-context')
   }],
   ['btn-disabled-theme-color', 'disabled:(bg-transparent text-context) dark:disabled:(bg-transparent text-context)!'],
-  ['btn-hover', 'hover:o-theme-600'],
+  ['btn-hover', 'hover:[--onu-button-bg-opacity:90%]'],
   ['btn-focus', 'focus-visible:(outline-none border-ring ring-3px ring-ring/50)'],
-  ['btn-active', 'active:(translate-y-1px o-theme-700)'],
+  ['btn-active', 'active:(translate-y-1px [--onu-button-bg-opacity:80%])'],
   ['btn-disabled', `
         disabled:(
           pointer-events-none cursor-not-allowed op-50 shadow-none
-          hover:o-theme-DEFAULT
+          hover:[--onu-button-bg-opacity:100%]
         )
         `],
   ['btn-default', `
@@ -58,9 +58,12 @@ export const button: CustomShortcut[] = [
   ['btn-dashed-cover', `btn-outline btn-disabled-theme-color hover:bg-theme-100 dark:hover:bg-theme-900 border-dashed`],
   ['btn', `
         btn-default border-0 border-context
-        o-theme-500 bg-context
-        o-theme-text
+        o-theme-primary btn-context-bg
+        text-primary-foreground
         `],
+  ['btn-context-bg', [{
+    'background-color': 'oklch(var(--onu-color-context) / var(--onu-button-bg-opacity, 100%))',
+  }]],
 
   // buttonn-group
   [/^btn-group(?:-(\w+))?$/, ([, s]) => {

@@ -6,7 +6,7 @@ export const alerts: CustomShortcut[] = [
   ['alert-default', `
     relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5
     o-radius-lg border border-solid border-border bg-card px-4 py-3
-    text-sm text-card-foreground o-theme-500
+    text-sm text-card-foreground o-theme-primary
     has-[>i]:grid-cols-[1rem_1fr] has-[>i]:gap-x-3
     [&>i]:(size-4 translate-y-0.5 text-current)
   `],

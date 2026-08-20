@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import Alert from './index.vue'
 
 export const OAlert = withInstall(Alert)

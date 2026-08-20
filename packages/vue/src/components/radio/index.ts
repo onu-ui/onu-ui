@@ -1,4 +1,4 @@
-import { withInstall } from '@onu-ui/utils'
+import { withInstall } from '../../utils'
 import RadioGroup from './group.vue'
 import Radio from './index.vue'
 

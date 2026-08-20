@@ -435,28 +435,15 @@ importers:
         specifier: catalog:unocss
         version: 66.8.0(vite@8.2.1(@types/node@26.2.0)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
 
-  packages/utils:
-    dependencies:
-      '@vueuse/core':
-        specifier: catalog:vue
-        version: 14.4.0(vue@3.5.41(typescript@5.9.3))
-      vue:
-        specifier: ^3.5.41
-        version: 3.5.41(typescript@5.9.3)
-    devDependencies:
-      tsdown:
-        specifier: catalog:build
-        version: 0.22.14(@volar/typescript@2.4.28(typescript@5.9.3))(tsx@4.23.12)(typescript@5.9.3)(vue-tsc@3.3.10(typescript@5.9.3))
-
   packages/vue:
     dependencies:
-      '@onu-ui/utils':
-        specifier: workspace:*
-        version: link:../utils
-    devDependencies:
       '@onu-ui/preset':
         specifier: workspace:*
         version: link:../preset
+      '@vueuse/core':
+        specifier: catalog:vue
+        version: 14.4.0(vue@3.5.41(typescript@5.9.3))
+    devDependencies:
       '@vitejs/plugin-vue':
         specifier: catalog:vue
         version: 6.0.8(vite@8.2.1(@types/node@26.2.0)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(vue@3.5.41(typescript@5.9.3))

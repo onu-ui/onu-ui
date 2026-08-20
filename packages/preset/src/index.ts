@@ -1,7 +1,6 @@
 import type { Theme } from '@unocss/preset-wind4'
 import type { PrsetOnuOptions, ResolveOnuOptions } from './types'
 import { presetWind4 } from '@unocss/preset-wind4'
-import { mc } from 'magic-color'
 import { definePreset, mergeDeep, presetAttributify, presetIcons, presetWebFonts } from 'unocss'
 import { LAYER_ONU_PRESET, LAYER_ONU_UI } from './layers'
 import { preflights } from './preflights'
@@ -55,7 +54,6 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const defaultOptions: ResolveOnuOptions = {
     preflights: true,
     fonts: ['DM Sans', 'DM Sans:400,700'],
-    color: 'auto',
     icons: {
       extraProperties: {
         'display': 'inline-block',
@@ -74,7 +72,6 @@ function resolveOptions(options: PrsetOnuOptions = {}): ResolveOnuOptions {
   const resolvedOptions: ResolveOnuOptions = {
     ...defaultOptions,
     ...options,
-    color: options.color === 'auto' ? mc.random() : options.color!,
     icons: mergeDeep(defaultOptions.icons, options.icons ?? {}),
   }
 

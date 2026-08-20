@@ -90,10 +90,10 @@ const isWideLayout = useMediaQuery('(min-width: 768px)')
           </div>
           <div flex items-center justify-start gap-2 flex-wrap>
             <button
-              v-for="c in themeColors" :key="c"
+              v-for="c in themeColors" :key="c ?? 'default'"
               :class="c === themeColors[themeIdx] ? 'ring-2 ring-ring ring-offset-2 ring-offset-background' : ''"
-              :title="c" size-7 cursor-pointer rounded-lg border border-border :style="{ backgroundColor: c }"
-              :aria-label="`切换主题色为 ${c}`"
+              :title="c ?? '默认黑白灰'" size-7 cursor-pointer rounded-lg border border-border :style="{ backgroundColor: c ?? '#262626' }"
+              :aria-label="`切换主题色为 ${c ?? '默认黑白灰'}`"
               @click="generateTheme(c)"
             />
           </div>

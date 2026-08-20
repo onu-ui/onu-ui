@@ -34,7 +34,7 @@ describe('onu css foundation shortcuts', () => {
       'spinner-muted',
     ]
     const uno = await createGenerator({
-      presets: [presetOnu({ color: '#608e57' })],
+      presets: [presetOnu()],
     })
     const { css, matched } = await uno.generate(tokens.join(' '), { preflights: false })
 
