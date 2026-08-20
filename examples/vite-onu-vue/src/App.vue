@@ -4,6 +4,7 @@ import { OButton } from 'onu-ui'
 import DisplayExamples from './components/DisplayExamples.vue'
 import FormExamples from './components/FormExamples.vue'
 import FoundationExamples from './components/FoundationExamples.vue'
+import InteractiveExamples from './components/InteractiveExamples.vue'
 import WorkspaceExample from './components/WorkspaceExample.vue'
 
 const isDark = useDark()
@@ -35,6 +36,7 @@ function toggleDark() {
       <DisplayExamples />
       <FormExamples />
       <FoundationExamples class="lg:col-span-2" />
+      <InteractiveExamples />
       <WorkspaceExample class="lg:col-span-2" />
     </main>
   </div>

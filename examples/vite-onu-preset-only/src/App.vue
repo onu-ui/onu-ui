@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { FlowLayout } from 'vue-flow-layout'
+import CssTodoComponents from './components/css-todo-components.vue'
 import AlertLayout from './components/o-alert.vue'
 import AvatarLayout from './components/o-avatar.vue'
 import BadgeLayout from './components/o-badge.vue'
@@ -101,6 +102,21 @@ const isWideLayout = useMediaQuery('(min-width: 768px)')
       </section>
 
       <SemanticTheme :theme-color="currentThemeColor" :is-dark="isDark" />
+
+      <section mt-12>
+        <div mb-5>
+          <p text-sm font-medium text-primary>
+            CSS-only TODO
+          </p>
+          <h2 mt-1 text-2xl font-semibold tracking-tight>
+            完整的无运行时组件外观
+          </h2>
+          <p mt-2 max-w-3xl text-sm leading-6 text-muted-foreground>
+            表单组合、列表、导航、数据展示与排版继续由 preset shortcuts 提供。
+          </p>
+        </div>
+        <CssTodoComponents />
+      </section>
 
       <section mt-12>
         <div mb-5>

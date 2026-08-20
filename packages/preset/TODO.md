@@ -25,19 +25,19 @@
 
 ### 待实现
 
-- [ ] Label
-- [ ] Textarea
-- [ ] Native Select
-- [ ] Field / Field Group / Field Description / Field Error
-- [ ] Input Group
-- [ ] Item / List Item
-- [ ] Breadcrumb
-- [ ] Pagination 外观
-- [ ] Progress（优先原生 `progress`）
-- [ ] Table
-- [ ] Typography
-- [ ] Aspect Ratio
-- [ ] Toggle 外观（状态由原生 checkbox 或调用方提供）
+- [x] Label
+- [x] Textarea
+- [x] Native Select
+- [x] Field / Field Group / Field Description / Field Error
+- [x] Input Group
+- [x] Item / List Item
+- [x] Breadcrumb
+- [x] Pagination 外观
+- [x] Progress（使用原生 `progress`）
+- [x] Table
+- [x] Typography
+- [x] Aspect Ratio
+- [x] Toggle 外观（状态由 `aria-pressed`、`data-state` 或调用方提供）
 
 ## B. 需要 JavaScript 行为的组件
 
@@ -45,35 +45,35 @@
 
 ### 展开与选择
 
-- [ ] Accordion
-- [ ] Collapsible
-- [ ] Tabs
-- [ ] Toggle Group
-- [ ] Select（自定义下拉）
-- [ ] Combobox
-- [ ] Command
-- [ ] Input OTP
-- [ ] Slider
+- [x] Accordion（Vue）
+- [x] Collapsible（Vue）
+- [x] Tabs（Vue）
+- [x] Toggle Group（Vue）
+- [x] Select（Vue 自定义下拉）
+- [x] Combobox（Vue）
+- [x] Command（Vue）
+- [x] Input OTP（Vue）
+- [x] Slider（Vue，保留原生 range 语义）
 
 ### 浮层与焦点管理
 
-- [ ] Dialog / Alert Dialog
-- [ ] Drawer / Sheet
-- [ ] Popover
-- [ ] Hover Card
-- [ ] Tooltip
-- [ ] Dropdown Menu / Context Menu
-- [ ] Menubar / Navigation Menu
+- [x] Dialog / Alert Dialog（Vue）
+- [x] Drawer / Sheet（Vue）
+- [x] Popover（Vue）
+- [x] Hover Card（Vue）
+- [x] Tooltip（Vue）
+- [x] Dropdown Menu / Context Menu（Vue）
+- [x] Menubar / Navigation Menu（Vue）
 
 ### 复杂交互与应用状态
 
-- [ ] Calendar / Date Picker
-- [ ] Carousel
-- [ ] Resizable
-- [ ] Scroll Area
-- [ ] Toast
-- [ ] Data Table
-- [ ] Sidebar
+- [x] Calendar / Date Picker（Vue）
+- [x] Carousel（Vue）
+- [x] Resizable（Vue）
+- [x] Scroll Area（Vue）
+- [x] Toast（Vue）
+- [x] Data Table（Vue）
+- [x] Sidebar（Vue）
 
 ## 实现准则
 

@@ -19,7 +19,7 @@ function handleChange2(e: Event) {
   <OCard title="Radio Component" desc="Radio component with custom style">
     <div flex="~ col gap-2">
       <div flex="~ gap-2 wrap">
-        <label v-for="(v, idx) in valueList" :key="v" radio="~ theme-400" :class="size[idx]" :for="v">
+        <label v-for="(v, idx) in valueList" :key="v" radio="~" :class="size[idx]" :for="v">
           <input
             :id="v"
             :value="v" name="custom" type="radio" :checked="model === v"

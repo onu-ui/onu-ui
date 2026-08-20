@@ -50,8 +50,8 @@ The radio component is a form control that allows the user to select a single op
 Use the `radio-<color>` class to change the color of the radio.
 
 ```html {1}
-<!-- radio-theme-400 radio-purple radio-green dark:radio-red -->
-<label radio="~ theme-400" for="foo">
+<!-- radio radio-purple radio-green dark:radio-red -->
+<label radio="~" for="foo">
   <input
     class="peer" /* Required for UnoCSS */
     type="radio"
@@ -64,7 +64,7 @@ Use the `radio-<color>` class to change the color of the radio.
 ```
 
 <div flex="~ gap-2 items-center">
-  <label radio="~ theme-400" for="foo">
+  <label radio="~" for="foo">
     <input
       class="peer"
       type="radio"
@@ -114,7 +114,7 @@ Use the `radio-<size>` class to change the size of the radio.
 ```
 
 <div flex="~ gap-2 items-center">
-  <label radio="~ theme-400 xs" for="foo">
+  <label radio="~ xs" for="foo">
     <input
       class="peer"
       type="radio"
@@ -125,7 +125,7 @@ Use the `radio-<size>` class to change the size of the radio.
     <span class="radio-dot" />
   </label>
   
-  <label radio="~ theme-400 sm" for="foo">
+  <label radio="~ sm" for="foo">
     <input
       class="peer"
       type="radio"
@@ -135,7 +135,7 @@ Use the `radio-<size>` class to change the size of the radio.
     <span class="radio-dot" />
   </label>
 
-  <label radio="~ theme-400 md" for="foo">
+  <label radio="~ md" for="foo">
     <input
       class="peer"
       type="radio"
@@ -145,7 +145,7 @@ Use the `radio-<size>` class to change the size of the radio.
     <span class="radio-dot" />
   </label>
 
-  <label radio="~ theme-400 lg" for="foo">
+  <label radio="~ lg" for="foo">
     <input
       class="peer"
       type="radio"
@@ -159,7 +159,7 @@ Use the `radio-<size>` class to change the size of the radio.
 #### Disabled
 
 ```html {8}
-<label radio="~ theme-400" for="foo">
+<label radio="~" for="foo">
   <input
     class="peer"
     type="radio"
@@ -173,7 +173,7 @@ Use the `radio-<size>` class to change the size of the radio.
 ```
 
 <div flex="~ gap-2 items-center">
-  <label radio="~ theme-400" for="foo">
+  <label radio="~" for="foo">
     <input
       class="peer"
       type="radio"
@@ -185,7 +185,7 @@ Use the `radio-<size>` class to change the size of the radio.
     <span class="radio-dot" />
   </label>
 
-  <label radio="~ theme-400" for="foo">
+  <label radio="~" for="foo">
     <input
       class="peer"
       type="radio"
@@ -203,7 +203,7 @@ Provide `circle` or `square` to change the shape of the radio.
 And default is `circle`.
 
 ```html {1}
-<label radio="~ theme-400 square" for="foo">
+<label radio="~ square" for="foo">
   <input
     class="peer"
     type="radio"
@@ -216,7 +216,7 @@ And default is `circle`.
 ```
 
 <div flex="~ gap-2 items-center">
-  <label radio="~ theme-400 circle" for="foo">
+  <label radio="~ circle" for="foo">
     <input
       class="peer"
       type="radio"

@@ -16,6 +16,7 @@ const Components: DefaultTheme.SidebarItem[] = [
     collapsed: false,
     items: [
       { text: 'Button', link: '/components/button' },
+      { text: 'CSS primitives', link: '/components/css-primitives' },
       { text: 'Badge', link: '/components/badge' },
       { text: 'Kbd', link: '/components/kbd' },
       { text: 'Separator', link: '/components/separator' },
@@ -51,6 +52,7 @@ const Components: DefaultTheme.SidebarItem[] = [
     text: 'Navigation',
     collapsed: false,
     items: [
+      { text: 'Interactive components', link: '/components/interactive' },
       // { text: 'Affix', link: '/components/affix' },
       // { text: 'Backtop', link: '/components/backtop' },
     ],

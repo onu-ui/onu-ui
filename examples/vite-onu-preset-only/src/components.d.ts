@@ -12,6 +12,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    CssTodoComponents: typeof import('./components/css-todo-components.vue')['default']
     OAlert: typeof import('./components/o-alert.vue')['default']
     OAvatar: typeof import('./components/o-avatar.vue')['default']
     OBadge: typeof import('./components/o-badge.vue')['default']
@@ -32,6 +33,7 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const CssTodoComponents: typeof import('./components/css-todo-components.vue')['default']
   const OAlert: typeof import('./components/o-alert.vue')['default']
   const OAvatar: typeof import('./components/o-avatar.vue')['default']
   const OBadge: typeof import('./components/o-badge.vue')['default']
