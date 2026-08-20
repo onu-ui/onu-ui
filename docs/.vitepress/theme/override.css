@@ -15,6 +15,41 @@ body {
 
   --vp-nav-bg-color: transparent;
   --vp-nav-height: 56px;
+  --onu-docs-radius: var(--onu-radius, 0.5rem);
+}
+
+html:not([data-onu-docs-mode="vue"]) .docs-content-vue,
+html[data-onu-docs-mode="vue"] .docs-content-preset {
+  display: none;
+}
+
+html:not([data-onu-docs-mode="vue"]) .VPDocOutlineItem.root > li:has(> a[href*="vue"]),
+html[data-onu-docs-mode="vue"] .VPDocOutlineItem.root > li:has(> a[href*="unocss"]),
+html[data-onu-docs-mode="vue"] .VPDocOutlineItem.root > li:has(> a[href="#preset"]),
+html[data-onu-docs-mode="vue"] .VPDocOutlineItem.root > li:has(> a[href="#presets"]) {
+  display: none;
+}
+
+.docs-content {
+  animation: onu-docs-content-in 180ms ease-out;
+}
+
+@keyframes onu-docs-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-content {
+    animation: none;
+  }
 }
 
 .dark {

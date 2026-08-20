@@ -248,6 +248,9 @@ Provide `ORadio` and `ORadioGroup` components to use radio in Vue.
 
 ```vue
 <script setup lang='ts'>
+import { shallowRef } from 'vue'
+import { ORadioGroup } from 'onu-ui'
+
 const options = [
   { value: 'option1', label: 'Option 1' },
   { value: 'option2', label: 'Option 2' },
@@ -256,13 +259,21 @@ const options = [
 const status = ref('option1')
 </script>
 
-<Template>
+<template>
   <ORadioGroup 
     v-model="status"
     :options="options"
     name="xxx"
   />
-</Template>
+</template>
 ```
 
-
+<ORadioGroup
+  model-value="option1"
+  :options="[
+    { value: 'option1', label: 'Starter' },
+    { value: 'option2', label: 'Pro' },
+    { value: 'option3', label: 'Team', disabled: true },
+  ]"
+  name="plan"
+/>

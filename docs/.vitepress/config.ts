@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
-import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { defineConfig } from 'vitepress'
 import { version } from '../package.json'
 
 const Guides: DefaultTheme.NavItemWithLink[] = [
@@ -17,6 +17,8 @@ const Components: DefaultTheme.SidebarItem[] = [
     items: [
       { text: 'Button', link: '/components/button' },
       { text: 'Badge', link: '/components/badge' },
+      { text: 'Kbd', link: '/components/kbd' },
+      { text: 'Separator', link: '/components/separator' },
       // { text: 'Icon', link: '/components/icon' },
       // { text: 'Link', link: '/components/link' },
       // { text: 'Text', link: '/components/text' },
@@ -27,7 +29,7 @@ const Components: DefaultTheme.SidebarItem[] = [
     collapsed: false,
     items: [
       { text: 'Input', link: '/components/input' },
-      // { text: 'Checkbox', link: '/components/checkbox' },
+      { text: 'Checkbox', link: '/components/checkbox' },
       { text: 'Switch', link: '/components/switch' },
       // { text: 'Rate', link: '/components/rate' },
       { text: 'Radio', link: '/components/radio' },
@@ -38,8 +40,9 @@ const Components: DefaultTheme.SidebarItem[] = [
     collapsed: false,
     items: [
       { text: 'Avatar', link: '/components/avatar' },
-      // { text: 'Card', link: '/components/card' },
-      // { text: 'Empty', link: '/components/empty' },
+      { text: 'Card', link: '/components/card' },
+      { text: 'Empty', link: '/components/empty' },
+      { text: 'Skeleton', link: '/components/skeleton' },
       // { text: 'Tag', link: '/components/tag' },
       // { text: 'Progress', link: '/components/progress' },
     ],
@@ -56,7 +59,8 @@ const Components: DefaultTheme.SidebarItem[] = [
     text: 'Feedback',
     collapsed: false,
     items: [
-      // { text: 'Alert', link: '/components/alert' },
+      { text: 'Alert', link: '/components/alert' },
+      { text: 'Spinner', link: '/components/spinner' },
       // { text: 'Message', link: '/components/message' },
       // { text: 'Popup', link: '/components/popup' },
       // { text: 'ToolTip', link: '/components/tooltip' },
@@ -81,6 +85,60 @@ export default defineConfig({
     codeTransformers: [
       transformerTwoslash(),
     ],
+    config(md) {
+      md.core.ruler.after('block', 'onu-docs-mode-sections', (state) => {
+        const headings = state.tokens
+          .map((token, index) => token.type === 'heading_open' && token.tag === 'h2' ? state.tokens[index + 1]?.content : '')
+          .filter(Boolean)
+          .map(content => content.replace(/<[^>]+>|`/g, '').trim().toLowerCase())
+
+        const resolveMode = (heading: string) => {
+          if (heading.includes('vue'))
+            return 'vue'
+          if (heading.includes('unocss') || /^presets?$/.test(heading))
+            return 'preset'
+          return undefined
+        }
+
+        const modes = new Set(headings.map(resolveMode).filter(Boolean))
+        if (!modes.has('preset') || !modes.has('vue'))
+          return
+
+        const output = []
+        let sectionOpen = false
+
+        for (let index = 0; index < state.tokens.length; index++) {
+          const token = state.tokens[index]
+          const heading = token.type === 'heading_open' && token.tag === 'h2'
+            ? state.tokens[index + 1]?.content.replace(/<[^>]+>|`/g, '').trim().toLowerCase()
+            : ''
+          const nextMode = heading ? resolveMode(heading) : undefined
+
+          if (nextMode) {
+            if (sectionOpen) {
+              const close = new state.Token('html_block', '', 0)
+              close.content = '</div>\n'
+              output.push(close)
+            }
+
+            const open = new state.Token('html_block', '', 0)
+            open.content = `<div class="docs-content docs-content-${nextMode}">\n`
+            output.push(open)
+            sectionOpen = true
+          }
+
+          output.push(token)
+        }
+
+        if (sectionOpen) {
+          const close = new state.Token('html_block', '', 0)
+          close.content = '</div>\n'
+          output.push(close)
+        }
+
+        state.tokens = output
+      })
+    },
   },
   head: [
     ['meta', { property: 'og:title', content: 'Onu UI' }],
@@ -124,9 +182,6 @@ export default defineConfig({
           },
         ],
       },
-      {
-        component: 'ThemePalette',
-      },
     ],
     sidebar: [
       {
@@ -158,5 +213,5 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present Chris',
     },
   },
-  outDir: './dist'
+  outDir: './dist',
 })

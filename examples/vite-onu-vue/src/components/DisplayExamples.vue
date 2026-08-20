@@ -33,6 +33,9 @@ const avatarUrl = 'https://avatars.githubusercontent.com/u/42139754'
           通知
           <OBadge dot position="tr" class="badge-red" aria-label="有新通知" />
         </span>
+        <OBadge size="lg" class="badge-emerald">
+          Ready
+        </OBadge>
       </div>
     </div>
 

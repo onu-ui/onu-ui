@@ -119,4 +119,39 @@ Default size is `md`, you can use `switch-xs|sm|md|lg` to change the size.
 
 ## <i i-logos-vue /> With Vue
 
-TODO
+`OSwitch` provides a typed boolean `v-model`, native disabled state, labels, and a customizable thumb slot.
+
+```vue
+<script setup lang="ts">
+import { shallowRef } from 'vue'
+import { OSwitch } from 'onu-ui'
+
+const notifications = shallowRef(true)
+</script>
+
+<template>
+  <OSwitch v-model="notifications" name="notifications">
+    Product updates
+  </OSwitch>
+
+  <OSwitch disabled>
+    Team policy
+  </OSwitch>
+</template>
+```
+
+<div flex="~ col gap-3 items-start">
+  <OSwitch :model-value="true">Product updates</OSwitch>
+  <OSwitch disabled>Team policy</OSwitch>
+</div>
+
+### Custom thumb
+
+```vue
+<OSwitch v-model="dark">
+  <template #thumb="{ checked }">
+    <i :class="checked ? 'i-carbon-moon' : 'i-carbon-sun'" />
+  </template>
+  Dark mode
+</OSwitch>
+```

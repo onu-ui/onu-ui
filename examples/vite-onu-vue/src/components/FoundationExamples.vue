@@ -14,6 +14,7 @@ import { OAlert, OButton, OCard, OEmpty, OKbd, OSeparator, OSkeleton, OSpinner }
         <OAlert variant="destructive" title="连接失败">
           请检查网络后重试。
         </OAlert>
+        <OAlert variant="soft" title="有可用更新" description="升级前请先阅读迁移说明。" />
 
         <div class="flex items-center gap-2 text-sm">
           <span>打开命令面板</span>
@@ -40,6 +41,10 @@ import { OAlert, OButton, OCard, OEmpty, OKbd, OSeparator, OSkeleton, OSpinner }
             <OSkeleton variant="text" class="w-2/3" />
             <OSkeleton variant="text" />
           </div>
+        </div>
+
+        <div class="flex items-center gap-4" aria-label="加载尺寸">
+          <OSpinner v-for="size in ['xs', 'sm', 'md', 'lg'] as const" :key="size" :size="size" :label="`${size} 加载状态`" />
         </div>
       </div>
     </div>

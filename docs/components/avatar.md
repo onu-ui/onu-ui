@@ -195,4 +195,28 @@ Use `avatar-group` to group multiple avatars.
 
 ## <i i-logos-vue /> With Vue
 
-TODO
+Use `OAvatar` for images, initials, status, and shaped variants. `OAvatarGroup` controls a related stack.
+
+```vue
+<script setup lang="ts">
+import { OAvatar, OAvatarGroup } from 'onu-ui'
+</script>
+
+<template>
+  <OAvatarGroup size="sm" space-x="-3" aria-label="Project members">
+    <OAvatar src="https://github.com/zyyv.png" alt="Chris" online />
+    <OAvatar src="https://github.com/yzh990918.png" alt="Zhihao" />
+    <OAvatar>+7</OAvatar>
+  </OAvatarGroup>
+</template>
+```
+
+<div flex="~ gap-5 items-center wrap">
+  <OAvatar src="https://github.com/zyyv.png" alt="Chris" online />
+  <OAvatar src="https://github.com/yzh990918.png" alt="Zhihao" size="lg" variant="hexagon" />
+  <OAvatarGroup size="sm" space-x="-3" aria-label="Project members">
+    <OAvatar src="https://github.com/zyyv.png" alt="Chris" />
+    <OAvatar src="https://github.com/yzh990918.png" alt="Zhihao" />
+    <OAvatar>+7</OAvatar>
+  </OAvatarGroup>
+</div>

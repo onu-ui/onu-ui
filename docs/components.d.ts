@@ -12,6 +12,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    DocsPreferences: typeof import('./.vitepress/theme/components/DocsPreferences.vue')['default']
     Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
     HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
     Overview: typeof import('./.vitepress/theme/components/Overview.vue')['default']
@@ -22,6 +23,7 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const DocsPreferences: typeof import('./.vitepress/theme/components/DocsPreferences.vue')['default']
   const Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
   const HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
   const Overview: typeof import('./.vitepress/theme/components/Overview.vue')['default']

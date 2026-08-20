@@ -124,10 +124,40 @@ Create a button with icon or link capabilities.
 
 ## <i i-logos-vue /> With Vue
 
+### Usage
+
 ```vue
+<script setup lang="ts">
+import { OButton, OButtonGroup } from 'onu-ui'
+</script>
+
 <template>
-  <OButton>button</OButton>
+  <OButton>Default</OButton>
+  <OButton variant="outline">Outline</OButton>
+  <OButton variant="ghost" icon="i-carbon-add">New item</OButton>
+  <OButton loading>Saving</OButton>
 </template>
 ```
 
-<OButton>button</OButton>
+<div flex="~ gap-2 items-center wrap">
+  <OButton>Default</OButton>
+  <OButton variant="outline">Outline</OButton>
+  <OButton variant="ghost" icon="i-carbon-add">New item</OButton>
+  <OButton loading>Saving</OButton>
+</div>
+
+### Sizes and groups
+
+```vue
+<template>
+  <OButtonGroup spacer>
+    <OButton size="sm">Previous</OButton>
+    <OButton size="sm" variant="outline">Next</OButton>
+  </OButtonGroup>
+</template>
+```
+
+<OButtonGroup spacer>
+  <OButton size="sm">Previous</OButton>
+  <OButton size="sm" variant="outline">Next</OButton>
+</OButtonGroup>
