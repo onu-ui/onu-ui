@@ -27,7 +27,7 @@ export const badge: CustomShortcut[] = [
   ['badge-default', `
       font-onu inline-flex items-center justify-center o-transition w-fit rounded-full
       badge-size-md 
-      border-(~ solid context) bg-context hover:(bg-context:80 border-context:80)
+      border-(~ solid context) bg-context hover:(bg-op-80 border-op-80)
       o-theme-primary
       text-primary-foreground
     `],
