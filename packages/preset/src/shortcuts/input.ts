@@ -37,15 +37,16 @@ export const input: CustomShortcut[] = [
   ['input-default', `
           font-onu input-md input-hover appearance-none
           input-disabled
-          border border-solid border-theme-context border-op-0
+          border border-solid border-theme-context:0
           bg-background text-foreground
           outline-none o-radius-md
           placeholder:text-muted-foreground
           focus-within:(border-op-100)
           [&_input]:(bg-transparent outline-none)
+          flex items-center gap-2
         `],
   ['input', `
-          input-default input-bordered input-focus
+          input-default input-focus input-bordered
           input-placeholder [&_input]:input-placeholder
           text-foreground
           o-theme-primary

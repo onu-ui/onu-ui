@@ -18,12 +18,12 @@ const disabled = ref(false)
         <input v-model="value" type="text" :disabled="disabled" class="input input-lg" placeholder="input-lg...">
       </div>
       <div flex items-center gap-2 flex-wrap>
-        <label class="input input-bordered flex items-center gap-2 focus-within:text-purple">
+        <label class="input input-bordered focus-within:text-purple">
           <input :disabled="disabled" value="Search Disabled" type="text" class="grow" placeholder="Search">
-          <i inline-block i-carbon-search />
+          <i i-carbon-search />
         </label>
-        <label class="input input-dashed flex items-center gap-2">
-          <i text-theme-DEFAULT inline-block i-carbon:email />
+        <label class="input input-dashed">
+          <i i-carbon:email />
           <input type="text" class="grow" :disabled="disabled" placeholder="Email">
         </label>
       </div>
