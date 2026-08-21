@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { avatarGroupProps } from './props'
 
 defineOptions({
-  name: 'OAvatarGroup',
+  name: 'AvatarGroup',
 })
 
 const props = defineProps(avatarGroupProps)

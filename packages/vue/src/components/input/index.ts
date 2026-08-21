@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Input from './index.vue'
+import InputComponent from './index.vue'
 
-export const OInput = withInstall(Input)
-export default OInput
+export const Input = InputComponent
+export default Input
 
 export * from './props'

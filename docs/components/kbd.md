@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Kbd } from 'onu-ui'
+</script>
+
 # Kbd
 
 Represent a keyboard key or shortcut.
@@ -21,12 +25,12 @@ Represent a keyboard key or shortcut.
 
 ```vue
 <script setup lang="ts">
-import { OKbd } from 'onu-ui'
+import { Kbd } from 'onu-ui'
 </script>
 
 <template>
-  <span>Open search <OKbd>⌘</OKbd> <OKbd outline>K</OKbd></span>
+  <span>Open search <Kbd>⌘</Kbd> <Kbd outline>K</Kbd></span>
 </template>
 ```
 
-<span inline-flex items-center gap-2>Open search <OKbd>⌘</OKbd> <OKbd outline>K</OKbd></span>
+<span inline-flex items-center gap-2>Open search <Kbd>⌘</Kbd> <Kbd outline>K</Kbd></span>

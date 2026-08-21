@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { kbdProps } from './props'
 
-defineOptions({ name: 'OKbd' })
+defineOptions({ name: 'OnuKbd' })
 
 const props = defineProps(kbdProps)
 const sizeClasses = {

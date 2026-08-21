@@ -2,7 +2,7 @@
 import { shallowRef, useTemplateRef } from 'vue'
 import { useDismissableLayer } from '../../composables/useDismissableLayer'
 
-defineOptions({ name: 'OPopover' })
+defineOptions({ name: 'Popover' })
 
 const props = withDefaults(defineProps<{
   align?: 'start' | 'center' | 'end'

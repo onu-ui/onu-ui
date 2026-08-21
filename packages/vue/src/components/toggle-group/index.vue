@@ -2,7 +2,7 @@
 import type { ToggleGroupItem } from './types'
 import { computed } from 'vue'
 
-defineOptions({ name: 'OToggleGroup' })
+defineOptions({ name: 'ToggleGroup' })
 
 const props = withDefaults(defineProps<{
   items: ToggleGroupItem[]

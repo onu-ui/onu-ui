@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-defineOptions({ name: 'OSidebar' })
+defineOptions({ name: 'Sidebar' })
 
 const props = withDefaults(defineProps<{
   side?: 'left' | 'right'

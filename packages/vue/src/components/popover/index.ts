@@ -1,8 +1,7 @@
-import { withInstall } from '../../utils'
-import Popover from './index.vue'
+import PopoverComponent from './index.vue'
 
-const HoverCard = { ...Popover, name: 'OHoverCard' } as typeof Popover
+const HoverCard = { ...PopoverComponent, name: 'HoverCard' } as typeof PopoverComponent
 
-export const OPopover = withInstall(Popover, { HoverCard })
-export const OHoverCard = HoverCard
-export default OPopover
+export const Popover = PopoverComponent
+export { HoverCard }
+export default Popover

@@ -2,7 +2,7 @@
 import { computed, useTemplateRef } from 'vue'
 import { useDismissableLayer } from '../../composables/useDismissableLayer'
 
-defineOptions({ name: 'ODrawer' })
+defineOptions({ name: 'Drawer' })
 
 const props = withDefaults(defineProps<{
   side?: 'top' | 'right' | 'bottom' | 'left'

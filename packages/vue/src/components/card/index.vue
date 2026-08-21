@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { cardProps } from './props'
 
-defineOptions({ name: 'OCard' })
+defineOptions({ name: 'Card' })
 
 defineProps(cardProps)
 

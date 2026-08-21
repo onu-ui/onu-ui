@@ -1,6 +1,5 @@
-import { withInstall } from '../../utils'
-import Tabs from './index.vue'
+import TabsComponent from './index.vue'
 
-export const OTabs = withInstall(Tabs)
-export default OTabs
+export const Tabs = TabsComponent
+export default Tabs
 export type { TabItem } from './types'

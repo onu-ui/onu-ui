@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Badge from './index.vue'
+import BadgeComponent from './index.vue'
 
-export const OBadge = withInstall(Badge)
-export default OBadge
+export const Badge = BadgeComponent
+export default Badge
 
 export * from './props'

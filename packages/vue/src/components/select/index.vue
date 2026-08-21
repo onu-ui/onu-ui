@@ -3,7 +3,7 @@ import type { SelectOption } from './types'
 import { computed, shallowRef, useTemplateRef } from 'vue'
 import { useDismissableLayer } from '../../composables/useDismissableLayer'
 
-defineOptions({ name: 'OSelect' })
+defineOptions({ name: 'OnuSelect' })
 
 const props = withDefaults(defineProps<{
   options: SelectOption[]

@@ -2,7 +2,7 @@
 import type { CommandItem } from './types'
 import { computed, shallowRef } from 'vue'
 
-defineOptions({ name: 'OCommand' })
+defineOptions({ name: 'Command' })
 
 const props = withDefaults(defineProps<{
   items: CommandItem[]

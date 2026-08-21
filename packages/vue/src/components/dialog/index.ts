@@ -1,8 +1,7 @@
-import { withInstall } from '../../utils'
-import Dialog from './index.vue'
+import DialogComponent from './index.vue'
 
-const AlertDialog = { ...Dialog, name: 'OAlertDialog' } as typeof Dialog
+const AlertDialog = { ...DialogComponent, name: 'AlertDialog' } as typeof DialogComponent
 
-export const ODialog = withInstall(Dialog, { AlertDialog })
-export const OAlertDialog = AlertDialog
-export default ODialog
+export const Dialog = DialogComponent
+export { AlertDialog }
+export default Dialog

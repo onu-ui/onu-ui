@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Avatar, AvatarGroup } from 'onu-ui'
+</script>
+
 # Avatar
 
 Avatar description.
@@ -195,28 +199,28 @@ Use `avatar-group` to group multiple avatars.
 
 ## <i i-logos-vue /> With Vue
 
-Use `OAvatar` for images, initials, status, and shaped variants. `OAvatarGroup` controls a related stack.
+Use `Avatar` for images, initials, status, and shaped variants. `AvatarGroup` controls a related stack.
 
 ```vue
 <script setup lang="ts">
-import { OAvatar, OAvatarGroup } from 'onu-ui'
+import { Avatar, AvatarGroup } from 'onu-ui'
 </script>
 
 <template>
-  <OAvatarGroup size="sm" space-x="-3" aria-label="Project members">
-    <OAvatar src="https://github.com/zyyv.png" alt="Chris" online />
-    <OAvatar src="https://github.com/yzh990918.png" alt="Zhihao" />
-    <OAvatar>+7</OAvatar>
-  </OAvatarGroup>
+  <AvatarGroup size="sm" space-x="-3" aria-label="Project members">
+    <Avatar src="https://github.com/zyyv.png" alt="Chris" online />
+    <Avatar src="https://github.com/yzh990918.png" alt="Zhihao" />
+    <Avatar>+7</Avatar>
+  </AvatarGroup>
 </template>
 ```
 
 <div flex="~ gap-5 items-center wrap">
-  <OAvatar src="https://github.com/zyyv.png" alt="Chris" online />
-  <OAvatar src="https://github.com/yzh990918.png" alt="Zhihao" size="lg" variant="hexagon" />
-  <OAvatarGroup size="sm" space-x="-3" aria-label="Project members">
-    <OAvatar src="https://github.com/zyyv.png" alt="Chris" />
-    <OAvatar src="https://github.com/yzh990918.png" alt="Zhihao" />
-    <OAvatar>+7</OAvatar>
-  </OAvatarGroup>
+  <Avatar src="https://github.com/zyyv.png" alt="Chris" online />
+  <Avatar src="https://github.com/yzh990918.png" alt="Zhihao" size="lg" variant="hexagon" />
+  <AvatarGroup size="sm" space-x="-3" aria-label="Project members">
+    <Avatar src="https://github.com/zyyv.png" alt="Chris" />
+    <Avatar src="https://github.com/yzh990918.png" alt="Zhihao" />
+    <Avatar>+7</Avatar>
+  </AvatarGroup>
 </div>

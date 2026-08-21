@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { emptyProps } from './props'
 
-defineOptions({ name: 'OEmpty' })
+defineOptions({ name: 'Empty' })
 
 defineProps(emptyProps)
 

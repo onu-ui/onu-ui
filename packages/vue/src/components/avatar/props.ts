@@ -35,5 +35,5 @@ export const avatarGroupProps = {
   },
 }
 
-export type OAvatarProps = ExtractPropTypes<typeof avatarProps>
-export type OAvatarGroupProps = ExtractPropTypes<typeof avatarGroupProps>
+export type AvatarProps = ExtractPropTypes<typeof avatarProps>
+export type AvatarGroupProps = ExtractPropTypes<typeof avatarGroupProps>

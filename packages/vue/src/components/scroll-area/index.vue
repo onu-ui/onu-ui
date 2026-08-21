@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineOptions({ name: 'OScrollArea' })
+defineOptions({ name: 'ScrollArea' })
 
 withDefaults(defineProps<{
   maxHeight?: string

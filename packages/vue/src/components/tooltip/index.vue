@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { shallowRef } from 'vue'
 
-defineOptions({ name: 'OTooltip' })
+defineOptions({ name: 'Tooltip' })
 
 const props = withDefaults(defineProps<{
   content?: string

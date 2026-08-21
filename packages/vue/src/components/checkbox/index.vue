@@ -3,7 +3,7 @@ import { computed, useAttrs, useId, useTemplateRef, watchEffect } from 'vue'
 import { checkboxProps } from './props'
 
 defineOptions({
-  name: 'OCheckbox',
+  name: 'Checkbox',
   inheritAttrs: false,
 })
 

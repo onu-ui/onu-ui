@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Skeleton from './index.vue'
+import SkeletonComponent from './index.vue'
 
-export const OSkeleton = withInstall(Skeleton)
-export default OSkeleton
+export const Skeleton = SkeletonComponent
+export default Skeleton
 
 export * from './props'

@@ -5,4 +5,4 @@ export const emptyProps = {
   description: String,
 } as const
 
-export type OEmptyProps = ExtractPropTypes<typeof emptyProps>
+export type EmptyProps = ExtractPropTypes<typeof emptyProps>

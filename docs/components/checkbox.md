@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Checkbox } from 'onu-ui'
+</script>
+
 # Checkbox
 
 Select one or more independent options.
@@ -24,25 +28,25 @@ Select one or more independent options.
 
 ## <i i-logos-vue /> With Vue
 
-`OCheckbox` supports a boolean `v-model`, sizes, disabled state, and indeterminate state.
+`Checkbox` supports a boolean `v-model`, sizes, disabled state, and indeterminate state.
 
 ```vue
 <script setup lang="ts">
 import { shallowRef } from 'vue'
-import { OCheckbox } from 'onu-ui'
+import { Checkbox } from 'onu-ui'
 
 const archived = shallowRef(true)
 </script>
 
 <template>
-  <OCheckbox v-model="archived">Include archived projects</OCheckbox>
-  <OCheckbox indeterminate>Some items selected</OCheckbox>
-  <OCheckbox disabled>Managed by organization</OCheckbox>
+  <Checkbox v-model="archived">Include archived projects</Checkbox>
+  <Checkbox indeterminate>Some items selected</Checkbox>
+  <Checkbox disabled>Managed by organization</Checkbox>
 </template>
 ```
 
 <div flex="~ col gap-3 items-start">
-  <OCheckbox :model-value="true">Include archived projects</OCheckbox>
-  <OCheckbox indeterminate>Some items selected</OCheckbox>
-  <OCheckbox disabled>Managed by organization</OCheckbox>
+  <Checkbox :model-value="true">Include archived projects</Checkbox>
+  <Checkbox indeterminate>Some items selected</Checkbox>
+  <Checkbox disabled>Managed by organization</Checkbox>
 </div>

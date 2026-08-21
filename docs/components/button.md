@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Button, ButtonGroup } from 'onu-ui'
+</script>
+
 # Button
 
 Create a button with icon or link capabilities.
@@ -128,36 +132,36 @@ Create a button with icon or link capabilities.
 
 ```vue
 <script setup lang="ts">
-import { OButton, OButtonGroup } from 'onu-ui'
+import { Button, ButtonGroup } from 'onu-ui'
 </script>
 
 <template>
-  <OButton>Default</OButton>
-  <OButton variant="outline">Outline</OButton>
-  <OButton variant="ghost" icon="i-carbon-add">New item</OButton>
-  <OButton loading>Saving</OButton>
+  <Button>Default</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost" icon="i-carbon-add">New item</Button>
+  <Button loading>Saving</Button>
 </template>
 ```
 
 <div flex="~ gap-2 items-center wrap">
-  <OButton>Default</OButton>
-  <OButton variant="outline">Outline</OButton>
-  <OButton variant="ghost" icon="i-carbon-add">New item</OButton>
-  <OButton loading>Saving</OButton>
+  <Button>Default</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost" icon="i-carbon-add">New item</Button>
+  <Button loading>Saving</Button>
 </div>
 
 ### Sizes and groups
 
 ```vue
 <template>
-  <OButtonGroup spacer>
-    <OButton size="sm">Previous</OButton>
-    <OButton size="sm" variant="outline">Next</OButton>
-  </OButtonGroup>
+  <ButtonGroup spacer>
+    <Button size="sm">Previous</Button>
+    <Button size="sm" variant="outline">Next</Button>
+  </ButtonGroup>
 </template>
 ```
 
-<OButtonGroup spacer>
-  <OButton size="sm">Previous</OButton>
-  <OButton size="sm" variant="outline">Next</OButton>
-</OButtonGroup>
+<ButtonGroup spacer>
+  <Button size="sm">Previous</Button>
+  <Button size="sm" variant="outline">Next</Button>
+</ButtonGroup>

@@ -15,4 +15,4 @@ export const spinnerProps = {
   },
 } as const
 
-export type OSpinnerProps = ExtractPropTypes<typeof spinnerProps>
+export type SpinnerProps = ExtractPropTypes<typeof spinnerProps>

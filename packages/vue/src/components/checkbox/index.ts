@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Checkbox from './index.vue'
+import CheckboxComponent from './index.vue'
 
-export const OCheckbox = withInstall(Checkbox)
-export default OCheckbox
+export const Checkbox = CheckboxComponent
+export default Checkbox
 
 export * from './props'

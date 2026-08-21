@@ -440,9 +440,6 @@ importers:
       '@onu-ui/preset':
         specifier: workspace:*
         version: link:../preset
-      '@vueuse/core':
-        specifier: catalog:vue
-        version: 14.4.0(vue@3.5.41(typescript@5.9.3))
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: catalog:vue

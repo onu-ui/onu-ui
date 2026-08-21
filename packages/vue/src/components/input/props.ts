@@ -15,4 +15,4 @@ export const inputProps = {
   dashed: Boolean,
 } as const
 
-export type OInputProps = ExtractPropTypes<typeof inputProps>
+export type InputProps = ExtractPropTypes<typeof inputProps>

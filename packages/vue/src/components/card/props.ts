@@ -5,4 +5,4 @@ export const cardProps = {
   description: String,
 } as const
 
-export type OCardProps = ExtractPropTypes<typeof cardProps>
+export type CardProps = ExtractPropTypes<typeof cardProps>

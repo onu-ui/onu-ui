@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, version as vueVersion } from 'vue'
-import onuUI from 'onu-ui'
 
 const msg = ref('Hello Onu UI!')
 const checkVal = ref(true)

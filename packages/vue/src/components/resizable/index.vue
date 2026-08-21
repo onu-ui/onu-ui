@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, shallowRef } from 'vue'
 
-defineOptions({ name: 'OResizable' })
+defineOptions({ name: 'Resizable' })
 
 const props = withDefaults(defineProps<{
   direction?: 'horizontal' | 'vertical'

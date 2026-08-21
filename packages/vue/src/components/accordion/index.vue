@@ -2,7 +2,7 @@
 import type { AccordionItem } from './types'
 import { computed } from 'vue'
 
-defineOptions({ name: 'OAccordion' })
+defineOptions({ name: 'Accordion' })
 
 const props = withDefaults(defineProps<{
   items: AccordionItem[]

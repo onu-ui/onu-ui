@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Empty from './index.vue'
+import EmptyComponent from './index.vue'
 
-export const OEmpty = withInstall(Empty)
-export default OEmpty
+export const Empty = EmptyComponent
+export default Empty
 
 export * from './props'

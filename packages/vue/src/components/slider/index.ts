@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import Slider from './index.vue'
+import SliderComponent from './index.vue'
 
-export const OSlider = withInstall(Slider)
-export default OSlider
+export const Slider = SliderComponent
+export default Slider

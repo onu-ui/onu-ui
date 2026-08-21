@@ -1,8 +1,7 @@
-import { withInstall } from '../../utils'
-import Drawer from './index.vue'
+import DrawerComponent from './index.vue'
 
-const Sheet = { ...Drawer, name: 'OSheet' } as typeof Drawer
+const Sheet = { ...DrawerComponent, name: 'Sheet' } as typeof DrawerComponent
 
-export const ODrawer = withInstall(Drawer, { Sheet })
-export const OSheet = Sheet
-export default ODrawer
+export const Drawer = DrawerComponent
+export { Sheet }
+export default Drawer

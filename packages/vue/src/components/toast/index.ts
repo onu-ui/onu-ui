@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import Toast from './index.vue'
+import ToastComponent from './index.vue'
 
-export const OToast = withInstall(Toast)
-export default OToast
+export const Toast = ToastComponent
+export default Toast

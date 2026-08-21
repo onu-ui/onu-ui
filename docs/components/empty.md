@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Button, Empty } from 'onu-ui'
+</script>
+
 # Empty
 
 Explain an empty state and provide a useful next action.
@@ -27,15 +31,15 @@ Explain an empty state and provide a useful next action.
 
 ```vue
 <script setup lang="ts">
-import { OButton, OEmpty } from 'onu-ui'
+import { Button, Empty } from 'onu-ui'
 </script>
 
 <template>
-  <OEmpty title="No projects yet" description="Create a project to start organizing your work.">
+  <Empty title="No projects yet" description="Create a project to start organizing your work.">
     <template #media><i class="i-carbon-folder-add" /></template>
-    <OButton size="sm">Create project</OButton>
-  </OEmpty>
+    <Button size="sm">Create project</Button>
+  </Empty>
 </template>
 ```
 
-<OEmpty title="No projects yet" description="Create a project to start organizing your work."><template #media><i i-carbon-folder-add /></template><OButton size="sm">Create project</OButton></OEmpty>
+<Empty title="No projects yet" description="Create a project to start organizing your work."><template #media><i i-carbon-folder-add /></template><Button size="sm">Create project</Button></Empty>

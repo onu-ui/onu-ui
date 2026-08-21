@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Badge, Button } from 'onu-ui'
+</script>
+
 # Badge
 
 Badge description.
@@ -96,25 +100,25 @@ For more complex badges, you can compose them with other components.
 
 ## <i i-logos-vue /> With Vue
 
-`OBadge` supports semantic elements, sizes, outline styling, dots, and corner positioning.
+`Badge` supports semantic elements, sizes, outline styling, dots, and corner positioning.
 
 ```vue
 <script setup lang="ts">
-import { OBadge, OButton } from 'onu-ui'
+import { Badge, Button } from 'onu-ui'
 </script>
 
 <template>
-  <OBadge>Stable</OBadge>
-  <OBadge variant="outline">Vue 3.5</OBadge>
-  <OButton variant="outline">
-    Inbox <OBadge size="xs">12</OBadge>
-  </OButton>
+  <Badge>Stable</Badge>
+  <Badge variant="outline">Vue 3.5</Badge>
+  <Button variant="outline">
+    Inbox <Badge size="xs">12</Badge>
+  </Button>
 </template>
 ```
 
 <div flex="~ gap-3 items-center wrap">
-  <OBadge>Stable</OBadge>
-  <OBadge variant="outline">Vue 3.5</OBadge>
-  <OButton variant="outline">Inbox <OBadge size="xs">12</OBadge></OButton>
-  <span relative inline-flex p-2>Updates <OBadge dot position="tr" class="badge-red" aria-label="New updates" /></span>
+  <Badge>Stable</Badge>
+  <Badge variant="outline">Vue 3.5</Badge>
+  <Button variant="outline">Inbox <Badge size="xs">12</Badge></Button>
+  <span relative inline-flex p-2>Updates <Badge dot position="tr" class="badge-red" aria-label="New updates" /></span>
 </div>

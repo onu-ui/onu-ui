@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Skeleton } from 'onu-ui'
+</script>
+
 # Skeleton
 
 Reserve layout while content is loading.
@@ -26,14 +30,14 @@ Reserve layout while content is loading.
 
 ```vue
 <script setup lang="ts">
-import { OSkeleton } from 'onu-ui'
+import { Skeleton } from 'onu-ui'
 </script>
 
 <template>
-  <OSkeleton variant="avatar" />
-  <OSkeleton variant="text" class="w-2/3" />
-  <OSkeleton variant="text" />
+  <Skeleton variant="avatar" />
+  <Skeleton variant="text" class="w-2/3" />
+  <Skeleton variant="text" />
 </template>
 ```
 
-<div flex="~ items-center gap-3"><OSkeleton variant="avatar" /><div grow space-y-2><OSkeleton variant="text" class="w-2/3" /><OSkeleton variant="text" /></div></div>
+<div flex="~ items-center gap-3"><Skeleton variant="avatar" /><div grow space-y-2><Skeleton variant="text" class="w-2/3" /><Skeleton variant="text" /></div></div>

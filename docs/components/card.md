@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Button, Card } from 'onu-ui'
+</script>
+
 # Card
 
 Group related content and actions with a consistent semantic surface.
@@ -29,22 +33,22 @@ Group related content and actions with a consistent semantic surface.
 
 ## <i i-logos-vue /> With Vue
 
-`OCard` provides header, title, description, body, and footer composition slots.
+`Card` provides header, title, description, body, and footer composition slots.
 
 ```vue
 <script setup lang="ts">
-import { OButton, OCard } from 'onu-ui'
+import { Button, Card } from 'onu-ui'
 </script>
 
 <template>
-  <OCard title="Workspace" description="Manage members and project access.">
+  <Card title="Workspace" description="Manage members and project access.">
     12 active members
-    <template #footer><OButton size="sm">Manage</OButton></template>
-  </OCard>
+    <template #footer><Button size="sm">Manage</Button></template>
+  </Card>
 </template>
 ```
 
-<OCard title="Workspace" description="Manage members and project access." max-w-md>
+<Card title="Workspace" description="Manage members and project access." max-w-md>
   12 active members
-  <template #footer><OButton size="sm">Manage</OButton></template>
-</OCard>
+  <template #footer><Button size="sm">Manage</Button></template>
+</Card>

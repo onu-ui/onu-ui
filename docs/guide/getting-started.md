@@ -88,11 +88,22 @@ export interface PrsetOnuOptions {
 ```ts
 // main.ts
 import { createApp } from 'vue'
-import OnuUI from 'onu-ui'
 import App from './App.vue'
 import 'onu-ui/dist/onu-ui.css'
 
-createApp(App).use(OnuUI).mount('#app')
+createApp(App).mount('#app')
+```
+
+Import components only where they are used. This keeps component dependencies explicit and allows the bundler to remove unused components.
+
+```vue
+<script setup lang="ts">
+import { Button } from 'onu-ui'
+</script>
+
+<template>
+  <Button>Button</Button>
+</template>
 ```
 
 ::: tip
@@ -110,12 +121,11 @@ Undering `UnoCSS` and `@onu-ui/preset`, you can easily customize the theme of th
 ```ts
 // main.ts
 import { createApp } from 'vue'
-import OnuUI from 'onu-ui'
 import App from './App.vue'
 import 'onu-ui/dist/onu-ui.css'
 import 'uno.css' // [!code ++]
 
-createApp(App).use(OnuUI).mount('#app')
+createApp(App).mount('#app')
 ```
 
 <br />
@@ -152,12 +162,4 @@ export default defineConfig({
 
 :::
 
-Then you can use the Onu UI components in your Vue project, such as:
-
-```vue
-<template>
-  <OButton>Button</OButton>
-</template>
-```
-
-<OButton>Button</OButton>
+<Button>Button</Button>

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { spinnerProps } from './props'
 
-defineOptions({ name: 'OSpinner' })
+defineOptions({ name: 'Spinner' })
 
 const props = defineProps(spinnerProps)
 const sizeClasses = {

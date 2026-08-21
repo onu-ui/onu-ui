@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import Resizable from './index.vue'
+import ResizableComponent from './index.vue'
 
-export const OResizable = withInstall(Resizable)
-export default OResizable
+export const Resizable = ResizableComponent
+export default Resizable

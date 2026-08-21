@@ -1,35 +1,28 @@
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it } from 'vitest'
-import { createApp } from 'vue'
-import OAccordion from '../../packages/vue/src/components/accordion/index.vue'
-import ODataTable from '../../packages/vue/src/components/data-table/index.vue'
-import { ODialog as DialogPlugin } from '../../packages/vue/src/components/dialog'
-import ODialog from '../../packages/vue/src/components/dialog/index.vue'
-import { ODrawer } from '../../packages/vue/src/components/drawer'
-import { ODropdownMenu } from '../../packages/vue/src/components/dropdown-menu'
-import { OPopover } from '../../packages/vue/src/components/popover'
-import OTabs from '../../packages/vue/src/components/tabs/index.vue'
+import Accordion from '../../packages/vue/src/components/accordion/index.vue'
+import DataTable from '../../packages/vue/src/components/data-table/index.vue'
+import { AlertDialog } from '../../packages/vue/src/components/dialog'
+import Dialog from '../../packages/vue/src/components/dialog/index.vue'
+import { Sheet } from '../../packages/vue/src/components/drawer'
+import { ContextMenu } from '../../packages/vue/src/components/dropdown-menu'
+import { HoverCard } from '../../packages/vue/src/components/popover'
+import Tabs from '../../packages/vue/src/components/tabs/index.vue'
 
 afterEach(() => {
   document.body.innerHTML = ''
 })
 
 describe('interactive Vue components', () => {
-  it('registers related component aliases through the plugin', () => {
-    const app = createApp({})
-    app.use(DialogPlugin)
-    app.use(ODrawer)
-    app.use(OPopover)
-    app.use(ODropdownMenu)
-
-    expect(app.component('OAlertDialog')).toBeDefined()
-    expect(app.component('OSheet')).toBeDefined()
-    expect(app.component('OHoverCard')).toBeDefined()
-    expect(app.component('OContextMenu')).toBeDefined()
+  it('exposes related components as named exports', () => {
+    expect(AlertDialog.name).toBe('AlertDialog')
+    expect(Sheet.name).toBe('Sheet')
+    expect(HoverCard.name).toBe('HoverCard')
+    expect(ContextMenu.name).toBe('ContextMenu')
   })
 
   it('updates the accordion model from a user click', async () => {
-    const wrapper = mount(OAccordion, {
+    const wrapper = mount(Accordion, {
       props: {
         items: [
           { value: 'first', label: 'First', content: 'First panel' },
@@ -44,7 +37,7 @@ describe('interactive Vue components', () => {
   })
 
   it('supports arrow-key tab selection', async () => {
-    const wrapper = mount(OTabs, {
+    const wrapper = mount(Tabs, {
       props: {
         modelValue: 'preview',
         items: [
@@ -60,7 +53,7 @@ describe('interactive Vue components', () => {
   })
 
   it('requests dialog dismissal when Escape is pressed', async () => {
-    const wrapper = mount(ODialog, {
+    const wrapper = mount(Dialog, {
       attachTo: document.body,
       props: {
         modelValue: true,
@@ -76,7 +69,7 @@ describe('interactive Vue components', () => {
   })
 
   it('sorts data-table rows through the public header control', async () => {
-    const wrapper = mount(ODataTable, {
+    const wrapper = mount(DataTable, {
       props: {
         columns: [{ key: 'name', label: 'Project', sortable: true }],
         rows: [

@@ -1,29 +1,29 @@
 <script setup lang="ts">
 import {
-  OAccordion,
-  OButton,
-  OCalendar,
-  OCard,
-  OCarousel,
-  OCollapsible,
-  OCombobox,
-  OCommand,
-  ODataTable,
-  ODatePicker,
-  ODialog,
-  ODrawer,
-  ODropdownMenu,
-  OInputOtp,
-  OPopover,
-  OResizable,
-  OScrollArea,
-  OSelect,
-  OSidebar,
-  OSlider,
-  OTabs,
-  OToast,
-  OToggleGroup,
-  OTooltip,
+  Accordion,
+  Button,
+  Calendar,
+  Card,
+  Carousel,
+  Collapsible,
+  Combobox,
+  Command,
+  DataTable,
+  DatePicker,
+  Dialog,
+  Drawer,
+  DropdownMenu,
+  InputOtp,
+  Popover,
+  Resizable,
+  ScrollArea,
+  Select,
+  Sidebar,
+  Slider,
+  Tabs,
+  Toast,
+  ToggleGroup,
+  Tooltip,
 } from 'onu-ui'
 import { shallowRef } from 'vue'
 
@@ -88,30 +88,30 @@ const rows = [
 </script>
 
 <template>
-  <OCard class="lg:col-span-2" title="交互组件" description="由 Vue 管理状态、键盘、焦点与浮层生命周期。">
+  <Card class="lg:col-span-2" title="交互组件" description="由 Vue 管理状态、键盘、焦点与浮层生命周期。">
     <div class="grid gap-8 xl:grid-cols-2">
       <section class="space-y-4">
         <h3 class="font-semibold">
           展开与选择
         </h3>
-        <OAccordion v-model="accordion" :items="accordionItems" />
-        <OCollapsible v-model="collapsed" label="Show implementation note">
+        <Accordion v-model="accordion" :items="accordionItems" />
+        <Collapsible v-model="collapsed" label="Show implementation note">
           <p class="rounded-md bg-muted p-3 text-sm">
             Collapsible content keeps its state through v-model.
           </p>
-        </OCollapsible>
-        <OTabs v-model="tab" :items="tabs" />
-        <OToggleGroup v-model="alignment" :items="alignments" aria-label="Text alignment" />
+        </Collapsible>
+        <Tabs v-model="tab" :items="tabs" />
+        <ToggleGroup v-model="alignment" :items="alignments" aria-label="Text alignment" />
         <div class="flex flex-wrap gap-3">
-          <OSelect v-model="framework" :options="frameworks" />
-          <OCombobox v-model="repository" :options="repositories" />
+          <Select v-model="framework" :options="frameworks" />
+          <Combobox v-model="repository" :options="repositories" />
         </div>
-        <OCommand :items="commands" @select="lastAction = $event.label" />
+        <Command :items="commands" @select="lastAction = $event.label" />
         <p class="text-xs text-muted-foreground">
           {{ lastAction }}
         </p>
-        <OInputOtp v-model="otp" :length="6" />
-        <label class="block text-sm">Volume: {{ volume }}<OSlider v-model="volume" class="mt-2" /></label>
+        <InputOtp v-model="otp" :length="6" />
+        <label class="block text-sm">Volume: {{ volume }}<Slider v-model="volume" class="mt-2" /></label>
       </section>
 
       <section class="space-y-4">
@@ -119,64 +119,64 @@ const rows = [
           浮层与反馈
         </h3>
         <div class="flex flex-wrap gap-3">
-          <OButton @click="dialogOpen = true">
+          <Button @click="dialogOpen = true">
             Open dialog
-          </OButton>
-          <OButton variant="outline" @click="drawerOpen = true">
+          </Button>
+          <Button variant="outline" @click="drawerOpen = true">
             Open drawer
-          </OButton>
-          <OPopover>
+          </Button>
+          <Popover>
             <template #trigger="{ toggle }">
-              <OButton variant="outline" @click="toggle">
+              <Button variant="outline" @click="toggle">
                 Popover
-              </OButton>
+              </Button>
             </template>
             Lightweight anchored content.
-          </OPopover>
-          <OTooltip content="Keyboard and pointer friendly">
-            <OButton variant="ghost">
+          </Popover>
+          <Tooltip content="Keyboard and pointer friendly">
+            <Button variant="ghost">
               Tooltip
-            </OButton>
-          </OTooltip>
-          <ODropdownMenu :items="menuItems" @select="lastAction = $event.label" />
+            </Button>
+          </Tooltip>
+          <DropdownMenu :items="menuItems" @select="lastAction = $event.label" />
         </div>
-        <ODialog v-model="dialogOpen" title="Publish component" description="Review the public API before publishing.">
+        <Dialog v-model="dialogOpen" title="Publish component" description="Review the public API before publishing.">
           <p class="text-sm">
             Dialog traps focus, closes on Escape, and restores focus.
           </p>
           <template #footer="{ close }">
-            <OButton variant="outline" @click="close">
+            <Button variant="outline" @click="close">
               Cancel
-            </OButton><OButton @click="close">
+            </Button><Button @click="close">
               Publish
-            </OButton>
+            </Button>
           </template>
-        </ODialog>
-        <ODrawer v-model="drawerOpen" title="Project settings">
+        </Dialog>
+        <Drawer v-model="drawerOpen" title="Project settings">
           <p class="text-sm">
             Drawer content can be placed on any edge.
           </p>
-        </ODrawer>
-        <OButton variant="outline" @click="toastOpen = true">
+        </Drawer>
+        <Button variant="outline" @click="toastOpen = true">
           Show toast
-        </OButton>
-        <OToast v-model="toastOpen" title="Saved" description="Your changes have been saved." variant="success" />
+        </Button>
+        <Toast v-model="toastOpen" title="Saved" description="Your changes have been saved." variant="success" />
 
         <h3 class="pt-3 font-semibold">
           复杂交互
         </h3>
         <div class="flex flex-wrap gap-4">
-          <ODatePicker v-model="date" />
-          <OCalendar v-model="date" />
+          <DatePicker v-model="date" />
+          <Calendar v-model="date" />
         </div>
-        <OCarousel v-model="slide" :items="slides">
+        <Carousel v-model="slide" :items="slides">
           <template #default="{ item }">
             <div class="grid h-36 place-items-center bg-muted text-lg font-semibold">
               {{ item }}
             </div>
           </template>
-        </OCarousel>
-        <OResizable v-model="split" class="h-44">
+        </Carousel>
+        <Resizable v-model="split" class="h-44">
           <template #first>
             <div class="p-4 text-sm">
               Resizable first panel
@@ -187,19 +187,19 @@ const rows = [
               Resizable second panel
             </div>
           </template>
-        </OResizable>
-        <OScrollArea class="h-28 border border-border p-3">
+        </Resizable>
+        <ScrollArea class="h-28 border border-border p-3">
           <p v-for="index in 8" :key="index" class="py-1 text-sm">
             Scrollable row {{ index }}
           </p>
-        </OScrollArea>
+        </ScrollArea>
       </section>
     </div>
 
     <div class="mt-8 space-y-6">
-      <ODataTable v-model:selected="selectedRows" :columns="columns" :rows="rows" selectable />
+      <DataTable v-model:selected="selectedRows" :columns="columns" :rows="rows" selectable />
       <div class="h-64 overflow-hidden rounded-lg border border-border">
-        <OSidebar v-model="sidebarCollapsed" :full-height="false">
+        <Sidebar v-model="sidebarCollapsed" :full-height="false">
           <template #header>
             <strong>Workspace</strong>
           </template>
@@ -208,8 +208,8 @@ const rows = [
               {{ isCollapsed ? '⌂' : 'Overview' }}
             </p>
           </template>
-        </OSidebar>
+        </Sidebar>
       </div>
     </div>
-  </OCard>
+  </Card>
 </template>

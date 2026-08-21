@@ -1,6 +1,5 @@
-import { withInstall } from '../../utils'
-import Accordion from './index.vue'
+import AccordionComponent from './index.vue'
 
-export const OAccordion = withInstall(Accordion)
-export default OAccordion
+export const Accordion = AccordionComponent
+export default Accordion
 export type { AccordionItem } from './types'

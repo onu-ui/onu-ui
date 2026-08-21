@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import InputOtp from './index.vue'
+import InputOtpComponent from './index.vue'
 
-export const OInputOtp = withInstall(InputOtp)
-export default OInputOtp
+export const InputOtp = InputOtpComponent
+export default InputOtp

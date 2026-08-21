@@ -9,4 +9,4 @@ export const skeletonProps = {
   },
 } as const
 
-export type OSkeletonProps = ExtractPropTypes<typeof skeletonProps>
+export type SkeletonProps = ExtractPropTypes<typeof skeletonProps>

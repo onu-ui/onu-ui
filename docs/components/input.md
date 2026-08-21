@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Input } from 'onu-ui'
+</script>
+
 # Input
 
 Input description.
@@ -88,47 +92,47 @@ Provide a basic input field.
 
 ## <i i-logos-vue /> With Vue
 
-`OInput` supports `v-model`, native input attributes, four sizes, and prefix or suffix slots.
+`Input` supports `v-model`, native input attributes, four sizes, and prefix or suffix slots.
 
 ```vue
 <script setup lang="ts">
 import { shallowRef } from 'vue'
-import { OInput } from 'onu-ui'
+import { Input } from 'onu-ui'
 
 const query = shallowRef('')
 </script>
 
 <template>
-  <OInput v-model="query" type="search" placeholder="Search components">
+  <Input v-model="query" type="search" placeholder="Search components">
     <template #prefix>
       <i class="i-carbon-search" aria-hidden="true" />
     </template>
     <template #suffix>
       <span text-xs text-muted-foreground>{{ query.length }}/40</span>
     </template>
-  </OInput>
+  </Input>
 </template>
 ```
 
-<OInput type="search" placeholder="Search components">
+<Input type="search" placeholder="Search components">
   <template #prefix><i i-carbon-search aria-hidden="true" /></template>
   <template #suffix><span text-xs text-muted-foreground>0/40</span></template>
-</OInput>
+</Input>
 
 ```vue
 <template>
   <div class="grid gap-3 sm:grid-cols-2">
-    <OInput size="sm" placeholder="Small input" />
-    <OInput dashed placeholder="Dashed input" />
-    <OInput disabled placeholder="Disabled input" />
-    <OInput type="number" :model-value="12" />
+    <Input size="sm" placeholder="Small input" />
+    <Input dashed placeholder="Dashed input" />
+    <Input disabled placeholder="Disabled input" />
+    <Input type="number" :model-value="12" />
   </div>
 </template>
 ```
 
 <div grid="~ gap-3 sm:cols-2">
-  <OInput size="sm" placeholder="Small input" />
-  <OInput dashed placeholder="Dashed input" />
-  <OInput disabled placeholder="Disabled input" />
-  <OInput type="number" :model-value="12" />
+  <Input size="sm" placeholder="Small input" />
+  <Input dashed placeholder="Dashed input" />
+  <Input disabled placeholder="Disabled input" />
+  <Input type="number" :model-value="12" />
 </div>

@@ -3,7 +3,7 @@ import { computed, useAttrs, useId } from 'vue'
 import { switchProps } from './props'
 
 defineOptions({
-  name: 'OSwitch',
+  name: 'OnuSwitch',
   inheritAttrs: false,
 })
 

@@ -1,6 +1,5 @@
-import { withInstall } from '../../utils'
-import Template from './index.vue'
+import TemplateComponent from './index.vue'
 
-export const OTemplate = withInstall(Template)
+export const Template = TemplateComponent
 
 export * from './props'

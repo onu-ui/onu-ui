@@ -1,6 +1,5 @@
-import { withInstall } from '../../utils'
-import ToggleGroup from './index.vue'
+import ToggleGroupComponent from './index.vue'
 
-export const OToggleGroup = withInstall(ToggleGroup)
-export default OToggleGroup
+export const ToggleGroup = ToggleGroupComponent
+export default ToggleGroup
 export type { ToggleGroupItem } from './types'

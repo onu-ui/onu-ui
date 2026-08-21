@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineOptions({ name: 'OCollapsible' })
+defineOptions({ name: 'Collapsible' })
 
 withDefaults(defineProps<{
   disabled?: boolean

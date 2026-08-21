@@ -6,4 +6,4 @@ export const kbdProps = {
   outline: Boolean,
 } as const
 
-export type OKbdProps = ExtractPropTypes<typeof kbdProps>
+export type KbdProps = ExtractPropTypes<typeof kbdProps>

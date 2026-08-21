@@ -3,7 +3,7 @@ import { computed, useAttrs } from 'vue'
 import { inputProps } from './props'
 
 defineOptions({
-  name: 'OInput',
+  name: 'OnuInput',
   inheritAttrs: false,
 })
 

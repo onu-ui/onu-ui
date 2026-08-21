@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Separator } from 'onu-ui'
+</script>
+
 # Separator
 
 Visually or semantically separate groups of content.
@@ -21,13 +25,13 @@ Visually or semantically separate groups of content.
 
 ```vue
 <script setup lang="ts">
-import { OSeparator } from 'onu-ui'
+import { Separator } from 'onu-ui'
 </script>
 
 <template>
-  <OSeparator />
-  <OSeparator orientation="vertical" class="h-5" :decorative="false" />
+  <Separator />
+  <Separator orientation="vertical" class="h-5" :decorative="false" />
 </template>
 ```
 
-<div grid="~ gap-4"><OSeparator /><div flex="~ items-center gap-3">Preset <OSeparator orientation="vertical" h-5 /> Vue</div></div>
+<div grid="~ gap-4"><Separator /><div flex="~ items-center gap-3">Preset <Separator orientation="vertical" h-5 /> Vue</div></div>

@@ -3,7 +3,7 @@ import type { ComboboxOption } from './types'
 import { computed, shallowRef, useTemplateRef } from 'vue'
 import { useDismissableLayer } from '../../composables/useDismissableLayer'
 
-defineOptions({ name: 'OCombobox' })
+defineOptions({ name: 'Combobox' })
 
 const props = withDefaults(defineProps<{
   options: ComboboxOption[]

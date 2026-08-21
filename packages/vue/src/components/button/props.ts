@@ -30,5 +30,5 @@ export const buttonGroupProps = {
   },
 }
 
-export type OButtonProps = ExtractPropTypes<typeof buttonProps>
-export type OButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>
+export type ButtonProps = ExtractPropTypes<typeof buttonProps>
+export type ButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>

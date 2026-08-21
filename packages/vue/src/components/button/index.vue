@@ -3,7 +3,7 @@ import { computed, useAttrs, useSlots } from 'vue'
 import { buttonProps } from './props'
 
 defineOptions({
-  name: 'OButton',
+  name: 'OnuButton',
   inheritAttrs: false,
 })
 

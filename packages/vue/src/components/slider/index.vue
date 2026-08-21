@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineOptions({ name: 'OSlider' })
+defineOptions({ name: 'Slider' })
 
 withDefaults(defineProps<{
   min?: number

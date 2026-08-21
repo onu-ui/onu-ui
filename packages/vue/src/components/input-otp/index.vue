@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, useTemplateRef } from 'vue'
 
-defineOptions({ name: 'OInputOtp' })
+defineOptions({ name: 'InputOtp' })
 
 const props = withDefaults(defineProps<{
   length?: number

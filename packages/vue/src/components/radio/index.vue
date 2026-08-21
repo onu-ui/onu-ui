@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ORadioProps } from './props'
+import type { RadioProps } from './props'
 import { computed, useAttrs, useId } from 'vue'
 import { radioProps } from './props'
 
 defineOptions({
-  name: 'ORadio',
+  name: 'Radio',
   inheritAttrs: false,
 })
 
@@ -18,13 +18,13 @@ const inputId = useId()
 const attrs = useAttrs()
 const isChecked = computed(() => model.value === props.value)
 
-const sizeMap: Record<ORadioProps['size'], string> = {
+const sizeMap: Record<RadioProps['size'], string> = {
   xs: 'radio-xs',
   sm: 'radio-sm',
   md: 'radio-md',
   lg: 'radio-lg',
 }
-const shapeMap: Record<ORadioProps['shape'], string> = {
+const shapeMap: Record<RadioProps['shape'], string> = {
   circle: 'radio-circle',
   square: 'radio-square',
 }

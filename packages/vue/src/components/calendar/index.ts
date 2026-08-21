@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import Calendar from './index.vue'
+import CalendarComponent from './index.vue'
 
-export const OCalendar = withInstall(Calendar)
-export default OCalendar
+export const Calendar = CalendarComponent
+export default Calendar

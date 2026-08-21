@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, useTemplateRef } from 'vue'
 
-defineOptions({ name: 'OCarousel' })
+defineOptions({ name: 'Carousel' })
 
 const props = withDefaults(defineProps<{
   items: unknown[]

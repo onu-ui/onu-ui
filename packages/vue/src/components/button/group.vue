@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { buttonGroupProps } from './props'
 
-defineOptions({ name: 'OButtonGroup' })
+defineOptions({ name: 'ButtonGroup' })
 
 const props = defineProps(buttonGroupProps)
 const classes = computed(() => [

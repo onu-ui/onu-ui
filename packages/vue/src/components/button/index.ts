@@ -1,9 +1,8 @@
-import { withInstall } from '../../utils'
-import ButtonGroup from './group.vue'
-import Button from './index.vue'
+import ButtonGroupComponent from './group.vue'
+import ButtonComponent from './index.vue'
 
-export const OButton = withInstall(Button)
-export const OButtonGroup = withInstall(ButtonGroup)
-export default OButton
+export const Button = ButtonComponent
+export const ButtonGroup = ButtonGroupComponent
+export default Button
 
 export * from './props'

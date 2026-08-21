@@ -12,6 +12,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Button: typeof import('onu-ui')['Button']
     DocsPreferences: typeof import('./.vitepress/theme/components/DocsPreferences.vue')['default']
     Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
     HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const Button: typeof import('onu-ui')['Button']
   const DocsPreferences: typeof import('./.vitepress/theme/components/DocsPreferences.vue')['default']
   const Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
   const HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']

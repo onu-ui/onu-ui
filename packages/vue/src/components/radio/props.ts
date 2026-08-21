@@ -35,5 +35,5 @@ export const radioGroupProps = {
   },
 }
 
-export type ORadioProps = ExtractPropTypes<typeof radioProps>
-export type ORadioGroupProps = ExtractPropTypes<typeof radioGroupProps>
+export type RadioProps = ExtractPropTypes<typeof radioProps>
+export type RadioGroupProps = ExtractPropTypes<typeof radioGroupProps>

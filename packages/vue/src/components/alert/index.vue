@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { alertProps } from './props'
 
-defineOptions({ name: 'OAlert' })
+defineOptions({ name: 'Alert' })
 
 const props = defineProps(alertProps)
 

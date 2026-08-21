@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import Carousel from './index.vue'
+import CarouselComponent from './index.vue'
 
-export const OCarousel = withInstall(Carousel)
-export default OCarousel
+export const Carousel = CarouselComponent
+export default Carousel

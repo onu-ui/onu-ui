@@ -2,7 +2,7 @@
 import type { DataTableColumn } from './types'
 import { computed, shallowRef } from 'vue'
 
-defineOptions({ name: 'ODataTable' })
+defineOptions({ name: 'DataTable' })
 
 const props = withDefaults(defineProps<{
   columns: DataTableColumn[]

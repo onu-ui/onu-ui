@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { skeletonProps } from './props'
 
-defineOptions({ name: 'OSkeleton' })
+defineOptions({ name: 'Skeleton' })
 
 const props = defineProps(skeletonProps)
 const variantClasses = {

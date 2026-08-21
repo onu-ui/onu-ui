@@ -2,9 +2,8 @@
 import { onMounted } from 'vue'
 
 import App from './App.vue'
-import { getUnocssCompileRes, init, libInstall, sendHtml } from './lib-install.js'
+import { getUnocssCompileRes, init, sendHtml } from './lib-install.js'
 
-libInstall()
 onMounted(async () => {
   await init()
   sendHtml()

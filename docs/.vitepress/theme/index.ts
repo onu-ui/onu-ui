@@ -1,7 +1,6 @@
 import type { Theme } from 'vitepress'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import FloatingVue from 'floating-vue'
-import OnuUI from 'onu-ui'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import DocsPreferences from './components/DocsPreferences.vue'
@@ -33,6 +32,5 @@ export default {
 
     app.use(TwoslashFloatingVue)
     app.use(FloatingVue)
-    app.use(OnuUI)
   },
 } satisfies Theme

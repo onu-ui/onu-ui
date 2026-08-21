@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Switch } from 'onu-ui'
+</script>
+
 # Switch
 
 A control that allows the user to toggle between checked and not checked.
@@ -119,39 +123,39 @@ Default size is `md`, you can use `switch-xs|sm|md|lg` to change the size.
 
 ## <i i-logos-vue /> With Vue
 
-`OSwitch` provides a typed boolean `v-model`, native disabled state, labels, and a customizable thumb slot.
+`Switch` provides a typed boolean `v-model`, native disabled state, labels, and a customizable thumb slot.
 
 ```vue
 <script setup lang="ts">
 import { shallowRef } from 'vue'
-import { OSwitch } from 'onu-ui'
+import { Switch } from 'onu-ui'
 
 const notifications = shallowRef(true)
 </script>
 
 <template>
-  <OSwitch v-model="notifications" name="notifications">
+  <Switch v-model="notifications" name="notifications">
     Product updates
-  </OSwitch>
+  </Switch>
 
-  <OSwitch disabled>
+  <Switch disabled>
     Team policy
-  </OSwitch>
+  </Switch>
 </template>
 ```
 
 <div flex="~ col gap-3 items-start">
-  <OSwitch :model-value="true">Product updates</OSwitch>
-  <OSwitch disabled>Team policy</OSwitch>
+  <Switch :model-value="true">Product updates</Switch>
+  <Switch disabled>Team policy</Switch>
 </div>
 
 ### Custom thumb
 
 ```vue
-<OSwitch v-model="dark">
+<Switch v-model="dark">
   <template #thumb="{ checked }">
     <i :class="checked ? 'i-carbon-moon' : 'i-carbon-sun'" />
   </template>
   Dark mode
-</OSwitch>
+</Switch>
 ```

@@ -2,18 +2,22 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Accordion, Button, Combobox, DataTable, DatePicker, Dialog, Popover, Tabs, Tooltip } from 'onu-ui'
+</script>
+
 # Interactive components
 
 The preset owns visual shortcuts. Components that need state, focus management, keyboard navigation, pointer tracking, or timed lifecycles live in `onu-ui`'s Vue package.
 
 ## Disclosure and selection
 
-`OAccordion`, `OCollapsible`, `OTabs`, `OToggleGroup`, `OSelect`, `OCombobox`, `OCommand`, `OInputOtp`, and `OSlider` expose typed `v-model` contracts.
+`Accordion`, `Collapsible`, `Tabs`, `ToggleGroup`, `Select`, `Combobox`, `Command`, `InputOtp`, and `Slider` expose typed `v-model` contracts.
 
 ```vue
 <script setup lang="ts">
 import { shallowRef } from 'vue'
-import { OAccordion, OCombobox, OTabs } from 'onu-ui'
+import { Accordion, Combobox, Tabs } from 'onu-ui'
 
 const section = shallowRef('behavior')
 const tab = shallowRef('preview')
@@ -34,18 +38,18 @@ const repositories = [
 </script>
 
 <template>
-  <OAccordion v-model="section" :items="sections" />
-  <OTabs v-model="tab" :items="tabs" />
-  <OCombobox v-model="repository" :options="repositories" />
+  <Accordion v-model="section" :items="sections" />
+  <Tabs v-model="tab" :items="tabs" />
+  <Combobox v-model="repository" :options="repositories" />
 </template>
 ```
 
 <div grid="~ gap-5" max-w-xl>
-  <OAccordion :items="[
+  <Accordion :items="[
     { value: 'behavior', label: 'Where does behavior live?', content: 'State, focus, and keyboard behavior live in the Vue package.' },
     { value: 'styles', label: 'Where do styles live?', content: 'Reusable appearance stays in the preset.' }
   ]" />
-  <OTabs :items="[
+  <Tabs :items="[
     { value: 'preview', label: 'Preview', content: 'Interactive preview content.' },
     { value: 'code', label: 'Code', content: 'Typed v-model APIs keep state explicit.' }
   ]" />
@@ -53,68 +57,68 @@ const repositories = [
 
 ## Overlays and focus
 
-`ODialog`, `ODrawer`, `OPopover`, `OTooltip`, and `ODropdownMenu` handle Escape, outside interaction, and focus restoration where applicable. Overlays render outside local stacking contexts when necessary.
+`Dialog`, `Drawer`, `Popover`, `Tooltip`, and `DropdownMenu` handle Escape, outside interaction, and focus restoration where applicable. Overlays render outside local stacking contexts when necessary.
 
 Aliases cover the related component families:
 
 | Component | Alias / mode |
 | --- | --- |
-| `ODialog` | `OAlertDialog` (`persistent` prevents outside dismissal) |
-| `ODrawer` | `OSheet` (`side` controls the edge) |
-| `OPopover` | `OHoverCard` (set `hover`) |
-| `ODropdownMenu` | `OContextMenu`, `OMenubar`, `ONavigationMenu` |
+| `Dialog` | `AlertDialog` (`persistent` prevents outside dismissal) |
+| `Drawer` | `Sheet` (`side` controls the edge) |
+| `Popover` | `HoverCard` (set `hover`) |
+| `DropdownMenu` | `ContextMenu`, `Menubar`, `NavigationMenu` |
 
 ```vue
 <script setup lang="ts">
 import { shallowRef } from 'vue'
-import { OButton, ODialog, OPopover } from 'onu-ui'
+import { Button, Dialog, Popover } from 'onu-ui'
 
 const dialogOpen = shallowRef(false)
 </script>
 
 <template>
-  <OButton @click="dialogOpen = true">Open dialog</OButton>
-  <ODialog v-model="dialogOpen" title="Publish component">
+  <Button @click="dialogOpen = true">Open dialog</Button>
+  <Dialog v-model="dialogOpen" title="Publish component">
     Dialog content
-  </ODialog>
+  </Dialog>
 
-  <OPopover>
+  <Popover>
     <template #trigger="{ toggle }">
-      <OButton variant="outline" @click="toggle">Open popover</OButton>
+      <Button variant="outline" @click="toggle">Open popover</Button>
     </template>
     Anchored content
-  </OPopover>
+  </Popover>
 </template>
 ```
 
 <div flex="~ wrap gap-3">
-  <ODialog title="Accessible dialog" description="Escape closes and focus returns to the trigger.">
-    <template #trigger="{ toggle }"><OButton @click="toggle">Open dialog</OButton></template>
+  <Dialog title="Accessible dialog" description="Escape closes and focus returns to the trigger.">
+    <template #trigger="{ toggle }"><Button @click="toggle">Open dialog</Button></template>
     <p text-sm>Dialog content is teleported to the document body.</p>
-  </ODialog>
-  <OPopover>
-    <template #trigger="{ toggle }"><OButton variant="outline" @click="toggle">Open popover</OButton></template>
+  </Dialog>
+  <Popover>
+    <template #trigger="{ toggle }"><Button variant="outline" @click="toggle">Open popover</Button></template>
     Anchored popover content.
-  </OPopover>
-  <OTooltip content="Focus or hover"><OButton variant="ghost">Tooltip</OButton></OTooltip>
+  </Popover>
+  <Tooltip content="Focus or hover"><Button variant="ghost">Tooltip</Button></Tooltip>
 </div>
 
 ## Complex interaction
 
 The Vue package also exports:
 
-- `OCalendar` and `ODatePicker` for date selection.
-- `OCarousel` for snap scrolling with button and arrow-key navigation.
-- `OResizable` for pointer and keyboard resizing.
-- `OScrollArea` for a focusable native scroll region.
-- `OToast` for timed, pausable notifications.
-- `ODataTable` for sorting, row selection, and pagination.
-- `OSidebar` for controlled collapsed navigation.
+- `Calendar` and `DatePicker` for date selection.
+- `Carousel` for snap scrolling with button and arrow-key navigation.
+- `Resizable` for pointer and keyboard resizing.
+- `ScrollArea` for a focusable native scroll region.
+- `Toast` for timed, pausable notifications.
+- `DataTable` for sorting, row selection, and pagination.
+- `Sidebar` for controlled collapsed navigation.
 
 ```vue
 <script setup lang="ts">
 import { shallowRef } from 'vue'
-import { ODataTable, ODatePicker } from 'onu-ui'
+import { DataTable, DatePicker } from 'onu-ui'
 
 const date = shallowRef('')
 const selected = shallowRef<Array<string | number>>([])
@@ -129,14 +133,14 @@ const rows = [
 </script>
 
 <template>
-  <ODatePicker v-model="date" />
-  <ODataTable v-model:selected="selected" :columns="columns" :rows="rows" selectable />
+  <DatePicker v-model="date" />
+  <DataTable v-model:selected="selected" :columns="columns" :rows="rows" selectable />
 </template>
 ```
 
 <div grid="~ gap-5">
-  <ODatePicker />
-  <ODataTable
+  <DatePicker />
+  <DataTable
     :columns="[
       { key: 'name', label: 'Project', sortable: true },
       { key: 'status', label: 'Status', sortable: true },

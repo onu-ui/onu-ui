@@ -2,7 +2,7 @@
 import type { TabItem } from './types'
 import { computed, useTemplateRef } from 'vue'
 
-defineOptions({ name: 'OTabs' })
+defineOptions({ name: 'Tabs' })
 
 const props = withDefaults(defineProps<{
   items: TabItem[]

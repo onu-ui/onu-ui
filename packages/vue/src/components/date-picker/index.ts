@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import DatePicker from './index.vue'
+import DatePickerComponent from './index.vue'
 
-export const ODatePicker = withInstall(DatePicker)
-export default ODatePicker
+export const DatePicker = DatePickerComponent
+export default DatePicker

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { badgeProps } from './props'
 
-defineOptions({ name: 'OBadge' })
+defineOptions({ name: 'Badge' })
 
 const props = defineProps(badgeProps)
 

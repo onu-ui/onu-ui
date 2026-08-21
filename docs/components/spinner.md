@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { Button, Spinner } from 'onu-ui'
+</script>
+
 # Spinner
 
 Indicate short, indeterminate work while preserving an accessible status label.
@@ -22,14 +26,14 @@ Indicate short, indeterminate work while preserving an accessible status label.
 
 ```vue
 <script setup lang="ts">
-import { OButton, OSpinner } from 'onu-ui'
+import { Button, Spinner } from 'onu-ui'
 </script>
 
 <template>
-  <OSpinner size="sm" label="Loading results" />
-  <OSpinner variant="primary" label="Saving settings" />
-  <OButton loading>Saving</OButton>
+  <Spinner size="sm" label="Loading results" />
+  <Spinner variant="primary" label="Saving settings" />
+  <Button loading>Saving</Button>
 </template>
 ```
 
-<div flex="~ gap-4 items-center"><OSpinner size="sm" label="Loading results" /><OSpinner variant="primary" label="Saving settings" /><OButton loading>Saving</OButton></div>
+<div flex="~ gap-4 items-center"><Spinner size="sm" label="Loading results" /><Spinner variant="primary" label="Saving settings" /><Button loading>Saving</Button></div>

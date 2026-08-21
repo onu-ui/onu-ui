@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useDark } from '@vueuse/core'
-import { OButton } from 'onu-ui'
+import { Button } from 'onu-ui'
 import DisplayExamples from './components/DisplayExamples.vue'
 import FormExamples from './components/FormExamples.vue'
 import FoundationExamples from './components/FoundationExamples.vue'
@@ -26,9 +26,9 @@ function toggleDark() {
             按需导入的组件库示例
           </p>
         </div>
-        <OButton variant="ghost" size="sm" :aria-pressed="isDark" @click="toggleDark">
+        <Button variant="ghost" size="sm" :aria-pressed="isDark" @click="toggleDark">
           {{ isDark ? '切换浅色' : '切换深色' }}
-        </OButton>
+        </Button>
       </div>
     </header>
 

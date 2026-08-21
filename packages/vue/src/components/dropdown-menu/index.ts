@@ -1,13 +1,10 @@
-import { withInstall } from '../../utils'
-import DropdownMenu from './index.vue'
+import DropdownMenuComponent from './index.vue'
 
-const ContextMenu = { ...DropdownMenu, name: 'OContextMenu' } as typeof DropdownMenu
-const Menubar = { ...DropdownMenu, name: 'OMenubar' } as typeof DropdownMenu
-const NavigationMenu = { ...DropdownMenu, name: 'ONavigationMenu' } as typeof DropdownMenu
+const ContextMenu = { ...DropdownMenuComponent, name: 'ContextMenu' } as typeof DropdownMenuComponent
+const Menubar = { ...DropdownMenuComponent, name: 'Menubar' } as typeof DropdownMenuComponent
+const NavigationMenu = { ...DropdownMenuComponent, name: 'NavigationMenu' } as typeof DropdownMenuComponent
 
-export const ODropdownMenu = withInstall(DropdownMenu, { ContextMenu, Menubar, NavigationMenu })
-export const OContextMenu = ContextMenu
-export const OMenubar = Menubar
-export const ONavigationMenu = NavigationMenu
-export default ODropdownMenu
+export const DropdownMenu = DropdownMenuComponent
+export { ContextMenu, Menubar, NavigationMenu }
+export default DropdownMenu
 export type { MenuItem } from './types'

@@ -2,6 +2,10 @@
 outline: deep
 ---
 
+<script setup lang="ts">
+import { RadioGroup } from 'onu-ui'
+</script>
+
 # Radio
 
 The radio component is a form control that allows the user to select a single option from a set of options.
@@ -240,7 +244,7 @@ And default is `circle`.
 
 ## <i i-logos-vue /> With Vue
 
-Provide `ORadio` and `ORadioGroup` components to use radio in Vue.
+Provide `Radio` and `RadioGroup` components to use radio in Vue.
 
 ### <i i-carbon:use-case-usage /> Usage
 
@@ -249,7 +253,7 @@ Provide `ORadio` and `ORadioGroup` components to use radio in Vue.
 ```vue
 <script setup lang='ts'>
 import { shallowRef } from 'vue'
-import { ORadioGroup } from 'onu-ui'
+import { RadioGroup } from 'onu-ui'
 
 const options = [
   { value: 'option1', label: 'Option 1' },
@@ -260,7 +264,7 @@ const status = ref('option1')
 </script>
 
 <template>
-  <ORadioGroup 
+  <RadioGroup
     v-model="status"
     :options="options"
     name="xxx"
@@ -268,7 +272,7 @@ const status = ref('option1')
 </template>
 ```
 
-<ORadioGroup
+<RadioGroup
   model-value="option1"
   :options="[
     { value: 'option1', label: 'Starter' },

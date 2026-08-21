@@ -7,7 +7,7 @@ interface CalendarDay {
   day: number
 }
 
-defineOptions({ name: 'OCalendar' })
+defineOptions({ name: 'Calendar' })
 
 const props = withDefaults(defineProps<{
   min?: string

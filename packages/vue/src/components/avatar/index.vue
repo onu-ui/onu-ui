@@ -3,7 +3,7 @@ import { computed, useSlots } from 'vue'
 import { avatarProps } from './props'
 
 defineOptions({
-  name: 'OAvatar',
+  name: 'Avatar',
   inheritAttrs: false,
 })
 

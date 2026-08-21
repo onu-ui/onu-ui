@@ -12,4 +12,4 @@ export const checkboxProps = {
   indeterminate: Boolean,
 } as const
 
-export type OCheckboxProps = ExtractPropTypes<typeof checkboxProps>
+export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>

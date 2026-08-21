@@ -11,4 +11,4 @@ export const alertProps = {
   },
 } as const
 
-export type OAlertProps = ExtractPropTypes<typeof alertProps>
+export type AlertProps = ExtractPropTypes<typeof alertProps>

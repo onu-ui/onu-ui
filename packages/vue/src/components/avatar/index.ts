@@ -1,9 +1,8 @@
-import { withInstall } from '../../utils'
-import AvatarGroup from './group.vue'
-import Avatar from './index.vue'
+import AvatarGroupComponent from './group.vue'
+import AvatarComponent from './index.vue'
 
-export const OAvatar = withInstall(Avatar)
-export const OAvatarGroup = withInstall(AvatarGroup)
-export default OAvatar
+export const Avatar = AvatarComponent
+export const AvatarGroup = AvatarGroupComponent
+export default Avatar
 
 export * from './props'

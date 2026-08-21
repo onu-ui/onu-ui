@@ -1,6 +1,5 @@
-import { withInstall } from '../../utils'
-import DataTable from './index.vue'
+import DataTableComponent from './index.vue'
 
-export const ODataTable = withInstall(DataTable)
-export default ODataTable
+export const DataTable = DataTableComponent
+export default DataTable
 export type { DataTableColumn } from './types'

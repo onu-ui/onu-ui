@@ -2,7 +2,7 @@
 import { computed, useId, useTemplateRef } from 'vue'
 import { useDismissableLayer } from '../../composables/useDismissableLayer'
 
-defineOptions({ name: 'ODialog' })
+defineOptions({ name: 'OnuDialog' })
 
 const props = withDefaults(defineProps<{
   title?: string

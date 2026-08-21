@@ -1,5 +1,4 @@
-import { withInstall } from '../../utils'
-import Tooltip from './index.vue'
+import TooltipComponent from './index.vue'
 
-export const OTooltip = withInstall(Tooltip)
-export default OTooltip
+export const Tooltip = TooltipComponent
+export default Tooltip

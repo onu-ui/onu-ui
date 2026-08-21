@@ -1,6 +1,5 @@
-import { withInstall } from '../../utils'
-import Command from './index.vue'
+import CommandComponent from './index.vue'
 
-export const OCommand = withInstall(Command)
-export default OCommand
+export const Command = CommandComponent
+export default Command
 export type { CommandItem } from './types'

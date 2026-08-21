@@ -8,4 +8,4 @@ export const templateProps = {
   loading: loadable,
 }
 
-export type OTemplateProps = ExtractPropTypes<typeof templateProps>
+export type TemplateProps = ExtractPropTypes<typeof templateProps>

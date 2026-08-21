@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Kbd from './index.vue'
+import KbdComponent from './index.vue'
 
-export const OKbd = withInstall(Kbd)
-export default OKbd
+export const Kbd = KbdComponent
+export default Kbd
 
 export * from './props'

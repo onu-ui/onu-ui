@@ -1,7 +1,6 @@
-import { withInstall } from '../../utils'
-import Separator from './index.vue'
+import SeparatorComponent from './index.vue'
 
-export const OSeparator = withInstall(Separator)
-export default OSeparator
+export const Separator = SeparatorComponent
+export default Separator
 
 export * from './props'

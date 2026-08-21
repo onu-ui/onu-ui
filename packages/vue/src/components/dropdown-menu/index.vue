@@ -3,7 +3,7 @@ import type { MenuItem } from './types'
 import { shallowRef, useTemplateRef } from 'vue'
 import { useDismissableLayer } from '../../composables/useDismissableLayer'
 
-defineOptions({ name: 'ODropdownMenu' })
+defineOptions({ name: 'DropdownMenu' })
 
 const props = defineProps<{
   items: MenuItem[]

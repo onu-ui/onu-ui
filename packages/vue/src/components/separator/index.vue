@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { separatorProps } from './props'
 
-defineOptions({ name: 'OSeparator' })
+defineOptions({ name: 'Separator' })
 
 const props = defineProps(separatorProps)
 const classes = computed(() => [

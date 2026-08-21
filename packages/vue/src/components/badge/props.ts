@@ -18,4 +18,4 @@ export const badgeProps = {
   },
 } as const
 
-export type OBadgeProps = ExtractPropTypes<typeof badgeProps>
+export type BadgeProps = ExtractPropTypes<typeof badgeProps>

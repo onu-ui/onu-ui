@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, watch } from 'vue'
 
-defineOptions({ name: 'OToast' })
+defineOptions({ name: 'Toast' })
 
 const props = withDefaults(defineProps<{
   title?: string

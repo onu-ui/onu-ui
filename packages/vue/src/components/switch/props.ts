@@ -8,4 +8,4 @@ export const switchProps = {
   name: String,
 } as const
 
-export type OSwitchProps = ExtractPropTypes<typeof switchProps>
+export type SwitchProps = ExtractPropTypes<typeof switchProps>

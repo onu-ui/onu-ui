@@ -12,4 +12,4 @@ export const separatorProps = {
   },
 } as const
 
-export type OSeparatorProps = ExtractPropTypes<typeof separatorProps>
+export type SeparatorProps = ExtractPropTypes<typeof separatorProps>
