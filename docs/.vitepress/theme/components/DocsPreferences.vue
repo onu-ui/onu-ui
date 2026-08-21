@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import type { DocsMode, DocsRadius } from '../composables/useDocsPreferences'
-import { OSwitch } from 'onu-ui'
+import { computed } from 'vue'
 import { useDocsPreferences } from '../composables/useDocsPreferences'
+import { DocsThemeColors } from '../data/colors'
 
-const { color, isVueMode, mode, radius, setColor, setMode, setRadius } = useDocsPreferences()
+const { color, mode, radius, setColor, setMode, setRadius } = useDocsPreferences()
+const activeColorLabel = computed(() => DocsThemeColors.find(item => item.value === color.value)?.label ?? 'Custom')
 
-const colors = [
-  { label: 'Violet', value: '#8b5cf6' },
-  { label: 'Blue', value: '#3b82f6' },
-  { label: 'Cyan', value: '#0891b2' },
-  { label: 'Emerald', value: '#059669' },
-  { label: 'Orange', value: '#ea580c' },
-  { label: 'Rose', value: '#e11d48' },
+const modes: Array<{ label: string, value: DocsMode }> = [
+  { label: 'Preset', value: 'preset' },
+  { label: 'Vue', value: 'vue' },
 ]
 
 const radii: Array<{ label: string, value: DocsRadius }> = [
@@ -29,47 +27,43 @@ function selectMode(value: DocsMode) {
 <template>
   <section class="docs-preferences" aria-labelledby="docs-preferences-title">
     <div class="docs-preferences__heading">
-      <span id="docs-preferences-title">Documentation</span>
-      <span class="docs-preferences__value">{{ mode === 'preset' ? 'Preset' : 'Vue' }}</span>
+      <span id="docs-preferences-title">Preferences</span>
+      <span>{{ activeColorLabel }}</span>
     </div>
 
-    <div class="docs-preferences__mode" role="group" aria-label="Documentation mode">
-      <button
-        type="button"
-        class="docs-preferences__mode-label"
-        :class="{ 'is-active': mode === 'preset' }"
-        :aria-pressed="mode === 'preset'"
-        @click="selectMode('preset')"
-      >
-        Preset
-      </button>
-      <OSwitch v-model="isVueMode" size="sm" aria-label="Switch between Preset and Vue documentation" />
-      <button
-        type="button"
-        class="docs-preferences__mode-label"
-        :class="{ 'is-active': mode === 'vue' }"
-        :aria-pressed="mode === 'vue'"
-        @click="selectMode('vue')"
-      >
-        Vue
-      </button>
+    <div class="docs-preferences__row">
+      <span class="docs-preferences__label">Docs</span>
+      <div class="docs-preferences__segments" role="group" aria-label="Documentation mode">
+        <button
+          v-for="item in modes"
+          :key="item.value"
+          type="button"
+          :class="{ 'is-active': mode === item.value }"
+          :aria-pressed="mode === item.value"
+          @click="selectMode(item.value)"
+        >
+          {{ item.label }}
+        </button>
+      </div>
     </div>
 
     <div class="docs-preferences__row">
       <span class="docs-preferences__label">Theme</span>
       <div class="docs-preferences__colors" role="group" aria-label="Theme color">
         <button
-          v-for="item in colors"
-          :key="item.value"
+          v-for="item in DocsThemeColors"
+          :key="item.label"
           type="button"
           class="docs-preferences__color"
-          :class="{ 'is-active': color === item.value }"
-          :style="{ backgroundColor: item.value }"
+          :class="{ 'is-active': color === item.value, 'is-default': item.isDefault }"
+          :style="item.isDefault ? undefined : { backgroundColor: item.value }"
           :title="item.label"
           :aria-label="`Use ${item.label} theme`"
           :aria-pressed="color === item.value"
           @click="setColor(item.value)"
-        />
+        >
+          <span v-if="item.isDefault" class="docs-preferences__default-mark" aria-hidden="true" />
+        </button>
       </div>
     </div>
 
@@ -94,8 +88,8 @@ function selectMode(value: DocsMode) {
 
 <style scoped>
 .docs-preferences {
-  margin: 0 0 24px;
-  padding: 0 0 24px;
+  margin: 0 0 18px;
+  padding: 0 4px 18px;
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
@@ -107,119 +101,150 @@ function selectMode(value: DocsMode) {
 }
 
 .docs-preferences__heading {
-  margin-bottom: 10px;
-  color: var(--vp-c-text-2);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.docs-preferences__value {
-  color: var(--vp-c-brand-1);
-  font-weight: 500;
-}
-
-.docs-preferences__mode {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 10px;
-  min-height: 54px;
-  margin-bottom: 16px;
-  padding: 8px 12px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: calc(var(--onu-docs-radius, 0.5rem) + 4px);
-  background: var(--vp-c-bg-soft);
-}
-
-.docs-preferences__mode-label {
-  border: 0;
-  background: transparent;
+  min-height: 28px;
   color: var(--vp-c-text-3);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 160ms ease;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.docs-preferences__mode-label:first-child {
-  text-align: right;
+.docs-preferences__heading span:first-child {
+  color: var(--vp-c-text-2);
 }
 
-.docs-preferences__mode-label:last-child {
-  text-align: left;
-}
-
-.docs-preferences__mode-label.is-active {
+.docs-preferences__heading span:last-child {
   color: var(--vp-c-text-1);
 }
 
-.docs-preferences__mode-label:focus-visible,
+.docs-preferences__row {
+  min-height: 44px;
+  border-top: 1px solid color-mix(in srgb, var(--vp-c-divider) 68%, transparent);
+}
+
+.docs-preferences__segments {
+  display: grid;
+  width: 132px;
+  padding: 3px;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 7px;
+  background: var(--vp-c-bg-soft);
+}
+
+.docs-preferences__segments button {
+  height: 27px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--vp-c-text-3);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.docs-preferences__segments button.is-active {
+  background: var(--vp-c-text-1);
+  color: var(--vp-c-bg);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--vp-c-text-1) 16%, transparent);
+}
+
+.docs-preferences__segments button:active,
+.docs-preferences__color:active,
+.docs-preferences__radii button:active {
+  transform: translateY(1px);
+}
+
+.docs-preferences__segments button:focus-visible,
 .docs-preferences__color:focus-visible,
 .docs-preferences__radii button:focus-visible {
-  outline: 2px solid var(--vp-c-brand-1);
+  outline: 2px solid var(--vp-c-text-1);
   outline-offset: 2px;
 }
 
-.docs-preferences__row + .docs-preferences__row {
-  margin-top: 12px;
-}
-
 .docs-preferences__label {
-  color: var(--vp-c-text-2);
-  font-size: 12px;
-  font-weight: 500;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  font-weight: 550;
 }
 
 .docs-preferences__colors,
 .docs-preferences__radii {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 5px;
 }
 
 .docs-preferences__color {
-  width: 18px;
-  height: 18px;
+  position: relative;
+  width: 17px;
+  height: 17px;
   padding: 0;
-  border: 2px solid var(--vp-c-bg);
+  border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px var(--vp-c-divider);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-text-1) 18%, transparent);
   cursor: pointer;
+  transition: box-shadow 160ms ease, transform 160ms ease;
 }
 
 .docs-preferences__color.is-active {
-  box-shadow: 0 0 0 2px var(--vp-c-brand-1);
+  box-shadow: 0 0 0 2px var(--vp-c-bg), 0 0 0 3px var(--vp-c-text-1);
+}
+
+.docs-preferences__color.is-default {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: none;
+}
+
+.docs-preferences__default-mark {
+  width: 11px;
+  height: 11px;
+  border: 1px solid color-mix(in srgb, var(--vp-c-text-1) 22%, transparent);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f4f4f5 0 48%, #18181b 52% 100%);
+}
+
+.docs-preferences__color.is-default.is-active {
+  border-color: var(--vp-c-text-1);
+  background: var(--vp-c-bg);
+  box-shadow: none;
 }
 
 .docs-preferences__radii {
-  gap: 2px;
-  padding: 2px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: calc(var(--onu-docs-radius, 0.5rem) + 2px);
-  background: var(--vp-c-bg-soft);
+  gap: 3px;
 }
 
 .docs-preferences__radii button {
-  width: 27px;
-  height: 25px;
-  border: 0;
-  border-radius: var(--onu-docs-radius, 0.5rem);
+  width: 29px;
+  height: 27px;
+  border: 1px solid transparent;
+  border-radius: 5px;
   background: transparent;
   color: var(--vp-c-text-3);
   font-size: 11px;
   font-weight: 600;
   cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .docs-preferences__radii button.is-active {
-  background: var(--vp-c-bg);
-  color: var(--vp-c-brand-1);
-  box-shadow: 0 1px 3px color-mix(in srgb, var(--vp-c-text-1) 12%, transparent);
+  border-color: var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .docs-preferences__mode-label {
+  .docs-preferences__segments button,
+  .docs-preferences__color,
+  .docs-preferences__radii button {
     transition: none;
   }
 }

@@ -1,6 +1,6 @@
 import { resolveTheme } from '@onu-ui/preset/helper'
 import { computed, onMounted, readonly, shallowRef } from 'vue'
-import { DefaultThemeColor } from '../data/colors'
+import { DocsThemeColors } from '../data/colors'
 
 export type DocsMode = 'preset' | 'vue'
 export type DocsRadius = '0rem' | '0.375rem' | '0.5rem' | '0.75rem'
@@ -9,11 +9,12 @@ const STORAGE_KEY = 'onu-docs-preferences'
 const DEFAULT_RADIUS: DocsRadius = '0.5rem'
 
 const mode = shallowRef<DocsMode>('preset')
-const color = shallowRef(DefaultThemeColor)
+const color = shallowRef<string>()
 const radius = shallowRef<DocsRadius>(DEFAULT_RADIUS)
 const initialized = shallowRef(false)
 
 const validRadii: DocsRadius[] = ['0rem', '0.375rem', '0.5rem', '0.75rem']
+const validColors = new Set(DocsThemeColors.flatMap(item => item.value ? [item.value] : []))
 
 function applyPreferences() {
   if (typeof document === 'undefined')
@@ -23,6 +24,7 @@ function applyPreferences() {
   const { meta } = resolveTheme(color.value)
 
   root.dataset.onuDocsMode = mode.value
+  root.dataset.onuDocsCustomTheme = color.value ? 'true' : 'false'
   root.style.setProperty('--onu-radius', radius.value)
   root.style.setProperty('--onu-docs-radius', radius.value)
 
@@ -57,7 +59,7 @@ export function useDocsPreferences() {
     updatePreferences()
   }
 
-  function setColor(value: string) {
+  function setColor(value?: string) {
     color.value = value
     updatePreferences()
   }
@@ -78,7 +80,7 @@ export function useDocsPreferences() {
 
         if (stored.mode === 'preset' || stored.mode === 'vue')
           mode.value = stored.mode
-        if (typeof stored.color === 'string' && CSS.supports('color', stored.color))
+        if (typeof stored.color === 'string' && validColors.has(stored.color))
           color.value = stored.color
         if (stored.radius && validRadii.includes(stored.radius))
           radius.value = stored.radius

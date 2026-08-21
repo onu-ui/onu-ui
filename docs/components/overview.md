@@ -1,5 +1,6 @@
 ---
 deep: outline
+aside: false
 ---
 
 # Overview

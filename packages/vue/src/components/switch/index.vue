@@ -23,7 +23,12 @@ const sizeClasses = {
   md: 'switch-md',
   lg: 'switch-lg',
 }
-const classes = computed(() => ['switch', 'switch-default', sizeClasses[props.size]])
+const classes = computed(() => [
+  'switch',
+  'switch-default',
+  sizeClasses[props.size],
+  model.value && 'bg-context',
+])
 
 function forwardedAttrs() {
   const { class: _class, style: _style, ...rest } = attrs

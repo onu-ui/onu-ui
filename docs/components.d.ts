@@ -16,6 +16,7 @@ declare module 'vue' {
     Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
     HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
     Overview: typeof import('./.vitepress/theme/components/Overview.vue')['default']
+    ThemeInitializer: typeof import('./.vitepress/theme/components/ThemeInitializer.vue')['default']
     ThemePalette: typeof import('./.vitepress/theme/components/ThemePalette.vue')['default']
     ThemePaletteInner: typeof import('./.vitepress/theme/components/ThemePaletteInner.vue')['default']
   }
@@ -27,6 +28,7 @@ declare global {
   const Feature: typeof import('./.vitepress/theme/components/Feature.vue')['default']
   const HomePage: typeof import('./.vitepress/theme/components/HomePage.vue')['default']
   const Overview: typeof import('./.vitepress/theme/components/Overview.vue')['default']
+  const ThemeInitializer: typeof import('./.vitepress/theme/components/ThemeInitializer.vue')['default']
   const ThemePalette: typeof import('./.vitepress/theme/components/ThemePalette.vue')['default']
   const ThemePaletteInner: typeof import('./.vitepress/theme/components/ThemePaletteInner.vue')['default']
 }

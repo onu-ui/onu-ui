@@ -39,14 +39,14 @@ const isDisabled = ref(false)
         </div>
       </label>
 
-      <label checkbox="~ theme-400">
+      <label checkbox="~ ">
         <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot>
           <i i-carbon-checkmark text-light dark:text-dark />
         </div>
       </label>
 
-      <label checkbox="~ theme-400 dark:purple">
+      <label checkbox="~  dark:purple">
         <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot>
           🤪
@@ -54,7 +54,7 @@ const isDisabled = ref(false)
       </label>
 
       <label checkbox="~ red">
-        <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
+        <input v-model="isChecked" class="peer" :checked="isChecked" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot text-xs>
           {{ isChecked ? 'ON' : '' }}
         </div>
@@ -63,7 +63,7 @@ const isDisabled = ref(false)
 
     <template #footer>
       <label for="checkedControl" flex items-center gap-2 cursor-pointer select-none>
-        <label switch="~ theme-400">
+        <label switch="~ ">
           <input id="checkedControl" v-model="isChecked" class="peer" type="checkbox">
           <span switch-dot />
         </label>
@@ -79,7 +79,7 @@ const isDisabled = ref(false)
       </label>
 
       <label for="themeControl" flex items-center gap-2 cursor-pointer select-none>
-        <label switch="~ theme-400">
+        <label switch="~ ">
           <input id="themeControl" class="peer" type="checkbox" :checked="isDark" @change="toggleDark()">
           <span switch-dot />
         </label>

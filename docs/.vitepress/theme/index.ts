@@ -7,6 +7,7 @@ import { h } from 'vue'
 import DocsPreferences from './components/DocsPreferences.vue'
 import HomePage from './components/HomePage.vue'
 import Overview from './components/Overview.vue'
+import ThemeInitializer from './components/ThemeInitializer.vue'
 import { installExampleComponents } from './examples'
 
 import 'floating-vue/dist/style.css'
@@ -20,11 +21,12 @@ export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      'home-features-after': () => h(HomePage),
+      'layout-top': () => h(ThemeInitializer),
       'sidebar-nav-before': () => h(DocsPreferences),
     })
   },
   enhanceApp({ app }) {
+    app.component('HomePage', HomePage)
     app.component('Overview', Overview)
 
     installExampleComponents(app)

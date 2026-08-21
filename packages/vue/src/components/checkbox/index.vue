@@ -24,7 +24,11 @@ const sizeClasses = {
   md: 'checkbox-md',
   lg: 'checkbox-lg',
 }
-const classes = computed(() => ['checkbox', sizeClasses[props.size]])
+const classes = computed(() => [
+  'checkbox',
+  sizeClasses[props.size],
+  (model.value || props.indeterminate) && 'bg-context',
+])
 
 watchEffect(() => {
   if (input.value)
