@@ -16,8 +16,6 @@
     "docs": "pnpm -C docs run dev",
     "docs:build": "pnpm -C docs run build",
     "docs:preview": "pnpm docs:build && pnpm -C docs run preview",
-    "play": "pnpm -C playground run dev",
-    "play:build": "pnpm -C playground run build",
     "example": "pnpm -C examples/vite-onu-preset-only run dev",
     "example:build": "pnpm -C examples/vite-onu-preset-only run build",
     "example-vue": "pnpm -C examples/vite-onu-vue run dev",

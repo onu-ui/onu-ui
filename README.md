@@ -26,8 +26,6 @@
 
 Read the 🧑‍💻 [documentation](https://onu.zyob.top) for more details.
 
-Have fun with the 🤹‍♂️ <a href="https://onu.zyob.top/play/">Playground <sup>Beta</sup></a>.
-
 ## Credits
 
 - [UnoCSS](https://github.com/unocss/unocss)

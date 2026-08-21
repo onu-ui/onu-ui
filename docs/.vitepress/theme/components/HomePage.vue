@@ -34,7 +34,6 @@ const features = [
             Getting Started <i class="i-carbon-arrow-up-right" aria-hidden="true" />
           </a>
           <a class="hero__link" href="/components/overview">View Components</a>
-          <a class="hero__link" href="https://onu.zyob.top/play/" target="_blank" rel="noreferrer">Playground (TODO)</a>
         </div>
       </div>
 

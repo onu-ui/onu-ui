@@ -1,5 +1,0 @@
-dist
-node_modules
-pnpm-lock.yaml
-src/components.d.ts
-src/auto-imports.d.ts

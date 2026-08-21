@@ -34,7 +34,7 @@ export default defineConfig({
 })
 ```
 
-Theme colors are **Random** by default. You can pass your theme color in the `color` option. The Onu UI presets use [Magicolor](https://github.com/zyyv/magic-color) underneath to generate a complete set of theme styles based on `color`. You can preview and debug in the [Magicolor Playground](https://color.zyob.top/).
+Theme colors are **Random** by default. You can pass your theme color in the `color` option. The Onu UI presets use [Magicolor](https://github.com/zyyv/magic-color) underneath to generate a complete set of theme styles based on `color`.
 
 ### <i i-carbon-sync-settings /> Options
 

@@ -5,7 +5,6 @@ export default antfu({
     'dist',
     'public',
     'node_modules',
-    'playground/*',
     'example/*',
     'docs/*',
   ],

@@ -6,7 +6,6 @@
   "unocss.root": [
     "./docs",
     "./packages/vue",
-    "./playground",
     "./examples"
   ],
   "vitest.disableWorkspaceWarning": true

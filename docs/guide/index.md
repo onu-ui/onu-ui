@@ -40,20 +40,6 @@ For example:
 All components of Onu UI are implemented by UnoCSS shortcuts, which is a pure atomic UI library, and UnoCSS will cache and minimize compression during the matching process, and its performance is extremely high.
 :::
 
-## <i i-carbon-template /> Playground
-
-<a target="_blank"  href="https://stackblitz.com/edit/onu-starter">
-<img src="https://img.shields.io/badge/Try%20on%20Stackblitz-1877F2?style=for-the-badge&logo=stackblitz&logoColor=white" height="35" />
-</a>
-
-<!-- ## Discussions
-
-Since `OnuUI` is under intensive development, we need your valuable comments and feature requirements of the component
-
-Welcome to contact us at [Discussions](https://github.com/onu-ui/onu-ui/discussions) or [Issues](https://github.com/onu-ui/onu-ui/issues/new/choose), we will be more than happy to reply to your message.
-
-If you submit any bugs, please use the [OnuUI Playground](https://onu.zyob.top/play/) to provide a minimal reproduction. -->
-
 ## <i i-carbon-user-favorite-alt-filled /> Contributing
 
 Developers interested in contributing should read the [Contributing Guide](https://github.com/onu-ui/onu-ui/blob/main/CONTRIBUTING.md).
