@@ -2,10 +2,10 @@ import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, [string, string]> = {
-  xs: ['size-4', '60%'],
-  sm: ['size-4.5', '60%'],
-  md: ['size-5', '65%'],
-  lg: ['size-5.5', '65%'],
+  xs: ['size-3', '60%'],
+  sm: ['size-3.5', '60%'],
+  md: ['size-4', '65%'],
+  lg: ['size-4.5', '65%'],
 
 }
 

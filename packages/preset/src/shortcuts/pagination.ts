@@ -1,10 +1,10 @@
 import type { CustomShortcut, SizeType } from '../types'
 
 const Size: Record<SizeType, string> = {
-  xs: 'size-7 text-xs',
+  xs: 'size-6 text-xs',
   sm: 'size-8 text-sm',
-  md: 'size-10 text-sm',
-  lg: 'size-12 text-base',
+  md: 'size-9 text-sm',
+  lg: 'size-10 text-sm',
 }
 
 export const paginations: CustomShortcut[] = [

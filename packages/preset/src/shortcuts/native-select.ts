@@ -1,11 +1,12 @@
 import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
+import { controlHeight } from './control-size'
 
 const Size: Record<SizeType, string> = {
-  xs: 'h-7 pl-2.5 pr-7 text-xs',
-  sm: 'h-8 pl-2.5 pr-8 text-sm',
-  md: 'h-10 pl-3 pr-9 text-sm',
-  lg: 'h-12 pl-3.5 pr-10 text-base',
+  xs: `${controlHeight.xs} pl-2 pr-7 text-xs`,
+  sm: `${controlHeight.sm} pl-2.5 pr-8 text-sm`,
+  md: `${controlHeight.md} pl-3 pr-9 text-sm`,
+  lg: `${controlHeight.lg} pl-4 pr-10 text-sm`,
 }
 
 export const nativeSelects: CustomShortcut[] = [

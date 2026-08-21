@@ -2,10 +2,10 @@ import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
-  xs: 'size-4',
-  sm: 'size-4.5',
-  md: 'size-5',
-  lg: 'size-5.5',
+  xs: 'size-3',
+  sm: 'size-3.5',
+  md: 'size-4',
+  lg: 'size-4.5',
 }
 
 export const checkboxs: CustomShortcut[] = [

@@ -1,11 +1,12 @@
 import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
+import { controlHeight } from './control-size'
 
 const Size: Record<SizeType, string> = {
-  xs: 'px-2.5 py-1.5 text-xs',
-  sm: 'px-2.5 py-1.5 text-sm',
-  md: 'px-3 py-2 text-sm',
-  lg: 'px-3.5 py-2.5 text-base',
+  xs: `${controlHeight.xs} px-2 py-1 text-xs`,
+  sm: `${controlHeight.sm} px-2.5 py-1 text-sm`,
+  md: `${controlHeight.md} px-3 py-1 text-sm`,
+  lg: `${controlHeight.lg} px-4 py-2 text-sm`,
 }
 
 export const input: CustomShortcut[] = [

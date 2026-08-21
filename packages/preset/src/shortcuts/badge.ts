@@ -2,10 +2,10 @@ import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
-  xs: 'px-5px text-[10px] h-12px',
-  sm: 'px-6.5px text-xs h-15px',
-  md: 'px-8px text-xs h-18px',
-  lg: 'px-10px text-sm h-22px',
+  xs: 'h-4 px-1 text-[10px]',
+  sm: 'h-4.5 px-1.5 text-xs',
+  md: 'h-5 px-2 text-xs',
+  lg: 'h-6 px-2.5 text-sm',
 }
 
 export const badge: CustomShortcut[] = [

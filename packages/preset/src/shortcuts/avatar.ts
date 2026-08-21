@@ -2,10 +2,10 @@ import type { CustomShortcut, SizeType } from '../types'
 import { resolveRuleWithContext } from '../utils'
 
 const Size: Record<SizeType, string> = {
-  xs: 'w-10',
-  sm: 'w-13',
-  md: 'w-16',
-  lg: 'w-20',
+  xs: 'w-5',
+  sm: 'w-6',
+  md: 'w-8',
+  lg: 'w-10',
 }
 
 export const avatar: CustomShortcut[] = [
