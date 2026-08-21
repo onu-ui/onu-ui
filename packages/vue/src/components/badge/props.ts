@@ -1,8 +1,9 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { sizeable } from '@/composables/useProps'
 
-export type BadgeVariant = 'default' | 'outline'
+export type BadgeVariant = 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'
 export type BadgePosition = 'tl' | 'tr' | 'bl' | 'br'
+export type BadgeTag = keyof HTMLElementTagNameMap
 
 export const badgeProps = {
   size: sizeable,
@@ -13,7 +14,7 @@ export const badgeProps = {
   dot: Boolean,
   position: String as PropType<BadgePosition>,
   tag: {
-    type: String,
+    type: String as PropType<BadgeTag>,
     default: 'span',
   },
 } as const

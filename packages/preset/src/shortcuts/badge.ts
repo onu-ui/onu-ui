@@ -12,7 +12,14 @@ export const badge: CustomShortcut[] = [
   [/^badge-(?:size-)?(.+)$/, ([, s], { theme }) => {
     if (s in Size)
       return Size[s as SizeType]
-    return resolveRuleWithContext(s, theme, '--onu-color-context')
+
+    const context = resolveRuleWithContext(s, theme, '--onu-color-context')
+    if (context) {
+      return [
+        ...context,
+        'border-context/25! bg-context/10! text-context! [a&]:hover:bg-context/15!',
+      ]
+    }
   }],
   // top left, top right, bottom left, bottom right
   [/^badge-pos(?:-(tl|tr|bl|br))?$/, ([, p]) => {
@@ -25,13 +32,38 @@ export const badge: CustomShortcut[] = [
     return `absolute transform ${pos[(p ?? 'tr') as keyof typeof pos]}`
   }],
   ['badge-default', `
-      font-onu inline-flex items-center justify-center o-transition w-fit rounded-full
-      badge-size-md 
-      border-(~ solid context) bg-context hover:(bg-op-80 border-op-80)
-      o-theme-primary
-      text-primary-foreground
+      font-onu inline-flex w-fit shrink-0 items-center justify-center gap-1 of-hidden
+      badge-size-md whitespace-nowrap rounded-full border border-transparent font-medium
+      o-transition focus-visible:(outline-none border-ring ring-3px ring-ring/50)
+      [&[aria-invalid=true]]:(border-destructive ring-3px ring-destructive/20)
+      dark:[&[aria-invalid=true]]:ring-destructive/40
+      [&>[data-icon]]:(pointer-events-none shrink-0)
+      [&>svg]:(pointer-events-none size-3 shrink-0)
+      o-theme-primary bg-context text-primary-foreground
+      [a&]:hover:(bg-op-90 border-op-90)
     `],
-  ['badge', `badge-default`],
-  ['badge-outline', `!bg-transparent text-context dark:text-context`],
-  ['badge-dot', 'px-2px! h-6px!'],
+  ['badge', 'badge-default'],
+  ['badge-secondary', `
+      border-transparent! bg-secondary! text-secondary-foreground!
+      [a&]:hover:bg-secondary/90!
+    `],
+  ['badge-destructive', `
+      border-transparent! bg-destructive! text-destructive-foreground!
+      focus-visible:(border-destructive! ring-destructive/20!)
+      dark:focus-visible:ring-destructive/40!
+      [a&]:hover:bg-destructive/90!
+    `],
+  ['badge-outline', `
+      border-border! bg-transparent! text-foreground!
+      [a&]:hover:(bg-accent! text-accent-foreground!)
+    `],
+  ['badge-ghost', `
+      border-transparent! bg-transparent! text-foreground!
+      [a&]:hover:(bg-accent! text-accent-foreground!)
+    `],
+  ['badge-link', `
+      border-transparent! bg-transparent! text-context! underline-offset-4
+      [a&]:hover:underline
+    `],
+  ['badge-dot', 'size-1.5 p-0! border-0!'],
 ]

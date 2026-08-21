@@ -6,11 +6,23 @@ defineOptions({ name: 'Badge' })
 
 const props = defineProps(badgeProps)
 
+defineSlots<{
+  default?: () => any
+}>()
+
 const sizeClasses = {
   xs: 'badge-xs',
   sm: 'badge-sm',
   md: 'badge-md',
   lg: 'badge-lg',
+}
+const variantClasses = {
+  default: '',
+  secondary: 'badge-secondary',
+  destructive: 'badge-destructive',
+  outline: 'badge-outline',
+  ghost: 'badge-ghost',
+  link: 'badge-link',
 }
 const positionClasses = {
   tl: 'badge-pos-tl',
@@ -22,14 +34,20 @@ const positionClasses = {
 const classes = computed(() => [
   'badge',
   sizeClasses[props.size],
-  props.variant === 'outline' && 'badge-outline',
+  variantClasses[props.variant],
   props.dot && 'badge-dot',
   props.position && positionClasses[props.position],
 ])
 </script>
 
 <template>
-  <component :is="tag" :class="classes">
+  <component
+    :is="tag"
+    :class="classes"
+    data-slot="badge"
+    :data-variant="variant"
+    :data-size="size"
+  >
     <slot />
   </component>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Alert, Button, Card, Empty, Kbd, Separator, Skeleton, Spinner } from 'onu-ui'
+import { Alert, Badge, Button, Card, Empty, Kbd, Separator, Skeleton, Spinner } from 'onu-ui'
 </script>
 
 <template>
@@ -15,6 +15,41 @@ import { Alert, Button, Card, Empty, Kbd, Separator, Skeleton, Spinner } from 'o
           请检查网络后重试。
         </Alert>
         <Alert variant="soft" title="有可用更新" description="升级前请先阅读迁移说明。" />
+
+        <div class="flex flex-wrap items-center gap-2" aria-label="徽标变体">
+          <Badge>
+            Default
+          </Badge>
+          <Badge variant="secondary">
+            Secondary
+          </Badge>
+          <Badge variant="destructive">
+            Destructive
+          </Badge>
+          <Badge variant="outline">
+            Outline
+          </Badge>
+          <Badge variant="ghost">
+            Ghost
+          </Badge>
+          <Badge class="badge-[#886886]">
+            Custom
+          </Badge>
+          <Badge tag="a" variant="link" href="https://github.com/onu-ui/onu-ui" target="_blank" rel="noreferrer">
+            Link
+          </Badge>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2" aria-label="带图标的徽标">
+          <Badge variant="secondary">
+            <span data-icon="inline-start" class="i-carbon-checkmark-filled" aria-hidden="true" />
+            Verified
+          </Badge>
+          <Badge variant="outline">
+            Generating
+            <Spinner data-icon="inline-end" size="sm" label="正在生成" />
+          </Badge>
+        </div>
 
         <div class="flex items-center gap-2 text-sm">
           <span>打开命令面板</span>
