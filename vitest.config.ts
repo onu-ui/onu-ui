@@ -17,6 +17,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      '@': r('./packages/vue/src'),
       '@onu-ui/preset/helper': r('./packages/preset/src/helper.ts'),
       '@onu-ui/preset': r('./packages/preset'),
     },

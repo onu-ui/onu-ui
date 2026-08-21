@@ -23,7 +23,7 @@ export const switches: CustomShortcut[] = [
     border-(~ 2 transparent solid) rd-full
     bg-input has-[>input:focus-visible]:(outline-none border-ring ring-3px ring-ring/50)
     [&>input]:(absolute inset-0 size-full op-0 cursor-pointer)
-    has-[>input:checked]:bg-context
+    has-[>input:checked]:bg-context!
     has-[>input:disabled]:(pointer-events-none cursor-not-allowed op-50)
     `],
   ['switch-dot', `

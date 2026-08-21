@@ -4,7 +4,11 @@ const isDisabled = ref(false)
 </script>
 
 <template>
-  <OCard title="Checkbox" desc="A checkbox is a form element that allows the user to select multiple options from a range of options." show-close>
+  <OCard
+    title="Checkbox"
+    desc="A checkbox is a form element that allows the user to select multiple options from a range of options."
+    show-close
+  >
     <div class="flex gap-2">
       <label checkbox="~ xs">
         <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
@@ -35,14 +39,14 @@ const isDisabled = ref(false)
       <label checkbox="~ dark dark:light">
         <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot>
-          <i i-carbon-checkmark text-light dark:text-dark />
+          <i i-carbon-checkmark />
         </div>
       </label>
 
       <label checkbox="~ ">
         <input v-model="isChecked" class="peer" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot>
-          <i i-carbon-checkmark text-light dark:text-dark />
+          <i i-carbon-checkmark />
         </div>
       </label>
 
@@ -53,7 +57,7 @@ const isDisabled = ref(false)
         </div>
       </label>
 
-      <label checkbox="~ red">
+      <label checkbox="~ red dark:yellow">
         <input v-model="isChecked" class="peer" :checked="isChecked" type="checkbox" :disabled="isDisabled">
         <div checkbox-dot text-xs>
           {{ isChecked ? 'ON' : '' }}
@@ -63,7 +67,7 @@ const isDisabled = ref(false)
 
     <template #footer>
       <label for="checkedControl" flex items-center gap-2 cursor-pointer select-none>
-        <label switch="~ ">
+        <label switch>
           <input id="checkedControl" v-model="isChecked" class="peer" type="checkbox">
           <span switch-dot />
         </label>

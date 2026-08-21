@@ -29,10 +29,18 @@ const classes = computed(() => [
   sizeClasses[props.size],
   model.value && 'bg-context',
 ])
+const thumbClasses = computed(() => [
+  'switch-dot',
+  model.value && 'translate-x-$dot-size',
+])
 
 function forwardedAttrs() {
   const { class: _class, style: _style, ...rest } = attrs
   return rest
+}
+
+function handleChange(event: Event) {
+  model.value = (event.target as HTMLInputElement).checked
 }
 </script>
 
@@ -42,15 +50,16 @@ function forwardedAttrs() {
       <input
         v-bind="forwardedAttrs()"
         :id="inputId"
-        v-model="model"
+        :checked="model"
         class="peer"
         type="checkbox"
         role="switch"
         :name
         :disabled
         :aria-checked="model"
+        @change="handleChange"
       >
-      <span class="switch-dot">
+      <span :class="thumbClasses">
         <slot name="thumb" :checked="model" />
       </span>
     </span>

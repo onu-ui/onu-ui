@@ -29,6 +29,10 @@ const classes = computed(() => [
   sizeClasses[props.size],
   (model.value || props.indeterminate) && 'bg-context',
 ])
+const indicatorClasses = computed(() => [
+  'checkbox-dot',
+  (model.value || props.indeterminate) && 'size-full op-100',
+])
 
 watchEffect(() => {
   if (input.value)
@@ -39,6 +43,10 @@ function forwardedAttrs() {
   const { class: _class, style: _style, ...rest } = attrs
   return rest
 }
+
+function handleChange(event: Event) {
+  model.value = (event.target as HTMLInputElement).checked
+}
 </script>
 
 <template>
@@ -48,16 +56,19 @@ function forwardedAttrs() {
         v-bind="forwardedAttrs()"
         :id="inputId"
         ref="input"
-        v-model="model"
+        :checked="model"
         class="peer"
         type="checkbox"
         :name
         :value
         :disabled
+        @change="handleChange"
       >
-      <span class="checkbox-dot">
+      <span :class="indicatorClasses">
         <slot name="indicator" :checked="model" :indeterminate="indeterminate">
-          <span aria-hidden="true">✓</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" class="size-4/5">
+            <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
         </slot>
       </span>
     </span>
