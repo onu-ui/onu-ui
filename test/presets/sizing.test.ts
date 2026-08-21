@@ -42,4 +42,22 @@ describe('shadcn-compatible component sizes', () => {
         expect(css).toContain(declaration)
     }
   })
+
+  it.each([
+    ['btn', 'height:calc(var(--spacing) * 9)'],
+    ['input', 'height:calc(var(--spacing) * 9)'],
+    ['select-native', 'height:calc(var(--spacing) * 9)'],
+    ['textarea', 'min-height:calc(var(--spacing) * 16)'],
+    ['toggle', 'height:calc(var(--spacing) * 9)'],
+    ['pagination-item', 'height:calc(var(--spacing) * 9)'],
+    ['avatar', 'width:calc(var(--spacing) * 8)'],
+    ['badge', 'height:calc(var(--spacing) * 5)'],
+    ['checkbox', 'height:calc(var(--spacing) * 4)'],
+    ['radio', 'height:calc(var(--spacing) * 4)'],
+    ['switch', 'height:calc(var(--spacing) * 4.5)'],
+    ['kbd', 'height:calc(var(--spacing) * 5)'],
+    ['spinner', 'height:calc(var(--spacing) * 4)'],
+  ])('defaults %s to its md size', async (component, declaration) => {
+    expect(await generate(component)).toContain(declaration)
+  })
 })
